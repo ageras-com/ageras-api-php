@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Swagger\Client\Model\LeadCustomerTypeResource**](LeadCustomerTypeResource.md) |  | [optional] 
+**type** | [**\Ageras\Api\LeadCustomerTypeResource**](LeadCustomerTypeResource.md) |  | [optional] 
 **first_name** | **string** | The first name for the customer. | [optional] 
 **last_name** | **string** | The last name for the customer. | [optional] 
 **company_name** | **string** | The name of the company. | [optional] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **mobile** | **string** | The Mobile Phone Number used to contact the customer. | [optional] 
 **website** | **string** | Do the customer have a website ? | [optional] 
 **vat_number** | **string** | VAT Number for the customer. | [optional] 
-**requirements** | [**\Swagger\Client\Model\LeadRequirementsResource**](LeadRequirementsResource.md) |  | [optional] 
+**requirements** | [**\Ageras\Api\LeadRequirementsResource**](LeadRequirementsResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

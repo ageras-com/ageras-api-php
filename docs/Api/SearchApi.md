@@ -1,4 +1,4 @@
-# Swagger\Client\SearchApi
+# Ageras\Api\SearchApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **searchIndex**
-> \Swagger\Client\Model\SearchResult searchIndex($limit, $page, $query)
+> \Ageras\Api\SearchResult searchIndex($limit, $page, $query)
 
 Search by criterias.
 
@@ -22,14 +22,14 @@ Search by criterias.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SearchApi();
+$api_instance = new Ageras\Api\Api\SearchApi();
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SearchResult**](../Model/SearchResult.md)
+[**\Ageras\Api\SearchResult**](../Model/SearchResult.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchSuggestIndex**
-> \Swagger\Client\Model\SearchResult searchSuggestIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\SearchResult searchSuggestIndex($limit, $geo_code, $query, $type, $page)
 
 Suggest by criteria.
 
@@ -79,14 +79,14 @@ Suggest by criteria.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SearchApi();
+$api_instance = new Ageras\Api\Api\SearchApi();
 $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SearchResult**](../Model/SearchResult.md)
+[**\Ageras\Api\SearchResult**](../Model/SearchResult.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchTypeaheadIndex**
-> \Swagger\Client\Model\TypeaheadResult searchTypeaheadIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\TypeaheadResult searchTypeaheadIndex($limit, $geo_code, $query, $type, $page)
 
 Typeahead recommendations.
 
@@ -140,14 +140,14 @@ Typeahead recommendations.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SearchApi();
+$api_instance = new Ageras\Api\Api\SearchApi();
 $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TypeaheadResult**](../Model/TypeaheadResult.md)
+[**\Ageras\Api\TypeaheadResult**](../Model/TypeaheadResult.md)
 
 ### Authorization
 

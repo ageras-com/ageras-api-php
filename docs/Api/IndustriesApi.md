@@ -1,4 +1,4 @@
-# Swagger\Client\IndustriesApi
+# Ageras\Api\IndustriesApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **industriesIndex**
-> \Swagger\Client\Model\IndustryResult industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $page, $query)
+> \Ageras\Api\IndustryResult industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $page, $query)
 
 List Industries and filter by parent industry.
 
@@ -20,14 +20,14 @@ List Industries and filter by parent industry.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\IndustriesApi();
+$api_instance = new Ageras\Api\Api\IndustriesApi();
 $industry_id = "industry_id_example"; // string | Industry ID.
 $name = "name_example"; // string | Industry name in its native language.
 $geo_code = "geo_code_example"; // string | Industry geo code origin.
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\IndustryResult**](../Model/IndustryResult.md)
+[**\Ageras\Api\IndustryResult**](../Model/IndustryResult.md)
 
 ### Authorization
 

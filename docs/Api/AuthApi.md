@@ -1,4 +1,4 @@
-# Swagger\Client\AuthApi
+# Ageras\Api\AuthApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **authCreate**
-> \Swagger\Client\Model\AuthResource authCreate($auth_resource)
+> \Ageras\Api\AuthResource authCreate($auth_resource)
 
 Authenticate user and receive a token.
 
@@ -27,15 +27,15 @@ Authenticate user and receive a token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
-$auth_resource = new \Swagger\Client\Model\AuthResource(); // \Swagger\Client\Model\AuthResource | Authentication Resource with authorize information
+$api_instance = new Ageras\Api\Api\AuthApi();
+$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
 
 try {
     $result = $api_instance->authCreate($auth_resource);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Swagger\Client\Model\AuthResource**](../Model/\Swagger\Client\Model\AuthResource.md)| Authentication Resource with authorize information |
+ **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)| Authentication Resource with authorize information |
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 
@@ -80,14 +80,14 @@ Logout and end session/token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
+$api_instance = new Ageras\Api\Api\AuthApi();
 
 try {
     $api_instance->authDelete();
@@ -116,7 +116,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authGet**
-> \Swagger\Client\Model\AuthResource authGet()
+> \Ageras\Api\AuthResource authGet()
 
 Get information about the current Authenticated session.
 
@@ -128,14 +128,14 @@ Get information about the current Authenticated session.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
+$api_instance = new Ageras\Api\Api\AuthApi();
 
 try {
     $result = $api_instance->authGet();
@@ -151,7 +151,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordCreate**
-> \Swagger\Client\Model\PasswordResetResource authPasswordCreate($password_reset_resource)
+> \Ageras\Api\PasswordResetResource authPasswordCreate($password_reset_resource)
 
 Reset Password from a given reset token.
 
@@ -177,15 +177,15 @@ Reset Password from a given reset token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
-$password_reset_resource = new \Swagger\Client\Model\PasswordResetResource(); // \Swagger\Client\Model\PasswordResetResource | 
+$api_instance = new Ageras\Api\Api\AuthApi();
+$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
 try {
     $result = $api_instance->authPasswordCreate($password_reset_resource);
@@ -200,11 +200,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Swagger\Client\Model\PasswordResetResource**](../Model/\Swagger\Client\Model\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\PasswordResetResource**](../Model/\Ageras\Api\PasswordResetResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PasswordResetResource**](../Model/PasswordResetResource.md)
+[**\Ageras\Api\PasswordResetResource**](../Model/PasswordResetResource.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordUpdate**
-> \Swagger\Client\Model\PasswordResetResource authPasswordUpdate($password_reset_resource)
+> \Ageras\Api\PasswordResetResource authPasswordUpdate($password_reset_resource)
 
 Change Password.
 
@@ -230,15 +230,15 @@ Change Password.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
-$password_reset_resource = new \Swagger\Client\Model\PasswordResetResource(); // \Swagger\Client\Model\PasswordResetResource | 
+$api_instance = new Ageras\Api\Api\AuthApi();
+$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
 try {
     $result = $api_instance->authPasswordUpdate($password_reset_resource);
@@ -253,11 +253,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Swagger\Client\Model\PasswordResetResource**](../Model/\Swagger\Client\Model\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\PasswordResetResource**](../Model/\Ageras\Api\PasswordResetResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PasswordResetResource**](../Model/PasswordResetResource.md)
+[**\Ageras\Api\PasswordResetResource**](../Model/PasswordResetResource.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordreminderCreate**
-> \Swagger\Client\Model\PasswordReminderResource authPasswordreminderCreate($password_reminder_resource)
+> \Ageras\Api\PasswordReminderResource authPasswordreminderCreate($password_reminder_resource)
 
 Request a password reminder e-mail.
 
@@ -283,15 +283,15 @@ Request a password reminder e-mail.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
-$password_reminder_resource = new \Swagger\Client\Model\PasswordReminderResource(); // \Swagger\Client\Model\PasswordReminderResource | 
+$api_instance = new Ageras\Api\Api\AuthApi();
+$password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
 
 try {
     $result = $api_instance->authPasswordreminderCreate($password_reminder_resource);
@@ -306,11 +306,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reminder_resource** | [**\Swagger\Client\Model\PasswordReminderResource**](../Model/\Swagger\Client\Model\PasswordReminderResource.md)|  |
+ **password_reminder_resource** | [**\Ageras\Api\PasswordReminderResource**](../Model/\Ageras\Api\PasswordReminderResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PasswordReminderResource**](../Model/PasswordReminderResource.md)
+[**\Ageras\Api\PasswordReminderResource**](../Model/PasswordReminderResource.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPermissionsIndex**
-> \Swagger\Client\Model\PermissionResult authPermissionsIndex($limit, $page, $query)
+> \Ageras\Api\PermissionResult authPermissionsIndex($limit, $page, $query)
 
 List the Permissions for the given authenticated user.
 
@@ -336,14 +336,14 @@ List the Permissions for the given authenticated user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
+$api_instance = new Ageras\Api\Api\AuthApi();
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PermissionResult**](../Model/PermissionResult.md)
+[**\Ageras\Api\PermissionResult**](../Model/PermissionResult.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authUpdate**
-> \Swagger\Client\Model\AuthResource authUpdate($auth_resource)
+> \Ageras\Api\AuthResource authUpdate($auth_resource)
 
 Renew authentication session.
 
@@ -393,15 +393,15 @@ Renew authentication session.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\AuthApi();
-$auth_resource = new \Swagger\Client\Model\AuthResource(); // \Swagger\Client\Model\AuthResource | 
+$api_instance = new Ageras\Api\Api\AuthApi();
+$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
 
 try {
     $result = $api_instance->authUpdate($auth_resource);
@@ -416,11 +416,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Swagger\Client\Model\AuthResource**](../Model/\Swagger\Client\Model\AuthResource.md)|  |
+ **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 

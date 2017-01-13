@@ -1,4 +1,4 @@
-# Swagger\Client\RatingsApi
+# Ageras\Api\RatingsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **ratingsGet**
-> \Swagger\Client\Model\RatingResource ratingsGet($rating_id)
+> \Ageras\Api\RatingResource ratingsGet($rating_id)
 
 Return a rating from a rating ID.
 
@@ -22,14 +22,14 @@ Return a rating from a rating ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\RatingsApi();
+$api_instance = new Ageras\Api\Api\RatingsApi();
 $rating_id = "rating_id_example"; // string | The id the Rating to return
 
 try {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RatingResource**](../Model/RatingResource.md)
+[**\Ageras\Api\RatingResource**](../Model/RatingResource.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsIndex**
-> \Swagger\Client\Model\RatingResult ratingsIndex($partner_id, $rating_id, $sort, $limit, $page, $query)
+> \Ageras\Api\RatingResult ratingsIndex($partner_id, $rating_id, $sort, $limit, $page, $query)
 
 Search for Lead's by a given set of criteria.
 
@@ -75,14 +75,14 @@ Search for Lead's by a given set of criteria.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\RatingsApi();
+$api_instance = new Ageras\Api\Api\RatingsApi();
 $partner_id = "partner_id_example"; // string | Partner id for the ratings to be filtered by.
 $rating_id = "rating_id_example"; // string | Rating ids.
 $sort = "sort_example"; // string | Sort ratings by a given property.
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RatingResult**](../Model/RatingResult.md)
+[**\Ageras\Api\RatingResult**](../Model/RatingResult.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsUpdate**
-> \Swagger\Client\Model\RatingResource ratingsUpdate($rating_id, $rating_resource)
+> \Ageras\Api\RatingResource ratingsUpdate($rating_id, $rating_resource)
 
 Update a rating.
 
@@ -138,16 +138,16 @@ Update a rating.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\RatingsApi();
+$api_instance = new Ageras\Api\Api\RatingsApi();
 $rating_id = "rating_id_example"; // string | 
-$rating_resource = new \Swagger\Client\Model\RatingResource(); // \Swagger\Client\Model\RatingResource | 
+$rating_resource = new \Ageras\Api\RatingResource(); // \Ageras\Api\RatingResource | 
 
 try {
     $result = $api_instance->ratingsUpdate($rating_id, $rating_resource);
@@ -163,11 +163,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rating_id** | **string**|  |
- **rating_resource** | [**\Swagger\Client\Model\RatingResource**](../Model/\Swagger\Client\Model\RatingResource.md)|  |
+ **rating_resource** | [**\Ageras\Api\RatingResource**](../Model/\Ageras\Api\RatingResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\RatingResource**](../Model/RatingResource.md)
+[**\Ageras\Api\RatingResource**](../Model/RatingResource.md)
 
 ### Authorization
 

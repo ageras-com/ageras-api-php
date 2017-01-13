@@ -1,4 +1,4 @@
-# Swagger\Client\PartnersApi
+# Ageras\Api\PartnersApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -56,7 +56,7 @@ Method | HTTP request | Description
 
 
 # **partnersAggregationsIndex**
-> \Swagger\Client\Model\PartnerResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
 
 List facets and aggregations for the Partner Search.
 
@@ -68,14 +68,14 @@ List facets and aggregations for the Partner Search.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
 $state = "state_example"; // string | States for the partners.
 $is_enabled = false; // bool | 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerResult**](../Model/PartnerResult.md)
+[**\Ageras\Api\PartnerResult**](../Model/PartnerResult.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsCreate**
-> \Swagger\Client\Model\CertificationResource partnersCertificationsCreate($partner_id, $certification_resource)
+> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id, $certification_resource)
 
 Attach certification to partner.
 
@@ -141,16 +141,16 @@ Attach certification to partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$certification_resource = new \Swagger\Client\Model\CertificationResource(); // \Swagger\Client\Model\CertificationResource | 
+$certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
 
 try {
     $result = $api_instance->partnersCertificationsCreate($partner_id, $certification_resource);
@@ -166,11 +166,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **certification_resource** | [**\Swagger\Client\Model\CertificationResource**](../Model/\Swagger\Client\Model\CertificationResource.md)|  |
+ **certification_resource** | [**\Ageras\Api\CertificationResource**](../Model/\Ageras\Api\CertificationResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -196,14 +196,14 @@ Detach certification from partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $id = "id_example"; // string | 
 
@@ -238,7 +238,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsGet**
-> \Swagger\Client\Model\CertificationResource partnersCertificationsGet($partner_id, $certification_id)
+> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id, $certification_id)
 
 Get Partner certification.
 
@@ -250,14 +250,14 @@ Get Partner certification.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $certification_id = "certification_id_example"; // string | 
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsIndex**
-> \Swagger\Client\Model\CertificationResult partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query)
+> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query)
 
 Get partner certifications.
 
@@ -305,14 +305,14 @@ Get partner certifications.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $types = "types_example"; // string | Partner type enum. @var array
 $geo_code = "geo_code_example"; // string | 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificationResult**](../Model/CertificationResult.md)
+[**\Ageras\Api\CertificationResult**](../Model/CertificationResult.md)
 
 ### Authorization
 
@@ -368,14 +368,14 @@ Delete content for a given partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -410,7 +410,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsGet**
-> \Swagger\Client\Model\PartnerContentResource partnersContentsGet($partner_id, $content_key)
+> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id, $content_key)
 
 Get the content of a given partner.
 
@@ -422,14 +422,14 @@ Get the content of a given partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsUpdate**
-> \Swagger\Client\Model\PartnerContentResource partnersContentsUpdate($partner_id, $content_key, $partner_content_resource)
+> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id, $content_key, $partner_content_resource)
 
 Update content for a given partner.
 
@@ -477,17 +477,17 @@ Update content for a given partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Swagger\Client\Model\PartnerContentResource(); // \Swagger\Client\Model\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersContentsUpdate($partner_id, $content_key, $partner_content_resource);
@@ -504,11 +504,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Swagger\Client\Model\PartnerContentResource**](../Model/\Swagger\Client\Model\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsIndex**
-> \Swagger\Client\Model\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $limit, $page, $query)
+> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $limit, $page, $query)
 
 List Partner Coupons.
 
@@ -534,14 +534,14 @@ List Partner Coupons.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $show_expired = false; // bool | Only show expired partner coupons.
 $show_deactivated = false; // bool | Only show deactivated partner coupons.
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerCouponResult**](../Model/PartnerCouponResult.md)
+[**\Ageras\Api\PartnerCouponResult**](../Model/PartnerCouponResult.md)
 
 ### Authorization
 
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCreate**
-> \Swagger\Client\Model\PartnerResource partnersCreate($partner_resource)
+> \Ageras\Api\PartnerResource partnersCreate($partner_resource)
 
 Create a Partner.
 
@@ -599,15 +599,15 @@ Create a Partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
-$partner_resource = new \Swagger\Client\Model\PartnerResource(); // \Swagger\Client\Model\PartnerResource | 
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
 try {
     $result = $api_instance->partnersCreate($partner_resource);
@@ -622,11 +622,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_resource** | [**\Swagger\Client\Model\PartnerResource**](../Model/\Swagger\Client\Model\PartnerResource.md)|  |
+ **partner_resource** | [**\Ageras\Api\PartnerResource**](../Model/\Ageras\Api\PartnerResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -652,14 +652,14 @@ Delete a Partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
 try {
@@ -692,7 +692,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersGet**
-> \Swagger\Client\Model\PartnerResource partnersGet($partner_id)
+> \Ageras\Api\PartnerResource partnersGet($partner_id)
 
 Get a Partner from a given partner_id.
 
@@ -704,14 +704,14 @@ Get a Partner from a given partner_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
 try {
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Swagger\Client\Model\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
 
 List Partners.
 
@@ -757,14 +757,14 @@ List Partners.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
 $state = "state_example"; // string | States for the partners.
 $is_enabled = false; // bool | 
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerResult**](../Model/PartnerResult.md)
+[**\Ageras\Api\PartnerResult**](../Model/PartnerResult.md)
 
 ### Authorization
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesCreate**
-> \Swagger\Client\Model\PartnerIndustryResource partnersIndustriesCreate($partner_id, $partner_industry_resource)
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id, $partner_industry_resource)
 
 Attach industry to partner.
 
@@ -830,16 +830,16 @@ Attach industry to partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_industry_resource = new \Swagger\Client\Model\PartnerIndustryResource(); // \Swagger\Client\Model\PartnerIndustryResource | 
+$partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
 
 try {
     $result = $api_instance->partnersIndustriesCreate($partner_id, $partner_industry_resource);
@@ -855,11 +855,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_industry_resource** | [**\Swagger\Client\Model\PartnerIndustryResource**](../Model/\Swagger\Client\Model\PartnerIndustryResource.md)|  |
+ **partner_industry_resource** | [**\Ageras\Api\PartnerIndustryResource**](../Model/\Ageras\Api\PartnerIndustryResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
+[**\Ageras\Api\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
 
 ### Authorization
 
@@ -885,14 +885,14 @@ Detach industry from partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
@@ -927,7 +927,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesGet**
-> \Swagger\Client\Model\PartnerIndustryResource partnersIndustriesGet($partner_id, $industry_id)
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id, $industry_id)
 
 Get a given industry for partner.
 
@@ -939,14 +939,14 @@ Get a given industry for partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
@@ -968,7 +968,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
+[**\Ageras\Api\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
 
 ### Authorization
 
@@ -982,7 +982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesIndex**
-> \Swagger\Client\Model\PartnerIndustryResult partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query)
+> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query)
 
 Get partner industries.
 
@@ -994,14 +994,14 @@ Get partner industries.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $geo_code = "geo_code_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
@@ -1029,7 +1029,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerIndustryResult**](../Model/PartnerIndustryResult.md)
+[**\Ageras\Api\PartnerIndustryResult**](../Model/PartnerIndustryResult.md)
 
 ### Authorization
 
@@ -1043,7 +1043,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesCreate**
-> \Swagger\Client\Model\PartnerTypesResource partnersLeadtypesCreate($partner_id, $lead_type_resource)
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id, $lead_type_resource)
 
 Attach type to partner.
 
@@ -1055,16 +1055,16 @@ Attach type to partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$lead_type_resource = new \Swagger\Client\Model\LeadTypeResource(); // \Swagger\Client\Model\LeadTypeResource | 
+$lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
 
 try {
     $result = $api_instance->partnersLeadtypesCreate($partner_id, $lead_type_resource);
@@ -1080,11 +1080,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **lead_type_resource** | [**\Swagger\Client\Model\LeadTypeResource**](../Model/\Swagger\Client\Model\LeadTypeResource.md)|  |
+ **lead_type_resource** | [**\Ageras\Api\LeadTypeResource**](../Model/\Ageras\Api\LeadTypeResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1110,14 +1110,14 @@ Detach type from partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
@@ -1152,7 +1152,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet**
-> \Swagger\Client\Model\PartnerTypesResource partnersLeadtypesGet($lead_type_id)
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id)
 
 Retrieve a given lead type.
 
@@ -1164,14 +1164,14 @@ Retrieve a given lead type.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
@@ -1191,7 +1191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1205,7 +1205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet2**
-> \Swagger\Client\Model\PartnerTypesResource partnersLeadtypesGet2($partner_id, $lead_type_id)
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id, $lead_type_id)
 
 Retrieve a given lead type.
 
@@ -1217,14 +1217,14 @@ Retrieve a given lead type.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
@@ -1246,7 +1246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex**
-> \Swagger\Client\Model\PartnerTypesResult partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query)
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query)
 
 Get partner types criteria.
 
@@ -1272,14 +1272,14 @@ Get partner types criteria.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = 56; // int | Partner ID. @var int
 $types = "types_example"; // string | Partner type enum. @var array
 $geo_code = "geo_code_example"; // string | 
@@ -1309,7 +1309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerTypesResult**](../Model/PartnerTypesResult.md)
+[**\Ageras\Api\PartnerTypesResult**](../Model/PartnerTypesResult.md)
 
 ### Authorization
 
@@ -1323,7 +1323,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex2**
-> \Swagger\Client\Model\PartnerTypesResult partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query)
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query)
 
 Get partner types criteria.
 
@@ -1335,14 +1335,14 @@ Get partner types criteria.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $types = "types_example"; // string | Partner type enum. @var array
 $geo_code = "geo_code_example"; // string | 
@@ -1372,7 +1372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerTypesResult**](../Model/PartnerTypesResult.md)
+[**\Ageras\Api\PartnerTypesResult**](../Model/PartnerTypesResult.md)
 
 ### Authorization
 
@@ -1386,7 +1386,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate**
-> \Swagger\Client\Model\PartnerNoteResource partnersNotesCreate($partner_note_resource)
+> \Ageras\Api\PartnerNoteResource partnersNotesCreate($partner_note_resource)
 
 Create Partner notes.
 
@@ -1398,15 +1398,15 @@ Create Partner notes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
-$partner_note_resource = new \Swagger\Client\Model\PartnerNoteResource(); // \Swagger\Client\Model\PartnerNoteResource | 
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
 try {
     $result = $api_instance->partnersNotesCreate($partner_note_resource);
@@ -1421,11 +1421,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_note_resource** | [**\Swagger\Client\Model\PartnerNoteResource**](../Model/\Swagger\Client\Model\PartnerNoteResource.md)|  |
+ **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1439,7 +1439,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate2**
-> \Swagger\Client\Model\PartnerNoteResource partnersNotesCreate2($partner_id, $partner_note_resource)
+> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id, $partner_note_resource)
 
 Create Partner notes.
 
@@ -1451,16 +1451,16 @@ Create Partner notes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_note_resource = new \Swagger\Client\Model\PartnerNoteResource(); // \Swagger\Client\Model\PartnerNoteResource | 
+$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
 try {
     $result = $api_instance->partnersNotesCreate2($partner_id, $partner_note_resource);
@@ -1476,11 +1476,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_note_resource** | [**\Swagger\Client\Model\PartnerNoteResource**](../Model/\Swagger\Client\Model\PartnerNoteResource.md)|  |
+ **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1494,7 +1494,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesGet**
-> \Swagger\Client\Model\PartnerNoteResource partnersNotesGet($partner_id, $partner_note_id)
+> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id, $partner_note_id)
 
 Retrieve a given partner note by partner id and partner_note_id.
 
@@ -1506,14 +1506,14 @@ Retrieve a given partner note by partner id and partner_note_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_note_id = "partner_note_id_example"; // string | 
 
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1549,7 +1549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex**
-> \Swagger\Client\Model\PartnerNoteResult partnersNotesIndex($partner_id, $types, $limit, $page, $query)
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex($partner_id, $types, $limit, $page, $query)
 
 Retrieve lists of notes.
 
@@ -1561,14 +1561,14 @@ Retrieve lists of notes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = 56; // int | 
 $types = "all"; // string | 
 $limit = 56; // int | The number of resources to be returned.
@@ -1596,7 +1596,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+[**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
 
 ### Authorization
 
@@ -1610,7 +1610,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex2**
-> \Swagger\Client\Model\PartnerNoteResult partnersNotesIndex2($partner_id, $types, $limit, $page, $query)
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id, $types, $limit, $page, $query)
 
 Retrieve lists of notes.
 
@@ -1622,14 +1622,14 @@ Retrieve lists of notes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $types = "all"; // string | 
 $limit = 56; // int | The number of resources to be returned.
@@ -1657,7 +1657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+[**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
 
 ### Authorization
 
@@ -1671,7 +1671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsActionsCreate**
-> \Swagger\Client\Model\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource)
+> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource)
 
 Cancel subscription.
 
@@ -1683,17 +1683,17 @@ Cancel subscription.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $subscription_id = "subscription_id_example"; // string | 
-$partner_subscription_action_resource = new \Swagger\Client\Model\PartnerSubscriptionActionResource(); // \Swagger\Client\Model\PartnerSubscriptionActionResource | 
+$partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
 
 try {
     $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource);
@@ -1710,11 +1710,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **subscription_id** | **string**|  |
- **partner_subscription_action_resource** | [**\Swagger\Client\Model\PartnerSubscriptionActionResource**](../Model/\Swagger\Client\Model\PartnerSubscriptionActionResource.md)|  |
+ **partner_subscription_action_resource** | [**\Ageras\Api\PartnerSubscriptionActionResource**](../Model/\Ageras\Api\PartnerSubscriptionActionResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerSubscriptionActionResource**](../Model/PartnerSubscriptionActionResource.md)
+[**\Ageras\Api\PartnerSubscriptionActionResource**](../Model/PartnerSubscriptionActionResource.md)
 
 ### Authorization
 
@@ -1728,7 +1728,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsCreate**
-> \Swagger\Client\Model\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id, $partner_subscription_resource)
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id, $partner_subscription_resource)
 
 Subscribe a partner.
 
@@ -1740,16 +1740,16 @@ Subscribe a partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_subscription_resource = new \Swagger\Client\Model\PartnerSubscriptionResource(); // \Swagger\Client\Model\PartnerSubscriptionResource | 
+$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
 try {
     $result = $api_instance->partnersSubscriptionsCreate($partner_id, $partner_subscription_resource);
@@ -1765,11 +1765,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_subscription_resource** | [**\Swagger\Client\Model\PartnerSubscriptionResource**](../Model/\Swagger\Client\Model\PartnerSubscriptionResource.md)|  |
+ **partner_subscription_resource** | [**\Ageras\Api\PartnerSubscriptionResource**](../Model/\Ageras\Api\PartnerSubscriptionResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
+[**\Ageras\Api\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
 
 ### Authorization
 
@@ -1783,7 +1783,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsIndex**
-> \Swagger\Client\Model\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id, $limit, $page, $query)
+> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id, $limit, $page, $query)
 
 Get partner's subscriptions.
 
@@ -1795,14 +1795,14 @@ Get partner's subscriptions.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -1828,7 +1828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerSubscriptionResult**](../Model/PartnerSubscriptionResult.md)
+[**\Ageras\Api\PartnerSubscriptionResult**](../Model/PartnerSubscriptionResult.md)
 
 ### Authorization
 
@@ -1842,7 +1842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSuggestIndex**
-> \Swagger\Client\Model\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $page)
 
 Suggest Partners to search for.
 
@@ -1854,14 +1854,14 @@ Suggest Partners to search for.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
@@ -1889,7 +1889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerSuggestResult**](../Model/PartnerSuggestResult.md)
+[**\Ageras\Api\PartnerSuggestResult**](../Model/PartnerSuggestResult.md)
 
 ### Authorization
 
@@ -1903,7 +1903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersTransactionsIndex**
-> \Swagger\Client\Model\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id, $limit, $page, $query)
+> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id, $limit, $page, $query)
 
 List Transactions for a given Partner.
 
@@ -1915,14 +1915,14 @@ List Transactions for a given Partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -1948,7 +1948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerCouponTransactionResult**](../Model/PartnerCouponTransactionResult.md)
+[**\Ageras\Api\PartnerCouponTransactionResult**](../Model/PartnerCouponTransactionResult.md)
 
 ### Authorization
 
@@ -1962,7 +1962,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUpdate**
-> \Swagger\Client\Model\PartnerResource partnersUpdate($partner_id, $partner_resource)
+> \Ageras\Api\PartnerResource partnersUpdate($partner_id, $partner_resource)
 
 Update a Partner.
 
@@ -1974,16 +1974,16 @@ Update a Partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_resource = new \Swagger\Client\Model\PartnerResource(); // \Swagger\Client\Model\PartnerResource | 
+$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
 try {
     $result = $api_instance->partnersUpdate($partner_id, $partner_resource);
@@ -1999,11 +1999,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_resource** | [**\Swagger\Client\Model\PartnerResource**](../Model/\Swagger\Client\Model\PartnerResource.md)|  |
+ **partner_resource** | [**\Ageras\Api\PartnerResource**](../Model/\Ageras\Api\PartnerResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -2029,14 +2029,14 @@ Delete content for a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -2083,14 +2083,14 @@ Delete content for a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
@@ -2127,7 +2127,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet**
-> \Swagger\Client\Model\PartnerContentResource partnersUsersContentsGet($partner_user_id, $content_key)
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id, $content_key)
 
 Get the content of a given partner user.
 
@@ -2139,14 +2139,14 @@ Get the content of a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -2168,7 +2168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2182,7 +2182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet2**
-> \Swagger\Client\Model\PartnerContentResource partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key)
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key)
 
 Get the content of a given partner user.
 
@@ -2194,14 +2194,14 @@ Get the content of a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
@@ -2225,7 +2225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2239,7 +2239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate**
-> \Swagger\Client\Model\PartnerContentResource partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource)
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2251,17 +2251,17 @@ Update content for a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Swagger\Client\Model\PartnerContentResource(); // \Swagger\Client\Model\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource);
@@ -2278,11 +2278,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Swagger\Client\Model\PartnerContentResource**](../Model/\Swagger\Client\Model\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2296,7 +2296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate2**
-> \Swagger\Client\Model\PartnerContentResource partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource)
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2308,18 +2308,18 @@ Update content for a given partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Swagger\Client\Model\PartnerContentResource(); // \Swagger\Client\Model\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource);
@@ -2337,11 +2337,11 @@ Name | Type | Description  | Notes
  **partner_id** | **string**|  |
  **partner_user_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Swagger\Client\Model\PartnerContentResource**](../Model/\Swagger\Client\Model\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2355,7 +2355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersCreate($partner_user_resource)
+> \Ageras\Api\PartnerUserResource partnersUsersCreate($partner_user_resource)
 
 Create a partner user.
 
@@ -2367,15 +2367,15 @@ Create a partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
-$partner_user_resource = new \Swagger\Client\Model\PartnerUserResource(); // \Swagger\Client\Model\PartnerUserResource | 
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersCreate($partner_user_resource);
@@ -2390,11 +2390,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_user_resource** | [**\Swagger\Client\Model\PartnerUserResource**](../Model/\Swagger\Client\Model\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2408,7 +2408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate2**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersCreate2($partner_id, $partner_user_resource)
+> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id, $partner_user_resource)
 
 Create a partner user.
 
@@ -2420,16 +2420,16 @@ Create a partner user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_user_resource = new \Swagger\Client\Model\PartnerUserResource(); // \Swagger\Client\Model\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersCreate2($partner_id, $partner_user_resource);
@@ -2445,11 +2445,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_user_resource** | [**\Swagger\Client\Model\PartnerUserResource**](../Model/\Swagger\Client\Model\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2475,14 +2475,14 @@ Delete partner user from partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
@@ -2517,7 +2517,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersGet($partner_user_id)
+> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id)
 
 Get a Partner User by a given partner_user_id.
 
@@ -2529,14 +2529,14 @@ Get a Partner User by a given partner_user_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
@@ -2556,7 +2556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2570,7 +2570,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet2**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersGet2($partner_id, $partner_user_id)
+> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id, $partner_user_id)
 
 Get a Partner User by a given partner_user_id.
 
@@ -2582,14 +2582,14 @@ Get a Partner User by a given partner_user_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
@@ -2611,7 +2611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2625,7 +2625,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex**
-> \Swagger\Client\Model\PartnerUserResult partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerUserResult partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query)
 
 List partner users.
 
@@ -2637,14 +2637,14 @@ List partner users.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | Partner User Id.
 $partner_id = "partner_id_example"; // string | Partner id for the partner users to filter by.
 $sort = "sort_example"; // string | 
@@ -2674,7 +2674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResult**](../Model/PartnerUserResult.md)
+[**\Ageras\Api\PartnerUserResult**](../Model/PartnerUserResult.md)
 
 ### Authorization
 
@@ -2688,7 +2688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex2**
-> \Swagger\Client\Model\PartnerUserResult partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query)
 
 List partner users.
 
@@ -2700,14 +2700,14 @@ List partner users.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | Partner User Id.
 $sort = "sort_example"; // string | 
@@ -2737,7 +2737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResult**](../Model/PartnerUserResult.md)
+[**\Ageras\Api\PartnerUserResult**](../Model/PartnerUserResult.md)
 
 ### Authorization
 
@@ -2751,7 +2751,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersUpdate($partner_user_id, $partner_user_resource)
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id, $partner_user_resource)
 
 Update partner user profile.
 
@@ -2763,16 +2763,16 @@ Update partner user profile.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Swagger\Client\Model\PartnerUserResource(); // \Swagger\Client\Model\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersUpdate($partner_user_id, $partner_user_resource);
@@ -2788,11 +2788,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_resource** | [**\Swagger\Client\Model\PartnerUserResource**](../Model/\Swagger\Client\Model\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2806,7 +2806,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate2**
-> \Swagger\Client\Model\PartnerUserResource partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource)
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource)
 
 Update partner user profile.
 
@@ -2818,17 +2818,17 @@ Update partner user profile.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PartnersApi();
+$api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Swagger\Client\Model\PartnerUserResource(); // \Swagger\Client\Model\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource);
@@ -2845,11 +2845,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **partner_user_id** | **string**|  |
- **partner_user_resource** | [**\Swagger\Client\Model\PartnerUserResource**](../Model/\Swagger\Client\Model\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 

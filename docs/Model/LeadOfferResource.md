@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **method** | **string** | Access method to partner lead offer. | [optional] [default to 'unknown']
 **created_at** | **string** | When was the Lead Offer created. | [optional] 
 **updated_at** | **string** | When was the Lead Offer last updated. | [optional] 
-**meeting** | [**\Swagger\Client\Model\LeadMeetingResource**](LeadMeetingResource.md) |  | [optional] 
+**meeting** | [**\Ageras\Api\LeadMeetingResource**](LeadMeetingResource.md) |  | [optional] 
 **lead_id** | **int** | Lead ID. | [optional] 
-**punch_revenue** | [**\Swagger\Client\Model\AmountResource**](AmountResource.md) |  | [optional] 
+**punch_revenue** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

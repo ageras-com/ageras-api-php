@@ -1,4 +1,4 @@
-# Swagger\Client\OrganisationApi
+# Ageras\Api\OrganisationApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **organisationEmployeesGet**
-> \Swagger\Client\Model\EmployeeResource organisationEmployeesGet($employee_id)
+> \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id)
 
 Get an employee by a given employee id.
 
@@ -22,14 +22,14 @@ Get an employee by a given employee id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OrganisationApi();
+$api_instance = new Ageras\Api\Api\OrganisationApi();
 $employee_id = "employee_id_example"; // string | 
 
 try {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EmployeeResource**](../Model/EmployeeResource.md)
+[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesGet2**
-> \Swagger\Client\Model\EmployeeResource organisationEmployeesGet2($organisation_id, $employee_id)
+> \Ageras\Api\EmployeeResource organisationEmployeesGet2($organisation_id, $employee_id)
 
 Get an employee by a given employee id.
 
@@ -75,14 +75,14 @@ Get an employee by a given employee id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OrganisationApi();
+$api_instance = new Ageras\Api\Api\OrganisationApi();
 $organisation_id = "organisation_id_example"; // string | 
 $employee_id = "employee_id_example"; // string | 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EmployeeResource**](../Model/EmployeeResource.md)
+[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesIndex**
-> \Swagger\Client\Model\EmployeeResult organisationEmployeesIndex($employee_id, $geo_code, $limit, $role_id, $sort, $page, $query)
+> \Ageras\Api\EmployeeResult organisationEmployeesIndex($employee_id, $geo_code, $limit, $role_id, $sort, $page, $query)
 
 List and Search for employees working at Ageras.
 
@@ -130,14 +130,14 @@ List and Search for employees working at Ageras.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OrganisationApi();
+$api_instance = new Ageras\Api\Api\OrganisationApi();
 $employee_id = "employee_id_example"; // string | Id for the employees.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $limit = 56; // int | Number of employees to return pr. page.
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EmployeeResult**](../Model/EmployeeResult.md)
+[**\Ageras\Api\EmployeeResult**](../Model/EmployeeResult.md)
 
 ### Authorization
 

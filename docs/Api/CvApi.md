@@ -1,4 +1,4 @@
-# Swagger\Client\CvApi
+# Ageras\Api\CvApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 
 # **cvAwardCreate**
-> \Swagger\Client\Model\PartnerUserCvAwardResource cvAwardCreate($partner_user_id, $partner_user_cv_award_resource)
+> \Ageras\Api\PartnerUserCvAwardResource cvAwardCreate($partner_user_id, $partner_user_cv_award_resource)
 
 Create partner user award.
 
@@ -47,16 +47,16 @@ Create partner user award.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_award_resource = new \Swagger\Client\Model\PartnerUserCvAwardResource(); // \Swagger\Client\Model\PartnerUserCvAwardResource | 
+$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
 
 try {
     $result = $api_instance->cvAwardCreate($partner_user_id, $partner_user_cv_award_resource);
@@ -72,11 +72,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Swagger\Client\Model\PartnerUserCvAwardResource**](../Model/\Swagger\Client\Model\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\PartnerUserCvAwardResource**](../Model/\Ageras\Api\PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
+[**\Ageras\Api\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
 
 ### Authorization
 
@@ -102,14 +102,14 @@ Delete partner user award.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $award_id = "award_id_example"; // string | 
 
@@ -144,7 +144,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvAwardUpdate**
-> \Swagger\Client\Model\PartnerUserCvAwardResource cvAwardUpdate($partner_user_id, $partner_user_cv_award_resource)
+> \Ageras\Api\PartnerUserCvAwardResource cvAwardUpdate($partner_user_id, $partner_user_cv_award_resource)
 
 Update partner user award.
 
@@ -156,16 +156,16 @@ Update partner user award.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_award_resource = new \Swagger\Client\Model\PartnerUserCvAwardResource(); // \Swagger\Client\Model\PartnerUserCvAwardResource | 
+$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
 
 try {
     $result = $api_instance->cvAwardUpdate($partner_user_id, $partner_user_cv_award_resource);
@@ -181,11 +181,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Swagger\Client\Model\PartnerUserCvAwardResource**](../Model/\Swagger\Client\Model\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\PartnerUserCvAwardResource**](../Model/\Ageras\Api\PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
+[**\Ageras\Api\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvBadgeCreate**
-> \Swagger\Client\Model\CertificationResource cvBadgeCreate($partner_user_id, $partner_user_cv_badge_resource)
+> \Ageras\Api\CertificationResource cvBadgeCreate($partner_user_id, $partner_user_cv_badge_resource)
 
 Create partner user badge.
 
@@ -211,16 +211,16 @@ Create partner user badge.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_badge_resource = new \Swagger\Client\Model\PartnerUserCvBadgeResource(); // \Swagger\Client\Model\PartnerUserCvBadgeResource | 
+$partner_user_cv_badge_resource = new \Ageras\Api\PartnerUserCvBadgeResource(); // \Ageras\Api\PartnerUserCvBadgeResource | 
 
 try {
     $result = $api_instance->cvBadgeCreate($partner_user_id, $partner_user_cv_badge_resource);
@@ -236,11 +236,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_badge_resource** | [**\Swagger\Client\Model\PartnerUserCvBadgeResource**](../Model/\Swagger\Client\Model\PartnerUserCvBadgeResource.md)|  |
+ **partner_user_cv_badge_resource** | [**\Ageras\Api\PartnerUserCvBadgeResource**](../Model/\Ageras\Api\PartnerUserCvBadgeResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -266,14 +266,14 @@ Delete partner user badge.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $badge_id = "badge_id_example"; // string | 
 
@@ -308,7 +308,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvCourseCreate**
-> \Swagger\Client\Model\PartnerUserCvCourseResource cvCourseCreate($partner_user_id, $partner_user_cv_course_resource)
+> \Ageras\Api\PartnerUserCvCourseResource cvCourseCreate($partner_user_id, $partner_user_cv_course_resource)
 
 Create partner user course.
 
@@ -320,16 +320,16 @@ Create partner user course.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_course_resource = new \Swagger\Client\Model\PartnerUserCvCourseResource(); // \Swagger\Client\Model\PartnerUserCvCourseResource | 
+$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
 
 try {
     $result = $api_instance->cvCourseCreate($partner_user_id, $partner_user_cv_course_resource);
@@ -345,11 +345,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Swagger\Client\Model\PartnerUserCvCourseResource**](../Model/\Swagger\Client\Model\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\PartnerUserCvCourseResource**](../Model/\Ageras\Api\PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
+[**\Ageras\Api\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
 
 ### Authorization
 
@@ -375,14 +375,14 @@ Delete partner user course.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $course_id = "course_id_example"; // string | 
 
@@ -417,7 +417,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvCourseUpdate**
-> \Swagger\Client\Model\PartnerUserCvCourseResource cvCourseUpdate($partner_user_id, $partner_user_cv_course_resource)
+> \Ageras\Api\PartnerUserCvCourseResource cvCourseUpdate($partner_user_id, $partner_user_cv_course_resource)
 
 Update partner user course.
 
@@ -429,16 +429,16 @@ Update partner user course.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_course_resource = new \Swagger\Client\Model\PartnerUserCvCourseResource(); // \Swagger\Client\Model\PartnerUserCvCourseResource | 
+$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
 
 try {
     $result = $api_instance->cvCourseUpdate($partner_user_id, $partner_user_cv_course_resource);
@@ -454,11 +454,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Swagger\Client\Model\PartnerUserCvCourseResource**](../Model/\Swagger\Client\Model\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\PartnerUserCvCourseResource**](../Model/\Ageras\Api\PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
+[**\Ageras\Api\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
 
 ### Authorization
 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvDescriptionCreate**
-> \Swagger\Client\Model\PartnerUserCvDescriptionResource cvDescriptionCreate($partner_user_id, $partner_user_cv_description_resource)
+> \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionCreate($partner_user_id, $partner_user_cv_description_resource)
 
 Create partner user description.
 
@@ -484,16 +484,16 @@ Create partner user description.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_description_resource = new \Swagger\Client\Model\PartnerUserCvDescriptionResource(); // \Swagger\Client\Model\PartnerUserCvDescriptionResource | 
+$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
 
 try {
     $result = $api_instance->cvDescriptionCreate($partner_user_id, $partner_user_cv_description_resource);
@@ -509,11 +509,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Swagger\Client\Model\PartnerUserCvDescriptionResource**](../Model/\Swagger\Client\Model\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
+[**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
 
 ### Authorization
 
@@ -539,14 +539,14 @@ Delete partner user description.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $description_id = "description_id_example"; // string | 
 
@@ -581,7 +581,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvDescriptionUpdate**
-> \Swagger\Client\Model\PartnerUserCvDescriptionResource cvDescriptionUpdate($partner_user_id, $partner_user_cv_description_resource)
+> \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionUpdate($partner_user_id, $partner_user_cv_description_resource)
 
 Update partner user description.
 
@@ -593,16 +593,16 @@ Update partner user description.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_description_resource = new \Swagger\Client\Model\PartnerUserCvDescriptionResource(); // \Swagger\Client\Model\PartnerUserCvDescriptionResource | 
+$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
 
 try {
     $result = $api_instance->cvDescriptionUpdate($partner_user_id, $partner_user_cv_description_resource);
@@ -618,11 +618,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Swagger\Client\Model\PartnerUserCvDescriptionResource**](../Model/\Swagger\Client\Model\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
+[**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
 
 ### Authorization
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvEducationCreate**
-> \Swagger\Client\Model\PartnerUserCvEducationResource cvEducationCreate($partner_user_id, $partner_user_cv_education_resource)
+> \Ageras\Api\PartnerUserCvEducationResource cvEducationCreate($partner_user_id, $partner_user_cv_education_resource)
 
 Create partner user education.
 
@@ -648,16 +648,16 @@ Create partner user education.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_education_resource = new \Swagger\Client\Model\PartnerUserCvEducationResource(); // \Swagger\Client\Model\PartnerUserCvEducationResource | 
+$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
 
 try {
     $result = $api_instance->cvEducationCreate($partner_user_id, $partner_user_cv_education_resource);
@@ -673,11 +673,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Swagger\Client\Model\PartnerUserCvEducationResource**](../Model/\Swagger\Client\Model\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\PartnerUserCvEducationResource**](../Model/\Ageras\Api\PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
+[**\Ageras\Api\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
 
 ### Authorization
 
@@ -703,14 +703,14 @@ Delete partner user education.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $education_id = "education_id_example"; // string | 
 
@@ -745,7 +745,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvEducationUpdate**
-> \Swagger\Client\Model\PartnerUserCvEducationResource cvEducationUpdate($partner_user_id, $partner_user_cv_education_resource)
+> \Ageras\Api\PartnerUserCvEducationResource cvEducationUpdate($partner_user_id, $partner_user_cv_education_resource)
 
 Update partner user education.
 
@@ -757,16 +757,16 @@ Update partner user education.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_education_resource = new \Swagger\Client\Model\PartnerUserCvEducationResource(); // \Swagger\Client\Model\PartnerUserCvEducationResource | 
+$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
 
 try {
     $result = $api_instance->cvEducationUpdate($partner_user_id, $partner_user_cv_education_resource);
@@ -782,11 +782,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Swagger\Client\Model\PartnerUserCvEducationResource**](../Model/\Swagger\Client\Model\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\PartnerUserCvEducationResource**](../Model/\Ageras\Api\PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
+[**\Ageras\Api\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
 
 ### Authorization
 
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExperienceCreate**
-> \Swagger\Client\Model\PartnerUserCvExperienceResource cvExperienceCreate($partner_user_id, $partner_user_cv_experience_resource)
+> \Ageras\Api\PartnerUserCvExperienceResource cvExperienceCreate($partner_user_id, $partner_user_cv_experience_resource)
 
 Create partner user experience.
 
@@ -812,16 +812,16 @@ Create partner user experience.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_experience_resource = new \Swagger\Client\Model\PartnerUserCvExperienceResource(); // \Swagger\Client\Model\PartnerUserCvExperienceResource | 
+$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
 
 try {
     $result = $api_instance->cvExperienceCreate($partner_user_id, $partner_user_cv_experience_resource);
@@ -837,11 +837,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Swagger\Client\Model\PartnerUserCvExperienceResource**](../Model/\Swagger\Client\Model\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
+[**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
 
 ### Authorization
 
@@ -867,14 +867,14 @@ Delete partner user experience.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $experience_id = "experience_id_example"; // string | 
 
@@ -909,7 +909,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExperienceUpdate**
-> \Swagger\Client\Model\PartnerUserCvExperienceResource cvExperienceUpdate($partner_user_id, $partner_user_cv_experience_resource)
+> \Ageras\Api\PartnerUserCvExperienceResource cvExperienceUpdate($partner_user_id, $partner_user_cv_experience_resource)
 
 Update partner user experience.
 
@@ -921,16 +921,16 @@ Update partner user experience.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_experience_resource = new \Swagger\Client\Model\PartnerUserCvExperienceResource(); // \Swagger\Client\Model\PartnerUserCvExperienceResource | 
+$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
 
 try {
     $result = $api_instance->cvExperienceUpdate($partner_user_id, $partner_user_cv_experience_resource);
@@ -946,11 +946,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Swagger\Client\Model\PartnerUserCvExperienceResource**](../Model/\Swagger\Client\Model\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
+[**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
 
 ### Authorization
 
@@ -964,7 +964,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExpertiseCreate**
-> \Swagger\Client\Model\PartnerUserCvExpertiseResource cvExpertiseCreate($partner_user_id, $partner_user_cv_expertise_resource)
+> \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseCreate($partner_user_id, $partner_user_cv_expertise_resource)
 
 Create partner user expertise.
 
@@ -976,16 +976,16 @@ Create partner user expertise.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_expertise_resource = new \Swagger\Client\Model\PartnerUserCvExpertiseResource(); // \Swagger\Client\Model\PartnerUserCvExpertiseResource | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
 
 try {
     $result = $api_instance->cvExpertiseCreate($partner_user_id, $partner_user_cv_expertise_resource);
@@ -1001,11 +1001,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Swagger\Client\Model\PartnerUserCvExpertiseResource**](../Model/\Swagger\Client\Model\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
+[**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
 
 ### Authorization
 
@@ -1031,14 +1031,14 @@ Delete partner user expertise.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $expertise_id = "expertise_id_example"; // string | 
 
@@ -1073,7 +1073,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExpertiseUpdate**
-> \Swagger\Client\Model\PartnerUserCvExpertiseResource cvExpertiseUpdate($partner_user_id, $partner_user_cv_expertise_resource)
+> \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseUpdate($partner_user_id, $partner_user_cv_expertise_resource)
 
 Update partner user expertise.
 
@@ -1085,16 +1085,16 @@ Update partner user expertise.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_expertise_resource = new \Swagger\Client\Model\PartnerUserCvExpertiseResource(); // \Swagger\Client\Model\PartnerUserCvExpertiseResource | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
 
 try {
     $result = $api_instance->cvExpertiseUpdate($partner_user_id, $partner_user_cv_expertise_resource);
@@ -1110,11 +1110,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Swagger\Client\Model\PartnerUserCvExpertiseResource**](../Model/\Swagger\Client\Model\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
+[**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
 
 ### Authorization
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvGet**
-> \Swagger\Client\Model\PartnerUserCvResource cvGet($partner_user_id)
+> \Ageras\Api\PartnerUserCvResource cvGet($partner_user_id)
 
 Get partner user cv.
 
@@ -1140,14 +1140,14 @@ Get partner user cv.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvResource**](../Model/PartnerUserCvResource.md)
+[**\Ageras\Api\PartnerUserCvResource**](../Model/PartnerUserCvResource.md)
 
 ### Authorization
 
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvIndex**
-> \Swagger\Client\Model\PartnerUserCvResult cvIndex($partner_id, $partner_user_id, $limit, $page, $query)
+> \Ageras\Api\PartnerUserCvResult cvIndex($partner_id, $partner_user_id, $limit, $page, $query)
 
 Index all partner user CV for given partner.
 
@@ -1193,14 +1193,14 @@ Index all partner user CV for given partner.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_id = 56; // int | 
 $partner_user_id = 56; // int | 
 $limit = 56; // int | The number of resources to be returned.
@@ -1228,7 +1228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvResult**](../Model/PartnerUserCvResult.md)
+[**\Ageras\Api\PartnerUserCvResult**](../Model/PartnerUserCvResult.md)
 
 ### Authorization
 
@@ -1242,7 +1242,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvLanguageCreate**
-> \Swagger\Client\Model\PartnerUserCvLanguageResource cvLanguageCreate($partner_user_id, $partner_user_cv_language_resource)
+> \Ageras\Api\PartnerUserCvLanguageResource cvLanguageCreate($partner_user_id, $partner_user_cv_language_resource)
 
 Create partner user language.
 
@@ -1254,16 +1254,16 @@ Create partner user language.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_language_resource = new \Swagger\Client\Model\PartnerUserCvLanguageResource(); // \Swagger\Client\Model\PartnerUserCvLanguageResource | 
+$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
 
 try {
     $result = $api_instance->cvLanguageCreate($partner_user_id, $partner_user_cv_language_resource);
@@ -1279,11 +1279,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Swagger\Client\Model\PartnerUserCvLanguageResource**](../Model/\Swagger\Client\Model\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
+[**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
 
 ### Authorization
 
@@ -1309,14 +1309,14 @@ Delete partner user language.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $language_id = "language_id_example"; // string | 
 
@@ -1351,7 +1351,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvLanguageUpdate**
-> \Swagger\Client\Model\PartnerUserCvLanguageResource cvLanguageUpdate($partner_user_id, $partner_user_cv_language_resource)
+> \Ageras\Api\PartnerUserCvLanguageResource cvLanguageUpdate($partner_user_id, $partner_user_cv_language_resource)
 
 Update partner user language.
 
@@ -1363,16 +1363,16 @@ Update partner user language.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_language_resource = new \Swagger\Client\Model\PartnerUserCvLanguageResource(); // \Swagger\Client\Model\PartnerUserCvLanguageResource | 
+$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
 
 try {
     $result = $api_instance->cvLanguageUpdate($partner_user_id, $partner_user_cv_language_resource);
@@ -1388,11 +1388,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Swagger\Client\Model\PartnerUserCvLanguageResource**](../Model/\Swagger\Client\Model\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
+[**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
 
 ### Authorization
 
@@ -1418,14 +1418,14 @@ Delete partner user social media.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
@@ -1470,14 +1470,14 @@ Delete partner user social media.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
@@ -1510,7 +1510,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvSocialUpdate**
-> \Swagger\Client\Model\PartnerUserCvSocialMediaResource cvSocialUpdate($partner_user_id, $partner_user_cv_social_media_resource)
+> \Ageras\Api\PartnerUserCvSocialMediaResource cvSocialUpdate($partner_user_id, $partner_user_cv_social_media_resource)
 
 Update partner user social media.
 
@@ -1522,16 +1522,16 @@ Update partner user social media.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\CvApi();
+$api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_social_media_resource = new \Swagger\Client\Model\PartnerUserCvSocialMediaResource(); // \Swagger\Client\Model\PartnerUserCvSocialMediaResource | 
+$partner_user_cv_social_media_resource = new \Ageras\Api\PartnerUserCvSocialMediaResource(); // \Ageras\Api\PartnerUserCvSocialMediaResource | 
 
 try {
     $result = $api_instance->cvSocialUpdate($partner_user_id, $partner_user_cv_social_media_resource);
@@ -1547,11 +1547,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_social_media_resource** | [**\Swagger\Client\Model\PartnerUserCvSocialMediaResource**](../Model/\Swagger\Client\Model\PartnerUserCvSocialMediaResource.md)|  |
+ **partner_user_cv_social_media_resource** | [**\Ageras\Api\PartnerUserCvSocialMediaResource**](../Model/\Ageras\Api\PartnerUserCvSocialMediaResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerUserCvSocialMediaResource**](../Model/PartnerUserCvSocialMediaResource.md)
+[**\Ageras\Api\PartnerUserCvSocialMediaResource**](../Model/PartnerUserCvSocialMediaResource.md)
 
 ### Authorization
 

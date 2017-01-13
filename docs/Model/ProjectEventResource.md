@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **scheduled_start** | **string** |  | [optional] 
 **scheduled_stop** | **string** |  | [optional] 
 **scheduled_length** | **int** |  | [optional] 
-**project** | [**\Swagger\Client\Model\ProjectResource**](ProjectResource.md) |  | [optional] 
-**partner_user** | [**\Swagger\Client\Model\ProjectPartnerUserResource**](ProjectPartnerUserResource.md) |  | [optional] 
+**project** | [**\Ageras\Api\ProjectResource**](ProjectResource.md) |  | [optional] 
+**partner_user** | [**\Ageras\Api\ProjectPartnerUserResource**](ProjectPartnerUserResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

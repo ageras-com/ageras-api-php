@@ -1,4 +1,4 @@
-# Swagger\Client\LeadsApi
+# Ageras\Api\LeadsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **leadsCreate**
-> \Swagger\Client\Model\LeadResource leadsCreate($lead_resource)
+> \Ageras\Api\LeadResource leadsCreate($lead_resource)
 
 Create a new Lead.
 
@@ -30,15 +30,15 @@ Create a new Lead.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
-$lead_resource = new \Swagger\Client\Model\LeadResource(); // \Swagger\Client\Model\LeadResource | The given Lead Resource that should be created
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | The given Lead Resource that should be created
 
 try {
     $result = $api_instance->leadsCreate($lead_resource);
@@ -53,11 +53,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lead_resource** | [**\Swagger\Client\Model\LeadResource**](../Model/\Swagger\Client\Model\LeadResource.md)| The given Lead Resource that should be created |
+ **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)| The given Lead Resource that should be created |
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -83,14 +83,14 @@ Delete a Lead from a given lead_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
 
 try {
@@ -123,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsGet**
-> \Swagger\Client\Model\LeadResource leadsGet($lead_id)
+> \Ageras\Api\LeadResource leadsGet($lead_id)
 
 Return a Lead from a Lead Id.
 
@@ -135,14 +135,14 @@ Return a Lead from a Lead Id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | The id the Lead to return
 
 try {
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsIndex**
-> \Swagger\Client\Model\LeadResult leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $limit, $page, $query)
+> \Ageras\Api\LeadResult leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $limit, $page, $query)
 
 Search for Lead's by a given set of criteria.
 
@@ -188,14 +188,14 @@ Search for Lead's by a given set of criteria.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | List of leads identification(ID).
 $needs_more_offers = false; // bool | Only list leads that need more offers.
 $phone = "phone_example"; // string | Filter by a given phone number.
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadResult**](../Model/LeadResult.md)
+[**\Ageras\Api\LeadResult**](../Model/LeadResult.md)
 
 ### Authorization
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersCreate**
-> \Swagger\Client\Model\LeadOfferResource leadsOffersCreate($lead_id, $lead_offer_resource)
+> \Ageras\Api\LeadOfferResource leadsOffersCreate($lead_id, $lead_offer_resource)
 
 Create a new offer for a given Lead.
 
@@ -261,16 +261,16 @@ Create a new offer for a given Lead.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_offer_resource = new \Swagger\Client\Model\LeadOfferResource(); // \Swagger\Client\Model\LeadOfferResource | 
+$lead_offer_resource = new \Ageras\Api\LeadOfferResource(); // \Ageras\Api\LeadOfferResource | 
 
 try {
     $result = $api_instance->leadsOffersCreate($lead_id, $lead_offer_resource);
@@ -286,11 +286,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_offer_resource** | [**\Swagger\Client\Model\LeadOfferResource**](../Model/\Swagger\Client\Model\LeadOfferResource.md)|  |
+ **lead_offer_resource** | [**\Ageras\Api\LeadOfferResource**](../Model/\Ageras\Api\LeadOfferResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersGet**
-> \Swagger\Client\Model\LeadOfferResource leadsOffersGet($lead_offer_id)
+> \Ageras\Api\LeadOfferResource leadsOffersGet($lead_offer_id)
 
 Get an offer by id.
 
@@ -316,14 +316,14 @@ Get an offer by id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_offer_id = "lead_offer_id_example"; // string | 
 
 try {
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersGet2**
-> \Swagger\Client\Model\LeadOfferResource leadsOffersGet2($lead_id, $lead_offer_id)
+> \Ageras\Api\LeadOfferResource leadsOffersGet2($lead_id, $lead_offer_id)
 
 Get an offer by id.
 
@@ -369,14 +369,14 @@ Get an offer by id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
 $lead_offer_id = "lead_offer_id_example"; // string | 
 
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersIndex**
-> \Swagger\Client\Model\LeadOfferResult leadsOffersIndex($lead_id, $lead_offer_id, $partner_id, $limit, $page, $query)
+> \Ageras\Api\LeadOfferResult leadsOffersIndex($lead_id, $lead_offer_id, $partner_id, $limit, $page, $query)
 
 List the offers connected to a given Lead.
 
@@ -424,14 +424,14 @@ List the offers connected to a given Lead.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | List of leads identification(ID).
 $lead_offer_id = "lead_offer_id_example"; // string | List of lead offers identification(ID).
 $partner_id = "partner_id_example"; // string | Offers belonging to a given partner.
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadOfferResult**](../Model/LeadOfferResult.md)
+[**\Ageras\Api\LeadOfferResult**](../Model/LeadOfferResult.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersIndex2**
-> \Swagger\Client\Model\LeadOfferResult leadsOffersIndex2($lead_id, $lead_offer_id, $partner_id, $limit, $page, $query)
+> \Ageras\Api\LeadOfferResult leadsOffersIndex2($lead_id, $lead_offer_id, $partner_id, $limit, $page, $query)
 
 List the offers connected to a given Lead.
 
@@ -487,14 +487,14 @@ List the offers connected to a given Lead.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
 $lead_offer_id = "lead_offer_id_example"; // string | List of lead offers identification(ID).
 $partner_id = "partner_id_example"; // string | Offers belonging to a given partner.
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadOfferResult**](../Model/LeadOfferResult.md)
+[**\Ageras\Api\LeadOfferResult**](../Model/LeadOfferResult.md)
 
 ### Authorization
 
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsTypesIndex**
-> \Swagger\Client\Model\LeadTypeResult leadsTypesIndex($type_id, $title, $geo_code, $limit, $page, $query)
+> \Ageras\Api\LeadTypeResult leadsTypesIndex($type_id, $title, $geo_code, $limit, $page, $query)
 
 Index lead types.
 
@@ -550,14 +550,14 @@ Index lead types.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $type_id = "type_id_example"; // string | Type ID. @var int
 $title = "title_example"; // string | Type title in its native language. @var string
 $geo_code = "geo_code_example"; // string | Industry geo code origin. @var string
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadTypeResult**](../Model/LeadTypeResult.md)
+[**\Ageras\Api\LeadTypeResult**](../Model/LeadTypeResult.md)
 
 ### Authorization
 
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsUpdate**
-> \Swagger\Client\Model\LeadResource leadsUpdate($lead_id, $lead_resource)
+> \Ageras\Api\LeadResource leadsUpdate($lead_id, $lead_resource)
 
 Update Properties on a given Lead.
 
@@ -613,16 +613,16 @@ Update Properties on a given Lead.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LeadsApi();
+$api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_resource = new \Swagger\Client\Model\LeadResource(); // \Swagger\Client\Model\LeadResource | 
+$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | 
 
 try {
     $result = $api_instance->leadsUpdate($lead_id, $lead_resource);
@@ -638,11 +638,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_resource** | [**\Swagger\Client\Model\LeadResource**](../Model/\Swagger\Client\Model\LeadResource.md)|  |
+ **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 

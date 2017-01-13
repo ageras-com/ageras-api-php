@@ -1,4 +1,4 @@
-# Swagger\Client\OffersApi
+# Ageras\Api\OffersApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **offersActionsCreate**
-> \Swagger\Client\Model\PartnerOfferResource offersActionsCreate($offer_id, $offer_action_resource)
+> \Ageras\Api\PartnerOfferResource offersActionsCreate($offer_id, $offer_action_resource)
 
 Perform an action on an offer.
 
@@ -22,16 +22,16 @@ Perform an action on an offer.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OffersApi();
+$api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
-$offer_action_resource = new \Swagger\Client\Model\OfferActionResource(); // \Swagger\Client\Model\OfferActionResource | 
+$offer_action_resource = new \Ageras\Api\OfferActionResource(); // \Ageras\Api\OfferActionResource | 
 
 try {
     $result = $api_instance->offersActionsCreate($offer_id, $offer_action_resource);
@@ -47,11 +47,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offer_id** | **string**|  |
- **offer_action_resource** | [**\Swagger\Client\Model\OfferActionResource**](../Model/\Swagger\Client\Model\OfferActionResource.md)|  |
+ **offer_action_resource** | [**\Ageras\Api\OfferActionResource**](../Model/\Ageras\Api\OfferActionResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerOfferResource**](../Model/PartnerOfferResource.md)
+[**\Ageras\Api\PartnerOfferResource**](../Model/PartnerOfferResource.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersGet**
-> \Swagger\Client\Model\PartnerOfferResource offersGet($offer_id)
+> \Ageras\Api\PartnerOfferResource offersGet($offer_id)
 
 Get an offer by id.
 
@@ -77,14 +77,14 @@ Get an offer by id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OffersApi();
+$api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
 
 try {
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerOfferResource**](../Model/PartnerOfferResource.md)
+[**\Ageras\Api\PartnerOfferResource**](../Model/PartnerOfferResource.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersIndex**
-> \Swagger\Client\Model\PartnerOfferResult offersIndex($show_expired, $show_accepted, $partner_id, $order_by, $action, $geo_code, $type, $limit, $page, $query)
+> \Ageras\Api\PartnerOfferResult offersIndex($show_expired, $show_accepted, $partner_id, $order_by, $action, $geo_code, $type, $limit, $page, $query)
 
 Get all partner offer.
 
@@ -130,14 +130,14 @@ Get all partner offer.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\OffersApi();
+$api_instance = new Ageras\Api\Api\OffersApi();
 $show_expired = false; // bool | Include expired partners in the result.
 $show_accepted = false; // bool | Show accepted partner.
 $partner_id = 56; // int | Partner id of Offers to filter by.
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PartnerOfferResult**](../Model/PartnerOfferResult.md)
+[**\Ageras\Api\PartnerOfferResult**](../Model/PartnerOfferResult.md)
 
 ### Authorization
 

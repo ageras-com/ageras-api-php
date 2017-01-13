@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Package ID. | [optional] 
 **name** | **string** | Name of the package. | [optional] 
-**monthly_price** | [**\Swagger\Client\Model\AmountResource**](AmountResource.md) |  | [optional] 
-**features** | [**\Swagger\Client\Model\PackageFeatureResource[]**](PackageFeatureResource.md) | Fet. | [optional] 
+**monthly_price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**features** | [**\Ageras\Api\PackageFeatureResource[]**](PackageFeatureResource.md) | Fet. | [optional] 
 **identifier** | **string** | Package identifier. | [optional] 
 **description** | **string** | Package description. | [optional] 
 **priority** | **string** | Package priority. | [optional] 

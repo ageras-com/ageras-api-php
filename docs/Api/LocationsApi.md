@@ -1,4 +1,4 @@
-# Swagger\Client\LocationsApi
+# Ageras\Api\LocationsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **locationsIndex**
-> \Swagger\Client\Model\LocationResult locationsIndex($geo_code, $limit, $page, $query)
+> \Ageras\Api\LocationResult locationsIndex($geo_code, $limit, $page, $query)
 
 Search and find locations by different criterias.
 
@@ -20,14 +20,14 @@ Search and find locations by different criterias.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LocationsApi();
+$api_instance = new Ageras\Api\Api\LocationsApi();
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LocationResult**](../Model/LocationResult.md)
+[**\Ageras\Api\LocationResult**](../Model/LocationResult.md)
 
 ### Authorization
 

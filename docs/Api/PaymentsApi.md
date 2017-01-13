@@ -1,4 +1,4 @@
-# Swagger\Client\PaymentsApi
+# Ageras\Api\PaymentsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **paymentsCardsGet**
-> \Swagger\Client\Model\PaymentCardResource paymentsCardsGet($payment_card_id)
+> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id)
 
 Get a Partner from a given partner_id.
 
@@ -24,14 +24,14 @@ Get a Partner from a given partner_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PaymentsApi();
+$api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_card_id = "payment_card_id_example"; // string | 
 
 try {
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsGet2**
-> \Swagger\Client\Model\PaymentCardResource paymentsCardsGet2($payment_id, $payment_card_id)
+> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id, $payment_card_id)
 
 Get a Partner from a given partner_id.
 
@@ -77,14 +77,14 @@ Get a Partner from a given partner_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PaymentsApi();
+$api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_id = "payment_id_example"; // string | 
 $payment_card_id = "payment_card_id_example"; // string | 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsIndex**
-> \Swagger\Client\Model\PaymentCardResult paymentsCardsIndex($partner_id, $limit, $page, $query)
+> \Ageras\Api\PaymentCardResult paymentsCardsIndex($partner_id, $limit, $page, $query)
 
 List payment cards.
 
@@ -132,14 +132,14 @@ List payment cards.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PaymentsApi();
+$api_instance = new Ageras\Api\Api\PaymentsApi();
 $partner_id = 56; // int | Partner id for the partner payment cards to filter by.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PaymentCardResult**](../Model/PaymentCardResult.md)
+[**\Ageras\Api\PaymentCardResult**](../Model/PaymentCardResult.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsEpayCardsCreate**
-> \Swagger\Client\Model\PaymentCardResource paymentsEpayCardsCreate($payment_card_resource)
+> \Ageras\Api\PaymentCardResource paymentsEpayCardsCreate($payment_card_resource)
 
 Create an epay payment card.
 
@@ -191,15 +191,15 @@ Create an epay payment card.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PaymentsApi();
-$payment_card_resource = new \Swagger\Client\Model\PaymentCardResource(); // \Swagger\Client\Model\PaymentCardResource | 
+$api_instance = new Ageras\Api\Api\PaymentsApi();
+$payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
 
 try {
     $result = $api_instance->paymentsEpayCardsCreate($payment_card_resource);
@@ -214,11 +214,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_card_resource** | [**\Swagger\Client\Model\PaymentCardResource**](../Model/\Swagger\Client\Model\PaymentCardResource.md)|  |
+ **payment_card_resource** | [**\Ageras\Api\PaymentCardResource**](../Model/\Ageras\Api\PaymentCardResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsEpayWindowCreate**
-> \Swagger\Client\Model\PaymentWindowResource paymentsEpayWindowCreate($payment_window_resource)
+> \Ageras\Api\PaymentWindowResource paymentsEpayWindowCreate($payment_window_resource)
 
 Create epay window.
 
@@ -244,15 +244,15 @@ Create epay window.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\PaymentsApi();
-$payment_window_resource = new \Swagger\Client\Model\PaymentWindowResource(); // \Swagger\Client\Model\PaymentWindowResource | 
+$api_instance = new Ageras\Api\Api\PaymentsApi();
+$payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
 
 try {
     $result = $api_instance->paymentsEpayWindowCreate($payment_window_resource);
@@ -267,11 +267,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_window_resource** | [**\Swagger\Client\Model\PaymentWindowResource**](../Model/\Swagger\Client\Model\PaymentWindowResource.md)|  |
+ **payment_window_resource** | [**\Ageras\Api\PaymentWindowResource**](../Model/\Ageras\Api\PaymentWindowResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PaymentWindowResource**](../Model/PaymentWindowResource.md)
+[**\Ageras\Api\PaymentWindowResource**](../Model/PaymentWindowResource.md)
 
 ### Authorization
 

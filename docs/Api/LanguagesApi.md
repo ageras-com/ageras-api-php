@@ -1,4 +1,4 @@
-# Swagger\Client\LanguagesApi
+# Ageras\Api\LanguagesApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **languagesIndex**
-> \Swagger\Client\Model\LanguageResult languagesIndex($geo_code, $iso_code, $language, $native, $limit, $page, $query)
+> \Ageras\Api\LanguageResult languagesIndex($geo_code, $iso_code, $language, $native, $limit, $page, $query)
 
 List Languages available.
 
@@ -20,14 +20,14 @@ List Languages available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\LanguagesApi();
+$api_instance = new Ageras\Api\Api\LanguagesApi();
 $geo_code = "geo_code_example"; // string | Geo code to display language - default en.
 $iso_code = "iso_code_example"; // string | Language iso code.
 $language = "language_example"; // string | Language translation in geo code.
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LanguageResult**](../Model/LanguageResult.md)
+[**\Ageras\Api\LanguageResult**](../Model/LanguageResult.md)
 
 ### Authorization
 

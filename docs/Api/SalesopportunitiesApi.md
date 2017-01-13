@@ -1,4 +1,4 @@
-# Swagger\Client\SalesopportunitiesApi
+# Ageras\Api\SalesopportunitiesApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **salesOpportunitiesAggregationsIndex**
-> \Swagger\Client\Model\SalesOpportunityResult salesOpportunitiesAggregationsIndex($employee_id, $month, $limit, $geo_code, $page, $query)
+> \Ageras\Api\SalesOpportunityResult salesOpportunitiesAggregationsIndex($employee_id, $month, $limit, $geo_code, $page, $query)
 
 Index aggregations.
 
@@ -24,14 +24,14 @@ Index aggregations.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SalesopportunitiesApi();
+$api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $employee_id = 56; // int | Employee ID.
 $month = "month_example"; // string | Filter by month.
 $limit = 56; // int | Limit.
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
+[**\Ageras\Api\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesCreate**
-> \Swagger\Client\Model\SalesOpportunityResource salesOpportunitiesCreate($sales_opportunity_resource)
+> \Ageras\Api\SalesOpportunityResource salesOpportunitiesCreate($sales_opportunity_resource)
 
 Create sale opportunity.
 
@@ -87,15 +87,15 @@ Create sale opportunity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SalesopportunitiesApi();
-$sales_opportunity_resource = new \Swagger\Client\Model\SalesOpportunityResource(); // \Swagger\Client\Model\SalesOpportunityResource | 
+$api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
+$sales_opportunity_resource = new \Ageras\Api\SalesOpportunityResource(); // \Ageras\Api\SalesOpportunityResource | 
 
 try {
     $result = $api_instance->salesOpportunitiesCreate($sales_opportunity_resource);
@@ -110,11 +110,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sales_opportunity_resource** | [**\Swagger\Client\Model\SalesOpportunityResource**](../Model/\Swagger\Client\Model\SalesOpportunityResource.md)|  |
+ **sales_opportunity_resource** | [**\Ageras\Api\SalesOpportunityResource**](../Model/\Ageras\Api\SalesOpportunityResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
+[**\Ageras\Api\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
 
 ### Authorization
 
@@ -140,14 +140,14 @@ Delete Sales opportunity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SalesopportunitiesApi();
+$api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $opportunity_id = "opportunity_id_example"; // string | 
 
 try {
@@ -180,7 +180,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesIndex**
-> \Swagger\Client\Model\SalesOpportunityResult salesOpportunitiesIndex($employee_id, $month, $limit, $geo_code, $page, $query)
+> \Ageras\Api\SalesOpportunityResult salesOpportunitiesIndex($employee_id, $month, $limit, $geo_code, $page, $query)
 
 Get list sales pipelines opportunities.
 
@@ -192,14 +192,14 @@ Get list sales pipelines opportunities.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SalesopportunitiesApi();
+$api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $employee_id = 56; // int | Employee ID.
 $month = "month_example"; // string | Filter by month.
 $limit = 56; // int | Limit.
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
+[**\Ageras\Api\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesUpdate**
-> \Swagger\Client\Model\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id, $sales_opportunity_resource)
+> \Ageras\Api\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id, $sales_opportunity_resource)
 
 Create Sales opportunity resource.
 
@@ -255,16 +255,16 @@ Create Sales opportunity resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\SalesopportunitiesApi();
+$api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $sales_opportunity_id = "sales_opportunity_id_example"; // string | 
-$sales_opportunity_resource = new \Swagger\Client\Model\SalesOpportunityResource(); // \Swagger\Client\Model\SalesOpportunityResource | 
+$sales_opportunity_resource = new \Ageras\Api\SalesOpportunityResource(); // \Ageras\Api\SalesOpportunityResource | 
 
 try {
     $result = $api_instance->salesOpportunitiesUpdate($sales_opportunity_id, $sales_opportunity_resource);
@@ -280,11 +280,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sales_opportunity_id** | **string**|  |
- **sales_opportunity_resource** | [**\Swagger\Client\Model\SalesOpportunityResource**](../Model/\Swagger\Client\Model\SalesOpportunityResource.md)|  |
+ **sales_opportunity_resource** | [**\Ageras\Api\SalesOpportunityResource**](../Model/\Ageras\Api\SalesOpportunityResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
+[**\Ageras\Api\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
 
 ### Authorization
 

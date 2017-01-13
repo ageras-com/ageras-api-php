@@ -1,4 +1,4 @@
-# Swagger\Client\ProjectsApi
+# Ageras\Api\ProjectsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 
 # **projectsCreate**
-> \Swagger\Client\Model\ProjectResource projectsCreate($project_resource)
+> \Ageras\Api\ProjectResource projectsCreate($project_resource)
 
 Create Project.
 
@@ -44,15 +44,15 @@ Create Project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
-$project_resource = new \Swagger\Client\Model\ProjectResource(); // \Swagger\Client\Model\ProjectResource | 
+$api_instance = new Ageras\Api\Api\ProjectsApi();
+$project_resource = new \Ageras\Api\ProjectResource(); // \Ageras\Api\ProjectResource | 
 
 try {
     $result = $api_instance->projectsCreate($project_resource);
@@ -67,11 +67,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_resource** | [**\Swagger\Client\Model\ProjectResource**](../Model/\Swagger\Client\Model\ProjectResource.md)|  |
+ **project_resource** | [**\Ageras\Api\ProjectResource**](../Model/\Ageras\Api\ProjectResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 
@@ -97,14 +97,14 @@ Delete a project for a given project id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 
 try {
@@ -137,7 +137,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsCreate**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsCreate($project_event_resource)
+> \Ageras\Api\ProjectNoteResource projectsEventsCreate($project_event_resource)
 
 Create events for a given project.
 
@@ -149,15 +149,15 @@ Create events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
-$project_event_resource = new \Swagger\Client\Model\ProjectEventResource(); // \Swagger\Client\Model\ProjectEventResource | 
+$api_instance = new Ageras\Api\Api\ProjectsApi();
+$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsCreate($project_event_resource);
@@ -172,11 +172,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_event_resource** | [**\Swagger\Client\Model\ProjectEventResource**](../Model/\Swagger\Client\Model\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsCreate2**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsCreate2($project_id, $project_event_resource)
+> \Ageras\Api\ProjectNoteResource projectsEventsCreate2($project_id, $project_event_resource)
 
 Create events for a given project.
 
@@ -202,16 +202,16 @@ Create events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_event_resource = new \Swagger\Client\Model\ProjectEventResource(); // \Swagger\Client\Model\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsCreate2($project_id, $project_event_resource);
@@ -227,11 +227,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_event_resource** | [**\Swagger\Client\Model\ProjectEventResource**](../Model/\Swagger\Client\Model\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -257,14 +257,14 @@ Delete a given project event.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_event_id = "project_event_id_example"; // string | 
 
@@ -299,7 +299,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsGet($project_event_id)
+> \Ageras\Api\ProjectNoteResource projectsEventsGet($project_event_id)
 
 Get event for a given project.
 
@@ -311,14 +311,14 @@ Get event for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_event_id = "project_event_id_example"; // string | 
 
 try {
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet2**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsGet2($project_id, $project_event_id)
+> \Ageras\Api\ProjectNoteResource projectsEventsGet2($project_id, $project_event_id)
 
 Get event for a given project.
 
@@ -364,14 +364,14 @@ Get event for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_event_id = "project_event_id_example"; // string | 
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex**
-> \Swagger\Client\Model\ProjectNoteResult projectsEventsIndex($project_event_id, $project_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsEventsIndex($project_event_id, $project_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
 
 List events for a given project.
 
@@ -419,14 +419,14 @@ List events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_event_id = "project_event_id_example"; // string | Id for the Projects's events.
 $project_id = "project_id_example"; // string | Project ID.
 $partner_id = "partner_id_example"; // string | Partner Id.
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex2**
-> \Swagger\Client\Model\ProjectNoteResult projectsEventsIndex2($project_id, $project_event_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsEventsIndex2($project_id, $project_event_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
 
 List events for a given project.
 
@@ -490,14 +490,14 @@ List events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_event_id = "project_event_id_example"; // string | Id for the Projects's events.
 $partner_id = "partner_id_example"; // string | Partner Id.
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsUpdate($project_event_id, $project_event_resource)
+> \Ageras\Api\ProjectNoteResource projectsEventsUpdate($project_event_id, $project_event_resource)
 
 Update e events for project events.
 
@@ -561,16 +561,16 @@ Update e events for project events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_event_id = "project_event_id_example"; // string | 
-$project_event_resource = new \Swagger\Client\Model\ProjectEventResource(); // \Swagger\Client\Model\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsUpdate($project_event_id, $project_event_resource);
@@ -586,11 +586,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_event_id** | **string**|  |
- **project_event_resource** | [**\Swagger\Client\Model\ProjectEventResource**](../Model/\Swagger\Client\Model\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate2**
-> \Swagger\Client\Model\ProjectNoteResource projectsEventsUpdate2($project_id, $project_event_id, $project_event_resource)
+> \Ageras\Api\ProjectNoteResource projectsEventsUpdate2($project_id, $project_event_id, $project_event_resource)
 
 Update e events for project events.
 
@@ -616,17 +616,17 @@ Update e events for project events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_event_id = "project_event_id_example"; // string | 
-$project_event_resource = new \Swagger\Client\Model\ProjectEventResource(); // \Swagger\Client\Model\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsUpdate2($project_id, $project_event_id, $project_event_resource);
@@ -643,11 +643,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
  **project_event_id** | **string**|  |
- **project_event_resource** | [**\Swagger\Client\Model\ProjectEventResource**](../Model/\Swagger\Client\Model\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsGet**
-> \Swagger\Client\Model\ProjectResource projectsGet($project_id)
+> \Ageras\Api\ProjectResource projectsGet($project_id)
 
 Get a Project from a project id.
 
@@ -673,14 +673,14 @@ Get a Project from a project id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 
 try {
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsIndex**
-> \Swagger\Client\Model\ProjectResult projectsIndex($project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
+> \Ageras\Api\ProjectResult projectsIndex($project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
 
 List Projects.
 
@@ -726,14 +726,14 @@ List Projects.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | Project ID.
 $partner_id = "partner_id_example"; // string | Partner Id.
 $partner_user_id = "partner_user_id_example"; // string | Partner User Id.
@@ -773,7 +773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectResult**](../Model/ProjectResult.md)
+[**\Ageras\Api\ProjectResult**](../Model/ProjectResult.md)
 
 ### Authorization
 
@@ -787,7 +787,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesCreate**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesCreate($project_note_resource)
+> \Ageras\Api\ProjectNoteResource projectsNotesCreate($project_note_resource)
 
 Create a note for a given project.
 
@@ -799,15 +799,15 @@ Create a note for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
-$project_note_resource = new \Swagger\Client\Model\ProjectNoteResource(); // \Swagger\Client\Model\ProjectNoteResource | 
+$api_instance = new Ageras\Api\Api\ProjectsApi();
+$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesCreate($project_note_resource);
@@ -822,11 +822,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_note_resource** | [**\Swagger\Client\Model\ProjectNoteResource**](../Model/\Swagger\Client\Model\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -840,7 +840,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesCreate2**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesCreate2($project_id, $project_note_resource)
+> \Ageras\Api\ProjectNoteResource projectsNotesCreate2($project_id, $project_note_resource)
 
 Create a note for a given project.
 
@@ -852,16 +852,16 @@ Create a note for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_note_resource = new \Swagger\Client\Model\ProjectNoteResource(); // \Swagger\Client\Model\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesCreate2($project_id, $project_note_resource);
@@ -877,11 +877,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_note_resource** | [**\Swagger\Client\Model\ProjectNoteResource**](../Model/\Swagger\Client\Model\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -907,14 +907,14 @@ Delete a project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_note_id = "project_note_id_example"; // string | 
 
@@ -949,7 +949,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesGet($project_note_id)
+> \Ageras\Api\ProjectNoteResource projectsNotesGet($project_note_id)
 
 Get a note from Project and note id.
 
@@ -961,14 +961,14 @@ Get a note from Project and note id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_note_id = "project_note_id_example"; // string | 
 
 try {
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet2**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesGet2($project_id, $project_note_id)
+> \Ageras\Api\ProjectNoteResource projectsNotesGet2($project_id, $project_note_id)
 
 Get a note from Project and note id.
 
@@ -1014,14 +1014,14 @@ Get a note from Project and note id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_note_id = "project_note_id_example"; // string | 
 
@@ -1043,7 +1043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1057,7 +1057,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex**
-> \Swagger\Client\Model\ProjectNoteResult projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
 
 List notes from a given project.
 
@@ -1069,14 +1069,14 @@ List notes from a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_note_id = "project_note_id_example"; // string | Id for the Project's notes.
 $project_id = "project_id_example"; // string | Project ID.
 $partner_id = "partner_id_example"; // string | Partner Id.
@@ -1116,7 +1116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -1130,7 +1130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex2**
-> \Swagger\Client\Model\ProjectNoteResult projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
 
 List notes from a given project.
 
@@ -1142,14 +1142,14 @@ List notes from a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_note_id = "project_note_id_example"; // string | Id for the Project's notes.
 $partner_id = "partner_id_example"; // string | Partner Id.
@@ -1189,7 +1189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -1203,7 +1203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesUpdate($project_note_id, $project_note_resource)
+> \Ageras\Api\ProjectNoteResource projectsNotesUpdate($project_note_id, $project_note_resource)
 
 Update a given project note.
 
@@ -1215,16 +1215,16 @@ Update a given project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_note_id = "project_note_id_example"; // string | 
-$project_note_resource = new \Swagger\Client\Model\ProjectNoteResource(); // \Swagger\Client\Model\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesUpdate($project_note_id, $project_note_resource);
@@ -1240,11 +1240,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_note_id** | **string**|  |
- **project_note_resource** | [**\Swagger\Client\Model\ProjectNoteResource**](../Model/\Swagger\Client\Model\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1258,7 +1258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate2**
-> \Swagger\Client\Model\ProjectNoteResource projectsNotesUpdate2($project_id, $project_note_id, $project_note_resource)
+> \Ageras\Api\ProjectNoteResource projectsNotesUpdate2($project_id, $project_note_id, $project_note_resource)
 
 Update a given project note.
 
@@ -1270,17 +1270,17 @@ Update a given project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_note_id = "project_note_id_example"; // string | 
-$project_note_resource = new \Swagger\Client\Model\ProjectNoteResource(); // \Swagger\Client\Model\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesUpdate2($project_id, $project_note_id, $project_note_resource);
@@ -1297,11 +1297,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
  **project_note_id** | **string**|  |
- **project_note_resource** | [**\Swagger\Client\Model\ProjectNoteResource**](../Model/\Swagger\Client\Model\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1315,7 +1315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesGet**
-> \Swagger\Client\Model\ProjectStatusResource projectsStatusesGet($status)
+> \Ageras\Api\ProjectStatusResource projectsStatusesGet($status)
 
 Get a Project Status from Id.
 
@@ -1327,14 +1327,14 @@ Get a Project Status from Id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $status = "status_example"; // string | 
 
 try {
@@ -1354,7 +1354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectStatusResource**](../Model/ProjectStatusResource.md)
+[**\Ageras\Api\ProjectStatusResource**](../Model/ProjectStatusResource.md)
 
 ### Authorization
 
@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesIndex**
-> \Swagger\Client\Model\ProjectStatusResult projectsStatusesIndex($status, $limit, $page, $query)
+> \Ageras\Api\ProjectStatusResult projectsStatusesIndex($status, $limit, $page, $query)
 
 List Available Project Statuses.
 
@@ -1380,14 +1380,14 @@ List Available Project Statuses.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $status = "status_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -1413,7 +1413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectStatusResult**](../Model/ProjectStatusResult.md)
+[**\Ageras\Api\ProjectStatusResult**](../Model/ProjectStatusResult.md)
 
 ### Authorization
 
@@ -1427,7 +1427,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsUpdate**
-> \Swagger\Client\Model\ProjectResource projectsUpdate($project_id, $project_resource)
+> \Ageras\Api\ProjectResource projectsUpdate($project_id, $project_resource)
 
 Update a project.
 
@@ -1439,16 +1439,16 @@ Update a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\ProjectsApi();
+$api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_resource = new \Swagger\Client\Model\ProjectResource(); // \Swagger\Client\Model\ProjectResource | 
+$project_resource = new \Ageras\Api\ProjectResource(); // \Ageras\Api\ProjectResource | 
 
 try {
     $result = $api_instance->projectsUpdate($project_id, $project_resource);
@@ -1464,11 +1464,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_resource** | [**\Swagger\Client\Model\ProjectResource**](../Model/\Swagger\Client\Model\ProjectResource.md)|  |
+ **project_resource** | [**\Ageras\Api\ProjectResource**](../Model/\Ageras\Api\ProjectResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 

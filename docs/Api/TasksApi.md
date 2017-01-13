@@ -1,4 +1,4 @@
-# Swagger\Client\TasksApi
+# Ageras\Api\TasksApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **tasksCreate**
-> \Swagger\Client\Model\TaskResource tasksCreate($task_resource)
+> \Ageras\Api\TaskResource tasksCreate($task_resource)
 
 Create a new task.
 
@@ -34,15 +34,15 @@ Create a new task.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
-$task_resource = new \Swagger\Client\Model\TaskResource(); // \Swagger\Client\Model\TaskResource | 
+$api_instance = new Ageras\Api\Api\TasksApi();
+$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 
 try {
     $result = $api_instance->tasksCreate($task_resource);
@@ -57,11 +57,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_resource** | [**\Swagger\Client\Model\TaskResource**](../Model/\Swagger\Client\Model\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\TaskResource**](../Model/\Ageras\Api\TaskResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 
@@ -87,14 +87,14 @@ Delete a given task by its task_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 
 try {
@@ -127,7 +127,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksGet**
-> \Swagger\Client\Model\TaskResource tasksGet($task_id)
+> \Ageras\Api\TaskResource tasksGet($task_id)
 
 Get a given task by its given task_id.
 
@@ -139,14 +139,14 @@ Get a given task by its given task_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 
 try {
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksIndex**
-> \Swagger\Client\Model\TaskResult tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $page, $query)
+> \Ageras\Api\TaskResult tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $page, $query)
 
 List tasks by employee, asseigned_employee, etc.
 
@@ -192,14 +192,14 @@ List tasks by employee, asseigned_employee, etc.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | Task id's to filter by.
 $geo_code = "geo_code_example"; // string | 
 $employee_id = "employee_id_example"; // string | 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskResult**](../Model/TaskResult.md)
+[**\Ageras\Api\TaskResult**](../Model/TaskResult.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet**
-> \Swagger\Client\Model\TaskPriorityResource tasksPrioritiesGet($priority_id)
+> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet($priority_id)
 
 Get a priority from a given id.
 
@@ -267,14 +267,14 @@ Get a priority from a given id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $priority_id = "priority_id_example"; // string | 
 
 try {
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskPriorityResource**](../Model/TaskPriorityResource.md)
+[**\Ageras\Api\TaskPriorityResource**](../Model/TaskPriorityResource.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet2**
-> \Swagger\Client\Model\TaskPriorityResource tasksPrioritiesGet2($task_id, $priority_id)
+> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet2($task_id, $priority_id)
 
 Get a priority from a given id.
 
@@ -320,14 +320,14 @@ Get a priority from a given id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $priority_id = "priority_id_example"; // string | 
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskPriorityResource**](../Model/TaskPriorityResource.md)
+[**\Ageras\Api\TaskPriorityResource**](../Model/TaskPriorityResource.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesIndex**
-> \Swagger\Client\Model\TaskPriorityResult tasksPrioritiesIndex($priority_id, $limit, $page, $query)
+> \Ageras\Api\TaskPriorityResult tasksPrioritiesIndex($priority_id, $limit, $page, $query)
 
 List priorities.
 
@@ -375,14 +375,14 @@ List priorities.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $priority_id = "priority_id_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskPriorityResult**](../Model/TaskPriorityResult.md)
+[**\Ageras\Api\TaskPriorityResult**](../Model/TaskPriorityResult.md)
 
 ### Authorization
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet**
-> \Swagger\Client\Model\TaskStatusResource tasksStatusesGet($status_id)
+> \Ageras\Api\TaskStatusResource tasksStatusesGet($status_id)
 
 Get a status from a status_id.
 
@@ -434,14 +434,14 @@ Get a status from a status_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $status_id = "status_id_example"; // string | 
 
 try {
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskStatusResource**](../Model/TaskStatusResource.md)
+[**\Ageras\Api\TaskStatusResource**](../Model/TaskStatusResource.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet2**
-> \Swagger\Client\Model\TaskStatusResource tasksStatusesGet2($task_id, $status_id)
+> \Ageras\Api\TaskStatusResource tasksStatusesGet2($task_id, $status_id)
 
 Get a status from a status_id.
 
@@ -487,14 +487,14 @@ Get a status from a status_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $status_id = "status_id_example"; // string | 
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskStatusResource**](../Model/TaskStatusResource.md)
+[**\Ageras\Api\TaskStatusResource**](../Model/TaskStatusResource.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesIndex**
-> \Swagger\Client\Model\TaskStatusResult tasksStatusesIndex($status_id, $limit, $page, $query)
+> \Ageras\Api\TaskStatusResult tasksStatusesIndex($status_id, $limit, $page, $query)
 
 List statuses.
 
@@ -542,14 +542,14 @@ List statuses.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $status_id = "status_id_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskStatusResult**](../Model/TaskStatusResult.md)
+[**\Ageras\Api\TaskStatusResult**](../Model/TaskStatusResult.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesCreate**
-> \Swagger\Client\Model\TaskableResource tasksTaskablesCreate($task_id, $taskable_resource)
+> \Ageras\Api\TaskableResource tasksTaskablesCreate($task_id, $taskable_resource)
 
 create a new taskable for a given task.
 
@@ -601,16 +601,16 @@ create a new taskable for a given task.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
-$taskable_resource = new \Swagger\Client\Model\TaskableResource(); // \Swagger\Client\Model\TaskableResource | 
+$taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
 
 try {
     $result = $api_instance->tasksTaskablesCreate($task_id, $taskable_resource);
@@ -626,11 +626,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **taskable_resource** | [**\Swagger\Client\Model\TaskableResource**](../Model/\Swagger\Client\Model\TaskableResource.md)|  |
+ **taskable_resource** | [**\Ageras\Api\TaskableResource**](../Model/\Ageras\Api\TaskableResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskableResource**](../Model/TaskableResource.md)
+[**\Ageras\Api\TaskableResource**](../Model/TaskableResource.md)
 
 ### Authorization
 
@@ -656,14 +656,14 @@ delete a taskable and remove it from the given task.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
@@ -698,7 +698,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesGet**
-> \Swagger\Client\Model\TaskableResource tasksTaskablesGet($task_id, $taskable_id)
+> \Ageras\Api\TaskableResource tasksTaskablesGet($task_id, $taskable_id)
 
 Get a taskable item from a given taskable id.
 
@@ -710,14 +710,14 @@ Get a taskable item from a given taskable id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskableResource**](../Model/TaskableResource.md)
+[**\Ageras\Api\TaskableResource**](../Model/TaskableResource.md)
 
 ### Authorization
 
@@ -753,7 +753,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesIndex**
-> \Swagger\Client\Model\TaskableResult tasksTaskablesIndex($task_id, $taskable_id, $limit, $page, $query)
+> \Ageras\Api\TaskableResult tasksTaskablesIndex($task_id, $taskable_id, $limit, $page, $query)
 
 List the taskables for a given task.
 
@@ -765,14 +765,14 @@ List the taskables for a given task.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskableResult**](../Model/TaskableResult.md)
+[**\Ageras\Api\TaskableResult**](../Model/TaskableResult.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksUpdate**
-> \Swagger\Client\Model\TaskResource tasksUpdate($task_id, $task_resource)
+> \Ageras\Api\TaskResource tasksUpdate($task_id, $task_resource)
 
 Update a given task by its task_id.
 
@@ -826,16 +826,16 @@ Update a given task by its task_id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
 // Configure HTTP basic authorization: login
-Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\Api\TasksApi();
+$api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
-$task_resource = new \Swagger\Client\Model\TaskResource(); // \Swagger\Client\Model\TaskResource | 
+$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 
 try {
     $result = $api_instance->tasksUpdate($task_id, $task_resource);
@@ -851,11 +851,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **task_resource** | [**\Swagger\Client\Model\TaskResource**](../Model/\Swagger\Client\Model\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\TaskResource**](../Model/\Ageras\Api\TaskResource.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 
