@@ -179,9 +179,9 @@ class CertificationsApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {

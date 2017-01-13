@@ -22,9 +22,9 @@ Get an employee by a given employee id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -75,9 +75,9 @@ Get an employee by a given employee id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -130,9 +130,9 @@ List and Search for employees working at Ageras.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');

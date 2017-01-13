@@ -44,9 +44,9 @@ Create Project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -97,9 +97,9 @@ Delete a project for a given project id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -149,9 +149,9 @@ Create events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -202,9 +202,9 @@ Create events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -257,9 +257,9 @@ Delete a given project event.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -311,9 +311,9 @@ Get event for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -364,9 +364,9 @@ Get event for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -419,9 +419,9 @@ List events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -490,9 +490,9 @@ List events for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -561,9 +561,9 @@ Update e events for project events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -616,9 +616,9 @@ Update e events for project events.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -673,9 +673,9 @@ Get a Project from a project id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -726,9 +726,9 @@ List Projects.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -799,9 +799,9 @@ Create a note for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -852,9 +852,9 @@ Create a note for a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -907,9 +907,9 @@ Delete a project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -961,9 +961,9 @@ Get a note from Project and note id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1014,9 +1014,9 @@ Get a note from Project and note id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1069,9 +1069,9 @@ List notes from a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1142,9 +1142,9 @@ List notes from a given project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1215,9 +1215,9 @@ Update a given project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1270,9 +1270,9 @@ Update a given project note.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1327,9 +1327,9 @@ Get a Project Status from Id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1380,9 +1380,9 @@ List Available Project Statuses.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
@@ -1439,9 +1439,9 @@ Update a project.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('jwt', 'YOUR_API_KEY');
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('jwt', 'Bearer');
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
 // Configure HTTP basic authorization: login
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
