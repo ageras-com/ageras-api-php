@@ -215,9 +215,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -320,9 +320,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -428,9 +428,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -532,9 +532,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -656,9 +656,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -764,9 +764,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -868,9 +868,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -987,9 +987,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1117,9 +1117,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1208,9 +1208,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1302,9 +1302,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1392,9 +1392,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1538,9 +1538,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1643,9 +1643,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1751,9 +1751,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1855,9 +1855,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -1973,9 +1973,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2078,9 +2078,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2186,9 +2186,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2276,9 +2276,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2384,9 +2384,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2500,9 +2500,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2624,9 +2624,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2715,9 +2715,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2820,9 +2820,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -2928,9 +2928,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3038,9 +3038,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3156,9 +3156,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3181,6 +3181,223 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerNoteResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersRefillsCreate
+     *
+     * Create partner refill.
+     *
+     * @param string $partner_id  (required)
+     * @param \Ageras\Api\PartnerRefillResource $partner_refill_resource  (required)
+     * @return \Ageras\Api\PartnerRefillResource
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersRefillsCreate($partner_id, $partner_refill_resource)
+    {
+        list($response) = $this->partnersRefillsCreateWithHttpInfo($partner_id, $partner_refill_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersRefillsCreateWithHttpInfo
+     *
+     * Create partner refill.
+     *
+     * @param string $partner_id  (required)
+     * @param \Ageras\Api\PartnerRefillResource $partner_refill_resource  (required)
+     * @return Array of \Ageras\Api\PartnerRefillResource, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersRefillsCreateWithHttpInfo($partner_id, $partner_refill_resource)
+    {
+        // verify the required parameter 'partner_id' is set
+        if ($partner_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersRefillsCreate');
+        }
+        // verify the required parameter 'partner_refill_resource' is set
+        if ($partner_refill_resource === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $partner_refill_resource when calling partnersRefillsCreate');
+        }
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/refills";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($partner_refill_resource)) {
+            $_tempBody = $partner_refill_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerRefillResource',
+                '/partners/{partner_id}/refills'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerRefillResource', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRefillResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersRefillsIndex
+     *
+     * Get partner refills.
+     *
+     * @param string $partner_id  (required)
+     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $page The page position in the result. (optional)
+     * @param string $query The search wildcard. (optional)
+     * @return \Ageras\Api\PartnerRefillResult
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersRefillsIndex($partner_id, $limit = null, $page = null, $query = null)
+    {
+        list($response) = $this->partnersRefillsIndexWithHttpInfo($partner_id, $limit, $page, $query);
+        return $response;
+    }
+
+    /**
+     * Operation partnersRefillsIndexWithHttpInfo
+     *
+     * Get partner refills.
+     *
+     * @param string $partner_id  (required)
+     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $page The page position in the result. (optional)
+     * @param string $query The search wildcard. (optional)
+     * @return Array of \Ageras\Api\PartnerRefillResult, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersRefillsIndexWithHttpInfo($partner_id, $limit = null, $page = null, $query = null)
+    {
+        // verify the required parameter 'partner_id' is set
+        if ($partner_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersRefillsIndex');
+        }
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/refills";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($query !== null) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($query);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerRefillResult',
+                '/partners/{partner_id}/refills'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerRefillResult', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRefillResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -3275,9 +3492,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3380,9 +3597,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3492,9 +3709,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3602,9 +3819,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3714,9 +3931,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3819,9 +4036,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -3927,9 +4144,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4045,9 +4262,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4149,9 +4366,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4271,9 +4488,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4390,9 +4607,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4523,9 +4740,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4614,9 +4831,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4719,9 +4936,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4827,9 +5044,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -4917,9 +5134,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -5025,9 +5242,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -5141,9 +5358,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -5265,9 +5482,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -5370,9 +5587,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
@@ -5489,9 +5706,9 @@ class PartnersApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('jwt');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
         if (strlen($apiKey) !== 0) {
-            $queryParams['jwt'] = $apiKey;
+            $queryParams['token'] = $apiKey;
         }
         // this endpoint requires HTTP basic authentication
         if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
