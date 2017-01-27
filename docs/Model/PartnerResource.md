@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **kpi** | [**\Ageras\Api\PartnerKPIResource**](PartnerKPIResource.md) |  | [optional] 
 **invoicing** | [**\Ageras\Api\PartnerInvoicingResource**](PartnerInvoicingResource.md) |  | [optional] 
 **preferences** | [**\Ageras\Api\PartnerPreferencesResource**](PartnerPreferencesResource.md) |  | [optional] 
+**refill** | [**\Ageras\Api\PartnerRefillResource**](PartnerRefillResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

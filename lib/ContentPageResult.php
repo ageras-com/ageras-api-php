@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationResource
+ * ContentPageResult
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LocationResource Class Doc Comment
+ * ContentPageResult Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,25 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationResource implements ArrayAccess
+class ContentPageResult implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LocationResource';
+    protected static $swaggerModelName = 'ContentPageResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'country_name' => 'string',
-        'zip_code' => 'string',
-        'city_name' => 'string',
-        'city_district' => 'string',
-        'address' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\ContentPageResource[]',
+        'did_you_mean' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,13 +84,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'country_name' => 'country_name',
-        'zip_code' => 'zip_code',
-        'city_name' => 'city_name',
-        'city_district' => 'city_district',
-        'address' => 'address',
-        'point' => 'point'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     );
 
     public static function attributeMap()
@@ -104,13 +102,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'country_name' => 'setCountryName',
-        'zip_code' => 'setZipCode',
-        'city_name' => 'setCityName',
-        'city_district' => 'setCityDistrict',
-        'address' => 'setAddress',
-        'point' => 'setPoint'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     );
 
     public static function setters()
@@ -123,13 +120,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'country_name' => 'getCountryName',
-        'zip_code' => 'getZipCode',
-        'city_name' => 'getCityName',
-        'city_district' => 'getCityDistrict',
-        'address' => 'getAddress',
-        'point' => 'getPoint'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     );
 
     public static function getters()
@@ -153,13 +149,12 @@ class LocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
-        $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -186,148 +181,127 @@ class LocationResource implements ArrayAccess
 
 
     /**
-     * Gets code
-     * @return string
+     * Gets page
+     * @return int
      */
-    public function getCode()
+    public function getPage()
     {
-        return $this->container['code'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets code
-     * @param string $code Code for the given location.
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setCode($code)
+    public function setPage($page)
     {
-        $this->container['code'] = $code;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets country_name
-     * @return string
+     * Gets limit
+     * @return int
      */
-    public function getCountryName()
+    public function getLimit()
     {
-        return $this->container['country_name'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets country_name
-     * @param string $country_name Name of the country
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setCountryName($country_name)
+    public function setLimit($limit)
     {
-        $this->container['country_name'] = $country_name;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
-     * @return string
+     * Gets pages
+     * @return int
      */
-    public function getZipCode()
+    public function getPages()
     {
-        return $this->container['zip_code'];
+        return $this->container['pages'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip Code.
+     * Sets pages
+     * @param int $pages Number of pages.
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setPages($pages)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['pages'] = $pages;
 
         return $this;
     }
 
     /**
-     * Gets city_name
-     * @return string
+     * Gets total
+     * @return int
      */
-    public function getCityName()
+    public function getTotal()
     {
-        return $this->container['city_name'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets city_name
-     * @param string $city_name Name of the city.
+     * Sets total
+     * @param int $total Total number of results.
      * @return $this
      */
-    public function setCityName($city_name)
+    public function setTotal($total)
     {
-        $this->container['city_name'] = $city_name;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets city_district
-     * @return string
+     * Gets data
+     * @return \Ageras\Api\ContentPageResource[]
      */
-    public function getCityDistrict()
+    public function getData()
     {
-        return $this->container['city_district'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets city_district
-     * @param string $city_district District the location is part of
+     * Sets data
+     * @param \Ageras\Api\ContentPageResource[] $data The result.
      * @return $this
      */
-    public function setCityDistrict($city_district)
+    public function setData($data)
     {
-        $this->container['city_district'] = $city_district;
+        $this->container['data'] = $data;
 
         return $this;
     }
 
     /**
-     * Gets address
+     * Gets did_you_mean
      * @return string
      */
-    public function getAddress()
+    public function getDidYouMean()
     {
-        return $this->container['address'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets address
-     * @param string $address The address.
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setAddress($address)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets point
-     * @return \Ageras\Api\LocationGeoPointResource
-     */
-    public function getPoint()
-    {
-        return $this->container['point'];
-    }
-
-    /**
-     * Sets point
-     * @param \Ageras\Api\LocationGeoPointResource $point
-     * @return $this
-     */
-    public function setPoint($point)
-    {
-        $this->container['point'] = $point;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

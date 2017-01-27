@@ -453,6 +453,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersSubscriptionsUpdate
+     *
+     * Update partner subscription..
+     *
+     */
+    public function testPartnersSubscriptionsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersSuggestIndex
      *
      * Suggest Partners to search for..

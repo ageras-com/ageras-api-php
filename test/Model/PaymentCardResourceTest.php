@@ -135,4 +135,12 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "is_being_used"
+     */
+    public function testPropertyIsBeingUsed()
+    {
+
+    }
+
 }

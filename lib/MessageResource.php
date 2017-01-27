@@ -71,7 +71,9 @@ class MessageResource implements ArrayAccess
         'text' => 'string',
         'participant' => '\Ageras\Api\ParticipantResource',
         'recipients' => '\Ageras\Api\RecipientResource[]',
-        'attachments' => '\Ageras\Api\AttachmentResource[]'
+        'attachments' => '\Ageras\Api\AttachmentResource[]',
+        'created_at' => 'string',
+        'updated_at' => 'string'
     );
 
     public static function swaggerTypes()
@@ -89,7 +91,9 @@ class MessageResource implements ArrayAccess
         'text' => 'text',
         'participant' => 'participant',
         'recipients' => 'recipients',
-        'attachments' => 'attachments'
+        'attachments' => 'attachments',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     );
 
     public static function attributeMap()
@@ -107,7 +111,9 @@ class MessageResource implements ArrayAccess
         'text' => 'setText',
         'participant' => 'setParticipant',
         'recipients' => 'setRecipients',
-        'attachments' => 'setAttachments'
+        'attachments' => 'setAttachments',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     );
 
     public static function setters()
@@ -125,7 +131,9 @@ class MessageResource implements ArrayAccess
         'text' => 'getText',
         'participant' => 'getParticipant',
         'recipients' => 'getRecipients',
-        'attachments' => 'getAttachments'
+        'attachments' => 'getAttachments',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     );
 
     public static function getters()
@@ -155,6 +163,8 @@ class MessageResource implements ArrayAccess
         $this->container['participant'] = isset($data['participant']) ? $data['participant'] : null;
         $this->container['recipients'] = isset($data['recipients']) ? $data['recipients'] : null;
         $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -302,6 +312,48 @@ class MessageResource implements ArrayAccess
     public function setAttachments($attachments)
     {
         $this->container['attachments'] = $attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

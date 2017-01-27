@@ -1,6 +1,6 @@
 <?php
 /**
- * ParticipantResourceTest
+ * ContentPageResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * ParticipantResourceTest Class Doc Comment
+ * ContentPageResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description ParticipantResource
+// * @description ContentPageResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
+class ContentPageResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ParticipantResource"
+     * Test "ContentPageResource"
      */
-    public function testParticipantResource()
+    public function testContentPageResource()
     {
 
     }
@@ -104,41 +104,17 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "first_name"
+     * Test attribute "created_at"
      */
-    public function testPropertyFirstName()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "last_name"
+     * Test attribute "updated_at"
      */
-    public function testPropertyLastName()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "picture"
-     */
-    public function testPropertyPicture()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
+    public function testPropertyUpdatedAt()
     {
 
     }
@@ -152,25 +128,41 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "name"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyName()
     {
 
     }
 
     /**
-     * Test attribute "lead_id"
+     * Test attribute "letter"
      */
-    public function testPropertyLeadId()
+    public function testPropertyLetter()
     {
 
     }
 
     /**
-     * Test attribute "partner_user_id"
+     * Test attribute "slug"
      */
-    public function testPropertyPartnerUserId()
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
+     * Test attribute "fields"
+     */
+    public function testPropertyFields()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo_code"
+     */
+    public function testPropertyGeoCode()
     {
 
     }

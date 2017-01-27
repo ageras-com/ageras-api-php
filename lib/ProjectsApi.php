@@ -2052,15 +2052,16 @@ class ProjectsApi
      * @param string $name Project name in its native language. (optional)
      * @param string $geo_code Project geo code origin. (optional)
      * @param string $status Project Status. (optional)
+     * @param string $sort Sort project notes (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\ProjectNoteResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function projectsNotesIndex($project_note_id = null, $project_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $page = null, $query = null)
+    public function projectsNotesIndex($project_note_id = null, $project_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->projectsNotesIndexWithHttpInfo($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query);
+        list($response) = $this->projectsNotesIndexWithHttpInfo($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -2077,13 +2078,14 @@ class ProjectsApi
      * @param string $name Project name in its native language. (optional)
      * @param string $geo_code Project geo code origin. (optional)
      * @param string $status Project Status. (optional)
+     * @param string $sort Sort project notes (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\ProjectNoteResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function projectsNotesIndexWithHttpInfo($project_note_id = null, $project_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $page = null, $query = null)
+    public function projectsNotesIndexWithHttpInfo($project_note_id = null, $project_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/projects/notes";
@@ -2128,6 +2130,10 @@ class ProjectsApi
         // query params
         if ($status !== null) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
         }
         // query params
         if ($limit !== null) {
@@ -2198,15 +2204,16 @@ class ProjectsApi
      * @param string $name Project name in its native language. (optional)
      * @param string $geo_code Project geo code origin. (optional)
      * @param string $status Project Status. (optional)
+     * @param string $sort Sort project notes (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\ProjectNoteResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function projectsNotesIndex2($project_id, $project_note_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $page = null, $query = null)
+    public function projectsNotesIndex2($project_id, $project_note_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->projectsNotesIndex2WithHttpInfo($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query);
+        list($response) = $this->projectsNotesIndex2WithHttpInfo($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -2223,13 +2230,14 @@ class ProjectsApi
      * @param string $name Project name in its native language. (optional)
      * @param string $geo_code Project geo code origin. (optional)
      * @param string $status Project Status. (optional)
+     * @param string $sort Sort project notes (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\ProjectNoteResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function projectsNotesIndex2WithHttpInfo($project_id, $project_note_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $page = null, $query = null)
+    public function projectsNotesIndex2WithHttpInfo($project_id, $project_note_id = null, $partner_id = null, $partner_user_id = null, $lead_id = null, $name = null, $geo_code = null, $status = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // verify the required parameter 'project_id' is set
         if ($project_id === null) {
@@ -2274,6 +2282,10 @@ class ProjectsApi
         // query params
         if ($status !== null) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
         }
         // query params
         if ($limit !== null) {

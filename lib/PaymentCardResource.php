@@ -70,7 +70,8 @@ class PaymentCardResource implements ArrayAccess
         'partner_id' => 'int',
         'card_mask' => 'string',
         'provider' => 'string',
-        'provider_id' => 'string'
+        'provider_id' => 'string',
+        'is_being_used' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class PaymentCardResource implements ArrayAccess
         'partner_id' => 'partner_id',
         'card_mask' => 'card_mask',
         'provider' => 'provider',
-        'provider_id' => 'provider_id'
+        'provider_id' => 'provider_id',
+        'is_being_used' => 'is_being_used'
     );
 
     public static function attributeMap()
@@ -104,7 +106,8 @@ class PaymentCardResource implements ArrayAccess
         'partner_id' => 'setPartnerId',
         'card_mask' => 'setCardMask',
         'provider' => 'setProvider',
-        'provider_id' => 'setProviderId'
+        'provider_id' => 'setProviderId',
+        'is_being_used' => 'setIsBeingUsed'
     );
 
     public static function setters()
@@ -121,7 +124,8 @@ class PaymentCardResource implements ArrayAccess
         'partner_id' => 'getPartnerId',
         'card_mask' => 'getCardMask',
         'provider' => 'getProvider',
-        'provider_id' => 'getProviderId'
+        'provider_id' => 'getProviderId',
+        'is_being_used' => 'getIsBeingUsed'
     );
 
     public static function getters()
@@ -150,6 +154,7 @@ class PaymentCardResource implements ArrayAccess
         $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['provider_id'] = isset($data['provider_id']) ? $data['provider_id'] : null;
+        $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
     }
 
     /**
@@ -276,6 +281,27 @@ class PaymentCardResource implements ArrayAccess
     public function setProviderId($provider_id)
     {
         $this->container['provider_id'] = $provider_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_being_used
+     * @return bool
+     */
+    public function getIsBeingUsed()
+    {
+        return $this->container['is_being_used'];
+    }
+
+    /**
+     * Sets is_being_used
+     * @param bool $is_being_used Is payment card is being used in any package.
+     * @return $this
+     */
+    public function setIsBeingUsed($is_being_used)
+    {
+        $this->container['is_being_used'] = $is_being_used;
 
         return $this;
     }

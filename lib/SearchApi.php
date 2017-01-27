@@ -209,13 +209,14 @@ class SearchApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param string $query The search query to search by. (optional)
      * @param string $type Type to search for. (optional)
+     * @param string $partner_state Partner state. (optional)
      * @param int $page The page position in the result. (optional)
      * @return \Ageras\Api\SearchResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function searchSuggestIndex($limit = null, $geo_code = null, $query = null, $type = null, $page = null)
+    public function searchSuggestIndex($limit = null, $geo_code = null, $query = null, $type = null, $partner_state = null, $page = null)
     {
-        list($response) = $this->searchSuggestIndexWithHttpInfo($limit, $geo_code, $query, $type, $page);
+        list($response) = $this->searchSuggestIndexWithHttpInfo($limit, $geo_code, $query, $type, $partner_state, $page);
         return $response;
     }
 
@@ -228,11 +229,12 @@ class SearchApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param string $query The search query to search by. (optional)
      * @param string $type Type to search for. (optional)
+     * @param string $partner_state Partner state. (optional)
      * @param int $page The page position in the result. (optional)
      * @return Array of \Ageras\Api\SearchResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function searchSuggestIndexWithHttpInfo($limit = null, $geo_code = null, $query = null, $type = null, $page = null)
+    public function searchSuggestIndexWithHttpInfo($limit = null, $geo_code = null, $query = null, $type = null, $partner_state = null, $page = null)
     {
         // parse inputs
         $resourcePath = "/search/suggest";
@@ -261,6 +263,10 @@ class SearchApi
         // query params
         if ($type !== null) {
             $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
+        }
+        // query params
+        if ($partner_state !== null) {
+            $queryParams['partner_state'] = $this->apiClient->getSerializer()->toQueryValue($partner_state);
         }
         // query params
         if ($page !== null) {
@@ -319,13 +325,14 @@ class SearchApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param string $query The search query to search by. (optional)
      * @param string $type Type to search for. (optional)
+     * @param string $partner_state Partner state. (optional)
      * @param int $page The page position in the result. (optional)
      * @return \Ageras\Api\TypeaheadResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function searchTypeaheadIndex($limit = null, $geo_code = null, $query = null, $type = null, $page = null)
+    public function searchTypeaheadIndex($limit = null, $geo_code = null, $query = null, $type = null, $partner_state = null, $page = null)
     {
-        list($response) = $this->searchTypeaheadIndexWithHttpInfo($limit, $geo_code, $query, $type, $page);
+        list($response) = $this->searchTypeaheadIndexWithHttpInfo($limit, $geo_code, $query, $type, $partner_state, $page);
         return $response;
     }
 
@@ -338,11 +345,12 @@ class SearchApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param string $query The search query to search by. (optional)
      * @param string $type Type to search for. (optional)
+     * @param string $partner_state Partner state. (optional)
      * @param int $page The page position in the result. (optional)
      * @return Array of \Ageras\Api\TypeaheadResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function searchTypeaheadIndexWithHttpInfo($limit = null, $geo_code = null, $query = null, $type = null, $page = null)
+    public function searchTypeaheadIndexWithHttpInfo($limit = null, $geo_code = null, $query = null, $type = null, $partner_state = null, $page = null)
     {
         // parse inputs
         $resourcePath = "/search/typeahead";
@@ -371,6 +379,10 @@ class SearchApi
         // query params
         if ($type !== null) {
             $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
+        }
+        // query params
+        if ($partner_state !== null) {
+            $queryParams['partner_state'] = $this->apiClient->getSerializer()->toQueryValue($partner_state);
         }
         // query params
         if ($page !== null) {

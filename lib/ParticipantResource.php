@@ -67,6 +67,8 @@ class ParticipantResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
+        'first_name' => 'string',
+        'last_name' => 'string',
         'name' => 'string',
         'picture' => 'string',
         'email' => 'string',
@@ -87,6 +89,8 @@ class ParticipantResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
         'name' => 'name',
         'picture' => 'picture',
         'email' => 'email',
@@ -107,6 +111,8 @@ class ParticipantResource implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
         'name' => 'setName',
         'picture' => 'setPicture',
         'email' => 'setEmail',
@@ -127,6 +133,8 @@ class ParticipantResource implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
         'name' => 'getName',
         'picture' => 'getPicture',
         'email' => 'getEmail',
@@ -158,6 +166,8 @@ class ParticipantResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['picture'] = isset($data['picture']) ? $data['picture'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -207,6 +217,48 @@ class ParticipantResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

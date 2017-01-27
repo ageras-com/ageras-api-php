@@ -104,6 +104,14 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "country_name"
+     */
+    public function testPropertyCountryName()
+    {
+
+    }
+
+    /**
      * Test attribute "zip_code"
      */
     public function testPropertyZipCode()
@@ -115,6 +123,14 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "city_name"
      */
     public function testPropertyCityName()
+    {
+
+    }
+
+    /**
+     * Test attribute "city_district"
+     */
+    public function testPropertyCityDistrict()
     {
 
     }

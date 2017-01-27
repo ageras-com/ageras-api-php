@@ -91,7 +91,8 @@ class PartnerResource implements ArrayAccess
         'alerts' => '\Ageras\Api\PartnerAlertResource[]',
         'kpi' => '\Ageras\Api\PartnerKPIResource',
         'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
-        'preferences' => '\Ageras\Api\PartnerPreferencesResource'
+        'preferences' => '\Ageras\Api\PartnerPreferencesResource',
+        'refill' => '\Ageras\Api\PartnerRefillResource'
     );
 
     public static function swaggerTypes()
@@ -129,7 +130,8 @@ class PartnerResource implements ArrayAccess
         'alerts' => 'alerts',
         'kpi' => 'kpi',
         'invoicing' => 'invoicing',
-        'preferences' => 'preferences'
+        'preferences' => 'preferences',
+        'refill' => 'refill'
     );
 
     public static function attributeMap()
@@ -167,7 +169,8 @@ class PartnerResource implements ArrayAccess
         'alerts' => 'setAlerts',
         'kpi' => 'setKpi',
         'invoicing' => 'setInvoicing',
-        'preferences' => 'setPreferences'
+        'preferences' => 'setPreferences',
+        'refill' => 'setRefill'
     );
 
     public static function setters()
@@ -205,7 +208,8 @@ class PartnerResource implements ArrayAccess
         'alerts' => 'getAlerts',
         'kpi' => 'getKpi',
         'invoicing' => 'getInvoicing',
-        'preferences' => 'getPreferences'
+        'preferences' => 'getPreferences',
+        'refill' => 'getRefill'
     );
 
     public static function getters()
@@ -219,6 +223,7 @@ class PartnerResource implements ArrayAccess
     const STATE_INACTIVE = 'inactive';
     const STATE_EX_PARTNER = 'ex_partner';
     const STATE_ACTIVE = 'active';
+    const STATE_BUSINESS_PARTNER = 'business_partner';
     
 
     
@@ -235,6 +240,7 @@ class PartnerResource implements ArrayAccess
             self::STATE_INACTIVE,
             self::STATE_EX_PARTNER,
             self::STATE_ACTIVE,
+            self::STATE_BUSINESS_PARTNER,
         ];
     }
     
@@ -277,6 +283,7 @@ class PartnerResource implements ArrayAccess
         $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
         $this->container['invoicing'] = isset($data['invoicing']) ? $data['invoicing'] : null;
         $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
+        $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
     }
 
     /**
@@ -287,7 +294,7 @@ class PartnerResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        $allowed_values = array("unknown", "canvas", "demo", "inactive", "ex_partner", "active");
+        $allowed_values = array("unknown", "canvas", "demo", "inactive", "ex_partner", "active", "business_partner");
         if (!in_array($this->container['state'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'state', must be one of #{allowed_values}.";
         }
@@ -303,7 +310,7 @@ class PartnerResource implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = array("unknown", "canvas", "demo", "inactive", "ex_partner", "active");
+        $allowed_values = array("unknown", "canvas", "demo", "inactive", "ex_partner", "active", "business_partner");
         if (!in_array($this->container['state'], $allowed_values)) {
             return false;
         }
@@ -474,9 +481,9 @@ class PartnerResource implements ArrayAccess
      */
     public function setState($state)
     {
-        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active');
+        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'business_partner');
         if (!in_array($state, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active'");
+            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'business_partner'");
         }
         $this->container['state'] = $state;
 
@@ -857,6 +864,27 @@ class PartnerResource implements ArrayAccess
     public function setPreferences($preferences)
     {
         $this->container['preferences'] = $preferences;
+
+        return $this;
+    }
+
+    /**
+     * Gets refill
+     * @return \Ageras\Api\PartnerRefillResource
+     */
+    public function getRefill()
+    {
+        return $this->container['refill'];
+    }
+
+    /**
+     * Sets refill
+     * @param \Ageras\Api\PartnerRefillResource $refill
+     * @return $this
+     */
+    public function setRefill($refill)
+    {
+        $this->container['refill'] = $refill;
 
         return $this;
     }

@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**first_name** | **string** |  | [optional] 
+**last_name** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **picture** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 

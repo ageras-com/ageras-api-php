@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationResource
+ * AggregationResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LocationResource Class Doc Comment
+ * AggregationResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,24 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationResource implements ArrayAccess
+class AggregationResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LocationResource';
+    protected static $swaggerModelName = 'AggregationResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'country_name' => 'string',
-        'zip_code' => 'string',
-        'city_name' => 'string',
-        'city_district' => 'string',
-        'address' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'name' => 'string',
+        'type' => 'string',
+        'value' => 'float',
+        'items' => '\Ageras\Api\AggregationItemResource[]',
+        'amount' => '\Ageras\Api\AmountResource'
     );
 
     public static function swaggerTypes()
@@ -85,13 +83,11 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'country_name' => 'country_name',
-        'zip_code' => 'zip_code',
-        'city_name' => 'city_name',
-        'city_district' => 'city_district',
-        'address' => 'address',
-        'point' => 'point'
+        'name' => 'name',
+        'type' => 'type',
+        'value' => 'value',
+        'items' => 'items',
+        'amount' => 'amount'
     );
 
     public static function attributeMap()
@@ -104,13 +100,11 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'country_name' => 'setCountryName',
-        'zip_code' => 'setZipCode',
-        'city_name' => 'setCityName',
-        'city_district' => 'setCityDistrict',
-        'address' => 'setAddress',
-        'point' => 'setPoint'
+        'name' => 'setName',
+        'type' => 'setType',
+        'value' => 'setValue',
+        'items' => 'setItems',
+        'amount' => 'setAmount'
     );
 
     public static function setters()
@@ -123,13 +117,11 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'country_name' => 'getCountryName',
-        'zip_code' => 'getZipCode',
-        'city_name' => 'getCityName',
-        'city_district' => 'getCityDistrict',
-        'address' => 'getAddress',
-        'point' => 'getPoint'
+        'name' => 'getName',
+        'type' => 'getType',
+        'value' => 'getValue',
+        'items' => 'getItems',
+        'amount' => 'getAmount'
     );
 
     public static function getters()
@@ -137,8 +129,30 @@ class LocationResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_FACETS = 'facets';
+    const TYPE_RANGE = 'range';
+    const TYPE_VALUE = 'value';
+    const TYPE_AMOUNT = 'amount';
+    const TYPE_PERCENTAGE = 'percentage';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_UNKNOWN,
+            self::TYPE_FACETS,
+            self::TYPE_RANGE,
+            self::TYPE_VALUE,
+            self::TYPE_AMOUNT,
+            self::TYPE_PERCENTAGE,
+        ];
+    }
     
 
     /**
@@ -153,13 +167,11 @@ class LocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
-        $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
     }
 
     /**
@@ -170,6 +182,11 @@ class LocationResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "facets", "range", "value", "amount", "percentage");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -181,153 +198,119 @@ class LocationResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "facets", "range", "value", "amount", "percentage");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets code
+     * Gets name
      * @return string
      */
-    public function getCode()
+    public function getName()
     {
-        return $this->container['code'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets code
-     * @param string $code Code for the given location.
+     * Sets name
+     * @param string $name
      * @return $this
      */
-    public function setCode($code)
+    public function setName($name)
     {
-        $this->container['code'] = $code;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets country_name
+     * Gets type
      * @return string
      */
-    public function getCountryName()
+    public function getType()
     {
-        return $this->container['country_name'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets country_name
-     * @param string $country_name Name of the country
+     * Sets type
+     * @param string $type
      * @return $this
      */
-    public function setCountryName($country_name)
+    public function setType($type)
     {
-        $this->container['country_name'] = $country_name;
+        $allowed_values = array('unknown', 'facets', 'range', 'value', 'amount', 'percentage');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'facets', 'range', 'value', 'amount', 'percentage'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
-     * @return string
+     * Gets value
+     * @return float
      */
-    public function getZipCode()
+    public function getValue()
     {
-        return $this->container['zip_code'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip Code.
+     * Sets value
+     * @param float $value
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setValue($value)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets city_name
-     * @return string
+     * Gets items
+     * @return \Ageras\Api\AggregationItemResource[]
      */
-    public function getCityName()
+    public function getItems()
     {
-        return $this->container['city_name'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets city_name
-     * @param string $city_name Name of the city.
+     * Sets items
+     * @param \Ageras\Api\AggregationItemResource[] $items
      * @return $this
      */
-    public function setCityName($city_name)
+    public function setItems($items)
     {
-        $this->container['city_name'] = $city_name;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets city_district
-     * @return string
+     * Gets amount
+     * @return \Ageras\Api\AmountResource
      */
-    public function getCityDistrict()
+    public function getAmount()
     {
-        return $this->container['city_district'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets city_district
-     * @param string $city_district District the location is part of
+     * Sets amount
+     * @param \Ageras\Api\AmountResource $amount
      * @return $this
      */
-    public function setCityDistrict($city_district)
+    public function setAmount($amount)
     {
-        $this->container['city_district'] = $city_district;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     * @param string $address The address.
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets point
-     * @return \Ageras\Api\LocationGeoPointResource
-     */
-    public function getPoint()
-    {
-        return $this->container['point'];
-    }
-
-    /**
-     * Sets point
-     * @param \Ageras\Api\LocationGeoPointResource $point
-     * @return $this
-     */
-    public function setPoint($point)
-    {
-        $this->container['point'] = $point;
+        $this->container['amount'] = $amount;
 
         return $this;
     }

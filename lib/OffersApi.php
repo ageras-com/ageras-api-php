@@ -309,19 +309,19 @@ class OffersApi
      * @param bool $show_expired Include expired partners in the result. (optional, default to false)
      * @param bool $show_accepted Show accepted partner. (optional, default to false)
      * @param int $partner_id Partner id of Offers to filter by. (optional)
-     * @param string $order_by Order by price asc or desc. (optional)
+     * @param string $sort Order by price asc or desc. (optional)
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
-     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $limit Number of offers to return (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\PartnerOfferResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function offersIndex($show_expired = null, $show_accepted = null, $partner_id = null, $order_by = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
+    public function offersIndex($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->offersIndexWithHttpInfo($show_expired, $show_accepted, $partner_id, $order_by, $action, $geo_code, $type, $limit, $page, $query);
+        list($response) = $this->offersIndexWithHttpInfo($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $limit, $page, $query);
         return $response;
     }
 
@@ -333,17 +333,17 @@ class OffersApi
      * @param bool $show_expired Include expired partners in the result. (optional, default to false)
      * @param bool $show_accepted Show accepted partner. (optional, default to false)
      * @param int $partner_id Partner id of Offers to filter by. (optional)
-     * @param string $order_by Order by price asc or desc. (optional)
+     * @param string $sort Order by price asc or desc. (optional)
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
-     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $limit Number of offers to return (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\PartnerOfferResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function offersIndexWithHttpInfo($show_expired = null, $show_accepted = null, $partner_id = null, $order_by = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
+    public function offersIndexWithHttpInfo($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/offers";
@@ -370,8 +370,8 @@ class OffersApi
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($partner_id);
         }
         // query params
-        if ($order_by !== null) {
-            $queryParams['order_by'] = $this->apiClient->getSerializer()->toQueryValue($order_by);
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
         }
         // query params
         if ($action !== null) {
