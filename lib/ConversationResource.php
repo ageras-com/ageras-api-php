@@ -70,7 +70,10 @@ class ConversationResource implements ArrayAccess
         'subject' => 'string',
         'participants' => '\Ageras\Api\ParticipantResource[]',
         'messages' => '\Ageras\Api\MessageResource[]',
-        'attachments' => '\Ageras\Api\AttachmentResource[]'
+        'attachments' => '\Ageras\Api\AttachmentResource[]',
+        'project_id' => 'int',
+        'created_at' => 'string',
+        'updated_at' => 'string'
     );
 
     public static function swaggerTypes()
@@ -87,7 +90,10 @@ class ConversationResource implements ArrayAccess
         'subject' => 'subject',
         'participants' => 'participants',
         'messages' => 'messages',
-        'attachments' => 'attachments'
+        'attachments' => 'attachments',
+        'project_id' => 'project_id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     );
 
     public static function attributeMap()
@@ -104,7 +110,10 @@ class ConversationResource implements ArrayAccess
         'subject' => 'setSubject',
         'participants' => 'setParticipants',
         'messages' => 'setMessages',
-        'attachments' => 'setAttachments'
+        'attachments' => 'setAttachments',
+        'project_id' => 'setProjectId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     );
 
     public static function setters()
@@ -121,7 +130,10 @@ class ConversationResource implements ArrayAccess
         'subject' => 'getSubject',
         'participants' => 'getParticipants',
         'messages' => 'getMessages',
-        'attachments' => 'getAttachments'
+        'attachments' => 'getAttachments',
+        'project_id' => 'getProjectId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     );
 
     public static function getters()
@@ -150,6 +162,9 @@ class ConversationResource implements ArrayAccess
         $this->container['participants'] = isset($data['participants']) ? $data['participants'] : null;
         $this->container['messages'] = isset($data['messages']) ? $data['messages'] : null;
         $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
+        $this->container['project_id'] = isset($data['project_id']) ? $data['project_id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -276,6 +291,69 @@ class ConversationResource implements ArrayAccess
     public function setAttachments($attachments)
     {
         $this->container['attachments'] = $attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets project_id
+     * @return int
+     */
+    public function getProjectId()
+    {
+        return $this->container['project_id'];
+    }
+
+    /**
+     * Sets project_id
+     * @param int $project_id
+     * @return $this
+     */
+    public function setProjectId($project_id)
+    {
+        $this->container['project_id'] = $project_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

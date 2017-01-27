@@ -1057,7 +1057,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
 
 List notes from a given project.
 
@@ -1085,12 +1085,13 @@ $lead_id = "lead_id_example"; // string | Lead Id.
 $name = "name_example"; // string | Project name in its native language.
 $geo_code = "geo_code_example"; // string | Project geo code origin.
 $status = "status_example"; // string | Project Status.
+$sort = "sort_example"; // string | Sort project notes
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query);
+    $result = $api_instance->projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1110,6 +1111,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Project name in its native language. | [optional]
  **geo_code** | **string**| Project geo code origin. | [optional]
  **status** | **string**| Project Status. | [optional]
+ **sort** | **string**| Sort project notes | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1130,7 +1132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex2**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query)
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
 
 List notes from a given project.
 
@@ -1158,12 +1160,13 @@ $lead_id = "lead_id_example"; // string | Lead Id.
 $name = "name_example"; // string | Project name in its native language.
 $geo_code = "geo_code_example"; // string | Project geo code origin.
 $status = "status_example"; // string | Project Status.
+$sort = "sort_example"; // string | Sort project notes
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $limit, $page, $query);
+    $result = $api_instance->projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1183,6 +1186,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Project name in its native language. | [optional]
  **geo_code** | **string**| Project geo code origin. | [optional]
  **status** | **string**| Project Status. | [optional]
+ **sort** | **string**| Sort project notes | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

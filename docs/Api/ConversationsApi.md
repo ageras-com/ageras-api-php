@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsIndex**
-> \Ageras\Api\ConversationResult conversationsIndex($conversation_id, $limit, $page, $query)
+> \Ageras\Api\ConversationResult conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query)
 
 List conversations.
 
@@ -139,12 +139,14 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | Conversation id.
+$project_id = 56; // int | Project id
+$partner_id = 56; // int | Partner id
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->conversationsIndex($conversation_id, $limit, $page, $query);
+    $result = $api_instance->conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -157,6 +159,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**| Conversation id. | [optional]
+ **project_id** | **int**| Project id | [optional]
+ **partner_id** | **int**| Partner id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationResource
+ * ContentPageResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LocationResource Class Doc Comment
+ * ContentPageResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,28 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationResource implements ArrayAccess
+class ContentPageResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LocationResource';
+    protected static $swaggerModelName = 'ContentPageResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'country_name' => 'string',
-        'zip_code' => 'string',
-        'city_name' => 'string',
-        'city_district' => 'string',
-        'address' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'id' => 'int',
+        'created_at' => 'string',
+        'updated_at' => 'string',
+        'type' => '\Ageras\Api\ContentPageTypeResource',
+        'name' => 'string',
+        'letter' => 'string',
+        'slug' => 'string',
+        'fields' => '\Ageras\Api\ContentPageFieldResource[]',
+        'geo_code' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,13 +87,15 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'country_name' => 'country_name',
-        'zip_code' => 'zip_code',
-        'city_name' => 'city_name',
-        'city_district' => 'city_district',
-        'address' => 'address',
-        'point' => 'point'
+        'id' => 'id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'type' => 'type',
+        'name' => 'name',
+        'letter' => 'letter',
+        'slug' => 'slug',
+        'fields' => 'fields',
+        'geo_code' => 'geo_code'
     );
 
     public static function attributeMap()
@@ -104,13 +108,15 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'country_name' => 'setCountryName',
-        'zip_code' => 'setZipCode',
-        'city_name' => 'setCityName',
-        'city_district' => 'setCityDistrict',
-        'address' => 'setAddress',
-        'point' => 'setPoint'
+        'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'type' => 'setType',
+        'name' => 'setName',
+        'letter' => 'setLetter',
+        'slug' => 'setSlug',
+        'fields' => 'setFields',
+        'geo_code' => 'setGeoCode'
     );
 
     public static function setters()
@@ -123,13 +129,15 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'country_name' => 'getCountryName',
-        'zip_code' => 'getZipCode',
-        'city_name' => 'getCityName',
-        'city_district' => 'getCityDistrict',
-        'address' => 'getAddress',
-        'point' => 'getPoint'
+        'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'type' => 'getType',
+        'name' => 'getName',
+        'letter' => 'getLetter',
+        'slug' => 'getSlug',
+        'fields' => 'getFields',
+        'geo_code' => 'getGeoCode'
     );
 
     public static function getters()
@@ -153,13 +161,15 @@ class LocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
-        $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['letter'] = isset($data['letter']) ? $data['letter'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
+        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
     }
 
     /**
@@ -186,148 +196,190 @@ class LocationResource implements ArrayAccess
 
 
     /**
-     * Gets code
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getCode()
+    public function getId()
     {
-        return $this->container['code'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets code
-     * @param string $code Code for the given location.
+     * Sets id
+     * @param int $id Id for the Lead.
      * @return $this
      */
-    public function setCode($code)
+    public function setId($id)
     {
-        $this->container['code'] = $code;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets country_name
+     * Gets created_at
      * @return string
      */
-    public function getCountryName()
+    public function getCreatedAt()
     {
-        return $this->container['country_name'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets country_name
-     * @param string $country_name Name of the country
+     * Sets created_at
+     * @param string $created_at Date the Lead was created.
      * @return $this
      */
-    public function setCountryName($country_name)
+    public function setCreatedAt($created_at)
     {
-        $this->container['country_name'] = $country_name;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
+     * Gets updated_at
      * @return string
      */
-    public function getZipCode()
+    public function getUpdatedAt()
     {
-        return $this->container['zip_code'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip Code.
+     * Sets updated_at
+     * @param string $updated_at Date the Lead was updated.
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setUpdatedAt($updated_at)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
 
     /**
-     * Gets city_name
-     * @return string
+     * Gets type
+     * @return \Ageras\Api\ContentPageTypeResource
      */
-    public function getCityName()
+    public function getType()
     {
-        return $this->container['city_name'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets city_name
-     * @param string $city_name Name of the city.
+     * Sets type
+     * @param \Ageras\Api\ContentPageTypeResource $type
      * @return $this
      */
-    public function setCityName($city_name)
+    public function setType($type)
     {
-        $this->container['city_name'] = $city_name;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets city_district
+     * Gets name
      * @return string
      */
-    public function getCityDistrict()
+    public function getName()
     {
-        return $this->container['city_district'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets city_district
-     * @param string $city_district District the location is part of
+     * Sets name
+     * @param string $name Name of the page
      * @return $this
      */
-    public function setCityDistrict($city_district)
+    public function setName($name)
     {
-        $this->container['city_district'] = $city_district;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets address
+     * Gets letter
      * @return string
      */
-    public function getAddress()
+    public function getLetter()
     {
-        return $this->container['address'];
+        return $this->container['letter'];
     }
 
     /**
-     * Sets address
-     * @param string $address The address.
+     * Sets letter
+     * @param string $letter Letter used to identify the category of the page
      * @return $this
      */
-    public function setAddress($address)
+    public function setLetter($letter)
     {
-        $this->container['address'] = $address;
+        $this->container['letter'] = $letter;
 
         return $this;
     }
 
     /**
-     * Gets point
-     * @return \Ageras\Api\LocationGeoPointResource
+     * Gets slug
+     * @return string
      */
-    public function getPoint()
+    public function getSlug()
     {
-        return $this->container['point'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets point
-     * @param \Ageras\Api\LocationGeoPointResource $point
+     * Sets slug
+     * @param string $slug Slug to prefix the url
      * @return $this
      */
-    public function setPoint($point)
+    public function setSlug($slug)
     {
-        $this->container['point'] = $point;
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets fields
+     * @return \Ageras\Api\ContentPageFieldResource[]
+     */
+    public function getFields()
+    {
+        return $this->container['fields'];
+    }
+
+    /**
+     * Sets fields
+     * @param \Ageras\Api\ContentPageFieldResource[] $fields The different content fields for the page
+     * @return $this
+     */
+    public function setFields($fields)
+    {
+        $this->container['fields'] = $fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo_code
+     * @return string
+     */
+    public function getGeoCode()
+    {
+        return $this->container['geo_code'];
+    }
+
+    /**
+     * Sets geo_code
+     * @param string $geo_code Geo code for the location of the page
+     * @return $this
+     */
+    public function setGeoCode($geo_code)
+    {
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }

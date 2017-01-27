@@ -303,4 +303,12 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "refill"
+     */
+    public function testPropertyRefill()
+    {
+
+    }
+
 }

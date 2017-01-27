@@ -37,6 +37,7 @@ Method | HTTP request | Description
 [**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
 [**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
 [**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
+[**partnersSubscriptionsUpdate**](PartnersApi.md#partnersSubscriptionsUpdate) | **PUT** /partners/{partner_id}/subscriptions | Update partner subscription.
 [**partnersSuggestIndex**](PartnersApi.md#partnersSuggestIndex) | **GET** /partners/suggest | Suggest Partners to search for.
 [**partnersTransactionsIndex**](PartnersApi.md#partnersTransactionsIndex) | **GET** /partners/{partner_id}/transactions | List Transactions for a given Partner.
 [**partnersUpdate**](PartnersApi.md#partnersUpdate) | **PUT** /partners/{partner_id} | Update a Partner.
@@ -58,7 +59,7 @@ Method | HTTP request | Description
 
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\PartnerResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
+> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query)
 
 List facets and aggregations for the Partner Search.
 
@@ -85,13 +86,14 @@ $employee_id = "employee_id_example"; // string | Employee id of the partners to
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
 $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
+$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
 $sort = "sort_example"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -110,6 +112,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **satisfaction** | **string**| Partner Satisfaction Ratio. | [optional]
  **punches_use_speed** | **string**| Punches use speed. | [optional]
+ **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -117,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerResult**](../Model/PartnerResult.md)
+[**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
 
 ### Authorization
 
@@ -747,7 +750,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query)
 
 List Partners.
 
@@ -774,13 +777,14 @@ $employee_id = "employee_id_example"; // string | Employee id of the partners to
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
 $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
+$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
 $sort = "sort_example"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -799,6 +803,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **satisfaction** | **string**| Partner Satisfaction Ratio. | [optional]
  **punches_use_speed** | **string**| Punches use speed. | [optional]
+ **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -1957,8 +1962,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersSubscriptionsUpdate**
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource)
+
+Update partner subscription.
+
+Update partner subscription.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
+
+try {
+    $result = $api_instance->partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSubscriptionsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_subscription_resource** | [**\Ageras\Api\PartnerSubscriptionResource**](../Model/\Ageras\Api\PartnerSubscriptionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersSuggestIndex**
-> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page)
 
 Suggest Partners to search for.
 
@@ -1982,10 +2042,11 @@ $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
 $type = "type_example"; // string | Type to search for.
+$partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
 try {
-    $result = $api_instance->partnersSuggestIndex($limit, $geo_code, $query, $type, $page);
+    $result = $api_instance->partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -2001,6 +2062,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geo Location Code ( ISO 3166 ). | [optional]
  **query** | **string**| The search query to search by. | [optional]
  **type** | **string**| Type to search for. | [optional]
+ **partner_state** | **string**| Partner state. | [optional]
  **page** | **int**| The page position in the result. | [optional]
 
 ### Return type

@@ -1,6 +1,6 @@
 <?php
 /**
- * ParticipantResourceTest
+ * ContentPageFieldResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * ParticipantResourceTest Class Doc Comment
+ * ContentPageFieldResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description ParticipantResource
+// * @description ContentPageFieldResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
+class ContentPageFieldResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ParticipantResource"
+     * Test "ContentPageFieldResource"
      */
-    public function testParticipantResource()
+    public function testContentPageFieldResource()
     {
 
     }
@@ -104,17 +104,17 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "first_name"
+     * Test attribute "created_at"
      */
-    public function testPropertyFirstName()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "last_name"
+     * Test attribute "updated_at"
      */
-    public function testPropertyLastName()
+    public function testPropertyUpdatedAt()
     {
 
     }
@@ -128,49 +128,17 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "picture"
+     * Test attribute "value"
      */
-    public function testPropertyPicture()
+    public function testPropertyValue()
     {
 
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "description"
      */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "employee_id"
-     */
-    public function testPropertyEmployeeId()
-    {
-
-    }
-
-    /**
-     * Test attribute "lead_id"
-     */
-    public function testPropertyLeadId()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_user_id"
-     */
-    public function testPropertyPartnerUserId()
+    public function testPropertyDescription()
     {
 
     }

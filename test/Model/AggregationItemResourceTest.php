@@ -1,6 +1,6 @@
 <?php
 /**
- * ParticipantResourceTest
+ * AggregationItemResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * ParticipantResourceTest Class Doc Comment
+ * AggregationItemResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description ParticipantResource
+// * @description AggregationItemResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
+class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,89 +88,25 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ParticipantResource"
+     * Test "AggregationItemResource"
      */
-    public function testParticipantResource()
+    public function testAggregationItemResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "key"
      */
-    public function testPropertyId()
+    public function testPropertyKey()
     {
 
     }
 
     /**
-     * Test attribute "first_name"
+     * Test attribute "hits"
      */
-    public function testPropertyFirstName()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "picture"
-     */
-    public function testPropertyPicture()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "employee_id"
-     */
-    public function testPropertyEmployeeId()
-    {
-
-    }
-
-    /**
-     * Test attribute "lead_id"
-     */
-    public function testPropertyLeadId()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_user_id"
-     */
-    public function testPropertyPartnerUserId()
+    public function testPropertyHits()
     {
 
     }

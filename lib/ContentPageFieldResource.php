@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationResource
+ * ContentPageFieldResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LocationResource Class Doc Comment
+ * ContentPageFieldResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,25 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationResource implements ArrayAccess
+class ContentPageFieldResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LocationResource';
+    protected static $swaggerModelName = 'ContentPageFieldResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'code' => 'string',
-        'country_name' => 'string',
-        'zip_code' => 'string',
-        'city_name' => 'string',
-        'city_district' => 'string',
-        'address' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'id' => 'int',
+        'created_at' => 'string',
+        'updated_at' => 'string',
+        'name' => 'string',
+        'value' => 'string',
+        'description' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,13 +84,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'code' => 'code',
-        'country_name' => 'country_name',
-        'zip_code' => 'zip_code',
-        'city_name' => 'city_name',
-        'city_district' => 'city_district',
-        'address' => 'address',
-        'point' => 'point'
+        'id' => 'id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'name' => 'name',
+        'value' => 'value',
+        'description' => 'description'
     );
 
     public static function attributeMap()
@@ -104,13 +102,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'code' => 'setCode',
-        'country_name' => 'setCountryName',
-        'zip_code' => 'setZipCode',
-        'city_name' => 'setCityName',
-        'city_district' => 'setCityDistrict',
-        'address' => 'setAddress',
-        'point' => 'setPoint'
+        'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'name' => 'setName',
+        'value' => 'setValue',
+        'description' => 'setDescription'
     );
 
     public static function setters()
@@ -123,13 +120,12 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'code' => 'getCode',
-        'country_name' => 'getCountryName',
-        'zip_code' => 'getZipCode',
-        'city_name' => 'getCityName',
-        'city_district' => 'getCityDistrict',
-        'address' => 'getAddress',
-        'point' => 'getPoint'
+        'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'name' => 'getName',
+        'value' => 'getValue',
+        'description' => 'getDescription'
     );
 
     public static function getters()
@@ -153,13 +149,12 @@ class LocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
-        $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -186,148 +181,127 @@ class LocationResource implements ArrayAccess
 
 
     /**
-     * Gets code
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getCode()
+    public function getId()
     {
-        return $this->container['code'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets code
-     * @param string $code Code for the given location.
+     * Sets id
+     * @param int $id Id for the Lead.
      * @return $this
      */
-    public function setCode($code)
+    public function setId($id)
     {
-        $this->container['code'] = $code;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets country_name
+     * Gets created_at
      * @return string
      */
-    public function getCountryName()
+    public function getCreatedAt()
     {
-        return $this->container['country_name'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets country_name
-     * @param string $country_name Name of the country
+     * Sets created_at
+     * @param string $created_at Date the Lead was created.
      * @return $this
      */
-    public function setCountryName($country_name)
+    public function setCreatedAt($created_at)
     {
-        $this->container['country_name'] = $country_name;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
+     * Gets updated_at
      * @return string
      */
-    public function getZipCode()
+    public function getUpdatedAt()
     {
-        return $this->container['zip_code'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip Code.
+     * Sets updated_at
+     * @param string $updated_at Date the Lead was updated.
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setUpdatedAt($updated_at)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
 
     /**
-     * Gets city_name
+     * Gets name
      * @return string
      */
-    public function getCityName()
+    public function getName()
     {
-        return $this->container['city_name'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets city_name
-     * @param string $city_name Name of the city.
+     * Sets name
+     * @param string $name Name of the given field
      * @return $this
      */
-    public function setCityName($city_name)
+    public function setName($name)
     {
-        $this->container['city_name'] = $city_name;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets city_district
+     * Gets value
      * @return string
      */
-    public function getCityDistrict()
+    public function getValue()
     {
-        return $this->container['city_district'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets city_district
-     * @param string $city_district District the location is part of
+     * Sets value
+     * @param string $value The contents of the field
      * @return $this
      */
-    public function setCityDistrict($city_district)
+    public function setValue($value)
     {
-        $this->container['city_district'] = $city_district;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets address
+     * Gets description
      * @return string
      */
-    public function getAddress()
+    public function getDescription()
     {
-        return $this->container['address'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets address
-     * @param string $address The address.
+     * Sets description
+     * @param string $description What the field is used for
      * @return $this
      */
-    public function setAddress($address)
+    public function setDescription($description)
     {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets point
-     * @return \Ageras\Api\LocationGeoPointResource
-     */
-    public function getPoint()
-    {
-        return $this->container['point'];
-    }
-
-    /**
-     * Sets point
-     * @param \Ageras\Api\LocationGeoPointResource $point
-     * @return $this
-     */
-    public function setPoint($point)
-    {
-        $this->container['point'] = $point;
+        $this->container['description'] = $description;
 
         return $this;
     }

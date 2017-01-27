@@ -293,15 +293,17 @@ class ConversationsApi
      * List conversations.
      *
      * @param string $conversation_id Conversation id. (optional)
+     * @param int $project_id Project id (optional)
+     * @param int $partner_id Partner id (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\ConversationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function conversationsIndex($conversation_id = null, $limit = null, $page = null, $query = null)
+    public function conversationsIndex($conversation_id = null, $project_id = null, $partner_id = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->conversationsIndexWithHttpInfo($conversation_id, $limit, $page, $query);
+        list($response) = $this->conversationsIndexWithHttpInfo($conversation_id, $project_id, $partner_id, $limit, $page, $query);
         return $response;
     }
 
@@ -311,13 +313,15 @@ class ConversationsApi
      * List conversations.
      *
      * @param string $conversation_id Conversation id. (optional)
+     * @param int $project_id Project id (optional)
+     * @param int $partner_id Partner id (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\ConversationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function conversationsIndexWithHttpInfo($conversation_id = null, $limit = null, $page = null, $query = null)
+    public function conversationsIndexWithHttpInfo($conversation_id = null, $project_id = null, $partner_id = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/conversations";
@@ -334,6 +338,14 @@ class ConversationsApi
         // query params
         if ($conversation_id !== null) {
             $queryParams['conversation_id'] = $this->apiClient->getSerializer()->toQueryValue($conversation_id);
+        }
+        // query params
+        if ($project_id !== null) {
+            $queryParams['project_id'] = $this->apiClient->getSerializer()->toQueryValue($project_id);
+        }
+        // query params
+        if ($partner_id !== null) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($partner_id);
         }
         // query params
         if ($limit !== null) {

@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **participant** | [**\Ageras\Api\ParticipantResource**](ParticipantResource.md) |  | [optional] 
 **recipients** | [**\Ageras\Api\RecipientResource[]**](RecipientResource.md) |  | [optional] 
 **attachments** | [**\Ageras\Api\AttachmentResource[]**](AttachmentResource.md) |  | [optional] 
+**created_at** | **string** |  | [optional] 
+**updated_at** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

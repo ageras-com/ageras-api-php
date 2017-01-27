@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchSuggestIndex**
-> \Ageras\Api\SearchResult searchSuggestIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\SearchResult searchSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page)
 
 Suggest by criteria.
 
@@ -91,10 +91,11 @@ $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
 $type = "type_example"; // string | Type to search for.
+$partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
 try {
-    $result = $api_instance->searchSuggestIndex($limit, $geo_code, $query, $type, $page);
+    $result = $api_instance->searchSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->searchSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -110,6 +111,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geo Location Code ( ISO 3166 ). | [optional]
  **query** | **string**| The search query to search by. | [optional]
  **type** | **string**| Type to search for. | [optional]
+ **partner_state** | **string**| Partner state. | [optional]
  **page** | **int**| The page position in the result. | [optional]
 
 ### Return type
@@ -128,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchTypeaheadIndex**
-> \Ageras\Api\TypeaheadResult searchTypeaheadIndex($limit, $geo_code, $query, $type, $page)
+> \Ageras\Api\TypeaheadResult searchTypeaheadIndex($limit, $geo_code, $query, $type, $partner_state, $page)
 
 Typeahead recommendations.
 
@@ -152,10 +154,11 @@ $limit = 56; // int | Limit the number of suggest resources pr. page.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $query = "query_example"; // string | The search query to search by.
 $type = "type_example"; // string | Type to search for.
+$partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
 try {
-    $result = $api_instance->searchTypeaheadIndex($limit, $geo_code, $query, $type, $page);
+    $result = $api_instance->searchTypeaheadIndex($limit, $geo_code, $query, $type, $partner_state, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->searchTypeaheadIndex: ', $e->getMessage(), PHP_EOL;
@@ -171,6 +174,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geo Location Code ( ISO 3166 ). | [optional]
  **query** | **string**| The search query to search by. | [optional]
  **type** | **string**| Type to search for. | [optional]
+ **partner_state** | **string**| Partner state. | [optional]
  **page** | **int**| The page position in the result. | [optional]
 
 ### Return type
