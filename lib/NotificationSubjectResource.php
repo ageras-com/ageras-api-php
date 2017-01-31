@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResource
+ * NotificationSubjectResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AggregationItemResource Class Doc Comment
+ * NotificationSubjectResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResource implements ArrayAccess
+class NotificationSubjectResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AggregationItemResource';
+    protected static $swaggerModelName = 'NotificationSubjectResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'key' => 'string',
-        'hits' => 'int',
-        'sub_items' => '\Ageras\Api\AggregationSubItemResource[]'
+        'type' => 'string',
+        'message' => '\Ageras\Api\MessageResource'
     );
 
     public static function swaggerTypes()
@@ -81,9 +80,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'key' => 'key',
-        'hits' => 'hits',
-        'sub_items' => 'sub_items'
+        'type' => 'type',
+        'message' => 'message'
     );
 
     public static function attributeMap()
@@ -96,9 +94,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'key' => 'setKey',
-        'hits' => 'setHits',
-        'sub_items' => 'setSubItems'
+        'type' => 'setType',
+        'message' => 'setMessage'
     );
 
     public static function setters()
@@ -111,9 +108,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'key' => 'getKey',
-        'hits' => 'getHits',
-        'sub_items' => 'getSubItems'
+        'type' => 'getType',
+        'message' => 'getMessage'
     );
 
     public static function getters()
@@ -121,8 +117,22 @@ class AggregationItemResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_MESSAGE = 'message';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_UNKNOWN,
+            self::TYPE_MESSAGE,
+        ];
+    }
     
 
     /**
@@ -137,9 +147,8 @@ class AggregationItemResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['hits'] = isset($data['hits']) ? $data['hits'] : null;
-        $this->container['sub_items'] = isset($data['sub_items']) ? $data['sub_items'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -150,6 +159,11 @@ class AggregationItemResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "message");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -161,69 +175,56 @@ class AggregationItemResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "message");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets key
+     * Gets type
      * @return string
      */
-    public function getKey()
+    public function getType()
     {
-        return $this->container['key'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets key
-     * @param string $key
+     * Sets type
+     * @param string $type Subject type
      * @return $this
      */
-    public function setKey($key)
+    public function setType($type)
     {
-        $this->container['key'] = $key;
+        $allowed_values = array('unknown', 'message');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'message'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets hits
-     * @return int
+     * Gets message
+     * @return \Ageras\Api\MessageResource
      */
-    public function getHits()
+    public function getMessage()
     {
-        return $this->container['hits'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets hits
-     * @param int $hits Partner found in the search.
+     * Sets message
+     * @param \Ageras\Api\MessageResource $message
      * @return $this
      */
-    public function setHits($hits)
+    public function setMessage($message)
     {
-        $this->container['hits'] = $hits;
-
-        return $this;
-    }
-
-    /**
-     * Gets sub_items
-     * @return \Ageras\Api\AggregationSubItemResource[]
-     */
-    public function getSubItems()
-    {
-        return $this->container['sub_items'];
-    }
-
-    /**
-     * Sets sub_items
-     * @param \Ageras\Api\AggregationSubItemResource[] $sub_items Sub-items for aggregation item resource
-     * @return $this
-     */
-    public function setSubItems($sub_items)
-    {
-        $this->container['sub_items'] = $sub_items;
+        $this->container['message'] = $message;
 
         return $this;
     }

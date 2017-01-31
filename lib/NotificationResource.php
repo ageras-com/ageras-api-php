@@ -1,6 +1,6 @@
 <?php
 /**
- * AttachmentResource
+ * NotificationResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AttachmentResource Class Doc Comment
+ * NotificationResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AttachmentResource implements ArrayAccess
+class NotificationResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AttachmentResource';
+    protected static $swaggerModelName = 'NotificationResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,11 +67,14 @@ class AttachmentResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'name' => 'string',
-        'content' => 'string',
-        'url' => 'string',
         'type' => 'string',
-        'size' => 'int'
+        'trigger' => '\Ageras\Api\NotificationTriggerResource',
+        'recipient' => '\Ageras\Api\NotificationRecipientResource',
+        'subject' => '\Ageras\Api\NotificationSubjectResource',
+        'seen_at' => 'string',
+        'read_at' => 'string',
+        'created_at' => 'string',
+        'updated_at' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,11 +88,14 @@ class AttachmentResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'name' => 'name',
-        'content' => 'content',
-        'url' => 'url',
         'type' => 'type',
-        'size' => 'size'
+        'trigger' => 'trigger',
+        'recipient' => 'recipient',
+        'subject' => 'subject',
+        'seen_at' => 'seen_at',
+        'read_at' => 'read_at',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     );
 
     public static function attributeMap()
@@ -103,11 +109,14 @@ class AttachmentResource implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'name' => 'setName',
-        'content' => 'setContent',
-        'url' => 'setUrl',
         'type' => 'setType',
-        'size' => 'setSize'
+        'trigger' => 'setTrigger',
+        'recipient' => 'setRecipient',
+        'subject' => 'setSubject',
+        'seen_at' => 'setSeenAt',
+        'read_at' => 'setReadAt',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     );
 
     public static function setters()
@@ -121,11 +130,14 @@ class AttachmentResource implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'name' => 'getName',
-        'content' => 'getContent',
-        'url' => 'getUrl',
         'type' => 'getType',
-        'size' => 'getSize'
+        'trigger' => 'getTrigger',
+        'recipient' => 'getRecipient',
+        'subject' => 'getSubject',
+        'seen_at' => 'getSeenAt',
+        'read_at' => 'getReadAt',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     );
 
     public static function getters()
@@ -150,11 +162,14 @@ class AttachmentResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
+        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
+        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
+        $this->container['seen_at'] = isset($data['seen_at']) ? $data['seen_at'] : null;
+        $this->container['read_at'] = isset($data['read_at']) ? $data['read_at'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -191,75 +206,12 @@ class AttachmentResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id Id
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets content
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->container['content'];
-    }
-
-    /**
-     * Sets content
-     * @param string $content
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        $this->container['content'] = $content;
-
-        return $this;
-    }
-
-    /**
-     * Gets url
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-     * Sets url
-     * @param string $url
-     * @return $this
-     */
-    public function setUrl($url)
-    {
-        $this->container['url'] = $url;
 
         return $this;
     }
@@ -275,7 +227,7 @@ class AttachmentResource implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type Notification type
      * @return $this
      */
     public function setType($type)
@@ -286,22 +238,148 @@ class AttachmentResource implements ArrayAccess
     }
 
     /**
-     * Gets size
-     * @return int
+     * Gets trigger
+     * @return \Ageras\Api\NotificationTriggerResource
      */
-    public function getSize()
+    public function getTrigger()
     {
-        return $this->container['size'];
+        return $this->container['trigger'];
     }
 
     /**
-     * Sets size
-     * @param int $size
+     * Sets trigger
+     * @param \Ageras\Api\NotificationTriggerResource $trigger
      * @return $this
      */
-    public function setSize($size)
+    public function setTrigger($trigger)
     {
-        $this->container['size'] = $size;
+        $this->container['trigger'] = $trigger;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient
+     * @return \Ageras\Api\NotificationRecipientResource
+     */
+    public function getRecipient()
+    {
+        return $this->container['recipient'];
+    }
+
+    /**
+     * Sets recipient
+     * @param \Ageras\Api\NotificationRecipientResource $recipient
+     * @return $this
+     */
+    public function setRecipient($recipient)
+    {
+        $this->container['recipient'] = $recipient;
+
+        return $this;
+    }
+
+    /**
+     * Gets subject
+     * @return \Ageras\Api\NotificationSubjectResource
+     */
+    public function getSubject()
+    {
+        return $this->container['subject'];
+    }
+
+    /**
+     * Sets subject
+     * @param \Ageras\Api\NotificationSubjectResource $subject
+     * @return $this
+     */
+    public function setSubject($subject)
+    {
+        $this->container['subject'] = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Gets seen_at
+     * @return string
+     */
+    public function getSeenAt()
+    {
+        return $this->container['seen_at'];
+    }
+
+    /**
+     * Sets seen_at
+     * @param string $seen_at Seen at
+     * @return $this
+     */
+    public function setSeenAt($seen_at)
+    {
+        $this->container['seen_at'] = $seen_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets read_at
+     * @return string
+     */
+    public function getReadAt()
+    {
+        return $this->container['read_at'];
+    }
+
+    /**
+     * Sets read_at
+     * @param string $read_at Read at
+     * @return $this
+     */
+    public function setReadAt($read_at)
+    {
+        $this->container['read_at'] = $read_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at Created at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at Updated at
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResourceTest
+ * NotificationResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * AggregationItemResourceTest Class Doc Comment
+ * NotificationResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description AggregationItemResource
+// * @description NotificationResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
+class NotificationResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,81 @@ class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AggregationItemResource"
+     * Test "NotificationResource"
      */
-    public function testAggregationItemResource()
+    public function testNotificationResource()
     {
 
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "id"
      */
-    public function testPropertyKey()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "hits"
+     * Test attribute "type"
      */
-    public function testPropertyHits()
+    public function testPropertyType()
     {
 
     }
 
     /**
-     * Test attribute "sub_items"
+     * Test attribute "trigger"
      */
-    public function testPropertySubItems()
+    public function testPropertyTrigger()
+    {
+
+    }
+
+    /**
+     * Test attribute "recipient"
+     */
+    public function testPropertyRecipient()
+    {
+
+    }
+
+    /**
+     * Test attribute "subject"
+     */
+    public function testPropertySubject()
+    {
+
+    }
+
+    /**
+     * Test attribute "seen_at"
+     */
+    public function testPropertySeenAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "read_at"
+     */
+    public function testPropertyReadAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
     {
 
     }

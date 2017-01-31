@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResource
+ * AggregationSubItemResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AggregationItemResource Class Doc Comment
+ * AggregationSubItemResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResource implements ArrayAccess
+class AggregationSubItemResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AggregationItemResource';
+    protected static $swaggerModelName = 'AggregationSubItemResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,8 +67,8 @@ class AggregationItemResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'key' => 'string',
-        'hits' => 'int',
-        'sub_items' => '\Ageras\Api\AggregationSubItemResource[]'
+        'value' => 'string',
+        'slug' => 'string'
     );
 
     public static function swaggerTypes()
@@ -82,8 +82,8 @@ class AggregationItemResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'key' => 'key',
-        'hits' => 'hits',
-        'sub_items' => 'sub_items'
+        'value' => 'value',
+        'slug' => 'slug'
     );
 
     public static function attributeMap()
@@ -97,8 +97,8 @@ class AggregationItemResource implements ArrayAccess
      */
     protected static $setters = array(
         'key' => 'setKey',
-        'hits' => 'setHits',
-        'sub_items' => 'setSubItems'
+        'value' => 'setValue',
+        'slug' => 'setSlug'
     );
 
     public static function setters()
@@ -112,8 +112,8 @@ class AggregationItemResource implements ArrayAccess
      */
     protected static $getters = array(
         'key' => 'getKey',
-        'hits' => 'getHits',
-        'sub_items' => 'getSubItems'
+        'value' => 'getValue',
+        'slug' => 'getSlug'
     );
 
     public static function getters()
@@ -138,8 +138,8 @@ class AggregationItemResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['hits'] = isset($data['hits']) ? $data['hits'] : null;
-        $this->container['sub_items'] = isset($data['sub_items']) ? $data['sub_items'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
     }
 
     /**
@@ -176,7 +176,7 @@ class AggregationItemResource implements ArrayAccess
 
     /**
      * Sets key
-     * @param string $key
+     * @param string $key typically the id of a given resource
      * @return $this
      */
     public function setKey($key)
@@ -187,43 +187,43 @@ class AggregationItemResource implements ArrayAccess
     }
 
     /**
-     * Gets hits
-     * @return int
+     * Gets value
+     * @return string
      */
-    public function getHits()
+    public function getValue()
     {
-        return $this->container['hits'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets hits
-     * @param int $hits Partner found in the search.
+     * Sets value
+     * @param string $value value
      * @return $this
      */
-    public function setHits($hits)
+    public function setValue($value)
     {
-        $this->container['hits'] = $hits;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets sub_items
-     * @return \Ageras\Api\AggregationSubItemResource[]
+     * Gets slug
+     * @return string
      */
-    public function getSubItems()
+    public function getSlug()
     {
-        return $this->container['sub_items'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets sub_items
-     * @param \Ageras\Api\AggregationSubItemResource[] $sub_items Sub-items for aggregation item resource
+     * Sets slug
+     * @param string $slug Used for URL friendly names
      * @return $this
      */
-    public function setSubItems($sub_items)
+    public function setSlug($slug)
     {
-        $this->container['sub_items'] = $sub_items;
+        $this->container['slug'] = $slug;
 
         return $this;
     }

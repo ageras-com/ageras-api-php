@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **participant** | [**\Ageras\Api\ParticipantResource**](ParticipantResource.md) |  | [optional] 
 **recipients** | [**\Ageras\Api\RecipientResource[]**](RecipientResource.md) |  | [optional] 
 **attachments** | [**\Ageras\Api\AttachmentResource[]**](AttachmentResource.md) |  | [optional] 
+**project_id** | **int** |  | [optional] 
+**seen_at** | **string** |  | [optional] 
+**read_at** | **string** |  | [optional] 
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 

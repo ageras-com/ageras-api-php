@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResourceTest
+ * NotificationTriggerResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * AggregationItemResourceTest Class Doc Comment
+ * NotificationTriggerResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description AggregationItemResource
+// * @description NotificationTriggerResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
+class NotificationTriggerResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,41 @@ class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AggregationItemResource"
+     * Test "NotificationTriggerResource"
      */
-    public function testAggregationItemResource()
+    public function testNotificationTriggerResource()
     {
 
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "type"
      */
-    public function testPropertyKey()
+    public function testPropertyType()
     {
 
     }
 
     /**
-     * Test attribute "hits"
+     * Test attribute "partner_user"
      */
-    public function testPropertyHits()
+    public function testPropertyPartnerUser()
     {
 
     }
 
     /**
-     * Test attribute "sub_items"
+     * Test attribute "employee"
      */
-    public function testPropertySubItems()
+    public function testPropertyEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "project_customer"
+     */
+    public function testPropertyProjectCustomer()
     {
 
     }

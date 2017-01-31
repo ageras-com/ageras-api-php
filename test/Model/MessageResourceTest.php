@@ -144,6 +144,30 @@ class MessageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "project_id"
+     */
+    public function testPropertyProjectId()
+    {
+
+    }
+
+    /**
+     * Test attribute "seen_at"
+     */
+    public function testPropertySeenAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "read_at"
+     */
+    public function testPropertyReadAt()
+    {
+
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()

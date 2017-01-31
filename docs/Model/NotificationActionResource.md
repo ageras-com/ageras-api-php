@@ -1,14 +1,10 @@
-# AttachmentResource
+# NotificationActionResource
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**name** | **string** |  | [optional] 
-**content** | **string** |  | [optional] 
-**url** | **string** |  | [optional] 
-**type** | **string** |  | [optional] 
-**size** | **int** |  | [optional] 
+**notification_ids** | **int[]** |  | [optional] 
+**action** | **string** |  | [optional] [default to 'has_been_seen']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

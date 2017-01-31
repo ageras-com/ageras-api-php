@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResourceTest
+ * NotificationRecipientResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * AggregationItemResourceTest Class Doc Comment
+ * NotificationRecipientResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description AggregationItemResource
+// * @description NotificationRecipientResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
+class NotificationRecipientResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,25 @@ class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AggregationItemResource"
+     * Test "NotificationRecipientResource"
      */
-    public function testAggregationItemResource()
+    public function testNotificationRecipientResource()
     {
 
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "type"
      */
-    public function testPropertyKey()
+    public function testPropertyType()
     {
 
     }
 
     /**
-     * Test attribute "hits"
+     * Test attribute "partner_user"
      */
-    public function testPropertyHits()
-    {
-
-    }
-
-    /**
-     * Test attribute "sub_items"
-     */
-    public function testPropertySubItems()
+    public function testPropertyPartnerUser()
     {
 
     }

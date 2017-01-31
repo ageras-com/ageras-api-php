@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResource
+ * NotificationTriggerResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AggregationItemResource Class Doc Comment
+ * NotificationTriggerResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResource implements ArrayAccess
+class NotificationTriggerResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AggregationItemResource';
+    protected static $swaggerModelName = 'NotificationTriggerResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'key' => 'string',
-        'hits' => 'int',
-        'sub_items' => '\Ageras\Api\AggregationSubItemResource[]'
+        'type' => 'string',
+        'partner_user' => '\Ageras\Api\PartnerUserResource',
+        'employee' => '\Ageras\Api\EmployeeResource',
+        'project_customer' => '\Ageras\Api\ProjectCustomerResource'
     );
 
     public static function swaggerTypes()
@@ -81,9 +82,10 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'key' => 'key',
-        'hits' => 'hits',
-        'sub_items' => 'sub_items'
+        'type' => 'type',
+        'partner_user' => 'partner_user',
+        'employee' => 'employee',
+        'project_customer' => 'project_customer'
     );
 
     public static function attributeMap()
@@ -96,9 +98,10 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'key' => 'setKey',
-        'hits' => 'setHits',
-        'sub_items' => 'setSubItems'
+        'type' => 'setType',
+        'partner_user' => 'setPartnerUser',
+        'employee' => 'setEmployee',
+        'project_customer' => 'setProjectCustomer'
     );
 
     public static function setters()
@@ -111,9 +114,10 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'key' => 'getKey',
-        'hits' => 'getHits',
-        'sub_items' => 'getSubItems'
+        'type' => 'getType',
+        'partner_user' => 'getPartnerUser',
+        'employee' => 'getEmployee',
+        'project_customer' => 'getProjectCustomer'
     );
 
     public static function getters()
@@ -121,8 +125,26 @@ class AggregationItemResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_EMPLOYEE = 'employee';
+    const TYPE_PARTNER_USER = 'partner_user';
+    const TYPE_PROJECT_CUSTOMER = 'project_customer';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_UNKNOWN,
+            self::TYPE_EMPLOYEE,
+            self::TYPE_PARTNER_USER,
+            self::TYPE_PROJECT_CUSTOMER,
+        ];
+    }
     
 
     /**
@@ -137,9 +159,10 @@ class AggregationItemResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['hits'] = isset($data['hits']) ? $data['hits'] : null;
-        $this->container['sub_items'] = isset($data['sub_items']) ? $data['sub_items'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['project_customer'] = isset($data['project_customer']) ? $data['project_customer'] : null;
     }
 
     /**
@@ -150,6 +173,11 @@ class AggregationItemResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "employee", "partner_user", "project_customer");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -161,69 +189,98 @@ class AggregationItemResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "employee", "partner_user", "project_customer");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets key
+     * Gets type
      * @return string
      */
-    public function getKey()
+    public function getType()
     {
-        return $this->container['key'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets key
-     * @param string $key
+     * Sets type
+     * @param string $type Trigger type
      * @return $this
      */
-    public function setKey($key)
+    public function setType($type)
     {
-        $this->container['key'] = $key;
+        $allowed_values = array('unknown', 'employee', 'partner_user', 'project_customer');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'employee', 'partner_user', 'project_customer'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets hits
-     * @return int
+     * Gets partner_user
+     * @return \Ageras\Api\PartnerUserResource
      */
-    public function getHits()
+    public function getPartnerUser()
     {
-        return $this->container['hits'];
+        return $this->container['partner_user'];
     }
 
     /**
-     * Sets hits
-     * @param int $hits Partner found in the search.
+     * Sets partner_user
+     * @param \Ageras\Api\PartnerUserResource $partner_user
      * @return $this
      */
-    public function setHits($hits)
+    public function setPartnerUser($partner_user)
     {
-        $this->container['hits'] = $hits;
+        $this->container['partner_user'] = $partner_user;
 
         return $this;
     }
 
     /**
-     * Gets sub_items
-     * @return \Ageras\Api\AggregationSubItemResource[]
+     * Gets employee
+     * @return \Ageras\Api\EmployeeResource
      */
-    public function getSubItems()
+    public function getEmployee()
     {
-        return $this->container['sub_items'];
+        return $this->container['employee'];
     }
 
     /**
-     * Sets sub_items
-     * @param \Ageras\Api\AggregationSubItemResource[] $sub_items Sub-items for aggregation item resource
+     * Sets employee
+     * @param \Ageras\Api\EmployeeResource $employee
      * @return $this
      */
-    public function setSubItems($sub_items)
+    public function setEmployee($employee)
     {
-        $this->container['sub_items'] = $sub_items;
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets project_customer
+     * @return \Ageras\Api\ProjectCustomerResource
+     */
+    public function getProjectCustomer()
+    {
+        return $this->container['project_customer'];
+    }
+
+    /**
+     * Sets project_customer
+     * @param \Ageras\Api\ProjectCustomerResource $project_customer
+     * @return $this
+     */
+    public function setProjectCustomer($project_customer)
+    {
+        $this->container['project_customer'] = $project_customer;
 
         return $this;
     }
