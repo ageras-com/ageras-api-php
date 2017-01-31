@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResource
+ * NotificationActionResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AggregationItemResource Class Doc Comment
+ * NotificationActionResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResource implements ArrayAccess
+class NotificationActionResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AggregationItemResource';
+    protected static $swaggerModelName = 'NotificationActionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'key' => 'string',
-        'hits' => 'int',
-        'sub_items' => '\Ageras\Api\AggregationSubItemResource[]'
+        'notification_ids' => 'int[]',
+        'action' => 'string'
     );
 
     public static function swaggerTypes()
@@ -81,9 +80,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'key' => 'key',
-        'hits' => 'hits',
-        'sub_items' => 'sub_items'
+        'notification_ids' => 'notification_ids',
+        'action' => 'action'
     );
 
     public static function attributeMap()
@@ -96,9 +94,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'key' => 'setKey',
-        'hits' => 'setHits',
-        'sub_items' => 'setSubItems'
+        'notification_ids' => 'setNotificationIds',
+        'action' => 'setAction'
     );
 
     public static function setters()
@@ -111,9 +108,8 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'key' => 'getKey',
-        'hits' => 'getHits',
-        'sub_items' => 'getSubItems'
+        'notification_ids' => 'getNotificationIds',
+        'action' => 'getAction'
     );
 
     public static function getters()
@@ -121,8 +117,22 @@ class AggregationItemResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ACTION_SEEN = 'has_been_seen';
+    const ACTION_READ = 'has_been_read';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_SEEN,
+            self::ACTION_READ,
+        ];
+    }
     
 
     /**
@@ -137,9 +147,8 @@ class AggregationItemResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['hits'] = isset($data['hits']) ? $data['hits'] : null;
-        $this->container['sub_items'] = isset($data['sub_items']) ? $data['sub_items'] : null;
+        $this->container['notification_ids'] = isset($data['notification_ids']) ? $data['notification_ids'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'has_been_seen';
     }
 
     /**
@@ -150,6 +159,11 @@ class AggregationItemResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("has_been_seen", "has_been_read");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'action', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -161,69 +175,56 @@ class AggregationItemResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("has_been_seen", "has_been_read");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets key
+     * Gets notification_ids
+     * @return int[]
+     */
+    public function getNotificationIds()
+    {
+        return $this->container['notification_ids'];
+    }
+
+    /**
+     * Sets notification_ids
+     * @param int[] $notification_ids
+     * @return $this
+     */
+    public function setNotificationIds($notification_ids)
+    {
+        $this->container['notification_ids'] = $notification_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets action
      * @return string
      */
-    public function getKey()
+    public function getAction()
     {
-        return $this->container['key'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets key
-     * @param string $key
+     * Sets action
+     * @param string $action
      * @return $this
      */
-    public function setKey($key)
+    public function setAction($action)
     {
-        $this->container['key'] = $key;
-
-        return $this;
-    }
-
-    /**
-     * Gets hits
-     * @return int
-     */
-    public function getHits()
-    {
-        return $this->container['hits'];
-    }
-
-    /**
-     * Sets hits
-     * @param int $hits Partner found in the search.
-     * @return $this
-     */
-    public function setHits($hits)
-    {
-        $this->container['hits'] = $hits;
-
-        return $this;
-    }
-
-    /**
-     * Gets sub_items
-     * @return \Ageras\Api\AggregationSubItemResource[]
-     */
-    public function getSubItems()
-    {
-        return $this->container['sub_items'];
-    }
-
-    /**
-     * Sets sub_items
-     * @param \Ageras\Api\AggregationSubItemResource[] $sub_items Sub-items for aggregation item resource
-     * @return $this
-     */
-    public function setSubItems($sub_items)
-    {
-        $this->container['sub_items'] = $sub_items;
+        $allowed_values = array('has_been_seen', 'has_been_read');
+        if (!in_array($action, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'has_been_seen', 'has_been_read'");
+        }
+        $this->container['action'] = $action;
 
         return $this;
     }

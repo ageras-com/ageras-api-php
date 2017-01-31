@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResourceTest
+ * NotificationResultTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * AggregationItemResourceTest Class Doc Comment
+ * NotificationResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description AggregationItemResource
+// * @description NotificationResult
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
+class NotificationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,57 @@ class AggregationItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AggregationItemResource"
+     * Test "NotificationResult"
      */
-    public function testAggregationItemResource()
+    public function testNotificationResult()
     {
 
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "page"
      */
-    public function testPropertyKey()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "hits"
+     * Test attribute "limit"
      */
-    public function testPropertyHits()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "sub_items"
+     * Test attribute "pages"
      */
-    public function testPropertySubItems()
+    public function testPropertyPages()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AggregationItemResource
+ * NotificationResult
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * AggregationItemResource Class Doc Comment
+ * NotificationResult Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,25 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AggregationItemResource implements ArrayAccess
+class NotificationResult implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AggregationItemResource';
+    protected static $swaggerModelName = 'NotificationResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'key' => 'string',
-        'hits' => 'int',
-        'sub_items' => '\Ageras\Api\AggregationSubItemResource[]'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\NotificationResource[]',
+        'did_you_mean' => 'string'
     );
 
     public static function swaggerTypes()
@@ -81,9 +84,12 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'key' => 'key',
-        'hits' => 'hits',
-        'sub_items' => 'sub_items'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     );
 
     public static function attributeMap()
@@ -96,9 +102,12 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'key' => 'setKey',
-        'hits' => 'setHits',
-        'sub_items' => 'setSubItems'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     );
 
     public static function setters()
@@ -111,9 +120,12 @@ class AggregationItemResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'key' => 'getKey',
-        'hits' => 'getHits',
-        'sub_items' => 'getSubItems'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     );
 
     public static function getters()
@@ -137,9 +149,12 @@ class AggregationItemResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['hits'] = isset($data['hits']) ? $data['hits'] : null;
-        $this->container['sub_items'] = isset($data['sub_items']) ? $data['sub_items'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -166,64 +181,127 @@ class AggregationItemResource implements ArrayAccess
 
 
     /**
-     * Gets key
-     * @return string
-     */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-     * Sets key
-     * @param string $key
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
-
-        return $this;
-    }
-
-    /**
-     * Gets hits
+     * Gets page
      * @return int
      */
-    public function getHits()
+    public function getPage()
     {
-        return $this->container['hits'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets hits
-     * @param int $hits Partner found in the search.
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setHits($hits)
+    public function setPage($page)
     {
-        $this->container['hits'] = $hits;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets sub_items
-     * @return \Ageras\Api\AggregationSubItemResource[]
+     * Gets limit
+     * @return int
      */
-    public function getSubItems()
+    public function getLimit()
     {
-        return $this->container['sub_items'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets sub_items
-     * @param \Ageras\Api\AggregationSubItemResource[] $sub_items Sub-items for aggregation item resource
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setSubItems($sub_items)
+    public function setLimit($limit)
     {
-        $this->container['sub_items'] = $sub_items;
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\NotificationResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\NotificationResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
+     * @return string
+     */
+    public function getDidYouMean()
+    {
+        return $this->container['did_you_mean'];
+    }
+
+    /**
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
+     * @return $this
+     */
+    public function setDidYouMean($did_you_mean)
+    {
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }
