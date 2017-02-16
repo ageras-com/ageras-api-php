@@ -104,9 +104,9 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "partner_id"
+     * Test attribute "partner"
      */
-    public function testPropertyPartnerId()
+    public function testPropertyPartner()
     {
 
     }
@@ -123,6 +123,14 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "score"
      */
     public function testPropertyScore()
+    {
+
+    }
+
+    /**
+     * Test attribute "stars"
+     */
+    public function testPropertyStars()
     {
 
     }

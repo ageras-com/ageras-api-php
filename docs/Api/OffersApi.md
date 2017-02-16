@@ -145,7 +145,7 @@ $sort = "sort_example"; // string | Order by price asc or desc.
 $action = "action_example"; // string | Action to take.
 $geo_code = "geo_code_example"; // string | Offer geo code.
 $type = "partner"; // string | Type of Offer
-$limit = 56; // int | Number of offers to return
+$limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
  **action** | **string**| Action to take. | [optional]
  **geo_code** | **string**| Offer geo code. | [optional]
  **type** | **string**| Type of Offer | [optional] [default to partner]
- **limit** | **int**| Number of offers to return | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 

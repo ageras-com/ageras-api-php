@@ -67,8 +67,9 @@ class IndustryResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
+        'code' => 'string',
         'name' => 'string',
-        'alias' => 'string',
+        'slug' => 'string',
         'geo_code' => 'string',
         'parent_industry_id' => 'int'
     );
@@ -84,8 +85,9 @@ class IndustryResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
+        'code' => 'code',
         'name' => 'name',
-        'alias' => 'alias',
+        'slug' => 'slug',
         'geo_code' => 'geo_code',
         'parent_industry_id' => 'parent_industry_id'
     );
@@ -101,8 +103,9 @@ class IndustryResource implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
+        'code' => 'setCode',
         'name' => 'setName',
-        'alias' => 'setAlias',
+        'slug' => 'setSlug',
         'geo_code' => 'setGeoCode',
         'parent_industry_id' => 'setParentIndustryId'
     );
@@ -118,8 +121,9 @@ class IndustryResource implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
+        'code' => 'getCode',
         'name' => 'getName',
-        'alias' => 'getAlias',
+        'slug' => 'getSlug',
         'geo_code' => 'getGeoCode',
         'parent_industry_id' => 'getParentIndustryId'
     );
@@ -146,8 +150,9 @@ class IndustryResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['parent_industry_id'] = isset($data['parent_industry_id']) ? $data['parent_industry_id'] : null;
     }
@@ -197,6 +202,27 @@ class IndustryResource implements ArrayAccess
     }
 
     /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code Added industry code to interface
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      * @return string
      */
@@ -218,22 +244,22 @@ class IndustryResource implements ArrayAccess
     }
 
     /**
-     * Gets alias
+     * Gets slug
      * @return string
      */
-    public function getAlias()
+    public function getSlug()
     {
-        return $this->container['alias'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets alias
-     * @param string $alias Uri frinedly name of the industry.
+     * Sets slug
+     * @param string $slug Uri frinedly name of the industry.
      * @return $this
      */
-    public function setAlias($alias)
+    public function setSlug($slug)
     {
-        $this->container['alias'] = $alias;
+        $this->container['slug'] = $slug;
 
         return $this;
     }

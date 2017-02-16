@@ -67,6 +67,7 @@ class PartnerRatingResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'score' => 'float',
+        'stars' => 'int',
         'count' => 'int'
     );
 
@@ -81,6 +82,7 @@ class PartnerRatingResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'score' => 'score',
+        'stars' => 'stars',
         'count' => 'count'
     );
 
@@ -95,6 +97,7 @@ class PartnerRatingResource implements ArrayAccess
      */
     protected static $setters = array(
         'score' => 'setScore',
+        'stars' => 'setStars',
         'count' => 'setCount'
     );
 
@@ -109,6 +112,7 @@ class PartnerRatingResource implements ArrayAccess
      */
     protected static $getters = array(
         'score' => 'getScore',
+        'stars' => 'getStars',
         'count' => 'getCount'
     );
 
@@ -134,6 +138,7 @@ class PartnerRatingResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
@@ -177,6 +182,27 @@ class PartnerRatingResource implements ArrayAccess
     public function setScore($score)
     {
         $this->container['score'] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Gets stars
+     * @return int
+     */
+    public function getStars()
+    {
+        return $this->container['stars'];
+    }
+
+    /**
+     * Sets stars
+     * @param int $stars Based on the ratings, the amount of stars it represents
+     * @return $this
+     */
+    public function setStars($stars)
+    {
+        $this->container['stars'] = $stars;
 
         return $this;
     }

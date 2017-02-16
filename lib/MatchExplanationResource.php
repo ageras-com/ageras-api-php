@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardDataResource
+ * MatchExplanationResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PaymentCardDataResource Class Doc Comment
+ * MatchExplanationResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,30 +53,28 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardDataResource implements ArrayAccess
+class MatchExplanationResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentCardDataResource';
+    protected static $swaggerModelName = 'MatchExplanationResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'txnid' => 'int',
-        'orderid' => 'string',
-        'amount' => 'int',
-        'currency' => 'int',
-        'date' => 'int',
-        'time' => 'string',
-        'txnfee' => 'int',
-        'subscriptionid' => 'int',
-        'paymenttype' => 'int',
-        'cardno' => 'string',
-        'hash' => 'string'
+        'id' => 'int',
+        'code' => 'string',
+        'name' => 'string',
+        'feature_name' => 'string',
+        'result' => 'float',
+        'weight' => 'float',
+        'score' => 'float',
+        'attributes' => 'string',
+        'details' => '\Ageras\Api\MatchExplanationResource[]'
     );
 
     public static function swaggerTypes()
@@ -89,17 +87,15 @@ class PaymentCardDataResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'txnid' => 'txnid',
-        'orderid' => 'orderid',
-        'amount' => 'amount',
-        'currency' => 'currency',
-        'date' => 'date',
-        'time' => 'time',
-        'txnfee' => 'txnfee',
-        'subscriptionid' => 'subscriptionid',
-        'paymenttype' => 'paymenttype',
-        'cardno' => 'cardno',
-        'hash' => 'hash'
+        'id' => 'id',
+        'code' => 'code',
+        'name' => 'name',
+        'feature_name' => 'feature_name',
+        'result' => 'result',
+        'weight' => 'weight',
+        'score' => 'score',
+        'attributes' => 'attributes',
+        'details' => 'details'
     );
 
     public static function attributeMap()
@@ -112,17 +108,15 @@ class PaymentCardDataResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'txnid' => 'setTxnid',
-        'orderid' => 'setOrderid',
-        'amount' => 'setAmount',
-        'currency' => 'setCurrency',
-        'date' => 'setDate',
-        'time' => 'setTime',
-        'txnfee' => 'setTxnfee',
-        'subscriptionid' => 'setSubscriptionid',
-        'paymenttype' => 'setPaymenttype',
-        'cardno' => 'setCardno',
-        'hash' => 'setHash'
+        'id' => 'setId',
+        'code' => 'setCode',
+        'name' => 'setName',
+        'feature_name' => 'setFeatureName',
+        'result' => 'setResult',
+        'weight' => 'setWeight',
+        'score' => 'setScore',
+        'attributes' => 'setAttributes',
+        'details' => 'setDetails'
     );
 
     public static function setters()
@@ -135,17 +129,15 @@ class PaymentCardDataResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'txnid' => 'getTxnid',
-        'orderid' => 'getOrderid',
-        'amount' => 'getAmount',
-        'currency' => 'getCurrency',
-        'date' => 'getDate',
-        'time' => 'getTime',
-        'txnfee' => 'getTxnfee',
-        'subscriptionid' => 'getSubscriptionid',
-        'paymenttype' => 'getPaymenttype',
-        'cardno' => 'getCardno',
-        'hash' => 'getHash'
+        'id' => 'getId',
+        'code' => 'getCode',
+        'name' => 'getName',
+        'feature_name' => 'getFeatureName',
+        'result' => 'getResult',
+        'weight' => 'getWeight',
+        'score' => 'getScore',
+        'attributes' => 'getAttributes',
+        'details' => 'getDetails'
     );
 
     public static function getters()
@@ -169,17 +161,15 @@ class PaymentCardDataResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['txnid'] = isset($data['txnid']) ? $data['txnid'] : null;
-        $this->container['orderid'] = isset($data['orderid']) ? $data['orderid'] : null;
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
-        $this->container['txnfee'] = isset($data['txnfee']) ? $data['txnfee'] : null;
-        $this->container['subscriptionid'] = isset($data['subscriptionid']) ? $data['subscriptionid'] : null;
-        $this->container['paymenttype'] = isset($data['paymenttype']) ? $data['paymenttype'] : null;
-        $this->container['cardno'] = isset($data['cardno']) ? $data['cardno'] : null;
-        $this->container['hash'] = isset($data['hash']) ? $data['hash'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['feature_name'] = isset($data['feature_name']) ? $data['feature_name'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
     /**
@@ -206,232 +196,190 @@ class PaymentCardDataResource implements ArrayAccess
 
 
     /**
-     * Gets txnid
+     * Gets id
      * @return int
      */
-    public function getTxnid()
+    public function getId()
     {
-        return $this->container['txnid'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets txnid
-     * @param int $txnid
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setTxnid($txnid)
+    public function setId($id)
     {
-        $this->container['txnid'] = $txnid;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets orderid
+     * Gets code
      * @return string
      */
-    public function getOrderid()
+    public function getCode()
     {
-        return $this->container['orderid'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets orderid
-     * @param string $orderid
+     * Sets code
+     * @param string $code
      * @return $this
      */
-    public function setOrderid($orderid)
+    public function setCode($code)
     {
-        $this->container['orderid'] = $orderid;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets amount
-     * @return int
-     */
-    public function getAmount()
-    {
-        return $this->container['amount'];
-    }
-
-    /**
-     * Sets amount
-     * @param int $amount
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->container['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency
-     * @return int
-     */
-    public function getCurrency()
-    {
-        return $this->container['currency'];
-    }
-
-    /**
-     * Sets currency
-     * @param int $currency
-     * @return $this
-     */
-    public function setCurrency($currency)
-    {
-        $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     * @return int
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     * @param int $date
-     * @return $this
-     */
-    public function setDate($date)
-    {
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets time
+     * Gets name
      * @return string
      */
-    public function getTime()
+    public function getName()
     {
-        return $this->container['time'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets time
-     * @param string $time
+     * Sets name
+     * @param string $name
      * @return $this
      */
-    public function setTime($time)
+    public function setName($name)
     {
-        $this->container['time'] = $time;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets txnfee
-     * @return int
-     */
-    public function getTxnfee()
-    {
-        return $this->container['txnfee'];
-    }
-
-    /**
-     * Sets txnfee
-     * @param int $txnfee
-     * @return $this
-     */
-    public function setTxnfee($txnfee)
-    {
-        $this->container['txnfee'] = $txnfee;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscriptionid
-     * @return int
-     */
-    public function getSubscriptionid()
-    {
-        return $this->container['subscriptionid'];
-    }
-
-    /**
-     * Sets subscriptionid
-     * @param int $subscriptionid
-     * @return $this
-     */
-    public function setSubscriptionid($subscriptionid)
-    {
-        $this->container['subscriptionid'] = $subscriptionid;
-
-        return $this;
-    }
-
-    /**
-     * Gets paymenttype
-     * @return int
-     */
-    public function getPaymenttype()
-    {
-        return $this->container['paymenttype'];
-    }
-
-    /**
-     * Sets paymenttype
-     * @param int $paymenttype
-     * @return $this
-     */
-    public function setPaymenttype($paymenttype)
-    {
-        $this->container['paymenttype'] = $paymenttype;
-
-        return $this;
-    }
-
-    /**
-     * Gets cardno
+     * Gets feature_name
      * @return string
      */
-    public function getCardno()
+    public function getFeatureName()
     {
-        return $this->container['cardno'];
+        return $this->container['feature_name'];
     }
 
     /**
-     * Sets cardno
-     * @param string $cardno
+     * Sets feature_name
+     * @param string $feature_name
      * @return $this
      */
-    public function setCardno($cardno)
+    public function setFeatureName($feature_name)
     {
-        $this->container['cardno'] = $cardno;
+        $this->container['feature_name'] = $feature_name;
 
         return $this;
     }
 
     /**
-     * Gets hash
-     * @return string
+     * Gets result
+     * @return float
      */
-    public function getHash()
+    public function getResult()
     {
-        return $this->container['hash'];
+        return $this->container['result'];
     }
 
     /**
-     * Sets hash
-     * @param string $hash
+     * Sets result
+     * @param float $result
      * @return $this
      */
-    public function setHash($hash)
+    public function setResult($result)
     {
-        $this->container['hash'] = $hash;
+        $this->container['result'] = $result;
+
+        return $this;
+    }
+
+    /**
+     * Gets weight
+     * @return float
+     */
+    public function getWeight()
+    {
+        return $this->container['weight'];
+    }
+
+    /**
+     * Sets weight
+     * @param float $weight
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->container['weight'] = $weight;
+
+        return $this;
+    }
+
+    /**
+     * Gets score
+     * @return float
+     */
+    public function getScore()
+    {
+        return $this->container['score'];
+    }
+
+    /**
+     * Sets score
+     * @param float $score
+     * @return $this
+     */
+    public function setScore($score)
+    {
+        $this->container['score'] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Gets attributes
+     * @return string
+     */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+     * Sets attributes
+     * @param string $attributes
+     * @return $this
+     */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
+
+        return $this;
+    }
+
+    /**
+     * Gets details
+     * @return \Ageras\Api\MatchExplanationResource[]
+     */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     * @param \Ageras\Api\MatchExplanationResource[] $details
+     * @return $this
+     */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
 
         return $this;
     }

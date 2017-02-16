@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardDataResourceTest
+ * KPICouponRevenueResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * PaymentCardDataResourceTest Class Doc Comment
+ * KPICouponRevenueResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentCardDataResource
+// * @description KPICouponRevenueResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardDataResourceTest extends \PHPUnit_Framework_TestCase
+class KPICouponRevenueResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,97 +88,41 @@ class PaymentCardDataResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentCardDataResource"
+     * Test "KPICouponRevenueResource"
      */
-    public function testPaymentCardDataResource()
+    public function testKPICouponRevenueResource()
     {
 
     }
 
     /**
-     * Test attribute "txnid"
+     * Test attribute "realised"
      */
-    public function testPropertyTxnid()
+    public function testPropertyRealised()
     {
 
     }
 
     /**
-     * Test attribute "orderid"
+     * Test attribute "goal"
      */
-    public function testPropertyOrderid()
+    public function testPropertyGoal()
     {
 
     }
 
     /**
-     * Test attribute "amount"
+     * Test attribute "forecast"
      */
-    public function testPropertyAmount()
+    public function testPropertyForecast()
     {
 
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "credited"
      */
-    public function testPropertyCurrency()
-    {
-
-    }
-
-    /**
-     * Test attribute "date"
-     */
-    public function testPropertyDate()
-    {
-
-    }
-
-    /**
-     * Test attribute "time"
-     */
-    public function testPropertyTime()
-    {
-
-    }
-
-    /**
-     * Test attribute "txnfee"
-     */
-    public function testPropertyTxnfee()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscriptionid"
-     */
-    public function testPropertySubscriptionid()
-    {
-
-    }
-
-    /**
-     * Test attribute "paymenttype"
-     */
-    public function testPropertyPaymenttype()
-    {
-
-    }
-
-    /**
-     * Test attribute "cardno"
-     */
-    public function testPropertyCardno()
-    {
-
-    }
-
-    /**
-     * Test attribute "hash"
-     */
-    public function testPropertyHash()
+    public function testPropertyCredited()
     {
 
     }

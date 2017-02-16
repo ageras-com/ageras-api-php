@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **zip_code** | **string** | Zip Code. | [optional] 
 **city_name** | **string** | Name of the city. | [optional] 
 **point** | [**\Ageras\Api\LocationGeoPointResource**](LocationGeoPointResource.md) |  | [optional] 
+**slug** | **string** | url slug | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

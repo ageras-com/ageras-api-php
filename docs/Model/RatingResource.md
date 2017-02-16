@@ -4,9 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Review ID. | [optional] 
-**partner_id** | **int** | Partner ID. | [optional] 
+**partner** | [**\Ageras\Api\PartnerSuggestResource**](PartnerSuggestResource.md) |  | [optional] 
 **name** | **string** | Name of the person who wrote the review. | [optional] 
 **score** | [**\Ageras\Api\RatingScoreResource**](RatingScoreResource.md) |  | [optional] 
+**stars** | **int** | Stars for the given rating | [optional] 
 **reply** | [**\Ageras\Api\RatingReplyResource**](RatingReplyResource.md) |  | [optional] 
 **title** | **string** | Title of the review. | [optional] 
 **comment** | **string** | The comment left by the reviewer. | [optional] 

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **avg_punch_price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **status** | **string** | Status. | [optional] [default to 'new']
 **employee** | [**\Ageras\Api\EmployeeResource**](EmployeeResource.md) |  | [optional] 
+**is_activated** | **bool** | Is offer activated. | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -79,7 +79,8 @@ class PartnerOfferResource implements ArrayAccess
         'price' => '\Ageras\Api\AmountResource',
         'avg_punch_price' => '\Ageras\Api\AmountResource',
         'status' => 'string',
-        'employee' => '\Ageras\Api\EmployeeResource'
+        'employee' => '\Ageras\Api\EmployeeResource',
+        'is_activated' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -105,7 +106,8 @@ class PartnerOfferResource implements ArrayAccess
         'price' => 'price',
         'avg_punch_price' => 'avg_punch_price',
         'status' => 'status',
-        'employee' => 'employee'
+        'employee' => 'employee',
+        'is_activated' => 'is_activated'
     );
 
     public static function attributeMap()
@@ -131,7 +133,8 @@ class PartnerOfferResource implements ArrayAccess
         'price' => 'setPrice',
         'avg_punch_price' => 'setAvgPunchPrice',
         'status' => 'setStatus',
-        'employee' => 'setEmployee'
+        'employee' => 'setEmployee',
+        'is_activated' => 'setIsActivated'
     );
 
     public static function setters()
@@ -157,7 +160,8 @@ class PartnerOfferResource implements ArrayAccess
         'price' => 'getPrice',
         'avg_punch_price' => 'getAvgPunchPrice',
         'status' => 'getStatus',
-        'employee' => 'getEmployee'
+        'employee' => 'getEmployee',
+        'is_activated' => 'getIsActivated'
     );
 
     public static function getters()
@@ -229,6 +233,7 @@ class PartnerOfferResource implements ArrayAccess
         $this->container['avg_punch_price'] = isset($data['avg_punch_price']) ? $data['avg_punch_price'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'new';
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['is_activated'] = isset($data['is_activated']) ? $data['is_activated'] : false;
     }
 
     /**
@@ -570,6 +575,27 @@ class PartnerOfferResource implements ArrayAccess
     public function setEmployee($employee)
     {
         $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_activated
+     * @return bool
+     */
+    public function getIsActivated()
+    {
+        return $this->container['is_activated'];
+    }
+
+    /**
+     * Sets is_activated
+     * @param bool $is_activated Is offer activated.
+     * @return $this
+     */
+    public function setIsActivated($is_activated)
+    {
+        $this->container['is_activated'] = $is_activated;
 
         return $this;
     }

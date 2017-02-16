@@ -313,7 +313,7 @@ class OffersApi
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
-     * @param int $limit Number of offers to return (optional)
+     * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\PartnerOfferResult
@@ -337,7 +337,7 @@ class OffersApi
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
-     * @param int $limit Number of offers to return (optional)
+     * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\PartnerOfferResult, HTTP status code, HTTP response headers (array of strings)
