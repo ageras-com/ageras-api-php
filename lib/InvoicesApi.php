@@ -206,15 +206,16 @@ class InvoicesApi
      * @param bool $is_paid Filter invoices by whether or not they are paid. (optional, default to false)
      * @param bool $is_overdue Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. (optional, default to false)
      * @param string $sort Desired sorting. (optional)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\InvoiceResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function invoicesIndex($invoice_id = null, $partner_id = null, $is_paid = null, $is_overdue = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function invoicesIndex($invoice_id = null, $partner_id = null, $is_paid = null, $is_overdue = null, $sort = null, $geo_code = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->invoicesIndexWithHttpInfo($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $limit, $page, $query);
+        list($response) = $this->invoicesIndexWithHttpInfo($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $geo_code, $limit, $page, $query);
         return $response;
     }
 
@@ -228,13 +229,14 @@ class InvoicesApi
      * @param bool $is_paid Filter invoices by whether or not they are paid. (optional, default to false)
      * @param bool $is_overdue Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. (optional, default to false)
      * @param string $sort Desired sorting. (optional)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\InvoiceResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function invoicesIndexWithHttpInfo($invoice_id = null, $partner_id = null, $is_paid = null, $is_overdue = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function invoicesIndexWithHttpInfo($invoice_id = null, $partner_id = null, $is_paid = null, $is_overdue = null, $sort = null, $geo_code = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/invoices";
@@ -267,6 +269,10 @@ class InvoicesApi
         // query params
         if ($sort !== null) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }
+        // query params
+        if ($geo_code !== null) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($geo_code);
         }
         // query params
         if ($limit !== null) {

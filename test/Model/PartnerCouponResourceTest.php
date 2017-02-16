@@ -175,4 +175,36 @@ class PartnerCouponResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "price"
+     */
+    public function testPropertyPrice()
+    {
+
+    }
+
+    /**
+     * Test attribute "due_at"
+     */
+    public function testPropertyDueAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_silent"
+     */
+    public function testPropertyIsSilent()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner_offer_id"
+     */
+    public function testPropertyPartnerOfferId()
+    {
+
+    }
+
 }

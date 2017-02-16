@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invoicesIndex**
-> \Ageras\Api\InvoiceResult invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $limit, $page, $query)
+> \Ageras\Api\InvoiceResult invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $geo_code, $limit, $page, $query)
 
 Search and find invoices by specific criterias.
 
@@ -87,12 +87,13 @@ $partner_id = "partner_id_example"; // string | Filter Invoices by a given Partn
 $is_paid = false; // bool | Filter invoices by whether or not they are paid.
 $is_overdue = false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
 $sort = "sort_example"; // string | Desired sorting.
+$geo_code = "geo_code_example"; // string | Geographic Location Code.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $limit, $page, $query);
+    $result = $api_instance->invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $geo_code, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->invoicesIndex: ', $e->getMessage(), PHP_EOL;
@@ -109,6 +110,7 @@ Name | Type | Description  | Notes
  **is_paid** | **bool**| Filter invoices by whether or not they are paid. | [optional] [default to false]
  **is_overdue** | **bool**| Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. | [optional] [default to false]
  **sort** | **string**| Desired sorting. | [optional]
+ **geo_code** | **string**| Geographic Location Code. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

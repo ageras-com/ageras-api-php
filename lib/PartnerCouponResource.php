@@ -75,7 +75,11 @@ class PartnerCouponResource implements ArrayAccess
         'employee_id' => 'int',
         'message' => 'string',
         'punches_total' => 'int',
-        'punches_left' => 'int'
+        'punches_left' => 'int',
+        'price' => '\Ageras\Api\AmountResource',
+        'due_at' => 'string',
+        'is_silent' => 'bool',
+        'partner_offer_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -97,7 +101,11 @@ class PartnerCouponResource implements ArrayAccess
         'employee_id' => 'employee_id',
         'message' => 'message',
         'punches_total' => 'punches_total',
-        'punches_left' => 'punches_left'
+        'punches_left' => 'punches_left',
+        'price' => 'price',
+        'due_at' => 'due_at',
+        'is_silent' => 'is_silent',
+        'partner_offer_id' => 'partner_offer_id'
     );
 
     public static function attributeMap()
@@ -119,7 +127,11 @@ class PartnerCouponResource implements ArrayAccess
         'employee_id' => 'setEmployeeId',
         'message' => 'setMessage',
         'punches_total' => 'setPunchesTotal',
-        'punches_left' => 'setPunchesLeft'
+        'punches_left' => 'setPunchesLeft',
+        'price' => 'setPrice',
+        'due_at' => 'setDueAt',
+        'is_silent' => 'setIsSilent',
+        'partner_offer_id' => 'setPartnerOfferId'
     );
 
     public static function setters()
@@ -141,7 +153,11 @@ class PartnerCouponResource implements ArrayAccess
         'employee_id' => 'getEmployeeId',
         'message' => 'getMessage',
         'punches_total' => 'getPunchesTotal',
-        'punches_left' => 'getPunchesLeft'
+        'punches_left' => 'getPunchesLeft',
+        'price' => 'getPrice',
+        'due_at' => 'getDueAt',
+        'is_silent' => 'getIsSilent',
+        'partner_offer_id' => 'getPartnerOfferId'
     );
 
     public static function getters()
@@ -175,6 +191,10 @@ class PartnerCouponResource implements ArrayAccess
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['punches_total'] = isset($data['punches_total']) ? $data['punches_total'] : null;
         $this->container['punches_left'] = isset($data['punches_left']) ? $data['punches_left'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['due_at'] = isset($data['due_at']) ? $data['due_at'] : null;
+        $this->container['is_silent'] = isset($data['is_silent']) ? $data['is_silent'] : false;
+        $this->container['partner_offer_id'] = isset($data['partner_offer_id']) ? $data['partner_offer_id'] : null;
     }
 
     /**
@@ -406,6 +426,90 @@ class PartnerCouponResource implements ArrayAccess
     public function setPunchesLeft($punches_left)
     {
         $this->container['punches_left'] = $punches_left;
+
+        return $this;
+    }
+
+    /**
+     * Gets price
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getPrice()
+    {
+        return $this->container['price'];
+    }
+
+    /**
+     * Sets price
+     * @param \Ageras\Api\AmountResource $price
+     * @return $this
+     */
+    public function setPrice($price)
+    {
+        $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets due_at
+     * @return string
+     */
+    public function getDueAt()
+    {
+        return $this->container['due_at'];
+    }
+
+    /**
+     * Sets due_at
+     * @param string $due_at
+     * @return $this
+     */
+    public function setDueAt($due_at)
+    {
+        $this->container['due_at'] = $due_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_silent
+     * @return bool
+     */
+    public function getIsSilent()
+    {
+        return $this->container['is_silent'];
+    }
+
+    /**
+     * Sets is_silent
+     * @param bool $is_silent
+     * @return $this
+     */
+    public function setIsSilent($is_silent)
+    {
+        $this->container['is_silent'] = $is_silent;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_offer_id
+     * @return int
+     */
+    public function getPartnerOfferId()
+    {
+        return $this->container['partner_offer_id'];
+    }
+
+    /**
+     * Sets partner_offer_id
+     * @param int $partner_offer_id
+     * @return $this
+     */
+    public function setPartnerOfferId($partner_offer_id)
+    {
+        $this->container['partner_offer_id'] = $partner_offer_id;
 
         return $this;
     }

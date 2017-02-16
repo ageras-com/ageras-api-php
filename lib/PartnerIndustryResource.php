@@ -68,7 +68,7 @@ class PartnerIndustryResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'name' => 'string',
-        'alias' => 'string'
+        'slug' => 'string'
     );
 
     public static function swaggerTypes()
@@ -83,7 +83,7 @@ class PartnerIndustryResource implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'name' => 'name',
-        'alias' => 'alias'
+        'slug' => 'slug'
     );
 
     public static function attributeMap()
@@ -98,7 +98,7 @@ class PartnerIndustryResource implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'name' => 'setName',
-        'alias' => 'setAlias'
+        'slug' => 'setSlug'
     );
 
     public static function setters()
@@ -113,7 +113,7 @@ class PartnerIndustryResource implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'name' => 'getName',
-        'alias' => 'getAlias'
+        'slug' => 'getSlug'
     );
 
     public static function getters()
@@ -139,7 +139,7 @@ class PartnerIndustryResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
     }
 
     /**
@@ -208,22 +208,22 @@ class PartnerIndustryResource implements ArrayAccess
     }
 
     /**
-     * Gets alias
+     * Gets slug
      * @return string
      */
-    public function getAlias()
+    public function getSlug()
     {
-        return $this->container['alias'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets alias
-     * @param string $alias Uri friendly name for the industry.
+     * Sets slug
+     * @param string $slug Uri friendly name for the industry.
      * @return $this
      */
-    public function setAlias($alias)
+    public function setSlug($slug)
     {
-        $this->container['alias'] = $alias;
+        $this->container['slug'] = $slug;
 
         return $this;
     }

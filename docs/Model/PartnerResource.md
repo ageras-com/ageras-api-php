@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **invoicing** | [**\Ageras\Api\PartnerInvoicingResource**](PartnerInvoicingResource.md) |  | [optional] 
 **preferences** | [**\Ageras\Api\PartnerPreferencesResource**](PartnerPreferencesResource.md) |  | [optional] 
 **refill** | [**\Ageras\Api\PartnerRefillResource**](PartnerRefillResource.md) |  | [optional] 
+**demo** | [**\Ageras\Api\PartnerDemoResource**](PartnerDemoResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

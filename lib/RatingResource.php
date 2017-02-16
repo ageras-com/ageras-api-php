@@ -67,9 +67,10 @@ class RatingResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'partner_id' => 'int',
+        'partner' => '\Ageras\Api\PartnerSuggestResource',
         'name' => 'string',
         'score' => '\Ageras\Api\RatingScoreResource',
+        'stars' => 'int',
         'reply' => '\Ageras\Api\RatingReplyResource',
         'title' => 'string',
         'comment' => 'string',
@@ -94,9 +95,10 @@ class RatingResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'partner_id' => 'partner_id',
+        'partner' => 'partner',
         'name' => 'name',
         'score' => 'score',
+        'stars' => 'stars',
         'reply' => 'reply',
         'title' => 'title',
         'comment' => 'comment',
@@ -121,9 +123,10 @@ class RatingResource implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'partner_id' => 'setPartnerId',
+        'partner' => 'setPartner',
         'name' => 'setName',
         'score' => 'setScore',
+        'stars' => 'setStars',
         'reply' => 'setReply',
         'title' => 'setTitle',
         'comment' => 'setComment',
@@ -148,9 +151,10 @@ class RatingResource implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'partner_id' => 'getPartnerId',
+        'partner' => 'getPartner',
         'name' => 'getName',
         'score' => 'getScore',
+        'stars' => 'getStars',
         'reply' => 'getReply',
         'title' => 'getTitle',
         'comment' => 'getComment',
@@ -186,9 +190,10 @@ class RatingResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
         $this->container['reply'] = isset($data['reply']) ? $data['reply'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
@@ -247,22 +252,22 @@ class RatingResource implements ArrayAccess
     }
 
     /**
-     * Gets partner_id
-     * @return int
+     * Gets partner
+     * @return \Ageras\Api\PartnerSuggestResource
      */
-    public function getPartnerId()
+    public function getPartner()
     {
-        return $this->container['partner_id'];
+        return $this->container['partner'];
     }
 
     /**
-     * Sets partner_id
-     * @param int $partner_id Partner ID.
+     * Sets partner
+     * @param \Ageras\Api\PartnerSuggestResource $partner
      * @return $this
      */
-    public function setPartnerId($partner_id)
+    public function setPartner($partner)
     {
-        $this->container['partner_id'] = $partner_id;
+        $this->container['partner'] = $partner;
 
         return $this;
     }
@@ -305,6 +310,27 @@ class RatingResource implements ArrayAccess
     public function setScore($score)
     {
         $this->container['score'] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Gets stars
+     * @return int
+     */
+    public function getStars()
+    {
+        return $this->container['stars'];
+    }
+
+    /**
+     * Sets stars
+     * @param int $stars Stars for the given rating
+     * @return $this
+     */
+    public function setStars($stars)
+    {
+        $this->container['stars'] = $stars;
 
         return $this;
     }

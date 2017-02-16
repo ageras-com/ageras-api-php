@@ -70,7 +70,8 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'string',
         'zip_code' => 'string',
         'city_name' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'point' => '\Ageras\Api\LocationGeoPointResource',
+        'slug' => 'string'
     );
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'address',
         'zip_code' => 'zip_code',
         'city_name' => 'city_name',
-        'point' => 'point'
+        'point' => 'point',
+        'slug' => 'slug'
     );
 
     public static function attributeMap()
@@ -104,7 +106,8 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'setAddress',
         'zip_code' => 'setZipCode',
         'city_name' => 'setCityName',
-        'point' => 'setPoint'
+        'point' => 'setPoint',
+        'slug' => 'setSlug'
     );
 
     public static function setters()
@@ -121,7 +124,8 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'getAddress',
         'zip_code' => 'getZipCode',
         'city_name' => 'getCityName',
-        'point' => 'getPoint'
+        'point' => 'getPoint',
+        'slug' => 'getSlug'
     );
 
     public static function getters()
@@ -150,6 +154,7 @@ class PartnerGeoResource implements ArrayAccess
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
     }
 
     /**
@@ -276,6 +281,27 @@ class PartnerGeoResource implements ArrayAccess
     public function setPoint($point)
     {
         $this->container['point'] = $point;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug url slug
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
 
         return $this;
     }

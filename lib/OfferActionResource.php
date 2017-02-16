@@ -117,7 +117,9 @@ class OfferActionResource implements ArrayAccess
         return self::$getters;
     }
 
-    const ACTION_OFFER = 'accept-offer';
+    const ACTION_ACCEPT_OFFER = 'accept-offer';
+    const ACTION_ACTIVATE = 'activate';
+    const ACTION_DEACTIVATE = 'deactivate';
     
 
     
@@ -128,7 +130,9 @@ class OfferActionResource implements ArrayAccess
     public function getActionAllowableValues()
     {
         return [
-            self::ACTION_OFFER,
+            self::ACTION_ACCEPT_OFFER,
+            self::ACTION_ACTIVATE,
+            self::ACTION_DEACTIVATE,
         ];
     }
     
@@ -157,7 +161,7 @@ class OfferActionResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        $allowed_values = array("accept-offer");
+        $allowed_values = array("accept-offer", "activate", "deactivate");
         if (!in_array($this->container['action'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'action', must be one of #{allowed_values}.";
         }
@@ -173,7 +177,7 @@ class OfferActionResource implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = array("accept-offer");
+        $allowed_values = array("accept-offer", "activate", "deactivate");
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -218,9 +222,9 @@ class OfferActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('accept-offer');
+        $allowed_values = array('accept-offer', 'activate', 'deactivate');
         if (!in_array($action, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'accept-offer'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'accept-offer', 'activate', 'deactivate'");
         }
         $this->container['action'] = $action;
 

@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsIndex**
-> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $limit, $page, $query)
+> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query)
 
 List Partner Coupons.
 
@@ -551,12 +551,13 @@ $partner_id = "partner_id_example"; // string |
 $show_expired = false; // bool | Only show expired partner coupons.
 $show_deactivated = false; // bool | Only show deactivated partner coupons.
 $show_empty = false; // bool | Should empty partner coupons be included in the result.
+$sort = "sort_example"; // string | Sort the coupons by different values
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $limit, $page, $query);
+    $result = $api_instance->partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsIndex: ', $e->getMessage(), PHP_EOL;
@@ -572,6 +573,7 @@ Name | Type | Description  | Notes
  **show_expired** | **bool**| Only show expired partner coupons. | [optional] [default to false]
  **show_deactivated** | **bool**| Only show deactivated partner coupons. | [optional] [default to false]
  **show_empty** | **bool**| Should empty partner coupons be included in the result. | [optional] [default to false]
+ **sort** | **string**| Sort the coupons by different values | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

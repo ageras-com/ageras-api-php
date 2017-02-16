@@ -104,6 +104,14 @@ class IndustryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -112,9 +120,9 @@ class IndustryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "alias"
+     * Test attribute "slug"
      */
-    public function testPropertyAlias()
+    public function testPropertySlug()
     {
 
     }

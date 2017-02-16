@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **locationsIndex**
-> \Ageras\Api\LocationResult locationsIndex($geo_code, $limit, $page, $query)
+> \Ageras\Api\LocationResult locationsIndex($code, $point, $sort, $limit, $page, $query)
 
 Search and find locations by different criterias.
 
@@ -28,13 +28,15 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\LocationsApi();
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
+$code = "code_example"; // string | Geographic Location Code.
+$point = "point_example"; // string | Geo Location Point
+$sort = "sort_example"; // string | Sort types for Locations
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->locationsIndex($geo_code, $limit, $page, $query);
+    $result = $api_instance->locationsIndex($code, $point, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationsApi->locationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +48,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **geo_code** | **string**| Geographic Location Code. | [optional]
+ **code** | **string**| Geographic Location Code. | [optional]
+ **point** | **string**| Geo Location Point | [optional]
+ **sort** | **string**| Sort types for Locations | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

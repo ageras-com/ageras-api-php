@@ -1035,15 +1035,16 @@ class PartnersApi
      * @param bool $show_expired Only show expired partner coupons. (optional, default to false)
      * @param bool $show_deactivated Only show deactivated partner coupons. (optional, default to false)
      * @param bool $show_empty Should empty partner coupons be included in the result. (optional, default to false)
+     * @param string $sort Sort the coupons by different values (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\PartnerCouponResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersCouponsIndex($partner_id, $show_expired = null, $show_deactivated = null, $show_empty = null, $limit = null, $page = null, $query = null)
+    public function partnersCouponsIndex($partner_id, $show_expired = null, $show_deactivated = null, $show_empty = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->partnersCouponsIndexWithHttpInfo($partner_id, $show_expired, $show_deactivated, $show_empty, $limit, $page, $query);
+        list($response) = $this->partnersCouponsIndexWithHttpInfo($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -1056,13 +1057,14 @@ class PartnersApi
      * @param bool $show_expired Only show expired partner coupons. (optional, default to false)
      * @param bool $show_deactivated Only show deactivated partner coupons. (optional, default to false)
      * @param bool $show_empty Should empty partner coupons be included in the result. (optional, default to false)
+     * @param string $sort Sort the coupons by different values (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\PartnerCouponResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersCouponsIndexWithHttpInfo($partner_id, $show_expired = null, $show_deactivated = null, $show_empty = null, $limit = null, $page = null, $query = null)
+    public function partnersCouponsIndexWithHttpInfo($partner_id, $show_expired = null, $show_deactivated = null, $show_empty = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // verify the required parameter 'partner_id' is set
         if ($partner_id === null) {
@@ -1091,6 +1093,10 @@ class PartnersApi
         // query params
         if ($show_empty !== null) {
             $queryParams['show_empty'] = $this->apiClient->getSerializer()->toQueryValue($show_empty);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
         }
         // query params
         if ($limit !== null) {

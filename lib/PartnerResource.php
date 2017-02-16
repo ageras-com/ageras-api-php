@@ -92,7 +92,8 @@ class PartnerResource implements ArrayAccess
         'kpi' => '\Ageras\Api\PartnerKPIResource',
         'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
         'preferences' => '\Ageras\Api\PartnerPreferencesResource',
-        'refill' => '\Ageras\Api\PartnerRefillResource'
+        'refill' => '\Ageras\Api\PartnerRefillResource',
+        'demo' => '\Ageras\Api\PartnerDemoResource'
     );
 
     public static function swaggerTypes()
@@ -131,7 +132,8 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'kpi',
         'invoicing' => 'invoicing',
         'preferences' => 'preferences',
-        'refill' => 'refill'
+        'refill' => 'refill',
+        'demo' => 'demo'
     );
 
     public static function attributeMap()
@@ -170,7 +172,8 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'setKpi',
         'invoicing' => 'setInvoicing',
         'preferences' => 'setPreferences',
-        'refill' => 'setRefill'
+        'refill' => 'setRefill',
+        'demo' => 'setDemo'
     );
 
     public static function setters()
@@ -209,7 +212,8 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'getKpi',
         'invoicing' => 'getInvoicing',
         'preferences' => 'getPreferences',
-        'refill' => 'getRefill'
+        'refill' => 'getRefill',
+        'demo' => 'getDemo'
     );
 
     public static function getters()
@@ -284,6 +288,7 @@ class PartnerResource implements ArrayAccess
         $this->container['invoicing'] = isset($data['invoicing']) ? $data['invoicing'] : null;
         $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
         $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
+        $this->container['demo'] = isset($data['demo']) ? $data['demo'] : null;
     }
 
     /**
@@ -885,6 +890,27 @@ class PartnerResource implements ArrayAccess
     public function setRefill($refill)
     {
         $this->container['refill'] = $refill;
+
+        return $this;
+    }
+
+    /**
+     * Gets demo
+     * @return \Ageras\Api\PartnerDemoResource
+     */
+    public function getDemo()
+    {
+        return $this->container['demo'];
+    }
+
+    /**
+     * Sets demo
+     * @param \Ageras\Api\PartnerDemoResource $demo
+     * @return $this
+     */
+    public function setDemo($demo)
+    {
+        $this->container['demo'] = $demo;
 
         return $this;
     }

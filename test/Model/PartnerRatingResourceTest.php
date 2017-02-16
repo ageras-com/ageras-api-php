@@ -104,6 +104,14 @@ class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "stars"
+     */
+    public function testPropertyStars()
+    {
+
+    }
+
+    /**
      * Test attribute "count"
      */
     public function testPropertyCount()

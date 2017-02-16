@@ -68,7 +68,8 @@ class MatchResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'partner' => '\Ageras\Api\PartnerSuggestResource',
         'lead' => '\Ageras\Api\LeadSuggestResource',
-        'score' => 'float'
+        'score' => 'float',
+        'explanation' => '\Ageras\Api\MatchExplanationResource[]'
     );
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class MatchResource implements ArrayAccess
     protected static $attributeMap = array(
         'partner' => 'partner',
         'lead' => 'lead',
-        'score' => 'score'
+        'score' => 'score',
+        'explanation' => 'explanation'
     );
 
     public static function attributeMap()
@@ -98,7 +100,8 @@ class MatchResource implements ArrayAccess
     protected static $setters = array(
         'partner' => 'setPartner',
         'lead' => 'setLead',
-        'score' => 'setScore'
+        'score' => 'setScore',
+        'explanation' => 'setExplanation'
     );
 
     public static function setters()
@@ -113,7 +116,8 @@ class MatchResource implements ArrayAccess
     protected static $getters = array(
         'partner' => 'getPartner',
         'lead' => 'getLead',
-        'score' => 'getScore'
+        'score' => 'getScore',
+        'explanation' => 'getExplanation'
     );
 
     public static function getters()
@@ -140,6 +144,7 @@ class MatchResource implements ArrayAccess
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
+        $this->container['explanation'] = isset($data['explanation']) ? $data['explanation'] : null;
     }
 
     /**
@@ -218,12 +223,33 @@ class MatchResource implements ArrayAccess
 
     /**
      * Sets score
-     * @param float $score @var
+     * @param float $score score for the given match
      * @return $this
      */
     public function setScore($score)
     {
         $this->container['score'] = $score;
+
+        return $this;
+    }
+
+    /**
+     * Gets explanation
+     * @return \Ageras\Api\MatchExplanationResource[]
+     */
+    public function getExplanation()
+    {
+        return $this->container['explanation'];
+    }
+
+    /**
+     * Sets explanation
+     * @param \Ageras\Api\MatchExplanationResource[] $explanation Explanation of the score calculation
+     * @return $this
+     */
+    public function setExplanation($explanation)
+    {
+        $this->container['explanation'] = $explanation;
 
         return $this;
     }
