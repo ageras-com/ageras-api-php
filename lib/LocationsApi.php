@@ -107,7 +107,7 @@ class LocationsApi
      *
      * Search and find locations by different criterias.
      *
-     * @param string $code Geographic Location Code. (optional)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param string $point Geo Location Point (optional)
      * @param string $sort Sort types for Locations (optional)
      * @param int $limit The number of resources to be returned. (optional)
@@ -116,9 +116,9 @@ class LocationsApi
      * @return \Ageras\Api\LocationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function locationsIndex($code = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function locationsIndex($geo_code = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->locationsIndexWithHttpInfo($code, $point, $sort, $limit, $page, $query);
+        list($response) = $this->locationsIndexWithHttpInfo($geo_code, $point, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -127,7 +127,7 @@ class LocationsApi
      *
      * Search and find locations by different criterias.
      *
-     * @param string $code Geographic Location Code. (optional)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param string $point Geo Location Point (optional)
      * @param string $sort Sort types for Locations (optional)
      * @param int $limit The number of resources to be returned. (optional)
@@ -136,7 +136,7 @@ class LocationsApi
      * @return Array of \Ageras\Api\LocationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function locationsIndexWithHttpInfo($code = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function locationsIndexWithHttpInfo($geo_code = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/locations";
@@ -151,8 +151,8 @@ class LocationsApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
         // query params
-        if ($code !== null) {
-            $queryParams['code'] = $this->apiClient->getSerializer()->toQueryValue($code);
+        if ($geo_code !== null) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($geo_code);
         }
         // query params
         if ($point !== null) {
