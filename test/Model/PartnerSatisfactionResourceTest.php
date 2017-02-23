@@ -104,6 +104,14 @@ class PartnerSatisfactionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "satisfaction_level_id"
      */
     public function testPropertySatisfactionLevelId()
@@ -131,6 +139,14 @@ class PartnerSatisfactionResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "identifier"
      */
     public function testPropertyIdentifier()
+    {
+
+    }
+
+    /**
+     * Test attribute "note"
+     */
+    public function testPropertyNote()
     {
 
     }

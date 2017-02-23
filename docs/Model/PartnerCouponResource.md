@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **due_at** | **string** |  | [optional] 
 **is_silent** | **bool** |  | [optional] [default to false]
 **partner_offer_id** | **int** |  | [optional] 
+**type** | **string** |  | [optional] [default to 'coupon']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

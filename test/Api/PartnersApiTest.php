@@ -90,6 +90,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersActionsCreate
+     *
+     * Partner actions..
+     *
+     */
+    public function testPartnersActionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersAggregationsIndex
      *
      * List facets and aggregations for the Partner Search..
@@ -173,6 +184,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersContentsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersCouponsCreate
+     *
+     * Create a new partner coupon..
+     *
+     */
+    public function testPartnersCouponsCreate()
     {
 
     }

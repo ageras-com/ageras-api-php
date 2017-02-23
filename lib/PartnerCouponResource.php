@@ -79,7 +79,8 @@ class PartnerCouponResource implements ArrayAccess
         'price' => '\Ageras\Api\AmountResource',
         'due_at' => 'string',
         'is_silent' => 'bool',
-        'partner_offer_id' => 'int'
+        'partner_offer_id' => 'int',
+        'type' => 'string'
     );
 
     public static function swaggerTypes()
@@ -105,7 +106,8 @@ class PartnerCouponResource implements ArrayAccess
         'price' => 'price',
         'due_at' => 'due_at',
         'is_silent' => 'is_silent',
-        'partner_offer_id' => 'partner_offer_id'
+        'partner_offer_id' => 'partner_offer_id',
+        'type' => 'type'
     );
 
     public static function attributeMap()
@@ -131,7 +133,8 @@ class PartnerCouponResource implements ArrayAccess
         'price' => 'setPrice',
         'due_at' => 'setDueAt',
         'is_silent' => 'setIsSilent',
-        'partner_offer_id' => 'setPartnerOfferId'
+        'partner_offer_id' => 'setPartnerOfferId',
+        'type' => 'setType'
     );
 
     public static function setters()
@@ -157,7 +160,8 @@ class PartnerCouponResource implements ArrayAccess
         'price' => 'getPrice',
         'due_at' => 'getDueAt',
         'is_silent' => 'getIsSilent',
-        'partner_offer_id' => 'getPartnerOfferId'
+        'partner_offer_id' => 'getPartnerOfferId',
+        'type' => 'getType'
     );
 
     public static function getters()
@@ -165,8 +169,26 @@ class PartnerCouponResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_COUPON = 'coupon';
+    const TYPE_REFUND = 'refund';
+    const TYPE_TRANSFER = 'transfer';
+    const TYPE_REACTIVATION = 'reactivation';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_COUPON,
+            self::TYPE_REFUND,
+            self::TYPE_TRANSFER,
+            self::TYPE_REACTIVATION,
+        ];
+    }
     
 
     /**
@@ -195,6 +217,7 @@ class PartnerCouponResource implements ArrayAccess
         $this->container['due_at'] = isset($data['due_at']) ? $data['due_at'] : null;
         $this->container['is_silent'] = isset($data['is_silent']) ? $data['is_silent'] : false;
         $this->container['partner_offer_id'] = isset($data['partner_offer_id']) ? $data['partner_offer_id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'coupon';
     }
 
     /**
@@ -205,6 +228,11 @@ class PartnerCouponResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("coupon", "refund", "transfer", "reactivation");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -216,6 +244,10 @@ class PartnerCouponResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("coupon", "refund", "transfer", "reactivation");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -510,6 +542,31 @@ class PartnerCouponResource implements ArrayAccess
     public function setPartnerOfferId($partner_offer_id)
     {
         $this->container['partner_offer_id'] = $partner_offer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('coupon', 'refund', 'transfer', 'reactivation');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'coupon', 'refund', 'transfer', 'reactivation'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

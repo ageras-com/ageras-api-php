@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **string** |  | [optional] 
+**title** | **string** |  | [optional] 
 **profile_picture** | **string** |  | [optional] 
 **initials** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSatisfactionResource
+ * PartnerActionResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerSatisfactionResource Class Doc Comment
+ * PartnerActionResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,26 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSatisfactionResource implements ArrayAccess
+class PartnerActionResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerSatisfactionResource';
+    protected static $swaggerModelName = 'PartnerActionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'created_at' => 'string',
-        'satisfaction_level_id' => 'int',
-        'score' => 'int',
-        'label' => 'string',
-        'identifier' => 'string',
-        'note' => 'string'
+        'action' => 'string',
+        'note' => 'string',
+        'next_action_at' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,13 +81,9 @@ class PartnerSatisfactionResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'created_at' => 'created_at',
-        'satisfaction_level_id' => 'satisfaction_level_id',
-        'score' => 'score',
-        'label' => 'label',
-        'identifier' => 'identifier',
-        'note' => 'note'
+        'action' => 'action',
+        'note' => 'note',
+        'next_action_at' => 'next_action_at'
     );
 
     public static function attributeMap()
@@ -104,13 +96,9 @@ class PartnerSatisfactionResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'created_at' => 'setCreatedAt',
-        'satisfaction_level_id' => 'setSatisfactionLevelId',
-        'score' => 'setScore',
-        'label' => 'setLabel',
-        'identifier' => 'setIdentifier',
-        'note' => 'setNote'
+        'action' => 'setAction',
+        'note' => 'setNote',
+        'next_action_at' => 'setNextActionAt'
     );
 
     public static function setters()
@@ -123,13 +111,9 @@ class PartnerSatisfactionResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'created_at' => 'getCreatedAt',
-        'satisfaction_level_id' => 'getSatisfactionLevelId',
-        'score' => 'getScore',
-        'label' => 'getLabel',
-        'identifier' => 'getIdentifier',
-        'note' => 'getNote'
+        'action' => 'getAction',
+        'note' => 'getNote',
+        'next_action_at' => 'getNextActionAt'
     );
 
     public static function getters()
@@ -137,8 +121,26 @@ class PartnerSatisfactionResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ACTION_UNKNOWN = 'unknown';
+    const ACTION_MAKE_PARTNER = 'make-partner';
+    const ACTION_CONTINUE_DEMO = 'continue-demo';
+    const ACTION_NOT_INTERESTED = 'not-interested';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_UNKNOWN,
+            self::ACTION_MAKE_PARTNER,
+            self::ACTION_CONTINUE_DEMO,
+            self::ACTION_NOT_INTERESTED,
+        ];
+    }
     
 
     /**
@@ -153,13 +155,9 @@ class PartnerSatisfactionResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['satisfaction_level_id'] = isset($data['satisfaction_level_id']) ? $data['satisfaction_level_id'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
+        $this->container['next_action_at'] = isset($data['next_action_at']) ? $data['next_action_at'] : null;
     }
 
     /**
@@ -170,6 +168,11 @@ class PartnerSatisfactionResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "make-partner", "continue-demo", "not-interested");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'action', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -181,132 +184,35 @@ class PartnerSatisfactionResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "make-partner", "continue-demo", "not-interested");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
+     * Gets action
      * @return string
      */
-    public function getCreatedAt()
+    public function getAction()
     {
-        return $this->container['created_at'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at
+     * Sets action
+     * @param string $action Partner action
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setAction($action)
     {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets satisfaction_level_id
-     * @return int
-     */
-    public function getSatisfactionLevelId()
-    {
-        return $this->container['satisfaction_level_id'];
-    }
-
-    /**
-     * Sets satisfaction_level_id
-     * @param int $satisfaction_level_id
-     * @return $this
-     */
-    public function setSatisfactionLevelId($satisfaction_level_id)
-    {
-        $this->container['satisfaction_level_id'] = $satisfaction_level_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets score
-     * @return int
-     */
-    public function getScore()
-    {
-        return $this->container['score'];
-    }
-
-    /**
-     * Sets score
-     * @param int $score
-     * @return $this
-     */
-    public function setScore($score)
-    {
-        $this->container['score'] = $score;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     * @return string
-     */
-    public function getLabel()
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     * @param string $label
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets identifier
-     * @return string
-     */
-    public function getIdentifier()
-    {
-        return $this->container['identifier'];
-    }
-
-    /**
-     * Sets identifier
-     * @param string $identifier
-     * @return $this
-     */
-    public function setIdentifier($identifier)
-    {
-        $this->container['identifier'] = $identifier;
+        $allowed_values = array('unknown', 'make-partner', 'continue-demo', 'not-interested');
+        if (!in_array($action, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'continue-demo', 'not-interested'");
+        }
+        $this->container['action'] = $action;
 
         return $this;
     }
@@ -322,12 +228,33 @@ class PartnerSatisfactionResource implements ArrayAccess
 
     /**
      * Sets note
-     * @param string $note
+     * @param string $note Action note
      * @return $this
      */
     public function setNote($note)
     {
         $this->container['note'] = $note;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_action_at
+     * @return string
+     */
+    public function getNextActionAt()
+    {
+        return $this->container['next_action_at'];
+    }
+
+    /**
+     * Sets next_action_at
+     * @param string $next_action_at Next action at
+     * @return $this
+     */
+    public function setNextActionAt($next_action_at)
+    {
+        $this->container['next_action_at'] = $next_action_at;
 
         return $this;
     }

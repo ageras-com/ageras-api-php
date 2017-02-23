@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerEmployeeResourceTest
+ * PartnerActionResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * PartnerEmployeeResourceTest Class Doc Comment
+ * PartnerActionResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerEmployeeResource
+// * @description PartnerActionResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerEmployeeResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerActionResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,33 @@ class PartnerEmployeeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerEmployeeResource"
+     * Test "PartnerActionResource"
      */
-    public function testPartnerEmployeeResource()
+    public function testPartnerActionResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "action"
      */
-    public function testPropertyId()
+    public function testPropertyAction()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "note"
      */
-    public function testPropertyName()
+    public function testPropertyNote()
     {
 
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "next_action_at"
      */
-    public function testPropertyTitle()
-    {
-
-    }
-
-    /**
-     * Test attribute "profile_picture"
-     */
-    public function testPropertyProfilePicture()
-    {
-
-    }
-
-    /**
-     * Test attribute "initials"
-     */
-    public function testPropertyInitials()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "phone_work"
-     */
-    public function testPropertyPhoneWork()
+    public function testPropertyNextActionAt()
     {
 
     }

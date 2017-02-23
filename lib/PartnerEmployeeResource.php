@@ -68,6 +68,7 @@ class PartnerEmployeeResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'name' => 'string',
+        'title' => 'string',
         'profile_picture' => 'string',
         'initials' => 'string',
         'email' => 'string',
@@ -86,6 +87,7 @@ class PartnerEmployeeResource implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'name' => 'name',
+        'title' => 'title',
         'profile_picture' => 'profile_picture',
         'initials' => 'initials',
         'email' => 'email',
@@ -104,6 +106,7 @@ class PartnerEmployeeResource implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'name' => 'setName',
+        'title' => 'setTitle',
         'profile_picture' => 'setProfilePicture',
         'initials' => 'setInitials',
         'email' => 'setEmail',
@@ -122,6 +125,7 @@ class PartnerEmployeeResource implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'name' => 'getName',
+        'title' => 'getTitle',
         'profile_picture' => 'getProfilePicture',
         'initials' => 'getInitials',
         'email' => 'getEmail',
@@ -151,6 +155,7 @@ class PartnerEmployeeResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['profile_picture'] = isset($data['profile_picture']) ? $data['profile_picture'] : null;
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -218,6 +223,27 @@ class PartnerEmployeeResource implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     * @param string $title
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
 
         return $this;
     }

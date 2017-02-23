@@ -112,6 +112,78 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "punches_left"
+     */
+    public function testPropertyPunchesLeft()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_spent_monthly"
+     */
+    public function testPropertyPunchesSpentMonthly()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_spent_month"
+     */
+    public function testPropertyPunchesSpentMonth()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_spent_6months"
+     */
+    public function testPropertyPunchesSpent6months()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_spent_total"
+     */
+    public function testPropertyPunchesSpentTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_bought_month"
+     */
+    public function testPropertyPunchesBoughtMonth()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_bought_6months"
+     */
+    public function testPropertyPunchesBought6months()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_bought_total"
+     */
+    public function testPropertyPunchesBoughtTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "punches_total"
+     */
+    public function testPropertyPunchesTotal()
+    {
+
+    }
+
+    /**
      * Test attribute "last_login"
      */
     public function testPropertyLastLogin()
@@ -128,6 +200,38 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "last_invoice"
+     */
+    public function testPropertyLastInvoice()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_coupon_size"
+     */
+    public function testPropertyLastCouponSize()
+    {
+
+    }
+
+    /**
+     * Test attribute "golden_ratio_6months"
+     */
+    public function testPropertyGoldenRatio6months()
+    {
+
+    }
+
+    /**
+     * Test attribute "revenue_month"
+     */
+    public function testPropertyRevenueMonth()
+    {
+
+    }
+
+    /**
      * Test attribute "revenue_6months"
      */
     public function testPropertyRevenue6months()
@@ -136,9 +240,25 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "last_invoice"
+     * Test attribute "revenue_total"
      */
-    public function testPropertyLastInvoice()
+    public function testPropertyRevenueTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "success_rate"
+     */
+    public function testPropertySuccessRate()
+    {
+
+    }
+
+    /**
+     * Test attribute "success_total"
+     */
+    public function testPropertySuccessTotal()
     {
 
     }
@@ -160,81 +280,9 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "last_coupon_size"
+     * Test attribute "avg_paid_days_6months"
      */
-    public function testPropertyLastCouponSize()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_left"
-     */
-    public function testPropertyPunchesLeft()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_spent_6months"
-     */
-    public function testPropertyPunchesSpent6months()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_bought_6months"
-     */
-    public function testPropertyPunchesBought6months()
-    {
-
-    }
-
-    /**
-     * Test attribute "golden_ratio_6months"
-     */
-    public function testPropertyGoldenRatio6months()
-    {
-
-    }
-
-    /**
-     * Test attribute "total_revenue"
-     */
-    public function testPropertyTotalRevenue()
-    {
-
-    }
-
-    /**
-     * Test attribute "success_rate"
-     */
-    public function testPropertySuccessRate()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_sale"
-     */
-    public function testPropertyLastSale()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_sale_type"
-     */
-    public function testPropertyLastSaleType()
-    {
-
-    }
-
-    /**
-     * Test attribute "revenue_current_month"
-     */
-    public function testPropertyRevenueCurrentMonth()
+    public function testPropertyAvgPaidDays6months()
     {
 
     }
