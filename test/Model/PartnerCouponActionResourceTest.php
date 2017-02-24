@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerIndustryResourceTest
+ * PartnerCouponActionResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * PartnerIndustryResourceTest Class Doc Comment
+ * PartnerCouponActionResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerIndustryResource
+// * @description PartnerCouponActionResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerIndustryResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerCouponActionResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,41 +88,25 @@ class PartnerIndustryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerIndustryResource"
+     * Test "PartnerCouponActionResource"
      */
-    public function testPartnerIndustryResource()
+    public function testPartnerCouponActionResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "action"
      */
-    public function testPropertyId()
+    public function testPropertyAction()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "date"
      */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "slug"
-     */
-    public function testPropertySlug()
-    {
-
-    }
-
-    /**
-     * Test attribute "identifier"
-     */
-    public function testPropertyIdentifier()
+    public function testPropertyDate()
     {
 
     }

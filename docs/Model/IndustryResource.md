@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **slug** | **string** | Uri frinedly name of the industry. | [optional] 
 **geo_code** | **string** | Industry Geo Code. @var string | [optional] 
 **parent_industry_id** | **int** | Parent industry ID. @var int | [optional] 
+**identifier** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -85,7 +85,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\RatingsApi();
 $partner_id = "partner_id_example"; // string | Partner id for the ratings to be filtered by.
 $rating_id = "rating_id_example"; // string | Rating ids.
-$sort = "sort_example"; // string | Sort ratings by a given property.
+$sort = "created_at"; // string | Sort ratings by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**| Partner id for the ratings to be filtered by. | [optional]
  **rating_id** | **string**| Rating ids. | [optional]
- **sort** | **string**| Sort ratings by a given property. | [optional]
+ **sort** | **string**| Sort ratings by a given property. | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

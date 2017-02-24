@@ -113,14 +113,15 @@ class IndustriesApi
      * @param bool $status Determinate if industry is active or not. (optional, default to false)
      * @param int $limit Limit of industries per page. (optional)
      * @param int $parent_industry_id Parent industry to filter by. (optional)
+     * @param string $identifier identifier for the industry (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\IndustryResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function industriesIndex($industry_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $parent_industry_id = null, $page = null, $query = null)
+    public function industriesIndex($industry_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $parent_industry_id = null, $identifier = null, $page = null, $query = null)
     {
-        list($response) = $this->industriesIndexWithHttpInfo($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $page, $query);
+        list($response) = $this->industriesIndexWithHttpInfo($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $identifier, $page, $query);
         return $response;
     }
 
@@ -135,12 +136,13 @@ class IndustriesApi
      * @param bool $status Determinate if industry is active or not. (optional, default to false)
      * @param int $limit Limit of industries per page. (optional)
      * @param int $parent_industry_id Parent industry to filter by. (optional)
+     * @param string $identifier identifier for the industry (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\IndustryResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function industriesIndexWithHttpInfo($industry_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $parent_industry_id = null, $page = null, $query = null)
+    public function industriesIndexWithHttpInfo($industry_id = null, $name = null, $geo_code = null, $status = null, $limit = null, $parent_industry_id = null, $identifier = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/industries";
@@ -177,6 +179,10 @@ class IndustriesApi
         // query params
         if ($parent_industry_id !== null) {
             $queryParams['parent_industry_id'] = $this->apiClient->getSerializer()->toQueryValue($parent_industry_id);
+        }
+        // query params
+        if ($identifier !== null) {
+            $queryParams['identifier'] = $this->apiClient->getSerializer()->toQueryValue($identifier);
         }
         // query params
         if ($page !== null) {

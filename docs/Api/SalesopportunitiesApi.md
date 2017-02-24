@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**salesOpportunitiesAggregationsIndex**](SalesopportunitiesApi.md#salesOpportunitiesAggregationsIndex) | **GET** /sales-opportunities/aggregations | Index aggregations.
 [**salesOpportunitiesCreate**](SalesopportunitiesApi.md#salesOpportunitiesCreate) | **POST** /sales-opportunities | Create sale opportunity.
-[**salesOpportunitiesDelete**](SalesopportunitiesApi.md#salesOpportunitiesDelete) | **DELETE** /sales-opportunities/{opportunity_id} | Delete Sales opportunity.
+[**salesOpportunitiesDelete**](SalesopportunitiesApi.md#salesOpportunitiesDelete) | **DELETE** /sales-opportunities/{sales_opportunity_id} | Delete Sales opportunity.
 [**salesOpportunitiesIndex**](SalesopportunitiesApi.md#salesOpportunitiesIndex) | **GET** /sales-opportunities | Get list sales pipelines opportunities.
 [**salesOpportunitiesUpdate**](SalesopportunitiesApi.md#salesOpportunitiesUpdate) | **PUT** /sales-opportunities/{sales_opportunity_id} | Create Sales opportunity resource.
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesDelete**
-> salesOpportunitiesDelete($opportunity_id)
+> salesOpportunitiesDelete($sales_opportunity_id)
 
 Delete Sales opportunity.
 
@@ -148,10 +148,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
-$opportunity_id = "opportunity_id_example"; // string | 
+$sales_opportunity_id = "sales_opportunity_id_example"; // string | 
 
 try {
-    $api_instance->salesOpportunitiesDelete($opportunity_id);
+    $api_instance->salesOpportunitiesDelete($sales_opportunity_id);
 } catch (Exception $e) {
     echo 'Exception when calling SalesopportunitiesApi->salesOpportunitiesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -162,7 +162,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opportunity_id** | **string**|  |
+ **sales_opportunity_id** | **string**|  |
 
 ### Return type
 

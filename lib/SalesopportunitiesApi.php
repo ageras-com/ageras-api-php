@@ -314,13 +314,13 @@ class SalesopportunitiesApi
      *
      * Delete Sales opportunity.
      *
-     * @param string $opportunity_id  (required)
+     * @param string $sales_opportunity_id  (required)
      * @return void
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function salesOpportunitiesDelete($opportunity_id)
+    public function salesOpportunitiesDelete($sales_opportunity_id)
     {
-        list($response) = $this->salesOpportunitiesDeleteWithHttpInfo($opportunity_id);
+        list($response) = $this->salesOpportunitiesDeleteWithHttpInfo($sales_opportunity_id);
         return $response;
     }
 
@@ -329,18 +329,18 @@ class SalesopportunitiesApi
      *
      * Delete Sales opportunity.
      *
-     * @param string $opportunity_id  (required)
+     * @param string $sales_opportunity_id  (required)
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function salesOpportunitiesDeleteWithHttpInfo($opportunity_id)
+    public function salesOpportunitiesDeleteWithHttpInfo($sales_opportunity_id)
     {
-        // verify the required parameter 'opportunity_id' is set
-        if ($opportunity_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $opportunity_id when calling salesOpportunitiesDelete');
+        // verify the required parameter 'sales_opportunity_id' is set
+        if ($sales_opportunity_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $sales_opportunity_id when calling salesOpportunitiesDelete');
         }
         // parse inputs
-        $resourcePath = "/sales-opportunities/{opportunity_id}";
+        $resourcePath = "/sales-opportunities/{sales_opportunity_id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -352,10 +352,10 @@ class SalesopportunitiesApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
 
         // path params
-        if ($opportunity_id !== null) {
+        if ($sales_opportunity_id !== null) {
             $resourcePath = str_replace(
-                "{" . "opportunity_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($opportunity_id),
+                "{" . "sales_opportunity_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($sales_opportunity_id),
                 $resourcePath
             );
         }
@@ -387,7 +387,7 @@ class SalesopportunitiesApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/sales-opportunities/{opportunity_id}'
+                '/sales-opportunities/{sales_opportunity_id}'
             );
 
             return array(null, $statusCode, $httpHeader);

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerIndustryResource
+ * PartnerCouponActionResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerIndustryResource Class Doc Comment
+ * PartnerCouponActionResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,23 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerIndustryResource implements ArrayAccess
+class PartnerCouponActionResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerIndustryResource';
+    protected static $swaggerModelName = 'PartnerCouponActionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'name' => 'string',
-        'slug' => 'string',
-        'identifier' => 'string'
+        'action' => 'string',
+        'date' => 'string'
     );
 
     public static function swaggerTypes()
@@ -82,10 +80,8 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'name' => 'name',
-        'slug' => 'slug',
-        'identifier' => 'identifier'
+        'action' => 'action',
+        'date' => 'date'
     );
 
     public static function attributeMap()
@@ -98,10 +94,8 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'name' => 'setName',
-        'slug' => 'setSlug',
-        'identifier' => 'setIdentifier'
+        'action' => 'setAction',
+        'date' => 'setDate'
     );
 
     public static function setters()
@@ -114,10 +108,8 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'name' => 'getName',
-        'slug' => 'getSlug',
-        'identifier' => 'getIdentifier'
+        'action' => 'getAction',
+        'date' => 'getDate'
     );
 
     public static function getters()
@@ -125,8 +117,26 @@ class PartnerIndustryResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ACTION_UNKNOWN = 'unknown';
+    const ACTION_DEACTIVATE = 'deactivate';
+    const ACTION_EXTEND = 'extend';
+    const ACTION_REACTIVATE = 'reactivate';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_UNKNOWN,
+            self::ACTION_DEACTIVATE,
+            self::ACTION_EXTEND,
+            self::ACTION_REACTIVATE,
+        ];
+    }
     
 
     /**
@@ -141,10 +151,8 @@ class PartnerIndustryResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
-        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
     }
 
     /**
@@ -155,6 +163,11 @@ class PartnerIndustryResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "deactivate", "extend", "reactivate");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'action', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -166,90 +179,56 @@ class PartnerIndustryResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "deactivate", "extend", "reactivate");
+        if (!in_array($this->container['action'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets action
+     * @return string
      */
-    public function getId()
+    public function getAction()
     {
-        return $this->container['id'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets id
-     * @param int $id Id for the industry.
+     * Sets action
+     * @param string $action Partner action
      * @return $this
      */
-    public function setId($id)
+    public function setAction($action)
     {
-        $this->container['id'] = $id;
+        $allowed_values = array('unknown', 'deactivate', 'extend', 'reactivate');
+        if (!in_array($action, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'deactivate', 'extend', 'reactivate'");
+        }
+        $this->container['action'] = $action;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets date
      * @return string
      */
-    public function getName()
+    public function getDate()
     {
-        return $this->container['name'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets name
-     * @param string $name Name of the industry.
+     * Sets date
+     * @param string $date Date
      * @return $this
      */
-    public function setName($name)
+    public function setDate($date)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets slug
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->container['slug'];
-    }
-
-    /**
-     * Sets slug
-     * @param string $slug Uri friendly name for the industry.
-     * @return $this
-     */
-    public function setSlug($slug)
-    {
-        $this->container['slug'] = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Gets identifier
-     * @return string
-     */
-    public function getIdentifier()
-    {
-        return $this->container['identifier'];
-    }
-
-    /**
-     * Sets identifier
-     * @param string $identifier
-     * @return $this
-     */
-    public function setIdentifier($identifier)
-    {
-        $this->container['identifier'] = $identifier;
+        $this->container['date'] = $date;
 
         return $this;
     }

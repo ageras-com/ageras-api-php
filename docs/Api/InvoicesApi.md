@@ -86,7 +86,7 @@ $invoice_id = "invoice_id_example"; // string | Invoice Id.
 $partner_id = "partner_id_example"; // string | Filter Invoices by a given Partner.
 $is_paid = false; // bool | Filter invoices by whether or not they are paid.
 $is_overdue = false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
-$sort = "sort_example"; // string | Desired sorting.
+$sort = "created_at"; // string | Desired sorting.
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **partner_id** | **string**| Filter Invoices by a given Partner. | [optional]
  **is_paid** | **bool**| Filter invoices by whether or not they are paid. | [optional] [default to false]
  **is_overdue** | **bool**| Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. | [optional] [default to false]
- **sort** | **string**| Desired sorting. | [optional]
+ **sort** | **string**| Desired sorting. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

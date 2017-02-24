@@ -187,7 +187,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\RefundsApi();
 $partner_id = "partner_id_example"; // string | Partner ID. @var int
-$sort = "sort_example"; // string | Sort resource by. @var string
+$sort = "created_at"; // string | Sort resource by. @var string
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
@@ -206,7 +206,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**| Partner ID. @var int | [optional]
- **sort** | **string**| Sort resource by. @var string | [optional]
+ **sort** | **string**| Sort resource by. @var string | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

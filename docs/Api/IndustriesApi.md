@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **industriesIndex**
-> \Ageras\Api\IndustryResult industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $page, $query)
+> \Ageras\Api\IndustryResult industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $identifier, $page, $query)
 
 List Industries and filter by parent industry.
 
@@ -34,11 +34,12 @@ $geo_code = "geo_code_example"; // string | Industry geo code origin.
 $status = false; // bool | Determinate if industry is active or not.
 $limit = 56; // int | Limit of industries per page.
 $parent_industry_id = 56; // int | Parent industry to filter by.
+$identifier = "identifier_example"; // string | identifier for the industry
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $page, $query);
+    $result = $api_instance->industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $identifier, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustriesApi->industriesIndex: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **status** | **bool**| Determinate if industry is active or not. | [optional] [default to false]
  **limit** | **int**| Limit of industries per page. | [optional]
  **parent_industry_id** | **int**| Parent industry to filter by. | [optional]
+ **identifier** | **string**| identifier for the industry | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 

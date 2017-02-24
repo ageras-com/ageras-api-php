@@ -220,16 +220,18 @@ class PartnersApi
      * @param string $satisfaction Partner Satisfaction Ratio. (optional)
      * @param string $punches_use_speed Punches use speed. (optional)
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
-     * @param string $sort Sort Partner&#39;s by a given property. (optional)
+     * @param string $industry_id Filter the partners by their industry ids (optional)
+     * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\AggregationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersAggregationsIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersAggregationsIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->partnersAggregationsIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
+        list($response) = $this->partnersAggregationsIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -246,14 +248,16 @@ class PartnersApi
      * @param string $satisfaction Partner Satisfaction Ratio. (optional)
      * @param string $punches_use_speed Punches use speed. (optional)
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
-     * @param string $sort Sort Partner&#39;s by a given property. (optional)
+     * @param string $industry_id Filter the partners by their industry ids (optional)
+     * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\AggregationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersAggregationsIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersAggregationsIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/partners/aggregations";
@@ -298,6 +302,14 @@ class PartnersApi
         // query params
         if ($refill_offer_id !== null) {
             $queryParams['refill_offer_id'] = $this->apiClient->getSerializer()->toQueryValue($refill_offer_id);
+        }
+        // query params
+        if ($industry_id !== null) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($industry_id);
+        }
+        // query params
+        if ($industry !== null) {
+            $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($industry);
         }
         // query params
         if ($sort !== null) {
@@ -470,13 +482,13 @@ class PartnersApi
      * Detach certification from partner.
      *
      * @param string $partner_id  (required)
-     * @param string $id  (required)
+     * @param string $certification_id  (required)
      * @return void
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersCertificationsDelete($partner_id, $id)
+    public function partnersCertificationsDelete($partner_id, $certification_id)
     {
-        list($response) = $this->partnersCertificationsDeleteWithHttpInfo($partner_id, $id);
+        list($response) = $this->partnersCertificationsDeleteWithHttpInfo($partner_id, $certification_id);
         return $response;
     }
 
@@ -486,22 +498,22 @@ class PartnersApi
      * Detach certification from partner.
      *
      * @param string $partner_id  (required)
-     * @param string $id  (required)
+     * @param string $certification_id  (required)
      * @return Array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersCertificationsDeleteWithHttpInfo($partner_id, $id)
+    public function partnersCertificationsDeleteWithHttpInfo($partner_id, $certification_id)
     {
         // verify the required parameter 'partner_id' is set
         if ($partner_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCertificationsDelete');
         }
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling partnersCertificationsDelete');
+        // verify the required parameter 'certification_id' is set
+        if ($certification_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $certification_id when calling partnersCertificationsDelete');
         }
         // parse inputs
-        $resourcePath = "/partners/{partner_id}/certifications/{id}";
+        $resourcePath = "/partners/{partner_id}/certifications/{certification_id}";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -521,10 +533,10 @@ class PartnersApi
             );
         }
         // path params
-        if ($id !== null) {
+        if ($certification_id !== null) {
             $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
+                "{" . "certification_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($certification_id),
                 $resourcePath
             );
         }
@@ -556,7 +568,7 @@ class PartnersApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/partners/{partner_id}/certifications/{id}'
+                '/partners/{partner_id}/certifications/{certification_id}'
             );
 
             return array(null, $statusCode, $httpHeader);
@@ -1132,6 +1144,125 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersCouponsActionsCreate
+     *
+     * Coupon action
+     *
+     * @param string $partner_id  (required)
+     * @param string $coupon_id  (required)
+     * @param \Ageras\Api\PartnerCouponActionResource $partner_coupon_action_resource  (required)
+     * @return \Ageras\Api\PartnerCouponResource
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource)
+    {
+        list($response) = $this->partnersCouponsActionsCreateWithHttpInfo($partner_id, $coupon_id, $partner_coupon_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersCouponsActionsCreateWithHttpInfo
+     *
+     * Coupon action
+     *
+     * @param string $partner_id  (required)
+     * @param string $coupon_id  (required)
+     * @param \Ageras\Api\PartnerCouponActionResource $partner_coupon_action_resource  (required)
+     * @return Array of \Ageras\Api\PartnerCouponResource, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function partnersCouponsActionsCreateWithHttpInfo($partner_id, $coupon_id, $partner_coupon_action_resource)
+    {
+        // verify the required parameter 'partner_id' is set
+        if ($partner_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCouponsActionsCreate');
+        }
+        // verify the required parameter 'coupon_id' is set
+        if ($coupon_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $coupon_id when calling partnersCouponsActionsCreate');
+        }
+        // verify the required parameter 'partner_coupon_action_resource' is set
+        if ($partner_coupon_action_resource === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $partner_coupon_action_resource when calling partnersCouponsActionsCreate');
+        }
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/coupons/{coupon_id}/actions";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($coupon_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "coupon_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($coupon_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($partner_coupon_action_resource)) {
+            $_tempBody = $partner_coupon_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerCouponResource',
+                '/partners/{partner_id}/coupons/{coupon_id}/actions'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerCouponResource', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerCouponResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersCouponsCreate
      *
      * Create a new partner coupon.
@@ -1245,7 +1376,7 @@ class PartnersApi
      * @param bool $show_expired Only show expired partner coupons. (optional, default to false)
      * @param bool $show_deactivated Only show deactivated partner coupons. (optional, default to false)
      * @param bool $show_empty Should empty partner coupons be included in the result. (optional, default to false)
-     * @param string $sort Sort the coupons by different values (optional)
+     * @param string $sort Sort the coupons by different values (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
@@ -1267,7 +1398,7 @@ class PartnersApi
      * @param bool $show_expired Only show expired partner coupons. (optional, default to false)
      * @param bool $show_deactivated Only show deactivated partner coupons. (optional, default to false)
      * @param bool $show_empty Should empty partner coupons be included in the result. (optional, default to false)
-     * @param string $sort Sort the coupons by different values (optional)
+     * @param string $sort Sort the coupons by different values (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
@@ -1660,16 +1791,18 @@ class PartnersApi
      * @param string $satisfaction Partner Satisfaction Ratio. (optional)
      * @param string $punches_use_speed Punches use speed. (optional)
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
-     * @param string $sort Sort Partner&#39;s by a given property. (optional)
+     * @param string $industry_id Filter the partners by their industry ids (optional)
+     * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\PartnerResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->partnersIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
+        list($response) = $this->partnersIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -1686,14 +1819,16 @@ class PartnersApi
      * @param string $satisfaction Partner Satisfaction Ratio. (optional)
      * @param string $punches_use_speed Punches use speed. (optional)
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
-     * @param string $sort Sort Partner&#39;s by a given property. (optional)
+     * @param string $industry_id Filter the partners by their industry ids (optional)
+     * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\PartnerResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/partners";
@@ -1738,6 +1873,14 @@ class PartnersApi
         // query params
         if ($refill_offer_id !== null) {
             $queryParams['refill_offer_id'] = $this->apiClient->getSerializer()->toQueryValue($refill_offer_id);
+        }
+        // query params
+        if ($industry_id !== null) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($industry_id);
+        }
+        // query params
+        if ($industry !== null) {
+            $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($industry);
         }
         // query params
         if ($sort !== null) {

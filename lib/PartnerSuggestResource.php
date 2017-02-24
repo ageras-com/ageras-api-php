@@ -68,6 +68,7 @@ class PartnerSuggestResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'company_name' => 'string',
+        'slug' => 'string',
         'status' => 'string',
         'zip_code' => 'string',
         'city' => 'string',
@@ -87,6 +88,7 @@ class PartnerSuggestResource implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'company_name' => 'company_name',
+        'slug' => 'slug',
         'status' => 'status',
         'zip_code' => 'zip_code',
         'city' => 'city',
@@ -106,6 +108,7 @@ class PartnerSuggestResource implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'company_name' => 'setCompanyName',
+        'slug' => 'setSlug',
         'status' => 'setStatus',
         'zip_code' => 'setZipCode',
         'city' => 'setCity',
@@ -125,6 +128,7 @@ class PartnerSuggestResource implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'company_name' => 'getCompanyName',
+        'slug' => 'getSlug',
         'status' => 'getStatus',
         'zip_code' => 'getZipCode',
         'city' => 'getCity',
@@ -155,6 +159,7 @@ class PartnerSuggestResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
@@ -223,6 +228,27 @@ class PartnerSuggestResource implements ArrayAccess
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug Slug to use for Uri
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
 
         return $this;
     }

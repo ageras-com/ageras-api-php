@@ -70,6 +70,7 @@ class PartnerRefillResource implements ArrayAccess
         'partner_id' => 'int',
         'employee_partner_offer_id' => 'int',
         'threshold' => 'int',
+        'custom_offer' => '\Ageras\Api\PartnerRefillCustomOfferResource',
         'created_at' => 'string',
         'updated_at' => 'string'
     );
@@ -88,6 +89,7 @@ class PartnerRefillResource implements ArrayAccess
         'partner_id' => 'partner_id',
         'employee_partner_offer_id' => 'employee_partner_offer_id',
         'threshold' => 'threshold',
+        'custom_offer' => 'custom_offer',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     );
@@ -106,6 +108,7 @@ class PartnerRefillResource implements ArrayAccess
         'partner_id' => 'setPartnerId',
         'employee_partner_offer_id' => 'setEmployeePartnerOfferId',
         'threshold' => 'setThreshold',
+        'custom_offer' => 'setCustomOffer',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     );
@@ -124,6 +127,7 @@ class PartnerRefillResource implements ArrayAccess
         'partner_id' => 'getPartnerId',
         'employee_partner_offer_id' => 'getEmployeePartnerOfferId',
         'threshold' => 'getThreshold',
+        'custom_offer' => 'getCustomOffer',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     );
@@ -153,6 +157,7 @@ class PartnerRefillResource implements ArrayAccess
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['employee_partner_offer_id'] = isset($data['employee_partner_offer_id']) ? $data['employee_partner_offer_id'] : null;
         $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : null;
+        $this->container['custom_offer'] = isset($data['custom_offer']) ? $data['custom_offer'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
@@ -260,6 +265,27 @@ class PartnerRefillResource implements ArrayAccess
     public function setThreshold($threshold)
     {
         $this->container['threshold'] = $threshold;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_offer
+     * @return \Ageras\Api\PartnerRefillCustomOfferResource
+     */
+    public function getCustomOffer()
+    {
+        return $this->container['custom_offer'];
+    }
+
+    /**
+     * Sets custom_offer
+     * @param \Ageras\Api\PartnerRefillCustomOfferResource $custom_offer
+     * @return $this
+     */
+    public function setCustomOffer($custom_offer)
+    {
+        $this->container['custom_offer'] = $custom_offer;
 
         return $this;
     }

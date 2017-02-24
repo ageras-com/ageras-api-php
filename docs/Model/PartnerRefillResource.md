@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **partner_id** | **int** |  | [optional] 
 **employee_partner_offer_id** | **int** |  | [optional] 
 **threshold** | **int** |  | [optional] 
+**custom_offer** | [**\Ageras\Api\PartnerRefillCustomOfferResource**](PartnerRefillCustomOfferResource.md) |  | [optional] 
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 

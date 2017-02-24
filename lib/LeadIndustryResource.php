@@ -68,7 +68,8 @@ class LeadIndustryResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'name' => 'string',
-        'alias' => 'string'
+        'slug' => 'string',
+        'identifier' => 'string'
     );
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class LeadIndustryResource implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'name' => 'name',
-        'alias' => 'alias'
+        'slug' => 'slug',
+        'identifier' => 'identifier'
     );
 
     public static function attributeMap()
@@ -98,7 +100,8 @@ class LeadIndustryResource implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'name' => 'setName',
-        'alias' => 'setAlias'
+        'slug' => 'setSlug',
+        'identifier' => 'setIdentifier'
     );
 
     public static function setters()
@@ -113,7 +116,8 @@ class LeadIndustryResource implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'name' => 'getName',
-        'alias' => 'getAlias'
+        'slug' => 'getSlug',
+        'identifier' => 'getIdentifier'
     );
 
     public static function getters()
@@ -139,7 +143,8 @@ class LeadIndustryResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
     }
 
     /**
@@ -208,22 +213,43 @@ class LeadIndustryResource implements ArrayAccess
     }
 
     /**
-     * Gets alias
+     * Gets slug
      * @return string
      */
-    public function getAlias()
+    public function getSlug()
     {
-        return $this->container['alias'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets alias
-     * @param string $alias Uri friendly name for the industry.
+     * Sets slug
+     * @param string $slug Uri friendly name for the industry.
      * @return $this
      */
-    public function setAlias($alias)
+    public function setSlug($slug)
     {
-        $this->container['alias'] = $alias;
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets identifier
+     * @return string
+     */
+    public function getIdentifier()
+    {
+        return $this->container['identifier'];
+    }
+
+    /**
+     * Sets identifier
+     * @param string $identifier
+     * @return $this
+     */
+    public function setIdentifier($identifier)
+    {
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }

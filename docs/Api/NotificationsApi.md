@@ -192,7 +192,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\NotificationsApi();
-$sort = "sort_example"; // string | 
+$sort = "relevance"; // string | 
 $created_after = "created_after_example"; // string | 
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | **string**|  | [optional]
+ **sort** | **string**|  | [optional] [default to relevance]
  **created_after** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

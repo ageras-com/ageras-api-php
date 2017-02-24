@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerIndustryResourceTest
+ * PartnerRefillCustomOfferResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * PartnerIndustryResourceTest Class Doc Comment
+ * PartnerRefillCustomOfferResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerIndustryResource
+// * @description PartnerRefillCustomOfferResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerIndustryResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerRefillCustomOfferResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,41 +88,33 @@ class PartnerIndustryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerIndustryResource"
+     * Test "PartnerRefillCustomOfferResource"
      */
-    public function testPartnerIndustryResource()
+    public function testPartnerRefillCustomOfferResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "punches"
      */
-    public function testPropertyId()
+    public function testPropertyPunches()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "price"
      */
-    public function testPropertyName()
+    public function testPropertyPrice()
     {
 
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "due_days"
      */
-    public function testPropertySlug()
-    {
-
-    }
-
-    /**
-     * Test attribute "identifier"
-     */
-    public function testPropertyIdentifier()
+    public function testPropertyDueDays()
     {
 
     }

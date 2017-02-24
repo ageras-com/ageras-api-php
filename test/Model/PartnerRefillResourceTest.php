@@ -128,6 +128,14 @@ class PartnerRefillResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "custom_offer"
+     */
+    public function testPropertyCustomOffer()
+    {
+
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
