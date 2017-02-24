@@ -141,7 +141,7 @@ $api_instance = new Ageras\Api\Api\OffersApi();
 $show_expired = false; // bool | Include expired partners in the result.
 $show_accepted = false; // bool | Show accepted partner.
 $partner_id = 56; // int | Partner id of Offers to filter by.
-$sort = "sort_example"; // string | Order by price asc or desc.
+$sort = "created_at"; // string | Order by price asc or desc.
 $action = "action_example"; // string | Action to take.
 $geo_code = "geo_code_example"; // string | Offer geo code.
 $type = "partner"; // string | Type of Offer
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
  **show_expired** | **bool**| Include expired partners in the result. | [optional] [default to false]
  **show_accepted** | **bool**| Show accepted partner. | [optional] [default to false]
  **partner_id** | **int**| Partner id of Offers to filter by. | [optional]
- **sort** | **string**| Order by price asc or desc. | [optional]
+ **sort** | **string**| Order by price asc or desc. | [optional] [default to created_at]
  **action** | **string**| Action to take. | [optional]
  **geo_code** | **string**| Offer geo code. | [optional]
  **type** | **string**| Type of Offer | [optional] [default to partner]

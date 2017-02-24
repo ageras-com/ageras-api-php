@@ -142,7 +142,7 @@ $employee_id = "employee_id_example"; // string | Id for the employees.
 $geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
 $limit = 56; // int | Number of employees to return pr. page.
 $role_id = "role_id_example"; // string | The Role that the employee is member of.
-$sort = "sort_example"; // string | Attribute to sort by.
+$sort = "first_name"; // string | Attribute to sort by.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geo Location Code ( ISO 3166 ). | [optional]
  **limit** | **int**| Number of employees to return pr. page. | [optional]
  **role_id** | **string**| The Role that the employee is member of. | [optional]
- **sort** | **string**| Attribute to sort by. | [optional]
+ **sort** | **string**| Attribute to sort by. | [optional] [default to first_name]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 

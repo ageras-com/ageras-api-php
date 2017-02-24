@@ -313,7 +313,7 @@ class OrganisationApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param int $limit Number of employees to return pr. page. (optional)
      * @param string $role_id The Role that the employee is member of. (optional)
-     * @param string $sort Attribute to sort by. (optional)
+     * @param string $sort Attribute to sort by. (optional, default to first_name)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\EmployeeResult
@@ -334,7 +334,7 @@ class OrganisationApi
      * @param string $geo_code Geo Location Code ( ISO 3166 ). (optional)
      * @param int $limit Number of employees to return pr. page. (optional)
      * @param string $role_id The Role that the employee is member of. (optional)
-     * @param string $sort Attribute to sort by. (optional)
+     * @param string $sort Attribute to sort by. (optional, default to first_name)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\EmployeeResult, HTTP status code, HTTP response headers (array of strings)

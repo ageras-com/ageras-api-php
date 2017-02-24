@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **updated_at** | **string** | At what date was the partner last updated. | [optional] 
 **reserved_at** | **string** | reserved at. | [optional] 
 **company_name** | **string** | The company name of the partner. | [optional] 
+**slug** | **string** | The slug for the given partner | [optional] 
 **is_enabled** | **bool** | Has the partner been disabled. | [optional] [default to false]
 **has_subscription** | **bool** | Has the partner an active subscription. | [optional] [default to false]
 **state** | **string** | What is the current state of the partner. | [optional] [default to 'unknown']

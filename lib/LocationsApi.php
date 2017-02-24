@@ -109,7 +109,7 @@ class LocationsApi
      *
      * @param string $geo_code Geographic Location Code. (optional)
      * @param string $point Geo Location Point (optional)
-     * @param string $sort Sort types for Locations (optional)
+     * @param string $sort Sort types for Locations (optional, default to distance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
@@ -129,7 +129,7 @@ class LocationsApi
      *
      * @param string $geo_code Geographic Location Code. (optional)
      * @param string $point Geo Location Point (optional)
-     * @param string $sort Sort types for Locations (optional)
+     * @param string $sort Sort types for Locations (optional, default to distance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)

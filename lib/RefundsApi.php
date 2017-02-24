@@ -376,7 +376,7 @@ class RefundsApi
      * List refund requests.
      *
      * @param string $partner_id Partner ID. @var int (optional)
-     * @param string $sort Sort resource by. @var string (optional)
+     * @param string $sort Sort resource by. @var string (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
@@ -395,7 +395,7 @@ class RefundsApi
      * List refund requests.
      *
      * @param string $partner_id Partner ID. @var int (optional)
-     * @param string $sort Sort resource by. @var string (optional)
+     * @param string $sort Sort resource by. @var string (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)

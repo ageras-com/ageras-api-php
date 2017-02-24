@@ -67,11 +67,11 @@ class PartnerGeoResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'code' => 'string',
+        'slug' => 'string',
         'address' => 'string',
         'zip_code' => 'string',
         'city_name' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource',
-        'slug' => 'string'
+        'point' => '\Ageras\Api\LocationGeoPointResource'
     );
 
     public static function swaggerTypes()
@@ -85,11 +85,11 @@ class PartnerGeoResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'code' => 'code',
+        'slug' => 'slug',
         'address' => 'address',
         'zip_code' => 'zip_code',
         'city_name' => 'city_name',
-        'point' => 'point',
-        'slug' => 'slug'
+        'point' => 'point'
     );
 
     public static function attributeMap()
@@ -103,11 +103,11 @@ class PartnerGeoResource implements ArrayAccess
      */
     protected static $setters = array(
         'code' => 'setCode',
+        'slug' => 'setSlug',
         'address' => 'setAddress',
         'zip_code' => 'setZipCode',
         'city_name' => 'setCityName',
-        'point' => 'setPoint',
-        'slug' => 'setSlug'
+        'point' => 'setPoint'
     );
 
     public static function setters()
@@ -121,11 +121,11 @@ class PartnerGeoResource implements ArrayAccess
      */
     protected static $getters = array(
         'code' => 'getCode',
+        'slug' => 'getSlug',
         'address' => 'getAddress',
         'zip_code' => 'getZipCode',
         'city_name' => 'getCityName',
-        'point' => 'getPoint',
-        'slug' => 'getSlug'
+        'point' => 'getPoint'
     );
 
     public static function getters()
@@ -150,11 +150,11 @@ class PartnerGeoResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
-        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
     }
 
     /**
@@ -197,6 +197,27 @@ class PartnerGeoResource implements ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug url slug
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
 
         return $this;
     }
@@ -281,27 +302,6 @@ class PartnerGeoResource implements ArrayAccess
     public function setPoint($point)
     {
         $this->container['point'] = $point;
-
-        return $this;
-    }
-
-    /**
-     * Gets slug
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->container['slug'];
-    }
-
-    /**
-     * Sets slug
-     * @param string $slug url slug
-     * @return $this
-     */
-    public function setSlug($slug)
-    {
-        $this->container['slug'] = $slug;
 
         return $this;
     }

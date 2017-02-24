@@ -189,6 +189,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersCouponsActionsCreate
+     *
+     * Coupon action.
+     *
+     */
+    public function testPartnersCouponsActionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersCouponsCreate
      *
      * Create a new partner coupon..

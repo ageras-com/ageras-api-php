@@ -104,6 +104,14 @@ class PartnerGeoResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "slug"
+     */
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
      * Test attribute "address"
      */
     public function testPropertyAddress()
@@ -131,14 +139,6 @@ class PartnerGeoResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "point"
      */
     public function testPropertyPoint()
-    {
-
-    }
-
-    /**
-     * Test attribute "slug"
-     */
-    public function testPropertySlug()
     {
 
     }

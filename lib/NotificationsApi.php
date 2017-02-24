@@ -397,7 +397,7 @@ class NotificationsApi
      *
      * List notifications
      *
-     * @param string $sort  (optional)
+     * @param string $sort  (optional, default to relevance)
      * @param string $created_after  (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
@@ -416,7 +416,7 @@ class NotificationsApi
      *
      * List notifications
      *
-     * @param string $sort  (optional)
+     * @param string $sort  (optional, default to relevance)
      * @param string $created_after  (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)

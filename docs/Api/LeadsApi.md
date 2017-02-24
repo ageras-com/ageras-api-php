@@ -202,7 +202,7 @@ $phone = "phone_example"; // string | Filter by a given phone number.
 $filter = "none"; // string | Apply a pre-defined filter.
 $partner_id = 56; // int | Provide a given partner id to filter by. Requires \"filter\" to be \"bought_by_partner\" or \"segmented_for_partner\".
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
-$sort = "sort_example"; // string | Sort Leads by a given attribute.
+$sort = "created_at"; // string | Sort Leads by a given attribute.
 $status = "unknown"; // string | Status for the given lead.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
  **filter** | **string**| Apply a pre-defined filter. | [optional] [default to none]
  **partner_id** | **int**| Provide a given partner id to filter by. Requires \&quot;filter\&quot; to be \&quot;bought_by_partner\&quot; or \&quot;segmented_for_partner\&quot;. | [optional]
  **geo_code** | **string**| Geographic Location Code. | [optional]
- **sort** | **string**| Sort Leads by a given attribute. | [optional]
+ **sort** | **string**| Sort Leads by a given attribute. | [optional] [default to created_at]
  **status** | **string**| Status for the given lead. | [optional] [default to unknown]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

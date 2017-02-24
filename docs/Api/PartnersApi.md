@@ -7,12 +7,13 @@ Method | HTTP request | Description
 [**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | Partner actions.
 [**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
 [**partnersCertificationsCreate**](PartnersApi.md#partnersCertificationsCreate) | **POST** /partners/{partner_id}/certifications | Attach certification to partner.
-[**partnersCertificationsDelete**](PartnersApi.md#partnersCertificationsDelete) | **DELETE** /partners/{partner_id}/certifications/{id} | Detach certification from partner.
+[**partnersCertificationsDelete**](PartnersApi.md#partnersCertificationsDelete) | **DELETE** /partners/{partner_id}/certifications/{certification_id} | Detach certification from partner.
 [**partnersCertificationsGet**](PartnersApi.md#partnersCertificationsGet) | **GET** /partners/{partner_id}/certifications/{certification_id} | Get Partner certification.
 [**partnersCertificationsIndex**](PartnersApi.md#partnersCertificationsIndex) | **GET** /partners/{partner_id}/certifications | Get partner certifications.
 [**partnersContentsDelete**](PartnersApi.md#partnersContentsDelete) | **DELETE** /partners/{partner_id}/contents/{content_key} | Delete content for a given partner.
 [**partnersContentsGet**](PartnersApi.md#partnersContentsGet) | **GET** /partners/{partner_id}/contents/{content_key} | Get the content of a given partner.
 [**partnersContentsUpdate**](PartnersApi.md#partnersContentsUpdate) | **PUT** /partners/{partner_id}/contents/{content_key} | Update content for a given partner.
+[**partnersCouponsActionsCreate**](PartnersApi.md#partnersCouponsActionsCreate) | **POST** /partners/{partner_id}/coupons/{coupon_id}/actions | Coupon action
 [**partnersCouponsCreate**](PartnersApi.md#partnersCouponsCreate) | **POST** /partners/{partner_id}/coupons | Create a new partner coupon.
 [**partnersCouponsIndex**](PartnersApi.md#partnersCouponsIndex) | **GET** /partners/{partner_id}/coupons | List Partner Coupons.
 [**partnersCreate**](PartnersApi.md#partnersCreate) | **POST** /partners | Create a Partner.
@@ -116,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query)
+> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query)
 
 List facets and aggregations for the Partner Search.
 
@@ -144,13 +145,15 @@ $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
 $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
 $refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$sort = "sort_example"; // string | Sort Partner's by a given property.
+$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
+$industry = "industry_example"; // string | Filter the partners by their industry identifiers
+$sort = "relevance"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -170,7 +173,9 @@ Name | Type | Description  | Notes
  **satisfaction** | **string**| Partner Satisfaction Ratio. | [optional]
  **punches_use_speed** | **string**| Punches use speed. | [optional]
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
- **sort** | **string**| Sort Partner&#39;s by a given property. | [optional]
+ **industry_id** | **string**| Filter the partners by their industry ids | [optional]
+ **industry** | **string**| Filter the partners by their industry identifiers | [optional]
+ **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -246,7 +251,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsDelete**
-> partnersCertificationsDelete($partner_id, $id)
+> partnersCertificationsDelete($partner_id, $certification_id)
 
 Detach certification from partner.
 
@@ -267,10 +272,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$id = "id_example"; // string | 
+$certification_id = "certification_id_example"; // string | 
 
 try {
-    $api_instance->partnersCertificationsDelete($partner_id, $id);
+    $api_instance->partnersCertificationsDelete($partner_id, $certification_id);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -282,7 +287,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **id** | **string**|  |
+ **certification_id** | **string**|  |
 
 ### Return type
 
@@ -583,6 +588,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersCouponsActionsCreate**
+> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource)
+
+Coupon action
+
+Coupon action
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$coupon_id = "coupon_id_example"; // string | 
+$partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
+
+try {
+    $result = $api_instance->partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersCouponsActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **coupon_id** | **string**|  |
+ **partner_coupon_action_resource** | [**\Ageras\Api\PartnerCouponActionResource**](../Model/\Ageras\Api\PartnerCouponActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerCouponResource**](../Model/PartnerCouponResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersCouponsCreate**
 > \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id, $partner_coupon_resource)
 
@@ -663,7 +725,7 @@ $partner_id = "partner_id_example"; // string |
 $show_expired = false; // bool | Only show expired partner coupons.
 $show_deactivated = false; // bool | Only show deactivated partner coupons.
 $show_empty = false; // bool | Should empty partner coupons be included in the result.
-$sort = "sort_example"; // string | Sort the coupons by different values
+$sort = "created_at"; // string | Sort the coupons by different values
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
@@ -685,7 +747,7 @@ Name | Type | Description  | Notes
  **show_expired** | **bool**| Only show expired partner coupons. | [optional] [default to false]
  **show_deactivated** | **bool**| Only show deactivated partner coupons. | [optional] [default to false]
  **show_empty** | **bool**| Should empty partner coupons be included in the result. | [optional] [default to false]
- **sort** | **string**| Sort the coupons by different values | [optional]
+ **sort** | **string**| Sort the coupons by different values | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -864,7 +926,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query)
 
 List Partners.
 
@@ -892,13 +954,15 @@ $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
 $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
 $refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$sort = "sort_example"; // string | Sort Partner's by a given property.
+$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
+$industry = "industry_example"; // string | Filter the partners by their industry identifiers
+$sort = "relevance"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -918,7 +982,9 @@ Name | Type | Description  | Notes
  **satisfaction** | **string**| Partner Satisfaction Ratio. | [optional]
  **punches_use_speed** | **string**| Punches use speed. | [optional]
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
- **sort** | **string**| Sort Partner&#39;s by a given property. | [optional]
+ **industry_id** | **string**| Filter the partners by their industry ids | [optional]
+ **industry** | **string**| Filter the partners by their industry identifiers | [optional]
+ **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

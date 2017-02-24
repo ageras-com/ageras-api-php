@@ -112,9 +112,17 @@ class LeadIndustryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "alias"
+     * Test attribute "slug"
      */
-    public function testPropertyAlias()
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
+     * Test attribute "identifier"
+     */
+    public function testPropertyIdentifier()
     {
 
     }

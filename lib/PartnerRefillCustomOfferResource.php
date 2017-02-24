@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerIndustryResource
+ * PartnerRefillCustomOfferResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerIndustryResource Class Doc Comment
+ * PartnerRefillCustomOfferResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,23 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerIndustryResource implements ArrayAccess
+class PartnerRefillCustomOfferResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerIndustryResource';
+    protected static $swaggerModelName = 'PartnerRefillCustomOfferResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'name' => 'string',
-        'slug' => 'string',
-        'identifier' => 'string'
+        'punches' => 'int',
+        'price' => 'int',
+        'due_days' => 'int'
     );
 
     public static function swaggerTypes()
@@ -82,10 +81,9 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'name' => 'name',
-        'slug' => 'slug',
-        'identifier' => 'identifier'
+        'punches' => 'punches',
+        'price' => 'price',
+        'due_days' => 'due_days'
     );
 
     public static function attributeMap()
@@ -98,10 +96,9 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'name' => 'setName',
-        'slug' => 'setSlug',
-        'identifier' => 'setIdentifier'
+        'punches' => 'setPunches',
+        'price' => 'setPrice',
+        'due_days' => 'setDueDays'
     );
 
     public static function setters()
@@ -114,10 +111,9 @@ class PartnerIndustryResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'name' => 'getName',
-        'slug' => 'getSlug',
-        'identifier' => 'getIdentifier'
+        'punches' => 'getPunches',
+        'price' => 'getPrice',
+        'due_days' => 'getDueDays'
     );
 
     public static function getters()
@@ -141,10 +137,9 @@ class PartnerIndustryResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
-        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['punches'] = isset($data['punches']) ? $data['punches'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['due_days'] = isset($data['due_days']) ? $data['due_days'] : null;
     }
 
     /**
@@ -171,85 +166,64 @@ class PartnerIndustryResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets punches
      * @return int
      */
-    public function getId()
+    public function getPunches()
     {
-        return $this->container['id'];
+        return $this->container['punches'];
     }
 
     /**
-     * Sets id
-     * @param int $id Id for the industry.
+     * Sets punches
+     * @param int $punches
      * @return $this
      */
-    public function setId($id)
+    public function setPunches($punches)
     {
-        $this->container['id'] = $id;
+        $this->container['punches'] = $punches;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets price
+     * @return int
      */
-    public function getName()
+    public function getPrice()
     {
-        return $this->container['name'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets name
-     * @param string $name Name of the industry.
+     * Sets price
+     * @param int $price
      * @return $this
      */
-    public function setName($name)
+    public function setPrice($price)
     {
-        $this->container['name'] = $name;
+        $this->container['price'] = $price;
 
         return $this;
     }
 
     /**
-     * Gets slug
-     * @return string
+     * Gets due_days
+     * @return int
      */
-    public function getSlug()
+    public function getDueDays()
     {
-        return $this->container['slug'];
+        return $this->container['due_days'];
     }
 
     /**
-     * Sets slug
-     * @param string $slug Uri friendly name for the industry.
+     * Sets due_days
+     * @param int $due_days
      * @return $this
      */
-    public function setSlug($slug)
+    public function setDueDays($due_days)
     {
-        $this->container['slug'] = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Gets identifier
-     * @return string
-     */
-    public function getIdentifier()
-    {
-        return $this->container['identifier'];
-    }
-
-    /**
-     * Sets identifier
-     * @param string $identifier
-     * @return $this
-     */
-    public function setIdentifier($identifier)
-    {
-        $this->container['identifier'] = $identifier;
+        $this->container['due_days'] = $due_days;
 
         return $this;
     }

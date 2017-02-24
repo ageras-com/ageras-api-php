@@ -203,7 +203,7 @@ class RatingsApi
      *
      * @param string $partner_id Partner id for the ratings to be filtered by. (optional)
      * @param string $rating_id Rating ids. (optional)
-     * @param string $sort Sort ratings by a given property. (optional)
+     * @param string $sort Sort ratings by a given property. (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
@@ -223,7 +223,7 @@ class RatingsApi
      *
      * @param string $partner_id Partner id for the ratings to be filtered by. (optional)
      * @param string $rating_id Rating ids. (optional)
-     * @param string $sort Sort ratings by a given property. (optional)
+     * @param string $sort Sort ratings by a given property. (optional, default to created_at)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)

@@ -71,6 +71,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'string',
         'reserved_at' => 'string',
         'company_name' => 'string',
+        'slug' => 'string',
         'is_enabled' => 'bool',
         'has_subscription' => 'bool',
         'state' => 'string',
@@ -111,6 +112,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'reserved_at' => 'reserved_at',
         'company_name' => 'company_name',
+        'slug' => 'slug',
         'is_enabled' => 'is_enabled',
         'has_subscription' => 'has_subscription',
         'state' => 'state',
@@ -151,6 +153,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'reserved_at' => 'setReservedAt',
         'company_name' => 'setCompanyName',
+        'slug' => 'setSlug',
         'is_enabled' => 'setIsEnabled',
         'has_subscription' => 'setHasSubscription',
         'state' => 'setState',
@@ -191,6 +194,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'reserved_at' => 'getReservedAt',
         'company_name' => 'getCompanyName',
+        'slug' => 'getSlug',
         'is_enabled' => 'getIsEnabled',
         'has_subscription' => 'getHasSubscription',
         'state' => 'getState',
@@ -266,6 +270,7 @@ class PartnerResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['reserved_at'] = isset($data['reserved_at']) ? $data['reserved_at'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : false;
         $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
         $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
@@ -424,6 +429,27 @@ class PartnerResource implements ArrayAccess
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug The slug for the given partner
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
 
         return $this;
     }

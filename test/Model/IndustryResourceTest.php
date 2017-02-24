@@ -143,4 +143,12 @@ class IndustryResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "identifier"
+     */
+    public function testPropertyIdentifier()
+    {
+
+    }
+
 }
