@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **certificationsIndex**
-> \Ageras\Api\CertificationResult certificationsIndex($geo_code, $limit, $page, $industry_id, $query)
+> \Ageras\Api\CertificationResult certificationsIndex($geo_code, $industry_id, $limit, $page, $query)
 
 Get all available certifications.
 
@@ -29,13 +29,13 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CertificationsApi();
 $geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | 
-$page = 56; // int | 
 $industry_id = 56; // int | 
+$limit = 56; // int | The number of resources to be returned.
+$page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->certificationsIndex($geo_code, $limit, $page, $industry_id, $query);
+    $result = $api_instance->certificationsIndex($geo_code, $industry_id, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CertificationsApi->certificationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -48,9 +48,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**|  | [optional]
- **limit** | **int**|  | [optional]
- **page** | **int**|  | [optional]
  **industry_id** | **int**|  | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 
 ### Return type

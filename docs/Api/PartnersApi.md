@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query)
+> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query)
 
 List facets and aggregations for the Partner Search.
 
@@ -147,13 +147,14 @@ $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
 $refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
 $industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
 $industry = "industry_example"; // string | Filter the partners by their industry identifiers
+$point = "point_example"; // string | Location Point to search partners by
 $sort = "relevance"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -175,6 +176,7 @@ Name | Type | Description  | Notes
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **industry_id** | **string**| Filter the partners by their industry ids | [optional]
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
+ **point** | **string**| Location Point to search partners by | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -926,7 +928,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query)
+> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query)
 
 List Partners.
 
@@ -956,13 +958,14 @@ $punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
 $refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
 $industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
 $industry = "industry_example"; // string | Filter the partners by their industry identifiers
+$point = "point_example"; // string | Location Point to search partners by
 $sort = "relevance"; // string | Sort Partner's by a given property.
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -984,6 +987,7 @@ Name | Type | Description  | Notes
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **industry_id** | **string**| Filter the partners by their industry ids | [optional]
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
+ **point** | **string**| Location Point to search partners by | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
