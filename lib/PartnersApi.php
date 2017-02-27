@@ -222,6 +222,7 @@ class PartnersApi
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
      * @param string $industry_id Filter the partners by their industry ids (optional)
      * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $point Location Point to search partners by (optional)
      * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
@@ -229,9 +230,9 @@ class PartnersApi
      * @return \Ageras\Api\AggregationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersAggregationsIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersAggregationsIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->partnersAggregationsIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
+        list($response) = $this->partnersAggregationsIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -250,6 +251,7 @@ class PartnersApi
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
      * @param string $industry_id Filter the partners by their industry ids (optional)
      * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $point Location Point to search partners by (optional)
      * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
@@ -257,7 +259,7 @@ class PartnersApi
      * @return Array of \Ageras\Api\AggregationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersAggregationsIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersAggregationsIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/partners/aggregations";
@@ -310,6 +312,10 @@ class PartnersApi
         // query params
         if ($industry !== null) {
             $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($industry);
+        }
+        // query params
+        if ($point !== null) {
+            $queryParams['point'] = $this->apiClient->getSerializer()->toQueryValue($point);
         }
         // query params
         if ($sort !== null) {
@@ -1793,6 +1799,7 @@ class PartnersApi
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
      * @param string $industry_id Filter the partners by their industry ids (optional)
      * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $point Location Point to search partners by (optional)
      * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
@@ -1800,9 +1807,9 @@ class PartnersApi
      * @return \Ageras\Api\PartnerResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersIndex($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->partnersIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $sort, $limit, $page, $query);
+        list($response) = $this->partnersIndexWithHttpInfo($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
         return $response;
     }
 
@@ -1821,6 +1828,7 @@ class PartnersApi
      * @param string $refill_offer_id Filter the partners by their refill offers (optional)
      * @param string $industry_id Filter the partners by their industry ids (optional)
      * @param string $industry Filter the partners by their industry identifiers (optional)
+     * @param string $point Location Point to search partners by (optional)
      * @param string $sort Sort Partner&#39;s by a given property. (optional, default to relevance)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
@@ -1828,7 +1836,7 @@ class PartnersApi
      * @return Array of \Ageras\Api\PartnerResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function partnersIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function partnersIndexWithHttpInfo($partner_id = null, $state = null, $is_enabled = null, $employee_id = null, $geo_code = null, $satisfaction = null, $punches_use_speed = null, $refill_offer_id = null, $industry_id = null, $industry = null, $point = null, $sort = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/partners";
@@ -1881,6 +1889,10 @@ class PartnersApi
         // query params
         if ($industry !== null) {
             $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($industry);
+        }
+        // query params
+        if ($point !== null) {
+            $queryParams['point'] = $this->apiClient->getSerializer()->toQueryValue($point);
         }
         // query params
         if ($sort !== null) {

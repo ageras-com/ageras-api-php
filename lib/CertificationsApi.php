@@ -108,16 +108,16 @@ class CertificationsApi
      * Get all available certifications.
      *
      * @param string $geo_code  (optional)
-     * @param int $limit  (optional)
-     * @param int $page  (optional)
      * @param int $industry_id  (optional)
+     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\CertificationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function certificationsIndex($geo_code = null, $limit = null, $page = null, $industry_id = null, $query = null)
+    public function certificationsIndex($geo_code = null, $industry_id = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->certificationsIndexWithHttpInfo($geo_code, $limit, $page, $industry_id, $query);
+        list($response) = $this->certificationsIndexWithHttpInfo($geo_code, $industry_id, $limit, $page, $query);
         return $response;
     }
 
@@ -127,14 +127,14 @@ class CertificationsApi
      * Get all available certifications.
      *
      * @param string $geo_code  (optional)
-     * @param int $limit  (optional)
-     * @param int $page  (optional)
      * @param int $industry_id  (optional)
+     * @param int $limit The number of resources to be returned. (optional)
+     * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\CertificationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function certificationsIndexWithHttpInfo($geo_code = null, $limit = null, $page = null, $industry_id = null, $query = null)
+    public function certificationsIndexWithHttpInfo($geo_code = null, $industry_id = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/certifications";
@@ -153,16 +153,16 @@ class CertificationsApi
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($geo_code);
         }
         // query params
+        if ($industry_id !== null) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($industry_id);
+        }
+        // query params
         if ($limit !== null) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($limit);
         }
         // query params
         if ($page !== null) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }
-        // query params
-        if ($industry_id !== null) {
-            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($industry_id);
         }
         // query params
         if ($query !== null) {

@@ -204,15 +204,16 @@ class RatingsApi
      * @param string $partner_id Partner id for the ratings to be filtered by. (optional)
      * @param string $rating_id Rating ids. (optional)
      * @param string $sort Sort ratings by a given property. (optional, default to created_at)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\RatingResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function ratingsIndex($partner_id = null, $rating_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function ratingsIndex($partner_id = null, $rating_id = null, $sort = null, $geo_code = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->ratingsIndexWithHttpInfo($partner_id, $rating_id, $sort, $limit, $page, $query);
+        list($response) = $this->ratingsIndexWithHttpInfo($partner_id, $rating_id, $sort, $geo_code, $limit, $page, $query);
         return $response;
     }
 
@@ -224,13 +225,14 @@ class RatingsApi
      * @param string $partner_id Partner id for the ratings to be filtered by. (optional)
      * @param string $rating_id Rating ids. (optional)
      * @param string $sort Sort ratings by a given property. (optional, default to created_at)
+     * @param string $geo_code Geographic Location Code. (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\RatingResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function ratingsIndexWithHttpInfo($partner_id = null, $rating_id = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function ratingsIndexWithHttpInfo($partner_id = null, $rating_id = null, $sort = null, $geo_code = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/ratings";
@@ -255,6 +257,10 @@ class RatingsApi
         // query params
         if ($sort !== null) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }
+        // query params
+        if ($geo_code !== null) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($geo_code);
         }
         // query params
         if ($limit !== null) {
