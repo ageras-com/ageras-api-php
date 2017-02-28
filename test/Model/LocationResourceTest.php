@@ -104,6 +104,14 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "slug"
+     */
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
      * Test attribute "country_name"
      */
     public function testPropertyCountryName()
