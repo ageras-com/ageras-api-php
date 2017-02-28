@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **string** | Code for the given location. | [optional] 
+**slug** | **string** | url slug | [optional] 
 **country_name** | **string** | Name of the country | [optional] 
 **zip_code** | **string** | Zip Code. | [optional] 
 **city_name** | **string** | Name of the city. | [optional] 
