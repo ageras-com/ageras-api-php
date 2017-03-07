@@ -112,6 +112,22 @@ class PartnerNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_user_id"
+     */
+    public function testPropertyPartnerUserId()
+    {
+
+    }
+
+    /**
+     * Test attribute "creator_type"
+     */
+    public function testPropertyCreatorType()
+    {
+
+    }
+
+    /**
      * Test attribute "note"
      */
     public function testPropertyNote()

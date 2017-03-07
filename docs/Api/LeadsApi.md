@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsIndex**
-> \Ageras\Api\LeadResult leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $limit, $page, $query)
+> \Ageras\Api\LeadResult leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $client_id, $limit, $page, $query)
 
 Search for Lead's by a given set of criteria.
 
@@ -204,12 +204,13 @@ $partner_id = 56; // int | Provide a given partner id to filter by. Requires \"f
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
 $sort = "created_at"; // string | Sort Leads by a given attribute.
 $status = "unknown"; // string | Status for the given lead.
+$client_id = 56; // int | Lead's client
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $limit, $page, $query);
+    $result = $api_instance->leadsIndex($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $client_id, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LeadsApi->leadsIndex: ', $e->getMessage(), PHP_EOL;
@@ -229,6 +230,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **sort** | **string**| Sort Leads by a given attribute. | [optional] [default to created_at]
  **status** | **string**| Status for the given lead. | [optional] [default to unknown]
+ **client_id** | **int**| Lead&#39;s client | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

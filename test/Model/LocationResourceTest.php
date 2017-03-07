@@ -96,6 +96,14 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
      * Test attribute "code"
      */
     public function testPropertyCode()

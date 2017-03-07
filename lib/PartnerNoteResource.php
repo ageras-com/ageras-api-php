@@ -68,6 +68,8 @@ class PartnerNoteResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'employee_id' => 'int',
+        'partner_user_id' => 'int',
+        'creator_type' => 'string',
         'note' => 'string',
         'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource'
     );
@@ -84,6 +86,8 @@ class PartnerNoteResource implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'employee_id' => 'employee_id',
+        'partner_user_id' => 'partner_user_id',
+        'creator_type' => 'creator_type',
         'note' => 'note',
         'satisfaction' => 'satisfaction'
     );
@@ -100,6 +104,8 @@ class PartnerNoteResource implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'employee_id' => 'setEmployeeId',
+        'partner_user_id' => 'setPartnerUserId',
+        'creator_type' => 'setCreatorType',
         'note' => 'setNote',
         'satisfaction' => 'setSatisfaction'
     );
@@ -116,6 +122,8 @@ class PartnerNoteResource implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'employee_id' => 'getEmployeeId',
+        'partner_user_id' => 'getPartnerUserId',
+        'creator_type' => 'getCreatorType',
         'note' => 'getNote',
         'satisfaction' => 'getSatisfaction'
     );
@@ -125,8 +133,24 @@ class PartnerNoteResource implements ArrayAccess
         return self::$getters;
     }
 
+    const CREATOR_TYPE_UNKNOWN = 'unknown';
+    const CREATOR_TYPE_EMPLOYEE = 'employee';
+    const CREATOR_TYPE_PARTNER_USER = 'partner_user';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getCreatorTypeAllowableValues()
+    {
+        return [
+            self::CREATOR_TYPE_UNKNOWN,
+            self::CREATOR_TYPE_EMPLOYEE,
+            self::CREATOR_TYPE_PARTNER_USER,
+        ];
+    }
     
 
     /**
@@ -143,6 +167,8 @@ class PartnerNoteResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
+        $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
+        $this->container['creator_type'] = isset($data['creator_type']) ? $data['creator_type'] : 'unknown';
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
     }
@@ -155,6 +181,11 @@ class PartnerNoteResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        $allowed_values = array("unknown", "employee", "partner_user");
+        if (!in_array($this->container['creator_type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'creator_type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -166,6 +197,10 @@ class PartnerNoteResource implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = array("unknown", "employee", "partner_user");
+        if (!in_array($this->container['creator_type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -208,6 +243,52 @@ class PartnerNoteResource implements ArrayAccess
     public function setEmployeeId($employee_id)
     {
         $this->container['employee_id'] = $employee_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_user_id
+     * @return int
+     */
+    public function getPartnerUserId()
+    {
+        return $this->container['partner_user_id'];
+    }
+
+    /**
+     * Sets partner_user_id
+     * @param int $partner_user_id
+     * @return $this
+     */
+    public function setPartnerUserId($partner_user_id)
+    {
+        $this->container['partner_user_id'] = $partner_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets creator_type
+     * @return string
+     */
+    public function getCreatorType()
+    {
+        return $this->container['creator_type'];
+    }
+
+    /**
+     * Sets creator_type
+     * @param string $creator_type
+     * @return $this
+     */
+    public function setCreatorType($creator_type)
+    {
+        $allowed_values = array('unknown', 'employee', 'partner_user');
+        if (!in_array($creator_type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'creator_type', must be one of 'unknown', 'employee', 'partner_user'");
+        }
+        $this->container['creator_type'] = $creator_type;
 
         return $this;
     }

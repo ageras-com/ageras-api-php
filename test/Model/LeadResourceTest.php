@@ -231,4 +231,12 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "client_id"
+     */
+    public function testPropertyClientId()
+    {
+
+    }
+
 }

@@ -112,17 +112,25 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "coupon_revenue"
+     * Test attribute "clients"
      */
-    public function testPropertyCouponRevenue()
+    public function testPropertyClients()
     {
 
     }
 
     /**
-     * Test attribute "golden_ratio"
+     * Test attribute "credits"
      */
-    public function testPropertyGoldenRatio()
+    public function testPropertyCredits()
+    {
+
+    }
+
+    /**
+     * Test attribute "matches"
+     */
+    public function testPropertyMatches()
     {
 
     }
@@ -136,9 +144,17 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "leads"
+     * Test attribute "refill"
      */
-    public function testPropertyLeads()
+    public function testPropertyRefill()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_sales"
+     */
+    public function testPropertyTotalSales()
     {
 
     }

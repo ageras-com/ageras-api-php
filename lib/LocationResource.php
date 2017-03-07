@@ -66,6 +66,7 @@ class LocationResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'id' => 'int',
         'code' => 'string',
         'slug' => 'string',
         'country_name' => 'string',
@@ -86,6 +87,7 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'id' => 'id',
         'code' => 'code',
         'slug' => 'slug',
         'country_name' => 'country_name',
@@ -106,6 +108,7 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'id' => 'setId',
         'code' => 'setCode',
         'slug' => 'setSlug',
         'country_name' => 'setCountryName',
@@ -126,6 +129,7 @@ class LocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'id' => 'getId',
         'code' => 'getCode',
         'slug' => 'getSlug',
         'country_name' => 'getCountryName',
@@ -157,6 +161,7 @@ class LocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
@@ -189,6 +194,27 @@ class LocationResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id id for resource
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets code

@@ -390,15 +390,16 @@ class LeadsApi
      * @param string $geo_code Geographic Location Code. (optional)
      * @param string $sort Sort Leads by a given attribute. (optional, default to created_at)
      * @param string $status Status for the given lead. (optional, default to unknown)
+     * @param int $client_id Lead&#39;s client (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\LeadResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function leadsIndex($lead_id = null, $needs_more_offers = null, $phone = null, $filter = null, $partner_id = null, $geo_code = null, $sort = null, $status = null, $limit = null, $page = null, $query = null)
+    public function leadsIndex($lead_id = null, $needs_more_offers = null, $phone = null, $filter = null, $partner_id = null, $geo_code = null, $sort = null, $status = null, $client_id = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->leadsIndexWithHttpInfo($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $limit, $page, $query);
+        list($response) = $this->leadsIndexWithHttpInfo($lead_id, $needs_more_offers, $phone, $filter, $partner_id, $geo_code, $sort, $status, $client_id, $limit, $page, $query);
         return $response;
     }
 
@@ -415,13 +416,14 @@ class LeadsApi
      * @param string $geo_code Geographic Location Code. (optional)
      * @param string $sort Sort Leads by a given attribute. (optional, default to created_at)
      * @param string $status Status for the given lead. (optional, default to unknown)
+     * @param int $client_id Lead&#39;s client (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\LeadResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function leadsIndexWithHttpInfo($lead_id = null, $needs_more_offers = null, $phone = null, $filter = null, $partner_id = null, $geo_code = null, $sort = null, $status = null, $limit = null, $page = null, $query = null)
+    public function leadsIndexWithHttpInfo($lead_id = null, $needs_more_offers = null, $phone = null, $filter = null, $partner_id = null, $geo_code = null, $sort = null, $status = null, $client_id = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/leads";
@@ -466,6 +468,10 @@ class LeadsApi
         // query params
         if ($status !== null) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }
+        // query params
+        if ($client_id !== null) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($client_id);
         }
         // query params
         if ($limit !== null) {
