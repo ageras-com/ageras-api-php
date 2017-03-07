@@ -68,10 +68,12 @@ class KPIResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'geo_code' => 'string',
         'industry' => '\Ageras\Api\IndustryResource',
-        'coupon_revenue' => '\Ageras\Api\KPICouponRevenueResource',
-        'golden_ratio' => '\Ageras\Api\KPIGoldenRatioResource',
-        'partners' => '\Ageras\Api\KPIPartnersResource',
-        'leads' => '\Ageras\Api\KPILeadsResource'
+        'clients' => '\Ageras\Api\KPIClientsResource',
+        'credits' => '\Ageras\Api\KPICreditsResource',
+        'matches' => '\Ageras\Api\KPIMatchesResource',
+        'partners' => '\Ageras\Api\KPIPartnerResource',
+        'refill' => '\Ageras\Api\KPIRefillResource',
+        'total_sales' => 'string'
     );
 
     public static function swaggerTypes()
@@ -86,10 +88,12 @@ class KPIResource implements ArrayAccess
     protected static $attributeMap = array(
         'geo_code' => 'geo_code',
         'industry' => 'industry',
-        'coupon_revenue' => 'coupon_revenue',
-        'golden_ratio' => 'golden_ratio',
+        'clients' => 'clients',
+        'credits' => 'credits',
+        'matches' => 'matches',
         'partners' => 'partners',
-        'leads' => 'leads'
+        'refill' => 'refill',
+        'total_sales' => 'total_sales'
     );
 
     public static function attributeMap()
@@ -104,10 +108,12 @@ class KPIResource implements ArrayAccess
     protected static $setters = array(
         'geo_code' => 'setGeoCode',
         'industry' => 'setIndustry',
-        'coupon_revenue' => 'setCouponRevenue',
-        'golden_ratio' => 'setGoldenRatio',
+        'clients' => 'setClients',
+        'credits' => 'setCredits',
+        'matches' => 'setMatches',
         'partners' => 'setPartners',
-        'leads' => 'setLeads'
+        'refill' => 'setRefill',
+        'total_sales' => 'setTotalSales'
     );
 
     public static function setters()
@@ -122,10 +128,12 @@ class KPIResource implements ArrayAccess
     protected static $getters = array(
         'geo_code' => 'getGeoCode',
         'industry' => 'getIndustry',
-        'coupon_revenue' => 'getCouponRevenue',
-        'golden_ratio' => 'getGoldenRatio',
+        'clients' => 'getClients',
+        'credits' => 'getCredits',
+        'matches' => 'getMatches',
         'partners' => 'getPartners',
-        'leads' => 'getLeads'
+        'refill' => 'getRefill',
+        'total_sales' => 'getTotalSales'
     );
 
     public static function getters()
@@ -151,10 +159,12 @@ class KPIResource implements ArrayAccess
     {
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
-        $this->container['coupon_revenue'] = isset($data['coupon_revenue']) ? $data['coupon_revenue'] : null;
-        $this->container['golden_ratio'] = isset($data['golden_ratio']) ? $data['golden_ratio'] : null;
+        $this->container['clients'] = isset($data['clients']) ? $data['clients'] : null;
+        $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
+        $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
         $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
-        $this->container['leads'] = isset($data['leads']) ? $data['leads'] : null;
+        $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
+        $this->container['total_sales'] = isset($data['total_sales']) ? $data['total_sales'] : null;
     }
 
     /**
@@ -223,50 +233,71 @@ class KPIResource implements ArrayAccess
     }
 
     /**
-     * Gets coupon_revenue
-     * @return \Ageras\Api\KPICouponRevenueResource
+     * Gets clients
+     * @return \Ageras\Api\KPIClientsResource
      */
-    public function getCouponRevenue()
+    public function getClients()
     {
-        return $this->container['coupon_revenue'];
+        return $this->container['clients'];
     }
 
     /**
-     * Sets coupon_revenue
-     * @param \Ageras\Api\KPICouponRevenueResource $coupon_revenue
+     * Sets clients
+     * @param \Ageras\Api\KPIClientsResource $clients
      * @return $this
      */
-    public function setCouponRevenue($coupon_revenue)
+    public function setClients($clients)
     {
-        $this->container['coupon_revenue'] = $coupon_revenue;
+        $this->container['clients'] = $clients;
 
         return $this;
     }
 
     /**
-     * Gets golden_ratio
-     * @return \Ageras\Api\KPIGoldenRatioResource
+     * Gets credits
+     * @return \Ageras\Api\KPICreditsResource
      */
-    public function getGoldenRatio()
+    public function getCredits()
     {
-        return $this->container['golden_ratio'];
+        return $this->container['credits'];
     }
 
     /**
-     * Sets golden_ratio
-     * @param \Ageras\Api\KPIGoldenRatioResource $golden_ratio
+     * Sets credits
+     * @param \Ageras\Api\KPICreditsResource $credits
      * @return $this
      */
-    public function setGoldenRatio($golden_ratio)
+    public function setCredits($credits)
     {
-        $this->container['golden_ratio'] = $golden_ratio;
+        $this->container['credits'] = $credits;
+
+        return $this;
+    }
+
+    /**
+     * Gets matches
+     * @return \Ageras\Api\KPIMatchesResource
+     */
+    public function getMatches()
+    {
+        return $this->container['matches'];
+    }
+
+    /**
+     * Sets matches
+     * @param \Ageras\Api\KPIMatchesResource $matches
+     * @return $this
+     */
+    public function setMatches($matches)
+    {
+        $this->container['matches'] = $matches;
 
         return $this;
     }
 
     /**
      * Gets partners
-     * @return \Ageras\Api\KPIPartnersResource
+     * @return \Ageras\Api\KPIPartnerResource
      */
     public function getPartners()
     {
@@ -275,7 +306,7 @@ class KPIResource implements ArrayAccess
 
     /**
      * Sets partners
-     * @param \Ageras\Api\KPIPartnersResource $partners
+     * @param \Ageras\Api\KPIPartnerResource $partners
      * @return $this
      */
     public function setPartners($partners)
@@ -286,22 +317,43 @@ class KPIResource implements ArrayAccess
     }
 
     /**
-     * Gets leads
-     * @return \Ageras\Api\KPILeadsResource
+     * Gets refill
+     * @return \Ageras\Api\KPIRefillResource
      */
-    public function getLeads()
+    public function getRefill()
     {
-        return $this->container['leads'];
+        return $this->container['refill'];
     }
 
     /**
-     * Sets leads
-     * @param \Ageras\Api\KPILeadsResource $leads
+     * Sets refill
+     * @param \Ageras\Api\KPIRefillResource $refill
      * @return $this
      */
-    public function setLeads($leads)
+    public function setRefill($refill)
     {
-        $this->container['leads'] = $leads;
+        $this->container['refill'] = $refill;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_sales
+     * @return string
+     */
+    public function getTotalSales()
+    {
+        return $this->container['total_sales'];
+    }
+
+    /**
+     * Sets total_sales
+     * @param string $total_sales Total Sales
+     * @return $this
+     */
+    public function setTotalSales($total_sales)
+    {
+        $this->container['total_sales'] = $total_sales;
 
         return $this;
     }

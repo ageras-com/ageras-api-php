@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **employee_id** | **int** |  | [optional] 
+**partner_user_id** | **int** |  | [optional] 
+**creator_type** | **string** |  | [optional] [default to 'unknown']
 **note** | **string** |  | [optional] 
 **satisfaction** | [**\Ageras\Api\PartnerSatisfactionResource**](PartnerSatisfactionResource.md) |  | [optional] 
 

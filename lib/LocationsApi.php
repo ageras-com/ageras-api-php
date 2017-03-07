@@ -111,15 +111,16 @@ class LocationsApi
      * @param string $point Geo Location Point (optional)
      * @param string $slug Slug for url friendly strings. (optional)
      * @param string $sort Sort types for Locations (optional, default to distance)
+     * @param string $distinct Distinct locations (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\LocationResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function locationsIndex($geo_code = null, $point = null, $slug = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function locationsIndex($geo_code = null, $point = null, $slug = null, $sort = null, $distinct = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->locationsIndexWithHttpInfo($geo_code, $point, $slug, $sort, $limit, $page, $query);
+        list($response) = $this->locationsIndexWithHttpInfo($geo_code, $point, $slug, $sort, $distinct, $limit, $page, $query);
         return $response;
     }
 
@@ -132,13 +133,14 @@ class LocationsApi
      * @param string $point Geo Location Point (optional)
      * @param string $slug Slug for url friendly strings. (optional)
      * @param string $sort Sort types for Locations (optional, default to distance)
+     * @param string $distinct Distinct locations (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\LocationResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function locationsIndexWithHttpInfo($geo_code = null, $point = null, $slug = null, $sort = null, $limit = null, $page = null, $query = null)
+    public function locationsIndexWithHttpInfo($geo_code = null, $point = null, $slug = null, $sort = null, $distinct = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/locations";
@@ -167,6 +169,10 @@ class LocationsApi
         // query params
         if ($sort !== null) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }
+        // query params
+        if ($distinct !== null) {
+            $queryParams['distinct'] = $this->apiClient->getSerializer()->toQueryValue($distinct);
         }
         // query params
         if ($limit !== null) {

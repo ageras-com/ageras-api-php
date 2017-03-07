@@ -82,7 +82,8 @@ class LeadResource implements ArrayAccess
         'meeting' => '\Ageras\Api\LeadMeetingResource',
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
         'offers_info' => '\Ageras\Api\LeadOfferInfoResource',
-        'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource'
+        'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
+        'client_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -111,7 +112,8 @@ class LeadResource implements ArrayAccess
         'meeting' => 'meeting',
         'accepted' => 'accepted',
         'offers_info' => 'offers_info',
-        'affiliate_campaign' => 'affiliate_campaign'
+        'affiliate_campaign' => 'affiliate_campaign',
+        'client_id' => 'client_id'
     );
 
     public static function attributeMap()
@@ -140,7 +142,8 @@ class LeadResource implements ArrayAccess
         'meeting' => 'setMeeting',
         'accepted' => 'setAccepted',
         'offers_info' => 'setOffersInfo',
-        'affiliate_campaign' => 'setAffiliateCampaign'
+        'affiliate_campaign' => 'setAffiliateCampaign',
+        'client_id' => 'setClientId'
     );
 
     public static function setters()
@@ -169,7 +172,8 @@ class LeadResource implements ArrayAccess
         'meeting' => 'getMeeting',
         'accepted' => 'getAccepted',
         'offers_info' => 'getOffersInfo',
-        'affiliate_campaign' => 'getAffiliateCampaign'
+        'affiliate_campaign' => 'getAffiliateCampaign',
+        'client_id' => 'getClientId'
     );
 
     public static function getters()
@@ -226,6 +230,7 @@ class LeadResource implements ArrayAccess
         $this->container['accepted'] = isset($data['accepted']) ? $data['accepted'] : null;
         $this->container['offers_info'] = isset($data['offers_info']) ? $data['offers_info'] : null;
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
+        $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
     }
 
     /**
@@ -617,6 +622,27 @@ class LeadResource implements ArrayAccess
     public function setAffiliateCampaign($affiliate_campaign)
     {
         $this->container['affiliate_campaign'] = $affiliate_campaign;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_id
+     * @return int
+     */
+    public function getClientId()
+    {
+        return $this->container['client_id'];
+    }
+
+    /**
+     * Sets client_id
+     * @param int $client_id Client id
+     * @return $this
+     */
+    public function setClientId($client_id)
+    {
+        $this->container['client_id'] = $client_id;
 
         return $this;
     }

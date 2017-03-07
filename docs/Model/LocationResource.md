@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** | id for resource | [optional] 
 **code** | **string** | Code for the given location. | [optional] 
 **slug** | **string** | url slug | [optional] 
 **country_name** | **string** | Name of the country | [optional] 
