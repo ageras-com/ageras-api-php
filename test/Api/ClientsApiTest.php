@@ -100,4 +100,15 @@ class ClientsApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for clientsUpdate
+     *
+     * Update a client.
+     *
+     */
+    public function testClientsUpdate()
+    {
+
+    }
+
 }

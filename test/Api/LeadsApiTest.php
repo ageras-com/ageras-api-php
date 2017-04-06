@@ -90,6 +90,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsActionsCreate
+     *
+     * Coupon action.
+     *
+     */
+    public function testLeadsActionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
      * Create a new Lead..
@@ -129,6 +140,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsNotesCreate
+     *
+     * Create lead note.
+     *
+     */
+    public function testLeadsNotesCreate()
     {
 
     }

@@ -104,17 +104,17 @@ class KPIMatchesResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "actual_ratio"
+     * Test attribute "past"
      */
-    public function testPropertyActualRatio()
+    public function testPropertyPast()
     {
 
     }
 
     /**
-     * Test attribute "target_ratio"
+     * Test attribute "ratio"
      */
-    public function testPropertyTargetRatio()
+    public function testPropertyRatio()
     {
 
     }

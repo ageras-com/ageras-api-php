@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsActionTimeResourceTest
+ * LeadOfferInfoItemResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPIClientsActionTimeResourceTest Class Doc Comment
+ * LeadOfferInfoItemResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIClientsActionTimeResource
+// * @description LeadOfferInfoItemResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsActionTimeResourceTest extends \PHPUnit_Framework_TestCase
+class LeadOfferInfoItemResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,33 +88,41 @@ class KPIClientsActionTimeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIClientsActionTimeResource"
+     * Test "LeadOfferInfoItemResource"
      */
-    public function testKPIClientsActionTimeResource()
+    public function testLeadOfferInfoItemResource()
     {
 
     }
 
     /**
-     * Test attribute "target_net"
+     * Test attribute "id"
      */
-    public function testPropertyTargetNet()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "forecast_net"
+     * Test attribute "won"
      */
-    public function testPropertyForecastNet()
+    public function testPropertyWon()
     {
 
     }
 
     /**
-     * Test attribute "actual_net"
+     * Test attribute "created_at"
      */
-    public function testPropertyActualNet()
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner"
+     */
+    public function testPropertyPartner()
     {
 
     }

@@ -4,10 +4,12 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**leadsActionsCreate**](LeadsApi.md#leadsActionsCreate) | **POST** /leads/{lead_id}/actions | Coupon action
 [**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | Create a new Lead.
 [**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
 [**leadsGet**](LeadsApi.md#leadsGet) | **GET** /leads/{lead_id} | Return a Lead from a Lead Id.
 [**leadsIndex**](LeadsApi.md#leadsIndex) | **GET** /leads | Search for Lead&#39;s by a given set of criteria.
+[**leadsNotesCreate**](LeadsApi.md#leadsNotesCreate) | **POST** /leads/{lead_id}/notes | Create lead note
 [**leadsOffersCreate**](LeadsApi.md#leadsOffersCreate) | **POST** /leads/{lead_id}/offers | Create a new offer for a given Lead.
 [**leadsOffersGet**](LeadsApi.md#leadsOffersGet) | **GET** /leads/offers/{lead_offer_id} | Get an offer by id.
 [**leadsOffersGet2**](LeadsApi.md#leadsOffersGet2) | **GET** /leads/{lead_id}/offers/{lead_offer_id} | Get an offer by id.
@@ -16,6 +18,61 @@ Method | HTTP request | Description
 [**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | Index lead types.
 [**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | Update Properties on a given Lead.
 
+
+# **leadsActionsCreate**
+> \Ageras\Api\LeadResource leadsActionsCreate($lead_id, $lead_action_resource)
+
+Coupon action
+
+Coupon action
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_action_resource = new \Ageras\Api\LeadActionResource(); // \Ageras\Api\LeadActionResource | 
+
+try {
+    $result = $api_instance->leadsActionsCreate($lead_id, $lead_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_action_resource** | [**\Ageras\Api\LeadActionResource**](../Model/\Ageras\Api\LeadActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsCreate**
 > \Ageras\Api\LeadResource leadsCreate($lead_resource)
@@ -238,6 +295,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadResult**](../Model/LeadResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsNotesCreate**
+> \Ageras\Api\LeadResource leadsNotesCreate($lead_id, $lead_note_resource)
+
+Create lead note
+
+Create lead note
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_note_resource = new \Ageras\Api\LeadNoteResource(); // \Ageras\Api\LeadNoteResource | 
+
+try {
+    $result = $api_instance->leadsNotesCreate($lead_id, $lead_note_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsNotesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_note_resource** | [**\Ageras\Api\LeadNoteResource**](../Model/\Ageras\Api\LeadNoteResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 

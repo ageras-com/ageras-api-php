@@ -394,14 +394,15 @@ class TasksApi
      * @param bool $include_done  (optional, default to false)
      * @param string $process Process type (optional, default to unknown)
      * @param string $due_before Due before date (optional)
+     * @param string $sort  (optional, default to deadline_at)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\TaskResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function tasksIndex($task_id = null, $geo_code = null, $employee_id = null, $completed_by_employee_id = null, $assigned_employee_id = null, $partner_id = null, $lead_id = null, $status = null, $limit = null, $include_done = null, $process = null, $due_before = null, $page = null, $query = null)
+    public function tasksIndex($task_id = null, $geo_code = null, $employee_id = null, $completed_by_employee_id = null, $assigned_employee_id = null, $partner_id = null, $lead_id = null, $status = null, $limit = null, $include_done = null, $process = null, $due_before = null, $sort = null, $page = null, $query = null)
     {
-        list($response) = $this->tasksIndexWithHttpInfo($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $page, $query);
+        list($response) = $this->tasksIndexWithHttpInfo($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $sort, $page, $query);
         return $response;
     }
 
@@ -422,12 +423,13 @@ class TasksApi
      * @param bool $include_done  (optional, default to false)
      * @param string $process Process type (optional, default to unknown)
      * @param string $due_before Due before date (optional)
+     * @param string $sort  (optional, default to deadline_at)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\TaskResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function tasksIndexWithHttpInfo($task_id = null, $geo_code = null, $employee_id = null, $completed_by_employee_id = null, $assigned_employee_id = null, $partner_id = null, $lead_id = null, $status = null, $limit = null, $include_done = null, $process = null, $due_before = null, $page = null, $query = null)
+    public function tasksIndexWithHttpInfo($task_id = null, $geo_code = null, $employee_id = null, $completed_by_employee_id = null, $assigned_employee_id = null, $partner_id = null, $lead_id = null, $status = null, $limit = null, $include_done = null, $process = null, $due_before = null, $sort = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/tasks";
@@ -488,6 +490,10 @@ class TasksApi
         // query params
         if ($due_before !== null) {
             $queryParams['due_before'] = $this->apiClient->getSerializer()->toQueryValue($due_before);
+        }
+        // query params
+        if ($sort !== null) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
         }
         // query params
         if ($page !== null) {

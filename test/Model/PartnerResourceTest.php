@@ -136,6 +136,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+
+    }
+
+    /**
      * Test attribute "slug"
      */
     public function testPropertySlug()

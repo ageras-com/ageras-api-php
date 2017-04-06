@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **kpiIndex**
-> \Ageras\Api\KPIResult kpiIndex($geo_code, $industry_code, $industry_id, $limit, $page, $query)
+> \Ageras\Api\KPIResult kpiIndex($geo_code, $industry, $industry_id, $employee_id, $partner_id, $limit, $page, $query)
 
 List the different KPI's
 
@@ -29,14 +29,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\KpiApi();
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
-$industry_code = "industry_code_example"; // string | Industry code for the kpi
+$industry = "industry_example"; // string | Industry code for the kpi
 $industry_id = "industry_id_example"; // string | Industry id for the kpi
+$employee_id = "employee_id_example"; // string | Employee Id
+$partner_id = "partner_id_example"; // string | Partner Id
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->kpiIndex($geo_code, $industry_code, $industry_id, $limit, $page, $query);
+    $result = $api_instance->kpiIndex($geo_code, $industry, $industry_id, $employee_id, $partner_id, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KpiApi->kpiIndex: ', $e->getMessage(), PHP_EOL;
@@ -49,8 +51,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**| Geographic Location Code. | [optional]
- **industry_code** | **string**| Industry code for the kpi | [optional]
+ **industry** | **string**| Industry code for the kpi | [optional]
  **industry_id** | **string**| Industry id for the kpi | [optional]
+ **employee_id** | **string**| Employee Id | [optional]
+ **partner_id** | **string**| Partner Id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

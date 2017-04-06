@@ -108,17 +108,19 @@ class KpiApi
      * List the different KPI's
      *
      * @param string $geo_code Geographic Location Code. (optional)
-     * @param string $industry_code Industry code for the kpi (optional)
+     * @param string $industry Industry code for the kpi (optional)
      * @param string $industry_id Industry id for the kpi (optional)
+     * @param string $employee_id Employee Id (optional)
+     * @param string $partner_id Partner Id (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\KPIResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function kpiIndex($geo_code = null, $industry_code = null, $industry_id = null, $limit = null, $page = null, $query = null)
+    public function kpiIndex($geo_code = null, $industry = null, $industry_id = null, $employee_id = null, $partner_id = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->kpiIndexWithHttpInfo($geo_code, $industry_code, $industry_id, $limit, $page, $query);
+        list($response) = $this->kpiIndexWithHttpInfo($geo_code, $industry, $industry_id, $employee_id, $partner_id, $limit, $page, $query);
         return $response;
     }
 
@@ -128,15 +130,17 @@ class KpiApi
      * List the different KPI's
      *
      * @param string $geo_code Geographic Location Code. (optional)
-     * @param string $industry_code Industry code for the kpi (optional)
+     * @param string $industry Industry code for the kpi (optional)
      * @param string $industry_id Industry id for the kpi (optional)
+     * @param string $employee_id Employee Id (optional)
+     * @param string $partner_id Partner Id (optional)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\KPIResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function kpiIndexWithHttpInfo($geo_code = null, $industry_code = null, $industry_id = null, $limit = null, $page = null, $query = null)
+    public function kpiIndexWithHttpInfo($geo_code = null, $industry = null, $industry_id = null, $employee_id = null, $partner_id = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/kpi";
@@ -155,12 +159,20 @@ class KpiApi
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($geo_code);
         }
         // query params
-        if ($industry_code !== null) {
-            $queryParams['industry_code'] = $this->apiClient->getSerializer()->toQueryValue($industry_code);
+        if ($industry !== null) {
+            $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($industry);
         }
         // query params
         if ($industry_id !== null) {
             $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($industry_id);
+        }
+        // query params
+        if ($employee_id !== null) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($employee_id);
+        }
+        // query params
+        if ($partner_id !== null) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($partner_id);
         }
         // query params
         if ($limit !== null) {

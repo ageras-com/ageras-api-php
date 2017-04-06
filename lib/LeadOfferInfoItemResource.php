@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadOfferPartnerResource
+ * LeadOfferInfoItemResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadOfferPartnerResource Class Doc Comment
+ * LeadOfferInfoItemResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadOfferPartnerResource implements ArrayAccess
+class LeadOfferInfoItemResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadOfferPartnerResource';
+    protected static $swaggerModelName = 'LeadOfferInfoItemResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,7 +67,9 @@ class LeadOfferPartnerResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'company_name' => 'string'
+        'won' => 'bool',
+        'created_at' => 'string',
+        'partner' => '\Ageras\Api\PartnerSuggestResource'
     );
 
     public static function swaggerTypes()
@@ -81,7 +83,9 @@ class LeadOfferPartnerResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'company_name' => 'company_name'
+        'won' => 'won',
+        'created_at' => 'created_at',
+        'partner' => 'partner'
     );
 
     public static function attributeMap()
@@ -95,7 +99,9 @@ class LeadOfferPartnerResource implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'company_name' => 'setCompanyName'
+        'won' => 'setWon',
+        'created_at' => 'setCreatedAt',
+        'partner' => 'setPartner'
     );
 
     public static function setters()
@@ -109,7 +115,9 @@ class LeadOfferPartnerResource implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'company_name' => 'getCompanyName'
+        'won' => 'getWon',
+        'created_at' => 'getCreatedAt',
+        'partner' => 'getPartner'
     );
 
     public static function getters()
@@ -134,7 +142,9 @@ class LeadOfferPartnerResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['won'] = isset($data['won']) ? $data['won'] : false;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
     }
 
     /**
@@ -171,7 +181,7 @@ class LeadOfferPartnerResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id The partner's id.
+     * @param int $id The offers's id.
      * @return $this
      */
     public function setId($id)
@@ -182,22 +192,64 @@ class LeadOfferPartnerResource implements ArrayAccess
     }
 
     /**
-     * Gets company_name
-     * @return string
+     * Gets won
+     * @return bool
      */
-    public function getCompanyName()
+    public function getWon()
     {
-        return $this->container['company_name'];
+        return $this->container['won'];
     }
 
     /**
-     * Sets company_name
-     * @param string $company_name The company name of the partner.
+     * Sets won
+     * @param bool $won Did this offer win
      * @return $this
      */
-    public function setCompanyName($company_name)
+    public function setWon($won)
     {
-        $this->container['company_name'] = $company_name;
+        $this->container['won'] = $won;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner
+     * @return \Ageras\Api\PartnerSuggestResource
+     */
+    public function getPartner()
+    {
+        return $this->container['partner'];
+    }
+
+    /**
+     * Sets partner
+     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * @return $this
+     */
+    public function setPartner($partner)
+    {
+        $this->container['partner'] = $partner;
 
         return $this;
     }

@@ -109,6 +109,8 @@ class ActivitiesApi
      *
      * @param string $activity_id  (optional)
      * @param string $partner_id  (optional)
+     * @param string $lead_id  (optional)
+     * @param string $client_id  (optional)
      * @param string $employee_id  (optional)
      * @param string $partner_user_id  (optional)
      * @param string $type  (optional)
@@ -118,9 +120,9 @@ class ActivitiesApi
      * @return \Ageras\Api\ActivityResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function activitiesIndex($activity_id = null, $partner_id = null, $employee_id = null, $partner_user_id = null, $type = null, $limit = null, $page = null, $query = null)
+    public function activitiesIndex($activity_id = null, $partner_id = null, $lead_id = null, $client_id = null, $employee_id = null, $partner_user_id = null, $type = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->activitiesIndexWithHttpInfo($activity_id, $partner_id, $employee_id, $partner_user_id, $type, $limit, $page, $query);
+        list($response) = $this->activitiesIndexWithHttpInfo($activity_id, $partner_id, $lead_id, $client_id, $employee_id, $partner_user_id, $type, $limit, $page, $query);
         return $response;
     }
 
@@ -131,6 +133,8 @@ class ActivitiesApi
      *
      * @param string $activity_id  (optional)
      * @param string $partner_id  (optional)
+     * @param string $lead_id  (optional)
+     * @param string $client_id  (optional)
      * @param string $employee_id  (optional)
      * @param string $partner_user_id  (optional)
      * @param string $type  (optional)
@@ -140,7 +144,7 @@ class ActivitiesApi
      * @return Array of \Ageras\Api\ActivityResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function activitiesIndexWithHttpInfo($activity_id = null, $partner_id = null, $employee_id = null, $partner_user_id = null, $type = null, $limit = null, $page = null, $query = null)
+    public function activitiesIndexWithHttpInfo($activity_id = null, $partner_id = null, $lead_id = null, $client_id = null, $employee_id = null, $partner_user_id = null, $type = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/activities";
@@ -161,6 +165,14 @@ class ActivitiesApi
         // query params
         if ($partner_id !== null) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($partner_id);
+        }
+        // query params
+        if ($lead_id !== null) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($lead_id);
+        }
+        // query params
+        if ($client_id !== null) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($client_id);
         }
         // query params
         if ($employee_id !== null) {

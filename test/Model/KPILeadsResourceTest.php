@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsResourceTest
+ * KPILeadsResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPIClientsResourceTest Class Doc Comment
+ * KPILeadsResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIClientsResource
+// * @description KPILeadsResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsResourceTest extends \PHPUnit_Framework_TestCase
+class KPILeadsResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class KPIClientsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIClientsResource"
+     * Test "KPILeadsResource"
      */
-    public function testKPIClientsResource()
+    public function testKPILeadsResource()
     {
 
     }
@@ -104,9 +104,9 @@ class KPIClientsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "completion_ratio"
+     * Test attribute "validated"
      */
-    public function testPropertyCompletionRatio()
+    public function testPropertyValidated()
     {
 
     }
@@ -115,6 +115,30 @@ class KPIClientsResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "validation_ratio"
      */
     public function testPropertyValidationRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "completion_ratio"
+     */
+    public function testPropertyCompletionRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "completion_time"
+     */
+    public function testPropertyCompletionTime()
+    {
+
+    }
+
+    /**
+     * Test attribute "ccr"
+     */
+    public function testPropertyCcr()
     {
 
     }

@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksIndex**
-> \Ageras\Api\TaskResult tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $page, $query)
+> \Ageras\Api\TaskResult tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $sort, $page, $query)
 
 List tasks by employee, asseigned_employee, etc.
 
@@ -212,11 +212,12 @@ $limit = 56; // int | Number of resources to return.
 $include_done = false; // bool | 
 $process = "unknown"; // string | Process type
 $due_before = "due_before_example"; // string | Due before date
+$sort = "deadline_at"; // string | 
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $page, $query);
+    $result = $api_instance->tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $sort, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksIndex: ', $e->getMessage(), PHP_EOL;
@@ -240,6 +241,7 @@ Name | Type | Description  | Notes
  **include_done** | **bool**|  | [optional] [default to false]
  **process** | **string**| Process type | [optional] [default to unknown]
  **due_before** | **string**| Due before date | [optional]
+ **sort** | **string**|  | [optional] [default to deadline_at]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 

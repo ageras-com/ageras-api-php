@@ -104,9 +104,25 @@ class KPICreditsUsedResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "actual_net"
+     */
+    public function testPropertyActualNet()
+    {
+
+    }
+
+    /**
      * Test attribute "target"
      */
     public function testPropertyTarget()
+    {
+
+    }
+
+    /**
+     * Test attribute "forecast"
+     */
+    public function testPropertyForecast()
     {
 
     }

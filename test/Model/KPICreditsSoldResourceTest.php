@@ -119,4 +119,12 @@ class KPICreditsSoldResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "actual_net"
+     */
+    public function testPropertyActualNet()
+    {
+
+    }
+
 }

@@ -120,14 +120,6 @@ class KPICreditsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "revenue"
-     */
-    public function testPropertyRevenue()
-    {
-
-    }
-
-    /**
      * Test attribute "sold"
      */
     public function testPropertySold()

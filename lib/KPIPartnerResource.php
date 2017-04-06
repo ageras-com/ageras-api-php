@@ -70,6 +70,7 @@ class KPIPartnerResource implements ArrayAccess
         'calls' => '\Ageras\Api\KPINumberResource',
         'churn' => '\Ageras\Api\KPINumberResource',
         'demos' => '\Ageras\Api\KPINumberResource',
+        'refills' => '\Ageras\Api\KPINumberResource',
         'new_sales' => '\Ageras\Api\KPIPartnersNewSalesResource',
         'cancellations' => '\Ageras\Api\KPINumberResource',
         'satisfactions' => '\Ageras\Api\KPINumberResource',
@@ -91,6 +92,7 @@ class KPIPartnerResource implements ArrayAccess
         'calls' => 'calls',
         'churn' => 'churn',
         'demos' => 'demos',
+        'refills' => 'refills',
         'new_sales' => 'new_sales',
         'cancellations' => 'cancellations',
         'satisfactions' => 'satisfactions',
@@ -112,6 +114,7 @@ class KPIPartnerResource implements ArrayAccess
         'calls' => 'setCalls',
         'churn' => 'setChurn',
         'demos' => 'setDemos',
+        'refills' => 'setRefills',
         'new_sales' => 'setNewSales',
         'cancellations' => 'setCancellations',
         'satisfactions' => 'setSatisfactions',
@@ -133,6 +136,7 @@ class KPIPartnerResource implements ArrayAccess
         'calls' => 'getCalls',
         'churn' => 'getChurn',
         'demos' => 'getDemos',
+        'refills' => 'getRefills',
         'new_sales' => 'getNewSales',
         'cancellations' => 'getCancellations',
         'satisfactions' => 'getSatisfactions',
@@ -165,6 +169,7 @@ class KPIPartnerResource implements ArrayAccess
         $this->container['calls'] = isset($data['calls']) ? $data['calls'] : null;
         $this->container['churn'] = isset($data['churn']) ? $data['churn'] : null;
         $this->container['demos'] = isset($data['demos']) ? $data['demos'] : null;
+        $this->container['refills'] = isset($data['refills']) ? $data['refills'] : null;
         $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
         $this->container['cancellations'] = isset($data['cancellations']) ? $data['cancellations'] : null;
         $this->container['satisfactions'] = isset($data['satisfactions']) ? $data['satisfactions'] : null;
@@ -275,6 +280,27 @@ class KPIPartnerResource implements ArrayAccess
     public function setDemos($demos)
     {
         $this->container['demos'] = $demos;
+
+        return $this;
+    }
+
+    /**
+     * Gets refills
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getRefills()
+    {
+        return $this->container['refills'];
+    }
+
+    /**
+     * Sets refills
+     * @param \Ageras\Api\KPINumberResource $refills
+     * @return $this
+     */
+    public function setRefills($refills)
+    {
+        $this->container['refills'] = $refills;
 
         return $this;
     }

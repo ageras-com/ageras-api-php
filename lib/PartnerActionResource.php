@@ -123,8 +123,10 @@ class PartnerActionResource implements ArrayAccess
 
     const ACTION_UNKNOWN = 'unknown';
     const ACTION_MAKE_PARTNER = 'make-partner';
+    const ACTION_MAKE_DEMO = 'make-demo';
     const ACTION_CONTINUE_DEMO = 'continue-demo';
     const ACTION_NOT_INTERESTED = 'not-interested';
+    const ACTION_NOT_RELEVANT = 'not-relevant';
     
 
     
@@ -137,8 +139,10 @@ class PartnerActionResource implements ArrayAccess
         return [
             self::ACTION_UNKNOWN,
             self::ACTION_MAKE_PARTNER,
+            self::ACTION_MAKE_DEMO,
             self::ACTION_CONTINUE_DEMO,
             self::ACTION_NOT_INTERESTED,
+            self::ACTION_NOT_RELEVANT,
         ];
     }
     
@@ -168,7 +172,7 @@ class PartnerActionResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        $allowed_values = array("unknown", "make-partner", "continue-demo", "not-interested");
+        $allowed_values = array("unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "not-relevant");
         if (!in_array($this->container['action'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'action', must be one of #{allowed_values}.";
         }
@@ -184,7 +188,7 @@ class PartnerActionResource implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = array("unknown", "make-partner", "continue-demo", "not-interested");
+        $allowed_values = array("unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "not-relevant");
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -208,9 +212,9 @@ class PartnerActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'make-partner', 'continue-demo', 'not-interested');
+        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'not-relevant');
         if (!in_array($action, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'continue-demo', 'not-interested'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'not-relevant'");
         }
         $this->container['action'] = $action;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadOfferPartnerResourceTest
+ * LeadFeedbackResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * LeadOfferPartnerResourceTest Class Doc Comment
+ * LeadFeedbackResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadOfferPartnerResource
+// * @description LeadFeedbackResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadOfferPartnerResourceTest extends \PHPUnit_Framework_TestCase
+class LeadFeedbackResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,41 @@ class LeadOfferPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadOfferPartnerResource"
+     * Test "LeadFeedbackResource"
      */
-    public function testLeadOfferPartnerResource()
+    public function testLeadFeedbackResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "reason"
      */
-    public function testPropertyId()
+    public function testPropertyReason()
     {
 
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "satisfaction_level_id"
      */
-    public function testPropertyCompanyName()
+    public function testPropertySatisfactionLevelId()
+    {
+
+    }
+
+    /**
+     * Test attribute "feedback"
+     */
+    public function testPropertyFeedback()
+    {
+
+    }
+
+    /**
+     * Test attribute "chosen_partner"
+     */
+    public function testPropertyChosenPartner()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIRefillPackageSizeResourceTest
+ * LeadProgressResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPIRefillPackageSizeResourceTest Class Doc Comment
+ * LeadProgressResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIRefillPackageSizeResource
+// * @description LeadProgressResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIRefillPackageSizeResourceTest extends \PHPUnit_Framework_TestCase
+class LeadProgressResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,25 @@ class KPIRefillPackageSizeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIRefillPackageSizeResource"
+     * Test "LeadProgressResource"
      */
-    public function testKPIRefillPackageSizeResource()
+    public function testLeadProgressResource()
     {
 
     }
 
     /**
-     * Test attribute "actual"
+     * Test attribute "step"
      */
-    public function testPropertyActual()
+    public function testPropertyStep()
     {
 
     }
 
     /**
-     * Test attribute "target"
+     * Test attribute "is_completed"
      */
-    public function testPropertyTarget()
+    public function testPropertyIsCompleted()
     {
 
     }

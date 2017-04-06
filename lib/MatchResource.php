@@ -66,6 +66,7 @@ class MatchResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'id' => 'string',
         'partner' => '\Ageras\Api\PartnerSuggestResource',
         'lead' => '\Ageras\Api\LeadSuggestResource',
         'score' => 'float',
@@ -82,6 +83,7 @@ class MatchResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'id' => 'id',
         'partner' => 'partner',
         'lead' => 'lead',
         'score' => 'score',
@@ -98,6 +100,7 @@ class MatchResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'id' => 'setId',
         'partner' => 'setPartner',
         'lead' => 'setLead',
         'score' => 'setScore',
@@ -114,6 +117,7 @@ class MatchResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'id' => 'getId',
         'partner' => 'getPartner',
         'lead' => 'getLead',
         'score' => 'getScore',
@@ -141,6 +145,7 @@ class MatchResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
@@ -169,6 +174,27 @@ class MatchResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id Match ID (hash).
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets partner

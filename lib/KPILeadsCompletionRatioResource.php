@@ -1,6 +1,6 @@
 <?php
 /**
- * KPICreditsRevenueResource
+ * KPILeadsCompletionRatioResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * KPICreditsRevenueResource Class Doc Comment
+ * KPILeadsCompletionRatioResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPICreditsRevenueResource implements ArrayAccess
+class KPILeadsCompletionRatioResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'KPICreditsRevenueResource';
+    protected static $swaggerModelName = 'KPILeadsCompletionRatioResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -96,6 +96,22 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "geo_code"
      */
     public function testPropertyGeoCode()
@@ -112,9 +128,25 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "clients"
+     * Test attribute "employee"
      */
-    public function testPropertyClients()
+    public function testPropertyEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner"
+     */
+    public function testPropertyPartner()
+    {
+
+    }
+
+    /**
+     * Test attribute "leads"
+     */
+    public function testPropertyLeads()
     {
 
     }

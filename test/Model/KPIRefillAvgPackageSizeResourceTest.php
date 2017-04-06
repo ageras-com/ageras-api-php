@@ -1,6 +1,6 @@
 <?php
 /**
- * KPICreditsRevenueResourceTest
+ * KPIRefillAvgPackageSizeResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPICreditsRevenueResourceTest Class Doc Comment
+ * KPIRefillAvgPackageSizeResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPICreditsRevenueResource
+// * @description KPIRefillAvgPackageSizeResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPICreditsRevenueResourceTest extends \PHPUnit_Framework_TestCase
+class KPIRefillAvgPackageSizeResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class KPICreditsRevenueResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPICreditsRevenueResource"
+     * Test "KPIRefillAvgPackageSizeResource"
      */
-    public function testKPICreditsRevenueResource()
+    public function testKPIRefillAvgPackageSizeResource()
     {
 
     }

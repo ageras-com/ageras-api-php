@@ -1,4 +1,4 @@
-# KPIClientsValidationRatioResource
+# KPILeadsCompletionTimeResource
 
 ## Properties
 Name | Type | Description | Notes

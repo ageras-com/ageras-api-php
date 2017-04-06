@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsValidationRatioResourceTest
+ * KPILeadsCompletionRatioResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPIClientsValidationRatioResourceTest Class Doc Comment
+ * KPILeadsCompletionRatioResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIClientsValidationRatioResource
+// * @description KPILeadsCompletionRatioResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsValidationRatioResourceTest extends \PHPUnit_Framework_TestCase
+class KPILeadsCompletionRatioResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class KPIClientsValidationRatioResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIClientsValidationRatioResource"
+     * Test "KPILeadsCompletionRatioResource"
      */
-    public function testKPIClientsValidationRatioResource()
+    public function testKPILeadsCompletionRatioResource()
     {
 
     }

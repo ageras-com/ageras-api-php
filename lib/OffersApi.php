@@ -313,15 +313,16 @@ class OffersApi
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
+     * @param string $sale_type Sale type (optional, default to unknown)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return \Ageras\Api\PartnerOfferResult
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function offersIndex($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
+    public function offersIndex($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $sale_type = null, $limit = null, $page = null, $query = null)
     {
-        list($response) = $this->offersIndexWithHttpInfo($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $limit, $page, $query);
+        list($response) = $this->offersIndexWithHttpInfo($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $sale_type, $limit, $page, $query);
         return $response;
     }
 
@@ -337,13 +338,14 @@ class OffersApi
      * @param string $action Action to take. (optional)
      * @param string $geo_code Offer geo code. (optional)
      * @param string $type Type of Offer (optional, default to partner)
+     * @param string $sale_type Sale type (optional, default to unknown)
      * @param int $limit The number of resources to be returned. (optional)
      * @param int $page The page position in the result. (optional)
      * @param string $query The search wildcard. (optional)
      * @return Array of \Ageras\Api\PartnerOfferResult, HTTP status code, HTTP response headers (array of strings)
      * @throws \Ageras\Api\ApiException on non-2xx response
      */
-    public function offersIndexWithHttpInfo($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $limit = null, $page = null, $query = null)
+    public function offersIndexWithHttpInfo($show_expired = null, $show_accepted = null, $partner_id = null, $sort = null, $action = null, $geo_code = null, $type = null, $sale_type = null, $limit = null, $page = null, $query = null)
     {
         // parse inputs
         $resourcePath = "/offers";
@@ -384,6 +386,10 @@ class OffersApi
         // query params
         if ($type !== null) {
             $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
+        }
+        // query params
+        if ($sale_type !== null) {
+            $queryParams['sale_type'] = $this->apiClient->getSerializer()->toQueryValue($sale_type);
         }
         // query params
         if ($limit !== null) {

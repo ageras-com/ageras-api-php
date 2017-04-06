@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsCompletionRatioResource
+ * LeadNoteResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * KPIClientsCompletionRatioResource Class Doc Comment
+ * LeadNoteResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,21 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsCompletionRatioResource implements ArrayAccess
+class LeadNoteResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'KPIClientsCompletionRatioResource';
+    protected static $swaggerModelName = 'LeadNoteResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'actual' => '\Ageras\Api\KPINumberResource',
-        'target' => '\Ageras\Api\KPINumberResource'
+        'note' => 'string',
+        'employee_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -80,8 +80,8 @@ class KPIClientsCompletionRatioResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'actual' => 'actual',
-        'target' => 'target'
+        'note' => 'note',
+        'employee_id' => 'employee_id'
     );
 
     public static function attributeMap()
@@ -94,8 +94,8 @@ class KPIClientsCompletionRatioResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'actual' => 'setActual',
-        'target' => 'setTarget'
+        'note' => 'setNote',
+        'employee_id' => 'setEmployeeId'
     );
 
     public static function setters()
@@ -108,8 +108,8 @@ class KPIClientsCompletionRatioResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'actual' => 'getActual',
-        'target' => 'getTarget'
+        'note' => 'getNote',
+        'employee_id' => 'getEmployeeId'
     );
 
     public static function getters()
@@ -133,8 +133,8 @@ class KPIClientsCompletionRatioResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
-        $this->container['target'] = isset($data['target']) ? $data['target'] : null;
+        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
+        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
     }
 
     /**
@@ -161,43 +161,43 @@ class KPIClientsCompletionRatioResource implements ArrayAccess
 
 
     /**
-     * Gets actual
-     * @return \Ageras\Api\KPINumberResource
+     * Gets note
+     * @return string
      */
-    public function getActual()
+    public function getNote()
     {
-        return $this->container['actual'];
+        return $this->container['note'];
     }
 
     /**
-     * Sets actual
-     * @param \Ageras\Api\KPINumberResource $actual
+     * Sets note
+     * @param string $note Note
      * @return $this
      */
-    public function setActual($actual)
+    public function setNote($note)
     {
-        $this->container['actual'] = $actual;
+        $this->container['note'] = $note;
 
         return $this;
     }
 
     /**
-     * Gets target
-     * @return \Ageras\Api\KPINumberResource
+     * Gets employee_id
+     * @return int
      */
-    public function getTarget()
+    public function getEmployeeId()
     {
-        return $this->container['target'];
+        return $this->container['employee_id'];
     }
 
     /**
-     * Sets target
-     * @param \Ageras\Api\KPINumberResource $target
+     * Sets employee_id
+     * @param int $employee_id Employee creator id
      * @return $this
      */
-    public function setTarget($target)
+    public function setEmployeeId($employee_id)
     {
-        $this->container['target'] = $target;
+        $this->container['employee_id'] = $employee_id;
 
         return $this;
     }
