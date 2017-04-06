@@ -67,8 +67,8 @@ class KPIMatchesResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'actual' => '\Ageras\Api\KPINumberResource',
-        'actual_ratio' => '\Ageras\Api\KPINumberResource',
-        'target_ratio' => '\Ageras\Api\KPINumberResource'
+        'past' => '\Ageras\Api\KPINumberResource',
+        'ratio' => '\Ageras\Api\KPIMatchesRatioResource'
     );
 
     public static function swaggerTypes()
@@ -82,8 +82,8 @@ class KPIMatchesResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'actual' => 'actual',
-        'actual_ratio' => 'actual_ratio',
-        'target_ratio' => 'target_ratio'
+        'past' => 'past',
+        'ratio' => 'ratio'
     );
 
     public static function attributeMap()
@@ -97,8 +97,8 @@ class KPIMatchesResource implements ArrayAccess
      */
     protected static $setters = array(
         'actual' => 'setActual',
-        'actual_ratio' => 'setActualRatio',
-        'target_ratio' => 'setTargetRatio'
+        'past' => 'setPast',
+        'ratio' => 'setRatio'
     );
 
     public static function setters()
@@ -112,8 +112,8 @@ class KPIMatchesResource implements ArrayAccess
      */
     protected static $getters = array(
         'actual' => 'getActual',
-        'actual_ratio' => 'getActualRatio',
-        'target_ratio' => 'getTargetRatio'
+        'past' => 'getPast',
+        'ratio' => 'getRatio'
     );
 
     public static function getters()
@@ -138,8 +138,8 @@ class KPIMatchesResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
-        $this->container['actual_ratio'] = isset($data['actual_ratio']) ? $data['actual_ratio'] : null;
-        $this->container['target_ratio'] = isset($data['target_ratio']) ? $data['target_ratio'] : null;
+        $this->container['past'] = isset($data['past']) ? $data['past'] : null;
+        $this->container['ratio'] = isset($data['ratio']) ? $data['ratio'] : null;
     }
 
     /**
@@ -187,43 +187,43 @@ class KPIMatchesResource implements ArrayAccess
     }
 
     /**
-     * Gets actual_ratio
+     * Gets past
      * @return \Ageras\Api\KPINumberResource
      */
-    public function getActualRatio()
+    public function getPast()
     {
-        return $this->container['actual_ratio'];
+        return $this->container['past'];
     }
 
     /**
-     * Sets actual_ratio
-     * @param \Ageras\Api\KPINumberResource $actual_ratio
+     * Sets past
+     * @param \Ageras\Api\KPINumberResource $past
      * @return $this
      */
-    public function setActualRatio($actual_ratio)
+    public function setPast($past)
     {
-        $this->container['actual_ratio'] = $actual_ratio;
+        $this->container['past'] = $past;
 
         return $this;
     }
 
     /**
-     * Gets target_ratio
-     * @return \Ageras\Api\KPINumberResource
+     * Gets ratio
+     * @return \Ageras\Api\KPIMatchesRatioResource
      */
-    public function getTargetRatio()
+    public function getRatio()
     {
-        return $this->container['target_ratio'];
+        return $this->container['ratio'];
     }
 
     /**
-     * Sets target_ratio
-     * @param \Ageras\Api\KPINumberResource $target_ratio
+     * Sets ratio
+     * @param \Ageras\Api\KPIMatchesRatioResource $ratio
      * @return $this
      */
-    public function setTargetRatio($target_ratio)
+    public function setRatio($ratio)
     {
-        $this->container['target_ratio'] = $target_ratio;
+        $this->container['ratio'] = $ratio;
 
         return $this;
     }

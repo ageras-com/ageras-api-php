@@ -104,9 +104,9 @@ class KPIRefillResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "package_size"
+     * Test attribute "avg_package_size"
      */
-    public function testPropertyPackageSize()
+    public function testPropertyAvgPackageSize()
     {
 
     }

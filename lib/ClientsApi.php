@@ -196,4 +196,109 @@ class ClientsApi
         }
     }
 
+    /**
+     * Operation clientsUpdate
+     *
+     * Update a client
+     *
+     * @param string $client_id  (required)
+     * @param \Ageras\Api\ClientResource $client_resource  (required)
+     * @return \Ageras\Api\ClientResource
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function clientsUpdate($client_id, $client_resource)
+    {
+        list($response) = $this->clientsUpdateWithHttpInfo($client_id, $client_resource);
+        return $response;
+    }
+
+    /**
+     * Operation clientsUpdateWithHttpInfo
+     *
+     * Update a client
+     *
+     * @param string $client_id  (required)
+     * @param \Ageras\Api\ClientResource $client_resource  (required)
+     * @return Array of \Ageras\Api\ClientResource, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function clientsUpdateWithHttpInfo($client_id, $client_resource)
+    {
+        // verify the required parameter 'client_id' is set
+        if ($client_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $client_id when calling clientsUpdate');
+        }
+        // verify the required parameter 'client_resource' is set
+        if ($client_resource === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $client_resource when calling clientsUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/clients/{client_id}";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // path params
+        if ($client_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "client_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($client_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($client_resource)) {
+            $_tempBody = $client_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\ClientResource',
+                '/clients/{client_id}'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\ClientResource', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\ClientResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
 }

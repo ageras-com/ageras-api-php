@@ -83,7 +83,9 @@ class LeadResource implements ArrayAccess
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
         'offers_info' => '\Ageras\Api\LeadOfferInfoResource',
         'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
-        'client_id' => 'int'
+        'client_id' => 'int',
+        'progress' => '\Ageras\Api\LeadProgressResource[]',
+        'feedback' => '\Ageras\Api\LeadFeedbackResource'
     );
 
     public static function swaggerTypes()
@@ -113,7 +115,9 @@ class LeadResource implements ArrayAccess
         'accepted' => 'accepted',
         'offers_info' => 'offers_info',
         'affiliate_campaign' => 'affiliate_campaign',
-        'client_id' => 'client_id'
+        'client_id' => 'client_id',
+        'progress' => 'progress',
+        'feedback' => 'feedback'
     );
 
     public static function attributeMap()
@@ -143,7 +147,9 @@ class LeadResource implements ArrayAccess
         'accepted' => 'setAccepted',
         'offers_info' => 'setOffersInfo',
         'affiliate_campaign' => 'setAffiliateCampaign',
-        'client_id' => 'setClientId'
+        'client_id' => 'setClientId',
+        'progress' => 'setProgress',
+        'feedback' => 'setFeedback'
     );
 
     public static function setters()
@@ -173,7 +179,9 @@ class LeadResource implements ArrayAccess
         'accepted' => 'getAccepted',
         'offers_info' => 'getOffersInfo',
         'affiliate_campaign' => 'getAffiliateCampaign',
-        'client_id' => 'getClientId'
+        'client_id' => 'getClientId',
+        'progress' => 'getProgress',
+        'feedback' => 'getFeedback'
     );
 
     public static function getters()
@@ -231,6 +239,8 @@ class LeadResource implements ArrayAccess
         $this->container['offers_info'] = isset($data['offers_info']) ? $data['offers_info'] : null;
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
+        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
+        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
     }
 
     /**
@@ -643,6 +653,48 @@ class LeadResource implements ArrayAccess
     public function setClientId($client_id)
     {
         $this->container['client_id'] = $client_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets progress
+     * @return \Ageras\Api\LeadProgressResource[]
+     */
+    public function getProgress()
+    {
+        return $this->container['progress'];
+    }
+
+    /**
+     * Sets progress
+     * @param \Ageras\Api\LeadProgressResource[] $progress Progress
+     * @return $this
+     */
+    public function setProgress($progress)
+    {
+        $this->container['progress'] = $progress;
+
+        return $this;
+    }
+
+    /**
+     * Gets feedback
+     * @return \Ageras\Api\LeadFeedbackResource
+     */
+    public function getFeedback()
+    {
+        return $this->container['feedback'];
+    }
+
+    /**
+     * Sets feedback
+     * @param \Ageras\Api\LeadFeedbackResource $feedback
+     * @return $this
+     */
+    public function setFeedback($feedback)
+    {
+        $this->container['feedback'] = $feedback;
 
         return $this;
     }

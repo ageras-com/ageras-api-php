@@ -67,7 +67,9 @@ class KPICreditsUsedResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'actual' => '\Ageras\Api\KPINumberResource',
-        'target' => '\Ageras\Api\KPINumberResource'
+        'actual_net' => '\Ageras\Api\KPINumberResource',
+        'target' => '\Ageras\Api\KPINumberResource',
+        'forecast' => '\Ageras\Api\KPINumberResource'
     );
 
     public static function swaggerTypes()
@@ -81,7 +83,9 @@ class KPICreditsUsedResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'actual' => 'actual',
-        'target' => 'target'
+        'actual_net' => 'actual_net',
+        'target' => 'target',
+        'forecast' => 'forecast'
     );
 
     public static function attributeMap()
@@ -95,7 +99,9 @@ class KPICreditsUsedResource implements ArrayAccess
      */
     protected static $setters = array(
         'actual' => 'setActual',
-        'target' => 'setTarget'
+        'actual_net' => 'setActualNet',
+        'target' => 'setTarget',
+        'forecast' => 'setForecast'
     );
 
     public static function setters()
@@ -109,7 +115,9 @@ class KPICreditsUsedResource implements ArrayAccess
      */
     protected static $getters = array(
         'actual' => 'getActual',
-        'target' => 'getTarget'
+        'actual_net' => 'getActualNet',
+        'target' => 'getTarget',
+        'forecast' => 'getForecast'
     );
 
     public static function getters()
@@ -134,7 +142,9 @@ class KPICreditsUsedResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
+        $this->container['actual_net'] = isset($data['actual_net']) ? $data['actual_net'] : null;
         $this->container['target'] = isset($data['target']) ? $data['target'] : null;
+        $this->container['forecast'] = isset($data['forecast']) ? $data['forecast'] : null;
     }
 
     /**
@@ -182,6 +192,27 @@ class KPICreditsUsedResource implements ArrayAccess
     }
 
     /**
+     * Gets actual_net
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getActualNet()
+    {
+        return $this->container['actual_net'];
+    }
+
+    /**
+     * Sets actual_net
+     * @param \Ageras\Api\KPINumberResource $actual_net
+     * @return $this
+     */
+    public function setActualNet($actual_net)
+    {
+        $this->container['actual_net'] = $actual_net;
+
+        return $this;
+    }
+
+    /**
      * Gets target
      * @return \Ageras\Api\KPINumberResource
      */
@@ -198,6 +229,27 @@ class KPICreditsUsedResource implements ArrayAccess
     public function setTarget($target)
     {
         $this->container['target'] = $target;
+
+        return $this;
+    }
+
+    /**
+     * Gets forecast
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getForecast()
+    {
+        return $this->container['forecast'];
+    }
+
+    /**
+     * Sets forecast
+     * @param \Ageras\Api\KPINumberResource $forecast
+     * @return $this
+     */
+    public function setForecast($forecast)
+    {
+        $this->container['forecast'] = $forecast;
 
         return $this;
     }

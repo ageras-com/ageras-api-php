@@ -71,6 +71,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'string',
         'reserved_at' => 'string',
         'company_name' => 'string',
+        'title' => 'string',
         'slug' => 'string',
         'is_enabled' => 'bool',
         'has_subscription' => 'bool',
@@ -112,6 +113,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'reserved_at' => 'reserved_at',
         'company_name' => 'company_name',
+        'title' => 'title',
         'slug' => 'slug',
         'is_enabled' => 'is_enabled',
         'has_subscription' => 'has_subscription',
@@ -153,6 +155,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'reserved_at' => 'setReservedAt',
         'company_name' => 'setCompanyName',
+        'title' => 'setTitle',
         'slug' => 'setSlug',
         'is_enabled' => 'setIsEnabled',
         'has_subscription' => 'setHasSubscription',
@@ -194,6 +197,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'reserved_at' => 'getReservedAt',
         'company_name' => 'getCompanyName',
+        'title' => 'getTitle',
         'slug' => 'getSlug',
         'is_enabled' => 'getIsEnabled',
         'has_subscription' => 'getHasSubscription',
@@ -270,6 +274,7 @@ class PartnerResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['reserved_at'] = isset($data['reserved_at']) ? $data['reserved_at'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : false;
         $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
@@ -429,6 +434,27 @@ class PartnerResource implements ArrayAccess
     public function setCompanyName($company_name)
     {
         $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     * @param string $title Partner's title based on industry
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
 
         return $this;
     }

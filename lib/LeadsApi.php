@@ -103,6 +103,111 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsActionsCreate
+     *
+     * Coupon action
+     *
+     * @param string $lead_id  (required)
+     * @param \Ageras\Api\LeadActionResource $lead_action_resource  (required)
+     * @return \Ageras\Api\LeadResource
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function leadsActionsCreate($lead_id, $lead_action_resource)
+    {
+        list($response) = $this->leadsActionsCreateWithHttpInfo($lead_id, $lead_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsActionsCreateWithHttpInfo
+     *
+     * Coupon action
+     *
+     * @param string $lead_id  (required)
+     * @param \Ageras\Api\LeadActionResource $lead_action_resource  (required)
+     * @return Array of \Ageras\Api\LeadResource, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function leadsActionsCreateWithHttpInfo($lead_id, $lead_action_resource)
+    {
+        // verify the required parameter 'lead_id' is set
+        if ($lead_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsActionsCreate');
+        }
+        // verify the required parameter 'lead_action_resource' is set
+        if ($lead_action_resource === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lead_action_resource when calling leadsActionsCreate');
+        }
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/actions";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($lead_action_resource)) {
+            $_tempBody = $lead_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadResource',
+                '/leads/{lead_id}/actions'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadResource', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsCreate
      *
      * Create a new Lead.
@@ -521,6 +626,111 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsNotesCreate
+     *
+     * Create lead note
+     *
+     * @param string $lead_id  (required)
+     * @param \Ageras\Api\LeadNoteResource $lead_note_resource  (required)
+     * @return \Ageras\Api\LeadResource
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function leadsNotesCreate($lead_id, $lead_note_resource)
+    {
+        list($response) = $this->leadsNotesCreateWithHttpInfo($lead_id, $lead_note_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsNotesCreateWithHttpInfo
+     *
+     * Create lead note
+     *
+     * @param string $lead_id  (required)
+     * @param \Ageras\Api\LeadNoteResource $lead_note_resource  (required)
+     * @return Array of \Ageras\Api\LeadResource, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     */
+    public function leadsNotesCreateWithHttpInfo($lead_id, $lead_note_resource)
+    {
+        // verify the required parameter 'lead_id' is set
+        if ($lead_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsNotesCreate');
+        }
+        // verify the required parameter 'lead_note_resource' is set
+        if ($lead_note_resource === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lead_note_resource when calling leadsNotesCreate');
+        }
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/notes";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($lead_note_resource)) {
+            $_tempBody = $lead_note_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadResource',
+                '/leads/{lead_id}/notes'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadResource', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **offers_info** | [**\Ageras\Api\LeadOfferInfoResource**](LeadOfferInfoResource.md) |  | [optional] 
 **affiliate_campaign** | [**\Ageras\Api\AffiliateCampaignResource**](AffiliateCampaignResource.md) |  | [optional] 
 **client_id** | **int** | Client id | [optional] 
+**progress** | [**\Ageras\Api\LeadProgressResource[]**](LeadProgressResource.md) | Progress | [optional] 
+**feedback** | [**\Ageras\Api\LeadFeedbackResource**](LeadFeedbackResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -66,9 +66,13 @@ class KPIResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'id' => 'string',
+        'created_at' => 'string',
         'geo_code' => 'string',
         'industry' => '\Ageras\Api\IndustryResource',
-        'clients' => '\Ageras\Api\KPIClientsResource',
+        'employee' => '\Ageras\Api\EmployeeResource',
+        'partner' => '\Ageras\Api\PartnerSuggestResource',
+        'leads' => '\Ageras\Api\KPILeadsResource',
         'credits' => '\Ageras\Api\KPICreditsResource',
         'matches' => '\Ageras\Api\KPIMatchesResource',
         'partners' => '\Ageras\Api\KPIPartnerResource',
@@ -86,9 +90,13 @@ class KPIResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'id' => 'id',
+        'created_at' => 'created_at',
         'geo_code' => 'geo_code',
         'industry' => 'industry',
-        'clients' => 'clients',
+        'employee' => 'employee',
+        'partner' => 'partner',
+        'leads' => 'leads',
         'credits' => 'credits',
         'matches' => 'matches',
         'partners' => 'partners',
@@ -106,9 +114,13 @@ class KPIResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'id' => 'setId',
+        'created_at' => 'setCreatedAt',
         'geo_code' => 'setGeoCode',
         'industry' => 'setIndustry',
-        'clients' => 'setClients',
+        'employee' => 'setEmployee',
+        'partner' => 'setPartner',
+        'leads' => 'setLeads',
         'credits' => 'setCredits',
         'matches' => 'setMatches',
         'partners' => 'setPartners',
@@ -126,9 +138,13 @@ class KPIResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'id' => 'getId',
+        'created_at' => 'getCreatedAt',
         'geo_code' => 'getGeoCode',
         'industry' => 'getIndustry',
-        'clients' => 'getClients',
+        'employee' => 'getEmployee',
+        'partner' => 'getPartner',
+        'leads' => 'getLeads',
         'credits' => 'getCredits',
         'matches' => 'getMatches',
         'partners' => 'getPartners',
@@ -157,9 +173,13 @@ class KPIResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
-        $this->container['clients'] = isset($data['clients']) ? $data['clients'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['leads'] = isset($data['leads']) ? $data['leads'] : null;
         $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
         $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
         $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
@@ -189,6 +209,48 @@ class KPIResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id Id for the given kpi
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at When the kpi was calculated
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
 
     /**
      * Gets geo_code
@@ -233,22 +295,64 @@ class KPIResource implements ArrayAccess
     }
 
     /**
-     * Gets clients
-     * @return \Ageras\Api\KPIClientsResource
+     * Gets employee
+     * @return \Ageras\Api\EmployeeResource
      */
-    public function getClients()
+    public function getEmployee()
     {
-        return $this->container['clients'];
+        return $this->container['employee'];
     }
 
     /**
-     * Sets clients
-     * @param \Ageras\Api\KPIClientsResource $clients
+     * Sets employee
+     * @param \Ageras\Api\EmployeeResource $employee
      * @return $this
      */
-    public function setClients($clients)
+    public function setEmployee($employee)
     {
-        $this->container['clients'] = $clients;
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner
+     * @return \Ageras\Api\PartnerSuggestResource
+     */
+    public function getPartner()
+    {
+        return $this->container['partner'];
+    }
+
+    /**
+     * Sets partner
+     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * @return $this
+     */
+    public function setPartner($partner)
+    {
+        $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets leads
+     * @return \Ageras\Api\KPILeadsResource
+     */
+    public function getLeads()
+    {
+        return $this->container['leads'];
+    }
+
+    /**
+     * Sets leads
+     * @param \Ageras\Api\KPILeadsResource $leads
+     * @return $this
+     */
+    public function setLeads($leads)
+    {
+        $this->container['leads'] = $leads;
 
         return $this;
     }

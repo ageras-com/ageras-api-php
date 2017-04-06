@@ -82,7 +82,8 @@ class ActivityResource implements ArrayAccess
         'rating' => '\Ageras\Api\ActivityRatingResource',
         'on_behalf_of' => '\Ageras\Api\ActivityBehalfResource',
         'partner_lead_offer' => '\Ageras\Api\ActivityPartnerLeadOfferResource',
-        'task' => '\Ageras\Api\ActivityTaskResource'
+        'task' => '\Ageras\Api\ActivityTaskResource',
+        'client' => '\Ageras\Api\ActivityClientResource'
     );
 
     public static function swaggerTypes()
@@ -111,7 +112,8 @@ class ActivityResource implements ArrayAccess
         'rating' => 'rating',
         'on_behalf_of' => 'on_behalf_of',
         'partner_lead_offer' => 'partner_lead_offer',
-        'task' => 'task'
+        'task' => 'task',
+        'client' => 'client'
     );
 
     public static function attributeMap()
@@ -140,7 +142,8 @@ class ActivityResource implements ArrayAccess
         'rating' => 'setRating',
         'on_behalf_of' => 'setOnBehalfOf',
         'partner_lead_offer' => 'setPartnerLeadOffer',
-        'task' => 'setTask'
+        'task' => 'setTask',
+        'client' => 'setClient'
     );
 
     public static function setters()
@@ -169,7 +172,8 @@ class ActivityResource implements ArrayAccess
         'rating' => 'getRating',
         'on_behalf_of' => 'getOnBehalfOf',
         'partner_lead_offer' => 'getPartnerLeadOffer',
-        'task' => 'getTask'
+        'task' => 'getTask',
+        'client' => 'getClient'
     );
 
     public static function getters()
@@ -215,6 +219,15 @@ class ActivityResource implements ArrayAccess
     const TYPE_TASK_ASSIGN = 'task_assign';
     const TYPE_TASK_UPDATE = 'task_update';
     const TYPE_TASK_COMPLETE = 'task_complete';
+    const TYPE_LEAD_WON = 'lead_won';
+    const TYPE_LEAD_SENT_OUT = 'lead_sent_out';
+    const TYPE_LEAD_VALIDATED = 'lead_validated';
+    const TYPE_LEAD_NOTE_CREATED = 'lead_note_created';
+    const TYPE_LEAD_MARKED_TEST = 'lead_marked_test';
+    const TYPE_LEAD_MARKED_DUPLICATE = 'lead_marked_duplicate';
+    const TYPE_LEAD_MARKED_SENT_TO_ADVISOR = 'lead_marked_sent_to_advisor';
+    const TYPE_LEAD_MARKED_SPAM = 'lead_marked_spam';
+    const TYPE_LEAD_MARKED_NOT_SERIOUS = 'lead_marked_not_serious';
     
 
     
@@ -263,6 +276,15 @@ class ActivityResource implements ArrayAccess
             self::TYPE_TASK_ASSIGN,
             self::TYPE_TASK_UPDATE,
             self::TYPE_TASK_COMPLETE,
+            self::TYPE_LEAD_WON,
+            self::TYPE_LEAD_SENT_OUT,
+            self::TYPE_LEAD_VALIDATED,
+            self::TYPE_LEAD_NOTE_CREATED,
+            self::TYPE_LEAD_MARKED_TEST,
+            self::TYPE_LEAD_MARKED_DUPLICATE,
+            self::TYPE_LEAD_MARKED_SENT_TO_ADVISOR,
+            self::TYPE_LEAD_MARKED_SPAM,
+            self::TYPE_LEAD_MARKED_NOT_SERIOUS,
         ];
     }
     
@@ -296,6 +318,7 @@ class ActivityResource implements ArrayAccess
         $this->container['on_behalf_of'] = isset($data['on_behalf_of']) ? $data['on_behalf_of'] : null;
         $this->container['partner_lead_offer'] = isset($data['partner_lead_offer']) ? $data['partner_lead_offer'] : null;
         $this->container['task'] = isset($data['task']) ? $data['task'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
     }
 
     /**
@@ -306,7 +329,7 @@ class ActivityResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        $allowed_values = array("unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete");
+        $allowed_values = array("unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
@@ -322,7 +345,7 @@ class ActivityResource implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = array("unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete");
+        $allowed_values = array("unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious");
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -409,9 +432,9 @@ class ActivityResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete');
+        $allowed_values = array('unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious');
         if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious'");
         }
         $this->container['type'] = $type;
 
@@ -687,6 +710,27 @@ class ActivityResource implements ArrayAccess
     public function setTask($task)
     {
         $this->container['task'] = $task;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     * @return \Ageras\Api\ActivityClientResource
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     * @param \Ageras\Api\ActivityClientResource $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->container['client'] = $client;
 
         return $this;
     }

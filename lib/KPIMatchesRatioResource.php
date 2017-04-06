@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsActionTimeResource
+ * KPIMatchesRatioResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * KPIClientsActionTimeResource Class Doc Comment
+ * KPIMatchesRatioResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsActionTimeResource implements ArrayAccess
+class KPIMatchesRatioResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'KPIClientsActionTimeResource';
+    protected static $swaggerModelName = 'KPIMatchesRatioResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'target_net' => '\Ageras\Api\KPINumberResource',
-        'forecast_net' => '\Ageras\Api\KPINumberResource',
-        'actual_net' => '\Ageras\Api\KPINumberResource'
+        'actual' => 'float',
+        'target' => 'float'
     );
 
     public static function swaggerTypes()
@@ -81,9 +80,8 @@ class KPIClientsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'target_net' => 'target_net',
-        'forecast_net' => 'forecast_net',
-        'actual_net' => 'actual_net'
+        'actual' => 'actual',
+        'target' => 'target'
     );
 
     public static function attributeMap()
@@ -96,9 +94,8 @@ class KPIClientsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'target_net' => 'setTargetNet',
-        'forecast_net' => 'setForecastNet',
-        'actual_net' => 'setActualNet'
+        'actual' => 'setActual',
+        'target' => 'setTarget'
     );
 
     public static function setters()
@@ -111,9 +108,8 @@ class KPIClientsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'target_net' => 'getTargetNet',
-        'forecast_net' => 'getForecastNet',
-        'actual_net' => 'getActualNet'
+        'actual' => 'getActual',
+        'target' => 'getTarget'
     );
 
     public static function getters()
@@ -137,9 +133,8 @@ class KPIClientsActionTimeResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['target_net'] = isset($data['target_net']) ? $data['target_net'] : null;
-        $this->container['forecast_net'] = isset($data['forecast_net']) ? $data['forecast_net'] : null;
-        $this->container['actual_net'] = isset($data['actual_net']) ? $data['actual_net'] : null;
+        $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
+        $this->container['target'] = isset($data['target']) ? $data['target'] : null;
     }
 
     /**
@@ -166,64 +161,43 @@ class KPIClientsActionTimeResource implements ArrayAccess
 
 
     /**
-     * Gets target_net
-     * @return \Ageras\Api\KPINumberResource
+     * Gets actual
+     * @return float
      */
-    public function getTargetNet()
+    public function getActual()
     {
-        return $this->container['target_net'];
+        return $this->container['actual'];
     }
 
     /**
-     * Sets target_net
-     * @param \Ageras\Api\KPINumberResource $target_net
+     * Sets actual
+     * @param float $actual Actual Ratio
      * @return $this
      */
-    public function setTargetNet($target_net)
+    public function setActual($actual)
     {
-        $this->container['target_net'] = $target_net;
+        $this->container['actual'] = $actual;
 
         return $this;
     }
 
     /**
-     * Gets forecast_net
-     * @return \Ageras\Api\KPINumberResource
+     * Gets target
+     * @return float
      */
-    public function getForecastNet()
+    public function getTarget()
     {
-        return $this->container['forecast_net'];
+        return $this->container['target'];
     }
 
     /**
-     * Sets forecast_net
-     * @param \Ageras\Api\KPINumberResource $forecast_net
+     * Sets target
+     * @param float $target Target Ratio
      * @return $this
      */
-    public function setForecastNet($forecast_net)
+    public function setTarget($target)
     {
-        $this->container['forecast_net'] = $forecast_net;
-
-        return $this;
-    }
-
-    /**
-     * Gets actual_net
-     * @return \Ageras\Api\KPINumberResource
-     */
-    public function getActualNet()
-    {
-        return $this->container['actual_net'];
-    }
-
-    /**
-     * Sets actual_net
-     * @param \Ageras\Api\KPINumberResource $actual_net
-     * @return $this
-     */
-    public function setActualNet($actual_net)
-    {
-        $this->container['actual_net'] = $actual_net;
+        $this->container['target'] = $target;
 
         return $this;
     }

@@ -67,7 +67,7 @@ class KPIRefillResource implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'avg_threshold' => '\Ageras\Api\KPIRefillAvgThresholdResource',
-        'package_size' => '\Ageras\Api\KPIRefillPackageSizeResource'
+        'avg_package_size' => '\Ageras\Api\KPIRefillAvgPackageSizeResource'
     );
 
     public static function swaggerTypes()
@@ -81,7 +81,7 @@ class KPIRefillResource implements ArrayAccess
      */
     protected static $attributeMap = array(
         'avg_threshold' => 'avg_threshold',
-        'package_size' => 'package_size'
+        'avg_package_size' => 'avg_package_size'
     );
 
     public static function attributeMap()
@@ -95,7 +95,7 @@ class KPIRefillResource implements ArrayAccess
      */
     protected static $setters = array(
         'avg_threshold' => 'setAvgThreshold',
-        'package_size' => 'setPackageSize'
+        'avg_package_size' => 'setAvgPackageSize'
     );
 
     public static function setters()
@@ -109,7 +109,7 @@ class KPIRefillResource implements ArrayAccess
      */
     protected static $getters = array(
         'avg_threshold' => 'getAvgThreshold',
-        'package_size' => 'getPackageSize'
+        'avg_package_size' => 'getAvgPackageSize'
     );
 
     public static function getters()
@@ -134,7 +134,7 @@ class KPIRefillResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['avg_threshold'] = isset($data['avg_threshold']) ? $data['avg_threshold'] : null;
-        $this->container['package_size'] = isset($data['package_size']) ? $data['package_size'] : null;
+        $this->container['avg_package_size'] = isset($data['avg_package_size']) ? $data['avg_package_size'] : null;
     }
 
     /**
@@ -182,22 +182,22 @@ class KPIRefillResource implements ArrayAccess
     }
 
     /**
-     * Gets package_size
-     * @return \Ageras\Api\KPIRefillPackageSizeResource
+     * Gets avg_package_size
+     * @return \Ageras\Api\KPIRefillAvgPackageSizeResource
      */
-    public function getPackageSize()
+    public function getAvgPackageSize()
     {
-        return $this->container['package_size'];
+        return $this->container['avg_package_size'];
     }
 
     /**
-     * Sets package_size
-     * @param \Ageras\Api\KPIRefillPackageSizeResource $package_size
+     * Sets avg_package_size
+     * @param \Ageras\Api\KPIRefillAvgPackageSizeResource $avg_package_size
      * @return $this
      */
-    public function setPackageSize($package_size)
+    public function setAvgPackageSize($avg_package_size)
     {
-        $this->container['package_size'] = $package_size;
+        $this->container['avg_package_size'] = $avg_package_size;
 
         return $this;
     }

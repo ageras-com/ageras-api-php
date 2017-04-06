@@ -112,9 +112,9 @@ class LeadOfferInfoResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "partners"
+     * Test attribute "offers"
      */
-    public function testPropertyPartners()
+    public function testPropertyOffers()
     {
 
     }

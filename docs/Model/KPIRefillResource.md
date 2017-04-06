@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **avg_threshold** | [**\Ageras\Api\KPIRefillAvgThresholdResource**](KPIRefillAvgThresholdResource.md) |  | [optional] 
-**package_size** | [**\Ageras\Api\KPIRefillPackageSizeResource**](KPIRefillPackageSizeResource.md) |  | [optional] 
+**avg_package_size** | [**\Ageras\Api\KPIRefillAvgPackageSizeResource**](KPIRefillAvgPackageSizeResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

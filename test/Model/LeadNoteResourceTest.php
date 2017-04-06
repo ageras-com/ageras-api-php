@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsCompletionRatioResourceTest
+ * LeadNoteResourceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Ageras\Api;
 
 /**
- * KPIClientsCompletionRatioResourceTest Class Doc Comment
+ * LeadNoteResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIClientsCompletionRatioResource
+// * @description LeadNoteResource
 /**
  * @package     Ageras\Api
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsCompletionRatioResourceTest extends \PHPUnit_Framework_TestCase
+class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,25 @@ class KPIClientsCompletionRatioResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIClientsCompletionRatioResource"
+     * Test "LeadNoteResource"
      */
-    public function testKPIClientsCompletionRatioResource()
+    public function testLeadNoteResource()
     {
 
     }
 
     /**
-     * Test attribute "actual"
+     * Test attribute "note"
      */
-    public function testPropertyActual()
+    public function testPropertyNote()
     {
 
     }
 
     /**
-     * Test attribute "target"
+     * Test attribute "employee_id"
      */
-    public function testPropertyTarget()
+    public function testPropertyEmployeeId()
     {
 
     }

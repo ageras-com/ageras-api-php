@@ -69,7 +69,6 @@ class KPICreditsResource implements ArrayAccess
         'new_sales' => '\Ageras\Api\KPICreditsNewSalesResource',
         'refunded' => '\Ageras\Api\KPICreditsRefundedResource',
         'resales' => '\Ageras\Api\KPICreditsResalesResource',
-        'revenue' => '\Ageras\Api\KPICreditsRevenueResource',
         'sold' => '\Ageras\Api\KPICreditsSoldResource',
         'used' => '\Ageras\Api\KPICreditsUsedResource',
         'without_refill' => '\Ageras\Api\KPICreditsWithoutRefillResource'
@@ -88,7 +87,6 @@ class KPICreditsResource implements ArrayAccess
         'new_sales' => 'new_sales',
         'refunded' => 'refunded',
         'resales' => 'resales',
-        'revenue' => 'revenue',
         'sold' => 'sold',
         'used' => 'used',
         'without_refill' => 'without_refill'
@@ -107,7 +105,6 @@ class KPICreditsResource implements ArrayAccess
         'new_sales' => 'setNewSales',
         'refunded' => 'setRefunded',
         'resales' => 'setResales',
-        'revenue' => 'setRevenue',
         'sold' => 'setSold',
         'used' => 'setUsed',
         'without_refill' => 'setWithoutRefill'
@@ -126,7 +123,6 @@ class KPICreditsResource implements ArrayAccess
         'new_sales' => 'getNewSales',
         'refunded' => 'getRefunded',
         'resales' => 'getResales',
-        'revenue' => 'getRevenue',
         'sold' => 'getSold',
         'used' => 'getUsed',
         'without_refill' => 'getWithoutRefill'
@@ -156,7 +152,6 @@ class KPICreditsResource implements ArrayAccess
         $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
         $this->container['refunded'] = isset($data['refunded']) ? $data['refunded'] : null;
         $this->container['resales'] = isset($data['resales']) ? $data['resales'] : null;
-        $this->container['revenue'] = isset($data['revenue']) ? $data['revenue'] : null;
         $this->container['sold'] = isset($data['sold']) ? $data['sold'] : null;
         $this->container['used'] = isset($data['used']) ? $data['used'] : null;
         $this->container['without_refill'] = isset($data['without_refill']) ? $data['without_refill'] : null;
@@ -244,27 +239,6 @@ class KPICreditsResource implements ArrayAccess
     public function setResales($resales)
     {
         $this->container['resales'] = $resales;
-
-        return $this;
-    }
-
-    /**
-     * Gets revenue
-     * @return \Ageras\Api\KPICreditsRevenueResource
-     */
-    public function getRevenue()
-    {
-        return $this->container['revenue'];
-    }
-
-    /**
-     * Sets revenue
-     * @param \Ageras\Api\KPICreditsRevenueResource $revenue
-     * @return $this
-     */
-    public function setRevenue($revenue)
-    {
-        $this->container['revenue'] = $revenue;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIClientsResource
+ * LeadFeedbackResource
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * KPIClientsResource Class Doc Comment
+ * LeadFeedbackResource Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIClientsResource implements ArrayAccess
+class LeadFeedbackResource implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'KPIClientsResource';
+    protected static $swaggerModelName = 'LeadFeedbackResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'action_time' => '\Ageras\Api\KPIClientsActionTimeResource',
-        'completion_ratio' => '\Ageras\Api\KPIClientsCompletionRatioResource',
-        'validation_ratio' => '\Ageras\Api\KPIClientsValidationRatioResource'
+        'reason' => 'string',
+        'satisfaction_level_id' => 'int',
+        'feedback' => 'string',
+        'chosen_partner' => '\Ageras\Api\PartnerResource'
     );
 
     public static function swaggerTypes()
@@ -81,9 +82,10 @@ class KPIClientsResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'action_time' => 'action_time',
-        'completion_ratio' => 'completion_ratio',
-        'validation_ratio' => 'validation_ratio'
+        'reason' => 'reason',
+        'satisfaction_level_id' => 'satisfaction_level_id',
+        'feedback' => 'feedback',
+        'chosen_partner' => 'chosen_partner'
     );
 
     public static function attributeMap()
@@ -96,9 +98,10 @@ class KPIClientsResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'action_time' => 'setActionTime',
-        'completion_ratio' => 'setCompletionRatio',
-        'validation_ratio' => 'setValidationRatio'
+        'reason' => 'setReason',
+        'satisfaction_level_id' => 'setSatisfactionLevelId',
+        'feedback' => 'setFeedback',
+        'chosen_partner' => 'setChosenPartner'
     );
 
     public static function setters()
@@ -111,9 +114,10 @@ class KPIClientsResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'action_time' => 'getActionTime',
-        'completion_ratio' => 'getCompletionRatio',
-        'validation_ratio' => 'getValidationRatio'
+        'reason' => 'getReason',
+        'satisfaction_level_id' => 'getSatisfactionLevelId',
+        'feedback' => 'getFeedback',
+        'chosen_partner' => 'getChosenPartner'
     );
 
     public static function getters()
@@ -137,9 +141,10 @@ class KPIClientsResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['action_time'] = isset($data['action_time']) ? $data['action_time'] : null;
-        $this->container['completion_ratio'] = isset($data['completion_ratio']) ? $data['completion_ratio'] : null;
-        $this->container['validation_ratio'] = isset($data['validation_ratio']) ? $data['validation_ratio'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['satisfaction_level_id'] = isset($data['satisfaction_level_id']) ? $data['satisfaction_level_id'] : null;
+        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
+        $this->container['chosen_partner'] = isset($data['chosen_partner']) ? $data['chosen_partner'] : null;
     }
 
     /**
@@ -166,64 +171,85 @@ class KPIClientsResource implements ArrayAccess
 
 
     /**
-     * Gets action_time
-     * @return \Ageras\Api\KPIClientsActionTimeResource
+     * Gets reason
+     * @return string
      */
-    public function getActionTime()
+    public function getReason()
     {
-        return $this->container['action_time'];
+        return $this->container['reason'];
     }
 
     /**
-     * Sets action_time
-     * @param \Ageras\Api\KPIClientsActionTimeResource $action_time
+     * Sets reason
+     * @param string $reason The reason for choosing the partner
      * @return $this
      */
-    public function setActionTime($action_time)
+    public function setReason($reason)
     {
-        $this->container['action_time'] = $action_time;
+        $this->container['reason'] = $reason;
 
         return $this;
     }
 
     /**
-     * Gets completion_ratio
-     * @return \Ageras\Api\KPIClientsCompletionRatioResource
+     * Gets satisfaction_level_id
+     * @return int
      */
-    public function getCompletionRatio()
+    public function getSatisfactionLevelId()
     {
-        return $this->container['completion_ratio'];
+        return $this->container['satisfaction_level_id'];
     }
 
     /**
-     * Sets completion_ratio
-     * @param \Ageras\Api\KPIClientsCompletionRatioResource $completion_ratio
+     * Sets satisfaction_level_id
+     * @param int $satisfaction_level_id Satisfaction
      * @return $this
      */
-    public function setCompletionRatio($completion_ratio)
+    public function setSatisfactionLevelId($satisfaction_level_id)
     {
-        $this->container['completion_ratio'] = $completion_ratio;
+        $this->container['satisfaction_level_id'] = $satisfaction_level_id;
 
         return $this;
     }
 
     /**
-     * Gets validation_ratio
-     * @return \Ageras\Api\KPIClientsValidationRatioResource
+     * Gets feedback
+     * @return string
      */
-    public function getValidationRatio()
+    public function getFeedback()
     {
-        return $this->container['validation_ratio'];
+        return $this->container['feedback'];
     }
 
     /**
-     * Sets validation_ratio
-     * @param \Ageras\Api\KPIClientsValidationRatioResource $validation_ratio
+     * Sets feedback
+     * @param string $feedback Feedback
      * @return $this
      */
-    public function setValidationRatio($validation_ratio)
+    public function setFeedback($feedback)
     {
-        $this->container['validation_ratio'] = $validation_ratio;
+        $this->container['feedback'] = $feedback;
+
+        return $this;
+    }
+
+    /**
+     * Gets chosen_partner
+     * @return \Ageras\Api\PartnerResource
+     */
+    public function getChosenPartner()
+    {
+        return $this->container['chosen_partner'];
+    }
+
+    /**
+     * Sets chosen_partner
+     * @param \Ageras\Api\PartnerResource $chosen_partner
+     * @return $this
+     */
+    public function setChosenPartner($chosen_partner)
+    {
+        $this->container['chosen_partner'] = $chosen_partner;
 
         return $this;
     }

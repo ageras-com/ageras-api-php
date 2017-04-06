@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **on_behalf_of** | [**\Ageras\Api\ActivityBehalfResource**](ActivityBehalfResource.md) |  | [optional] 
 **partner_lead_offer** | [**\Ageras\Api\ActivityPartnerLeadOfferResource**](ActivityPartnerLeadOfferResource.md) |  | [optional] 
 **task** | [**\Ageras\Api\ActivityTaskResource**](ActivityTaskResource.md) |  | [optional] 
+**client** | [**\Ageras\Api\ActivityClientResource**](ActivityClientResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

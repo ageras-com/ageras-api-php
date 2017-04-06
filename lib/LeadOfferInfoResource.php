@@ -68,7 +68,7 @@ class LeadOfferInfoResource implements ArrayAccess
     protected static $swaggerTypes = array(
         'max' => 'int',
         'count' => 'int',
-        'partners' => '\Ageras\Api\LeadOfferPartnerResource[]'
+        'offers' => '\Ageras\Api\LeadOfferInfoItemResource[]'
     );
 
     public static function swaggerTypes()
@@ -83,7 +83,7 @@ class LeadOfferInfoResource implements ArrayAccess
     protected static $attributeMap = array(
         'max' => 'max',
         'count' => 'count',
-        'partners' => 'partners'
+        'offers' => 'offers'
     );
 
     public static function attributeMap()
@@ -98,7 +98,7 @@ class LeadOfferInfoResource implements ArrayAccess
     protected static $setters = array(
         'max' => 'setMax',
         'count' => 'setCount',
-        'partners' => 'setPartners'
+        'offers' => 'setOffers'
     );
 
     public static function setters()
@@ -113,7 +113,7 @@ class LeadOfferInfoResource implements ArrayAccess
     protected static $getters = array(
         'max' => 'getMax',
         'count' => 'getCount',
-        'partners' => 'getPartners'
+        'offers' => 'getOffers'
     );
 
     public static function getters()
@@ -139,7 +139,7 @@ class LeadOfferInfoResource implements ArrayAccess
     {
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
+        $this->container['offers'] = isset($data['offers']) ? $data['offers'] : null;
     }
 
     /**
@@ -208,22 +208,22 @@ class LeadOfferInfoResource implements ArrayAccess
     }
 
     /**
-     * Gets partners
-     * @return \Ageras\Api\LeadOfferPartnerResource[]
+     * Gets offers
+     * @return \Ageras\Api\LeadOfferInfoItemResource[]
      */
-    public function getPartners()
+    public function getOffers()
     {
-        return $this->container['partners'];
+        return $this->container['offers'];
     }
 
     /**
-     * Sets partners
-     * @param \Ageras\Api\LeadOfferPartnerResource[] $partners List of partners.
+     * Sets offers
+     * @param \Ageras\Api\LeadOfferInfoItemResource[] $offers List of offers.
      * @return $this
      */
-    public function setPartners($partners)
+    public function setOffers($offers)
     {
-        $this->container['partners'] = $partners;
+        $this->container['offers'] = $offers;
 
         return $this;
     }

@@ -128,6 +128,14 @@ class KPIPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "refills"
+     */
+    public function testPropertyRefills()
+    {
+
+    }
+
+    /**
      * Test attribute "new_sales"
      */
     public function testPropertyNewSales()

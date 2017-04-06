@@ -1,4 +1,4 @@
-# KPIClientsActionTimeResource
+# KPILeadsActionTimeResource
 
 ## Properties
 Name | Type | Description | Notes
