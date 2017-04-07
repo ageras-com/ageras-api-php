@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsIndex**
-> \Ageras\Api\RatingResult ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $limit, $page, $query)
+> \Ageras\Api\RatingResult ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $stars, $limit, $page, $query)
 
 Search for Lead's by a given set of criteria.
 
@@ -87,12 +87,13 @@ $partner_id = "partner_id_example"; // string | Partner id for the ratings to be
 $rating_id = "rating_id_example"; // string | Rating ids.
 $sort = "created_at"; // string | Sort ratings by a given property.
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
+$stars = "stars_example"; // string | List of stars to filter by
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $limit, $page, $query);
+    $result = $api_instance->ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $stars, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RatingsApi->ratingsIndex: ', $e->getMessage(), PHP_EOL;
@@ -108,6 +109,7 @@ Name | Type | Description  | Notes
  **rating_id** | **string**| Rating ids. | [optional]
  **sort** | **string**| Sort ratings by a given property. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]
+ **stars** | **string**| List of stars to filter by | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
