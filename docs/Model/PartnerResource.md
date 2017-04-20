@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 **preferences** | [**\Ageras\Api\PartnerPreferencesResource**](PartnerPreferencesResource.md) |  | [optional] 
 **refill** | [**\Ageras\Api\PartnerRefillResource**](PartnerRefillResource.md) |  | [optional] 
 **demo** | [**\Ageras\Api\PartnerDemoResource**](PartnerDemoResource.md) |  | [optional] 
+**canvas** | [**\Ageras\Api\PartnerCanvasResource**](PartnerCanvasResource.md) |  | [optional] 
+**tasks** | [**\Ageras\Api\PartnerTasksResource**](PartnerTasksResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

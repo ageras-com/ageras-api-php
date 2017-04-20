@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **avg_credits_used** | [**\Ageras\Api\KPIPartnersAvgCreditsUsedResource**](KPIPartnersAvgCreditsUsedResource.md) |  | [optional] 
 **calls** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 **churn** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
-**demos** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
+**demo_logins** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 **refills** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 **new_sales** | [**\Ageras\Api\KPIPartnersNewSalesResource**](KPIPartnersNewSalesResource.md) |  | [optional] 
 **cancellations** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 

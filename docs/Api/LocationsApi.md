@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **locationsIndex**
-> \Ageras\Api\LocationResult locationsIndex($geo_code, $point, $slug, $sort, $distinct, $limit, $page, $query)
+> \Ageras\Api\LocationResult locationsIndex($geo_code, $geo_point, $slug, $sort, $is_primary, $limit, $page, $query)
 
 Search and find locations by different criterias.
 
@@ -29,16 +29,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LocationsApi();
 $geo_code = "geo_code_example"; // string | Geographic Location Code.
-$point = "point_example"; // string | Geo Location Point
+$geo_point = "geo_point_example"; // string | Geo Location Point
 $slug = "slug_example"; // string | Slug for url friendly strings.
-$sort = "distance"; // string | Sort types for Locations
-$distinct = "distinct_example"; // string | Distinct locations
+$sort = "name"; // string | Sort types for Locations
+$is_primary = false; // bool | Only Primary Locations
 $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
 try {
-    $result = $api_instance->locationsIndex($geo_code, $point, $slug, $sort, $distinct, $limit, $page, $query);
+    $result = $api_instance->locationsIndex($geo_code, $geo_point, $slug, $sort, $is_primary, $limit, $page, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationsApi->locationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -51,10 +51,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**| Geographic Location Code. | [optional]
- **point** | **string**| Geo Location Point | [optional]
+ **geo_point** | **string**| Geo Location Point | [optional]
  **slug** | **string**| Slug for url friendly strings. | [optional]
- **sort** | **string**| Sort types for Locations | [optional] [default to distance]
- **distinct** | **string**| Distinct locations | [optional]
+ **sort** | **string**| Sort types for Locations | [optional] [default to name]
+ **is_primary** | **bool**| Only Primary Locations | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
