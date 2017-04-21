@@ -9,9 +9,7 @@ Method | HTTP request | Description
 
 
 # **clientsGet**
-> \Ageras\Api\ClientResource clientsGet($client_id)
-
-Return a Client
+> \Ageras\Api\ClientResource clientsGet($client_id )
 
 Return a Client
 
@@ -32,7 +30,7 @@ $api_instance = new Ageras\Api\Api\ClientsApi();
 $client_id = "client_id_example"; // string | Id of the client
 
 try {
-    $result = $api_instance->clientsGet($client_id);
+    $result = $api_instance->clientsGet($client_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->clientsGet: ', $e->getMessage(), PHP_EOL;
@@ -62,9 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **clientsUpdate**
-> \Ageras\Api\ClientResource clientsUpdate($client_id, $client_resource)
-
-Update a client
+> \Ageras\Api\ClientResource clientsUpdate($client_id , $client_resource)
 
 Update a client
 
@@ -86,7 +82,7 @@ $client_id = "client_id_example"; // string |
 $client_resource = new \Ageras\Api\ClientResource(); // \Ageras\Api\ClientResource | 
 
 try {
-    $result = $api_instance->clientsUpdate($client_id, $client_resource);
+    $result = $api_instance->clientsUpdate($client_id , $client_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->clientsUpdate: ', $e->getMessage(), PHP_EOL;

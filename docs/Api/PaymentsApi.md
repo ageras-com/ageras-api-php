@@ -12,9 +12,7 @@ Method | HTTP request | Description
 
 
 # **paymentsCardsGet**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -35,7 +33,7 @@ $api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_card_id = "payment_card_id_example"; // string | 
 
 try {
-    $result = $api_instance->paymentsCardsGet($payment_card_id);
+    $result = $api_instance->paymentsCardsGet($payment_card_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsGet: ', $e->getMessage(), PHP_EOL;
@@ -65,9 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsGet2**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id, $payment_card_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id,  $payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -89,7 +85,7 @@ $payment_id = "payment_id_example"; // string |
 $payment_card_id = "payment_card_id_example"; // string | 
 
 try {
-    $result = $api_instance->paymentsCardsGet2($payment_id, $payment_card_id);
+    $result = $api_instance->paymentsCardsGet2($payment_id,  $payment_card_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsGet2: ', $e->getMessage(), PHP_EOL;
@@ -120,9 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsIndex**
-> \Ageras\Api\PaymentCardResult paymentsCardsIndex($partner_id, $limit, $page, $query)
-
-List payment cards.
+> \Ageras\Api\PaymentCardResult paymentsCardsIndex($criteria)
 
 List payment cards.
 
@@ -140,13 +134,15 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$partner_id = 56; // int | Partner id for the partner payment cards to filter by.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => 56; // int | Partner id for the partner payment cards to filter by.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->paymentsCardsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->paymentsCardsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsIndex: ', $e->getMessage(), PHP_EOL;
@@ -180,8 +176,6 @@ Name | Type | Description  | Notes
 
 # **paymentsEpayCardsCreate**
 > \Ageras\Api\PaymentCardResource paymentsEpayCardsCreate($payment_card_resource)
-
-Create an epay payment card.
 
 Create an epay payment card.
 
@@ -233,8 +227,6 @@ Name | Type | Description  | Notes
 
 # **paymentsEpayWindowCreate**
 > \Ageras\Api\PaymentWindowResource paymentsEpayWindowCreate($payment_window_resource)
-
-Create epay window.
 
 Create epay window.
 

@@ -62,9 +62,7 @@ Method | HTTP request | Description
 
 
 # **partnersActionsCreate**
-> \Ageras\Api\PartnerResource partnersActionsCreate($partner_id, $partner_action_resource)
-
-Partner actions.
+> \Ageras\Api\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
 
 Partner actions.
 
@@ -86,7 +84,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
 
 try {
-    $result = $api_instance->partnersActionsCreate($partner_id, $partner_action_resource);
+    $result = $api_instance->partnersActionsCreate($partner_id , $partner_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -117,9 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query)
-
-List facets and aggregations for the Partner Search.
+> \Ageras\Api\AggregationResult partnersAggregationsIndex($criteria)
 
 List facets and aggregations for the Partner Search.
 
@@ -137,24 +133,28 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
-$state = "state_example"; // string | States for the partners.
-$is_enabled = false; // bool | 
-$employee_id = "employee_id_example"; // string | Employee id of the partners to filter by.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
-$punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
-$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
-$industry = "industry_example"; // string | Filter the partners by their industry identifiers
-$point = "point_example"; // string | Location Point to search partners by
-$sort = "relevance"; // string | Sort Partner's by a given property.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'state' => "state_example"; // string | States for the partners.
+        'is_enabled' => false; // bool | 
+        'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'satisfaction' => "satisfaction_example"; // string | Partner Satisfaction Ratio.
+        'punches_use_speed' => "punches_use_speed_example"; // string | Punches use speed.
+        'refill_offer_id' => "refill_offer_id_example"; // string | Filter the partners by their refill offers
+        'industry_id' => "industry_id_example"; // string | Filter the partners by their industry ids
+        'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
+        'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
+        'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by
+        'sort' => "relevance"; // string | Sort Partner's by a given property.
+        'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersAggregationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -176,8 +176,10 @@ Name | Type | Description  | Notes
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **industry_id** | **string**| Filter the partners by their industry ids | [optional]
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
- **point** | **string**| Location Point to search partners by | [optional]
+ **geo_point** | **string**| Location Point to sort partners by | [optional]
+ **geo_rect** | **string**| Location Points to define an area to filter partners by | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
+ **canvas_status** | **string**| Canvas Status | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -198,9 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsCreate**
-> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id, $certification_resource)
-
-Attach certification to partner.
+> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id , $certification_resource)
 
 Attach certification to partner.
 
@@ -222,7 +222,7 @@ $partner_id = "partner_id_example"; // string |
 $certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
 
 try {
-    $result = $api_instance->partnersCertificationsCreate($partner_id, $certification_resource);
+    $result = $api_instance->partnersCertificationsCreate($partner_id , $certification_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsCreate: ', $e->getMessage(), PHP_EOL;
@@ -253,9 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsDelete**
-> partnersCertificationsDelete($partner_id, $certification_id)
-
-Detach certification from partner.
+> partnersCertificationsDelete($partner_id,  $certification_id )
 
 Detach certification from partner.
 
@@ -277,7 +275,7 @@ $partner_id = "partner_id_example"; // string |
 $certification_id = "certification_id_example"; // string | 
 
 try {
-    $api_instance->partnersCertificationsDelete($partner_id, $certification_id);
+    $api_instance->partnersCertificationsDelete($partner_id,  $certification_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -307,9 +305,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsGet**
-> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id, $certification_id)
-
-Get Partner certification.
+> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id,  $certification_id )
 
 Get Partner certification.
 
@@ -331,7 +327,7 @@ $partner_id = "partner_id_example"; // string |
 $certification_id = "certification_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersCertificationsGet($partner_id, $certification_id);
+    $result = $api_instance->partnersCertificationsGet($partner_id,  $certification_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsGet: ', $e->getMessage(), PHP_EOL;
@@ -362,9 +358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsIndex**
-> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner certifications.
+> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id , $criteria)
 
 Get partner certifications.
 
@@ -383,14 +377,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersCertificationsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -425,9 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsDelete**
-> partnersContentsDelete($partner_id, $content_key)
-
-Delete content for a given partner.
+> partnersContentsDelete($partner_id,  $content_key )
 
 Delete content for a given partner.
 
@@ -449,7 +443,7 @@ $partner_id = "partner_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $api_instance->partnersContentsDelete($partner_id, $content_key);
+    $api_instance->partnersContentsDelete($partner_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -479,9 +473,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id, $content_key)
-
-Get the content of a given partner.
+> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id,  $content_key )
 
 Get the content of a given partner.
 
@@ -503,7 +495,7 @@ $partner_id = "partner_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $result = $api_instance->partnersContentsGet($partner_id, $content_key);
+    $result = $api_instance->partnersContentsGet($partner_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsGet: ', $e->getMessage(), PHP_EOL;
@@ -534,9 +526,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id, $content_key, $partner_content_resource)
-
-Update content for a given partner.
+> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner.
 
@@ -559,7 +549,7 @@ $content_key = "content_key_example"; // string |
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
-    $result = $api_instance->partnersContentsUpdate($partner_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -591,9 +581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsActionsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource)
-
-Coupon action
+> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource)
 
 Coupon action
 
@@ -616,7 +604,7 @@ $coupon_id = "coupon_id_example"; // string |
 $partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
 
 try {
-    $result = $api_instance->partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource);
+    $result = $api_instance->partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -648,9 +636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id, $partner_coupon_resource)
-
-Create a new partner coupon.
+> \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id , $partner_coupon_resource)
 
 Create a new partner coupon.
 
@@ -672,7 +658,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
 
 try {
-    $result = $api_instance->partnersCouponsCreate($partner_id, $partner_coupon_resource);
+    $result = $api_instance->partnersCouponsCreate($partner_id , $partner_coupon_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsCreate: ', $e->getMessage(), PHP_EOL;
@@ -703,9 +689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsIndex**
-> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query)
-
-List Partner Coupons.
+> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id , $criteria)
 
 List Partner Coupons.
 
@@ -724,16 +708,18 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$show_expired = false; // bool | Only show expired partner coupons.
-$show_deactivated = false; // bool | Only show deactivated partner coupons.
-$show_empty = false; // bool | Should empty partner coupons be included in the result.
-$sort = "created_at"; // string | Sort the coupons by different values
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'show_expired' => false; // bool | Only show expired partner coupons.
+        'show_deactivated' => false; // bool | Only show deactivated partner coupons.
+        'show_empty' => false; // bool | Should empty partner coupons be included in the result.
+        'sort' => "created_at"; // string | Sort the coupons by different values
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersCouponsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsIndex: ', $e->getMessage(), PHP_EOL;
@@ -771,8 +757,6 @@ Name | Type | Description  | Notes
 
 # **partnersCreate**
 > \Ageras\Api\PartnerResource partnersCreate($partner_resource)
-
-Create a Partner.
 
 Create a Partner.
 
@@ -823,9 +807,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersDelete**
-> partnersDelete($partner_id)
-
-Delete a Partner.
+> partnersDelete($partner_id )
 
 Delete a Partner.
 
@@ -846,7 +828,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
 try {
-    $api_instance->partnersDelete($partner_id);
+    $api_instance->partnersDelete($partner_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -875,9 +857,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersGet**
-> \Ageras\Api\PartnerResource partnersGet($partner_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PartnerResource partnersGet($partner_id )
 
 Get a Partner from a given partner_id.
 
@@ -898,7 +878,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersGet($partner_id);
+    $result = $api_instance->partnersGet($partner_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersGet: ', $e->getMessage(), PHP_EOL;
@@ -928,9 +908,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query)
-
-List Partners.
+> \Ageras\Api\PartnerResult partnersIndex($criteria)
 
 List Partners.
 
@@ -948,24 +926,28 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
-$state = "state_example"; // string | States for the partners.
-$is_enabled = false; // bool | 
-$employee_id = "employee_id_example"; // string | Employee id of the partners to filter by.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
-$punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
-$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
-$industry = "industry_example"; // string | Filter the partners by their industry identifiers
-$point = "point_example"; // string | Location Point to search partners by
-$sort = "relevance"; // string | Sort Partner's by a given property.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'state' => "state_example"; // string | States for the partners.
+        'is_enabled' => false; // bool | 
+        'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'satisfaction' => "satisfaction_example"; // string | Partner Satisfaction Ratio.
+        'punches_use_speed' => "punches_use_speed_example"; // string | Punches use speed.
+        'refill_offer_id' => "refill_offer_id_example"; // string | Filter the partners by their refill offers
+        'industry_id' => "industry_id_example"; // string | Filter the partners by their industry ids
+        'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
+        'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
+        'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by
+        'sort' => "relevance"; // string | Sort Partner's by a given property.
+        'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $point, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -987,8 +969,10 @@ Name | Type | Description  | Notes
  **refill_offer_id** | **string**| Filter the partners by their refill offers | [optional]
  **industry_id** | **string**| Filter the partners by their industry ids | [optional]
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
- **point** | **string**| Location Point to search partners by | [optional]
+ **geo_point** | **string**| Location Point to sort partners by | [optional]
+ **geo_rect** | **string**| Location Points to define an area to filter partners by | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
+ **canvas_status** | **string**| Canvas Status | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1009,9 +993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesCreate**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id, $partner_industry_resource)
-
-Attach industry to partner.
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id , $partner_industry_resource)
 
 Attach industry to partner.
 
@@ -1033,7 +1015,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
 
 try {
-    $result = $api_instance->partnersIndustriesCreate($partner_id, $partner_industry_resource);
+    $result = $api_instance->partnersIndustriesCreate($partner_id , $partner_industry_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesCreate: ', $e->getMessage(), PHP_EOL;
@@ -1064,9 +1046,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesDelete**
-> partnersIndustriesDelete($partner_id, $industry_id)
-
-Detach industry from partner.
+> partnersIndustriesDelete($partner_id,  $industry_id )
 
 Detach industry from partner.
 
@@ -1088,7 +1068,7 @@ $partner_id = "partner_id_example"; // string |
 $industry_id = "industry_id_example"; // string | 
 
 try {
-    $api_instance->partnersIndustriesDelete($partner_id, $industry_id);
+    $api_instance->partnersIndustriesDelete($partner_id,  $industry_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1118,9 +1098,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesGet**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id, $industry_id)
-
-Get a given industry for partner.
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id,  $industry_id )
 
 Get a given industry for partner.
 
@@ -1142,7 +1120,7 @@ $partner_id = "partner_id_example"; // string |
 $industry_id = "industry_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersIndustriesGet($partner_id, $industry_id);
+    $result = $api_instance->partnersIndustriesGet($partner_id,  $industry_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesGet: ', $e->getMessage(), PHP_EOL;
@@ -1173,9 +1151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesIndex**
-> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query)
-
-Get partner industries.
+> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id , $criteria)
 
 Get partner industries.
 
@@ -1194,13 +1170,15 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersIndustriesIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1234,9 +1212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesCreate**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id, $lead_type_resource)
-
-Attach type to partner.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
 
 Attach type to partner.
 
@@ -1258,7 +1234,7 @@ $partner_id = "partner_id_example"; // string |
 $lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
 
 try {
-    $result = $api_instance->partnersLeadtypesCreate($partner_id, $lead_type_resource);
+    $result = $api_instance->partnersLeadtypesCreate($partner_id , $lead_type_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesCreate: ', $e->getMessage(), PHP_EOL;
@@ -1289,9 +1265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesDelete**
-> partnersLeadtypesDelete($partner_id, $lead_type_id)
-
-Detach type from partner.
+> partnersLeadtypesDelete($partner_id,  $lead_type_id )
 
 Detach type from partner.
 
@@ -1313,7 +1287,7 @@ $partner_id = "partner_id_example"; // string |
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
-    $api_instance->partnersLeadtypesDelete($partner_id, $lead_type_id);
+    $api_instance->partnersLeadtypesDelete($partner_id,  $lead_type_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1343,9 +1317,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id)
-
-Retrieve a given lead type.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1366,7 +1338,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersLeadtypesGet($lead_type_id);
+    $result = $api_instance->partnersLeadtypesGet($lead_type_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesGet: ', $e->getMessage(), PHP_EOL;
@@ -1396,9 +1368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet2**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id, $lead_type_id)
-
-Retrieve a given lead type.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id,  $lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1420,7 +1390,7 @@ $partner_id = "partner_id_example"; // string |
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersLeadtypesGet2($partner_id, $lead_type_id);
+    $result = $api_instance->partnersLeadtypesGet2($partner_id,  $lead_type_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesGet2: ', $e->getMessage(), PHP_EOL;
@@ -1451,9 +1421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner types criteria.
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($criteria)
 
 Get partner types criteria.
 
@@ -1471,15 +1439,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = 56; // int | Partner ID. @var int
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => 56; // int | Partner ID. @var int
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersLeadtypesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1514,9 +1484,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex2**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner types criteria.
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id , $criteria)
 
 Get partner types criteria.
 
@@ -1535,14 +1503,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersLeadtypesIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1578,8 +1548,6 @@ Name | Type | Description  | Notes
 
 # **partnersNotesCreate**
 > \Ageras\Api\PartnerNoteResource partnersNotesCreate($partner_note_resource)
-
-Create Partner notes.
 
 Create Partner notes.
 
@@ -1630,9 +1598,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate2**
-> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id, $partner_note_resource)
-
-Create Partner notes.
+> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id , $partner_note_resource)
 
 Create Partner notes.
 
@@ -1654,7 +1620,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
 try {
-    $result = $api_instance->partnersNotesCreate2($partner_id, $partner_note_resource);
+    $result = $api_instance->partnersNotesCreate2($partner_id , $partner_note_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesCreate2: ', $e->getMessage(), PHP_EOL;
@@ -1685,9 +1651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesGet**
-> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id, $partner_note_id)
-
-Retrieve a given partner note by partner id and partner_note_id.
+> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id,  $partner_note_id )
 
 Retrieve a given partner note by partner id and partner_note_id.
 
@@ -1709,7 +1673,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_note_id = "partner_note_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersNotesGet($partner_id, $partner_note_id);
+    $result = $api_instance->partnersNotesGet($partner_id,  $partner_note_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesGet: ', $e->getMessage(), PHP_EOL;
@@ -1740,9 +1704,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex($partner_id, $types, $limit, $page, $query)
-
-Retrieve lists of notes.
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex($criteria)
 
 Retrieve lists of notes.
 
@@ -1760,14 +1722,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = 56; // int | 
-$types = "all"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => 56; // int | 
+        'types' => "all"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersNotesIndex($partner_id, $types, $limit, $page, $query);
+    $result = $api_instance->partnersNotesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1801,9 +1765,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex2**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id, $types, $limit, $page, $query)
-
-Retrieve lists of notes.
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id , $criteria)
 
 Retrieve lists of notes.
 
@@ -1822,13 +1784,15 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "all"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'types' => "all"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersNotesIndex2($partner_id, $types, $limit, $page, $query);
+    $result = $api_instance->partnersNotesIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1862,9 +1826,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsCreate**
-> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id, $partner_refill_resource)
-
-Create partner refill.
+> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id , $partner_refill_resource)
 
 Create partner refill.
 
@@ -1886,7 +1848,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
 
 try {
-    $result = $api_instance->partnersRefillsCreate($partner_id, $partner_refill_resource);
+    $result = $api_instance->partnersRefillsCreate($partner_id , $partner_refill_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersRefillsCreate: ', $e->getMessage(), PHP_EOL;
@@ -1917,9 +1879,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsIndex**
-> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id, $limit, $page, $query)
-
-Get partner refills.
+> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id , $criteria)
 
 Get partner refills.
 
@@ -1938,12 +1898,14 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersRefillsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersRefillsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersRefillsIndex: ', $e->getMessage(), PHP_EOL;
@@ -1976,9 +1938,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsActionsCreate**
-> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource)
-
-Cancel subscription.
+> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
 
 Cancel subscription.
 
@@ -2001,7 +1961,7 @@ $subscription_id = "subscription_id_example"; // string |
 $partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
 
 try {
-    $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource);
+    $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -2033,9 +1993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsCreate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id, $partner_subscription_resource)
-
-Subscribe a partner.
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id , $partner_subscription_resource)
 
 Subscribe a partner.
 
@@ -2057,7 +2015,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
 try {
-    $result = $api_instance->partnersSubscriptionsCreate($partner_id, $partner_subscription_resource);
+    $result = $api_instance->partnersSubscriptionsCreate($partner_id , $partner_subscription_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -2088,9 +2046,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsIndex**
-> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id, $limit, $page, $query)
-
-Get partner's subscriptions.
+> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id , $criteria)
 
 Get partner's subscriptions.
 
@@ -2109,12 +2065,14 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersSubscriptionsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersSubscriptionsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2147,9 +2105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsUpdate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource)
-
-Update partner subscription.
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource)
 
 Update partner subscription.
 
@@ -2171,7 +2127,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
 try {
-    $result = $api_instance->partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource);
+    $result = $api_instance->partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2202,9 +2158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSuggestIndex**
-> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page)
-
-Suggest Partners to search for.
+> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($criteria)
 
 Suggest Partners to search for.
 
@@ -2222,15 +2176,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$limit = 56; // int | Limit the number of suggest resources pr. page.
-$geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
-$query = "query_example"; // string | The search query to search by.
-$type = "type_example"; // string | Type to search for.
-$partner_state = "partner_state_example"; // string | Partner state.
-$page = 56; // int | The page position in the result.
+$criteria = [
+        'limit' => 56; // int | Limit the number of suggest resources pr. page.
+        'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
+        'query' => "query_example"; // string | The search query to search by.
+        'type' => "type_example"; // string | Type to search for.
+        'partner_state' => "partner_state_example"; // string | Partner state.
+        'page' => 56; // int | The page position in the result.
+    ];
 
 try {
-    $result = $api_instance->partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page);
+    $result = $api_instance->partnersSuggestIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -2265,9 +2221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersTransactionsIndex**
-> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id, $limit, $page, $query)
-
-List Transactions for a given Partner.
+> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id , $criteria)
 
 List Transactions for a given Partner.
 
@@ -2286,12 +2240,14 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersTransactionsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersTransactionsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersTransactionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2324,9 +2280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUpdate**
-> \Ageras\Api\PartnerResource partnersUpdate($partner_id, $partner_resource)
-
-Update a Partner.
+> \Ageras\Api\PartnerResource partnersUpdate($partner_id , $partner_resource)
 
 Update a Partner.
 
@@ -2348,7 +2302,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
 try {
-    $result = $api_instance->partnersUpdate($partner_id, $partner_resource);
+    $result = $api_instance->partnersUpdate($partner_id , $partner_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2379,9 +2333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsDelete**
-> partnersUsersContentsDelete($partner_user_id, $content_key)
-
-Delete content for a given partner user.
+> partnersUsersContentsDelete($partner_user_id,  $content_key )
 
 Delete content for a given partner user.
 
@@ -2403,7 +2355,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $api_instance->partnersUsersContentsDelete($partner_user_id, $content_key);
+    $api_instance->partnersUsersContentsDelete($partner_user_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -2433,9 +2385,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsDelete2**
-> partnersUsersContentsDelete2($partner_id, $partner_user_id, $content_key)
-
-Delete content for a given partner user.
+> partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key )
 
 Delete content for a given partner user.
 
@@ -2458,7 +2408,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $api_instance->partnersUsersContentsDelete2($partner_id, $partner_user_id, $content_key);
+    $api_instance->partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsDelete2: ', $e->getMessage(), PHP_EOL;
 }
@@ -2489,9 +2439,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id, $content_key)
-
-Get the content of a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2513,7 +2461,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersContentsGet($partner_user_id, $content_key);
+    $result = $api_instance->partnersUsersContentsGet($partner_user_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsGet: ', $e->getMessage(), PHP_EOL;
@@ -2544,9 +2492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key)
-
-Get the content of a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2569,7 +2515,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key);
+    $result = $api_instance->partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsGet2: ', $e->getMessage(), PHP_EOL;
@@ -2601,9 +2547,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource)
-
-Update content for a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2626,7 +2570,7 @@ $content_key = "content_key_example"; // string |
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
-    $result = $api_instance->partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2658,9 +2602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource)
-
-Update content for a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2684,7 +2626,7 @@ $content_key = "content_key_example"; // string |
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
-    $result = $api_instance->partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate2: ', $e->getMessage(), PHP_EOL;
@@ -2718,8 +2660,6 @@ Name | Type | Description  | Notes
 
 # **partnersUsersCreate**
 > \Ageras\Api\PartnerUserResource partnersUsersCreate($partner_user_resource)
-
-Create a partner user.
 
 Create a partner user.
 
@@ -2770,9 +2710,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate2**
-> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id, $partner_user_resource)
-
-Create a partner user.
+> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id , $partner_user_resource)
 
 Create a partner user.
 
@@ -2794,7 +2732,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
-    $result = $api_instance->partnersUsersCreate2($partner_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersCreate2($partner_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersCreate2: ', $e->getMessage(), PHP_EOL;
@@ -2825,9 +2763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersDelete**
-> partnersUsersDelete($partner_id, $partner_user_id)
-
-Delete partner user from partner.
+> partnersUsersDelete($partner_id,  $partner_user_id )
 
 Delete partner user from partner.
 
@@ -2849,7 +2785,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
-    $api_instance->partnersUsersDelete($partner_id, $partner_user_id);
+    $api_instance->partnersUsersDelete($partner_id,  $partner_user_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -2879,9 +2815,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet**
-> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id)
-
-Get a Partner User by a given partner_user_id.
+> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -2902,7 +2836,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersGet($partner_user_id);
+    $result = $api_instance->partnersUsersGet($partner_user_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersGet: ', $e->getMessage(), PHP_EOL;
@@ -2932,9 +2866,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet2**
-> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id, $partner_user_id)
-
-Get a Partner User by a given partner_user_id.
+> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id,  $partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -2956,7 +2888,7 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersGet2($partner_id, $partner_user_id);
+    $result = $api_instance->partnersUsersGet2($partner_id,  $partner_user_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersGet2: ', $e->getMessage(), PHP_EOL;
@@ -2987,9 +2919,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query)
-
-List partner users.
+> \Ageras\Api\PartnerUserResult partnersUsersIndex($criteria)
 
 List partner users.
 
@@ -3007,15 +2937,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$partner_id = "partner_id_example"; // string | Partner id for the partner users to filter by.
-$sort = "sort_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'partner_id' => "partner_id_example"; // string | Partner id for the partner users to filter by.
+        'sort' => "sort_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersUsersIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex: ', $e->getMessage(), PHP_EOL;
@@ -3050,9 +2982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex2**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query)
-
-List partner users.
+> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id , $criteria)
 
 List partner users.
 
@@ -3071,14 +3001,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$sort = "sort_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'sort' => "sort_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersUsersIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex2: ', $e->getMessage(), PHP_EOL;
@@ -3113,9 +3045,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id, $partner_user_resource)
-
-Update partner user profile.
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3137,7 +3067,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
-    $result = $api_instance->partnersUsersUpdate($partner_user_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersUpdate($partner_user_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersUpdate: ', $e->getMessage(), PHP_EOL;
@@ -3168,9 +3098,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate2**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource)
-
-Update partner user profile.
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3193,7 +3121,7 @@ $partner_user_id = "partner_user_id_example"; // string |
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
-    $result = $api_instance->partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersUpdate2: ', $e->getMessage(), PHP_EOL;

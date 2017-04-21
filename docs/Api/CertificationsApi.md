@@ -8,9 +8,7 @@ Method | HTTP request | Description
 
 
 # **certificationsIndex**
-> \Ageras\Api\CertificationResult certificationsIndex($geo_code, $industry_id, $limit, $page, $query)
-
-Get all available certifications.
+> \Ageras\Api\CertificationResult certificationsIndex($criteria)
 
 Get all available certifications.
 
@@ -28,14 +26,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\CertificationsApi();
-$geo_code = "geo_code_example"; // string | 
-$industry_id = 56; // int | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | 
+        'industry_id' => 56; // int | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->certificationsIndex($geo_code, $industry_id, $limit, $page, $query);
+    $result = $api_instance->certificationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CertificationsApi->certificationsIndex: ', $e->getMessage(), PHP_EOL;

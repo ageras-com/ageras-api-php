@@ -12,9 +12,7 @@ Method | HTTP request | Description
 
 
 # **salesOpportunitiesAggregationsIndex**
-> \Ageras\Api\SalesOpportunityResult salesOpportunitiesAggregationsIndex($employee_id, $month, $limit, $geo_code, $page, $query)
-
-Index aggregations.
+> \Ageras\Api\SalesOpportunityResult salesOpportunitiesAggregationsIndex($criteria)
 
 Index aggregations.
 
@@ -32,15 +30,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
-$employee_id = 56; // int | Employee ID.
-$month = "month_example"; // string | Filter by month.
-$limit = 56; // int | Limit.
-$geo_code = "geo_code_example"; // string | Opportunities by geo code.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'employee_id' => 56; // int | Employee ID.
+        'month' => "month_example"; // string | Filter by month.
+        'limit' => 56; // int | Limit.
+        'geo_code' => "geo_code_example"; // string | Opportunities by geo code.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->salesOpportunitiesAggregationsIndex($employee_id, $month, $limit, $geo_code, $page, $query);
+    $result = $api_instance->salesOpportunitiesAggregationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SalesopportunitiesApi->salesOpportunitiesAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -76,8 +76,6 @@ Name | Type | Description  | Notes
 
 # **salesOpportunitiesCreate**
 > \Ageras\Api\SalesOpportunityResource salesOpportunitiesCreate($sales_opportunity_resource)
-
-Create sale opportunity.
 
 Create sale opportunity.
 
@@ -128,9 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesDelete**
-> salesOpportunitiesDelete($sales_opportunity_id)
-
-Delete Sales opportunity.
+> salesOpportunitiesDelete($sales_opportunity_id )
 
 Delete Sales opportunity.
 
@@ -151,7 +147,7 @@ $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $sales_opportunity_id = "sales_opportunity_id_example"; // string | 
 
 try {
-    $api_instance->salesOpportunitiesDelete($sales_opportunity_id);
+    $api_instance->salesOpportunitiesDelete($sales_opportunity_id );
 } catch (Exception $e) {
     echo 'Exception when calling SalesopportunitiesApi->salesOpportunitiesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -180,9 +176,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesIndex**
-> \Ageras\Api\SalesOpportunityResult salesOpportunitiesIndex($employee_id, $month, $limit, $geo_code, $page, $query)
-
-Get list sales pipelines opportunities.
+> \Ageras\Api\SalesOpportunityResult salesOpportunitiesIndex($criteria)
 
 Get list sales pipelines opportunities.
 
@@ -200,15 +194,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
-$employee_id = 56; // int | Employee ID.
-$month = "month_example"; // string | Filter by month.
-$limit = 56; // int | Limit.
-$geo_code = "geo_code_example"; // string | Opportunities by geo code.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'employee_id' => 56; // int | Employee ID.
+        'month' => "month_example"; // string | Filter by month.
+        'limit' => 56; // int | Limit.
+        'geo_code' => "geo_code_example"; // string | Opportunities by geo code.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->salesOpportunitiesIndex($employee_id, $month, $limit, $geo_code, $page, $query);
+    $result = $api_instance->salesOpportunitiesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SalesopportunitiesApi->salesOpportunitiesIndex: ', $e->getMessage(), PHP_EOL;
@@ -243,9 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesUpdate**
-> \Ageras\Api\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id, $sales_opportunity_resource)
-
-Create Sales opportunity resource.
+> \Ageras\Api\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id , $sales_opportunity_resource)
 
 Create Sales opportunity resource.
 
@@ -267,7 +261,7 @@ $sales_opportunity_id = "sales_opportunity_id_example"; // string |
 $sales_opportunity_resource = new \Ageras\Api\SalesOpportunityResource(); // \Ageras\Api\SalesOpportunityResource | 
 
 try {
-    $result = $api_instance->salesOpportunitiesUpdate($sales_opportunity_id, $sales_opportunity_resource);
+    $result = $api_instance->salesOpportunitiesUpdate($sales_opportunity_id , $sales_opportunity_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SalesopportunitiesApi->salesOpportunitiesUpdate: ', $e->getMessage(), PHP_EOL;

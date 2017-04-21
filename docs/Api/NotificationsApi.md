@@ -15,8 +15,6 @@ Method | HTTP request | Description
 
 Perform an action on one or more notifications
 
-Perform an action on one or more notifications
-
 ### Example
 ```php
 <?php
@@ -64,9 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsActionsCreate2**
-> \Ageras\Api\NotificationResource notificationsActionsCreate2($notification_id, $notification_action_resource)
-
-Perform an action on one or more notifications
+> \Ageras\Api\NotificationResource notificationsActionsCreate2($notification_id , $notification_action_resource)
 
 Perform an action on one or more notifications
 
@@ -88,7 +84,7 @@ $notification_id = "notification_id_example"; // string |
 $notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
 
 try {
-    $result = $api_instance->notificationsActionsCreate2($notification_id, $notification_action_resource);
+    $result = $api_instance->notificationsActionsCreate2($notification_id , $notification_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsActionsCreate2: ', $e->getMessage(), PHP_EOL;
@@ -119,9 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsGet**
-> \Ageras\Api\NotificationResource notificationsGet($notification_id)
-
-Get single notification
+> \Ageras\Api\NotificationResource notificationsGet($notification_id )
 
 Get single notification
 
@@ -142,7 +136,7 @@ $api_instance = new Ageras\Api\Api\NotificationsApi();
 $notification_id = "notification_id_example"; // string | 
 
 try {
-    $result = $api_instance->notificationsGet($notification_id);
+    $result = $api_instance->notificationsGet($notification_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsGet: ', $e->getMessage(), PHP_EOL;
@@ -172,9 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsIndex**
-> \Ageras\Api\NotificationResult notificationsIndex($sort, $created_after, $limit, $page, $query)
-
-List notifications
+> \Ageras\Api\NotificationResult notificationsIndex($criteria)
 
 List notifications
 
@@ -192,14 +184,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\NotificationsApi();
-$sort = "relevance"; // string | 
-$created_after = "created_after_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'sort' => "relevance"; // string | 
+        'created_after' => "created_after_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->notificationsIndex($sort, $created_after, $limit, $page, $query);
+    $result = $api_instance->notificationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsIndex: ', $e->getMessage(), PHP_EOL;

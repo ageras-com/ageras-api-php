@@ -10,11 +10,9 @@ Method | HTTP request | Description
 
 
 # **offersActionsCreate**
-> \Ageras\Api\PartnerOfferResource offersActionsCreate($offer_id, $offer_action_resource)
+> \Ageras\Api\PartnerOfferResource offersActionsCreate($offer_id , $offer_action_resource)
 
 Perform an action on an offer.
-
-Perform an action on an offer. When the action `accept-offer` is sent with the partner id of a demo, the demo is automatically converted to a partner as the partner is being invoiced.
 
 ### Example
 ```php
@@ -34,7 +32,7 @@ $offer_id = "offer_id_example"; // string |
 $offer_action_resource = new \Ageras\Api\OfferActionResource(); // \Ageras\Api\OfferActionResource | 
 
 try {
-    $result = $api_instance->offersActionsCreate($offer_id, $offer_action_resource);
+    $result = $api_instance->offersActionsCreate($offer_id , $offer_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -65,9 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersGet**
-> \Ageras\Api\PartnerOfferResource offersGet($offer_id)
-
-Get an offer by id.
+> \Ageras\Api\PartnerOfferResource offersGet($offer_id )
 
 Get an offer by id.
 
@@ -88,7 +84,7 @@ $api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
 
 try {
-    $result = $api_instance->offersGet($offer_id);
+    $result = $api_instance->offersGet($offer_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersGet: ', $e->getMessage(), PHP_EOL;
@@ -118,9 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersIndex**
-> \Ageras\Api\PartnerOfferResult offersIndex($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $sale_type, $limit, $page, $query)
-
-Get all partner offer.
+> \Ageras\Api\PartnerOfferResult offersIndex($criteria)
 
 Get all partner offer.
 
@@ -138,20 +132,22 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\OffersApi();
-$show_expired = false; // bool | Include expired partners in the result.
-$show_accepted = false; // bool | Show accepted partner.
-$partner_id = 56; // int | Partner id of Offers to filter by.
-$sort = "created_at"; // string | Order by price asc or desc.
-$action = "action_example"; // string | Action to take.
-$geo_code = "geo_code_example"; // string | Offer geo code.
-$type = "partner"; // string | Type of Offer
-$sale_type = "unknown"; // string | Sale type
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'show_expired' => false; // bool | Include expired partners in the result.
+        'show_accepted' => false; // bool | Show accepted partner.
+        'partner_id' => 56; // int | Partner id of Offers to filter by.
+        'sort' => "created_at"; // string | Order by price asc or desc.
+        'action' => "action_example"; // string | Action to take.
+        'geo_code' => "geo_code_example"; // string | Offer geo code.
+        'type' => "partner"; // string | Type of Offer
+        'sale_type' => "unknown"; // string | Sale type
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->offersIndex($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $sale_type, $limit, $page, $query);
+    $result = $api_instance->offersIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersIndex: ', $e->getMessage(), PHP_EOL;

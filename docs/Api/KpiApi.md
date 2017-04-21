@@ -8,9 +8,7 @@ Method | HTTP request | Description
 
 
 # **kpiIndex**
-> \Ageras\Api\KPIResult kpiIndex($geo_code, $industry, $industry_id, $employee_id, $partner_id, $limit, $page, $query)
-
-List the different KPI's
+> \Ageras\Api\KPIResult kpiIndex($criteria)
 
 List the different KPI's
 
@@ -28,17 +26,19 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\KpiApi();
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$industry = "industry_example"; // string | Industry code for the kpi
-$industry_id = "industry_id_example"; // string | Industry id for the kpi
-$employee_id = "employee_id_example"; // string | Employee Id
-$partner_id = "partner_id_example"; // string | Partner Id
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'industry' => "industry_example"; // string | Industry code for the kpi
+        'industry_id' => "industry_id_example"; // string | Industry id for the kpi
+        'employee_id' => "employee_id_example"; // string | Employee Id
+        'partner_id' => "partner_id_example"; // string | Partner Id
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->kpiIndex($geo_code, $industry, $industry_id, $employee_id, $partner_id, $limit, $page, $query);
+    $result = $api_instance->kpiIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KpiApi->kpiIndex: ', $e->getMessage(), PHP_EOL;

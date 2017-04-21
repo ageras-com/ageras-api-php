@@ -9,9 +9,7 @@ Method | HTTP request | Description
 
 
 # **invoicesGet**
-> \Ageras\Api\InvoiceResource invoicesGet($invoice_id)
-
-Get an Invoice from a given invoice_id.
+> \Ageras\Api\InvoiceResource invoicesGet($invoice_id )
 
 Get an Invoice from a given invoice_id.
 
@@ -32,7 +30,7 @@ $api_instance = new Ageras\Api\Api\InvoicesApi();
 $invoice_id = "invoice_id_example"; // string | 
 
 try {
-    $result = $api_instance->invoicesGet($invoice_id);
+    $result = $api_instance->invoicesGet($invoice_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->invoicesGet: ', $e->getMessage(), PHP_EOL;
@@ -62,9 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invoicesIndex**
-> \Ageras\Api\InvoiceResult invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $geo_code, $limit, $page, $query)
-
-Search and find invoices by specific criterias.
+> \Ageras\Api\InvoiceResult invoicesIndex($criteria)
 
 Search and find invoices by specific criterias.
 
@@ -82,18 +78,20 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\InvoicesApi();
-$invoice_id = "invoice_id_example"; // string | Invoice Id.
-$partner_id = "partner_id_example"; // string | Filter Invoices by a given Partner.
-$is_paid = false; // bool | Filter invoices by whether or not they are paid.
-$is_overdue = false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
-$sort = "created_at"; // string | Desired sorting.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'invoice_id' => "invoice_id_example"; // string | Invoice Id.
+        'partner_id' => "partner_id_example"; // string | Filter Invoices by a given Partner.
+        'is_paid' => false; // bool | Filter invoices by whether or not they are paid.
+        'is_overdue' => false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
+        'sort' => "created_at"; // string | Desired sorting.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->invoicesIndex($invoice_id, $partner_id, $is_paid, $is_overdue, $sort, $geo_code, $limit, $page, $query);
+    $result = $api_instance->invoicesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->invoicesIndex: ', $e->getMessage(), PHP_EOL;

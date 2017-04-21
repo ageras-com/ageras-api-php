@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **updated_at** | **string** | Offer updated at date. | [optional] 
 **accepted_at** | **string** | Offer accepted at date. | [optional] 
 **expires_at** | **string** | Offer expired at date. | [optional] 
+**deprecated_at** | **string** | Offer deprecated/grandfathered at. | [optional] 
 **type** | **string** | Offer type. | [optional] [default to 'partner']
 **sale_type** | **string** | Sale type. | [optional] 
 **name** | **string** | Name. | [optional] 

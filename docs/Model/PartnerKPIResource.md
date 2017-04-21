@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **last_lead_bought** | **string** |  | [optional] 
 **last_invoice** | **string** |  | [optional] 
 **last_coupon_size** | **int** |  | [optional] 
+**last_phone_call** | **string** |  | [optional] 
 **golden_ratio_6months** | **float** |  | [optional] 
 **revenue_month** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **revenue_6months** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 

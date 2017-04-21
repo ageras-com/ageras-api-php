@@ -10,9 +10,7 @@ Method | HTTP request | Description
 
 
 # **packagesFeaturesIndex**
-> \Ageras\Api\PackageFeatureResult packagesFeaturesIndex($limit, $page, $query)
-
-Get all package features.
+> \Ageras\Api\PackageFeatureResult packagesFeaturesIndex($criteria)
 
 Get all package features.
 
@@ -30,12 +28,14 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PackagesApi();
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->packagesFeaturesIndex($limit, $page, $query);
+    $result = $api_instance->packagesFeaturesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesFeaturesIndex: ', $e->getMessage(), PHP_EOL;
@@ -67,9 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesGet**
-> \Ageras\Api\PackageResource packagesGet($id)
-
-Get an individual package by ID.
+> \Ageras\Api\PackageResource packagesGet($id )
 
 Get an individual package by ID.
 
@@ -90,7 +88,7 @@ $api_instance = new Ageras\Api\Api\PackagesApi();
 $id = "id_example"; // string | 
 
 try {
-    $result = $api_instance->packagesGet($id);
+    $result = $api_instance->packagesGet($id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesGet: ', $e->getMessage(), PHP_EOL;
@@ -120,9 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesIndex**
-> \Ageras\Api\PackageResult packagesIndex($geo_code, $partner_id, $limit, $page, $query)
-
-Get all active packages for a given geo_code.
+> \Ageras\Api\PackageResult packagesIndex($criteria)
 
 Get all active packages for a given geo_code.
 
@@ -140,14 +136,16 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PackagesApi();
-$geo_code = "geo_code_example"; // string | Employee id of the partners to filter by.
-$partner_id = "partner_id_example"; // string | Partner ID.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | Employee id of the partners to filter by.
+        'partner_id' => "partner_id_example"; // string | Partner ID.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->packagesIndex($geo_code, $partner_id, $limit, $page, $query);
+    $result = $api_instance->packagesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesIndex: ', $e->getMessage(), PHP_EOL;

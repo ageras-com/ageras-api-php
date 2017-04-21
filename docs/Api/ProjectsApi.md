@@ -36,8 +36,6 @@ Method | HTTP request | Description
 
 Create Project.
 
-Create Project.
-
 ### Example
 ```php
 <?php
@@ -85,9 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsDelete**
-> projectsDelete($project_id)
-
-Delete a project for a given project id.
+> projectsDelete($project_id )
 
 Delete a project for a given project id.
 
@@ -108,7 +104,7 @@ $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 
 try {
-    $api_instance->projectsDelete($project_id);
+    $api_instance->projectsDelete($project_id );
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -138,8 +134,6 @@ void (empty response body)
 
 # **projectsEventsCreate**
 > \Ageras\Api\ProjectNoteResource projectsEventsCreate($project_event_resource)
-
-Create events for a given project.
 
 Create events for a given project.
 
@@ -190,9 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsCreate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsCreate2($project_id, $project_event_resource)
-
-Create events for a given project.
+> \Ageras\Api\ProjectNoteResource projectsEventsCreate2($project_id , $project_event_resource)
 
 Create events for a given project.
 
@@ -214,7 +206,7 @@ $project_id = "project_id_example"; // string |
 $project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
-    $result = $api_instance->projectsEventsCreate2($project_id, $project_event_resource);
+    $result = $api_instance->projectsEventsCreate2($project_id , $project_event_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsCreate2: ', $e->getMessage(), PHP_EOL;
@@ -245,9 +237,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsDelete**
-> projectsEventsDelete($project_id, $project_event_id)
-
-Delete a given project event.
+> projectsEventsDelete($project_id,  $project_event_id )
 
 Delete a given project event.
 
@@ -269,7 +259,7 @@ $project_id = "project_id_example"; // string |
 $project_event_id = "project_event_id_example"; // string | 
 
 try {
-    $api_instance->projectsEventsDelete($project_id, $project_event_id);
+    $api_instance->projectsEventsDelete($project_id,  $project_event_id );
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -299,9 +289,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet**
-> \Ageras\Api\ProjectNoteResource projectsEventsGet($project_event_id)
-
-Get event for a given project.
+> \Ageras\Api\ProjectNoteResource projectsEventsGet($project_event_id )
 
 Get event for a given project.
 
@@ -322,7 +310,7 @@ $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_event_id = "project_event_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsEventsGet($project_event_id);
+    $result = $api_instance->projectsEventsGet($project_event_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsGet: ', $e->getMessage(), PHP_EOL;
@@ -352,9 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet2**
-> \Ageras\Api\ProjectNoteResource projectsEventsGet2($project_id, $project_event_id)
-
-Get event for a given project.
+> \Ageras\Api\ProjectNoteResource projectsEventsGet2($project_id,  $project_event_id )
 
 Get event for a given project.
 
@@ -376,7 +362,7 @@ $project_id = "project_id_example"; // string |
 $project_event_id = "project_event_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsEventsGet2($project_id, $project_event_id);
+    $result = $api_instance->projectsEventsGet2($project_id,  $project_event_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsGet2: ', $e->getMessage(), PHP_EOL;
@@ -407,9 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex**
-> \Ageras\Api\ProjectNoteResult projectsEventsIndex($project_event_id, $project_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
-
-List events for a given project.
+> \Ageras\Api\ProjectNoteResult projectsEventsIndex($criteria)
 
 List events for a given project.
 
@@ -427,19 +411,21 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_event_id = "project_event_id_example"; // string | Id for the Projects's events.
-$project_id = "project_id_example"; // string | Project ID.
-$partner_id = "partner_id_example"; // string | Partner Id.
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$scheduled_from = "scheduled_from_example"; // string | Events scheduled from.
-$scheduled_to = "scheduled_to_example"; // string | Events scheduled to.
-$type = "unknown"; // string | Project Event Types.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'project_event_id' => "project_event_id_example"; // string | Id for the Projects's events.
+        'project_id' => "project_id_example"; // string | Project ID.
+        'partner_id' => "partner_id_example"; // string | Partner Id.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'scheduled_from' => "scheduled_from_example"; // string | Events scheduled from.
+        'scheduled_to' => "scheduled_to_example"; // string | Events scheduled to.
+        'type' => "unknown"; // string | Project Event Types.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsEventsIndex($project_event_id, $project_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query);
+    $result = $api_instance->projectsEventsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsIndex: ', $e->getMessage(), PHP_EOL;
@@ -478,9 +464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex2**
-> \Ageras\Api\ProjectNoteResult projectsEventsIndex2($project_id, $project_event_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query)
-
-List events for a given project.
+> \Ageras\Api\ProjectNoteResult projectsEventsIndex2($project_id , $criteria)
 
 List events for a given project.
 
@@ -499,18 +483,20 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_event_id = "project_event_id_example"; // string | Id for the Projects's events.
-$partner_id = "partner_id_example"; // string | Partner Id.
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$scheduled_from = "scheduled_from_example"; // string | Events scheduled from.
-$scheduled_to = "scheduled_to_example"; // string | Events scheduled to.
-$type = "unknown"; // string | Project Event Types.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'project_event_id' => "project_event_id_example"; // string | Id for the Projects's events.
+        'partner_id' => "partner_id_example"; // string | Partner Id.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'scheduled_from' => "scheduled_from_example"; // string | Events scheduled from.
+        'scheduled_to' => "scheduled_to_example"; // string | Events scheduled to.
+        'type' => "unknown"; // string | Project Event Types.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsEventsIndex2($project_id, $project_event_id, $partner_id, $partner_user_id, $scheduled_from, $scheduled_to, $type, $limit, $page, $query);
+    $result = $api_instance->projectsEventsIndex2($project_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsIndex2: ', $e->getMessage(), PHP_EOL;
@@ -549,9 +535,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate**
-> \Ageras\Api\ProjectNoteResource projectsEventsUpdate($project_event_id, $project_event_resource)
-
-Update e events for project events.
+> \Ageras\Api\ProjectNoteResource projectsEventsUpdate($project_event_id , $project_event_resource)
 
 Update e events for project events.
 
@@ -573,7 +557,7 @@ $project_event_id = "project_event_id_example"; // string |
 $project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
-    $result = $api_instance->projectsEventsUpdate($project_event_id, $project_event_resource);
+    $result = $api_instance->projectsEventsUpdate($project_event_id , $project_event_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -604,9 +588,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsUpdate2($project_id, $project_event_id, $project_event_resource)
-
-Update e events for project events.
+> \Ageras\Api\ProjectNoteResource projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource)
 
 Update e events for project events.
 
@@ -629,7 +611,7 @@ $project_event_id = "project_event_id_example"; // string |
 $project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
-    $result = $api_instance->projectsEventsUpdate2($project_id, $project_event_id, $project_event_resource);
+    $result = $api_instance->projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsEventsUpdate2: ', $e->getMessage(), PHP_EOL;
@@ -661,9 +643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsGet**
-> \Ageras\Api\ProjectResource projectsGet($project_id)
-
-Get a Project from a project id.
+> \Ageras\Api\ProjectResource projectsGet($project_id )
 
 Get a Project from a project id.
 
@@ -684,7 +664,7 @@ $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsGet($project_id);
+    $result = $api_instance->projectsGet($project_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsGet: ', $e->getMessage(), PHP_EOL;
@@ -714,9 +694,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsIndex**
-> \Ageras\Api\ProjectResult projectsIndex($project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
-
-List Projects.
+> \Ageras\Api\ProjectResult projectsIndex($criteria)
 
 List Projects.
 
@@ -734,20 +712,22 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_id = "project_id_example"; // string | Project ID.
-$partner_id = "partner_id_example"; // string | Partner Id.
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$lead_id = "lead_id_example"; // string | Lead Id.
-$name = "name_example"; // string | Project name in its native language.
-$geo_code = "geo_code_example"; // string | Project geo code origin.
-$status = "status_example"; // string | Project Status.
-$sort = "created_at"; // string | Sort projects
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'project_id' => "project_id_example"; // string | Project ID.
+        'partner_id' => "partner_id_example"; // string | Partner Id.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'lead_id' => "lead_id_example"; // string | Lead Id.
+        'name' => "name_example"; // string | Project name in its native language.
+        'geo_code' => "geo_code_example"; // string | Project geo code origin.
+        'status' => "status_example"; // string | Project Status.
+        'sort' => "created_at"; // string | Sort projects
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsIndex($project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
+    $result = $api_instance->projectsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsIndex: ', $e->getMessage(), PHP_EOL;
@@ -788,8 +768,6 @@ Name | Type | Description  | Notes
 
 # **projectsNotesCreate**
 > \Ageras\Api\ProjectNoteResource projectsNotesCreate($project_note_resource)
-
-Create a note for a given project.
 
 Create a note for a given project.
 
@@ -840,9 +818,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesCreate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesCreate2($project_id, $project_note_resource)
-
-Create a note for a given project.
+> \Ageras\Api\ProjectNoteResource projectsNotesCreate2($project_id , $project_note_resource)
 
 Create a note for a given project.
 
@@ -864,7 +840,7 @@ $project_id = "project_id_example"; // string |
 $project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
-    $result = $api_instance->projectsNotesCreate2($project_id, $project_note_resource);
+    $result = $api_instance->projectsNotesCreate2($project_id , $project_note_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesCreate2: ', $e->getMessage(), PHP_EOL;
@@ -895,9 +871,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesDelete**
-> projectsNotesDelete($project_id, $project_note_id)
-
-Delete a project note.
+> projectsNotesDelete($project_id,  $project_note_id )
 
 Delete a project note.
 
@@ -919,7 +893,7 @@ $project_id = "project_id_example"; // string |
 $project_note_id = "project_note_id_example"; // string | 
 
 try {
-    $api_instance->projectsNotesDelete($project_id, $project_note_id);
+    $api_instance->projectsNotesDelete($project_id,  $project_note_id );
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -949,9 +923,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet**
-> \Ageras\Api\ProjectNoteResource projectsNotesGet($project_note_id)
-
-Get a note from Project and note id.
+> \Ageras\Api\ProjectNoteResource projectsNotesGet($project_note_id )
 
 Get a note from Project and note id.
 
@@ -972,7 +944,7 @@ $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_note_id = "project_note_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsNotesGet($project_note_id);
+    $result = $api_instance->projectsNotesGet($project_note_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesGet: ', $e->getMessage(), PHP_EOL;
@@ -1002,9 +974,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet2**
-> \Ageras\Api\ProjectNoteResource projectsNotesGet2($project_id, $project_note_id)
-
-Get a note from Project and note id.
+> \Ageras\Api\ProjectNoteResource projectsNotesGet2($project_id,  $project_note_id )
 
 Get a note from Project and note id.
 
@@ -1026,7 +996,7 @@ $project_id = "project_id_example"; // string |
 $project_note_id = "project_note_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsNotesGet2($project_id, $project_note_id);
+    $result = $api_instance->projectsNotesGet2($project_id,  $project_note_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesGet2: ', $e->getMessage(), PHP_EOL;
@@ -1057,9 +1027,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
-
-List notes from a given project.
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex($criteria)
 
 List notes from a given project.
 
@@ -1077,21 +1045,23 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_note_id = "project_note_id_example"; // string | Id for the Project's notes.
-$project_id = "project_id_example"; // string | Project ID.
-$partner_id = "partner_id_example"; // string | Partner Id.
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$lead_id = "lead_id_example"; // string | Lead Id.
-$name = "name_example"; // string | Project name in its native language.
-$geo_code = "geo_code_example"; // string | Project geo code origin.
-$status = "status_example"; // string | Project Status.
-$sort = "created_at"; // string | Sort project notes
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'project_note_id' => "project_note_id_example"; // string | Id for the Project's notes.
+        'project_id' => "project_id_example"; // string | Project ID.
+        'partner_id' => "partner_id_example"; // string | Partner Id.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'lead_id' => "lead_id_example"; // string | Lead Id.
+        'name' => "name_example"; // string | Project name in its native language.
+        'geo_code' => "geo_code_example"; // string | Project geo code origin.
+        'status' => "status_example"; // string | Project Status.
+        'sort' => "created_at"; // string | Sort project notes
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsNotesIndex($project_note_id, $project_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
+    $result = $api_instance->projectsNotesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1132,9 +1102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex2**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query)
-
-List notes from a given project.
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id , $criteria)
 
 List notes from a given project.
 
@@ -1153,20 +1121,22 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_note_id = "project_note_id_example"; // string | Id for the Project's notes.
-$partner_id = "partner_id_example"; // string | Partner Id.
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$lead_id = "lead_id_example"; // string | Lead Id.
-$name = "name_example"; // string | Project name in its native language.
-$geo_code = "geo_code_example"; // string | Project geo code origin.
-$status = "status_example"; // string | Project Status.
-$sort = "created_at"; // string | Sort project notes
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'project_note_id' => "project_note_id_example"; // string | Id for the Project's notes.
+        'partner_id' => "partner_id_example"; // string | Partner Id.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'lead_id' => "lead_id_example"; // string | Lead Id.
+        'name' => "name_example"; // string | Project name in its native language.
+        'geo_code' => "geo_code_example"; // string | Project geo code origin.
+        'status' => "status_example"; // string | Project Status.
+        'sort' => "created_at"; // string | Sort project notes
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsNotesIndex2($project_id, $project_note_id, $partner_id, $partner_user_id, $lead_id, $name, $geo_code, $status, $sort, $limit, $page, $query);
+    $result = $api_instance->projectsNotesIndex2($project_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1207,9 +1177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate**
-> \Ageras\Api\ProjectNoteResource projectsNotesUpdate($project_note_id, $project_note_resource)
-
-Update a given project note.
+> \Ageras\Api\ProjectNoteResource projectsNotesUpdate($project_note_id , $project_note_resource)
 
 Update a given project note.
 
@@ -1231,7 +1199,7 @@ $project_note_id = "project_note_id_example"; // string |
 $project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
-    $result = $api_instance->projectsNotesUpdate($project_note_id, $project_note_resource);
+    $result = $api_instance->projectsNotesUpdate($project_note_id , $project_note_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesUpdate: ', $e->getMessage(), PHP_EOL;
@@ -1262,9 +1230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesUpdate2($project_id, $project_note_id, $project_note_resource)
-
-Update a given project note.
+> \Ageras\Api\ProjectNoteResource projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource)
 
 Update a given project note.
 
@@ -1287,7 +1253,7 @@ $project_note_id = "project_note_id_example"; // string |
 $project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
-    $result = $api_instance->projectsNotesUpdate2($project_id, $project_note_id, $project_note_resource);
+    $result = $api_instance->projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsNotesUpdate2: ', $e->getMessage(), PHP_EOL;
@@ -1319,9 +1285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesGet**
-> \Ageras\Api\ProjectStatusResource projectsStatusesGet($status)
-
-Get a Project Status from Id.
+> \Ageras\Api\ProjectStatusResource projectsStatusesGet($status )
 
 Get a Project Status from Id.
 
@@ -1342,7 +1306,7 @@ $api_instance = new Ageras\Api\Api\ProjectsApi();
 $status = "status_example"; // string | 
 
 try {
-    $result = $api_instance->projectsStatusesGet($status);
+    $result = $api_instance->projectsStatusesGet($status );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsStatusesGet: ', $e->getMessage(), PHP_EOL;
@@ -1372,9 +1336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesIndex**
-> \Ageras\Api\ProjectStatusResult projectsStatusesIndex($status, $limit, $page, $query)
-
-List Available Project Statuses.
+> \Ageras\Api\ProjectStatusResult projectsStatusesIndex($criteria)
 
 List Available Project Statuses.
 
@@ -1392,13 +1354,15 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$status = "status_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'status' => "status_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->projectsStatusesIndex($status, $limit, $page, $query);
+    $result = $api_instance->projectsStatusesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsStatusesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1431,9 +1395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsUpdate**
-> \Ageras\Api\ProjectResource projectsUpdate($project_id, $project_resource)
-
-Update a project.
+> \Ageras\Api\ProjectResource projectsUpdate($project_id , $project_resource)
 
 Update a project.
 
@@ -1455,7 +1417,7 @@ $project_id = "project_id_example"; // string |
 $project_resource = new \Ageras\Api\ProjectResource(); // \Ageras\Api\ProjectResource | 
 
 try {
-    $result = $api_instance->projectsUpdate($project_id, $project_resource);
+    $result = $api_instance->projectsUpdate($project_id , $project_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->projectsUpdate: ', $e->getMessage(), PHP_EOL;

@@ -9,9 +9,7 @@ Method | HTTP request | Description
 
 
 # **promptsActionsCreate**
-> \Ageras\Api\PromptResource promptsActionsCreate($prompt_id, $prompt_action_resource)
-
-Action on prompt
+> \Ageras\Api\PromptResource promptsActionsCreate($prompt_id , $prompt_action_resource)
 
 Action on prompt
 
@@ -33,7 +31,7 @@ $prompt_id = "prompt_id_example"; // string |
 $prompt_action_resource = new \Ageras\Api\PromptActionResource(); // \Ageras\Api\PromptActionResource | 
 
 try {
-    $result = $api_instance->promptsActionsCreate($prompt_id, $prompt_action_resource);
+    $result = $api_instance->promptsActionsCreate($prompt_id , $prompt_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PromptsApi->promptsActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -64,9 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **promptsIndex**
-> \Ageras\Api\PromptResult promptsIndex($show_expired, $partner_id, $partner_user_id, $type, $limit, $page, $query)
-
-List of prompts
+> \Ageras\Api\PromptResult promptsIndex($criteria)
 
 List of prompts
 
@@ -84,16 +80,18 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PromptsApi();
-$show_expired = false; // bool | 
-$partner_id = 56; // int | 
-$partner_user_id = 56; // int | 
-$type = "unknown"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'show_expired' => false; // bool | 
+        'partner_id' => 56; // int | 
+        'partner_user_id' => 56; // int | 
+        'type' => "unknown"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->promptsIndex($show_expired, $partner_id, $partner_user_id, $type, $limit, $page, $query);
+    $result = $api_instance->promptsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PromptsApi->promptsIndex: ', $e->getMessage(), PHP_EOL;

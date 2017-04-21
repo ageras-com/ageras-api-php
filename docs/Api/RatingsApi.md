@@ -10,9 +10,7 @@ Method | HTTP request | Description
 
 
 # **ratingsGet**
-> \Ageras\Api\RatingResource ratingsGet($rating_id)
-
-Return a rating from a rating ID.
+> \Ageras\Api\RatingResource ratingsGet($rating_id )
 
 Return a rating from a rating ID.
 
@@ -33,7 +31,7 @@ $api_instance = new Ageras\Api\Api\RatingsApi();
 $rating_id = "rating_id_example"; // string | The id the Rating to return
 
 try {
-    $result = $api_instance->ratingsGet($rating_id);
+    $result = $api_instance->ratingsGet($rating_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RatingsApi->ratingsGet: ', $e->getMessage(), PHP_EOL;
@@ -63,9 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsIndex**
-> \Ageras\Api\RatingResult ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $stars, $limit, $page, $query)
-
-Search for Lead's by a given set of criteria.
+> \Ageras\Api\RatingResult ratingsIndex($criteria)
 
 Search for Lead's by a given set of criteria.
 
@@ -83,17 +79,20 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\RatingsApi();
-$partner_id = "partner_id_example"; // string | Partner id for the ratings to be filtered by.
-$rating_id = "rating_id_example"; // string | Rating ids.
-$sort = "created_at"; // string | Sort ratings by a given property.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$stars = "stars_example"; // string | List of stars to filter by
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner id for the ratings to be filtered by.
+        'rating_id' => "rating_id_example"; // string | Rating ids.
+        'sort' => "created_at"; // string | Sort ratings by a given property.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'stars' => "stars_example"; // string | List of stars to filter by
+        'is_public' => false; // bool | Only show the public variables
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->ratingsIndex($partner_id, $rating_id, $sort, $geo_code, $stars, $limit, $page, $query);
+    $result = $api_instance->ratingsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RatingsApi->ratingsIndex: ', $e->getMessage(), PHP_EOL;
@@ -110,6 +109,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Sort ratings by a given property. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **stars** | **string**| List of stars to filter by | [optional]
+ **is_public** | **bool**| Only show the public variables | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -130,9 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsUpdate**
-> \Ageras\Api\RatingResource ratingsUpdate($rating_id, $rating_resource)
-
-Update a rating.
+> \Ageras\Api\RatingResource ratingsUpdate($rating_id , $rating_resource)
 
 Update a rating.
 
@@ -154,7 +152,7 @@ $rating_id = "rating_id_example"; // string |
 $rating_resource = new \Ageras\Api\RatingResource(); // \Ageras\Api\RatingResource | 
 
 try {
-    $result = $api_instance->ratingsUpdate($rating_id, $rating_resource);
+    $result = $api_instance->ratingsUpdate($rating_id , $rating_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RatingsApi->ratingsUpdate: ', $e->getMessage(), PHP_EOL;

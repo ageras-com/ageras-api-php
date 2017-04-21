@@ -16,8 +16,6 @@ Method | HTTP request | Description
 
 Create a new conversation.
 
-Create a new conversation.
-
 ### Example
 ```php
 <?php
@@ -65,9 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsGet**
-> \Ageras\Api\ConversationResource conversationsGet($conversation_id)
-
-Get a conversations by conversation_id.
+> \Ageras\Api\ConversationResource conversationsGet($conversation_id )
 
 Get a conversations by conversation_id.
 
@@ -88,7 +84,7 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | 
 
 try {
-    $result = $api_instance->conversationsGet($conversation_id);
+    $result = $api_instance->conversationsGet($conversation_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsGet: ', $e->getMessage(), PHP_EOL;
@@ -118,9 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsIndex**
-> \Ageras\Api\ConversationResult conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query)
-
-List conversations.
+> \Ageras\Api\ConversationResult conversationsIndex($criteria)
 
 List conversations.
 
@@ -138,15 +132,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_id = "conversation_id_example"; // string | Conversation id.
-$project_id = 56; // int | Project id
-$partner_id = 56; // int | Partner id
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
+$criteria = [
+        'conversation_id' => "conversation_id_example"; // string | Conversation id.
+        'project_id' => 56; // int | Project id
+        'partner_id' => 56; // int | Partner id
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
 
 try {
-    $result = $api_instance->conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query);
+    $result = $api_instance->conversationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -182,8 +178,6 @@ Name | Type | Description  | Notes
 
 # **conversationsMessagesCreate**
 > \Ageras\Api\MessageResource conversationsMessagesCreate($message_resource)
-
-Create a new message
 
 Create a new message
 
@@ -234,9 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsMessagesCreate2**
-> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id, $message_resource)
-
-Create a new message
+> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id , $message_resource)
 
 Create a new message
 
@@ -258,7 +250,7 @@ $conversation_id = "conversation_id_example"; // string |
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 
 try {
-    $result = $api_instance->conversationsMessagesCreate2($conversation_id, $message_resource);
+    $result = $api_instance->conversationsMessagesCreate2($conversation_id , $message_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsMessagesCreate2: ', $e->getMessage(), PHP_EOL;
