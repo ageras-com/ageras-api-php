@@ -12,9 +12,7 @@ Method | HTTP request | Description
 
 
 # **paymentsCardsGet**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -32,8 +30,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_card_id = "payment_card_id_example"; // string | 
-
 $payment_card_id = "payment_card_id_example"; // string | 
 
 try {
@@ -67,9 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsGet2**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id, $payment_card_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id,  $payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -87,9 +81,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_id = "payment_id_example"; // string | 
-$payment_card_id = "payment_card_id_example"; // string | 
-
 $payment_id = "payment_id_example"; // string | 
 $payment_card_id = "payment_card_id_example"; // string | 
 
@@ -125,9 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsIndex**
-> \Ageras\Api\PaymentCardResult paymentsCardsIndex($partner_id, $limit, $page, $query)
-
-List payment cards.
+> \Ageras\Api\PaymentCardResult paymentsCardsIndex($criteria)
 
 List payment cards.
 
@@ -145,11 +134,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$partner_id = 56; // int | Partner id for the partner payment cards to filter by.
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_id' => 56; // int | Partner id for the partner payment cards to filter by.
         'limit' => 56; // int | The number of resources to be returned.
@@ -158,7 +142,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->paymentsCardsIndex($criteria = []);
+    $result = $api_instance->paymentsCardsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsIndex: ', $e->getMessage(), PHP_EOL;
@@ -195,8 +179,6 @@ Name | Type | Description  | Notes
 
 Create an epay payment card.
 
-Create an epay payment card.
-
 ### Example
 ```php
 <?php
@@ -211,8 +193,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
-
 $payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
 
 try {
@@ -250,8 +230,6 @@ Name | Type | Description  | Notes
 
 Create epay window.
 
-Create epay window.
-
 ### Example
 ```php
 <?php
@@ -266,8 +244,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
-
 $payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
 
 try {

@@ -26,8 +26,6 @@ Method | HTTP request | Description
 
 Create a new task.
 
-Create a new task.
-
 ### Example
 ```php
 <?php
@@ -42,8 +40,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
-
 $task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 
 try {
@@ -77,9 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksDelete**
-> tasksDelete($task_id)
-
-Delete a given task by its task_id.
+> tasksDelete($task_id )
 
 Delete a given task by its task_id.
 
@@ -97,8 +91,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 
 try {
@@ -131,9 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksGet**
-> \Ageras\Api\TaskResource tasksGet($task_id)
-
-Get a given task by its given task_id.
+> \Ageras\Api\TaskResource tasksGet($task_id )
 
 Get a given task by its given task_id.
 
@@ -151,8 +141,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 
 try {
@@ -186,9 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksIndex**
-> \Ageras\Api\TaskResult tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $sort, $page, $query)
-
-List tasks by employee, asseigned_employee, etc.
+> \Ageras\Api\TaskResult tasksIndex($criteria)
 
 List tasks by employee, asseigned_employee, etc.
 
@@ -206,22 +192,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | Task id's to filter by.
-$geo_code = "geo_code_example"; // string | 
-$employee_id = "employee_id_example"; // string | 
-$completed_by_employee_id = "completed_by_employee_id_example"; // string | Filter by tasks that are completed by a given employee_id.
-$assigned_employee_id = "assigned_employee_id_example"; // string | Filter by tasks that are assigned to a given employee_id.
-$partner_id = "partner_id_example"; // string | Query tasks associated to a given partner.
-$lead_id = "lead_id_example"; // string | Query tasks associated to a given lead.
-$status = "status_example"; // string | Status for the tasks to be filtered by.
-$limit = 56; // int | Number of resources to return.
-$include_done = false; // bool | 
-$process = "unknown"; // string | Process type
-$due_before = "due_before_example"; // string | Due before date
-$sort = "deadline_at"; // string | 
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'task_id' => "task_id_example"; // string | Task id's to filter by.
         'geo_code' => "geo_code_example"; // string | 
@@ -241,7 +211,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->tasksIndex($criteria = []);
+    $result = $api_instance->tasksIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksIndex: ', $e->getMessage(), PHP_EOL;
@@ -285,9 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet**
-> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet($priority_id)
-
-Get a priority from a given id.
+> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet($priority_id )
 
 Get a priority from a given id.
 
@@ -305,8 +273,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$priority_id = "priority_id_example"; // string | 
-
 $priority_id = "priority_id_example"; // string | 
 
 try {
@@ -340,9 +306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet2**
-> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet2($task_id, $priority_id)
-
-Get a priority from a given id.
+> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet2($task_id,  $priority_id )
 
 Get a priority from a given id.
 
@@ -360,9 +324,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$priority_id = "priority_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 $priority_id = "priority_id_example"; // string | 
 
@@ -398,9 +359,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesIndex**
-> \Ageras\Api\TaskPriorityResult tasksPrioritiesIndex($priority_id, $limit, $page, $query)
-
-List priorities.
+> \Ageras\Api\TaskPriorityResult tasksPrioritiesIndex($criteria)
 
 List priorities.
 
@@ -418,11 +377,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$priority_id = "priority_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'priority_id' => "priority_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
@@ -431,7 +385,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->tasksPrioritiesIndex($criteria = []);
+    $result = $api_instance->tasksPrioritiesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksPrioritiesIndex: ', $e->getMessage(), PHP_EOL;
@@ -464,9 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet**
-> \Ageras\Api\TaskStatusResource tasksStatusesGet($status_id)
-
-Get a status from a status_id.
+> \Ageras\Api\TaskStatusResource tasksStatusesGet($status_id )
 
 Get a status from a status_id.
 
@@ -484,8 +436,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$status_id = "status_id_example"; // string | 
-
 $status_id = "status_id_example"; // string | 
 
 try {
@@ -519,9 +469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet2**
-> \Ageras\Api\TaskStatusResource tasksStatusesGet2($task_id, $status_id)
-
-Get a status from a status_id.
+> \Ageras\Api\TaskStatusResource tasksStatusesGet2($task_id,  $status_id )
 
 Get a status from a status_id.
 
@@ -539,9 +487,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$status_id = "status_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 $status_id = "status_id_example"; // string | 
 
@@ -577,9 +522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesIndex**
-> \Ageras\Api\TaskStatusResult tasksStatusesIndex($status_id, $limit, $page, $query)
-
-List statuses.
+> \Ageras\Api\TaskStatusResult tasksStatusesIndex($criteria)
 
 List statuses.
 
@@ -597,11 +540,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$status_id = "status_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'status_id' => "status_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
@@ -610,7 +548,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->tasksStatusesIndex($criteria = []);
+    $result = $api_instance->tasksStatusesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksStatusesIndex: ', $e->getMessage(), PHP_EOL;
@@ -643,9 +581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesCreate**
-> \Ageras\Api\TaskableResource tasksTaskablesCreate($task_id, $taskable_resource)
-
-create a new taskable for a given task.
+> \Ageras\Api\TaskableResource tasksTaskablesCreate($task_id , $taskable_resource)
 
 create a new taskable for a given task.
 
@@ -663,9 +599,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
-
 $task_id = "task_id_example"; // string | 
 $taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
 
@@ -701,9 +634,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesDelete**
-> tasksTaskablesDelete($task_id, $taskable_id)
-
-delete a taskable and remove it from the given task.
+> tasksTaskablesDelete($task_id,  $taskable_id )
 
 delete a taskable and remove it from the given task.
 
@@ -721,9 +652,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$taskable_id = "taskable_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
@@ -758,9 +686,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesGet**
-> \Ageras\Api\TaskableResource tasksTaskablesGet($task_id, $taskable_id)
-
-Get a taskable item from a given taskable id.
+> \Ageras\Api\TaskableResource tasksTaskablesGet($task_id,  $taskable_id )
 
 Get a taskable item from a given taskable id.
 
@@ -778,9 +704,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$taskable_id = "taskable_id_example"; // string | 
-
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
@@ -816,9 +739,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesIndex**
-> \Ageras\Api\TaskableResult tasksTaskablesIndex($task_id, $taskable_id, $limit, $page, $query)
-
-List the taskables for a given task.
+> \Ageras\Api\TaskableResult tasksTaskablesIndex($task_id , $criteria)
 
 List the taskables for a given task.
 
@@ -837,12 +758,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
-$taskable_id = "taskable_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$task_id = "task_id_example"; // string | 
 $criteria = [
         'taskable_id' => "taskable_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
@@ -851,7 +766,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->tasksTaskablesIndex($task_id , $criteria = []);
+    $result = $api_instance->tasksTaskablesIndex($task_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksTaskablesIndex: ', $e->getMessage(), PHP_EOL;
@@ -885,9 +800,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksUpdate**
-> \Ageras\Api\TaskResource tasksUpdate($task_id, $task_resource)
-
-Update a given task by its task_id.
+> \Ageras\Api\TaskResource tasksUpdate($task_id , $task_resource)
 
 Update a given task by its task_id.
 
@@ -905,9 +818,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_id = "task_id_example"; // string | 
-$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
-
 $task_id = "task_id_example"; // string | 
 $task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 

@@ -8,9 +8,7 @@ Method | HTTP request | Description
 
 
 # **activitiesIndex**
-> \Ageras\Api\ActivityResult activitiesIndex($activity_id, $partner_id, $lead_id, $client_id, $employee_id, $partner_user_id, $type, $limit, $page, $query)
-
-List Activities.
+> \Ageras\Api\ActivityResult activitiesIndex($criteria)
 
 List Activities.
 
@@ -28,17 +26,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ActivitiesApi();
-$activity_id = "activity_id_example"; // string | 
-$partner_id = "partner_id_example"; // string | 
-$lead_id = "lead_id_example"; // string | 
-$client_id = "client_id_example"; // string | 
-$employee_id = "employee_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-$type = "type_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'activity_id' => "activity_id_example"; // string | 
         'partner_id' => "partner_id_example"; // string | 
@@ -53,7 +40,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->activitiesIndex($criteria = []);
+    $result = $api_instance->activitiesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivitiesApi->activitiesIndex: ', $e->getMessage(), PHP_EOL;

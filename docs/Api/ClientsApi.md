@@ -9,9 +9,7 @@ Method | HTTP request | Description
 
 
 # **clientsGet**
-> \Ageras\Api\ClientResource clientsGet($client_id)
-
-Return a Client
+> \Ageras\Api\ClientResource clientsGet($client_id )
 
 Return a Client
 
@@ -29,8 +27,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ClientsApi();
-$client_id = "client_id_example"; // string | Id of the client
-
 $client_id = "client_id_example"; // string | Id of the client
 
 try {
@@ -64,9 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **clientsUpdate**
-> \Ageras\Api\ClientResource clientsUpdate($client_id, $client_resource)
-
-Update a client
+> \Ageras\Api\ClientResource clientsUpdate($client_id , $client_resource)
 
 Update a client
 
@@ -84,9 +78,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ClientsApi();
-$client_id = "client_id_example"; // string | 
-$client_resource = new \Ageras\Api\ClientResource(); // \Ageras\Api\ClientResource | 
-
 $client_id = "client_id_example"; // string | 
 $client_resource = new \Ageras\Api\ClientResource(); // \Ageras\Api\ClientResource | 
 

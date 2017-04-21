@@ -19,8 +19,6 @@ Method | HTTP request | Description
 
 Authenticate user and receive a token.
 
-Authenticate user and receive a token.
-
 ### Example
 ```php
 <?php
@@ -35,8 +33,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
-
 $auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
 
 try {
@@ -74,8 +70,6 @@ Name | Type | Description  | Notes
 
 Logout and end session/token.
 
-Logout and end session/token.
-
 ### Example
 ```php
 <?php
@@ -90,7 +84,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-
 
 try {
     $api_instance->authDelete();
@@ -123,8 +116,6 @@ void (empty response body)
 
 Get information about the current Authenticated session.
 
-Get information about the current Authenticated session.
-
 ### Example
 ```php
 <?php
@@ -139,7 +130,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-
 
 try {
     $result = $api_instance->authGet();
@@ -173,8 +163,6 @@ This endpoint does not need any parameter.
 
 Reset Password from a given reset token.
 
-Reset Password from a given reset token.
-
 ### Example
 ```php
 <?php
@@ -189,8 +177,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
-
 $password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
 try {
@@ -228,8 +214,6 @@ Name | Type | Description  | Notes
 
 Change Password.
 
-Change Password.
-
 ### Example
 ```php
 <?php
@@ -244,8 +228,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
-
 $password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
 try {
@@ -283,8 +265,6 @@ Name | Type | Description  | Notes
 
 Request a password reminder e-mail.
 
-Request a password reminder e-mail.
-
 ### Example
 ```php
 <?php
@@ -299,8 +279,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
-
 $password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
 
 try {
@@ -334,9 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPermissionsIndex**
-> \Ageras\Api\PermissionResult authPermissionsIndex($limit, $page, $query)
-
-List the Permissions for the given authenticated user.
+> \Ageras\Api\PermissionResult authPermissionsIndex($criteria)
 
 List the Permissions for the given authenticated user.
 
@@ -354,10 +330,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -365,7 +337,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->authPermissionsIndex($criteria = []);
+    $result = $api_instance->authPermissionsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthApi->authPermissionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -401,8 +373,6 @@ Name | Type | Description  | Notes
 
 Renew authentication session.
 
-Renew authentication session.
-
 ### Example
 ```php
 <?php
@@ -417,8 +387,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
-
 $auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
 
 try {

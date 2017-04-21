@@ -10,9 +10,7 @@ Method | HTTP request | Description
 
 
 # **organisationEmployeesGet**
-> \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id)
-
-Get an employee by a given employee id.
+> \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id )
 
 Get an employee by a given employee id.
 
@@ -30,8 +28,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\OrganisationApi();
-$employee_id = "employee_id_example"; // string | 
-
 $employee_id = "employee_id_example"; // string | 
 
 try {
@@ -65,9 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesGet2**
-> \Ageras\Api\EmployeeResource organisationEmployeesGet2($organisation_id, $employee_id)
-
-Get an employee by a given employee id.
+> \Ageras\Api\EmployeeResource organisationEmployeesGet2($organisation_id,  $employee_id )
 
 Get an employee by a given employee id.
 
@@ -85,9 +79,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\OrganisationApi();
-$organisation_id = "organisation_id_example"; // string | 
-$employee_id = "employee_id_example"; // string | 
-
 $organisation_id = "organisation_id_example"; // string | 
 $employee_id = "employee_id_example"; // string | 
 
@@ -123,9 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesIndex**
-> \Ageras\Api\EmployeeResult organisationEmployeesIndex($employee_id, $geo_code, $limit, $role_id, $sort, $page, $query)
-
-List and Search for employees working at Ageras.
+> \Ageras\Api\EmployeeResult organisationEmployeesIndex($criteria)
 
 List and Search for employees working at Ageras.
 
@@ -143,14 +132,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\OrganisationApi();
-$employee_id = "employee_id_example"; // string | Id for the employees.
-$geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
-$limit = 56; // int | Number of employees to return pr. page.
-$role_id = "role_id_example"; // string | The Role that the employee is member of.
-$sort = "first_name"; // string | Attribute to sort by.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'employee_id' => "employee_id_example"; // string | Id for the employees.
         'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
@@ -162,7 +143,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->organisationEmployeesIndex($criteria = []);
+    $result = $api_instance->organisationEmployeesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organisationEmployeesIndex: ', $e->getMessage(), PHP_EOL;

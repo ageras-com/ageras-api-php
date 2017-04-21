@@ -16,8 +16,6 @@ Method | HTTP request | Description
 
 Create a new conversation.
 
-Create a new conversation.
-
 ### Example
 ```php
 <?php
@@ -32,8 +30,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_resource = new \Ageras\Api\ConversationResource(); // \Ageras\Api\ConversationResource | 
-
 $conversation_resource = new \Ageras\Api\ConversationResource(); // \Ageras\Api\ConversationResource | 
 
 try {
@@ -67,9 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsGet**
-> \Ageras\Api\ConversationResource conversationsGet($conversation_id)
-
-Get a conversations by conversation_id.
+> \Ageras\Api\ConversationResource conversationsGet($conversation_id )
 
 Get a conversations by conversation_id.
 
@@ -87,8 +81,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_id = "conversation_id_example"; // string | 
-
 $conversation_id = "conversation_id_example"; // string | 
 
 try {
@@ -122,9 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsIndex**
-> \Ageras\Api\ConversationResult conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query)
-
-List conversations.
+> \Ageras\Api\ConversationResult conversationsIndex($criteria)
 
 List conversations.
 
@@ -142,13 +132,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_id = "conversation_id_example"; // string | Conversation id.
-$project_id = 56; // int | Project id
-$partner_id = 56; // int | Partner id
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'conversation_id' => "conversation_id_example"; // string | Conversation id.
         'project_id' => 56; // int | Project id
@@ -159,7 +142,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->conversationsIndex($criteria = []);
+    $result = $api_instance->conversationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -198,8 +181,6 @@ Name | Type | Description  | Notes
 
 Create a new message
 
-Create a new message
-
 ### Example
 ```php
 <?php
@@ -214,8 +195,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
-
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 
 try {
@@ -249,9 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsMessagesCreate2**
-> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id, $message_resource)
-
-Create a new message
+> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id , $message_resource)
 
 Create a new message
 
@@ -269,9 +246,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_id = "conversation_id_example"; // string | 
-$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
-
 $conversation_id = "conversation_id_example"; // string | 
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 

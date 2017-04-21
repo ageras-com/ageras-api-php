@@ -62,9 +62,7 @@ Method | HTTP request | Description
 
 
 # **partnersActionsCreate**
-> \Ageras\Api\PartnerResource partnersActionsCreate($partner_id, $partner_action_resource)
-
-Partner actions.
+> \Ageras\Api\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
 
 Partner actions.
 
@@ -82,9 +80,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
 
@@ -120,9 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\AggregationResult partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $geo_point, $geo_rect, $sort, $canvas_status, $limit, $page, $query)
-
-List facets and aggregations for the Partner Search.
+> \Ageras\Api\AggregationResult partnersAggregationsIndex($criteria)
 
 List facets and aggregations for the Partner Search.
 
@@ -140,24 +133,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
-$state = "state_example"; // string | States for the partners.
-$is_enabled = false; // bool | 
-$employee_id = "employee_id_example"; // string | Employee id of the partners to filter by.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
-$punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
-$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
-$industry = "industry_example"; // string | Filter the partners by their industry identifiers
-$geo_point = "geo_point_example"; // string | Location Point to sort partners by
-$geo_rect = "geo_rect_example"; // string | Location Points to define an area to filter partners by
-$sort = "relevance"; // string | Sort Partner's by a given property.
-$canvas_status = "canvas_status_example"; // string | Canvas Status
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
         'state' => "state_example"; // string | States for the partners.
@@ -179,7 +154,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersAggregationsIndex($criteria = []);
+    $result = $api_instance->partnersAggregationsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -225,9 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsCreate**
-> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id, $certification_resource)
-
-Attach certification to partner.
+> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id , $certification_resource)
 
 Attach certification to partner.
 
@@ -245,9 +218,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
 
@@ -283,9 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsDelete**
-> partnersCertificationsDelete($partner_id, $certification_id)
-
-Detach certification from partner.
+> partnersCertificationsDelete($partner_id,  $certification_id )
 
 Detach certification from partner.
 
@@ -303,9 +271,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$certification_id = "certification_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $certification_id = "certification_id_example"; // string | 
 
@@ -340,9 +305,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsGet**
-> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id, $certification_id)
-
-Get Partner certification.
+> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id,  $certification_id )
 
 Get Partner certification.
 
@@ -360,9 +323,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$certification_id = "certification_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $certification_id = "certification_id_example"; // string | 
 
@@ -398,9 +358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsIndex**
-> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner certifications.
+> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id , $criteria)
 
 Get partner certifications.
 
@@ -419,13 +377,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'types' => "types_example"; // string | Partner type enum. @var array
         'geo_code' => "geo_code_example"; // string | 
@@ -435,7 +386,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersCertificationsIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersCertificationsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -470,9 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsDelete**
-> partnersContentsDelete($partner_id, $content_key)
-
-Delete content for a given partner.
+> partnersContentsDelete($partner_id,  $content_key )
 
 Delete content for a given partner.
 
@@ -490,9 +439,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -527,9 +473,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id, $content_key)
-
-Get the content of a given partner.
+> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id,  $content_key )
 
 Get the content of a given partner.
 
@@ -547,9 +491,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -585,9 +526,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id, $content_key, $partner_content_resource)
-
-Update content for a given partner.
+> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner.
 
@@ -605,10 +544,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
@@ -646,9 +581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsActionsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource)
-
-Coupon action
+> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource)
 
 Coupon action
 
@@ -666,10 +599,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$coupon_id = "coupon_id_example"; // string | 
-$partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $coupon_id = "coupon_id_example"; // string | 
 $partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
@@ -707,9 +636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id, $partner_coupon_resource)
-
-Create a new partner coupon.
+> \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id , $partner_coupon_resource)
 
 Create a new partner coupon.
 
@@ -727,9 +654,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
 
@@ -765,9 +689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsIndex**
-> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query)
-
-List Partner Coupons.
+> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id , $criteria)
 
 List Partner Coupons.
 
@@ -786,15 +708,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$show_expired = false; // bool | Only show expired partner coupons.
-$show_deactivated = false; // bool | Only show deactivated partner coupons.
-$show_empty = false; // bool | Should empty partner coupons be included in the result.
-$sort = "created_at"; // string | Sort the coupons by different values
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'show_expired' => false; // bool | Only show expired partner coupons.
         'show_deactivated' => false; // bool | Only show deactivated partner coupons.
@@ -806,7 +719,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersCouponsIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersCouponsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsIndex: ', $e->getMessage(), PHP_EOL;
@@ -847,8 +760,6 @@ Name | Type | Description  | Notes
 
 Create a Partner.
 
-Create a Partner.
-
 ### Example
 ```php
 <?php
@@ -863,8 +774,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
-
 $partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
 try {
@@ -898,9 +807,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersDelete**
-> partnersDelete($partner_id)
-
-Delete a Partner.
+> partnersDelete($partner_id )
 
 Delete a Partner.
 
@@ -918,8 +825,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 
 try {
@@ -952,9 +857,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersGet**
-> \Ageras\Api\PartnerResource partnersGet($partner_id)
-
-Get a Partner from a given partner_id.
+> \Ageras\Api\PartnerResource partnersGet($partner_id )
 
 Get a Partner from a given partner_id.
 
@@ -972,8 +875,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 
 try {
@@ -1007,9 +908,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $geo_point, $geo_rect, $sort, $canvas_status, $limit, $page, $query)
-
-List Partners.
+> \Ageras\Api\PartnerResult partnersIndex($criteria)
 
 List Partners.
 
@@ -1027,24 +926,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | Partner id of the partners to filter by.
-$state = "state_example"; // string | States for the partners.
-$is_enabled = false; // bool | 
-$employee_id = "employee_id_example"; // string | Employee id of the partners to filter by.
-$geo_code = "geo_code_example"; // string | Geographic Location Code.
-$satisfaction = "satisfaction_example"; // string | Partner Satisfaction Ratio.
-$punches_use_speed = "punches_use_speed_example"; // string | Punches use speed.
-$refill_offer_id = "refill_offer_id_example"; // string | Filter the partners by their refill offers
-$industry_id = "industry_id_example"; // string | Filter the partners by their industry ids
-$industry = "industry_example"; // string | Filter the partners by their industry identifiers
-$geo_point = "geo_point_example"; // string | Location Point to sort partners by
-$geo_rect = "geo_rect_example"; // string | Location Points to define an area to filter partners by
-$sort = "relevance"; // string | Sort Partner's by a given property.
-$canvas_status = "canvas_status_example"; // string | Canvas Status
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
         'state' => "state_example"; // string | States for the partners.
@@ -1066,7 +947,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersIndex($criteria = []);
+    $result = $api_instance->partnersIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -1112,9 +993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesCreate**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id, $partner_industry_resource)
-
-Attach industry to partner.
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id , $partner_industry_resource)
 
 Attach industry to partner.
 
@@ -1132,9 +1011,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
 
@@ -1170,9 +1046,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesDelete**
-> partnersIndustriesDelete($partner_id, $industry_id)
-
-Detach industry from partner.
+> partnersIndustriesDelete($partner_id,  $industry_id )
 
 Detach industry from partner.
 
@@ -1190,9 +1064,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$industry_id = "industry_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
@@ -1227,9 +1098,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesGet**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id, $industry_id)
-
-Get a given industry for partner.
+> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id,  $industry_id )
 
 Get a given industry for partner.
 
@@ -1247,9 +1116,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$industry_id = "industry_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
@@ -1285,9 +1151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesIndex**
-> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query)
-
-Get partner industries.
+> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id , $criteria)
 
 Get partner industries.
 
@@ -1306,12 +1170,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'geo_code' => "geo_code_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
@@ -1320,7 +1178,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersIndustriesIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersIndustriesIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1354,9 +1212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesCreate**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id, $lead_type_resource)
-
-Attach type to partner.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
 
 Attach type to partner.
 
@@ -1374,9 +1230,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
 
@@ -1412,9 +1265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesDelete**
-> partnersLeadtypesDelete($partner_id, $lead_type_id)
-
-Detach type from partner.
+> partnersLeadtypesDelete($partner_id,  $lead_type_id )
 
 Detach type from partner.
 
@@ -1432,9 +1283,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$lead_type_id = "lead_type_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
@@ -1469,9 +1317,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id)
-
-Retrieve a given lead type.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1489,8 +1335,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$lead_type_id = "lead_type_id_example"; // string | 
-
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
@@ -1524,9 +1368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet2**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id, $lead_type_id)
-
-Retrieve a given lead type.
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id,  $lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1544,9 +1386,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$lead_type_id = "lead_type_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
@@ -1582,9 +1421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner types criteria.
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($criteria)
 
 Get partner types criteria.
 
@@ -1602,13 +1439,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = 56; // int | Partner ID. @var int
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_id' => 56; // int | Partner ID. @var int
         'types' => "types_example"; // string | Partner type enum. @var array
@@ -1619,7 +1449,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersLeadtypesIndex($criteria = []);
+    $result = $api_instance->partnersLeadtypesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1654,9 +1484,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex2**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query)
-
-Get partner types criteria.
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id , $criteria)
 
 Get partner types criteria.
 
@@ -1675,13 +1503,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "types_example"; // string | Partner type enum. @var array
-$geo_code = "geo_code_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'types' => "types_example"; // string | Partner type enum. @var array
         'geo_code' => "geo_code_example"; // string | 
@@ -1691,7 +1512,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersLeadtypesIndex2($partner_id , $criteria = []);
+    $result = $api_instance->partnersLeadtypesIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1730,8 +1551,6 @@ Name | Type | Description  | Notes
 
 Create Partner notes.
 
-Create Partner notes.
-
 ### Example
 ```php
 <?php
@@ -1746,8 +1565,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
-
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
 try {
@@ -1781,9 +1598,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate2**
-> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id, $partner_note_resource)
-
-Create Partner notes.
+> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id , $partner_note_resource)
 
 Create Partner notes.
 
@@ -1801,9 +1616,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
@@ -1839,9 +1651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesGet**
-> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id, $partner_note_id)
-
-Retrieve a given partner note by partner id and partner_note_id.
+> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id,  $partner_note_id )
 
 Retrieve a given partner note by partner id and partner_note_id.
 
@@ -1859,9 +1669,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_note_id = "partner_note_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_note_id = "partner_note_id_example"; // string | 
 
@@ -1897,9 +1704,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex($partner_id, $types, $limit, $page, $query)
-
-Retrieve lists of notes.
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex($criteria)
 
 Retrieve lists of notes.
 
@@ -1917,12 +1722,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = 56; // int | 
-$types = "all"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_id' => 56; // int | 
         'types' => "all"; // string | 
@@ -1932,7 +1731,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersNotesIndex($criteria = []);
+    $result = $api_instance->partnersNotesIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1966,9 +1765,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex2**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id, $types, $limit, $page, $query)
-
-Retrieve lists of notes.
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id , $criteria)
 
 Retrieve lists of notes.
 
@@ -1987,12 +1784,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$types = "all"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'types' => "all"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
@@ -2001,7 +1792,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersNotesIndex2($partner_id , $criteria = []);
+    $result = $api_instance->partnersNotesIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -2035,9 +1826,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsCreate**
-> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id, $partner_refill_resource)
-
-Create partner refill.
+> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id , $partner_refill_resource)
 
 Create partner refill.
 
@@ -2055,9 +1844,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
 
@@ -2093,9 +1879,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsIndex**
-> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id, $limit, $page, $query)
-
-Get partner refills.
+> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id , $criteria)
 
 Get partner refills.
 
@@ -2114,11 +1898,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -2126,7 +1905,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersRefillsIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersRefillsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersRefillsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2159,9 +1938,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsActionsCreate**
-> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource)
-
-Cancel subscription.
+> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
 
 Cancel subscription.
 
@@ -2179,10 +1956,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$subscription_id = "subscription_id_example"; // string | 
-$partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $subscription_id = "subscription_id_example"; // string | 
 $partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
@@ -2220,9 +1993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsCreate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id, $partner_subscription_resource)
-
-Subscribe a partner.
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id , $partner_subscription_resource)
 
 Subscribe a partner.
 
@@ -2240,9 +2011,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
@@ -2278,9 +2046,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsIndex**
-> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id, $limit, $page, $query)
-
-Get partner's subscriptions.
+> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id , $criteria)
 
 Get partner's subscriptions.
 
@@ -2299,11 +2065,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -2311,7 +2072,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersSubscriptionsIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersSubscriptionsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2344,9 +2105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsUpdate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource)
-
-Update partner subscription.
+> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource)
 
 Update partner subscription.
 
@@ -2364,9 +2123,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
@@ -2402,9 +2158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSuggestIndex**
-> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page)
-
-Suggest Partners to search for.
+> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($criteria)
 
 Suggest Partners to search for.
 
@@ -2422,13 +2176,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$limit = 56; // int | Limit the number of suggest resources pr. page.
-$geo_code = "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
-$query = "query_example"; // string | The search query to search by.
-$type = "type_example"; // string | Type to search for.
-$partner_state = "partner_state_example"; // string | Partner state.
-$page = 56; // int | The page position in the result.
-
 $criteria = [
         'limit' => 56; // int | Limit the number of suggest resources pr. page.
         'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
@@ -2439,7 +2186,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersSuggestIndex($criteria = []);
+    $result = $api_instance->partnersSuggestIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -2474,9 +2221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersTransactionsIndex**
-> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id, $limit, $page, $query)
-
-List Transactions for a given Partner.
+> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id , $criteria)
 
 List Transactions for a given Partner.
 
@@ -2495,11 +2240,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -2507,7 +2247,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersTransactionsIndex($partner_id , $criteria = []);
+    $result = $api_instance->partnersTransactionsIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersTransactionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2540,9 +2280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUpdate**
-> \Ageras\Api\PartnerResource partnersUpdate($partner_id, $partner_resource)
-
-Update a Partner.
+> \Ageras\Api\PartnerResource partnersUpdate($partner_id , $partner_resource)
 
 Update a Partner.
 
@@ -2560,9 +2298,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
@@ -2598,9 +2333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsDelete**
-> partnersUsersContentsDelete($partner_user_id, $content_key)
-
-Delete content for a given partner user.
+> partnersUsersContentsDelete($partner_user_id,  $content_key )
 
 Delete content for a given partner user.
 
@@ -2618,9 +2351,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -2655,9 +2385,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsDelete2**
-> partnersUsersContentsDelete2($partner_id, $partner_user_id, $content_key)
-
-Delete content for a given partner user.
+> partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key )
 
 Delete content for a given partner user.
 
@@ -2675,10 +2403,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
@@ -2715,9 +2439,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id, $content_key)
-
-Get the content of a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2735,9 +2457,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
@@ -2773,9 +2492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key)
-
-Get the content of a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2793,10 +2510,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
@@ -2834,9 +2547,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource)
-
-Update content for a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2854,10 +2565,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
-
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
@@ -2895,9 +2602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource)
-
-Update content for a given partner user.
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2915,11 +2620,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-$content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
@@ -2963,8 +2663,6 @@ Name | Type | Description  | Notes
 
 Create a partner user.
 
-Create a partner user.
-
 ### Example
 ```php
 <?php
@@ -2979,8 +2677,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
-
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
@@ -3014,9 +2710,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate2**
-> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id, $partner_user_resource)
-
-Create a partner user.
+> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id , $partner_user_resource)
 
 Create a partner user.
 
@@ -3034,9 +2728,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
@@ -3072,9 +2763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersDelete**
-> partnersUsersDelete($partner_id, $partner_user_id)
-
-Delete partner user from partner.
+> partnersUsersDelete($partner_id,  $partner_user_id )
 
 Delete partner user from partner.
 
@@ -3092,9 +2781,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
@@ -3129,9 +2815,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet**
-> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id)
-
-Get a Partner User by a given partner_user_id.
+> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -3149,8 +2833,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | 
-
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
@@ -3184,9 +2866,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet2**
-> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id, $partner_user_id)
-
-Get a Partner User by a given partner_user_id.
+> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id,  $partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -3204,9 +2884,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
@@ -3242,9 +2919,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query)
-
-List partner users.
+> \Ageras\Api\PartnerUserResult partnersUsersIndex($criteria)
 
 List partner users.
 
@@ -3262,13 +2937,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$partner_id = "partner_id_example"; // string | Partner id for the partner users to filter by.
-$sort = "sort_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
 $criteria = [
         'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
         'partner_id' => "partner_id_example"; // string | Partner id for the partner users to filter by.
@@ -3279,7 +2947,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersUsersIndex($criteria = []);
+    $result = $api_instance->partnersUsersIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex: ', $e->getMessage(), PHP_EOL;
@@ -3314,9 +2982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex2**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query)
-
-List partner users.
+> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id , $criteria)
 
 List partner users.
 
@@ -3335,13 +3001,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | Partner User Id.
-$sort = "sort_example"; // string | 
-$limit = 56; // int | The number of resources to be returned.
-$page = 56; // int | The page position in the result.
-$query = "query_example"; // string | The search wildcard.
-
-$partner_id = "partner_id_example"; // string | 
 $criteria = [
         'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
         'sort' => "sort_example"; // string | 
@@ -3351,7 +3010,7 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersUsersIndex2($partner_id , $criteria = []);
+    $result = $api_instance->partnersUsersIndex2($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex2: ', $e->getMessage(), PHP_EOL;
@@ -3386,9 +3045,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id, $partner_user_resource)
-
-Update partner user profile.
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3406,9 +3063,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
-
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
@@ -3444,9 +3098,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate2**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource)
-
-Update partner user profile.
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3464,10 +3116,6 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
-
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
