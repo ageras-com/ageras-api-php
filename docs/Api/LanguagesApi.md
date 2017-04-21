@@ -36,8 +36,18 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | Geo code to display language - default en.
+        'iso_code' => "iso_code_example"; // string | Language iso code.
+        'language' => "language_example"; // string | Language translation in geo code.
+        'native' => "native_example"; // string | Language in native language.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->languagesIndex($geo_code, $iso_code, $language, $native, $limit, $page, $query);
+    $result = $api_instance->languagesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LanguagesApi->languagesIndex: ', $e->getMessage(), PHP_EOL;

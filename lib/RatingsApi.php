@@ -189,6 +189,7 @@ class RatingsApi
      *    'sort' => string,
      *    'geo_code' => string,
      *    'stars' => string,
+     *    'is_public' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -213,6 +214,7 @@ class RatingsApi
      *    'sort' => string,
      *    'geo_code' => string,
      *    'stars' => string,
+     *    'is_public' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -253,6 +255,10 @@ class RatingsApi
         // query params
         if (isset($criteria['stars'])) {
             $queryParams['stars'] = $this->apiClient->getSerializer()->toQueryValue($criteria['stars']);
+        }
+        // query params
+        if (isset($criteria['is_public'])) {
+            $queryParams['is_public'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_public']);
         }
         // query params
         if (isset($criteria['limit'])) {

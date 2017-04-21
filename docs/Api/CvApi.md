@@ -58,8 +58,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
+
 try {
-    $result = $api_instance->cvAwardCreate($partner_user_id, $partner_user_cv_award_resource);
+    $result = $api_instance->cvAwardCreate($partner_user_id , $partner_user_cv_award_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvAwardCreate: ', $e->getMessage(), PHP_EOL;
@@ -113,8 +116,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $award_id = "award_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$award_id = "award_id_example"; // string | 
+
 try {
-    $api_instance->cvAwardDelete($partner_user_id, $award_id);
+    $api_instance->cvAwardDelete($partner_user_id,  $award_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvAwardDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -167,8 +173,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
+
 try {
-    $result = $api_instance->cvAwardUpdate($partner_user_id, $partner_user_cv_award_resource);
+    $result = $api_instance->cvAwardUpdate($partner_user_id , $partner_user_cv_award_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvAwardUpdate: ', $e->getMessage(), PHP_EOL;
@@ -222,8 +231,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_badge_resource = new \Ageras\Api\PartnerUserCvBadgeResource(); // \Ageras\Api\PartnerUserCvBadgeResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_badge_resource = new \Ageras\Api\PartnerUserCvBadgeResource(); // \Ageras\Api\PartnerUserCvBadgeResource | 
+
 try {
-    $result = $api_instance->cvBadgeCreate($partner_user_id, $partner_user_cv_badge_resource);
+    $result = $api_instance->cvBadgeCreate($partner_user_id , $partner_user_cv_badge_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvBadgeCreate: ', $e->getMessage(), PHP_EOL;
@@ -277,8 +289,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $badge_id = "badge_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$badge_id = "badge_id_example"; // string | 
+
 try {
-    $api_instance->cvBadgeDelete($partner_user_id, $badge_id);
+    $api_instance->cvBadgeDelete($partner_user_id,  $badge_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvBadgeDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -331,8 +346,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
+
 try {
-    $result = $api_instance->cvCourseCreate($partner_user_id, $partner_user_cv_course_resource);
+    $result = $api_instance->cvCourseCreate($partner_user_id , $partner_user_cv_course_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvCourseCreate: ', $e->getMessage(), PHP_EOL;
@@ -386,8 +404,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $course_id = "course_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$course_id = "course_id_example"; // string | 
+
 try {
-    $api_instance->cvCourseDelete($partner_user_id, $course_id);
+    $api_instance->cvCourseDelete($partner_user_id,  $course_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvCourseDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -440,8 +461,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
+
 try {
-    $result = $api_instance->cvCourseUpdate($partner_user_id, $partner_user_cv_course_resource);
+    $result = $api_instance->cvCourseUpdate($partner_user_id , $partner_user_cv_course_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvCourseUpdate: ', $e->getMessage(), PHP_EOL;
@@ -495,8 +519,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
+
 try {
-    $result = $api_instance->cvDescriptionCreate($partner_user_id, $partner_user_cv_description_resource);
+    $result = $api_instance->cvDescriptionCreate($partner_user_id , $partner_user_cv_description_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvDescriptionCreate: ', $e->getMessage(), PHP_EOL;
@@ -550,8 +577,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $description_id = "description_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$description_id = "description_id_example"; // string | 
+
 try {
-    $api_instance->cvDescriptionDelete($partner_user_id, $description_id);
+    $api_instance->cvDescriptionDelete($partner_user_id,  $description_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvDescriptionDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -604,8 +634,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
+
 try {
-    $result = $api_instance->cvDescriptionUpdate($partner_user_id, $partner_user_cv_description_resource);
+    $result = $api_instance->cvDescriptionUpdate($partner_user_id , $partner_user_cv_description_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvDescriptionUpdate: ', $e->getMessage(), PHP_EOL;
@@ -659,8 +692,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
+
 try {
-    $result = $api_instance->cvEducationCreate($partner_user_id, $partner_user_cv_education_resource);
+    $result = $api_instance->cvEducationCreate($partner_user_id , $partner_user_cv_education_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvEducationCreate: ', $e->getMessage(), PHP_EOL;
@@ -714,8 +750,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $education_id = "education_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$education_id = "education_id_example"; // string | 
+
 try {
-    $api_instance->cvEducationDelete($partner_user_id, $education_id);
+    $api_instance->cvEducationDelete($partner_user_id,  $education_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvEducationDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -768,8 +807,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
+
 try {
-    $result = $api_instance->cvEducationUpdate($partner_user_id, $partner_user_cv_education_resource);
+    $result = $api_instance->cvEducationUpdate($partner_user_id , $partner_user_cv_education_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvEducationUpdate: ', $e->getMessage(), PHP_EOL;
@@ -823,8 +865,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
+
 try {
-    $result = $api_instance->cvExperienceCreate($partner_user_id, $partner_user_cv_experience_resource);
+    $result = $api_instance->cvExperienceCreate($partner_user_id , $partner_user_cv_experience_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExperienceCreate: ', $e->getMessage(), PHP_EOL;
@@ -878,8 +923,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $experience_id = "experience_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$experience_id = "experience_id_example"; // string | 
+
 try {
-    $api_instance->cvExperienceDelete($partner_user_id, $experience_id);
+    $api_instance->cvExperienceDelete($partner_user_id,  $experience_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExperienceDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -932,8 +980,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
+
 try {
-    $result = $api_instance->cvExperienceUpdate($partner_user_id, $partner_user_cv_experience_resource);
+    $result = $api_instance->cvExperienceUpdate($partner_user_id , $partner_user_cv_experience_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExperienceUpdate: ', $e->getMessage(), PHP_EOL;
@@ -987,8 +1038,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
+
 try {
-    $result = $api_instance->cvExpertiseCreate($partner_user_id, $partner_user_cv_expertise_resource);
+    $result = $api_instance->cvExpertiseCreate($partner_user_id , $partner_user_cv_expertise_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExpertiseCreate: ', $e->getMessage(), PHP_EOL;
@@ -1042,8 +1096,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $expertise_id = "expertise_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$expertise_id = "expertise_id_example"; // string | 
+
 try {
-    $api_instance->cvExpertiseDelete($partner_user_id, $expertise_id);
+    $api_instance->cvExpertiseDelete($partner_user_id,  $expertise_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExpertiseDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1096,8 +1153,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
+
 try {
-    $result = $api_instance->cvExpertiseUpdate($partner_user_id, $partner_user_cv_expertise_resource);
+    $result = $api_instance->cvExpertiseUpdate($partner_user_id , $partner_user_cv_expertise_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvExpertiseUpdate: ', $e->getMessage(), PHP_EOL;
@@ -1150,8 +1210,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $result = $api_instance->cvGet($partner_user_id);
+    $result = $api_instance->cvGet($partner_user_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvGet: ', $e->getMessage(), PHP_EOL;
@@ -1207,8 +1269,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => 56; // int | 
+        'partner_user_id' => 56; // int | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->cvIndex($partner_id, $partner_user_id, $limit, $page, $query);
+    $result = $api_instance->cvIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvIndex: ', $e->getMessage(), PHP_EOL;
@@ -1265,8 +1335,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
+
 try {
-    $result = $api_instance->cvLanguageCreate($partner_user_id, $partner_user_cv_language_resource);
+    $result = $api_instance->cvLanguageCreate($partner_user_id , $partner_user_cv_language_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvLanguageCreate: ', $e->getMessage(), PHP_EOL;
@@ -1320,8 +1393,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $language_id = "language_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$language_id = "language_id_example"; // string | 
+
 try {
-    $api_instance->cvLanguageDelete($partner_user_id, $language_id);
+    $api_instance->cvLanguageDelete($partner_user_id,  $language_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvLanguageDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1374,8 +1450,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
+
 try {
-    $result = $api_instance->cvLanguageUpdate($partner_user_id, $partner_user_cv_language_resource);
+    $result = $api_instance->cvLanguageUpdate($partner_user_id , $partner_user_cv_language_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvLanguageUpdate: ', $e->getMessage(), PHP_EOL;
@@ -1428,8 +1507,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $api_instance->cvSocialDelete($partner_user_id);
+    $api_instance->cvSocialDelete($partner_user_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvSocialDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1480,8 +1561,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $api_instance->cvSocialDelete2($partner_user_id);
+    $api_instance->cvSocialDelete2($partner_user_id );
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvSocialDelete2: ', $e->getMessage(), PHP_EOL;
 }
@@ -1533,8 +1616,11 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_cv_social_media_resource = new \Ageras\Api\PartnerUserCvSocialMediaResource(); // \Ageras\Api\PartnerUserCvSocialMediaResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_cv_social_media_resource = new \Ageras\Api\PartnerUserCvSocialMediaResource(); // \Ageras\Api\PartnerUserCvSocialMediaResource | 
+
 try {
-    $result = $api_instance->cvSocialUpdate($partner_user_id, $partner_user_cv_social_media_resource);
+    $result = $api_instance->cvSocialUpdate($partner_user_id , $partner_user_cv_social_media_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CvApi->cvSocialUpdate: ', $e->getMessage(), PHP_EOL;

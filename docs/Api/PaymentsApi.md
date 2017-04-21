@@ -34,8 +34,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_card_id = "payment_card_id_example"; // string | 
 
+$payment_card_id = "payment_card_id_example"; // string | 
+
 try {
-    $result = $api_instance->paymentsCardsGet($payment_card_id);
+    $result = $api_instance->paymentsCardsGet($payment_card_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsGet: ', $e->getMessage(), PHP_EOL;
@@ -88,8 +90,11 @@ $api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_id = "payment_id_example"; // string | 
 $payment_card_id = "payment_card_id_example"; // string | 
 
+$payment_id = "payment_id_example"; // string | 
+$payment_card_id = "payment_card_id_example"; // string | 
+
 try {
-    $result = $api_instance->paymentsCardsGet2($payment_id, $payment_card_id);
+    $result = $api_instance->paymentsCardsGet2($payment_id,  $payment_card_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsGet2: ', $e->getMessage(), PHP_EOL;
@@ -145,8 +150,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => 56; // int | Partner id for the partner payment cards to filter by.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->paymentsCardsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->paymentsCardsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PaymentsApi->paymentsCardsIndex: ', $e->getMessage(), PHP_EOL;
@@ -201,6 +213,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PaymentsApi();
 $payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
 
+$payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
+
 try {
     $result = $api_instance->paymentsEpayCardsCreate($payment_card_resource);
     print_r($result);
@@ -252,6 +266,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
+$payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
+
 $payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
 
 try {

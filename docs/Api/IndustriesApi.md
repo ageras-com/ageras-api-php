@@ -38,8 +38,20 @@ $identifier = "identifier_example"; // string | identifier for the industry
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'industry_id' => "industry_id_example"; // string | Industry ID.
+        'name' => "name_example"; // string | Industry name in its native language.
+        'geo_code' => "geo_code_example"; // string | Industry geo code origin.
+        'status' => false; // bool | Determinate if industry is active or not.
+        'limit' => 56; // int | Limit of industries per page.
+        'parent_industry_id' => 56; // int | Parent industry to filter by.
+        'identifier' => "identifier_example"; // string | identifier for the industry
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->industriesIndex($industry_id, $name, $geo_code, $status, $limit, $parent_industry_id, $identifier, $page, $query);
+    $result = $api_instance->industriesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustriesApi->industriesIndex: ', $e->getMessage(), PHP_EOL;

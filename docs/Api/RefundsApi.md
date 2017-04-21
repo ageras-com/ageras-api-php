@@ -32,6 +32,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\RefundsApi();
 
+
 try {
     $result = $api_instance->refundsCreate();
     print_r($result);
@@ -82,8 +83,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\RefundsApi();
 $refund_id = "refund_id_example"; // string | 
 
+$refund_id = "refund_id_example"; // string | 
+
 try {
-    $result = $api_instance->refundsCreate2($refund_id);
+    $result = $api_instance->refundsCreate2($refund_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RefundsApi->refundsCreate2: ', $e->getMessage(), PHP_EOL;
@@ -135,8 +138,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\RefundsApi();
 $refund_id = "refund_id_example"; // string | 
 
+$refund_id = "refund_id_example"; // string | 
+
 try {
-    $result = $api_instance->refundsGet($refund_id);
+    $result = $api_instance->refundsGet($refund_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RefundsApi->refundsGet: ', $e->getMessage(), PHP_EOL;
@@ -192,8 +197,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner ID. @var int
+        'sort' => "created_at"; // string | Sort resource by. @var string
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->refundsIndex($partner_id, $sort, $limit, $page, $query);
+    $result = $api_instance->refundsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RefundsApi->refundsIndex: ', $e->getMessage(), PHP_EOL;

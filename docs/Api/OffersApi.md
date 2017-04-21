@@ -33,8 +33,11 @@ $api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
 $offer_action_resource = new \Ageras\Api\OfferActionResource(); // \Ageras\Api\OfferActionResource | 
 
+$offer_id = "offer_id_example"; // string | 
+$offer_action_resource = new \Ageras\Api\OfferActionResource(); // \Ageras\Api\OfferActionResource | 
+
 try {
-    $result = $api_instance->offersActionsCreate($offer_id, $offer_action_resource);
+    $result = $api_instance->offersActionsCreate($offer_id , $offer_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -87,8 +90,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
 
+$offer_id = "offer_id_example"; // string | 
+
 try {
-    $result = $api_instance->offersGet($offer_id);
+    $result = $api_instance->offersGet($offer_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersGet: ', $e->getMessage(), PHP_EOL;
@@ -150,8 +155,22 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'show_expired' => false; // bool | Include expired partners in the result.
+        'show_accepted' => false; // bool | Show accepted partner.
+        'partner_id' => 56; // int | Partner id of Offers to filter by.
+        'sort' => "created_at"; // string | Order by price asc or desc.
+        'action' => "action_example"; // string | Action to take.
+        'geo_code' => "geo_code_example"; // string | Offer geo code.
+        'type' => "partner"; // string | Type of Offer
+        'sale_type' => "unknown"; // string | Sale type
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->offersIndex($show_expired, $show_accepted, $partner_id, $sort, $action, $geo_code, $type, $sale_type, $limit, $page, $query);
+    $result = $api_instance->offersIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OffersApi->offersIndex: ', $e->getMessage(), PHP_EOL;

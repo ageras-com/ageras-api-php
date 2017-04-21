@@ -44,6 +44,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 
+$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
+
 try {
     $result = $api_instance->tasksCreate($task_resource);
     print_r($result);
@@ -97,8 +99,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+
 try {
-    $api_instance->tasksDelete($task_id);
+    $api_instance->tasksDelete($task_id );
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -149,8 +153,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksGet($task_id);
+    $result = $api_instance->tasksGet($task_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksGet: ', $e->getMessage(), PHP_EOL;
@@ -216,8 +222,26 @@ $sort = "deadline_at"; // string |
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'task_id' => "task_id_example"; // string | Task id's to filter by.
+        'geo_code' => "geo_code_example"; // string | 
+        'employee_id' => "employee_id_example"; // string | 
+        'completed_by_employee_id' => "completed_by_employee_id_example"; // string | Filter by tasks that are completed by a given employee_id.
+        'assigned_employee_id' => "assigned_employee_id_example"; // string | Filter by tasks that are assigned to a given employee_id.
+        'partner_id' => "partner_id_example"; // string | Query tasks associated to a given partner.
+        'lead_id' => "lead_id_example"; // string | Query tasks associated to a given lead.
+        'status' => "status_example"; // string | Status for the tasks to be filtered by.
+        'limit' => 56; // int | Number of resources to return.
+        'include_done' => false; // bool | 
+        'process' => "unknown"; // string | Process type
+        'due_before' => "due_before_example"; // string | Due before date
+        'sort' => "deadline_at"; // string | 
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->tasksIndex($task_id, $geo_code, $employee_id, $completed_by_employee_id, $assigned_employee_id, $partner_id, $lead_id, $status, $limit, $include_done, $process, $due_before, $sort, $page, $query);
+    $result = $api_instance->tasksIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksIndex: ', $e->getMessage(), PHP_EOL;
@@ -283,8 +307,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\TasksApi();
 $priority_id = "priority_id_example"; // string | 
 
+$priority_id = "priority_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksPrioritiesGet($priority_id);
+    $result = $api_instance->tasksPrioritiesGet($priority_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksPrioritiesGet: ', $e->getMessage(), PHP_EOL;
@@ -337,8 +363,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $priority_id = "priority_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+$priority_id = "priority_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksPrioritiesGet2($task_id, $priority_id);
+    $result = $api_instance->tasksPrioritiesGet2($task_id,  $priority_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksPrioritiesGet2: ', $e->getMessage(), PHP_EOL;
@@ -394,8 +423,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'priority_id' => "priority_id_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->tasksPrioritiesIndex($priority_id, $limit, $page, $query);
+    $result = $api_instance->tasksPrioritiesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksPrioritiesIndex: ', $e->getMessage(), PHP_EOL;
@@ -450,8 +486,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\TasksApi();
 $status_id = "status_id_example"; // string | 
 
+$status_id = "status_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksStatusesGet($status_id);
+    $result = $api_instance->tasksStatusesGet($status_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksStatusesGet: ', $e->getMessage(), PHP_EOL;
@@ -504,8 +542,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $status_id = "status_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+$status_id = "status_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksStatusesGet2($task_id, $status_id);
+    $result = $api_instance->tasksStatusesGet2($task_id,  $status_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksStatusesGet2: ', $e->getMessage(), PHP_EOL;
@@ -561,8 +602,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'status_id' => "status_id_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->tasksStatusesIndex($status_id, $limit, $page, $query);
+    $result = $api_instance->tasksStatusesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksStatusesIndex: ', $e->getMessage(), PHP_EOL;
@@ -618,8 +666,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
 
+$task_id = "task_id_example"; // string | 
+$taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
+
 try {
-    $result = $api_instance->tasksTaskablesCreate($task_id, $taskable_resource);
+    $result = $api_instance->tasksTaskablesCreate($task_id , $taskable_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksTaskablesCreate: ', $e->getMessage(), PHP_EOL;
@@ -673,8 +724,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+$taskable_id = "taskable_id_example"; // string | 
+
 try {
-    $api_instance->tasksTaskablesDelete($task_id, $taskable_id);
+    $api_instance->tasksTaskablesDelete($task_id,  $taskable_id );
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksTaskablesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -727,8 +781,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $taskable_id = "taskable_id_example"; // string | 
 
+$task_id = "task_id_example"; // string | 
+$taskable_id = "taskable_id_example"; // string | 
+
 try {
-    $result = $api_instance->tasksTaskablesGet($task_id, $taskable_id);
+    $result = $api_instance->tasksTaskablesGet($task_id,  $taskable_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksTaskablesGet: ', $e->getMessage(), PHP_EOL;
@@ -785,8 +842,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$task_id = "task_id_example"; // string | 
+$criteria = [
+        'taskable_id' => "taskable_id_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->tasksTaskablesIndex($task_id, $taskable_id, $limit, $page, $query);
+    $result = $api_instance->tasksTaskablesIndex($task_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksTaskablesIndex: ', $e->getMessage(), PHP_EOL;
@@ -843,8 +908,11 @@ $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
 $task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
 
+$task_id = "task_id_example"; // string | 
+$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
+
 try {
-    $result = $api_instance->tasksUpdate($task_id, $task_resource);
+    $result = $api_instance->tasksUpdate($task_id , $task_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->tasksUpdate: ', $e->getMessage(), PHP_EOL;

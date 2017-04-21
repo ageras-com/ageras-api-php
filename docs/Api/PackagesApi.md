@@ -34,8 +34,14 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->packagesFeaturesIndex($limit, $page, $query);
+    $result = $api_instance->packagesFeaturesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesFeaturesIndex: ', $e->getMessage(), PHP_EOL;
@@ -89,8 +95,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PackagesApi();
 $id = "id_example"; // string | 
 
+$id = "id_example"; // string | 
+
 try {
-    $result = $api_instance->packagesGet($id);
+    $result = $api_instance->packagesGet($id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesGet: ', $e->getMessage(), PHP_EOL;
@@ -146,8 +154,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | Employee id of the partners to filter by.
+        'partner_id' => "partner_id_example"; // string | Partner ID.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->packagesIndex($geo_code, $partner_id, $limit, $page, $query);
+    $result = $api_instance->packagesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagesApi->packagesIndex: ', $e->getMessage(), PHP_EOL;

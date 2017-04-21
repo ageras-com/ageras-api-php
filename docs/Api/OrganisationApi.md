@@ -32,8 +32,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\OrganisationApi();
 $employee_id = "employee_id_example"; // string | 
 
+$employee_id = "employee_id_example"; // string | 
+
 try {
-    $result = $api_instance->organisationEmployeesGet($employee_id);
+    $result = $api_instance->organisationEmployeesGet($employee_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organisationEmployeesGet: ', $e->getMessage(), PHP_EOL;
@@ -86,8 +88,11 @@ $api_instance = new Ageras\Api\Api\OrganisationApi();
 $organisation_id = "organisation_id_example"; // string | 
 $employee_id = "employee_id_example"; // string | 
 
+$organisation_id = "organisation_id_example"; // string | 
+$employee_id = "employee_id_example"; // string | 
+
 try {
-    $result = $api_instance->organisationEmployeesGet2($organisation_id, $employee_id);
+    $result = $api_instance->organisationEmployeesGet2($organisation_id,  $employee_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organisationEmployeesGet2: ', $e->getMessage(), PHP_EOL;
@@ -146,8 +151,18 @@ $sort = "first_name"; // string | Attribute to sort by.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'employee_id' => "employee_id_example"; // string | Id for the employees.
+        'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
+        'limit' => 56; // int | Number of employees to return pr. page.
+        'role_id' => "role_id_example"; // string | The Role that the employee is member of.
+        'sort' => "first_name"; // string | Attribute to sort by.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->organisationEmployeesIndex($employee_id, $geo_code, $limit, $role_id, $sort, $page, $query);
+    $result = $api_instance->organisationEmployeesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganisationApi->organisationEmployeesIndex: ', $e->getMessage(), PHP_EOL;

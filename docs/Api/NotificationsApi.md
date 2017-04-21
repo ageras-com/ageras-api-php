@@ -33,6 +33,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\NotificationsApi();
 $notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
 
+$notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
+
 try {
     $result = $api_instance->notificationsActionsCreate($notification_action_resource);
     print_r($result);
@@ -87,8 +89,11 @@ $api_instance = new Ageras\Api\Api\NotificationsApi();
 $notification_id = "notification_id_example"; // string | 
 $notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
 
+$notification_id = "notification_id_example"; // string | 
+$notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
+
 try {
-    $result = $api_instance->notificationsActionsCreate2($notification_id, $notification_action_resource);
+    $result = $api_instance->notificationsActionsCreate2($notification_id , $notification_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsActionsCreate2: ', $e->getMessage(), PHP_EOL;
@@ -141,8 +146,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\NotificationsApi();
 $notification_id = "notification_id_example"; // string | 
 
+$notification_id = "notification_id_example"; // string | 
+
 try {
-    $result = $api_instance->notificationsGet($notification_id);
+    $result = $api_instance->notificationsGet($notification_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsGet: ', $e->getMessage(), PHP_EOL;
@@ -198,8 +205,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'sort' => "relevance"; // string | 
+        'created_after' => "created_after_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->notificationsIndex($sort, $created_after, $limit, $page, $query);
+    $result = $api_instance->notificationsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationsApi->notificationsIndex: ', $e->getMessage(), PHP_EOL;

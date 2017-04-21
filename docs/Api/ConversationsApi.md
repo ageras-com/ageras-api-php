@@ -34,6 +34,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_resource = new \Ageras\Api\ConversationResource(); // \Ageras\Api\ConversationResource | 
 
+$conversation_resource = new \Ageras\Api\ConversationResource(); // \Ageras\Api\ConversationResource | 
+
 try {
     $result = $api_instance->conversationsCreate($conversation_resource);
     print_r($result);
@@ -87,8 +89,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | 
 
+$conversation_id = "conversation_id_example"; // string | 
+
 try {
-    $result = $api_instance->conversationsGet($conversation_id);
+    $result = $api_instance->conversationsGet($conversation_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsGet: ', $e->getMessage(), PHP_EOL;
@@ -145,8 +149,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'conversation_id' => "conversation_id_example"; // string | Conversation id.
+        'project_id' => 56; // int | Project id
+        'partner_id' => 56; // int | Partner id
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->conversationsIndex($conversation_id, $project_id, $partner_id, $limit, $page, $query);
+    $result = $api_instance->conversationsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -203,6 +216,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 
+$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
+
 try {
     $result = $api_instance->conversationsMessagesCreate($message_resource);
     print_r($result);
@@ -257,8 +272,11 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | 
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 
+$conversation_id = "conversation_id_example"; // string | 
+$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
+
 try {
-    $result = $api_instance->conversationsMessagesCreate2($conversation_id, $message_resource);
+    $result = $api_instance->conversationsMessagesCreate2($conversation_id , $message_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->conversationsMessagesCreate2: ', $e->getMessage(), PHP_EOL;

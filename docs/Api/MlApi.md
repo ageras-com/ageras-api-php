@@ -34,8 +34,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner ID. @var int
+        'lead_id' => "lead_id_example"; // string | Lead ID. @var int
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->mlMatchingIndex($partner_id, $lead_id, $limit, $page, $query);
+    $result = $api_instance->mlMatchingIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MlApi->mlMatchingIndex: ', $e->getMessage(), PHP_EOL;

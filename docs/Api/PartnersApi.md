@@ -85,8 +85,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
+
 try {
-    $result = $api_instance->partnersActionsCreate($partner_id, $partner_action_resource);
+    $result = $api_instance->partnersActionsCreate($partner_id , $partner_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -155,8 +158,28 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'state' => "state_example"; // string | States for the partners.
+        'is_enabled' => false; // bool | 
+        'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'satisfaction' => "satisfaction_example"; // string | Partner Satisfaction Ratio.
+        'punches_use_speed' => "punches_use_speed_example"; // string | Punches use speed.
+        'refill_offer_id' => "refill_offer_id_example"; // string | Filter the partners by their refill offers
+        'industry_id' => "industry_id_example"; // string | Filter the partners by their industry ids
+        'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
+        'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
+        'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by
+        'sort' => "relevance"; // string | Sort Partner's by a given property.
+        'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersAggregationsIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $geo_point, $geo_rect, $sort, $canvas_status, $limit, $page, $query);
+    $result = $api_instance->partnersAggregationsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersAggregationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -225,8 +248,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
+
 try {
-    $result = $api_instance->partnersCertificationsCreate($partner_id, $certification_resource);
+    $result = $api_instance->partnersCertificationsCreate($partner_id , $certification_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsCreate: ', $e->getMessage(), PHP_EOL;
@@ -280,8 +306,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $certification_id = "certification_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$certification_id = "certification_id_example"; // string | 
+
 try {
-    $api_instance->partnersCertificationsDelete($partner_id, $certification_id);
+    $api_instance->partnersCertificationsDelete($partner_id,  $certification_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -334,8 +363,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $certification_id = "certification_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$certification_id = "certification_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersCertificationsGet($partner_id, $certification_id);
+    $result = $api_instance->partnersCertificationsGet($partner_id,  $certification_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsGet: ', $e->getMessage(), PHP_EOL;
@@ -393,8 +425,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersCertificationsIndex($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersCertificationsIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCertificationsIndex: ', $e->getMessage(), PHP_EOL;
@@ -452,8 +493,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $api_instance->partnersContentsDelete($partner_id, $content_key);
+    $api_instance->partnersContentsDelete($partner_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -506,8 +550,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $result = $api_instance->partnersContentsGet($partner_id, $content_key);
+    $result = $api_instance->partnersContentsGet($partner_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsGet: ', $e->getMessage(), PHP_EOL;
@@ -562,8 +609,12 @@ $partner_id = "partner_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+
 try {
-    $result = $api_instance->partnersContentsUpdate($partner_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersContentsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -619,8 +670,12 @@ $partner_id = "partner_id_example"; // string |
 $coupon_id = "coupon_id_example"; // string | 
 $partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$coupon_id = "coupon_id_example"; // string | 
+$partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
+
 try {
-    $result = $api_instance->partnersCouponsActionsCreate($partner_id, $coupon_id, $partner_coupon_action_resource);
+    $result = $api_instance->partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -675,8 +730,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
+
 try {
-    $result = $api_instance->partnersCouponsCreate($partner_id, $partner_coupon_resource);
+    $result = $api_instance->partnersCouponsCreate($partner_id , $partner_coupon_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsCreate: ', $e->getMessage(), PHP_EOL;
@@ -736,8 +794,19 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'show_expired' => false; // bool | Only show expired partner coupons.
+        'show_deactivated' => false; // bool | Only show deactivated partner coupons.
+        'show_empty' => false; // bool | Should empty partner coupons be included in the result.
+        'sort' => "created_at"; // string | Sort the coupons by different values
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersCouponsIndex($partner_id, $show_expired, $show_deactivated, $show_empty, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersCouponsIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersCouponsIndex: ', $e->getMessage(), PHP_EOL;
@@ -796,6 +865,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
+$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
+
 try {
     $result = $api_instance->partnersCreate($partner_resource);
     print_r($result);
@@ -849,8 +920,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+
 try {
-    $api_instance->partnersDelete($partner_id);
+    $api_instance->partnersDelete($partner_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -901,8 +974,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersGet($partner_id);
+    $result = $api_instance->partnersGet($partner_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersGet: ', $e->getMessage(), PHP_EOL;
@@ -970,8 +1045,28 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'state' => "state_example"; // string | States for the partners.
+        'is_enabled' => false; // bool | 
+        'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'satisfaction' => "satisfaction_example"; // string | Partner Satisfaction Ratio.
+        'punches_use_speed' => "punches_use_speed_example"; // string | Punches use speed.
+        'refill_offer_id' => "refill_offer_id_example"; // string | Filter the partners by their refill offers
+        'industry_id' => "industry_id_example"; // string | Filter the partners by their industry ids
+        'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
+        'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
+        'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by
+        'sort' => "relevance"; // string | Sort Partner's by a given property.
+        'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersIndex($partner_id, $state, $is_enabled, $employee_id, $geo_code, $satisfaction, $punches_use_speed, $refill_offer_id, $industry_id, $industry, $geo_point, $geo_rect, $sort, $canvas_status, $limit, $page, $query);
+    $result = $api_instance->partnersIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndex: ', $e->getMessage(), PHP_EOL;
@@ -1040,8 +1135,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
+
 try {
-    $result = $api_instance->partnersIndustriesCreate($partner_id, $partner_industry_resource);
+    $result = $api_instance->partnersIndustriesCreate($partner_id , $partner_industry_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesCreate: ', $e->getMessage(), PHP_EOL;
@@ -1095,8 +1193,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$industry_id = "industry_id_example"; // string | 
+
 try {
-    $api_instance->partnersIndustriesDelete($partner_id, $industry_id);
+    $api_instance->partnersIndustriesDelete($partner_id,  $industry_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1149,8 +1250,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $industry_id = "industry_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$industry_id = "industry_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersIndustriesGet($partner_id, $industry_id);
+    $result = $api_instance->partnersIndustriesGet($partner_id,  $industry_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesGet: ', $e->getMessage(), PHP_EOL;
@@ -1207,8 +1311,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersIndustriesIndex($partner_id, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersIndustriesIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersIndustriesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1265,8 +1377,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
+
 try {
-    $result = $api_instance->partnersLeadtypesCreate($partner_id, $lead_type_resource);
+    $result = $api_instance->partnersLeadtypesCreate($partner_id , $lead_type_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesCreate: ', $e->getMessage(), PHP_EOL;
@@ -1320,8 +1435,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$lead_type_id = "lead_type_id_example"; // string | 
+
 try {
-    $api_instance->partnersLeadtypesDelete($partner_id, $lead_type_id);
+    $api_instance->partnersLeadtypesDelete($partner_id,  $lead_type_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -1373,8 +1491,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $lead_type_id = "lead_type_id_example"; // string | 
 
+$lead_type_id = "lead_type_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersLeadtypesGet($lead_type_id);
+    $result = $api_instance->partnersLeadtypesGet($lead_type_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesGet: ', $e->getMessage(), PHP_EOL;
@@ -1427,8 +1547,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $lead_type_id = "lead_type_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$lead_type_id = "lead_type_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersLeadtypesGet2($partner_id, $lead_type_id);
+    $result = $api_instance->partnersLeadtypesGet2($partner_id,  $lead_type_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesGet2: ', $e->getMessage(), PHP_EOL;
@@ -1486,8 +1609,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => 56; // int | Partner ID. @var int
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersLeadtypesIndex($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersLeadtypesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1549,8 +1681,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'types' => "types_example"; // string | Partner type enum. @var array
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersLeadtypesIndex2($partner_id, $types, $geo_code, $limit, $page, $query);
+    $result = $api_instance->partnersLeadtypesIndex2($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersLeadtypesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1607,6 +1748,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
+$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
+
 try {
     $result = $api_instance->partnersNotesCreate($partner_note_resource);
     print_r($result);
@@ -1661,8 +1804,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
+
 try {
-    $result = $api_instance->partnersNotesCreate2($partner_id, $partner_note_resource);
+    $result = $api_instance->partnersNotesCreate2($partner_id , $partner_note_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesCreate2: ', $e->getMessage(), PHP_EOL;
@@ -1716,8 +1862,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_note_id = "partner_note_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_note_id = "partner_note_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersNotesGet($partner_id, $partner_note_id);
+    $result = $api_instance->partnersNotesGet($partner_id,  $partner_note_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesGet: ', $e->getMessage(), PHP_EOL;
@@ -1774,8 +1923,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_id' => 56; // int | 
+        'types' => "all"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersNotesIndex($partner_id, $types, $limit, $page, $query);
+    $result = $api_instance->partnersNotesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex: ', $e->getMessage(), PHP_EOL;
@@ -1835,8 +1992,16 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'types' => "all"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersNotesIndex2($partner_id, $types, $limit, $page, $query);
+    $result = $api_instance->partnersNotesIndex2($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersNotesIndex2: ', $e->getMessage(), PHP_EOL;
@@ -1893,8 +2058,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
+
 try {
-    $result = $api_instance->partnersRefillsCreate($partner_id, $partner_refill_resource);
+    $result = $api_instance->partnersRefillsCreate($partner_id , $partner_refill_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersRefillsCreate: ', $e->getMessage(), PHP_EOL;
@@ -1950,8 +2118,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersRefillsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersRefillsIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersRefillsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2008,8 +2183,12 @@ $partner_id = "partner_id_example"; // string |
 $subscription_id = "subscription_id_example"; // string | 
 $partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$subscription_id = "subscription_id_example"; // string | 
+$partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
+
 try {
-    $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id, $subscription_id, $partner_subscription_action_resource);
+    $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsActionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -2064,8 +2243,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
+
 try {
-    $result = $api_instance->partnersSubscriptionsCreate($partner_id, $partner_subscription_resource);
+    $result = $api_instance->partnersSubscriptionsCreate($partner_id , $partner_subscription_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsCreate: ', $e->getMessage(), PHP_EOL;
@@ -2121,8 +2303,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersSubscriptionsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersSubscriptionsIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2178,8 +2367,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
+
 try {
-    $result = $api_instance->partnersSubscriptionsUpdate($partner_id, $partner_subscription_resource);
+    $result = $api_instance->partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSubscriptionsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2237,8 +2429,17 @@ $type = "type_example"; // string | Type to search for.
 $partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
+$criteria = [
+        'limit' => 56; // int | Limit the number of suggest resources pr. page.
+        'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
+        'query' => "query_example"; // string | The search query to search by.
+        'type' => "type_example"; // string | Type to search for.
+        'partner_state' => "partner_state_example"; // string | Partner state.
+        'page' => 56; // int | The page position in the result.
+    ];
+
 try {
-    $result = $api_instance->partnersSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page);
+    $result = $api_instance->partnersSuggestIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -2298,8 +2499,15 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersTransactionsIndex($partner_id, $limit, $page, $query);
+    $result = $api_instance->partnersTransactionsIndex($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersTransactionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -2355,8 +2563,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
+
 try {
-    $result = $api_instance->partnersUpdate($partner_id, $partner_resource);
+    $result = $api_instance->partnersUpdate($partner_id , $partner_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2410,8 +2621,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $api_instance->partnersUsersContentsDelete($partner_user_id, $content_key);
+    $api_instance->partnersUsersContentsDelete($partner_user_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -2465,8 +2679,12 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $api_instance->partnersUsersContentsDelete2($partner_id, $partner_user_id, $content_key);
+    $api_instance->partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsDelete2: ', $e->getMessage(), PHP_EOL;
 }
@@ -2520,8 +2738,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $result = $api_instance->partnersUsersContentsGet($partner_user_id, $content_key);
+    $result = $api_instance->partnersUsersContentsGet($partner_user_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsGet: ', $e->getMessage(), PHP_EOL;
@@ -2576,8 +2797,12 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+
 try {
-    $result = $api_instance->partnersUsersContentsGet2($partner_id, $partner_user_id, $content_key);
+    $result = $api_instance->partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsGet2: ', $e->getMessage(), PHP_EOL;
@@ -2633,8 +2858,12 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+
 try {
-    $result = $api_instance->partnersUsersContentsUpdate($partner_user_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -2691,8 +2920,13 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+$content_key = "content_key_example"; // string | 
+$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+
 try {
-    $result = $api_instance->partnersUsersContentsUpdate2($partner_id, $partner_user_id, $content_key, $partner_content_resource);
+    $result = $api_instance->partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate2: ', $e->getMessage(), PHP_EOL;
@@ -2745,6 +2979,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
@@ -2801,8 +3037,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+
 try {
-    $result = $api_instance->partnersUsersCreate2($partner_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersCreate2($partner_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersCreate2: ', $e->getMessage(), PHP_EOL;
@@ -2856,8 +3095,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $api_instance->partnersUsersDelete($partner_id, $partner_user_id);
+    $api_instance->partnersUsersDelete($partner_id,  $partner_user_id );
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -2909,8 +3151,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersUsersGet($partner_user_id);
+    $result = $api_instance->partnersUsersGet($partner_user_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersGet: ', $e->getMessage(), PHP_EOL;
@@ -2963,8 +3207,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+
 try {
-    $result = $api_instance->partnersUsersGet2($partner_id, $partner_user_id);
+    $result = $api_instance->partnersUsersGet2($partner_id,  $partner_user_id );
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersGet2: ', $e->getMessage(), PHP_EOL;
@@ -3022,8 +3269,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'partner_id' => "partner_id_example"; // string | Partner id for the partner users to filter by.
+        'sort' => "sort_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersUsersIndex($partner_user_id, $partner_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersUsersIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex: ', $e->getMessage(), PHP_EOL;
@@ -3085,8 +3341,17 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'partner_user_id' => "partner_user_id_example"; // string | Partner User Id.
+        'sort' => "sort_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->partnersUsersIndex2($partner_id, $partner_user_id, $sort, $limit, $page, $query);
+    $result = $api_instance->partnersUsersIndex2($partner_id , $criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersIndex2: ', $e->getMessage(), PHP_EOL;
@@ -3144,8 +3409,11 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+
 try {
-    $result = $api_instance->partnersUsersUpdate($partner_user_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersUpdate($partner_user_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersUpdate: ', $e->getMessage(), PHP_EOL;
@@ -3200,8 +3468,12 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+
 try {
-    $result = $api_instance->partnersUsersUpdate2($partner_id, $partner_user_id, $partner_user_resource);
+    $result = $api_instance->partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersUsersUpdate2: ', $e->getMessage(), PHP_EOL;

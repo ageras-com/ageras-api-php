@@ -39,8 +39,21 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'activity_id' => "activity_id_example"; // string | 
+        'partner_id' => "partner_id_example"; // string | 
+        'lead_id' => "lead_id_example"; // string | 
+        'client_id' => "client_id_example"; // string | 
+        'employee_id' => "employee_id_example"; // string | 
+        'partner_user_id' => "partner_user_id_example"; // string | 
+        'type' => "type_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->activitiesIndex($activity_id, $partner_id, $lead_id, $client_id, $employee_id, $partner_user_id, $type, $limit, $page, $query);
+    $result = $api_instance->activitiesIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivitiesApi->activitiesIndex: ', $e->getMessage(), PHP_EOL;

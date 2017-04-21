@@ -37,8 +37,19 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | Geographic Location Code.
+        'geo_point' => "geo_point_example"; // string | Geo Location Point
+        'slug' => "slug_example"; // string | Slug for url friendly strings.
+        'sort' => "name"; // string | Sort types for Locations
+        'is_primary' => false; // bool | Only Primary Locations
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->locationsIndex($geo_code, $geo_point, $slug, $sort, $is_primary, $limit, $page, $query);
+    $result = $api_instance->locationsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationsApi->locationsIndex: ', $e->getMessage(), PHP_EOL;

@@ -34,8 +34,14 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->searchIndex($limit, $page, $query);
+    $result = $api_instance->searchIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->searchIndex: ', $e->getMessage(), PHP_EOL;
@@ -94,8 +100,17 @@ $type = "type_example"; // string | Type to search for.
 $partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
+$criteria = [
+        'limit' => 56; // int | Limit the number of suggest resources pr. page.
+        'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
+        'query' => "query_example"; // string | The search query to search by.
+        'type' => "type_example"; // string | Type to search for.
+        'partner_state' => "partner_state_example"; // string | Partner state.
+        'page' => 56; // int | The page position in the result.
+    ];
+
 try {
-    $result = $api_instance->searchSuggestIndex($limit, $geo_code, $query, $type, $partner_state, $page);
+    $result = $api_instance->searchSuggestIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->searchSuggestIndex: ', $e->getMessage(), PHP_EOL;
@@ -157,8 +172,17 @@ $type = "type_example"; // string | Type to search for.
 $partner_state = "partner_state_example"; // string | Partner state.
 $page = 56; // int | The page position in the result.
 
+$criteria = [
+        'limit' => 56; // int | Limit the number of suggest resources pr. page.
+        'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
+        'query' => "query_example"; // string | The search query to search by.
+        'type' => "type_example"; // string | Type to search for.
+        'partner_state' => "partner_state_example"; // string | Partner state.
+        'page' => 56; // int | The page position in the result.
+    ];
+
 try {
-    $result = $api_instance->searchTypeaheadIndex($limit, $geo_code, $query, $type, $partner_state, $page);
+    $result = $api_instance->searchTypeaheadIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->searchTypeaheadIndex: ', $e->getMessage(), PHP_EOL;

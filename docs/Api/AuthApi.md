@@ -37,6 +37,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\AuthApi();
 $auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
 
+$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
+
 try {
     $result = $api_instance->authCreate($auth_resource);
     print_r($result);
@@ -89,6 +91,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\AuthApi();
 
+
 try {
     $api_instance->authDelete();
 } catch (Exception $e) {
@@ -136,6 +139,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
+
 
 try {
     $result = $api_instance->authGet();
@@ -185,6 +189,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
+$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
+
 $password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
 try {
@@ -240,6 +246,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\AuthApi();
 $password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
 
+$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
+
 try {
     $result = $api_instance->authPasswordUpdate($password_reset_resource);
     print_r($result);
@@ -291,6 +299,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
+$password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
+
 $password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
 
 try {
@@ -348,8 +358,14 @@ $limit = 56; // int | The number of resources to be returned.
 $page = 56; // int | The page position in the result.
 $query = "query_example"; // string | The search wildcard.
 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
 try {
-    $result = $api_instance->authPermissionsIndex($limit, $page, $query);
+    $result = $api_instance->authPermissionsIndex($criteria = []);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthApi->authPermissionsIndex: ', $e->getMessage(), PHP_EOL;
@@ -401,6 +417,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
+$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
+
 $auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
 
 try {
