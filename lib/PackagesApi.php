@@ -212,10 +212,6 @@ class PackagesApi
      */
     public function packagesGetWithHttpInfo($id )
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling packagesGet');
-        }
         // parse inputs
         $resourcePath = "/packages/{id}";
         $httpBody = '';

@@ -115,14 +115,6 @@ class LeadsApi
      */
     public function leadsActionsCreateWithHttpInfo($lead_id , $lead_action_resource)
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsActionsCreate');
-        }
-        // verify the required parameter 'lead_action_resource' is set
-        if ($lead_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_action_resource when calling leadsActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}/actions";
         $httpBody = '';
@@ -215,10 +207,6 @@ class LeadsApi
      */
     public function leadsCreateWithHttpInfo($lead_resource)
     {
-        // verify the required parameter 'lead_resource' is set
-        if ($lead_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_resource when calling leadsCreate');
-        }
         // parse inputs
         $resourcePath = "/leads";
         $httpBody = '';
@@ -303,10 +291,6 @@ class LeadsApi
      */
     public function leadsDeleteWithHttpInfo($lead_id )
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsDelete');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}";
         $httpBody = '';
@@ -390,10 +374,6 @@ class LeadsApi
      */
     public function leadsGetWithHttpInfo($lead_id )
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsGet');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}";
         $httpBody = '';
@@ -636,14 +616,6 @@ class LeadsApi
      */
     public function leadsNotesCreateWithHttpInfo($lead_id , $lead_note_resource)
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsNotesCreate');
-        }
-        // verify the required parameter 'lead_note_resource' is set
-        if ($lead_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_note_resource when calling leadsNotesCreate');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}/notes";
         $httpBody = '';
@@ -738,14 +710,6 @@ class LeadsApi
      */
     public function leadsOffersCreateWithHttpInfo($lead_id , $lead_offer_resource)
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsOffersCreate');
-        }
-        // verify the required parameter 'lead_offer_resource' is set
-        if ($lead_offer_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_offer_resource when calling leadsOffersCreate');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}/offers";
         $httpBody = '';
@@ -838,10 +802,6 @@ class LeadsApi
      */
     public function leadsOffersGetWithHttpInfo($lead_offer_id )
     {
-        // verify the required parameter 'lead_offer_id' is set
-        if ($lead_offer_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_offer_id when calling leadsOffersGet');
-        }
         // parse inputs
         $resourcePath = "/leads/offers/{lead_offer_id}";
         $httpBody = '';
@@ -931,14 +891,6 @@ class LeadsApi
      */
     public function leadsOffersGet2WithHttpInfo($lead_id,  $lead_offer_id )
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsOffersGet2');
-        }
-        // verify the required parameter 'lead_offer_id' is set
-        if ($lead_offer_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_offer_id when calling leadsOffersGet2');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}/offers/{lead_offer_id}";
         $httpBody = '';
@@ -1165,10 +1117,6 @@ class LeadsApi
      */
     public function leadsOffersIndex2WithHttpInfo($lead_id , $criteria = [])
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsOffersIndex2');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}/offers";
         $httpBody = '';
@@ -1395,14 +1343,6 @@ class LeadsApi
      */
     public function leadsUpdateWithHttpInfo($lead_id , $lead_resource)
     {
-        // verify the required parameter 'lead_id' is set
-        if ($lead_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_id when calling leadsUpdate');
-        }
-        // verify the required parameter 'lead_resource' is set
-        if ($lead_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_resource when calling leadsUpdate');
-        }
         // parse inputs
         $resourcePath = "/leads/{lead_id}";
         $httpBody = '';

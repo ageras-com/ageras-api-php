@@ -113,10 +113,6 @@ class AuthApi
      */
     public function authCreateWithHttpInfo($auth_resource)
     {
-        // verify the required parameter 'auth_resource' is set
-        if ($auth_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $auth_resource when calling authCreate');
-        }
         // parse inputs
         $resourcePath = "/auth";
         $httpBody = '';
@@ -351,10 +347,6 @@ class AuthApi
      */
     public function authPasswordCreateWithHttpInfo($password_reset_resource)
     {
-        // verify the required parameter 'password_reset_resource' is set
-        if ($password_reset_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $password_reset_resource when calling authPasswordCreate');
-        }
         // parse inputs
         $resourcePath = "/auth/password";
         $httpBody = '';
@@ -439,10 +431,6 @@ class AuthApi
      */
     public function authPasswordUpdateWithHttpInfo($password_reset_resource)
     {
-        // verify the required parameter 'password_reset_resource' is set
-        if ($password_reset_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $password_reset_resource when calling authPasswordUpdate');
-        }
         // parse inputs
         $resourcePath = "/auth/password";
         $httpBody = '';
@@ -527,10 +515,6 @@ class AuthApi
      */
     public function authPasswordreminderCreateWithHttpInfo($password_reminder_resource)
     {
-        // verify the required parameter 'password_reminder_resource' is set
-        if ($password_reminder_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $password_reminder_resource when calling authPasswordreminderCreate');
-        }
         // parse inputs
         $resourcePath = "/auth/passwordreminder";
         $httpBody = '';
@@ -714,10 +698,6 @@ class AuthApi
      */
     public function authUpdateWithHttpInfo($auth_resource)
     {
-        // verify the required parameter 'auth_resource' is set
-        if ($auth_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $auth_resource when calling authUpdate');
-        }
         // parse inputs
         $resourcePath = "/auth/token";
         $httpBody = '';

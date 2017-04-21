@@ -115,14 +115,6 @@ class PromptsApi
      */
     public function promptsActionsCreateWithHttpInfo($prompt_id , $prompt_action_resource)
     {
-        // verify the required parameter 'prompt_id' is set
-        if ($prompt_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $prompt_id when calling promptsActionsCreate');
-        }
-        // verify the required parameter 'prompt_action_resource' is set
-        if ($prompt_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $prompt_action_resource when calling promptsActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/prompts/{prompt_id}/actions";
         $httpBody = '';

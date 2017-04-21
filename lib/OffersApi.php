@@ -115,14 +115,6 @@ class OffersApi
      */
     public function offersActionsCreateWithHttpInfo($offer_id , $offer_action_resource)
     {
-        // verify the required parameter 'offer_id' is set
-        if ($offer_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $offer_id when calling offersActionsCreate');
-        }
-        // verify the required parameter 'offer_action_resource' is set
-        if ($offer_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $offer_action_resource when calling offersActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/offers/{offer_id}/actions";
         $httpBody = '';
@@ -215,10 +207,6 @@ class OffersApi
      */
     public function offersGetWithHttpInfo($offer_id )
     {
-        // verify the required parameter 'offer_id' is set
-        if ($offer_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $offer_id when calling offersGet');
-        }
         // parse inputs
         $resourcePath = "/offers/{offer_id}";
         $httpBody = '';

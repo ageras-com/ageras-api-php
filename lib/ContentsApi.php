@@ -262,10 +262,6 @@ class ContentsApi
      */
     public function contentsPagesAggregationsIndex2WithHttpInfo($content_id , $criteria = [])
     {
-        // verify the required parameter 'content_id' is set
-        if ($content_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_id when calling contentsPagesAggregationsIndex2');
-        }
         // parse inputs
         $resourcePath = "/contents/{content_id}/pages/aggregations";
         $httpBody = '';
@@ -385,10 +381,6 @@ class ContentsApi
      */
     public function contentsPagesGetWithHttpInfo($content_page_id )
     {
-        // verify the required parameter 'content_page_id' is set
-        if ($content_page_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_page_id when calling contentsPagesGet');
-        }
         // parse inputs
         $resourcePath = "/contents/pages/{content_page_id}";
         $httpBody = '';
@@ -478,14 +470,6 @@ class ContentsApi
      */
     public function contentsPagesGet2WithHttpInfo($content_id,  $content_page_id )
     {
-        // verify the required parameter 'content_id' is set
-        if ($content_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_id when calling contentsPagesGet2');
-        }
-        // verify the required parameter 'content_page_id' is set
-        if ($content_page_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_page_id when calling contentsPagesGet2');
-        }
         // parse inputs
         $resourcePath = "/contents/{content_id}/pages/{content_page_id}";
         $httpBody = '';

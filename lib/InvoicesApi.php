@@ -113,10 +113,6 @@ class InvoicesApi
      */
     public function invoicesGetWithHttpInfo($invoice_id )
     {
-        // verify the required parameter 'invoice_id' is set
-        if ($invoice_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $invoice_id when calling invoicesGet');
-        }
         // parse inputs
         $resourcePath = "/invoices/{invoice_id}";
         $httpBody = '';

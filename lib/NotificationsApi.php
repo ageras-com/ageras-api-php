@@ -113,10 +113,6 @@ class NotificationsApi
      */
     public function notificationsActionsCreateWithHttpInfo($notification_action_resource)
     {
-        // verify the required parameter 'notification_action_resource' is set
-        if ($notification_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_action_resource when calling notificationsActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/notifications/actions";
         $httpBody = '';
@@ -203,14 +199,6 @@ class NotificationsApi
      */
     public function notificationsActionsCreate2WithHttpInfo($notification_id , $notification_action_resource)
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling notificationsActionsCreate2');
-        }
-        // verify the required parameter 'notification_action_resource' is set
-        if ($notification_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_action_resource when calling notificationsActionsCreate2');
-        }
         // parse inputs
         $resourcePath = "/notifications/{notification_id}/actions";
         $httpBody = '';
@@ -303,10 +291,6 @@ class NotificationsApi
      */
     public function notificationsGetWithHttpInfo($notification_id )
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling notificationsGet');
-        }
         // parse inputs
         $resourcePath = "/notifications/{notification_id}";
         $httpBody = '';

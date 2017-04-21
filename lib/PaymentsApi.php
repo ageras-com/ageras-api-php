@@ -113,10 +113,6 @@ class PaymentsApi
      */
     public function paymentsCardsGetWithHttpInfo($payment_card_id )
     {
-        // verify the required parameter 'payment_card_id' is set
-        if ($payment_card_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $payment_card_id when calling paymentsCardsGet');
-        }
         // parse inputs
         $resourcePath = "/payments/cards/{payment_card_id}";
         $httpBody = '';
@@ -206,14 +202,6 @@ class PaymentsApi
      */
     public function paymentsCardsGet2WithHttpInfo($payment_id,  $payment_card_id )
     {
-        // verify the required parameter 'payment_id' is set
-        if ($payment_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $payment_id when calling paymentsCardsGet2');
-        }
-        // verify the required parameter 'payment_card_id' is set
-        if ($payment_card_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $payment_card_id when calling paymentsCardsGet2');
-        }
         // parse inputs
         $resourcePath = "/payments/{payment_id}/cards/{payment_card_id}";
         $httpBody = '';
@@ -414,10 +402,6 @@ class PaymentsApi
      */
     public function paymentsEpayCardsCreateWithHttpInfo($payment_card_resource)
     {
-        // verify the required parameter 'payment_card_resource' is set
-        if ($payment_card_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $payment_card_resource when calling paymentsEpayCardsCreate');
-        }
         // parse inputs
         $resourcePath = "/payments/epay/cards";
         $httpBody = '';
@@ -502,10 +486,6 @@ class PaymentsApi
      */
     public function paymentsEpayWindowCreateWithHttpInfo($payment_window_resource)
     {
-        // verify the required parameter 'payment_window_resource' is set
-        if ($payment_window_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $payment_window_resource when calling paymentsEpayWindowCreate');
-        }
         // parse inputs
         $resourcePath = "/payments/epay/window";
         $httpBody = '';

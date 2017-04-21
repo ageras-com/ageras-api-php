@@ -113,10 +113,6 @@ class TasksApi
      */
     public function tasksCreateWithHttpInfo($task_resource)
     {
-        // verify the required parameter 'task_resource' is set
-        if ($task_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_resource when calling tasksCreate');
-        }
         // parse inputs
         $resourcePath = "/tasks";
         $httpBody = '';
@@ -201,10 +197,6 @@ class TasksApi
      */
     public function tasksDeleteWithHttpInfo($task_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksDelete');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}";
         $httpBody = '';
@@ -288,10 +280,6 @@ class TasksApi
      */
     public function tasksGetWithHttpInfo($task_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksGet');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}";
         $httpBody = '';
@@ -550,10 +538,6 @@ class TasksApi
      */
     public function tasksPrioritiesGetWithHttpInfo($priority_id )
     {
-        // verify the required parameter 'priority_id' is set
-        if ($priority_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $priority_id when calling tasksPrioritiesGet');
-        }
         // parse inputs
         $resourcePath = "/tasks/priorities/{priority_id}";
         $httpBody = '';
@@ -643,14 +627,6 @@ class TasksApi
      */
     public function tasksPrioritiesGet2WithHttpInfo($task_id,  $priority_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksPrioritiesGet2');
-        }
-        // verify the required parameter 'priority_id' is set
-        if ($priority_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $priority_id when calling tasksPrioritiesGet2');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/priorities/{priority_id}";
         $httpBody = '';
@@ -851,10 +827,6 @@ class TasksApi
      */
     public function tasksStatusesGetWithHttpInfo($status_id )
     {
-        // verify the required parameter 'status_id' is set
-        if ($status_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $status_id when calling tasksStatusesGet');
-        }
         // parse inputs
         $resourcePath = "/tasks/statuses/{status_id}";
         $httpBody = '';
@@ -944,14 +916,6 @@ class TasksApi
      */
     public function tasksStatusesGet2WithHttpInfo($task_id,  $status_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksStatusesGet2');
-        }
-        // verify the required parameter 'status_id' is set
-        if ($status_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $status_id when calling tasksStatusesGet2');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/statuses/{status_id}";
         $httpBody = '';
@@ -1154,14 +1118,6 @@ class TasksApi
      */
     public function tasksTaskablesCreateWithHttpInfo($task_id , $taskable_resource)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksTaskablesCreate');
-        }
-        // verify the required parameter 'taskable_resource' is set
-        if ($taskable_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $taskable_resource when calling tasksTaskablesCreate');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/taskables";
         $httpBody = '';
@@ -1256,14 +1212,6 @@ class TasksApi
      */
     public function tasksTaskablesDeleteWithHttpInfo($task_id,  $taskable_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksTaskablesDelete');
-        }
-        // verify the required parameter 'taskable_id' is set
-        if ($taskable_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $taskable_id when calling tasksTaskablesDelete');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/taskables/{taskable_id}";
         $httpBody = '';
@@ -1357,14 +1305,6 @@ class TasksApi
      */
     public function tasksTaskablesGetWithHttpInfo($task_id,  $taskable_id )
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksTaskablesGet');
-        }
-        // verify the required parameter 'taskable_id' is set
-        if ($taskable_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $taskable_id when calling tasksTaskablesGet');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/taskables/{taskable_id}";
         $httpBody = '';
@@ -1472,10 +1412,6 @@ class TasksApi
      */
     public function tasksTaskablesIndexWithHttpInfo($task_id , $criteria = [])
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksTaskablesIndex');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}/taskables";
         $httpBody = '';
@@ -1581,14 +1517,6 @@ class TasksApi
      */
     public function tasksUpdateWithHttpInfo($task_id , $task_resource)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_id when calling tasksUpdate');
-        }
-        // verify the required parameter 'task_resource' is set
-        if ($task_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $task_resource when calling tasksUpdate');
-        }
         // parse inputs
         $resourcePath = "/tasks/{task_id}";
         $httpBody = '';

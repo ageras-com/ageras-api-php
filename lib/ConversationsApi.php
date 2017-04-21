@@ -113,10 +113,6 @@ class ConversationsApi
      */
     public function conversationsCreateWithHttpInfo($conversation_resource)
     {
-        // verify the required parameter 'conversation_resource' is set
-        if ($conversation_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $conversation_resource when calling conversationsCreate');
-        }
         // parse inputs
         $resourcePath = "/conversations";
         $httpBody = '';
@@ -201,10 +197,6 @@ class ConversationsApi
      */
     public function conversationsGetWithHttpInfo($conversation_id )
     {
-        // verify the required parameter 'conversation_id' is set
-        if ($conversation_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $conversation_id when calling conversationsGet');
-        }
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}";
         $httpBody = '';
@@ -409,10 +401,6 @@ class ConversationsApi
      */
     public function conversationsMessagesCreateWithHttpInfo($message_resource)
     {
-        // verify the required parameter 'message_resource' is set
-        if ($message_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $message_resource when calling conversationsMessagesCreate');
-        }
         // parse inputs
         $resourcePath = "/conversations/messages";
         $httpBody = '';
@@ -499,14 +487,6 @@ class ConversationsApi
      */
     public function conversationsMessagesCreate2WithHttpInfo($conversation_id , $message_resource)
     {
-        // verify the required parameter 'conversation_id' is set
-        if ($conversation_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $conversation_id when calling conversationsMessagesCreate2');
-        }
-        // verify the required parameter 'message_resource' is set
-        if ($message_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $message_resource when calling conversationsMessagesCreate2');
-        }
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages";
         $httpBody = '';

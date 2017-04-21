@@ -113,10 +113,6 @@ class ProjectsApi
      */
     public function projectsCreateWithHttpInfo($project_resource)
     {
-        // verify the required parameter 'project_resource' is set
-        if ($project_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_resource when calling projectsCreate');
-        }
         // parse inputs
         $resourcePath = "/projects";
         $httpBody = '';
@@ -201,10 +197,6 @@ class ProjectsApi
      */
     public function projectsDeleteWithHttpInfo($project_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsDelete');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}";
         $httpBody = '';
@@ -288,10 +280,6 @@ class ProjectsApi
      */
     public function projectsEventsCreateWithHttpInfo($project_event_resource)
     {
-        // verify the required parameter 'project_event_resource' is set
-        if ($project_event_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_resource when calling projectsEventsCreate');
-        }
         // parse inputs
         $resourcePath = "/projects/events";
         $httpBody = '';
@@ -378,14 +366,6 @@ class ProjectsApi
      */
     public function projectsEventsCreate2WithHttpInfo($project_id , $project_event_resource)
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsEventsCreate2');
-        }
-        // verify the required parameter 'project_event_resource' is set
-        if ($project_event_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_resource when calling projectsEventsCreate2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/events";
         $httpBody = '';
@@ -480,14 +460,6 @@ class ProjectsApi
      */
     public function projectsEventsDeleteWithHttpInfo($project_id,  $project_event_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsEventsDelete');
-        }
-        // verify the required parameter 'project_event_id' is set
-        if ($project_event_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_id when calling projectsEventsDelete');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/events/{project_event_id}";
         $httpBody = '';
@@ -579,10 +551,6 @@ class ProjectsApi
      */
     public function projectsEventsGetWithHttpInfo($project_event_id )
     {
-        // verify the required parameter 'project_event_id' is set
-        if ($project_event_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_id when calling projectsEventsGet');
-        }
         // parse inputs
         $resourcePath = "/projects/events/{project_event_id}";
         $httpBody = '';
@@ -672,14 +640,6 @@ class ProjectsApi
      */
     public function projectsEventsGet2WithHttpInfo($project_id,  $project_event_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsEventsGet2');
-        }
-        // verify the required parameter 'project_event_id' is set
-        if ($project_event_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_id when calling projectsEventsGet2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/events/{project_event_id}";
         $httpBody = '';
@@ -938,10 +898,6 @@ class ProjectsApi
      */
     public function projectsEventsIndex2WithHttpInfo($project_id , $criteria = [])
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsEventsIndex2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/events";
         $httpBody = '';
@@ -1067,14 +1023,6 @@ class ProjectsApi
      */
     public function projectsEventsUpdateWithHttpInfo($project_event_id , $project_event_resource)
     {
-        // verify the required parameter 'project_event_id' is set
-        if ($project_event_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_id when calling projectsEventsUpdate');
-        }
-        // verify the required parameter 'project_event_resource' is set
-        if ($project_event_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_resource when calling projectsEventsUpdate');
-        }
         // parse inputs
         $resourcePath = "/projects/events/{project_event_id}";
         $httpBody = '';
@@ -1171,18 +1119,6 @@ class ProjectsApi
      */
     public function projectsEventsUpdate2WithHttpInfo($project_id,  $project_event_id , $project_event_resource)
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsEventsUpdate2');
-        }
-        // verify the required parameter 'project_event_id' is set
-        if ($project_event_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_id when calling projectsEventsUpdate2');
-        }
-        // verify the required parameter 'project_event_resource' is set
-        if ($project_event_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_event_resource when calling projectsEventsUpdate2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/events/{project_event_id}";
         $httpBody = '';
@@ -1283,10 +1219,6 @@ class ProjectsApi
      */
     public function projectsGetWithHttpInfo($project_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsGet');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}";
         $httpBody = '';
@@ -1521,10 +1453,6 @@ class ProjectsApi
      */
     public function projectsNotesCreateWithHttpInfo($project_note_resource)
     {
-        // verify the required parameter 'project_note_resource' is set
-        if ($project_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_resource when calling projectsNotesCreate');
-        }
         // parse inputs
         $resourcePath = "/projects/notes";
         $httpBody = '';
@@ -1611,14 +1539,6 @@ class ProjectsApi
      */
     public function projectsNotesCreate2WithHttpInfo($project_id , $project_note_resource)
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsNotesCreate2');
-        }
-        // verify the required parameter 'project_note_resource' is set
-        if ($project_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_resource when calling projectsNotesCreate2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes";
         $httpBody = '';
@@ -1713,14 +1633,6 @@ class ProjectsApi
      */
     public function projectsNotesDeleteWithHttpInfo($project_id,  $project_note_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsNotesDelete');
-        }
-        // verify the required parameter 'project_note_id' is set
-        if ($project_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_id when calling projectsNotesDelete');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes/{project_note_id}";
         $httpBody = '';
@@ -1812,10 +1724,6 @@ class ProjectsApi
      */
     public function projectsNotesGetWithHttpInfo($project_note_id )
     {
-        // verify the required parameter 'project_note_id' is set
-        if ($project_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_id when calling projectsNotesGet');
-        }
         // parse inputs
         $resourcePath = "/projects/notes/{project_note_id}";
         $httpBody = '';
@@ -1905,14 +1813,6 @@ class ProjectsApi
      */
     public function projectsNotesGet2WithHttpInfo($project_id,  $project_note_id )
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsNotesGet2');
-        }
-        // verify the required parameter 'project_note_id' is set
-        if ($project_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_id when calling projectsNotesGet2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes/{project_note_id}";
         $httpBody = '';
@@ -2187,10 +2087,6 @@ class ProjectsApi
      */
     public function projectsNotesIndex2WithHttpInfo($project_id , $criteria = [])
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsNotesIndex2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes";
         $httpBody = '';
@@ -2324,14 +2220,6 @@ class ProjectsApi
      */
     public function projectsNotesUpdateWithHttpInfo($project_note_id , $project_note_resource)
     {
-        // verify the required parameter 'project_note_id' is set
-        if ($project_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_id when calling projectsNotesUpdate');
-        }
-        // verify the required parameter 'project_note_resource' is set
-        if ($project_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_resource when calling projectsNotesUpdate');
-        }
         // parse inputs
         $resourcePath = "/projects/notes/{project_note_id}";
         $httpBody = '';
@@ -2428,18 +2316,6 @@ class ProjectsApi
      */
     public function projectsNotesUpdate2WithHttpInfo($project_id,  $project_note_id , $project_note_resource)
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsNotesUpdate2');
-        }
-        // verify the required parameter 'project_note_id' is set
-        if ($project_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_id when calling projectsNotesUpdate2');
-        }
-        // verify the required parameter 'project_note_resource' is set
-        if ($project_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_note_resource when calling projectsNotesUpdate2');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes/{project_note_id}";
         $httpBody = '';
@@ -2540,10 +2416,6 @@ class ProjectsApi
      */
     public function projectsStatusesGetWithHttpInfo($status )
     {
-        // verify the required parameter 'status' is set
-        if ($status === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $status when calling projectsStatusesGet');
-        }
         // parse inputs
         $resourcePath = "/projects/{status}/statuses";
         $httpBody = '';
@@ -2738,14 +2610,6 @@ class ProjectsApi
      */
     public function projectsUpdateWithHttpInfo($project_id , $project_resource)
     {
-        // verify the required parameter 'project_id' is set
-        if ($project_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_id when calling projectsUpdate');
-        }
-        // verify the required parameter 'project_resource' is set
-        if ($project_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $project_resource when calling projectsUpdate');
-        }
         // parse inputs
         $resourcePath = "/projects/{project_id}";
         $httpBody = '';

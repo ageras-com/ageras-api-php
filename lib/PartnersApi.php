@@ -115,14 +115,6 @@ class PartnersApi
      */
     public function partnersActionsCreateWithHttpInfo($partner_id , $partner_action_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersActionsCreate');
-        }
-        // verify the required parameter 'partner_action_resource' is set
-        if ($partner_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_action_resource when calling partnersActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/actions";
         $httpBody = '';
@@ -400,14 +392,6 @@ class PartnersApi
      */
     public function partnersCertificationsCreateWithHttpInfo($partner_id , $certification_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCertificationsCreate');
-        }
-        // verify the required parameter 'certification_resource' is set
-        if ($certification_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $certification_resource when calling partnersCertificationsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/certifications";
         $httpBody = '';
@@ -502,14 +486,6 @@ class PartnersApi
      */
     public function partnersCertificationsDeleteWithHttpInfo($partner_id,  $certification_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCertificationsDelete');
-        }
-        // verify the required parameter 'certification_id' is set
-        if ($certification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $certification_id when calling partnersCertificationsDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/certifications/{certification_id}";
         $httpBody = '';
@@ -603,14 +579,6 @@ class PartnersApi
      */
     public function partnersCertificationsGetWithHttpInfo($partner_id,  $certification_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCertificationsGet');
-        }
-        // verify the required parameter 'certification_id' is set
-        if ($certification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $certification_id when calling partnersCertificationsGet');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/certifications/{certification_id}";
         $httpBody = '';
@@ -720,10 +688,6 @@ class PartnersApi
      */
     public function partnersCertificationsIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCertificationsIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/certifications";
         $httpBody = '';
@@ -833,14 +797,6 @@ class PartnersApi
      */
     public function partnersContentsDeleteWithHttpInfo($partner_id,  $content_key )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersContentsDelete');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersContentsDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/contents/{content_key}";
         $httpBody = '';
@@ -934,14 +890,6 @@ class PartnersApi
      */
     public function partnersContentsGetWithHttpInfo($partner_id,  $content_key )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersContentsGet');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersContentsGet');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/contents/{content_key}";
         $httpBody = '';
@@ -1041,18 +989,6 @@ class PartnersApi
      */
     public function partnersContentsUpdateWithHttpInfo($partner_id,  $content_key , $partner_content_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersContentsUpdate');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersContentsUpdate');
-        }
-        // verify the required parameter 'partner_content_resource' is set
-        if ($partner_content_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_content_resource when calling partnersContentsUpdate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/contents/{content_key}";
         $httpBody = '';
@@ -1157,18 +1093,6 @@ class PartnersApi
      */
     public function partnersCouponsActionsCreateWithHttpInfo($partner_id,  $coupon_id , $partner_coupon_action_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCouponsActionsCreate');
-        }
-        // verify the required parameter 'coupon_id' is set
-        if ($coupon_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $coupon_id when calling partnersCouponsActionsCreate');
-        }
-        // verify the required parameter 'partner_coupon_action_resource' is set
-        if ($partner_coupon_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_coupon_action_resource when calling partnersCouponsActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/coupons/{coupon_id}/actions";
         $httpBody = '';
@@ -1271,14 +1195,6 @@ class PartnersApi
      */
     public function partnersCouponsCreateWithHttpInfo($partner_id , $partner_coupon_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCouponsCreate');
-        }
-        // verify the required parameter 'partner_coupon_resource' is set
-        if ($partner_coupon_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_coupon_resource when calling partnersCouponsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/coupons";
         $httpBody = '';
@@ -1389,10 +1305,6 @@ class PartnersApi
      */
     public function partnersCouponsIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersCouponsIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/coupons";
         $httpBody = '';
@@ -1508,10 +1420,6 @@ class PartnersApi
      */
     public function partnersCreateWithHttpInfo($partner_resource)
     {
-        // verify the required parameter 'partner_resource' is set
-        if ($partner_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_resource when calling partnersCreate');
-        }
         // parse inputs
         $resourcePath = "/partners";
         $httpBody = '';
@@ -1596,10 +1504,6 @@ class PartnersApi
      */
     public function partnersDeleteWithHttpInfo($partner_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}";
         $httpBody = '';
@@ -1683,10 +1587,6 @@ class PartnersApi
      */
     public function partnersGetWithHttpInfo($partner_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersGet');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}";
         $httpBody = '';
@@ -1959,14 +1859,6 @@ class PartnersApi
      */
     public function partnersIndustriesCreateWithHttpInfo($partner_id , $partner_industry_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersIndustriesCreate');
-        }
-        // verify the required parameter 'partner_industry_resource' is set
-        if ($partner_industry_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_industry_resource when calling partnersIndustriesCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/industries";
         $httpBody = '';
@@ -2061,14 +1953,6 @@ class PartnersApi
      */
     public function partnersIndustriesDeleteWithHttpInfo($partner_id,  $industry_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersIndustriesDelete');
-        }
-        // verify the required parameter 'industry_id' is set
-        if ($industry_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $industry_id when calling partnersIndustriesDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/industries/{industry_id}";
         $httpBody = '';
@@ -2162,14 +2046,6 @@ class PartnersApi
      */
     public function partnersIndustriesGetWithHttpInfo($partner_id,  $industry_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersIndustriesGet');
-        }
-        // verify the required parameter 'industry_id' is set
-        if ($industry_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $industry_id when calling partnersIndustriesGet');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/industries/{industry_id}";
         $httpBody = '';
@@ -2277,10 +2153,6 @@ class PartnersApi
      */
     public function partnersIndustriesIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersIndustriesIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/industries";
         $httpBody = '';
@@ -2386,14 +2258,6 @@ class PartnersApi
      */
     public function partnersLeadtypesCreateWithHttpInfo($partner_id , $lead_type_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersLeadtypesCreate');
-        }
-        // verify the required parameter 'lead_type_resource' is set
-        if ($lead_type_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_type_resource when calling partnersLeadtypesCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types";
         $httpBody = '';
@@ -2488,14 +2352,6 @@ class PartnersApi
      */
     public function partnersLeadtypesDeleteWithHttpInfo($partner_id,  $lead_type_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersLeadtypesDelete');
-        }
-        // verify the required parameter 'lead_type_id' is set
-        if ($lead_type_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_type_id when calling partnersLeadtypesDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types/{lead_type_id}";
         $httpBody = '';
@@ -2587,10 +2443,6 @@ class PartnersApi
      */
     public function partnersLeadtypesGetWithHttpInfo($lead_type_id )
     {
-        // verify the required parameter 'lead_type_id' is set
-        if ($lead_type_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_type_id when calling partnersLeadtypesGet');
-        }
         // parse inputs
         $resourcePath = "/partners/lead_types/{lead_type_id}";
         $httpBody = '';
@@ -2680,14 +2532,6 @@ class PartnersApi
      */
     public function partnersLeadtypesGet2WithHttpInfo($partner_id,  $lead_type_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersLeadtypesGet2');
-        }
-        // verify the required parameter 'lead_type_id' is set
-        if ($lead_type_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lead_type_id when calling partnersLeadtypesGet2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types/{lead_type_id}";
         $httpBody = '';
@@ -2914,10 +2758,6 @@ class PartnersApi
      */
     public function partnersLeadtypesIndex2WithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersLeadtypesIndex2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types";
         $httpBody = '';
@@ -3025,10 +2865,6 @@ class PartnersApi
      */
     public function partnersNotesCreateWithHttpInfo($partner_note_resource)
     {
-        // verify the required parameter 'partner_note_resource' is set
-        if ($partner_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_note_resource when calling partnersNotesCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/notes";
         $httpBody = '';
@@ -3115,14 +2951,6 @@ class PartnersApi
      */
     public function partnersNotesCreate2WithHttpInfo($partner_id , $partner_note_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersNotesCreate2');
-        }
-        // verify the required parameter 'partner_note_resource' is set
-        if ($partner_note_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_note_resource when calling partnersNotesCreate2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/notes";
         $httpBody = '';
@@ -3217,14 +3045,6 @@ class PartnersApi
      */
     public function partnersNotesGetWithHttpInfo($partner_id,  $partner_note_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersNotesGet');
-        }
-        // verify the required parameter 'partner_note_id' is set
-        if ($partner_note_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_note_id when calling partnersNotesGet');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/notes/{partner_note_id}";
         $httpBody = '';
@@ -3443,10 +3263,6 @@ class PartnersApi
      */
     public function partnersNotesIndex2WithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersNotesIndex2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/notes";
         $httpBody = '';
@@ -3552,14 +3368,6 @@ class PartnersApi
      */
     public function partnersRefillsCreateWithHttpInfo($partner_id , $partner_refill_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersRefillsCreate');
-        }
-        // verify the required parameter 'partner_refill_resource' is set
-        if ($partner_refill_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_refill_resource when calling partnersRefillsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/refills";
         $httpBody = '';
@@ -3662,10 +3470,6 @@ class PartnersApi
      */
     public function partnersRefillsIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersRefillsIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/refills";
         $httpBody = '';
@@ -3769,18 +3573,6 @@ class PartnersApi
      */
     public function partnersSubscriptionsActionsCreateWithHttpInfo($partner_id,  $subscription_id , $partner_subscription_action_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersSubscriptionsActionsCreate');
-        }
-        // verify the required parameter 'subscription_id' is set
-        if ($subscription_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $subscription_id when calling partnersSubscriptionsActionsCreate');
-        }
-        // verify the required parameter 'partner_subscription_action_resource' is set
-        if ($partner_subscription_action_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_subscription_action_resource when calling partnersSubscriptionsActionsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/subscriptions/{subscription_id}/actions";
         $httpBody = '';
@@ -3883,14 +3675,6 @@ class PartnersApi
      */
     public function partnersSubscriptionsCreateWithHttpInfo($partner_id , $partner_subscription_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersSubscriptionsCreate');
-        }
-        // verify the required parameter 'partner_subscription_resource' is set
-        if ($partner_subscription_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_subscription_resource when calling partnersSubscriptionsCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/subscriptions";
         $httpBody = '';
@@ -3993,10 +3777,6 @@ class PartnersApi
      */
     public function partnersSubscriptionsIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersSubscriptionsIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/subscriptions";
         $httpBody = '';
@@ -4098,14 +3878,6 @@ class PartnersApi
      */
     public function partnersSubscriptionsUpdateWithHttpInfo($partner_id , $partner_subscription_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersSubscriptionsUpdate');
-        }
-        // verify the required parameter 'partner_subscription_resource' is set
-        if ($partner_subscription_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_subscription_resource when calling partnersSubscriptionsUpdate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/subscriptions";
         $httpBody = '';
@@ -4325,10 +4097,6 @@ class PartnersApi
      */
     public function partnersTransactionsIndexWithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersTransactionsIndex');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/transactions";
         $httpBody = '';
@@ -4430,14 +4198,6 @@ class PartnersApi
      */
     public function partnersUpdateWithHttpInfo($partner_id , $partner_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUpdate');
-        }
-        // verify the required parameter 'partner_resource' is set
-        if ($partner_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_resource when calling partnersUpdate');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}";
         $httpBody = '';
@@ -4532,14 +4292,6 @@ class PartnersApi
      */
     public function partnersUsersContentsDeleteWithHttpInfo($partner_user_id,  $content_key )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsDelete');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -4635,18 +4387,6 @@ class PartnersApi
      */
     public function partnersUsersContentsDelete2WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersContentsDelete2');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsDelete2');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsDelete2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -4748,14 +4488,6 @@ class PartnersApi
      */
     public function partnersUsersContentsGetWithHttpInfo($partner_user_id,  $content_key )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsGet');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsGet');
-        }
         // parse inputs
         $resourcePath = "/partners/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -4855,18 +4587,6 @@ class PartnersApi
      */
     public function partnersUsersContentsGet2WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersContentsGet2');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsGet2');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsGet2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -4974,18 +4694,6 @@ class PartnersApi
      */
     public function partnersUsersContentsUpdateWithHttpInfo($partner_user_id,  $content_key , $partner_content_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsUpdate');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsUpdate');
-        }
-        // verify the required parameter 'partner_content_resource' is set
-        if ($partner_content_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_content_resource when calling partnersUsersContentsUpdate');
-        }
         // parse inputs
         $resourcePath = "/partners/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -5092,22 +4800,6 @@ class PartnersApi
      */
     public function partnersUsersContentsUpdate2WithHttpInfo($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersContentsUpdate2');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersContentsUpdate2');
-        }
-        // verify the required parameter 'content_key' is set
-        if ($content_key === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $content_key when calling partnersUsersContentsUpdate2');
-        }
-        // verify the required parameter 'partner_content_resource' is set
-        if ($partner_content_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_content_resource when calling partnersUsersContentsUpdate2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
         $httpBody = '';
@@ -5216,10 +4908,6 @@ class PartnersApi
      */
     public function partnersUsersCreateWithHttpInfo($partner_user_resource)
     {
-        // verify the required parameter 'partner_user_resource' is set
-        if ($partner_user_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_resource when calling partnersUsersCreate');
-        }
         // parse inputs
         $resourcePath = "/partners/users";
         $httpBody = '';
@@ -5306,14 +4994,6 @@ class PartnersApi
      */
     public function partnersUsersCreate2WithHttpInfo($partner_id , $partner_user_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersCreate2');
-        }
-        // verify the required parameter 'partner_user_resource' is set
-        if ($partner_user_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_resource when calling partnersUsersCreate2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users";
         $httpBody = '';
@@ -5408,14 +5088,6 @@ class PartnersApi
      */
     public function partnersUsersDeleteWithHttpInfo($partner_id,  $partner_user_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersDelete');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersDelete');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}";
         $httpBody = '';
@@ -5507,10 +5179,6 @@ class PartnersApi
      */
     public function partnersUsersGetWithHttpInfo($partner_user_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersGet');
-        }
         // parse inputs
         $resourcePath = "/partners/users/{partner_user_id}";
         $httpBody = '';
@@ -5600,14 +5268,6 @@ class PartnersApi
      */
     public function partnersUsersGet2WithHttpInfo($partner_id,  $partner_user_id )
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersGet2');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersGet2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}";
         $httpBody = '';
@@ -5834,10 +5494,6 @@ class PartnersApi
      */
     public function partnersUsersIndex2WithHttpInfo($partner_id , $criteria = [])
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersIndex2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users";
         $httpBody = '';
@@ -5947,14 +5603,6 @@ class PartnersApi
      */
     public function partnersUsersUpdateWithHttpInfo($partner_user_id , $partner_user_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersUpdate');
-        }
-        // verify the required parameter 'partner_user_resource' is set
-        if ($partner_user_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_resource when calling partnersUsersUpdate');
-        }
         // parse inputs
         $resourcePath = "/partners/users/{partner_user_id}";
         $httpBody = '';
@@ -6051,18 +5699,6 @@ class PartnersApi
      */
     public function partnersUsersUpdate2WithHttpInfo($partner_id,  $partner_user_id , $partner_user_resource)
     {
-        // verify the required parameter 'partner_id' is set
-        if ($partner_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_id when calling partnersUsersUpdate2');
-        }
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling partnersUsersUpdate2');
-        }
-        // verify the required parameter 'partner_user_resource' is set
-        if ($partner_user_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_resource when calling partnersUsersUpdate2');
-        }
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}";
         $httpBody = '';

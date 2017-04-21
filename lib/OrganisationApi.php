@@ -113,10 +113,6 @@ class OrganisationApi
      */
     public function organisationEmployeesGetWithHttpInfo($employee_id )
     {
-        // verify the required parameter 'employee_id' is set
-        if ($employee_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $employee_id when calling organisationEmployeesGet');
-        }
         // parse inputs
         $resourcePath = "/organisation/employees/{employee_id}";
         $httpBody = '';
@@ -206,14 +202,6 @@ class OrganisationApi
      */
     public function organisationEmployeesGet2WithHttpInfo($organisation_id,  $employee_id )
     {
-        // verify the required parameter 'organisation_id' is set
-        if ($organisation_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $organisation_id when calling organisationEmployeesGet2');
-        }
-        // verify the required parameter 'employee_id' is set
-        if ($employee_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $employee_id when calling organisationEmployeesGet2');
-        }
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}";
         $httpBody = '';

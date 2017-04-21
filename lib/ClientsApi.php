@@ -113,10 +113,6 @@ class ClientsApi
      */
     public function clientsGetWithHttpInfo($client_id )
     {
-        // verify the required parameter 'client_id' is set
-        if ($client_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $client_id when calling clientsGet');
-        }
         // parse inputs
         $resourcePath = "/clients/{client_id}";
         $httpBody = '';
@@ -206,14 +202,6 @@ class ClientsApi
      */
     public function clientsUpdateWithHttpInfo($client_id , $client_resource)
     {
-        // verify the required parameter 'client_id' is set
-        if ($client_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $client_id when calling clientsUpdate');
-        }
-        // verify the required parameter 'client_resource' is set
-        if ($client_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $client_resource when calling clientsUpdate');
-        }
         // parse inputs
         $resourcePath = "/clients/{client_id}";
         $httpBody = '';

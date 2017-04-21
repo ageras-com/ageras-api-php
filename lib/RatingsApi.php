@@ -113,10 +113,6 @@ class RatingsApi
      */
     public function ratingsGetWithHttpInfo($rating_id )
     {
-        // verify the required parameter 'rating_id' is set
-        if ($rating_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $rating_id when calling ratingsGet');
-        }
         // parse inputs
         $resourcePath = "/ratings/{rating_id}";
         $httpBody = '';
@@ -341,14 +337,6 @@ class RatingsApi
      */
     public function ratingsUpdateWithHttpInfo($rating_id , $rating_resource)
     {
-        // verify the required parameter 'rating_id' is set
-        if ($rating_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $rating_id when calling ratingsUpdate');
-        }
-        // verify the required parameter 'rating_resource' is set
-        if ($rating_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $rating_resource when calling ratingsUpdate');
-        }
         // parse inputs
         $resourcePath = "/ratings/{rating_id}";
         $httpBody = '';

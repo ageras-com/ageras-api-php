@@ -190,10 +190,6 @@ class RefundsApi
      */
     public function refundsCreate2WithHttpInfo($refund_id )
     {
-        // verify the required parameter 'refund_id' is set
-        if ($refund_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $refund_id when calling refundsCreate2');
-        }
         // parse inputs
         $resourcePath = "/refunds/{refund_id}";
         $httpBody = '';
@@ -281,10 +277,6 @@ class RefundsApi
      */
     public function refundsGetWithHttpInfo($refund_id )
     {
-        // verify the required parameter 'refund_id' is set
-        if ($refund_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $refund_id when calling refundsGet');
-        }
         // parse inputs
         $resourcePath = "/refunds/{refund_id}";
         $httpBody = '';

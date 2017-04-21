@@ -115,14 +115,6 @@ class CvApi
      */
     public function cvAwardCreateWithHttpInfo($partner_user_id , $partner_user_cv_award_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvAwardCreate');
-        }
-        // verify the required parameter 'partner_user_cv_award_resource' is set
-        if ($partner_user_cv_award_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_award_resource when calling cvAwardCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/award";
         $httpBody = '';
@@ -217,14 +209,6 @@ class CvApi
      */
     public function cvAwardDeleteWithHttpInfo($partner_user_id,  $award_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvAwardDelete');
-        }
-        // verify the required parameter 'award_id' is set
-        if ($award_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $award_id when calling cvAwardDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/award/{award_id}";
         $httpBody = '';
@@ -318,14 +302,6 @@ class CvApi
      */
     public function cvAwardUpdateWithHttpInfo($partner_user_id , $partner_user_cv_award_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvAwardUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_award_resource' is set
-        if ($partner_user_cv_award_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_award_resource when calling cvAwardUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/award";
         $httpBody = '';
@@ -420,14 +396,6 @@ class CvApi
      */
     public function cvBadgeCreateWithHttpInfo($partner_user_id , $partner_user_cv_badge_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvBadgeCreate');
-        }
-        // verify the required parameter 'partner_user_cv_badge_resource' is set
-        if ($partner_user_cv_badge_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_badge_resource when calling cvBadgeCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/badge";
         $httpBody = '';
@@ -522,14 +490,6 @@ class CvApi
      */
     public function cvBadgeDeleteWithHttpInfo($partner_user_id,  $badge_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvBadgeDelete');
-        }
-        // verify the required parameter 'badge_id' is set
-        if ($badge_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $badge_id when calling cvBadgeDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/badge/{badge_id}";
         $httpBody = '';
@@ -623,14 +583,6 @@ class CvApi
      */
     public function cvCourseCreateWithHttpInfo($partner_user_id , $partner_user_cv_course_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvCourseCreate');
-        }
-        // verify the required parameter 'partner_user_cv_course_resource' is set
-        if ($partner_user_cv_course_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_course_resource when calling cvCourseCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/course";
         $httpBody = '';
@@ -725,14 +677,6 @@ class CvApi
      */
     public function cvCourseDeleteWithHttpInfo($partner_user_id,  $course_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvCourseDelete');
-        }
-        // verify the required parameter 'course_id' is set
-        if ($course_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $course_id when calling cvCourseDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/course/{course_id}";
         $httpBody = '';
@@ -826,14 +770,6 @@ class CvApi
      */
     public function cvCourseUpdateWithHttpInfo($partner_user_id , $partner_user_cv_course_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvCourseUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_course_resource' is set
-        if ($partner_user_cv_course_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_course_resource when calling cvCourseUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/course";
         $httpBody = '';
@@ -928,14 +864,6 @@ class CvApi
      */
     public function cvDescriptionCreateWithHttpInfo($partner_user_id , $partner_user_cv_description_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvDescriptionCreate');
-        }
-        // verify the required parameter 'partner_user_cv_description_resource' is set
-        if ($partner_user_cv_description_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_description_resource when calling cvDescriptionCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/description";
         $httpBody = '';
@@ -1030,14 +958,6 @@ class CvApi
      */
     public function cvDescriptionDeleteWithHttpInfo($partner_user_id,  $description_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvDescriptionDelete');
-        }
-        // verify the required parameter 'description_id' is set
-        if ($description_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $description_id when calling cvDescriptionDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/description/{description_id}";
         $httpBody = '';
@@ -1131,14 +1051,6 @@ class CvApi
      */
     public function cvDescriptionUpdateWithHttpInfo($partner_user_id , $partner_user_cv_description_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvDescriptionUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_description_resource' is set
-        if ($partner_user_cv_description_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_description_resource when calling cvDescriptionUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/description";
         $httpBody = '';
@@ -1233,14 +1145,6 @@ class CvApi
      */
     public function cvEducationCreateWithHttpInfo($partner_user_id , $partner_user_cv_education_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvEducationCreate');
-        }
-        // verify the required parameter 'partner_user_cv_education_resource' is set
-        if ($partner_user_cv_education_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_education_resource when calling cvEducationCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/education";
         $httpBody = '';
@@ -1335,14 +1239,6 @@ class CvApi
      */
     public function cvEducationDeleteWithHttpInfo($partner_user_id,  $education_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvEducationDelete');
-        }
-        // verify the required parameter 'education_id' is set
-        if ($education_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $education_id when calling cvEducationDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/education/{education_id}";
         $httpBody = '';
@@ -1436,14 +1332,6 @@ class CvApi
      */
     public function cvEducationUpdateWithHttpInfo($partner_user_id , $partner_user_cv_education_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvEducationUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_education_resource' is set
-        if ($partner_user_cv_education_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_education_resource when calling cvEducationUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/education";
         $httpBody = '';
@@ -1538,14 +1426,6 @@ class CvApi
      */
     public function cvExperienceCreateWithHttpInfo($partner_user_id , $partner_user_cv_experience_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExperienceCreate');
-        }
-        // verify the required parameter 'partner_user_cv_experience_resource' is set
-        if ($partner_user_cv_experience_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_experience_resource when calling cvExperienceCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/experience";
         $httpBody = '';
@@ -1640,14 +1520,6 @@ class CvApi
      */
     public function cvExperienceDeleteWithHttpInfo($partner_user_id,  $experience_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExperienceDelete');
-        }
-        // verify the required parameter 'experience_id' is set
-        if ($experience_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $experience_id when calling cvExperienceDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/experience/{experience_id}";
         $httpBody = '';
@@ -1741,14 +1613,6 @@ class CvApi
      */
     public function cvExperienceUpdateWithHttpInfo($partner_user_id , $partner_user_cv_experience_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExperienceUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_experience_resource' is set
-        if ($partner_user_cv_experience_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_experience_resource when calling cvExperienceUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/experience";
         $httpBody = '';
@@ -1843,14 +1707,6 @@ class CvApi
      */
     public function cvExpertiseCreateWithHttpInfo($partner_user_id , $partner_user_cv_expertise_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExpertiseCreate');
-        }
-        // verify the required parameter 'partner_user_cv_expertise_resource' is set
-        if ($partner_user_cv_expertise_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_expertise_resource when calling cvExpertiseCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/expertise";
         $httpBody = '';
@@ -1945,14 +1801,6 @@ class CvApi
      */
     public function cvExpertiseDeleteWithHttpInfo($partner_user_id,  $expertise_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExpertiseDelete');
-        }
-        // verify the required parameter 'expertise_id' is set
-        if ($expertise_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $expertise_id when calling cvExpertiseDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/expertise/{expertise_id}";
         $httpBody = '';
@@ -2046,14 +1894,6 @@ class CvApi
      */
     public function cvExpertiseUpdateWithHttpInfo($partner_user_id , $partner_user_cv_expertise_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvExpertiseUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_expertise_resource' is set
-        if ($partner_user_cv_expertise_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_expertise_resource when calling cvExpertiseUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/expertise";
         $httpBody = '';
@@ -2146,10 +1986,6 @@ class CvApi
      */
     public function cvGetWithHttpInfo($partner_user_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvGet');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}";
         $httpBody = '';
@@ -2350,14 +2186,6 @@ class CvApi
      */
     public function cvLanguageCreateWithHttpInfo($partner_user_id , $partner_user_cv_language_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvLanguageCreate');
-        }
-        // verify the required parameter 'partner_user_cv_language_resource' is set
-        if ($partner_user_cv_language_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_language_resource when calling cvLanguageCreate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/language";
         $httpBody = '';
@@ -2452,14 +2280,6 @@ class CvApi
      */
     public function cvLanguageDeleteWithHttpInfo($partner_user_id,  $language_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvLanguageDelete');
-        }
-        // verify the required parameter 'language_id' is set
-        if ($language_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $language_id when calling cvLanguageDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/language/{language_id}";
         $httpBody = '';
@@ -2553,14 +2373,6 @@ class CvApi
      */
     public function cvLanguageUpdateWithHttpInfo($partner_user_id , $partner_user_cv_language_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvLanguageUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_language_resource' is set
-        if ($partner_user_cv_language_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_language_resource when calling cvLanguageUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/language";
         $httpBody = '';
@@ -2653,10 +2465,6 @@ class CvApi
      */
     public function cvSocialDeleteWithHttpInfo($partner_user_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvSocialDelete');
-        }
         // parse inputs
         $resourcePath = "/cv/cv/{partner_user_id}/social";
         $httpBody = '';
@@ -2740,10 +2548,6 @@ class CvApi
      */
     public function cvSocialDelete2WithHttpInfo($partner_user_id )
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvSocialDelete2');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/social";
         $httpBody = '';
@@ -2829,14 +2633,6 @@ class CvApi
      */
     public function cvSocialUpdateWithHttpInfo($partner_user_id , $partner_user_cv_social_media_resource)
     {
-        // verify the required parameter 'partner_user_id' is set
-        if ($partner_user_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_id when calling cvSocialUpdate');
-        }
-        // verify the required parameter 'partner_user_cv_social_media_resource' is set
-        if ($partner_user_cv_social_media_resource === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $partner_user_cv_social_media_resource when calling cvSocialUpdate');
-        }
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/social";
         $httpBody = '';
