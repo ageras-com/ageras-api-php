@@ -203,6 +203,14 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_public"
+     */
+    public function testPropertyIsPublic()
+    {
+
+    }
+
+    /**
      * Test attribute "featured_at"
      */
     public function testPropertyFeaturedAt()

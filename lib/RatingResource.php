@@ -69,6 +69,7 @@ class RatingResource implements ArrayAccess
         'is_active' => 'bool',
         'is_validated' => 'bool',
         'is_featured' => 'bool',
+        'is_public' => 'bool',
         'featured_at' => 'string'
     ];
 
@@ -97,6 +98,7 @@ class RatingResource implements ArrayAccess
         'is_active' => 'is_active',
         'is_validated' => 'is_validated',
         'is_featured' => 'is_featured',
+        'is_public' => 'is_public',
         'featured_at' => 'featured_at'
     ];
 
@@ -121,6 +123,7 @@ class RatingResource implements ArrayAccess
         'is_active' => 'setIsActive',
         'is_validated' => 'setIsValidated',
         'is_featured' => 'setIsFeatured',
+        'is_public' => 'setIsPublic',
         'featured_at' => 'setFeaturedAt'
     ];
 
@@ -145,6 +148,7 @@ class RatingResource implements ArrayAccess
         'is_active' => 'getIsActive',
         'is_validated' => 'getIsValidated',
         'is_featured' => 'getIsFeatured',
+        'is_public' => 'getIsPublic',
         'featured_at' => 'getFeaturedAt'
     ];
 
@@ -194,6 +198,7 @@ class RatingResource implements ArrayAccess
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['is_validated'] = isset($data['is_validated']) ? $data['is_validated'] : false;
         $this->container['is_featured'] = isset($data['is_featured']) ? $data['is_featured'] : false;
+        $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
         $this->container['featured_at'] = isset($data['featured_at']) ? $data['featured_at'] : null;
     }
 
@@ -533,6 +538,27 @@ class RatingResource implements ArrayAccess
     public function setIsFeatured($is_featured)
     {
         $this->container['is_featured'] = $is_featured;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_public
+     * @return bool
+     */
+    public function getIsPublic()
+    {
+        return $this->container['is_public'];
+    }
+
+    /**
+     * Sets is_public
+     * @param bool $is_public Is the rating public
+     * @return $this
+     */
+    public function setIsPublic($is_public)
+    {
+        $this->container['is_public'] = $is_public;
 
         return $this;
     }

@@ -86,6 +86,7 @@ $criteria = [
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'stars' => "stars_example"; // string | List of stars to filter by
         'is_public' => false; // bool | Only show the public variables
+        'geo_point' => "geo_point_example"; // string | Location Point to sort ratings by
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -110,6 +111,7 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **stars** | **string**| List of stars to filter by | [optional]
  **is_public** | **bool**| Only show the public variables | [optional] [default to false]
+ **geo_point** | **string**| Location Point to sort ratings by | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

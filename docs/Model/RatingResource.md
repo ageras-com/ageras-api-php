@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **is_active** | **bool** | Is the rating active? | [optional] [default to false]
 **is_validated** | **bool** | Is the rating validated? | [optional] [default to false]
 **is_featured** | **bool** | Is the rating featured? | [optional] [default to false]
+**is_public** | **bool** | Is the rating public | [optional] [default to false]
 **featured_at** | **string** | If the rating is featured, the time the rating was featured. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
