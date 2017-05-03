@@ -187,6 +187,8 @@ class RatingsApi
      *    'stars' => string,
      *    'is_public' => bool,
      *    'geo_point' => string,
+     *    'geo_distance' => int,
+     *    'distinct' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -213,6 +215,8 @@ class RatingsApi
      *    'stars' => string,
      *    'is_public' => bool,
      *    'geo_point' => string,
+     *    'geo_distance' => int,
+     *    'distinct' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -261,6 +265,14 @@ class RatingsApi
         // query params
         if (isset($criteria['geo_point'])) {
             $queryParams['geo_point'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_point']);
+        }
+        // query params
+        if (isset($criteria['geo_distance'])) {
+            $queryParams['geo_distance'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_distance']);
+        }
+        // query params
+        if (isset($criteria['distinct'])) {
+            $queryParams['distinct'] = $this->apiClient->getSerializer()->toQueryValue($criteria['distinct']);
         }
         // query params
         if (isset($criteria['limit'])) {

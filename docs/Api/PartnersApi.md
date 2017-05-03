@@ -146,6 +146,7 @@ $criteria = [
         'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
         'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
         'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by. Provide the bottom left (southwest) and top right (northeast) corners of the reactangle separated by commas, e.g. \"52.19,12.42,52.85,14.22\".
+        'geo_distance' => 56; // int | Location filter by distance
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
         'limit' => 56; // int | The number of resources to be returned.
@@ -178,6 +179,7 @@ Name | Type | Description  | Notes
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
  **geo_point** | **string**| Location Point to sort partners by | [optional]
  **geo_rect** | **string**| Location Points to define an area to filter partners by. Provide the bottom left (southwest) and top right (northeast) corners of the reactangle separated by commas, e.g. \&quot;52.19,12.42,52.85,14.22\&quot;. | [optional]
+ **geo_distance** | **int**| Location filter by distance | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
@@ -939,6 +941,7 @@ $criteria = [
         'industry' => "industry_example"; // string | Filter the partners by their industry identifiers
         'geo_point' => "geo_point_example"; // string | Location Point to sort partners by
         'geo_rect' => "geo_rect_example"; // string | Location Points to define an area to filter partners by. Provide the bottom left (southwest) and top right (northeast) corners of the reactangle separated by commas, e.g. \"52.19,12.42,52.85,14.22\".
+        'geo_distance' => 56; // int | Location filter by distance
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
         'limit' => 56; // int | The number of resources to be returned.
@@ -971,6 +974,7 @@ Name | Type | Description  | Notes
  **industry** | **string**| Filter the partners by their industry identifiers | [optional]
  **geo_point** | **string**| Location Point to sort partners by | [optional]
  **geo_rect** | **string**| Location Points to define an area to filter partners by. Provide the bottom left (southwest) and top right (northeast) corners of the reactangle separated by commas, e.g. \&quot;52.19,12.42,52.85,14.22\&quot;. | [optional]
+ **geo_distance** | **int**| Location filter by distance | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]

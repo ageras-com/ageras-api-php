@@ -55,6 +55,8 @@ class RatingResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'created_at' => 'string',
+        'updated_at' => 'string',
         'partner' => '\Ageras\Api\PartnerSuggestResource',
         'name' => 'string',
         'score' => '\Ageras\Api\RatingScoreResource',
@@ -62,8 +64,6 @@ class RatingResource implements ArrayAccess
         'reply' => '\Ageras\Api\RatingReplyResource',
         'title' => 'string',
         'comment' => 'string',
-        'created_at' => 'string',
-        'updated_at' => 'string',
         'deleted_at' => 'string',
         'is_approved' => 'bool',
         'is_active' => 'bool',
@@ -84,6 +84,8 @@ class RatingResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
         'partner' => 'partner',
         'name' => 'name',
         'score' => 'score',
@@ -91,8 +93,6 @@ class RatingResource implements ArrayAccess
         'reply' => 'reply',
         'title' => 'title',
         'comment' => 'comment',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
         'deleted_at' => 'deleted_at',
         'is_approved' => 'is_approved',
         'is_active' => 'is_active',
@@ -109,6 +109,8 @@ class RatingResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
         'partner' => 'setPartner',
         'name' => 'setName',
         'score' => 'setScore',
@@ -116,8 +118,6 @@ class RatingResource implements ArrayAccess
         'reply' => 'setReply',
         'title' => 'setTitle',
         'comment' => 'setComment',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
         'deleted_at' => 'setDeletedAt',
         'is_approved' => 'setIsApproved',
         'is_active' => 'setIsActive',
@@ -134,6 +134,8 @@ class RatingResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
         'partner' => 'getPartner',
         'name' => 'getName',
         'score' => 'getScore',
@@ -141,8 +143,6 @@ class RatingResource implements ArrayAccess
         'reply' => 'getReply',
         'title' => 'getTitle',
         'comment' => 'getComment',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
         'deleted_at' => 'getDeletedAt',
         'is_approved' => 'getIsApproved',
         'is_active' => 'getIsActive',
@@ -184,6 +184,8 @@ class RatingResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
@@ -191,8 +193,6 @@ class RatingResource implements ArrayAccess
         $this->container['reply'] = isset($data['reply']) ? $data['reply'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['deleted_at'] = isset($data['deleted_at']) ? $data['deleted_at'] : null;
         $this->container['is_approved'] = isset($data['is_approved']) ? $data['is_approved'] : false;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
@@ -244,6 +244,48 @@ class RatingResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at Time of creation of the rating.
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at Time of last update.
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
@@ -391,48 +433,6 @@ class RatingResource implements ArrayAccess
     public function setComment($comment)
     {
         $this->container['comment'] = $comment;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param string $created_at Time of creation of the rating.
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return string
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param string $updated_at Time of last update.
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
