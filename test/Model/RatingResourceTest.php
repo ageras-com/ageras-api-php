@@ -91,6 +91,22 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "partner"
      */
     public function testPropertyPartner()
@@ -142,22 +158,6 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "comment"
      */
     public function testPropertyComment()
-    {
-
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
     {
 
     }

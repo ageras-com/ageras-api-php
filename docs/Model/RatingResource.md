@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Review ID. | [optional] 
+**created_at** | **string** | Time of creation of the rating. | [optional] 
+**updated_at** | **string** | Time of last update. | [optional] 
 **partner** | [**\Ageras\Api\PartnerSuggestResource**](PartnerSuggestResource.md) |  | [optional] 
 **name** | **string** | Name of the person who wrote the review. | [optional] 
 **score** | [**\Ageras\Api\RatingScoreResource**](RatingScoreResource.md) |  | [optional] 
@@ -11,8 +13,6 @@ Name | Type | Description | Notes
 **reply** | [**\Ageras\Api\RatingReplyResource**](RatingReplyResource.md) |  | [optional] 
 **title** | **string** | Title of the review. | [optional] 
 **comment** | **string** | The comment left by the reviewer. | [optional] 
-**created_at** | **string** | Time of creation of the rating. | [optional] 
-**updated_at** | **string** | Time of last update. | [optional] 
 **deleted_at** | **string** | Time of deletion. | [optional] 
 **is_approved** | **bool** | Is the rating approved? | [optional] [default to false]
 **is_active** | **bool** | Is the rating active? | [optional] [default to false]

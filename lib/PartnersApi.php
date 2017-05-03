@@ -199,6 +199,7 @@ class PartnersApi
      *    'industry' => string,
      *    'geo_point' => string,
      *    'geo_rect' => string,
+     *    'geo_distance' => int,
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'limit' => int,
@@ -232,6 +233,7 @@ class PartnersApi
      *    'industry' => string,
      *    'geo_point' => string,
      *    'geo_rect' => string,
+     *    'geo_distance' => int,
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'limit' => int,
@@ -302,6 +304,10 @@ class PartnersApi
         // query params
         if (isset($criteria['geo_rect'])) {
             $queryParams['geo_rect'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_rect']);
+        }
+        // query params
+        if (isset($criteria['geo_distance'])) {
+            $queryParams['geo_distance'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_distance']);
         }
         // query params
         if (isset($criteria['sort'])) {
@@ -1666,6 +1672,7 @@ class PartnersApi
      *    'industry' => string,
      *    'geo_point' => string,
      *    'geo_rect' => string,
+     *    'geo_distance' => int,
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'limit' => int,
@@ -1699,6 +1706,7 @@ class PartnersApi
      *    'industry' => string,
      *    'geo_point' => string,
      *    'geo_rect' => string,
+     *    'geo_distance' => int,
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'limit' => int,
@@ -1769,6 +1777,10 @@ class PartnersApi
         // query params
         if (isset($criteria['geo_rect'])) {
             $queryParams['geo_rect'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_rect']);
+        }
+        // query params
+        if (isset($criteria['geo_distance'])) {
+            $queryParams['geo_distance'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_distance']);
         }
         // query params
         if (isset($criteria['sort'])) {

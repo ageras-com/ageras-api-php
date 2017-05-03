@@ -87,6 +87,8 @@ $criteria = [
         'stars' => "stars_example"; // string | List of stars to filter by
         'is_public' => false; // bool | Only show the public variables
         'geo_point' => "geo_point_example"; // string | Location Point to sort ratings by
+        'geo_distance' => 56; // int | Location filter by distance
+        'distinct' => "distinct_example"; // string | Only show distinct ratings
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -112,6 +114,8 @@ Name | Type | Description  | Notes
  **stars** | **string**| List of stars to filter by | [optional]
  **is_public** | **bool**| Only show the public variables | [optional] [default to false]
  **geo_point** | **string**| Location Point to sort ratings by | [optional]
+ **geo_distance** | **int**| Location filter by distance | [optional]
+ **distinct** | **string**| Only show distinct ratings | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
