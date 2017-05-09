@@ -62,6 +62,7 @@ class PartnerResource implements ArrayAccess
         'title' => 'string',
         'slug' => 'string',
         'is_enabled' => 'bool',
+        'is_public' => 'bool',
         'has_subscription' => 'bool',
         'state' => 'string',
         'access' => 'string',
@@ -106,6 +107,7 @@ class PartnerResource implements ArrayAccess
         'title' => 'title',
         'slug' => 'slug',
         'is_enabled' => 'is_enabled',
+        'is_public' => 'is_public',
         'has_subscription' => 'has_subscription',
         'state' => 'state',
         'access' => 'access',
@@ -146,6 +148,7 @@ class PartnerResource implements ArrayAccess
         'title' => 'setTitle',
         'slug' => 'setSlug',
         'is_enabled' => 'setIsEnabled',
+        'is_public' => 'setIsPublic',
         'has_subscription' => 'setHasSubscription',
         'state' => 'setState',
         'access' => 'setAccess',
@@ -186,6 +189,7 @@ class PartnerResource implements ArrayAccess
         'title' => 'getTitle',
         'slug' => 'getSlug',
         'is_enabled' => 'getIsEnabled',
+        'is_public' => 'getIsPublic',
         'has_subscription' => 'getHasSubscription',
         'state' => 'getState',
         'access' => 'getAccess',
@@ -279,6 +283,7 @@ class PartnerResource implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : false;
+        $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
         $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
         $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
@@ -503,6 +508,27 @@ class PartnerResource implements ArrayAccess
     public function setIsEnabled($is_enabled)
     {
         $this->container['is_enabled'] = $is_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_public
+     * @return bool
+     */
+    public function getIsPublic()
+    {
+        return $this->container['is_public'];
+    }
+
+    /**
+     * Sets is_public
+     * @param bool $is_public Is it a public partner
+     * @return $this
+     */
+    public function setIsPublic($is_public)
+    {
+        $this->container['is_public'] = $is_public;
 
         return $this;
     }

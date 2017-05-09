@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **title** | **string** | Partner&#39;s title based on industry | [optional] 
 **slug** | **string** | The slug for the given partner | [optional] 
 **is_enabled** | **bool** | Has the partner been disabled. | [optional] [default to false]
+**is_public** | **bool** | Is it a public partner | [optional] [default to false]
 **has_subscription** | **bool** | Has the partner an active subscription. | [optional] [default to false]
 **state** | **string** | What is the current state of the partner. | [optional] [default to 'unknown']
 **access** | **string** | Access information regarding the partner. | [optional] 

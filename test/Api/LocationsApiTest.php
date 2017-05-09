@@ -77,6 +77,17 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for locationsGet
+     *
+     * Retrieve a location from a given location_id..
+     *
+     */
+    public function testLocationsGet()
+    {
+
+    }
+
+    /**
      * Test case for locationsIndex
      *
      * Search and find locations by different criterias..

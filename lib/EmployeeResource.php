@@ -65,7 +65,8 @@ class EmployeeResource implements ArrayAccess
         'phone_private' => 'string',
         'signature' => '\Ageras\Api\EmployeeSignatureResource',
         'roles' => '\Ageras\Api\EmployeeRoleResource[]',
-        'initials' => 'string'
+        'initials' => 'string',
+        'is_active' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -89,7 +90,8 @@ class EmployeeResource implements ArrayAccess
         'phone_private' => 'phone_private',
         'signature' => 'signature',
         'roles' => 'roles',
-        'initials' => 'initials'
+        'initials' => 'initials',
+        'is_active' => 'is_active'
     ];
 
 
@@ -109,7 +111,8 @@ class EmployeeResource implements ArrayAccess
         'phone_private' => 'setPhonePrivate',
         'signature' => 'setSignature',
         'roles' => 'setRoles',
-        'initials' => 'setInitials'
+        'initials' => 'setInitials',
+        'is_active' => 'setIsActive'
     ];
 
 
@@ -129,7 +132,8 @@ class EmployeeResource implements ArrayAccess
         'phone_private' => 'getPhonePrivate',
         'signature' => 'getSignature',
         'roles' => 'getRoles',
-        'initials' => 'getInitials'
+        'initials' => 'getInitials',
+        'is_active' => 'getIsActive'
     ];
 
     public static function attributeMap()
@@ -175,6 +179,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['signature'] = isset($data['signature']) ? $data['signature'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
+        $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
     }
 
     /**
@@ -450,6 +455,27 @@ class EmployeeResource implements ArrayAccess
     public function setInitials($initials)
     {
         $this->container['initials'] = $initials;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_active
+     * @return bool
+     */
+    public function getIsActive()
+    {
+        return $this->container['is_active'];
+    }
+
+    /**
+     * Sets is_active
+     * @param bool $is_active Is the Employee active ?
+     * @return $this
+     */
+    public function setIsActive($is_active)
+    {
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }

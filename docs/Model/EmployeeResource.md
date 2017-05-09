@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **signature** | [**\Ageras\Api\EmployeeSignatureResource**](EmployeeSignatureResource.md) |  | [optional] 
 **roles** | [**\Ageras\Api\EmployeeRoleResource[]**](EmployeeRoleResource.md) | The list of roles that the employee is member of. | [optional] 
 **initials** | **string** | Employee Initials. | [optional] 
+**is_active** | **bool** | Is the Employee active ? | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

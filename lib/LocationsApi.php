@@ -88,11 +88,99 @@ class LocationsApi
     }
 
     /**
+     * Operation locationsGet
+     *
+     * Retrieve a location from a given location_id.
+     *
+     * @param string $location_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LocationResource
+     */
+    public function locationsGet($location_id )
+    {
+        list($response) = $this->locationsGetWithHttpInfo($location_id);
+        return $response;
+    }
+
+    /**
+     * Operation locationsGetWithHttpInfo
+     *
+     * Retrieve a location from a given location_id.
+     *
+     * @param string $location_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LocationResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function locationsGetWithHttpInfo($location_id )
+    {
+        // parse inputs
+        $resourcePath = "/locations/{location_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($location_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "location_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($location_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LocationResource',
+                '/locations/{location_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LocationResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LocationResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation locationsIndex
      *
      * Search and find locations by different criterias.
      *
      * @param $criteria = [
+     *    'location_id' => string,
      *    'geo_code' => string,
      *    'geo_point' => string,
      *    'slug' => string,
@@ -117,6 +205,7 @@ class LocationsApi
      * Search and find locations by different criterias.
      *
      * @param $criteria = [
+     *    'location_id' => string,
      *    'geo_code' => string,
      *    'geo_point' => string,
      *    'slug' => string,
@@ -143,6 +232,10 @@ class LocationsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['location_id'])) {
+            $queryParams['location_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['location_id']);
+        }
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
