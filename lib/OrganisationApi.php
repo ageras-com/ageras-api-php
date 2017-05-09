@@ -282,6 +282,7 @@ class OrganisationApi
      *    'limit' => int,
      *    'role_id' => string,
      *    'sort' => string,
+     *    'is_active' => bool,
      *    'page' => int,
      *    'query' => string,
      * ]
@@ -305,6 +306,7 @@ class OrganisationApi
      *    'limit' => int,
      *    'role_id' => string,
      *    'sort' => string,
+     *    'is_active' => bool,
      *    'page' => int,
      *    'query' => string,
      * ]
@@ -344,6 +346,10 @@ class OrganisationApi
         // query params
         if (isset($criteria['sort'])) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['is_active'])) {
+            $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
         }
         // query params
         if (isset($criteria['page'])) {

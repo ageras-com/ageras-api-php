@@ -149,6 +149,7 @@ $criteria = [
         'geo_distance' => 56; // int | Location filter by distance
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'is_public' => false; // bool | Only show partners that are visible to the public
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -182,6 +183,7 @@ Name | Type | Description  | Notes
  **geo_distance** | **int**| Location filter by distance | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
+ **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -944,6 +946,7 @@ $criteria = [
         'geo_distance' => 56; // int | Location filter by distance
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
+        'is_public' => false; // bool | Only show partners that are visible to the public
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -977,6 +980,7 @@ Name | Type | Description  | Notes
  **geo_distance** | **int**| Location filter by distance | [optional]
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
+ **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

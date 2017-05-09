@@ -178,4 +178,12 @@ class EmployeeResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "is_active"
+     */
+    public function testPropertyIsActive()
+    {
+
+    }
+
 }

@@ -147,6 +147,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_public"
+     */
+    public function testPropertyIsPublic()
+    {
+
+    }
+
+    /**
      * Test attribute "has_subscription"
      */
     public function testPropertyHasSubscription()

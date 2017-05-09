@@ -4,8 +4,60 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**locationsGet**](LocationsApi.md#locationsGet) | **GET** /locations/{location_id} | Retrieve a location from a given location_id.
 [**locationsIndex**](LocationsApi.md#locationsIndex) | **GET** /locations | Search and find locations by different criterias.
 
+
+# **locationsGet**
+> \Ageras\Api\LocationResource locationsGet($location_id )
+
+Retrieve a location from a given location_id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LocationsApi();
+$location_id = "location_id_example"; // string | 
+
+try {
+    $result = $api_instance->locationsGet($location_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LocationsApi->locationsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **location_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\LocationResource**](../Model/LocationResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **locationsIndex**
 > \Ageras\Api\LocationResult locationsIndex($criteria)
@@ -27,6 +79,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LocationsApi();
 $criteria = [
+        'location_id' => "location_id_example"; // string | 
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'geo_point' => "geo_point_example"; // string | Geo Location Point
         'slug' => "slug_example"; // string | Slug for url friendly strings.
@@ -50,6 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **location_id** | **string**|  | [optional]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **geo_point** | **string**| Geo Location Point | [optional]
  **slug** | **string**| Slug for url friendly strings. | [optional]

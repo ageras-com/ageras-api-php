@@ -138,6 +138,7 @@ $criteria = [
         'limit' => 56; // int | Number of employees to return pr. page.
         'role_id' => "role_id_example"; // string | The Role that the employee is member of.
         'sort' => "first_name"; // string | Attribute to sort by.
+        'is_active' => false; // bool | Active Employee Status ( true / false )
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
     ];
@@ -160,6 +161,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Number of employees to return pr. page. | [optional]
  **role_id** | **string**| The Role that the employee is member of. | [optional]
  **sort** | **string**| Attribute to sort by. | [optional] [default to first_name]
+ **is_active** | **bool**| Active Employee Status ( true / false ) | [optional] [default to false]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 
