@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **new_sales** | [**\Ageras\Api\KPICreditsNewSalesResource**](KPICreditsNewSalesResource.md) |  | [optional] 
 **refunded** | [**\Ageras\Api\KPICreditsRefundedResource**](KPICreditsRefundedResource.md) |  | [optional] 
-**resales** | [**\Ageras\Api\KPICreditsResalesResource**](KPICreditsResalesResource.md) |  | [optional] 
+**refills** | [**\Ageras\Api\KPICreditsRefillsResource**](KPICreditsRefillsResource.md) |  | [optional] 
 **sold** | [**\Ageras\Api\KPICreditsSoldResource**](KPICreditsSoldResource.md) |  | [optional] 
 **used** | [**\Ageras\Api\KPICreditsUsedResource**](KPICreditsUsedResource.md) |  | [optional] 
 **without_refill** | [**\Ageras\Api\KPICreditsWithoutRefillResource**](KPICreditsWithoutRefillResource.md) |  | [optional] 

@@ -12,9 +12,10 @@ Name | Type | Description | Notes
 **leads** | [**\Ageras\Api\KPILeadsResource**](KPILeadsResource.md) |  | [optional] 
 **credits** | [**\Ageras\Api\KPICreditsResource**](KPICreditsResource.md) |  | [optional] 
 **matches** | [**\Ageras\Api\KPIMatchesResource**](KPIMatchesResource.md) |  | [optional] 
-**partners** | [**\Ageras\Api\KPIPartnerResource**](KPIPartnerResource.md) |  | [optional] 
-**refill** | [**\Ageras\Api\KPIRefillResource**](KPIRefillResource.md) |  | [optional] 
-**total_sales** | **string** | Total Sales | [optional] 
+**partners** | [**\Ageras\Api\KPIPartnersResource**](KPIPartnersResource.md) |  | [optional] 
+**refills** | [**\Ageras\Api\KPIRefillsResource**](KPIRefillsResource.md) |  | [optional] 
+**new_sales** | [**\Ageras\Api\KPINewSalesResource**](KPINewSalesResource.md) |  | [optional] 
+**sales** | [**\Ageras\Api\KPISalesResource**](KPISalesResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

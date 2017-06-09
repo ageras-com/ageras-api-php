@@ -56,6 +56,7 @@ class KPILeadsResource implements ArrayAccess
     protected static $swaggerTypes = [
         'action_time' => '\Ageras\Api\KPILeadsActionTimeResource',
         'validated' => '\Ageras\Api\KPINumberResource',
+        'total' => '\Ageras\Api\KPINumberResource',
         'validation_ratio' => '\Ageras\Api\KPILeadsValidationRatioResource',
         'completion_ratio' => '\Ageras\Api\KPILeadsCompletionRatioResource',
         'completion_time' => '\Ageras\Api\KPILeadsCompletionTimeResource',
@@ -74,6 +75,7 @@ class KPILeadsResource implements ArrayAccess
     protected static $attributeMap = [
         'action_time' => 'action_time',
         'validated' => 'validated',
+        'total' => 'total',
         'validation_ratio' => 'validation_ratio',
         'completion_ratio' => 'completion_ratio',
         'completion_time' => 'completion_time',
@@ -88,6 +90,7 @@ class KPILeadsResource implements ArrayAccess
     protected static $setters = [
         'action_time' => 'setActionTime',
         'validated' => 'setValidated',
+        'total' => 'setTotal',
         'validation_ratio' => 'setValidationRatio',
         'completion_ratio' => 'setCompletionRatio',
         'completion_time' => 'setCompletionTime',
@@ -102,6 +105,7 @@ class KPILeadsResource implements ArrayAccess
     protected static $getters = [
         'action_time' => 'getActionTime',
         'validated' => 'getValidated',
+        'total' => 'getTotal',
         'validation_ratio' => 'getValidationRatio',
         'completion_ratio' => 'getCompletionRatio',
         'completion_time' => 'getCompletionTime',
@@ -141,6 +145,7 @@ class KPILeadsResource implements ArrayAccess
     {
         $this->container['action_time'] = isset($data['action_time']) ? $data['action_time'] : null;
         $this->container['validated'] = isset($data['validated']) ? $data['validated'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['validation_ratio'] = isset($data['validation_ratio']) ? $data['validation_ratio'] : null;
         $this->container['completion_ratio'] = isset($data['completion_ratio']) ? $data['completion_ratio'] : null;
         $this->container['completion_time'] = isset($data['completion_time']) ? $data['completion_time'] : null;
@@ -210,6 +215,27 @@ class KPILeadsResource implements ArrayAccess
     public function setValidated($validated)
     {
         $this->container['validated'] = $validated;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param \Ageras\Api\KPINumberResource $total
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
 
         return $this;
     }

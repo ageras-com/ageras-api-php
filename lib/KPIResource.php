@@ -63,9 +63,10 @@ class KPIResource implements ArrayAccess
         'leads' => '\Ageras\Api\KPILeadsResource',
         'credits' => '\Ageras\Api\KPICreditsResource',
         'matches' => '\Ageras\Api\KPIMatchesResource',
-        'partners' => '\Ageras\Api\KPIPartnerResource',
-        'refill' => '\Ageras\Api\KPIRefillResource',
-        'total_sales' => 'string'
+        'partners' => '\Ageras\Api\KPIPartnersResource',
+        'refills' => '\Ageras\Api\KPIRefillsResource',
+        'new_sales' => '\Ageras\Api\KPINewSalesResource',
+        'sales' => '\Ageras\Api\KPISalesResource'
     ];
 
     public static function swaggerTypes()
@@ -88,8 +89,9 @@ class KPIResource implements ArrayAccess
         'credits' => 'credits',
         'matches' => 'matches',
         'partners' => 'partners',
-        'refill' => 'refill',
-        'total_sales' => 'total_sales'
+        'refills' => 'refills',
+        'new_sales' => 'new_sales',
+        'sales' => 'sales'
     ];
 
 
@@ -108,8 +110,9 @@ class KPIResource implements ArrayAccess
         'credits' => 'setCredits',
         'matches' => 'setMatches',
         'partners' => 'setPartners',
-        'refill' => 'setRefill',
-        'total_sales' => 'setTotalSales'
+        'refills' => 'setRefills',
+        'new_sales' => 'setNewSales',
+        'sales' => 'setSales'
     ];
 
 
@@ -128,8 +131,9 @@ class KPIResource implements ArrayAccess
         'credits' => 'getCredits',
         'matches' => 'getMatches',
         'partners' => 'getPartners',
-        'refill' => 'getRefill',
-        'total_sales' => 'getTotalSales'
+        'refills' => 'getRefills',
+        'new_sales' => 'getNewSales',
+        'sales' => 'getSales'
     ];
 
     public static function attributeMap()
@@ -173,8 +177,9 @@ class KPIResource implements ArrayAccess
         $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
         $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
         $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
-        $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
-        $this->container['total_sales'] = isset($data['total_sales']) ? $data['total_sales'] : null;
+        $this->container['refills'] = isset($data['refills']) ? $data['refills'] : null;
+        $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
+        $this->container['sales'] = isset($data['sales']) ? $data['sales'] : null;
     }
 
     /**
@@ -393,7 +398,7 @@ class KPIResource implements ArrayAccess
 
     /**
      * Gets partners
-     * @return \Ageras\Api\KPIPartnerResource
+     * @return \Ageras\Api\KPIPartnersResource
      */
     public function getPartners()
     {
@@ -402,7 +407,7 @@ class KPIResource implements ArrayAccess
 
     /**
      * Sets partners
-     * @param \Ageras\Api\KPIPartnerResource $partners
+     * @param \Ageras\Api\KPIPartnersResource $partners
      * @return $this
      */
     public function setPartners($partners)
@@ -413,43 +418,64 @@ class KPIResource implements ArrayAccess
     }
 
     /**
-     * Gets refill
-     * @return \Ageras\Api\KPIRefillResource
+     * Gets refills
+     * @return \Ageras\Api\KPIRefillsResource
      */
-    public function getRefill()
+    public function getRefills()
     {
-        return $this->container['refill'];
+        return $this->container['refills'];
     }
 
     /**
-     * Sets refill
-     * @param \Ageras\Api\KPIRefillResource $refill
+     * Sets refills
+     * @param \Ageras\Api\KPIRefillsResource $refills
      * @return $this
      */
-    public function setRefill($refill)
+    public function setRefills($refills)
     {
-        $this->container['refill'] = $refill;
+        $this->container['refills'] = $refills;
 
         return $this;
     }
 
     /**
-     * Gets total_sales
-     * @return string
+     * Gets new_sales
+     * @return \Ageras\Api\KPINewSalesResource
      */
-    public function getTotalSales()
+    public function getNewSales()
     {
-        return $this->container['total_sales'];
+        return $this->container['new_sales'];
     }
 
     /**
-     * Sets total_sales
-     * @param string $total_sales Total Sales
+     * Sets new_sales
+     * @param \Ageras\Api\KPINewSalesResource $new_sales
      * @return $this
      */
-    public function setTotalSales($total_sales)
+    public function setNewSales($new_sales)
     {
-        $this->container['total_sales'] = $total_sales;
+        $this->container['new_sales'] = $new_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales
+     * @return \Ageras\Api\KPISalesResource
+     */
+    public function getSales()
+    {
+        return $this->container['sales'];
+    }
+
+    /**
+     * Sets sales
+     * @param \Ageras\Api\KPISalesResource $sales
+     * @return $this
+     */
+    public function setSales($sales)
+    {
+        $this->container['sales'] = $sales;
 
         return $this;
     }

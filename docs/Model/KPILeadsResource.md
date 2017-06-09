@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action_time** | [**\Ageras\Api\KPILeadsActionTimeResource**](KPILeadsActionTimeResource.md) |  | [optional] 
 **validated** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
+**total** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 **validation_ratio** | [**\Ageras\Api\KPILeadsValidationRatioResource**](KPILeadsValidationRatioResource.md) |  | [optional] 
 **completion_ratio** | [**\Ageras\Api\KPILeadsCompletionRatioResource**](KPILeadsCompletionRatioResource.md) |  | [optional] 
 **completion_time** | [**\Ageras\Api\KPILeadsCompletionTimeResource**](KPILeadsCompletionTimeResource.md) |  | [optional] 

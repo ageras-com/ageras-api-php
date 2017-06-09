@@ -99,6 +99,14 @@ class KPILeadsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
      * Test attribute "validation_ratio"
      */
     public function testPropertyValidationRatio()

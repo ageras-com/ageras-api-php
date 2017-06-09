@@ -55,6 +55,8 @@ class KPICreditsNewSalesResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'actual' => '\Ageras\Api\KPINumberResource',
+        'actual_net' => '\Ageras\Api\KPINumberResource',
+        'forecast' => '\Ageras\Api\KPINumberResource',
         'target' => '\Ageras\Api\KPINumberResource'
     ];
 
@@ -69,6 +71,8 @@ class KPICreditsNewSalesResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'actual' => 'actual',
+        'actual_net' => 'actual_net',
+        'forecast' => 'forecast',
         'target' => 'target'
     ];
 
@@ -79,6 +83,8 @@ class KPICreditsNewSalesResource implements ArrayAccess
      */
     protected static $setters = [
         'actual' => 'setActual',
+        'actual_net' => 'setActualNet',
+        'forecast' => 'setForecast',
         'target' => 'setTarget'
     ];
 
@@ -89,6 +95,8 @@ class KPICreditsNewSalesResource implements ArrayAccess
      */
     protected static $getters = [
         'actual' => 'getActual',
+        'actual_net' => 'getActualNet',
+        'forecast' => 'getForecast',
         'target' => 'getTarget'
     ];
 
@@ -124,6 +132,8 @@ class KPICreditsNewSalesResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
+        $this->container['actual_net'] = isset($data['actual_net']) ? $data['actual_net'] : null;
+        $this->container['forecast'] = isset($data['forecast']) ? $data['forecast'] : null;
         $this->container['target'] = isset($data['target']) ? $data['target'] : null;
     }
 
@@ -169,6 +179,48 @@ class KPICreditsNewSalesResource implements ArrayAccess
     public function setActual($actual)
     {
         $this->container['actual'] = $actual;
+
+        return $this;
+    }
+
+    /**
+     * Gets actual_net
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getActualNet()
+    {
+        return $this->container['actual_net'];
+    }
+
+    /**
+     * Sets actual_net
+     * @param \Ageras\Api\KPINumberResource $actual_net
+     * @return $this
+     */
+    public function setActualNet($actual_net)
+    {
+        $this->container['actual_net'] = $actual_net;
+
+        return $this;
+    }
+
+    /**
+     * Gets forecast
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getForecast()
+    {
+        return $this->container['forecast'];
+    }
+
+    /**
+     * Sets forecast
+     * @param \Ageras\Api\KPINumberResource $forecast
+     * @return $this
+     */
+    public function setForecast($forecast)
+    {
+        $this->container['forecast'] = $forecast;
 
         return $this;
     }

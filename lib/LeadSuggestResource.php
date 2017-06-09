@@ -130,6 +130,7 @@ class LeadSuggestResource implements ArrayAccess
     const STATUS_UNKNOWN = 'unknown';
     const STATUS_VALIDATED = 'validated';
     const STATUS_INVALID = 'invalid';
+    const STATUS_TEST = 'test';
     
 
     
@@ -143,6 +144,7 @@ class LeadSuggestResource implements ArrayAccess
             self::STATUS_UNKNOWN,
             self::STATUS_VALIDATED,
             self::STATUS_INVALID,
+            self::STATUS_TEST,
         ];
     }
     
@@ -177,9 +179,9 @@ class LeadSuggestResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "validated", "invalid"];
+        $allowed_values = ["unknown", "validated", "invalid", "test"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'validated', 'invalid'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'validated', 'invalid', 'test'.";
         }
 
         return $invalid_properties;
@@ -194,7 +196,7 @@ class LeadSuggestResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "validated", "invalid"];
+        $allowed_values = ["unknown", "validated", "invalid", "test"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -260,9 +262,9 @@ class LeadSuggestResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('unknown', 'validated', 'invalid');
+        $allowed_values = array('unknown', 'validated', 'invalid', 'test');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'validated', 'invalid'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'validated', 'invalid', 'test'");
         }
         $this->container['status'] = $status;
 
