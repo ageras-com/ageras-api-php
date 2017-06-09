@@ -123,6 +123,14 @@ class PartnerGeoResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "city_district"
+     */
+    public function testPropertyCityDistrict()
+    {
+
+    }
+
+    /**
      * Test attribute "point"
      */
     public function testPropertyPoint()

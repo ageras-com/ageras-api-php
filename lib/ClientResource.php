@@ -58,7 +58,10 @@ class ClientResource implements ArrayAccess
         'assigned_employee' => '\Ageras\Api\EmployeeResource',
         'phone' => 'string',
         'email' => 'string',
-        'leads' => '\Ageras\Api\LeadResource[]'
+        'leads' => '\Ageras\Api\LeadResource[]',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'geo' => '\Ageras\Api\ClientGeoResource'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +78,10 @@ class ClientResource implements ArrayAccess
         'assigned_employee' => 'assigned_employee',
         'phone' => 'phone',
         'email' => 'email',
-        'leads' => 'leads'
+        'leads' => 'leads',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'geo' => 'geo'
     ];
 
 
@@ -88,7 +94,10 @@ class ClientResource implements ArrayAccess
         'assigned_employee' => 'setAssignedEmployee',
         'phone' => 'setPhone',
         'email' => 'setEmail',
-        'leads' => 'setLeads'
+        'leads' => 'setLeads',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'geo' => 'setGeo'
     ];
 
 
@@ -101,7 +110,10 @@ class ClientResource implements ArrayAccess
         'assigned_employee' => 'getAssignedEmployee',
         'phone' => 'getPhone',
         'email' => 'getEmail',
-        'leads' => 'getLeads'
+        'leads' => 'getLeads',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'geo' => 'getGeo'
     ];
 
     public static function attributeMap()
@@ -140,6 +152,9 @@ class ClientResource implements ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['leads'] = isset($data['leads']) ? $data['leads'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
     }
 
     /**
@@ -268,6 +283,69 @@ class ClientResource implements ArrayAccess
     public function setLeads($leads)
     {
         $this->container['leads'] = $leads;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name First name
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name Last name
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo
+     * @return \Ageras\Api\ClientGeoResource
+     */
+    public function getGeo()
+    {
+        return $this->container['geo'];
+    }
+
+    /**
+     * Sets geo
+     * @param \Ageras\Api\ClientGeoResource $geo
+     * @return $this
+     */
+    public function setGeo($geo)
+    {
+        $this->container['geo'] = $geo;
 
         return $this;
     }

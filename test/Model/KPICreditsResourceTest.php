@@ -99,9 +99,9 @@ class KPICreditsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "resales"
+     * Test attribute "refills"
      */
-    public function testPropertyResales()
+    public function testPropertyRefills()
     {
 
     }

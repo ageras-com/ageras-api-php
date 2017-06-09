@@ -163,17 +163,25 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "refill"
+     * Test attribute "refills"
      */
-    public function testPropertyRefill()
+    public function testPropertyRefills()
     {
 
     }
 
     /**
-     * Test attribute "total_sales"
+     * Test attribute "new_sales"
      */
-    public function testPropertyTotalSales()
+    public function testPropertyNewSales()
+    {
+
+    }
+
+    /**
+     * Test attribute "sales"
+     */
+    public function testPropertySales()
     {
 
     }

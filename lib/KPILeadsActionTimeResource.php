@@ -54,9 +54,10 @@ class KPILeadsActionTimeResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'actual' => '\Ageras\Api\KPINumberResource',
+        'actual_net' => '\Ageras\Api\KPINumberResource',
         'target_net' => '\Ageras\Api\KPINumberResource',
-        'forecast_net' => '\Ageras\Api\KPINumberResource',
-        'actual_net' => '\Ageras\Api\KPINumberResource'
+        'forecast_net' => '\Ageras\Api\KPINumberResource'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +70,10 @@ class KPILeadsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'actual' => 'actual',
+        'actual_net' => 'actual_net',
         'target_net' => 'target_net',
-        'forecast_net' => 'forecast_net',
-        'actual_net' => 'actual_net'
+        'forecast_net' => 'forecast_net'
     ];
 
 
@@ -80,9 +82,10 @@ class KPILeadsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'actual' => 'setActual',
+        'actual_net' => 'setActualNet',
         'target_net' => 'setTargetNet',
-        'forecast_net' => 'setForecastNet',
-        'actual_net' => 'setActualNet'
+        'forecast_net' => 'setForecastNet'
     ];
 
 
@@ -91,9 +94,10 @@ class KPILeadsActionTimeResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'actual' => 'getActual',
+        'actual_net' => 'getActualNet',
         'target_net' => 'getTargetNet',
-        'forecast_net' => 'getForecastNet',
-        'actual_net' => 'getActualNet'
+        'forecast_net' => 'getForecastNet'
     ];
 
     public static function attributeMap()
@@ -127,9 +131,10 @@ class KPILeadsActionTimeResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
+        $this->container['actual_net'] = isset($data['actual_net']) ? $data['actual_net'] : null;
         $this->container['target_net'] = isset($data['target_net']) ? $data['target_net'] : null;
         $this->container['forecast_net'] = isset($data['forecast_net']) ? $data['forecast_net'] : null;
-        $this->container['actual_net'] = isset($data['actual_net']) ? $data['actual_net'] : null;
     }
 
     /**
@@ -156,6 +161,48 @@ class KPILeadsActionTimeResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets actual
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getActual()
+    {
+        return $this->container['actual'];
+    }
+
+    /**
+     * Sets actual
+     * @param \Ageras\Api\KPINumberResource $actual
+     * @return $this
+     */
+    public function setActual($actual)
+    {
+        $this->container['actual'] = $actual;
+
+        return $this;
+    }
+
+    /**
+     * Gets actual_net
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getActualNet()
+    {
+        return $this->container['actual_net'];
+    }
+
+    /**
+     * Sets actual_net
+     * @param \Ageras\Api\KPINumberResource $actual_net
+     * @return $this
+     */
+    public function setActualNet($actual_net)
+    {
+        $this->container['actual_net'] = $actual_net;
+
+        return $this;
+    }
 
     /**
      * Gets target_net
@@ -195,27 +242,6 @@ class KPILeadsActionTimeResource implements ArrayAccess
     public function setForecastNet($forecast_net)
     {
         $this->container['forecast_net'] = $forecast_net;
-
-        return $this;
-    }
-
-    /**
-     * Gets actual_net
-     * @return \Ageras\Api\KPINumberResource
-     */
-    public function getActualNet()
-    {
-        return $this->container['actual_net'];
-    }
-
-    /**
-     * Sets actual_net
-     * @param \Ageras\Api\KPINumberResource $actual_net
-     * @return $this
-     */
-    public function setActualNet($actual_net)
-    {
-        $this->container['actual_net'] = $actual_net;
 
         return $this;
     }

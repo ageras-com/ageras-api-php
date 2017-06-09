@@ -59,6 +59,7 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'string',
         'zip_code' => 'string',
         'city_name' => 'string',
+        'city_district' => 'string',
         'point' => '\Ageras\Api\LocationGeoPointResource'
     ];
 
@@ -77,6 +78,7 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'address',
         'zip_code' => 'zip_code',
         'city_name' => 'city_name',
+        'city_district' => 'city_district',
         'point' => 'point'
     ];
 
@@ -91,6 +93,7 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'setAddress',
         'zip_code' => 'setZipCode',
         'city_name' => 'setCityName',
+        'city_district' => 'setCityDistrict',
         'point' => 'setPoint'
     ];
 
@@ -105,6 +108,7 @@ class PartnerGeoResource implements ArrayAccess
         'address' => 'getAddress',
         'zip_code' => 'getZipCode',
         'city_name' => 'getCityName',
+        'city_district' => 'getCityDistrict',
         'point' => 'getPoint'
     ];
 
@@ -144,6 +148,7 @@ class PartnerGeoResource implements ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
+        $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
     }
 
@@ -273,6 +278,27 @@ class PartnerGeoResource implements ArrayAccess
     public function setCityName($city_name)
     {
         $this->container['city_name'] = $city_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets city_district
+     * @return string
+     */
+    public function getCityDistrict()
+    {
+        return $this->container['city_district'];
+    }
+
+    /**
+     * Sets city_district
+     * @param string $city_district Name of the city district.
+     * @return $this
+     */
+    public function setCityDistrict($city_district)
+    {
+        $this->container['city_district'] = $city_district;
 
         return $this;
     }
