@@ -158,7 +158,7 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "match_validation", "follow_up", "done"];
+        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "match_validation", "follow_up", "done"];
         if (!in_array($this->container['step'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'match_validation', 'follow_up', 'done'.";
         }
