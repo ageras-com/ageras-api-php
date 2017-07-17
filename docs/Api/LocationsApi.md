@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **locationsGet**
-> \Ageras\Api\LocationResource locationsGet($location_id )
+> \Ageras\Api\Model\LocationResource locationsGet($location_id )
 
 Retrieve a location from a given location_id.
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LocationResource**](../Model/LocationResource.md)
+[**\Ageras\Api\Model\LocationResource**](../Model/LocationResource.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **locationsIndex**
-> \Ageras\Api\LocationResult locationsIndex($criteria)
+> \Ageras\Api\Model\LocationResult locationsIndex($criteria)
 
 Search and find locations by different criterias.
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LocationResult**](../Model/LocationResult.md)
+[**\Ageras\Api\Model\LocationResult**](../Model/LocationResult.md)
 
 ### Authorization
 

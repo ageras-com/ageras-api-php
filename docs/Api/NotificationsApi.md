@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **notificationsActionsCreate**
-> \Ageras\Api\NotificationResource notificationsActionsCreate($notification_action_resource)
+> \Ageras\Api\Model\NotificationResource notificationsActionsCreate($notification_action_resource)
 
 Perform an action on one or more notifications
 
@@ -29,7 +29,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\NotificationsApi();
-$notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
+$notification_action_resource = new \Ageras\Api\Model\NotificationActionResource(); // \Ageras\Api\Model\NotificationActionResource | 
 
 try {
     $result = $api_instance->notificationsActionsCreate($notification_action_resource);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_action_resource** | [**\Ageras\Api\NotificationActionResource**](../Model/\Ageras\Api\NotificationActionResource.md)|  |
+ **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/\Ageras\Api\Model\NotificationActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\NotificationResource**](../Model/NotificationResource.md)
+[**\Ageras\Api\Model\NotificationResource**](../Model/NotificationResource.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsActionsCreate2**
-> \Ageras\Api\NotificationResource notificationsActionsCreate2($notification_id , $notification_action_resource)
+> \Ageras\Api\Model\NotificationResource notificationsActionsCreate2($notification_id , $notification_action_resource)
 
 Perform an action on one or more notifications
 
@@ -81,7 +81,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\NotificationsApi();
 $notification_id = "notification_id_example"; // string | 
-$notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
+$notification_action_resource = new \Ageras\Api\Model\NotificationActionResource(); // \Ageras\Api\Model\NotificationActionResource | 
 
 try {
     $result = $api_instance->notificationsActionsCreate2($notification_id , $notification_action_resource);
@@ -97,11 +97,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **notification_id** | **string**|  |
- **notification_action_resource** | [**\Ageras\Api\NotificationActionResource**](../Model/\Ageras\Api\NotificationActionResource.md)|  |
+ **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/\Ageras\Api\Model\NotificationActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\NotificationResource**](../Model/NotificationResource.md)
+[**\Ageras\Api\Model\NotificationResource**](../Model/NotificationResource.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsGet**
-> \Ageras\Api\NotificationResource notificationsGet($notification_id )
+> \Ageras\Api\Model\NotificationResource notificationsGet($notification_id )
 
 Get single notification
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\NotificationResource**](../Model/NotificationResource.md)
+[**\Ageras\Api\Model\NotificationResource**](../Model/NotificationResource.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **notificationsIndex**
-> \Ageras\Api\NotificationResult notificationsIndex($criteria)
+> \Ageras\Api\Model\NotificationResult notificationsIndex($criteria)
 
 List notifications
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\NotificationResult**](../Model/NotificationResult.md)
+[**\Ageras\Api\Model\NotificationResult**](../Model/NotificationResult.md)
 
 ### Authorization
 

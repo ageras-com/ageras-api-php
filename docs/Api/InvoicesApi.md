@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **invoicesGet**
-> \Ageras\Api\InvoiceResource invoicesGet($invoice_id )
+> \Ageras\Api\Model\InvoiceResource invoicesGet($invoice_id )
 
 Get an Invoice from a given invoice_id.
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\InvoiceResource**](../Model/InvoiceResource.md)
+[**\Ageras\Api\Model\InvoiceResource**](../Model/InvoiceResource.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **invoicesIndex**
-> \Ageras\Api\InvoiceResult invoicesIndex($criteria)
+> \Ageras\Api\Model\InvoiceResult invoicesIndex($criteria)
 
 Search and find invoices by specific criterias.
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\InvoiceResult**](../Model/InvoiceResult.md)
+[**\Ageras\Api\Model\InvoiceResult**](../Model/InvoiceResult.md)
 
 ### Authorization
 

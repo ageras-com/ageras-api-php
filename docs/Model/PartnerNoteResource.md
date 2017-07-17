@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **partner_user_id** | **int** |  | [optional] 
 **creator_type** | **string** |  | [optional] [default to 'unknown']
 **note** | **string** |  | [optional] 
-**satisfaction** | [**\Ageras\Api\PartnerSatisfactionResource**](PartnerSatisfactionResource.md) |  | [optional] 
+**satisfaction** | [**\Ageras\Api\Model\PartnerSatisfactionResource**](PartnerSatisfactionResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

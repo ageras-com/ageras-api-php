@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **clientsGet**
-> \Ageras\Api\ClientResource clientsGet($client_id )
+> \Ageras\Api\Model\ClientResource clientsGet($client_id )
 
 Return a Client
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ClientResource**](../Model/ClientResource.md)
+[**\Ageras\Api\Model\ClientResource**](../Model/ClientResource.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **clientsUpdate**
-> \Ageras\Api\ClientResource clientsUpdate($client_id , $client_resource)
+> \Ageras\Api\Model\ClientResource clientsUpdate($client_id , $client_resource)
 
 Update a client
 
@@ -79,7 +79,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ClientsApi();
 $client_id = "client_id_example"; // string | 
-$client_resource = new \Ageras\Api\ClientResource(); // \Ageras\Api\ClientResource | 
+$client_resource = new \Ageras\Api\Model\ClientResource(); // \Ageras\Api\Model\ClientResource | 
 
 try {
     $result = $api_instance->clientsUpdate($client_id , $client_resource);
@@ -95,11 +95,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **string**|  |
- **client_resource** | [**\Ageras\Api\ClientResource**](../Model/\Ageras\Api\ClientResource.md)|  |
+ **client_resource** | [**\Ageras\Api\Model\ClientResource**](../Model/\Ageras\Api\Model\ClientResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ClientResource**](../Model/ClientResource.md)
+[**\Ageras\Api\Model\ClientResource**](../Model/ClientResource.md)
 
 ### Authorization
 

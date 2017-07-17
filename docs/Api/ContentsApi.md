@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **contentsPagesAggregationsIndex**
-> \Ageras\Api\AggregationResult contentsPagesAggregationsIndex($criteria)
+> \Ageras\Api\Model\AggregationResult contentsPagesAggregationsIndex($criteria)
 
 Aggreate the Pages by the letters
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
+[**\Ageras\Api\Model\AggregationResult**](../Model/AggregationResult.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **contentsPagesAggregationsIndex2**
-> \Ageras\Api\AggregationResult contentsPagesAggregationsIndex2($content_id , $criteria)
+> \Ageras\Api\Model\AggregationResult contentsPagesAggregationsIndex2($content_id , $criteria)
 
 Aggreate the Pages by the letters
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
+[**\Ageras\Api\Model\AggregationResult**](../Model/AggregationResult.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **contentsPagesGet**
-> \Ageras\Api\ContentPageResource contentsPagesGet($content_page_id )
+> \Ageras\Api\Model\ContentPageResource contentsPagesGet($content_page_id )
 
 Return a Page from a given id
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ContentPageResource**](../Model/ContentPageResource.md)
+[**\Ageras\Api\Model\ContentPageResource**](../Model/ContentPageResource.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **contentsPagesGet2**
-> \Ageras\Api\ContentPageResource contentsPagesGet2($content_id,  $content_page_id )
+> \Ageras\Api\Model\ContentPageResource contentsPagesGet2($content_id,  $content_page_id )
 
 Return a Page from a given id
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ContentPageResource**](../Model/ContentPageResource.md)
+[**\Ageras\Api\Model\ContentPageResource**](../Model/ContentPageResource.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **contentsPagesIndex**
-> \Ageras\Api\ContentPageResult contentsPagesIndex($criteria)
+> \Ageras\Api\Model\ContentPageResult contentsPagesIndex($criteria)
 
 List Pages
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ContentPageResult**](../Model/ContentPageResult.md)
+[**\Ageras\Api\Model\ContentPageResult**](../Model/ContentPageResult.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **contentsPagesTypesIndex**
-> \Ageras\Api\ContentPageTypeResult contentsPagesTypesIndex($criteria)
+> \Ageras\Api\Model\ContentPageTypeResult contentsPagesTypesIndex($criteria)
 
 List content page types.
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ContentPageTypeResult**](../Model/ContentPageTypeResult.md)
+[**\Ageras\Api\Model\ContentPageTypeResult**](../Model/ContentPageTypeResult.md)
 
 ### Authorization
 

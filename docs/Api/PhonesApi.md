@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **phonesActionsCreate**
-> \Ageras\Api\PhoneResource phonesActionsCreate($phone_id , $phone_action_resource)
+> \Ageras\Api\Model\PhoneResource phonesActionsCreate($phone_id , $phone_action_resource)
 
 Phone actions.
 
@@ -27,7 +27,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PhonesApi();
 $phone_id = "phone_id_example"; // string | 
-$phone_action_resource = new \Ageras\Api\PhoneActionResource(); // \Ageras\Api\PhoneActionResource | 
+$phone_action_resource = new \Ageras\Api\Model\PhoneActionResource(); // \Ageras\Api\Model\PhoneActionResource | 
 
 try {
     $result = $api_instance->phonesActionsCreate($phone_id , $phone_action_resource);
@@ -43,11 +43,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone_id** | **string**|  |
- **phone_action_resource** | [**\Ageras\Api\PhoneActionResource**](../Model/\Ageras\Api\PhoneActionResource.md)|  |
+ **phone_action_resource** | [**\Ageras\Api\Model\PhoneActionResource**](../Model/\Ageras\Api\Model\PhoneActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PhoneResource**](../Model/PhoneResource.md)
+[**\Ageras\Api\Model\PhoneResource**](../Model/PhoneResource.md)
 
 ### Authorization
 

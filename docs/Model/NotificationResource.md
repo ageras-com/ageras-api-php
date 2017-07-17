@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Id | [optional] 
 **type** | **string** | Notification type | [optional] 
-**trigger** | [**\Ageras\Api\NotificationTriggerResource**](NotificationTriggerResource.md) |  | [optional] 
-**recipient** | [**\Ageras\Api\NotificationRecipientResource**](NotificationRecipientResource.md) |  | [optional] 
-**subject** | [**\Ageras\Api\NotificationSubjectResource**](NotificationSubjectResource.md) |  | [optional] 
+**trigger** | [**\Ageras\Api\Model\NotificationTriggerResource**](NotificationTriggerResource.md) |  | [optional] 
+**recipient** | [**\Ageras\Api\Model\NotificationRecipientResource**](NotificationRecipientResource.md) |  | [optional] 
+**subject** | [**\Ageras\Api\Model\NotificationSubjectResource**](NotificationSubjectResource.md) |  | [optional] 
 **seen_at** | **string** | Seen at | [optional] 
 **read_at** | **string** | Read at | [optional] 
 **created_at** | **string** | Created at | [optional] 

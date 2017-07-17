@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **tasksCreate**
-> \Ageras\Api\TaskResource tasksCreate($task_resource)
+> \Ageras\Api\Model\TaskResource tasksCreate($task_resource)
 
 Create a new task.
 
@@ -40,7 +40,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\TasksApi();
-$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
+$task_resource = new \Ageras\Api\Model\TaskResource(); // \Ageras\Api\Model\TaskResource | 
 
 try {
     $result = $api_instance->tasksCreate($task_resource);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_resource** | [**\Ageras\Api\TaskResource**](../Model/\Ageras\Api\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/\Ageras\Api\Model\TaskResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\Model\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksGet**
-> \Ageras\Api\TaskResource tasksGet($task_id )
+> \Ageras\Api\Model\TaskResource tasksGet($task_id )
 
 Get a given task by its given task_id.
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\Model\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksIndex**
-> \Ageras\Api\TaskResult tasksIndex($criteria)
+> \Ageras\Api\Model\TaskResult tasksIndex($criteria)
 
 List tasks by employee, asseigned_employee, etc.
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskResult**](../Model/TaskResult.md)
+[**\Ageras\Api\Model\TaskResult**](../Model/TaskResult.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet**
-> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet($priority_id )
+> \Ageras\Api\Model\TaskPriorityResource tasksPrioritiesGet($priority_id )
 
 Get a priority from a given id.
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskPriorityResource**](../Model/TaskPriorityResource.md)
+[**\Ageras\Api\Model\TaskPriorityResource**](../Model/TaskPriorityResource.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesGet2**
-> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet2($task_id,  $priority_id )
+> \Ageras\Api\Model\TaskPriorityResource tasksPrioritiesGet2($task_id,  $priority_id )
 
 Get a priority from a given id.
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskPriorityResource**](../Model/TaskPriorityResource.md)
+[**\Ageras\Api\Model\TaskPriorityResource**](../Model/TaskPriorityResource.md)
 
 ### Authorization
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksPrioritiesIndex**
-> \Ageras\Api\TaskPriorityResult tasksPrioritiesIndex($criteria)
+> \Ageras\Api\Model\TaskPriorityResult tasksPrioritiesIndex($criteria)
 
 List priorities.
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskPriorityResult**](../Model/TaskPriorityResult.md)
+[**\Ageras\Api\Model\TaskPriorityResult**](../Model/TaskPriorityResult.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet**
-> \Ageras\Api\TaskStatusResource tasksStatusesGet($status_id )
+> \Ageras\Api\Model\TaskStatusResource tasksStatusesGet($status_id )
 
 Get a status from a status_id.
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskStatusResource**](../Model/TaskStatusResource.md)
+[**\Ageras\Api\Model\TaskStatusResource**](../Model/TaskStatusResource.md)
 
 ### Authorization
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesGet2**
-> \Ageras\Api\TaskStatusResource tasksStatusesGet2($task_id,  $status_id )
+> \Ageras\Api\Model\TaskStatusResource tasksStatusesGet2($task_id,  $status_id )
 
 Get a status from a status_id.
 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskStatusResource**](../Model/TaskStatusResource.md)
+[**\Ageras\Api\Model\TaskStatusResource**](../Model/TaskStatusResource.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksStatusesIndex**
-> \Ageras\Api\TaskStatusResult tasksStatusesIndex($criteria)
+> \Ageras\Api\Model\TaskStatusResult tasksStatusesIndex($criteria)
 
 List statuses.
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskStatusResult**](../Model/TaskStatusResult.md)
+[**\Ageras\Api\Model\TaskStatusResult**](../Model/TaskStatusResult.md)
 
 ### Authorization
 
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesCreate**
-> \Ageras\Api\TaskableResource tasksTaskablesCreate($task_id , $taskable_resource)
+> \Ageras\Api\Model\TaskableResource tasksTaskablesCreate($task_id , $taskable_resource)
 
 create a new taskable for a given task.
 
@@ -600,7 +600,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
-$taskable_resource = new \Ageras\Api\TaskableResource(); // \Ageras\Api\TaskableResource | 
+$taskable_resource = new \Ageras\Api\Model\TaskableResource(); // \Ageras\Api\Model\TaskableResource | 
 
 try {
     $result = $api_instance->tasksTaskablesCreate($task_id , $taskable_resource);
@@ -616,11 +616,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **taskable_resource** | [**\Ageras\Api\TaskableResource**](../Model/\Ageras\Api\TaskableResource.md)|  |
+ **taskable_resource** | [**\Ageras\Api\Model\TaskableResource**](../Model/\Ageras\Api\Model\TaskableResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\TaskableResource**](../Model/TaskableResource.md)
+[**\Ageras\Api\Model\TaskableResource**](../Model/TaskableResource.md)
 
 ### Authorization
 
@@ -686,7 +686,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesGet**
-> \Ageras\Api\TaskableResource tasksTaskablesGet($task_id,  $taskable_id )
+> \Ageras\Api\Model\TaskableResource tasksTaskablesGet($task_id,  $taskable_id )
 
 Get a taskable item from a given taskable id.
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskableResource**](../Model/TaskableResource.md)
+[**\Ageras\Api\Model\TaskableResource**](../Model/TaskableResource.md)
 
 ### Authorization
 
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksTaskablesIndex**
-> \Ageras\Api\TaskableResult tasksTaskablesIndex($task_id , $criteria)
+> \Ageras\Api\Model\TaskableResult tasksTaskablesIndex($task_id , $criteria)
 
 List the taskables for a given task.
 
@@ -786,7 +786,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TaskableResult**](../Model/TaskableResult.md)
+[**\Ageras\Api\Model\TaskableResult**](../Model/TaskableResult.md)
 
 ### Authorization
 
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **tasksUpdate**
-> \Ageras\Api\TaskResource tasksUpdate($task_id , $task_resource)
+> \Ageras\Api\Model\TaskResource tasksUpdate($task_id , $task_resource)
 
 Update a given task by its task_id.
 
@@ -819,7 +819,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\TasksApi();
 $task_id = "task_id_example"; // string | 
-$task_resource = new \Ageras\Api\TaskResource(); // \Ageras\Api\TaskResource | 
+$task_resource = new \Ageras\Api\Model\TaskResource(); // \Ageras\Api\Model\TaskResource | 
 
 try {
     $result = $api_instance->tasksUpdate($task_id , $task_resource);
@@ -835,11 +835,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **task_resource** | [**\Ageras\Api\TaskResource**](../Model/\Ageras\Api\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/\Ageras\Api\Model\TaskResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\TaskResource**](../Model/TaskResource.md)
+[**\Ageras\Api\Model\TaskResource**](../Model/TaskResource.md)
 
 ### Authorization
 

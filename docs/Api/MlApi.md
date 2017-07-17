@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **mlMatchingIndex**
-> \Ageras\Api\MatchResult mlMatchingIndex($criteria)
+> \Ageras\Api\Model\MatchResult mlMatchingIndex($criteria)
 
 Match making
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\MatchResult**](../Model/MatchResult.md)
+[**\Ageras\Api\Model\MatchResult**](../Model/MatchResult.md)
 
 ### Authorization
 

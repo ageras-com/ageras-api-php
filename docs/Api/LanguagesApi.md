@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **languagesIndex**
-> \Ageras\Api\LanguageResult languagesIndex($criteria)
+> \Ageras\Api\Model\LanguageResult languagesIndex($criteria)
 
 List Languages available.
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LanguageResult**](../Model/LanguageResult.md)
+[**\Ageras\Api\Model\LanguageResult**](../Model/LanguageResult.md)
 
 ### Authorization
 

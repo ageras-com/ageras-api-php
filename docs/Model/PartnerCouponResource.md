@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **message** | **string** |  | [optional] 
 **punches_total** | **int** |  | [optional] 
 **punches_left** | **int** |  | [optional] 
-**price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**price** | [**\Ageras\Api\Model\AmountResource**](AmountResource.md) |  | [optional] 
 **due_at** | **string** |  | [optional] 
 **is_silent** | **bool** |  | [optional] [default to false]
 **partner_offer_id** | **int** |  | [optional] 

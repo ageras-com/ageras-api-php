@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **refundsCreate**
-> \Ageras\Api\RefundResource refundsCreate()
+> \Ageras\Api\Model\RefundResource refundsCreate()
 
 Post refund request.
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Ageras\Api\RefundResource**](../Model/RefundResource.md)
+[**\Ageras\Api\Model\RefundResource**](../Model/RefundResource.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refundsCreate2**
-> \Ageras\Api\RefundResource refundsCreate2($refund_id )
+> \Ageras\Api\Model\RefundResource refundsCreate2($refund_id )
 
 Post refund request.
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\RefundResource**](../Model/RefundResource.md)
+[**\Ageras\Api\Model\RefundResource**](../Model/RefundResource.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refundsGet**
-> \Ageras\Api\RefundResource refundsGet($refund_id )
+> \Ageras\Api\Model\RefundResource refundsGet($refund_id )
 
 Get a single refund request.
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\RefundResource**](../Model/RefundResource.md)
+[**\Ageras\Api\Model\RefundResource**](../Model/RefundResource.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refundsIndex**
-> \Ageras\Api\RefundResult refundsIndex($criteria)
+> \Ageras\Api\Model\RefundResult refundsIndex($criteria)
 
 List refund requests.
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\RefundResult**](../Model/RefundResult.md)
+[**\Ageras\Api\Model\RefundResult**](../Model/RefundResult.md)
 
 ### Authorization
 

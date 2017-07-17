@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **paymentsCardsGet**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id )
+> \Ageras\Api\Model\PaymentCardResource paymentsCardsGet($payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsGet2**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id,  $payment_card_id )
+> \Ageras\Api\Model\PaymentCardResource paymentsCardsGet2($payment_id,  $payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsCardsIndex**
-> \Ageras\Api\PaymentCardResult paymentsCardsIndex($criteria)
+> \Ageras\Api\Model\PaymentCardResult paymentsCardsIndex($criteria)
 
 List payment cards.
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PaymentCardResult**](../Model/PaymentCardResult.md)
+[**\Ageras\Api\Model\PaymentCardResult**](../Model/PaymentCardResult.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsEpayCardsCreate**
-> \Ageras\Api\PaymentCardResource paymentsEpayCardsCreate($payment_card_resource)
+> \Ageras\Api\Model\PaymentCardResource paymentsEpayCardsCreate($payment_card_resource)
 
 Create an epay payment card.
 
@@ -193,7 +193,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_card_resource = new \Ageras\Api\PaymentCardResource(); // \Ageras\Api\PaymentCardResource | 
+$payment_card_resource = new \Ageras\Api\Model\PaymentCardResource(); // \Ageras\Api\Model\PaymentCardResource | 
 
 try {
     $result = $api_instance->paymentsEpayCardsCreate($payment_card_resource);
@@ -208,11 +208,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_card_resource** | [**\Ageras\Api\PaymentCardResource**](../Model/\Ageras\Api\PaymentCardResource.md)|  |
+ **payment_card_resource** | [**\Ageras\Api\Model\PaymentCardResource**](../Model/\Ageras\Api\Model\PaymentCardResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
+[**\Ageras\Api\Model\PaymentCardResource**](../Model/PaymentCardResource.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **paymentsEpayWindowCreate**
-> \Ageras\Api\PaymentWindowResource paymentsEpayWindowCreate($payment_window_resource)
+> \Ageras\Api\Model\PaymentWindowResource paymentsEpayWindowCreate($payment_window_resource)
 
 Create epay window.
 
@@ -244,7 +244,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
-$payment_window_resource = new \Ageras\Api\PaymentWindowResource(); // \Ageras\Api\PaymentWindowResource | 
+$payment_window_resource = new \Ageras\Api\Model\PaymentWindowResource(); // \Ageras\Api\Model\PaymentWindowResource | 
 
 try {
     $result = $api_instance->paymentsEpayWindowCreate($payment_window_resource);
@@ -259,11 +259,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_window_resource** | [**\Ageras\Api\PaymentWindowResource**](../Model/\Ageras\Api\PaymentWindowResource.md)|  |
+ **payment_window_resource** | [**\Ageras\Api\Model\PaymentWindowResource**](../Model/\Ageras\Api\Model\PaymentWindowResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PaymentWindowResource**](../Model/PaymentWindowResource.md)
+[**\Ageras\Api\Model\PaymentWindowResource**](../Model/PaymentWindowResource.md)
 
 ### Authorization
 

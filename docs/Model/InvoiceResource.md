@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **city_name** | **string** | Billing city. | [optional] 
 **code** | **string** | Billing code. | [optional] 
 **zip_code** | **string** | Billing post code. | [optional] 
-**invoice_lines** | [**\Ageras\Api\InvoiceLineResource[]**](InvoiceLineResource.md) | Invoice lines. | [optional] 
+**invoice_lines** | [**\Ageras\Api\Model\InvoiceLineResource[]**](InvoiceLineResource.md) | Invoice lines. | [optional] 
 **dunning_1** | **string** | Invoice entered in dunning one at. | [optional] 
 **dunning_2** | **string** | Invoice entered in dunning two at. | [optional] 
 **dunning_3** | **string** | Invoice entered in dunning three at. | [optional] 

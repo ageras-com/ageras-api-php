@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 
 # **projectsCreate**
-> \Ageras\Api\ProjectResource projectsCreate($project_resource)
+> \Ageras\Api\Model\ProjectResource projectsCreate($project_resource)
 
 Create Project.
 
@@ -50,7 +50,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_resource = new \Ageras\Api\ProjectResource(); // \Ageras\Api\ProjectResource | 
+$project_resource = new \Ageras\Api\Model\ProjectResource(); // \Ageras\Api\Model\ProjectResource | 
 
 try {
     $result = $api_instance->projectsCreate($project_resource);
@@ -65,11 +65,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_resource** | [**\Ageras\Api\ProjectResource**](../Model/\Ageras\Api\ProjectResource.md)|  |
+ **project_resource** | [**\Ageras\Api\Model\ProjectResource**](../Model/\Ageras\Api\Model\ProjectResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\Model\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsCreate**
-> \Ageras\Api\ProjectNoteResource projectsEventsCreate($project_event_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsCreate($project_event_resource)
 
 Create events for a given project.
 
@@ -151,7 +151,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\Model\ProjectEventResource(); // \Ageras\Api\Model\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsCreate($project_event_resource);
@@ -166,11 +166,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\Model\ProjectEventResource**](../Model/\Ageras\Api\Model\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsCreate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsCreate2($project_id , $project_event_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsCreate2($project_id , $project_event_resource)
 
 Create events for a given project.
 
@@ -203,7 +203,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\Model\ProjectEventResource(); // \Ageras\Api\Model\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsCreate2($project_id , $project_event_resource);
@@ -219,11 +219,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\Model\ProjectEventResource**](../Model/\Ageras\Api\Model\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet**
-> \Ageras\Api\ProjectNoteResource projectsEventsGet($project_event_id )
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsGet($project_event_id )
 
 Get event for a given project.
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsGet2**
-> \Ageras\Api\ProjectNoteResource projectsEventsGet2($project_id,  $project_event_id )
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsGet2($project_id,  $project_event_id )
 
 Get event for a given project.
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex**
-> \Ageras\Api\ProjectNoteResult projectsEventsIndex($criteria)
+> \Ageras\Api\Model\ProjectNoteResult projectsEventsIndex($criteria)
 
 List events for a given project.
 
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsIndex2**
-> \Ageras\Api\ProjectNoteResult projectsEventsIndex2($project_id , $criteria)
+> \Ageras\Api\Model\ProjectNoteResult projectsEventsIndex2($project_id , $criteria)
 
 List events for a given project.
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate**
-> \Ageras\Api\ProjectNoteResource projectsEventsUpdate($project_event_id , $project_event_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsUpdate($project_event_id , $project_event_resource)
 
 Update e events for project events.
 
@@ -554,7 +554,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_event_id = "project_event_id_example"; // string | 
-$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\Model\ProjectEventResource(); // \Ageras\Api\Model\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsUpdate($project_event_id , $project_event_resource);
@@ -570,11 +570,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_event_id** | **string**|  |
- **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\Model\ProjectEventResource**](../Model/\Ageras\Api\Model\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsEventsUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource)
 
 Update e events for project events.
 
@@ -608,7 +608,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_event_id = "project_event_id_example"; // string | 
-$project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
+$project_event_resource = new \Ageras\Api\Model\ProjectEventResource(); // \Ageras\Api\Model\ProjectEventResource | 
 
 try {
     $result = $api_instance->projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource);
@@ -625,11 +625,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
  **project_event_id** | **string**|  |
- **project_event_resource** | [**\Ageras\Api\ProjectEventResource**](../Model/\Ageras\Api\ProjectEventResource.md)|  |
+ **project_event_resource** | [**\Ageras\Api\Model\ProjectEventResource**](../Model/\Ageras\Api\Model\ProjectEventResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsGet**
-> \Ageras\Api\ProjectResource projectsGet($project_id )
+> \Ageras\Api\Model\ProjectResource projectsGet($project_id )
 
 Get a Project from a project id.
 
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\Model\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsIndex**
-> \Ageras\Api\ProjectResult projectsIndex($criteria)
+> \Ageras\Api\Model\ProjectResult projectsIndex($criteria)
 
 List Projects.
 
@@ -753,7 +753,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectResult**](../Model/ProjectResult.md)
+[**\Ageras\Api\Model\ProjectResult**](../Model/ProjectResult.md)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesCreate**
-> \Ageras\Api\ProjectNoteResource projectsNotesCreate($project_note_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesCreate($project_note_resource)
 
 Create a note for a given project.
 
@@ -785,7 +785,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
-$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\Model\ProjectNoteResource(); // \Ageras\Api\Model\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesCreate($project_note_resource);
@@ -800,11 +800,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\Model\ProjectNoteResource**](../Model/\Ageras\Api\Model\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesCreate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesCreate2($project_id , $project_note_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesCreate2($project_id , $project_note_resource)
 
 Create a note for a given project.
 
@@ -837,7 +837,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\Model\ProjectNoteResource(); // \Ageras\Api\Model\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesCreate2($project_id , $project_note_resource);
@@ -853,11 +853,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\Model\ProjectNoteResource**](../Model/\Ageras\Api\Model\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -923,7 +923,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet**
-> \Ageras\Api\ProjectNoteResource projectsNotesGet($project_note_id )
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesGet($project_note_id )
 
 Get a note from Project and note id.
 
@@ -960,7 +960,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -974,7 +974,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesGet2**
-> \Ageras\Api\ProjectNoteResource projectsNotesGet2($project_id,  $project_note_id )
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesGet2($project_id,  $project_note_id )
 
 Get a note from Project and note id.
 
@@ -1013,7 +1013,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1027,7 +1027,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex($criteria)
+> \Ageras\Api\Model\ProjectNoteResult projectsNotesIndex($criteria)
 
 List notes from a given project.
 
@@ -1088,7 +1088,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -1102,7 +1102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesIndex2**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id , $criteria)
+> \Ageras\Api\Model\ProjectNoteResult projectsNotesIndex2($project_id , $criteria)
 
 List notes from a given project.
 
@@ -1163,7 +1163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResult**](../Model/ProjectNoteResult.md)
+[**\Ageras\Api\Model\ProjectNoteResult**](../Model/ProjectNoteResult.md)
 
 ### Authorization
 
@@ -1177,7 +1177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate**
-> \Ageras\Api\ProjectNoteResource projectsNotesUpdate($project_note_id , $project_note_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesUpdate($project_note_id , $project_note_resource)
 
 Update a given project note.
 
@@ -1196,7 +1196,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_note_id = "project_note_id_example"; // string | 
-$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\Model\ProjectNoteResource(); // \Ageras\Api\Model\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesUpdate($project_note_id , $project_note_resource);
@@ -1212,11 +1212,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_note_id** | **string**|  |
- **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\Model\ProjectNoteResource**](../Model/\Ageras\Api\Model\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1230,7 +1230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsNotesUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource)
+> \Ageras\Api\Model\ProjectNoteResource projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource)
 
 Update a given project note.
 
@@ -1250,7 +1250,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
 $project_note_id = "project_note_id_example"; // string | 
-$project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
+$project_note_resource = new \Ageras\Api\Model\ProjectNoteResource(); // \Ageras\Api\Model\ProjectNoteResource | 
 
 try {
     $result = $api_instance->projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource);
@@ -1267,11 +1267,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
  **project_note_id** | **string**|  |
- **project_note_resource** | [**\Ageras\Api\ProjectNoteResource**](../Model/\Ageras\Api\ProjectNoteResource.md)|  |
+ **project_note_resource** | [**\Ageras\Api\Model\ProjectNoteResource**](../Model/\Ageras\Api\Model\ProjectNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectNoteResource**](../Model/ProjectNoteResource.md)
+[**\Ageras\Api\Model\ProjectNoteResource**](../Model/ProjectNoteResource.md)
 
 ### Authorization
 
@@ -1285,7 +1285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesGet**
-> \Ageras\Api\ProjectStatusResource projectsStatusesGet($status )
+> \Ageras\Api\Model\ProjectStatusResource projectsStatusesGet($status )
 
 Get a Project Status from Id.
 
@@ -1322,7 +1322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectStatusResource**](../Model/ProjectStatusResource.md)
+[**\Ageras\Api\Model\ProjectStatusResource**](../Model/ProjectStatusResource.md)
 
 ### Authorization
 
@@ -1336,7 +1336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsStatusesIndex**
-> \Ageras\Api\ProjectStatusResult projectsStatusesIndex($criteria)
+> \Ageras\Api\Model\ProjectStatusResult projectsStatusesIndex($criteria)
 
 List Available Project Statuses.
 
@@ -1381,7 +1381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ProjectStatusResult**](../Model/ProjectStatusResult.md)
+[**\Ageras\Api\Model\ProjectStatusResult**](../Model/ProjectStatusResult.md)
 
 ### Authorization
 
@@ -1395,7 +1395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **projectsUpdate**
-> \Ageras\Api\ProjectResource projectsUpdate($project_id , $project_resource)
+> \Ageras\Api\Model\ProjectResource projectsUpdate($project_id , $project_resource)
 
 Update a project.
 
@@ -1414,7 +1414,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ProjectsApi();
 $project_id = "project_id_example"; // string | 
-$project_resource = new \Ageras\Api\ProjectResource(); // \Ageras\Api\ProjectResource | 
+$project_resource = new \Ageras\Api\Model\ProjectResource(); // \Ageras\Api\Model\ProjectResource | 
 
 try {
     $result = $api_instance->projectsUpdate($project_id , $project_resource);
@@ -1430,11 +1430,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **string**|  |
- **project_resource** | [**\Ageras\Api\ProjectResource**](../Model/\Ageras\Api\ProjectResource.md)|  |
+ **project_resource** | [**\Ageras\Api\Model\ProjectResource**](../Model/\Ageras\Api\Model\ProjectResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ProjectResource**](../Model/ProjectResource.md)
+[**\Ageras\Api\Model\ProjectResource**](../Model/ProjectResource.md)
 
 ### Authorization
 

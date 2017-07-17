@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **ratingsGet**
-> \Ageras\Api\RatingResource ratingsGet($rating_id )
+> \Ageras\Api\Model\RatingResource ratingsGet($rating_id )
 
 Return a rating from a rating ID.
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\RatingResource**](../Model/RatingResource.md)
+[**\Ageras\Api\Model\RatingResource**](../Model/RatingResource.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsIndex**
-> \Ageras\Api\RatingResult ratingsIndex($criteria)
+> \Ageras\Api\Model\RatingResult ratingsIndex($criteria)
 
 Search for Lead's by a given set of criteria.
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\RatingResult**](../Model/RatingResult.md)
+[**\Ageras\Api\Model\RatingResult**](../Model/RatingResult.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsUpdate**
-> \Ageras\Api\RatingResource ratingsUpdate($rating_id , $rating_resource)
+> \Ageras\Api\Model\RatingResource ratingsUpdate($rating_id , $rating_resource)
 
 Update a rating.
 
@@ -155,7 +155,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\RatingsApi();
 $rating_id = "rating_id_example"; // string | 
-$rating_resource = new \Ageras\Api\RatingResource(); // \Ageras\Api\RatingResource | 
+$rating_resource = new \Ageras\Api\Model\RatingResource(); // \Ageras\Api\Model\RatingResource | 
 
 try {
     $result = $api_instance->ratingsUpdate($rating_id , $rating_resource);
@@ -171,11 +171,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rating_id** | **string**|  |
- **rating_resource** | [**\Ageras\Api\RatingResource**](../Model/\Ageras\Api\RatingResource.md)|  |
+ **rating_resource** | [**\Ageras\Api\Model\RatingResource**](../Model/\Ageras\Api\Model\RatingResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\RatingResource**](../Model/RatingResource.md)
+[**\Ageras\Api\Model\RatingResource**](../Model/RatingResource.md)
 
 ### Authorization
 

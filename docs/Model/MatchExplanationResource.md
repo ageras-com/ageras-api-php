@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **weight** | **float** |  | [optional] 
 **score** | **float** |  | [optional] 
 **attributes** | **string** |  | [optional] 
-**details** | [**\Ageras\Api\MatchExplanationResource[]**](MatchExplanationResource.md) |  | [optional] 
+**details** | [**\Ageras\Api\Model\MatchExplanationResource[]**](MatchExplanationResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

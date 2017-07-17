@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **email** | **string** | Email for the employee. | [optional] 
 **phone_work** | **string** | Work Phone Number for the employee. | [optional] 
 **phone_private** | **string** | Private Phone Number for employee. | [optional] 
-**signature** | [**\Ageras\Api\EmployeeSignatureResource**](EmployeeSignatureResource.md) |  | [optional] 
-**roles** | [**\Ageras\Api\EmployeeRoleResource[]**](EmployeeRoleResource.md) | The list of roles that the employee is member of. | [optional] 
+**signature** | [**\Ageras\Api\Model\EmployeeSignatureResource**](EmployeeSignatureResource.md) |  | [optional] 
+**roles** | [**\Ageras\Api\Model\EmployeeRoleResource[]**](EmployeeRoleResource.md) | The list of roles that the employee is member of. | [optional] 
 **initials** | **string** | Employee Initials. | [optional] 
 **is_active** | **bool** | Is the Employee active ? | [optional] [default to false]
 

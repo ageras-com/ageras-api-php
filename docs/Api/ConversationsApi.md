@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **conversationsCreate**
-> \Ageras\Api\ConversationResource conversationsCreate($conversation_resource)
+> \Ageras\Api\Model\ConversationResource conversationsCreate($conversation_resource)
 
 Create a new conversation.
 
@@ -30,7 +30,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$conversation_resource = new \Ageras\Api\ConversationResource(); // \Ageras\Api\ConversationResource | 
+$conversation_resource = new \Ageras\Api\Model\ConversationResource(); // \Ageras\Api\Model\ConversationResource | 
 
 try {
     $result = $api_instance->conversationsCreate($conversation_resource);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_resource** | [**\Ageras\Api\ConversationResource**](../Model/\Ageras\Api\ConversationResource.md)|  |
+ **conversation_resource** | [**\Ageras\Api\Model\ConversationResource**](../Model/\Ageras\Api\Model\ConversationResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\ConversationResource**](../Model/ConversationResource.md)
+[**\Ageras\Api\Model\ConversationResource**](../Model/ConversationResource.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsGet**
-> \Ageras\Api\ConversationResource conversationsGet($conversation_id )
+> \Ageras\Api\Model\ConversationResource conversationsGet($conversation_id )
 
 Get a conversations by conversation_id.
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\ConversationResource**](../Model/ConversationResource.md)
+[**\Ageras\Api\Model\ConversationResource**](../Model/ConversationResource.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsIndex**
-> \Ageras\Api\ConversationResult conversationsIndex($criteria)
+> \Ageras\Api\Model\ConversationResult conversationsIndex($criteria)
 
 List conversations.
 
@@ -134,8 +134,12 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $criteria = [
         'conversation_id' => "conversation_id_example"; // string | Conversation id.
-        'project_id' => 56; // int | Project id
-        'partner_id' => 56; // int | Partner id
+        'project_id' => "project_id_example"; // string | Project id
+        'partner_id' => "partner_id_example"; // string | Partner id
+        'partner_user_id' => "partner_user_id_example"; // string | Partner user id
+        'client_id' => "client_id_example"; // string | Client id
+        'employee_id' => "employee_id_example"; // string | Employee id
+        'lead_id' => "lead_id_example"; // string | Lead id
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -155,15 +159,19 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**| Conversation id. | [optional]
- **project_id** | **int**| Project id | [optional]
- **partner_id** | **int**| Partner id | [optional]
+ **project_id** | **string**| Project id | [optional]
+ **partner_id** | **string**| Partner id | [optional]
+ **partner_user_id** | **string**| Partner user id | [optional]
+ **client_id** | **string**| Client id | [optional]
+ **employee_id** | **string**| Employee id | [optional]
+ **lead_id** | **string**| Lead id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 
 ### Return type
 
-[**\Ageras\Api\ConversationResult**](../Model/ConversationResult.md)
+[**\Ageras\Api\Model\ConversationResult**](../Model/ConversationResult.md)
 
 ### Authorization
 
@@ -177,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsMessagesCreate**
-> \Ageras\Api\MessageResource conversationsMessagesCreate($message_resource)
+> \Ageras\Api\Model\MessageResource conversationsMessagesCreate($message_resource)
 
 Create a new message
 
@@ -195,7 +203,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
-$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
+$message_resource = new \Ageras\Api\Model\MessageResource(); // \Ageras\Api\Model\MessageResource | 
 
 try {
     $result = $api_instance->conversationsMessagesCreate($message_resource);
@@ -210,11 +218,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_resource** | [**\Ageras\Api\MessageResource**](../Model/\Ageras\Api\MessageResource.md)|  |
+ **message_resource** | [**\Ageras\Api\Model\MessageResource**](../Model/\Ageras\Api\Model\MessageResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\MessageResource**](../Model/MessageResource.md)
+[**\Ageras\Api\Model\MessageResource**](../Model/MessageResource.md)
 
 ### Authorization
 
@@ -228,7 +236,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsMessagesCreate2**
-> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id , $message_resource)
+> \Ageras\Api\Model\MessageResource conversationsMessagesCreate2($conversation_id , $message_resource)
 
 Create a new message
 
@@ -247,7 +255,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | 
-$message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
+$message_resource = new \Ageras\Api\Model\MessageResource(); // \Ageras\Api\Model\MessageResource | 
 
 try {
     $result = $api_instance->conversationsMessagesCreate2($conversation_id , $message_resource);
@@ -263,11 +271,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**|  |
- **message_resource** | [**\Ageras\Api\MessageResource**](../Model/\Ageras\Api\MessageResource.md)|  |
+ **message_resource** | [**\Ageras\Api\Model\MessageResource**](../Model/\Ageras\Api\Model\MessageResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\MessageResource**](../Model/MessageResource.md)
+[**\Ageras\Api\Model\MessageResource**](../Model/MessageResource.md)
 
 ### Authorization
 

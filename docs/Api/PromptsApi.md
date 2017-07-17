@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **promptsActionsCreate**
-> \Ageras\Api\PromptResource promptsActionsCreate($prompt_id , $prompt_action_resource)
+> \Ageras\Api\Model\PromptResource promptsActionsCreate($prompt_id , $prompt_action_resource)
 
 Action on prompt
 
@@ -28,7 +28,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PromptsApi();
 $prompt_id = "prompt_id_example"; // string | 
-$prompt_action_resource = new \Ageras\Api\PromptActionResource(); // \Ageras\Api\PromptActionResource | 
+$prompt_action_resource = new \Ageras\Api\Model\PromptActionResource(); // \Ageras\Api\Model\PromptActionResource | 
 
 try {
     $result = $api_instance->promptsActionsCreate($prompt_id , $prompt_action_resource);
@@ -44,11 +44,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **string**|  |
- **prompt_action_resource** | [**\Ageras\Api\PromptActionResource**](../Model/\Ageras\Api\PromptActionResource.md)|  |
+ **prompt_action_resource** | [**\Ageras\Api\Model\PromptActionResource**](../Model/\Ageras\Api\Model\PromptActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PromptResource**](../Model/PromptResource.md)
+[**\Ageras\Api\Model\PromptResource**](../Model/PromptResource.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **promptsIndex**
-> \Ageras\Api\PromptResult promptsIndex($criteria)
+> \Ageras\Api\Model\PromptResult promptsIndex($criteria)
 
 List of prompts
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PromptResult**](../Model/PromptResult.md)
+[**\Ageras\Api\Model\PromptResult**](../Model/PromptResult.md)
 
 ### Authorization
 

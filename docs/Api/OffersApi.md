@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **offersActionsCreate**
-> \Ageras\Api\PartnerOfferResource offersActionsCreate($offer_id , $offer_action_resource)
+> \Ageras\Api\Model\PartnerOfferResource offersActionsCreate($offer_id , $offer_action_resource)
 
 Perform an action on an offer.
 
@@ -29,7 +29,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\OffersApi();
 $offer_id = "offer_id_example"; // string | 
-$offer_action_resource = new \Ageras\Api\OfferActionResource(); // \Ageras\Api\OfferActionResource | 
+$offer_action_resource = new \Ageras\Api\Model\OfferActionResource(); // \Ageras\Api\Model\OfferActionResource | 
 
 try {
     $result = $api_instance->offersActionsCreate($offer_id , $offer_action_resource);
@@ -45,11 +45,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offer_id** | **string**|  |
- **offer_action_resource** | [**\Ageras\Api\OfferActionResource**](../Model/\Ageras\Api\OfferActionResource.md)|  |
+ **offer_action_resource** | [**\Ageras\Api\Model\OfferActionResource**](../Model/\Ageras\Api\Model\OfferActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerOfferResource**](../Model/PartnerOfferResource.md)
+[**\Ageras\Api\Model\PartnerOfferResource**](../Model/PartnerOfferResource.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersGet**
-> \Ageras\Api\PartnerOfferResource offersGet($offer_id )
+> \Ageras\Api\Model\PartnerOfferResource offersGet($offer_id )
 
 Get an offer by id.
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerOfferResource**](../Model/PartnerOfferResource.md)
+[**\Ageras\Api\Model\PartnerOfferResource**](../Model/PartnerOfferResource.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **offersIndex**
-> \Ageras\Api\PartnerOfferResult offersIndex($criteria)
+> \Ageras\Api\Model\PartnerOfferResult offersIndex($criteria)
 
 Get all partner offer.
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerOfferResult**](../Model/PartnerOfferResult.md)
+[**\Ageras\Api\Model\PartnerOfferResult**](../Model/PartnerOfferResult.md)
 
 ### Authorization
 

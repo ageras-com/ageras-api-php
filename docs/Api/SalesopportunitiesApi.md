@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **salesOpportunitiesAggregationsIndex**
-> \Ageras\Api\SalesOpportunityResult salesOpportunitiesAggregationsIndex($criteria)
+> \Ageras\Api\Model\SalesOpportunityResult salesOpportunitiesAggregationsIndex($criteria)
 
 Index aggregations.
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
+[**\Ageras\Api\Model\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesCreate**
-> \Ageras\Api\SalesOpportunityResource salesOpportunitiesCreate($sales_opportunity_resource)
+> \Ageras\Api\Model\SalesOpportunityResource salesOpportunitiesCreate($sales_opportunity_resource)
 
 Create sale opportunity.
 
@@ -93,7 +93,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
-$sales_opportunity_resource = new \Ageras\Api\SalesOpportunityResource(); // \Ageras\Api\SalesOpportunityResource | 
+$sales_opportunity_resource = new \Ageras\Api\Model\SalesOpportunityResource(); // \Ageras\Api\Model\SalesOpportunityResource | 
 
 try {
     $result = $api_instance->salesOpportunitiesCreate($sales_opportunity_resource);
@@ -108,11 +108,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sales_opportunity_resource** | [**\Ageras\Api\SalesOpportunityResource**](../Model/\Ageras\Api\SalesOpportunityResource.md)|  |
+ **sales_opportunity_resource** | [**\Ageras\Api\Model\SalesOpportunityResource**](../Model/\Ageras\Api\Model\SalesOpportunityResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
+[**\Ageras\Api\Model\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesIndex**
-> \Ageras\Api\SalesOpportunityResult salesOpportunitiesIndex($criteria)
+> \Ageras\Api\Model\SalesOpportunityResult salesOpportunitiesIndex($criteria)
 
 Get list sales pipelines opportunities.
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
+[**\Ageras\Api\Model\SalesOpportunityResult**](../Model/SalesOpportunityResult.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **salesOpportunitiesUpdate**
-> \Ageras\Api\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id , $sales_opportunity_resource)
+> \Ageras\Api\Model\SalesOpportunityResource salesOpportunitiesUpdate($sales_opportunity_id , $sales_opportunity_resource)
 
 Create Sales opportunity resource.
 
@@ -258,7 +258,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\SalesopportunitiesApi();
 $sales_opportunity_id = "sales_opportunity_id_example"; // string | 
-$sales_opportunity_resource = new \Ageras\Api\SalesOpportunityResource(); // \Ageras\Api\SalesOpportunityResource | 
+$sales_opportunity_resource = new \Ageras\Api\Model\SalesOpportunityResource(); // \Ageras\Api\Model\SalesOpportunityResource | 
 
 try {
     $result = $api_instance->salesOpportunitiesUpdate($sales_opportunity_id , $sales_opportunity_resource);
@@ -274,11 +274,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sales_opportunity_id** | **string**|  |
- **sales_opportunity_resource** | [**\Ageras\Api\SalesOpportunityResource**](../Model/\Ageras\Api\SalesOpportunityResource.md)|  |
+ **sales_opportunity_resource** | [**\Ageras\Api\Model\SalesOpportunityResource**](../Model/\Ageras\Api\Model\SalesOpportunityResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
+[**\Ageras\Api\Model\SalesOpportunityResource**](../Model/SalesOpportunityResource.md)
 
 ### Authorization
 

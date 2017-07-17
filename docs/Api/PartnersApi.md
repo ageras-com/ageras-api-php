@@ -62,7 +62,7 @@ Method | HTTP request | Description
 
 
 # **partnersActionsCreate**
-> \Ageras\Api\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
+> \Ageras\Api\Model\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
 
 Partner actions.
 
@@ -81,7 +81,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_action_resource = new \Ageras\Api\PartnerActionResource(); // \Ageras\Api\PartnerActionResource | 
+$partner_action_resource = new \Ageras\Api\Model\PartnerActionResource(); // \Ageras\Api\Model\PartnerActionResource | 
 
 try {
     $result = $api_instance->partnersActionsCreate($partner_id , $partner_action_resource);
@@ -97,11 +97,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_action_resource** | [**\Ageras\Api\PartnerActionResource**](../Model/\Ageras\Api\PartnerActionResource.md)|  |
+ **partner_action_resource** | [**\Ageras\Api\Model\PartnerActionResource**](../Model/\Ageras\Api\Model\PartnerActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\Model\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersAggregationsIndex**
-> \Ageras\Api\AggregationResult partnersAggregationsIndex($criteria)
+> \Ageras\Api\Model\AggregationResult partnersAggregationsIndex($criteria)
 
 List facets and aggregations for the Partner Search.
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
+[**\Ageras\Api\Model\AggregationResult**](../Model/AggregationResult.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsCreate**
-> \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id , $certification_resource)
+> \Ageras\Api\Model\CertificationResource partnersCertificationsCreate($partner_id , $certification_resource)
 
 Attach certification to partner.
 
@@ -223,7 +223,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$certification_resource = new \Ageras\Api\CertificationResource(); // \Ageras\Api\CertificationResource | 
+$certification_resource = new \Ageras\Api\Model\CertificationResource(); // \Ageras\Api\Model\CertificationResource | 
 
 try {
     $result = $api_instance->partnersCertificationsCreate($partner_id , $certification_resource);
@@ -239,11 +239,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **certification_resource** | [**\Ageras\Api\CertificationResource**](../Model/\Ageras\Api\CertificationResource.md)|  |
+ **certification_resource** | [**\Ageras\Api\Model\CertificationResource**](../Model/\Ageras\Api\Model\CertificationResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\Model\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsGet**
-> \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id,  $certification_id )
+> \Ageras\Api\Model\CertificationResource partnersCertificationsGet($partner_id,  $certification_id )
 
 Get Partner certification.
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\Model\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCertificationsIndex**
-> \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id , $criteria)
+> \Ageras\Api\Model\CertificationResult partnersCertificationsIndex($partner_id , $criteria)
 
 Get partner certifications.
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\CertificationResult**](../Model/CertificationResult.md)
+[**\Ageras\Api\Model\CertificationResult**](../Model/CertificationResult.md)
 
 ### Authorization
 
@@ -477,7 +477,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id,  $content_key )
+> \Ageras\Api\Model\PartnerContentResource partnersContentsGet($partner_id,  $content_key )
 
 Get the content of a given partner.
 
@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource)
+> \Ageras\Api\Model\PartnerContentResource partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner.
 
@@ -550,7 +550,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\Model\PartnerContentResource(); // \Ageras\Api\Model\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource);
@@ -567,11 +567,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\Model\PartnerContentResource**](../Model/\Ageras\Api\Model\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -585,7 +585,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsActionsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource)
+> \Ageras\Api\Model\PartnerCouponResource partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource)
 
 Coupon action
 
@@ -605,7 +605,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $coupon_id = "coupon_id_example"; // string | 
-$partner_coupon_action_resource = new \Ageras\Api\PartnerCouponActionResource(); // \Ageras\Api\PartnerCouponActionResource | 
+$partner_coupon_action_resource = new \Ageras\Api\Model\PartnerCouponActionResource(); // \Ageras\Api\Model\PartnerCouponActionResource | 
 
 try {
     $result = $api_instance->partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource);
@@ -622,11 +622,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **coupon_id** | **string**|  |
- **partner_coupon_action_resource** | [**\Ageras\Api\PartnerCouponActionResource**](../Model/\Ageras\Api\PartnerCouponActionResource.md)|  |
+ **partner_coupon_action_resource** | [**\Ageras\Api\Model\PartnerCouponActionResource**](../Model/\Ageras\Api\Model\PartnerCouponActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerCouponResource**](../Model/PartnerCouponResource.md)
+[**\Ageras\Api\Model\PartnerCouponResource**](../Model/PartnerCouponResource.md)
 
 ### Authorization
 
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsCreate**
-> \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id , $partner_coupon_resource)
+> \Ageras\Api\Model\PartnerCouponResource partnersCouponsCreate($partner_id , $partner_coupon_resource)
 
 Create a new partner coupon.
 
@@ -659,7 +659,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_coupon_resource = new \Ageras\Api\PartnerCouponResource(); // \Ageras\Api\PartnerCouponResource | 
+$partner_coupon_resource = new \Ageras\Api\Model\PartnerCouponResource(); // \Ageras\Api\Model\PartnerCouponResource | 
 
 try {
     $result = $api_instance->partnersCouponsCreate($partner_id , $partner_coupon_resource);
@@ -675,11 +675,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_coupon_resource** | [**\Ageras\Api\PartnerCouponResource**](../Model/\Ageras\Api\PartnerCouponResource.md)|  |
+ **partner_coupon_resource** | [**\Ageras\Api\Model\PartnerCouponResource**](../Model/\Ageras\Api\Model\PartnerCouponResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerCouponResource**](../Model/PartnerCouponResource.md)
+[**\Ageras\Api\Model\PartnerCouponResource**](../Model/PartnerCouponResource.md)
 
 ### Authorization
 
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCouponsIndex**
-> \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerCouponResult partnersCouponsIndex($partner_id , $criteria)
 
 List Partner Coupons.
 
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerCouponResult**](../Model/PartnerCouponResult.md)
+[**\Ageras\Api\Model\PartnerCouponResult**](../Model/PartnerCouponResult.md)
 
 ### Authorization
 
@@ -760,7 +760,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersCreate**
-> \Ageras\Api\PartnerResource partnersCreate($partner_resource)
+> \Ageras\Api\Model\PartnerResource partnersCreate($partner_resource)
 
 Create a Partner.
 
@@ -778,7 +778,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
+$partner_resource = new \Ageras\Api\Model\PartnerResource(); // \Ageras\Api\Model\PartnerResource | 
 
 try {
     $result = $api_instance->partnersCreate($partner_resource);
@@ -793,11 +793,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_resource** | [**\Ageras\Api\PartnerResource**](../Model/\Ageras\Api\PartnerResource.md)|  |
+ **partner_resource** | [**\Ageras\Api\Model\PartnerResource**](../Model/\Ageras\Api\Model\PartnerResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\Model\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -861,7 +861,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersGet**
-> \Ageras\Api\PartnerResource partnersGet($partner_id )
+> \Ageras\Api\Model\PartnerResource partnersGet($partner_id )
 
 Get a Partner from a given partner_id.
 
@@ -898,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\Model\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -912,7 +912,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndex**
-> \Ageras\Api\PartnerResult partnersIndex($criteria)
+> \Ageras\Api\Model\PartnerResult partnersIndex($criteria)
 
 List Partners.
 
@@ -987,7 +987,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerResult**](../Model/PartnerResult.md)
+[**\Ageras\Api\Model\PartnerResult**](../Model/PartnerResult.md)
 
 ### Authorization
 
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesCreate**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id , $partner_industry_resource)
+> \Ageras\Api\Model\PartnerIndustryResource partnersIndustriesCreate($partner_id , $partner_industry_resource)
 
 Attach industry to partner.
 
@@ -1020,7 +1020,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_industry_resource = new \Ageras\Api\PartnerIndustryResource(); // \Ageras\Api\PartnerIndustryResource | 
+$partner_industry_resource = new \Ageras\Api\Model\PartnerIndustryResource(); // \Ageras\Api\Model\PartnerIndustryResource | 
 
 try {
     $result = $api_instance->partnersIndustriesCreate($partner_id , $partner_industry_resource);
@@ -1036,11 +1036,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_industry_resource** | [**\Ageras\Api\PartnerIndustryResource**](../Model/\Ageras\Api\PartnerIndustryResource.md)|  |
+ **partner_industry_resource** | [**\Ageras\Api\Model\PartnerIndustryResource**](../Model/\Ageras\Api\Model\PartnerIndustryResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
+[**\Ageras\Api\Model\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
 
 ### Authorization
 
@@ -1106,7 +1106,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesGet**
-> \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id,  $industry_id )
+> \Ageras\Api\Model\PartnerIndustryResource partnersIndustriesGet($partner_id,  $industry_id )
 
 Get a given industry for partner.
 
@@ -1145,7 +1145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
+[**\Ageras\Api\Model\PartnerIndustryResource**](../Model/PartnerIndustryResource.md)
 
 ### Authorization
 
@@ -1159,7 +1159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersIndustriesIndex**
-> \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerIndustryResult partnersIndustriesIndex($partner_id , $criteria)
 
 Get partner industries.
 
@@ -1206,7 +1206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerIndustryResult**](../Model/PartnerIndustryResult.md)
+[**\Ageras\Api\Model\PartnerIndustryResult**](../Model/PartnerIndustryResult.md)
 
 ### Authorization
 
@@ -1220,7 +1220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesCreate**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
+> \Ageras\Api\Model\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
 
 Attach type to partner.
 
@@ -1239,7 +1239,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$lead_type_resource = new \Ageras\Api\LeadTypeResource(); // \Ageras\Api\LeadTypeResource | 
+$lead_type_resource = new \Ageras\Api\Model\LeadTypeResource(); // \Ageras\Api\Model\LeadTypeResource | 
 
 try {
     $result = $api_instance->partnersLeadtypesCreate($partner_id , $lead_type_resource);
@@ -1255,11 +1255,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **lead_type_resource** | [**\Ageras\Api\LeadTypeResource**](../Model/\Ageras\Api\LeadTypeResource.md)|  |
+ **lead_type_resource** | [**\Ageras\Api\Model\LeadTypeResource**](../Model/\Ageras\Api\Model\LeadTypeResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1325,7 +1325,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id )
+> \Ageras\Api\Model\PartnerTypesResource partnersLeadtypesGet($lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1362,7 +1362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1376,7 +1376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesGet2**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id,  $lead_type_id )
+> \Ageras\Api\Model\PartnerTypesResource partnersLeadtypesGet2($partner_id,  $lead_type_id )
 
 Retrieve a given lead type.
 
@@ -1415,7 +1415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerTypesResource**](../Model/PartnerTypesResource.md)
+[**\Ageras\Api\Model\PartnerTypesResource**](../Model/PartnerTypesResource.md)
 
 ### Authorization
 
@@ -1429,7 +1429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($criteria)
+> \Ageras\Api\Model\PartnerTypesResult partnersLeadtypesIndex($criteria)
 
 Get partner types criteria.
 
@@ -1478,7 +1478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerTypesResult**](../Model/PartnerTypesResult.md)
+[**\Ageras\Api\Model\PartnerTypesResult**](../Model/PartnerTypesResult.md)
 
 ### Authorization
 
@@ -1492,7 +1492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersLeadtypesIndex2**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerTypesResult partnersLeadtypesIndex2($partner_id , $criteria)
 
 Get partner types criteria.
 
@@ -1541,7 +1541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerTypesResult**](../Model/PartnerTypesResult.md)
+[**\Ageras\Api\Model\PartnerTypesResult**](../Model/PartnerTypesResult.md)
 
 ### Authorization
 
@@ -1555,7 +1555,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate**
-> \Ageras\Api\PartnerNoteResource partnersNotesCreate($partner_note_resource)
+> \Ageras\Api\Model\PartnerNoteResource partnersNotesCreate($partner_note_resource)
 
 Create Partner notes.
 
@@ -1573,7 +1573,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
+$partner_note_resource = new \Ageras\Api\Model\PartnerNoteResource(); // \Ageras\Api\Model\PartnerNoteResource | 
 
 try {
     $result = $api_instance->partnersNotesCreate($partner_note_resource);
@@ -1588,11 +1588,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
+ **partner_note_resource** | [**\Ageras\Api\Model\PartnerNoteResource**](../Model/\Ageras\Api\Model\PartnerNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1606,7 +1606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesCreate2**
-> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id , $partner_note_resource)
+> \Ageras\Api\Model\PartnerNoteResource partnersNotesCreate2($partner_id , $partner_note_resource)
 
 Create Partner notes.
 
@@ -1625,7 +1625,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
+$partner_note_resource = new \Ageras\Api\Model\PartnerNoteResource(); // \Ageras\Api\Model\PartnerNoteResource | 
 
 try {
     $result = $api_instance->partnersNotesCreate2($partner_id , $partner_note_resource);
@@ -1641,11 +1641,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
+ **partner_note_resource** | [**\Ageras\Api\Model\PartnerNoteResource**](../Model/\Ageras\Api\Model\PartnerNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1659,7 +1659,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesGet**
-> \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id,  $partner_note_id )
+> \Ageras\Api\Model\PartnerNoteResource partnersNotesGet($partner_id,  $partner_note_id )
 
 Retrieve a given partner note by partner id and partner_note_id.
 
@@ -1698,7 +1698,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
+[**\Ageras\Api\Model\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 
@@ -1712,7 +1712,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex($criteria)
+> \Ageras\Api\Model\PartnerNoteResult partnersNotesIndex($criteria)
 
 Retrieve lists of notes.
 
@@ -1759,7 +1759,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+[**\Ageras\Api\Model\PartnerNoteResult**](../Model/PartnerNoteResult.md)
 
 ### Authorization
 
@@ -1773,7 +1773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersNotesIndex2**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerNoteResult partnersNotesIndex2($partner_id , $criteria)
 
 Retrieve lists of notes.
 
@@ -1820,7 +1820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+[**\Ageras\Api\Model\PartnerNoteResult**](../Model/PartnerNoteResult.md)
 
 ### Authorization
 
@@ -1834,7 +1834,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsCreate**
-> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id , $partner_refill_resource)
+> \Ageras\Api\Model\PartnerRefillResource partnersRefillsCreate($partner_id , $partner_refill_resource)
 
 Create partner refill.
 
@@ -1853,7 +1853,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
+$partner_refill_resource = new \Ageras\Api\Model\PartnerRefillResource(); // \Ageras\Api\Model\PartnerRefillResource | 
 
 try {
     $result = $api_instance->partnersRefillsCreate($partner_id , $partner_refill_resource);
@@ -1869,11 +1869,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_refill_resource** | [**\Ageras\Api\PartnerRefillResource**](../Model/\Ageras\Api\PartnerRefillResource.md)|  |
+ **partner_refill_resource** | [**\Ageras\Api\Model\PartnerRefillResource**](../Model/\Ageras\Api\Model\PartnerRefillResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerRefillResource**](../Model/PartnerRefillResource.md)
+[**\Ageras\Api\Model\PartnerRefillResource**](../Model/PartnerRefillResource.md)
 
 ### Authorization
 
@@ -1887,7 +1887,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersRefillsIndex**
-> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerRefillResult partnersRefillsIndex($partner_id , $criteria)
 
 Get partner refills.
 
@@ -1932,7 +1932,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerRefillResult**](../Model/PartnerRefillResult.md)
+[**\Ageras\Api\Model\PartnerRefillResult**](../Model/PartnerRefillResult.md)
 
 ### Authorization
 
@@ -1946,7 +1946,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsActionsCreate**
-> \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
+> \Ageras\Api\Model\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
 
 Cancel subscription.
 
@@ -1966,7 +1966,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $subscription_id = "subscription_id_example"; // string | 
-$partner_subscription_action_resource = new \Ageras\Api\PartnerSubscriptionActionResource(); // \Ageras\Api\PartnerSubscriptionActionResource | 
+$partner_subscription_action_resource = new \Ageras\Api\Model\PartnerSubscriptionActionResource(); // \Ageras\Api\Model\PartnerSubscriptionActionResource | 
 
 try {
     $result = $api_instance->partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource);
@@ -1983,11 +1983,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **subscription_id** | **string**|  |
- **partner_subscription_action_resource** | [**\Ageras\Api\PartnerSubscriptionActionResource**](../Model/\Ageras\Api\PartnerSubscriptionActionResource.md)|  |
+ **partner_subscription_action_resource** | [**\Ageras\Api\Model\PartnerSubscriptionActionResource**](../Model/\Ageras\Api\Model\PartnerSubscriptionActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerSubscriptionActionResource**](../Model/PartnerSubscriptionActionResource.md)
+[**\Ageras\Api\Model\PartnerSubscriptionActionResource**](../Model/PartnerSubscriptionActionResource.md)
 
 ### Authorization
 
@@ -2001,7 +2001,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsCreate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id , $partner_subscription_resource)
+> \Ageras\Api\Model\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id , $partner_subscription_resource)
 
 Subscribe a partner.
 
@@ -2020,7 +2020,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
+$partner_subscription_resource = new \Ageras\Api\Model\PartnerSubscriptionResource(); // \Ageras\Api\Model\PartnerSubscriptionResource | 
 
 try {
     $result = $api_instance->partnersSubscriptionsCreate($partner_id , $partner_subscription_resource);
@@ -2036,11 +2036,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_subscription_resource** | [**\Ageras\Api\PartnerSubscriptionResource**](../Model/\Ageras\Api\PartnerSubscriptionResource.md)|  |
+ **partner_subscription_resource** | [**\Ageras\Api\Model\PartnerSubscriptionResource**](../Model/\Ageras\Api\Model\PartnerSubscriptionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
+[**\Ageras\Api\Model\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
 
 ### Authorization
 
@@ -2054,7 +2054,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsIndex**
-> \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id , $criteria)
 
 Get partner's subscriptions.
 
@@ -2099,7 +2099,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerSubscriptionResult**](../Model/PartnerSubscriptionResult.md)
+[**\Ageras\Api\Model\PartnerSubscriptionResult**](../Model/PartnerSubscriptionResult.md)
 
 ### Authorization
 
@@ -2113,7 +2113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSubscriptionsUpdate**
-> \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource)
+> \Ageras\Api\Model\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource)
 
 Update partner subscription.
 
@@ -2132,7 +2132,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_subscription_resource = new \Ageras\Api\PartnerSubscriptionResource(); // \Ageras\Api\PartnerSubscriptionResource | 
+$partner_subscription_resource = new \Ageras\Api\Model\PartnerSubscriptionResource(); // \Ageras\Api\Model\PartnerSubscriptionResource | 
 
 try {
     $result = $api_instance->partnersSubscriptionsUpdate($partner_id , $partner_subscription_resource);
@@ -2148,11 +2148,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_subscription_resource** | [**\Ageras\Api\PartnerSubscriptionResource**](../Model/\Ageras\Api\PartnerSubscriptionResource.md)|  |
+ **partner_subscription_resource** | [**\Ageras\Api\Model\PartnerSubscriptionResource**](../Model/\Ageras\Api\Model\PartnerSubscriptionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
+[**\Ageras\Api\Model\PartnerSubscriptionResource**](../Model/PartnerSubscriptionResource.md)
 
 ### Authorization
 
@@ -2166,7 +2166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersSuggestIndex**
-> \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($criteria)
+> \Ageras\Api\Model\PartnerSuggestResult partnersSuggestIndex($criteria)
 
 Suggest Partners to search for.
 
@@ -2215,7 +2215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerSuggestResult**](../Model/PartnerSuggestResult.md)
+[**\Ageras\Api\Model\PartnerSuggestResult**](../Model/PartnerSuggestResult.md)
 
 ### Authorization
 
@@ -2229,7 +2229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersTransactionsIndex**
-> \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id , $criteria)
 
 List Transactions for a given Partner.
 
@@ -2274,7 +2274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerCouponTransactionResult**](../Model/PartnerCouponTransactionResult.md)
+[**\Ageras\Api\Model\PartnerCouponTransactionResult**](../Model/PartnerCouponTransactionResult.md)
 
 ### Authorization
 
@@ -2288,7 +2288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUpdate**
-> \Ageras\Api\PartnerResource partnersUpdate($partner_id , $partner_resource)
+> \Ageras\Api\Model\PartnerResource partnersUpdate($partner_id , $partner_resource)
 
 Update a Partner.
 
@@ -2307,7 +2307,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_resource = new \Ageras\Api\PartnerResource(); // \Ageras\Api\PartnerResource | 
+$partner_resource = new \Ageras\Api\Model\PartnerResource(); // \Ageras\Api\Model\PartnerResource | 
 
 try {
     $result = $api_instance->partnersUpdate($partner_id , $partner_resource);
@@ -2323,11 +2323,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_resource** | [**\Ageras\Api\PartnerResource**](../Model/\Ageras\Api\PartnerResource.md)|  |
+ **partner_resource** | [**\Ageras\Api\Model\PartnerResource**](../Model/\Ageras\Api\Model\PartnerResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
+[**\Ageras\Api\Model\PartnerResource**](../Model/PartnerResource.md)
 
 ### Authorization
 
@@ -2447,7 +2447,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id,  $content_key )
+> \Ageras\Api\Model\PartnerContentResource partnersUsersContentsGet($partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2486,7 +2486,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2500,7 +2500,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsGet2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
+> \Ageras\Api\Model\PartnerContentResource partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -2541,7 +2541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2555,7 +2555,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource)
+> \Ageras\Api\Model\PartnerContentResource partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2575,7 +2575,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\Model\PartnerContentResource(); // \Ageras\Api\Model\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource);
@@ -2592,11 +2592,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\Model\PartnerContentResource**](../Model/\Ageras\Api\Model\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2610,7 +2610,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersContentsUpdate2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
+> \Ageras\Api\Model\PartnerContentResource partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -2631,7 +2631,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
 $content_key = "content_key_example"; // string | 
-$partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
+$partner_content_resource = new \Ageras\Api\Model\PartnerContentResource(); // \Ageras\Api\Model\PartnerContentResource | 
 
 try {
     $result = $api_instance->partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource);
@@ -2649,11 +2649,11 @@ Name | Type | Description  | Notes
  **partner_id** | **string**|  |
  **partner_user_id** | **string**|  |
  **content_key** | **string**|  |
- **partner_content_resource** | [**\Ageras\Api\PartnerContentResource**](../Model/\Ageras\Api\PartnerContentResource.md)|  |
+ **partner_content_resource** | [**\Ageras\Api\Model\PartnerContentResource**](../Model/\Ageras\Api\Model\PartnerContentResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+[**\Ageras\Api\Model\PartnerContentResource**](../Model/PartnerContentResource.md)
 
 ### Authorization
 
@@ -2667,7 +2667,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate**
-> \Ageras\Api\PartnerUserResource partnersUsersCreate($partner_user_resource)
+> \Ageras\Api\Model\PartnerUserResource partnersUsersCreate($partner_user_resource)
 
 Create a partner user.
 
@@ -2685,7 +2685,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\Model\PartnerUserResource(); // \Ageras\Api\Model\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersCreate($partner_user_resource);
@@ -2700,11 +2700,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\Model\PartnerUserResource**](../Model/\Ageras\Api\Model\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2718,7 +2718,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersCreate2**
-> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id , $partner_user_resource)
+> \Ageras\Api\Model\PartnerUserResource partnersUsersCreate2($partner_id , $partner_user_resource)
 
 Create a partner user.
 
@@ -2737,7 +2737,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\Model\PartnerUserResource(); // \Ageras\Api\Model\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersCreate2($partner_id , $partner_user_resource);
@@ -2753,11 +2753,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\Model\PartnerUserResource**](../Model/\Ageras\Api\Model\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2823,7 +2823,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet**
-> \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id )
+> \Ageras\Api\Model\PartnerUserResource partnersUsersGet($partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -2860,7 +2860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2874,7 +2874,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersGet2**
-> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id,  $partner_user_id )
+> \Ageras\Api\Model\PartnerUserResource partnersUsersGet2($partner_id,  $partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -2913,7 +2913,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -2927,7 +2927,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex($criteria)
+> \Ageras\Api\Model\PartnerUserResult partnersUsersIndex($criteria)
 
 List partner users.
 
@@ -2976,7 +2976,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResult**](../Model/PartnerUserResult.md)
+[**\Ageras\Api\Model\PartnerUserResult**](../Model/PartnerUserResult.md)
 
 ### Authorization
 
@@ -2990,7 +2990,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersIndex2**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id , $criteria)
+> \Ageras\Api\Model\PartnerUserResult partnersUsersIndex2($partner_id , $criteria)
 
 List partner users.
 
@@ -3039,7 +3039,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResult**](../Model/PartnerUserResult.md)
+[**\Ageras\Api\Model\PartnerUserResult**](../Model/PartnerUserResult.md)
 
 ### Authorization
 
@@ -3053,7 +3053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id , $partner_user_resource)
+> \Ageras\Api\Model\PartnerUserResource partnersUsersUpdate($partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3072,7 +3072,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\Model\PartnerUserResource(); // \Ageras\Api\Model\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersUpdate($partner_user_id , $partner_user_resource);
@@ -3088,11 +3088,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\Model\PartnerUserResource**](../Model/\Ageras\Api\Model\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 
@@ -3106,7 +3106,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersUsersUpdate2**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
+> \Ageras\Api\Model\PartnerUserResource partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -3126,7 +3126,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
+$partner_user_resource = new \Ageras\Api\Model\PartnerUserResource(); // \Ageras\Api\Model\PartnerUserResource | 
 
 try {
     $result = $api_instance->partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource);
@@ -3143,11 +3143,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **partner_user_id** | **string**|  |
- **partner_user_resource** | [**\Ageras\Api\PartnerUserResource**](../Model/\Ageras\Api\PartnerUserResource.md)|  |
+ **partner_user_resource** | [**\Ageras\Api\Model\PartnerUserResource**](../Model/\Ageras\Api\Model\PartnerUserResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
+[**\Ageras\Api\Model\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 

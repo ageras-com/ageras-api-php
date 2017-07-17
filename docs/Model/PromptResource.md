@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Client id. | [optional] 
-**attributes** | [**\Ageras\Api\PromptAttributeResource[]**](PromptAttributeResource.md) | Attributes | [optional] 
+**attributes** | [**\Ageras\Api\Model\PromptAttributeResource[]**](PromptAttributeResource.md) | Attributes | [optional] 
 **type** | **string** | Type | [optional] 
 **trigger** | **string** | Trigger | [optional] 
 **receiver_type** | **string** | Receiver | [optional] [default to 'unknown']

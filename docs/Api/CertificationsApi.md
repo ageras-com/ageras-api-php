@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **certificationsIndex**
-> \Ageras\Api\CertificationResult certificationsIndex($criteria)
+> \Ageras\Api\Model\CertificationResult certificationsIndex($criteria)
 
 Get all available certifications.
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\CertificationResult**](../Model/CertificationResult.md)
+[**\Ageras\Api\Model\CertificationResult**](../Model/CertificationResult.md)
 
 ### Authorization
 

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **leadsActionsCreate**
-> \Ageras\Api\LeadResource leadsActionsCreate($lead_id , $lead_action_resource)
+> \Ageras\Api\Model\LeadResource leadsActionsCreate($lead_id , $lead_action_resource)
 
 Coupon action
 
@@ -39,7 +39,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_action_resource = new \Ageras\Api\LeadActionResource(); // \Ageras\Api\LeadActionResource | 
+$lead_action_resource = new \Ageras\Api\Model\LeadActionResource(); // \Ageras\Api\Model\LeadActionResource | 
 
 try {
     $result = $api_instance->leadsActionsCreate($lead_id , $lead_action_resource);
@@ -55,11 +55,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_action_resource** | [**\Ageras\Api\LeadActionResource**](../Model/\Ageras\Api\LeadActionResource.md)|  |
+ **lead_action_resource** | [**\Ageras\Api\Model\LeadActionResource**](../Model/\Ageras\Api\Model\LeadActionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\Model\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsCreate**
-> \Ageras\Api\LeadResource leadsCreate($lead_resource)
+> \Ageras\Api\Model\LeadResource leadsCreate($lead_resource)
 
 Create a new Lead.
 
@@ -91,7 +91,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
-$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | The given Lead Resource that should be created
+$lead_resource = new \Ageras\Api\Model\LeadResource(); // \Ageras\Api\Model\LeadResource | The given Lead Resource that should be created
 
 try {
     $result = $api_instance->leadsCreate($lead_resource);
@@ -106,11 +106,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)| The given Lead Resource that should be created |
+ **lead_resource** | [**\Ageras\Api\Model\LeadResource**](../Model/\Ageras\Api\Model\LeadResource.md)| The given Lead Resource that should be created |
 
 ### Return type
 
-[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\Model\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsGet**
-> \Ageras\Api\LeadResource leadsGet($lead_id )
+> \Ageras\Api\Model\LeadResource leadsGet($lead_id )
 
 Return a Lead from a Lead Id.
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\Model\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsIndex**
-> \Ageras\Api\LeadResult leadsIndex($criteria)
+> \Ageras\Api\Model\LeadResult leadsIndex($criteria)
 
 Search for Lead's by a given set of criteria.
 
@@ -245,6 +245,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $criteria = [
         'lead_id' => "lead_id_example"; // string | List of leads identification(ID).
+        'needs_more_quotes' => false; // bool | Only list leads that need more quotes.
         'needs_more_offers' => false; // bool | Only list leads that need more offers.
         'phone' => "phone_example"; // string | Filter by a given phone number.
         'filter' => "none"; // string | Apply a pre-defined filter.
@@ -272,6 +273,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**| List of leads identification(ID). | [optional]
+ **needs_more_quotes** | **bool**| Only list leads that need more quotes. | [optional] [default to false]
  **needs_more_offers** | **bool**| Only list leads that need more offers. | [optional] [default to false]
  **phone** | **string**| Filter by a given phone number. | [optional]
  **filter** | **string**| Apply a pre-defined filter. | [optional] [default to none]
@@ -286,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadResult**](../Model/LeadResult.md)
+[**\Ageras\Api\Model\LeadResult**](../Model/LeadResult.md)
 
 ### Authorization
 
@@ -300,7 +302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsNotesCreate**
-> \Ageras\Api\LeadResource leadsNotesCreate($lead_id , $lead_note_resource)
+> \Ageras\Api\Model\LeadResource leadsNotesCreate($lead_id , $lead_note_resource)
 
 Create lead note
 
@@ -319,7 +321,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_note_resource = new \Ageras\Api\LeadNoteResource(); // \Ageras\Api\LeadNoteResource | 
+$lead_note_resource = new \Ageras\Api\Model\LeadNoteResource(); // \Ageras\Api\Model\LeadNoteResource | 
 
 try {
     $result = $api_instance->leadsNotesCreate($lead_id , $lead_note_resource);
@@ -335,11 +337,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_note_resource** | [**\Ageras\Api\LeadNoteResource**](../Model/\Ageras\Api\LeadNoteResource.md)|  |
+ **lead_note_resource** | [**\Ageras\Api\Model\LeadNoteResource**](../Model/\Ageras\Api\Model\LeadNoteResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\Model\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 
@@ -353,7 +355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersCreate**
-> \Ageras\Api\LeadOfferResource leadsOffersCreate($lead_id , $lead_offer_resource)
+> \Ageras\Api\Model\LeadOfferResource leadsOffersCreate($lead_id , $lead_offer_resource)
 
 Create a new offer for a given Lead.
 
@@ -372,7 +374,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_offer_resource = new \Ageras\Api\LeadOfferResource(); // \Ageras\Api\LeadOfferResource | 
+$lead_offer_resource = new \Ageras\Api\Model\LeadOfferResource(); // \Ageras\Api\Model\LeadOfferResource | 
 
 try {
     $result = $api_instance->leadsOffersCreate($lead_id , $lead_offer_resource);
@@ -388,11 +390,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_offer_resource** | [**\Ageras\Api\LeadOfferResource**](../Model/\Ageras\Api\LeadOfferResource.md)|  |
+ **lead_offer_resource** | [**\Ageras\Api\Model\LeadOfferResource**](../Model/\Ageras\Api\Model\LeadOfferResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -406,7 +408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersGet**
-> \Ageras\Api\LeadOfferResource leadsOffersGet($lead_offer_id )
+> \Ageras\Api\Model\LeadOfferResource leadsOffersGet($lead_offer_id )
 
 Get an offer by id.
 
@@ -443,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -457,7 +459,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersGet2**
-> \Ageras\Api\LeadOfferResource leadsOffersGet2($lead_id,  $lead_offer_id )
+> \Ageras\Api\Model\LeadOfferResource leadsOffersGet2($lead_id,  $lead_offer_id )
 
 Get an offer by id.
 
@@ -496,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadOfferResource**](../Model/LeadOfferResource.md)
+[**\Ageras\Api\Model\LeadOfferResource**](../Model/LeadOfferResource.md)
 
 ### Authorization
 
@@ -510,7 +512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersIndex**
-> \Ageras\Api\LeadOfferResult leadsOffersIndex($criteria)
+> \Ageras\Api\Model\LeadOfferResult leadsOffersIndex($criteria)
 
 List the offers connected to a given Lead.
 
@@ -529,6 +531,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $criteria = [
+        'client_id' => "client_id_example"; // string | List of client ids
         'lead_id' => "lead_id_example"; // string | List of leads identification(ID).
         'lead_offer_id' => "lead_offer_id_example"; // string | List of lead offers identification(ID).
         'partner_id' => "partner_id_example"; // string | Offers belonging to a given partner.
@@ -550,6 +553,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **client_id** | **string**| List of client ids | [optional]
  **lead_id** | **string**| List of leads identification(ID). | [optional]
  **lead_offer_id** | **string**| List of lead offers identification(ID). | [optional]
  **partner_id** | **string**| Offers belonging to a given partner. | [optional]
@@ -559,7 +563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadOfferResult**](../Model/LeadOfferResult.md)
+[**\Ageras\Api\Model\LeadOfferResult**](../Model/LeadOfferResult.md)
 
 ### Authorization
 
@@ -573,7 +577,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsOffersIndex2**
-> \Ageras\Api\LeadOfferResult leadsOffersIndex2($lead_id , $criteria)
+> \Ageras\Api\Model\LeadOfferResult leadsOffersIndex2($lead_id , $criteria)
 
 List the offers connected to a given Lead.
 
@@ -593,6 +597,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
 $criteria = [
+        'client_id' => "client_id_example"; // string | List of client ids
         'lead_offer_id' => "lead_offer_id_example"; // string | List of lead offers identification(ID).
         'partner_id' => "partner_id_example"; // string | Offers belonging to a given partner.
         'limit' => 56; // int | The number of resources to be returned.
@@ -614,6 +619,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
+ **client_id** | **string**| List of client ids | [optional]
  **lead_offer_id** | **string**| List of lead offers identification(ID). | [optional]
  **partner_id** | **string**| Offers belonging to a given partner. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
@@ -622,7 +628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadOfferResult**](../Model/LeadOfferResult.md)
+[**\Ageras\Api\Model\LeadOfferResult**](../Model/LeadOfferResult.md)
 
 ### Authorization
 
@@ -636,7 +642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsTypesIndex**
-> \Ageras\Api\LeadTypeResult leadsTypesIndex($criteria)
+> \Ageras\Api\Model\LeadTypeResult leadsTypesIndex($criteria)
 
 Index lead types.
 
@@ -685,7 +691,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\LeadTypeResult**](../Model/LeadTypeResult.md)
+[**\Ageras\Api\Model\LeadTypeResult**](../Model/LeadTypeResult.md)
 
 ### Authorization
 
@@ -699,7 +705,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsUpdate**
-> \Ageras\Api\LeadResource leadsUpdate($lead_id , $lead_resource)
+> \Ageras\Api\Model\LeadResource leadsUpdate($lead_id , $lead_resource)
 
 Update Properties on a given Lead.
 
@@ -718,7 +724,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | 
+$lead_resource = new \Ageras\Api\Model\LeadResource(); // \Ageras\Api\Model\LeadResource | 
 
 try {
     $result = $api_instance->leadsUpdate($lead_id , $lead_resource);
@@ -734,11 +740,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)|  |
+ **lead_resource** | [**\Ageras\Api\Model\LeadResource**](../Model/\Ageras\Api\Model\LeadResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\LeadResource**](../Model/LeadResource.md)
+[**\Ageras\Api\Model\LeadResource**](../Model/LeadResource.md)
 
 ### Authorization
 

@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **name** | **string** | Name. | [optional] 
 **punches** | **int** | Offer number of punches. | [optional] 
 **due_days** | **int** | Number of days from offer accept to payment is due. | [optional] 
-**price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
-**avg_punch_price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**price** | [**\Ageras\Api\Model\AmountResource**](AmountResource.md) |  | [optional] 
+**avg_punch_price** | [**\Ageras\Api\Model\AmountResource**](AmountResource.md) |  | [optional] 
 **status** | **string** | Status. | [optional] [default to 'new']
-**employee** | [**\Ageras\Api\EmployeeResource**](EmployeeResource.md) |  | [optional] 
+**employee** | [**\Ageras\Api\Model\EmployeeResource**](EmployeeResource.md) |  | [optional] 
 **is_activated** | **bool** | Is offer activated. | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

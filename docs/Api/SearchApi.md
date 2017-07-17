@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **searchIndex**
-> \Ageras\Api\SearchResult searchIndex($criteria)
+> \Ageras\Api\Model\SearchResult searchIndex($criteria)
 
 Search by criterias.
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\SearchResult**](../Model/SearchResult.md)
+[**\Ageras\Api\Model\SearchResult**](../Model/SearchResult.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchSuggestIndex**
-> \Ageras\Api\SearchResult searchSuggestIndex($criteria)
+> \Ageras\Api\Model\SearchResult searchSuggestIndex($criteria)
 
 Suggest by criteria.
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\SearchResult**](../Model/SearchResult.md)
+[**\Ageras\Api\Model\SearchResult**](../Model/SearchResult.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchTypeaheadIndex**
-> \Ageras\Api\TypeaheadResult searchTypeaheadIndex($criteria)
+> \Ageras\Api\Model\TypeaheadResult searchTypeaheadIndex($criteria)
 
 Typeahead recommendations.
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\TypeaheadResult**](../Model/TypeaheadResult.md)
+[**\Ageras\Api\Model\TypeaheadResult**](../Model/TypeaheadResult.md)
 
 ### Authorization
 

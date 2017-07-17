@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **industriesIndex**
-> \Ageras\Api\IndustryResult industriesIndex($criteria)
+> \Ageras\Api\Model\IndustryResult industriesIndex($criteria)
 
 List Industries and filter by parent industry.
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\IndustryResult**](../Model/IndustryResult.md)
+[**\Ageras\Api\Model\IndustryResult**](../Model/IndustryResult.md)
 
 ### Authorization
 

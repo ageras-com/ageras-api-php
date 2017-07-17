@@ -162,4 +162,20 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "client_id"
+     */
+    public function testPropertyClientId()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner_id"
+     */
+    public function testPropertyPartnerId()
+    {
+
+    }
+
 }

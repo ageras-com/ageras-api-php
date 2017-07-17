@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **coupon_id** | **int** |  | [optional] 
 **product** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
-**lead** | [**\Ageras\Api\LeadResource**](LeadResource.md) |  | [optional] 
+**lead** | [**\Ageras\Api\Model\LeadResource**](LeadResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 
 # **cvAwardCreate**
-> \Ageras\Api\PartnerUserCvAwardResource cvAwardCreate($partner_user_id , $partner_user_cv_award_resource)
+> \Ageras\Api\Model\PartnerUserCvAwardResource cvAwardCreate($partner_user_id , $partner_user_cv_award_resource)
 
 Create partner user award.
 
@@ -54,7 +54,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
+$partner_user_cv_award_resource = new \Ageras\Api\Model\PartnerUserCvAwardResource(); // \Ageras\Api\Model\PartnerUserCvAwardResource | 
 
 try {
     $result = $api_instance->cvAwardCreate($partner_user_id , $partner_user_cv_award_resource);
@@ -70,11 +70,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Ageras\Api\PartnerUserCvAwardResource**](../Model/\Ageras\Api\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/\Ageras\Api\Model\PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
+[**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvAwardUpdate**
-> \Ageras\Api\PartnerUserCvAwardResource cvAwardUpdate($partner_user_id , $partner_user_cv_award_resource)
+> \Ageras\Api\Model\PartnerUserCvAwardResource cvAwardUpdate($partner_user_id , $partner_user_cv_award_resource)
 
 Update partner user award.
 
@@ -159,7 +159,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_award_resource = new \Ageras\Api\PartnerUserCvAwardResource(); // \Ageras\Api\PartnerUserCvAwardResource | 
+$partner_user_cv_award_resource = new \Ageras\Api\Model\PartnerUserCvAwardResource(); // \Ageras\Api\Model\PartnerUserCvAwardResource | 
 
 try {
     $result = $api_instance->cvAwardUpdate($partner_user_id , $partner_user_cv_award_resource);
@@ -175,11 +175,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Ageras\Api\PartnerUserCvAwardResource**](../Model/\Ageras\Api\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/\Ageras\Api\Model\PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
+[**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvBadgeCreate**
-> \Ageras\Api\CertificationResource cvBadgeCreate($partner_user_id , $partner_user_cv_badge_resource)
+> \Ageras\Api\Model\CertificationResource cvBadgeCreate($partner_user_id , $partner_user_cv_badge_resource)
 
 Create partner user badge.
 
@@ -212,7 +212,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_badge_resource = new \Ageras\Api\PartnerUserCvBadgeResource(); // \Ageras\Api\PartnerUserCvBadgeResource | 
+$partner_user_cv_badge_resource = new \Ageras\Api\Model\PartnerUserCvBadgeResource(); // \Ageras\Api\Model\PartnerUserCvBadgeResource | 
 
 try {
     $result = $api_instance->cvBadgeCreate($partner_user_id , $partner_user_cv_badge_resource);
@@ -228,11 +228,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_badge_resource** | [**\Ageras\Api\PartnerUserCvBadgeResource**](../Model/\Ageras\Api\PartnerUserCvBadgeResource.md)|  |
+ **partner_user_cv_badge_resource** | [**\Ageras\Api\Model\PartnerUserCvBadgeResource**](../Model/\Ageras\Api\Model\PartnerUserCvBadgeResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
+[**\Ageras\Api\Model\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvCourseCreate**
-> \Ageras\Api\PartnerUserCvCourseResource cvCourseCreate($partner_user_id , $partner_user_cv_course_resource)
+> \Ageras\Api\Model\PartnerUserCvCourseResource cvCourseCreate($partner_user_id , $partner_user_cv_course_resource)
 
 Create partner user course.
 
@@ -317,7 +317,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
+$partner_user_cv_course_resource = new \Ageras\Api\Model\PartnerUserCvCourseResource(); // \Ageras\Api\Model\PartnerUserCvCourseResource | 
 
 try {
     $result = $api_instance->cvCourseCreate($partner_user_id , $partner_user_cv_course_resource);
@@ -333,11 +333,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Ageras\Api\PartnerUserCvCourseResource**](../Model/\Ageras\Api\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/\Ageras\Api\Model\PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
+[**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvCourseUpdate**
-> \Ageras\Api\PartnerUserCvCourseResource cvCourseUpdate($partner_user_id , $partner_user_cv_course_resource)
+> \Ageras\Api\Model\PartnerUserCvCourseResource cvCourseUpdate($partner_user_id , $partner_user_cv_course_resource)
 
 Update partner user course.
 
@@ -422,7 +422,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_course_resource = new \Ageras\Api\PartnerUserCvCourseResource(); // \Ageras\Api\PartnerUserCvCourseResource | 
+$partner_user_cv_course_resource = new \Ageras\Api\Model\PartnerUserCvCourseResource(); // \Ageras\Api\Model\PartnerUserCvCourseResource | 
 
 try {
     $result = $api_instance->cvCourseUpdate($partner_user_id , $partner_user_cv_course_resource);
@@ -438,11 +438,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Ageras\Api\PartnerUserCvCourseResource**](../Model/\Ageras\Api\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/\Ageras\Api\Model\PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
+[**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvDescriptionCreate**
-> \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionCreate($partner_user_id , $partner_user_cv_description_resource)
+> \Ageras\Api\Model\PartnerUserCvDescriptionResource cvDescriptionCreate($partner_user_id , $partner_user_cv_description_resource)
 
 Create partner user description.
 
@@ -475,7 +475,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
+$partner_user_cv_description_resource = new \Ageras\Api\Model\PartnerUserCvDescriptionResource(); // \Ageras\Api\Model\PartnerUserCvDescriptionResource | 
 
 try {
     $result = $api_instance->cvDescriptionCreate($partner_user_id , $partner_user_cv_description_resource);
@@ -491,11 +491,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\Model\PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
+[**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvDescriptionUpdate**
-> \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionUpdate($partner_user_id , $partner_user_cv_description_resource)
+> \Ageras\Api\Model\PartnerUserCvDescriptionResource cvDescriptionUpdate($partner_user_id , $partner_user_cv_description_resource)
 
 Update partner user description.
 
@@ -580,7 +580,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_description_resource = new \Ageras\Api\PartnerUserCvDescriptionResource(); // \Ageras\Api\PartnerUserCvDescriptionResource | 
+$partner_user_cv_description_resource = new \Ageras\Api\Model\PartnerUserCvDescriptionResource(); // \Ageras\Api\Model\PartnerUserCvDescriptionResource | 
 
 try {
     $result = $api_instance->cvDescriptionUpdate($partner_user_id , $partner_user_cv_description_resource);
@@ -596,11 +596,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\Model\PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
+[**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)
 
 ### Authorization
 
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvEducationCreate**
-> \Ageras\Api\PartnerUserCvEducationResource cvEducationCreate($partner_user_id , $partner_user_cv_education_resource)
+> \Ageras\Api\Model\PartnerUserCvEducationResource cvEducationCreate($partner_user_id , $partner_user_cv_education_resource)
 
 Create partner user education.
 
@@ -633,7 +633,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
+$partner_user_cv_education_resource = new \Ageras\Api\Model\PartnerUserCvEducationResource(); // \Ageras\Api\Model\PartnerUserCvEducationResource | 
 
 try {
     $result = $api_instance->cvEducationCreate($partner_user_id , $partner_user_cv_education_resource);
@@ -649,11 +649,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Ageras\Api\PartnerUserCvEducationResource**](../Model/\Ageras\Api\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/\Ageras\Api\Model\PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
+[**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
 
 ### Authorization
 
@@ -719,7 +719,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvEducationUpdate**
-> \Ageras\Api\PartnerUserCvEducationResource cvEducationUpdate($partner_user_id , $partner_user_cv_education_resource)
+> \Ageras\Api\Model\PartnerUserCvEducationResource cvEducationUpdate($partner_user_id , $partner_user_cv_education_resource)
 
 Update partner user education.
 
@@ -738,7 +738,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_education_resource = new \Ageras\Api\PartnerUserCvEducationResource(); // \Ageras\Api\PartnerUserCvEducationResource | 
+$partner_user_cv_education_resource = new \Ageras\Api\Model\PartnerUserCvEducationResource(); // \Ageras\Api\Model\PartnerUserCvEducationResource | 
 
 try {
     $result = $api_instance->cvEducationUpdate($partner_user_id , $partner_user_cv_education_resource);
@@ -754,11 +754,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Ageras\Api\PartnerUserCvEducationResource**](../Model/\Ageras\Api\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/\Ageras\Api\Model\PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
+[**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)
 
 ### Authorization
 
@@ -772,7 +772,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExperienceCreate**
-> \Ageras\Api\PartnerUserCvExperienceResource cvExperienceCreate($partner_user_id , $partner_user_cv_experience_resource)
+> \Ageras\Api\Model\PartnerUserCvExperienceResource cvExperienceCreate($partner_user_id , $partner_user_cv_experience_resource)
 
 Create partner user experience.
 
@@ -791,7 +791,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
+$partner_user_cv_experience_resource = new \Ageras\Api\Model\PartnerUserCvExperienceResource(); // \Ageras\Api\Model\PartnerUserCvExperienceResource | 
 
 try {
     $result = $api_instance->cvExperienceCreate($partner_user_id , $partner_user_cv_experience_resource);
@@ -807,11 +807,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\Model\PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
+[**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
 
 ### Authorization
 
@@ -877,7 +877,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExperienceUpdate**
-> \Ageras\Api\PartnerUserCvExperienceResource cvExperienceUpdate($partner_user_id , $partner_user_cv_experience_resource)
+> \Ageras\Api\Model\PartnerUserCvExperienceResource cvExperienceUpdate($partner_user_id , $partner_user_cv_experience_resource)
 
 Update partner user experience.
 
@@ -896,7 +896,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_experience_resource = new \Ageras\Api\PartnerUserCvExperienceResource(); // \Ageras\Api\PartnerUserCvExperienceResource | 
+$partner_user_cv_experience_resource = new \Ageras\Api\Model\PartnerUserCvExperienceResource(); // \Ageras\Api\Model\PartnerUserCvExperienceResource | 
 
 try {
     $result = $api_instance->cvExperienceUpdate($partner_user_id , $partner_user_cv_experience_resource);
@@ -912,11 +912,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\Model\PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
+[**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)
 
 ### Authorization
 
@@ -930,7 +930,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExpertiseCreate**
-> \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseCreate($partner_user_id , $partner_user_cv_expertise_resource)
+> \Ageras\Api\Model\PartnerUserCvExpertiseResource cvExpertiseCreate($partner_user_id , $partner_user_cv_expertise_resource)
 
 Create partner user expertise.
 
@@ -949,7 +949,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\Model\PartnerUserCvExpertiseResource(); // \Ageras\Api\Model\PartnerUserCvExpertiseResource | 
 
 try {
     $result = $api_instance->cvExpertiseCreate($partner_user_id , $partner_user_cv_expertise_resource);
@@ -965,11 +965,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\Model\PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
+[**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
 
 ### Authorization
 
@@ -1035,7 +1035,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvExpertiseUpdate**
-> \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseUpdate($partner_user_id , $partner_user_cv_expertise_resource)
+> \Ageras\Api\Model\PartnerUserCvExpertiseResource cvExpertiseUpdate($partner_user_id , $partner_user_cv_expertise_resource)
 
 Update partner user expertise.
 
@@ -1054,7 +1054,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_expertise_resource = new \Ageras\Api\PartnerUserCvExpertiseResource(); // \Ageras\Api\PartnerUserCvExpertiseResource | 
+$partner_user_cv_expertise_resource = new \Ageras\Api\Model\PartnerUserCvExpertiseResource(); // \Ageras\Api\Model\PartnerUserCvExpertiseResource | 
 
 try {
     $result = $api_instance->cvExpertiseUpdate($partner_user_id , $partner_user_cv_expertise_resource);
@@ -1070,11 +1070,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\Model\PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
+[**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)
 
 ### Authorization
 
@@ -1088,7 +1088,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvGet**
-> \Ageras\Api\PartnerUserCvResource cvGet($partner_user_id )
+> \Ageras\Api\Model\PartnerUserCvResource cvGet($partner_user_id )
 
 Get partner user cv.
 
@@ -1125,7 +1125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvResource**](../Model/PartnerUserCvResource.md)
+[**\Ageras\Api\Model\PartnerUserCvResource**](../Model/PartnerUserCvResource.md)
 
 ### Authorization
 
@@ -1139,7 +1139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvIndex**
-> \Ageras\Api\PartnerUserCvResult cvIndex($criteria)
+> \Ageras\Api\Model\PartnerUserCvResult cvIndex($criteria)
 
 Index all partner user CV for given partner.
 
@@ -1186,7 +1186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvResult**](../Model/PartnerUserCvResult.md)
+[**\Ageras\Api\Model\PartnerUserCvResult**](../Model/PartnerUserCvResult.md)
 
 ### Authorization
 
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvLanguageCreate**
-> \Ageras\Api\PartnerUserCvLanguageResource cvLanguageCreate($partner_user_id , $partner_user_cv_language_resource)
+> \Ageras\Api\Model\PartnerUserCvLanguageResource cvLanguageCreate($partner_user_id , $partner_user_cv_language_resource)
 
 Create partner user language.
 
@@ -1219,7 +1219,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
+$partner_user_cv_language_resource = new \Ageras\Api\Model\PartnerUserCvLanguageResource(); // \Ageras\Api\Model\PartnerUserCvLanguageResource | 
 
 try {
     $result = $api_instance->cvLanguageCreate($partner_user_id , $partner_user_cv_language_resource);
@@ -1235,11 +1235,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\Model\PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
+[**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
 
 ### Authorization
 
@@ -1305,7 +1305,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvLanguageUpdate**
-> \Ageras\Api\PartnerUserCvLanguageResource cvLanguageUpdate($partner_user_id , $partner_user_cv_language_resource)
+> \Ageras\Api\Model\PartnerUserCvLanguageResource cvLanguageUpdate($partner_user_id , $partner_user_cv_language_resource)
 
 Update partner user language.
 
@@ -1324,7 +1324,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_language_resource = new \Ageras\Api\PartnerUserCvLanguageResource(); // \Ageras\Api\PartnerUserCvLanguageResource | 
+$partner_user_cv_language_resource = new \Ageras\Api\Model\PartnerUserCvLanguageResource(); // \Ageras\Api\Model\PartnerUserCvLanguageResource | 
 
 try {
     $result = $api_instance->cvLanguageUpdate($partner_user_id , $partner_user_cv_language_resource);
@@ -1340,11 +1340,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\Model\PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
+[**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)
 
 ### Authorization
 
@@ -1458,7 +1458,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cvSocialUpdate**
-> \Ageras\Api\PartnerUserCvSocialMediaResource cvSocialUpdate($partner_user_id , $partner_user_cv_social_media_resource)
+> \Ageras\Api\Model\PartnerUserCvSocialMediaResource cvSocialUpdate($partner_user_id , $partner_user_cv_social_media_resource)
 
 Update partner user social media.
 
@@ -1477,7 +1477,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
-$partner_user_cv_social_media_resource = new \Ageras\Api\PartnerUserCvSocialMediaResource(); // \Ageras\Api\PartnerUserCvSocialMediaResource | 
+$partner_user_cv_social_media_resource = new \Ageras\Api\Model\PartnerUserCvSocialMediaResource(); // \Ageras\Api\Model\PartnerUserCvSocialMediaResource | 
 
 try {
     $result = $api_instance->cvSocialUpdate($partner_user_id , $partner_user_cv_social_media_resource);
@@ -1493,11 +1493,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_social_media_resource** | [**\Ageras\Api\PartnerUserCvSocialMediaResource**](../Model/\Ageras\Api\PartnerUserCvSocialMediaResource.md)|  |
+ **partner_user_cv_social_media_resource** | [**\Ageras\Api\Model\PartnerUserCvSocialMediaResource**](../Model/\Ageras\Api\Model\PartnerUserCvSocialMediaResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerUserCvSocialMediaResource**](../Model/PartnerUserCvSocialMediaResource.md)
+[**\Ageras\Api\Model\PartnerUserCvSocialMediaResource**](../Model/PartnerUserCvSocialMediaResource.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **mobile** | **string** | The Mobile Phone Number used to contact the customer. | [optional] 
 **website** | **string** | Do the customer have a website ? | [optional] 
 **vat_number** | **string** | VAT Number for the customer. | [optional] 
-**geo** | [**\Ageras\Api\ProjectGeoResource**](ProjectGeoResource.md) |  | [optional] 
+**geo** | [**\Ageras\Api\Model\ProjectGeoResource**](ProjectGeoResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **organisationEmployeesGet**
-> \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id )
+> \Ageras\Api\Model\EmployeeResource organisationEmployeesGet($employee_id )
 
 Get an employee by a given employee id.
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
+[**\Ageras\Api\Model\EmployeeResource**](../Model/EmployeeResource.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesGet2**
-> \Ageras\Api\EmployeeResource organisationEmployeesGet2($organisation_id,  $employee_id )
+> \Ageras\Api\Model\EmployeeResource organisationEmployeesGet2($organisation_id,  $employee_id )
 
 Get an employee by a given employee id.
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
+[**\Ageras\Api\Model\EmployeeResource**](../Model/EmployeeResource.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesIndex**
-> \Ageras\Api\EmployeeResult organisationEmployeesIndex($criteria)
+> \Ageras\Api\Model\EmployeeResult organisationEmployeesIndex($criteria)
 
 List and Search for employees working at Ageras.
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\EmployeeResult**](../Model/EmployeeResult.md)
+[**\Ageras\Api\Model\EmployeeResult**](../Model/EmployeeResult.md)
 
 ### Authorization
 

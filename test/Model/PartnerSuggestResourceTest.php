@@ -107,6 +107,14 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "state"
+     */
+    public function testPropertyState()
+    {
+
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **packagesFeaturesIndex**
-> \Ageras\Api\PackageFeatureResult packagesFeaturesIndex($criteria)
+> \Ageras\Api\Model\PackageFeatureResult packagesFeaturesIndex($criteria)
 
 Get all package features.
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PackageFeatureResult**](../Model/PackageFeatureResult.md)
+[**\Ageras\Api\Model\PackageFeatureResult**](../Model/PackageFeatureResult.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesGet**
-> \Ageras\Api\PackageResource packagesGet($id )
+> \Ageras\Api\Model\PackageResource packagesGet($id )
 
 Get an individual package by ID.
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PackageResource**](../Model/PackageResource.md)
+[**\Ageras\Api\Model\PackageResource**](../Model/PackageResource.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **packagesIndex**
-> \Ageras\Api\PackageResult packagesIndex($criteria)
+> \Ageras\Api\Model\PackageResult packagesIndex($criteria)
 
 Get all active packages for a given geo_code.
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PackageResult**](../Model/PackageResult.md)
+[**\Ageras\Api\Model\PackageResult**](../Model/PackageResult.md)
 
 ### Authorization
 

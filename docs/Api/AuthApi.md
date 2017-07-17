@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **authCreate**
-> \Ageras\Api\AuthResource authCreate($auth_resource)
+> \Ageras\Api\Model\AuthResource authCreate($auth_resource)
 
 Authenticate user and receive a token.
 
@@ -33,7 +33,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
+$auth_resource = new \Ageras\Api\Model\AuthResource(); // \Ageras\Api\Model\AuthResource | Authentication Resource with authorize information
 
 try {
     $result = $api_instance->authCreate($auth_resource);
@@ -48,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)| Authentication Resource with authorize information |
+ **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/\Ageras\Api\Model\AuthResource.md)| Authentication Resource with authorize information |
 
 ### Return type
 
-[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\Model\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authGet**
-> \Ageras\Api\AuthResource authGet()
+> \Ageras\Api\Model\AuthResource authGet()
 
 Get information about the current Authenticated session.
 
@@ -145,7 +145,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\Model\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordCreate**
-> \Ageras\Api\PasswordResetResource authPasswordCreate($password_reset_resource)
+> \Ageras\Api\Model\PasswordResetResource authPasswordCreate($password_reset_resource)
 
 Reset Password from a given reset token.
 
@@ -177,7 +177,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
+$password_reset_resource = new \Ageras\Api\Model\PasswordResetResource(); // \Ageras\Api\Model\PasswordResetResource | 
 
 try {
     $result = $api_instance->authPasswordCreate($password_reset_resource);
@@ -192,11 +192,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Ageras\Api\PasswordResetResource**](../Model/\Ageras\Api\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/\Ageras\Api\Model\PasswordResetResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PasswordResetResource**](../Model/PasswordResetResource.md)
+[**\Ageras\Api\Model\PasswordResetResource**](../Model/PasswordResetResource.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordUpdate**
-> \Ageras\Api\PasswordResetResource authPasswordUpdate($password_reset_resource)
+> \Ageras\Api\Model\PasswordResetResource authPasswordUpdate($password_reset_resource)
 
 Change Password.
 
@@ -228,7 +228,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reset_resource = new \Ageras\Api\PasswordResetResource(); // \Ageras\Api\PasswordResetResource | 
+$password_reset_resource = new \Ageras\Api\Model\PasswordResetResource(); // \Ageras\Api\Model\PasswordResetResource | 
 
 try {
     $result = $api_instance->authPasswordUpdate($password_reset_resource);
@@ -243,11 +243,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Ageras\Api\PasswordResetResource**](../Model/\Ageras\Api\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/\Ageras\Api\Model\PasswordResetResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PasswordResetResource**](../Model/PasswordResetResource.md)
+[**\Ageras\Api\Model\PasswordResetResource**](../Model/PasswordResetResource.md)
 
 ### Authorization
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPasswordreminderCreate**
-> \Ageras\Api\PasswordReminderResource authPasswordreminderCreate($password_reminder_resource)
+> \Ageras\Api\Model\PasswordReminderResource authPasswordreminderCreate($password_reminder_resource)
 
 Request a password reminder e-mail.
 
@@ -279,7 +279,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$password_reminder_resource = new \Ageras\Api\PasswordReminderResource(); // \Ageras\Api\PasswordReminderResource | 
+$password_reminder_resource = new \Ageras\Api\Model\PasswordReminderResource(); // \Ageras\Api\Model\PasswordReminderResource | 
 
 try {
     $result = $api_instance->authPasswordreminderCreate($password_reminder_resource);
@@ -294,11 +294,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reminder_resource** | [**\Ageras\Api\PasswordReminderResource**](../Model/\Ageras\Api\PasswordReminderResource.md)|  |
+ **password_reminder_resource** | [**\Ageras\Api\Model\PasswordReminderResource**](../Model/\Ageras\Api\Model\PasswordReminderResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PasswordReminderResource**](../Model/PasswordReminderResource.md)
+[**\Ageras\Api\Model\PasswordReminderResource**](../Model/PasswordReminderResource.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authPermissionsIndex**
-> \Ageras\Api\PermissionResult authPermissionsIndex($criteria)
+> \Ageras\Api\Model\PermissionResult authPermissionsIndex($criteria)
 
 List the Permissions for the given authenticated user.
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\PermissionResult**](../Model/PermissionResult.md)
+[**\Ageras\Api\Model\PermissionResult**](../Model/PermissionResult.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authUpdate**
-> \Ageras\Api\AuthResource authUpdate($auth_resource)
+> \Ageras\Api\Model\AuthResource authUpdate($auth_resource)
 
 Renew authentication session.
 
@@ -387,7 +387,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
+$auth_resource = new \Ageras\Api\Model\AuthResource(); // \Ageras\Api\Model\AuthResource | 
 
 try {
     $result = $api_instance->authUpdate($auth_resource);
@@ -402,11 +402,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)|  |
+ **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/\Ageras\Api\Model\AuthResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\AuthResource**](../Model/AuthResource.md)
+[**\Ageras\Api\Model\AuthResource**](../Model/AuthResource.md)
 
 ### Authorization
 

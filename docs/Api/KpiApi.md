@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **kpiIndex**
-> \Ageras\Api\KPIResult kpiIndex($criteria)
+> \Ageras\Api\Model\KPIResult kpiIndex($criteria)
 
 List the different KPI's
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Ageras\Api\KPIResult**](../Model/KPIResult.md)
+[**\Ageras\Api\Model\KPIResult**](../Model/KPIResult.md)
 
 ### Authorization
 
