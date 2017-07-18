@@ -91,9 +91,9 @@ class LeadFeedbackResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "satisfaction_level_id"
+     * Test attribute "satisfaction"
      */
-    public function testPropertySatisfactionLevelId()
+    public function testPropertySatisfaction()
     {
 
     }
@@ -107,9 +107,9 @@ class LeadFeedbackResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "chosen_partner"
+     * Test attribute "partner"
      */
-    public function testPropertyChosenPartner()
+    public function testPropertyPartner()
     {
 
     }

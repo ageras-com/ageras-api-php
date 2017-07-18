@@ -1,6 +1,6 @@
 <?php
 /**
- * ParticipantResourceTest
+ * LeadQuoteInfoEntryResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * ParticipantResourceTest Class Doc Comment
+ * LeadQuoteInfoEntryResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description ParticipantResource
+// * @description LeadQuoteInfoEntryResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
+class LeadQuoteInfoEntryResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ParticipantResource"
+     * Test "LeadQuoteInfoEntryResource"
      */
-    public function testParticipantResource()
+    public function testLeadQuoteInfoEntryResource()
     {
 
     }
@@ -91,89 +91,113 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "first_name"
+     * Test attribute "status"
      */
-    public function testPropertyFirstName()
+    public function testPropertyStatus()
     {
 
     }
 
     /**
-     * Test attribute "last_name"
+     * Test attribute "created_at"
      */
-    public function testPropertyLastName()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "paid_at"
      */
-    public function testPropertyName()
+    public function testPropertyPaidAt()
     {
 
     }
 
     /**
-     * Test attribute "picture"
+     * Test attribute "expires_at"
      */
-    public function testPropertyPicture()
+    public function testPropertyExpiresAt()
     {
 
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "published_at"
      */
-    public function testPropertyEmail()
+    public function testPropertyPublishedAt()
     {
 
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "partner"
      */
-    public function testPropertyType()
+    public function testPropertyPartner()
     {
 
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "partner_lead_offer_id"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyPartnerLeadOfferId()
     {
 
     }
 
     /**
-     * Test attribute "lead_id"
+     * Test attribute "title"
      */
-    public function testPropertyLeadId()
+    public function testPropertyTitle()
     {
 
     }
 
     /**
-     * Test attribute "partner_user_id"
+     * Test attribute "description"
      */
-    public function testPropertyPartnerUserId()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "client_id"
+     * Test attribute "price"
      */
-    public function testPropertyClientId()
+    public function testPropertyPrice()
     {
 
     }
 
     /**
-     * Test attribute "partner_id"
+     * Test attribute "total_vat_amount"
      */
-    public function testPropertyPartnerId()
+    public function testPropertyTotalVatAmount()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_excl_vat"
+     */
+    public function testPropertyTotalAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_incl_vat"
+     */
+    public function testPropertyTotalAmountInclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "prepayment_amount_incl_vat"
+     */
+    public function testPropertyPrepaymentAmountInclVat()
     {
 
     }

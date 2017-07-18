@@ -98,4 +98,12 @@ class LeadActionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "quote_id"
+     */
+    public function testPropertyQuoteId()
+    {
+
+    }
+
 }

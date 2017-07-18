@@ -123,9 +123,9 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "open_for_offers"
+     * Test attribute "progress"
      */
-    public function testPropertyOpenForOffers()
+    public function testPropertyProgress()
     {
 
     }
@@ -147,9 +147,25 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "customer"
+     * Test attribute "client"
      */
-    public function testPropertyCustomer()
+    public function testPropertyClient()
+    {
+
+    }
+
+    /**
+     * Test attribute "customer_info"
+     */
+    public function testPropertyCustomerInfo()
+    {
+
+    }
+
+    /**
+     * Test attribute "requirements"
+     */
+    public function testPropertyRequirements()
     {
 
     }
@@ -158,6 +174,14 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "punch_price"
      */
     public function testPropertyPunchPrice()
+    {
+
+    }
+
+    /**
+     * Test attribute "service_fee"
+     */
+    public function testPropertyServiceFee()
     {
 
     }
@@ -211,25 +235,17 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "quotes_info"
+     */
+    public function testPropertyQuotesInfo()
+    {
+
+    }
+
+    /**
      * Test attribute "affiliate_campaign"
      */
     public function testPropertyAffiliateCampaign()
-    {
-
-    }
-
-    /**
-     * Test attribute "client_id"
-     */
-    public function testPropertyClientId()
-    {
-
-    }
-
-    /**
-     * Test attribute "progress"
-     */
-    public function testPropertyProgress()
     {
 
     }

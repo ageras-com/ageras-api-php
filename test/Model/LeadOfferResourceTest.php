@@ -91,6 +91,14 @@ class LeadOfferResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "won"
+     */
+    public function testPropertyWon()
+    {
+
+    }
+
+    /**
      * Test attribute "partner_id"
      */
     public function testPropertyPartnerId()

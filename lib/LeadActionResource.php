@@ -55,7 +55,8 @@ class LeadActionResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'action' => 'string',
-        'date' => 'string'
+        'date' => 'string',
+        'quote_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +70,8 @@ class LeadActionResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'action' => 'action',
-        'date' => 'date'
+        'date' => 'date',
+        'quote_id' => 'quote_id'
     ];
 
 
@@ -79,7 +81,8 @@ class LeadActionResource implements ArrayAccess
      */
     protected static $setters = [
         'action' => 'setAction',
-        'date' => 'setDate'
+        'date' => 'setDate',
+        'quote_id' => 'setQuoteId'
     ];
 
 
@@ -89,7 +92,8 @@ class LeadActionResource implements ArrayAccess
      */
     protected static $getters = [
         'action' => 'getAction',
-        'date' => 'getDate'
+        'date' => 'getDate',
+        'quote_id' => 'getQuoteId'
     ];
 
     public static function attributeMap()
@@ -109,6 +113,8 @@ class LeadActionResource implements ArrayAccess
 
     const ACTION_UNKNOWN = 'unknown';
     const ACTION_CALL = 'call';
+    const ACTION_ACCEPT_QUOTE = 'accept_quote';
+    const ACTION_PUBLISH_QUOTE = 'publish_quote';
     
 
     
@@ -121,6 +127,8 @@ class LeadActionResource implements ArrayAccess
         return [
             self::ACTION_UNKNOWN,
             self::ACTION_CALL,
+            self::ACTION_ACCEPT_QUOTE,
+            self::ACTION_PUBLISH_QUOTE,
         ];
     }
     
@@ -139,6 +147,7 @@ class LeadActionResource implements ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['quote_id'] = isset($data['quote_id']) ? $data['quote_id'] : null;
     }
 
     /**
@@ -150,9 +159,9 @@ class LeadActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "call"];
+        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote'.";
         }
 
         return $invalid_properties;
@@ -167,7 +176,7 @@ class LeadActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "call"];
+        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -191,9 +200,9 @@ class LeadActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'call');
+        $allowed_values = array('unknown', 'call', 'accept_quote', 'publish_quote');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote'");
         }
         $this->container['action'] = $action;
 
@@ -217,6 +226,27 @@ class LeadActionResource implements ArrayAccess
     public function setDate($date)
     {
         $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote_id
+     * @return int
+     */
+    public function getQuoteId()
+    {
+        return $this->container['quote_id'];
+    }
+
+    /**
+     * Sets quote_id
+     * @param int $quote_id Quote id
+     * @return $this
+     */
+    public function setQuoteId($quote_id)
+    {
+        $this->container['quote_id'] = $quote_id;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadFeedbackResource
+ * LeadOffersInfoResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadFeedbackResource Class Doc Comment
+ * LeadOffersInfoResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadFeedbackResource implements ArrayAccess
+class LeadOffersInfoResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,17 @@ class LeadFeedbackResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadFeedbackResource';
+    protected static $swaggerModelName = 'LeadOffersInfoResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reason' => 'string',
-        'satisfaction' => 'int',
-        'feedback' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource'
+        'max' => 'int',
+        'count' => 'int',
+        'open_for_offers' => 'bool',
+        'offers' => '\Ageras\Api\LeadOffersInfoItemResource[]'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +70,10 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason' => 'reason',
-        'satisfaction' => 'satisfaction',
-        'feedback' => 'feedback',
-        'partner' => 'partner'
+        'max' => 'max',
+        'count' => 'count',
+        'open_for_offers' => 'open_for_offers',
+        'offers' => 'offers'
     ];
 
 
@@ -82,10 +82,10 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reason' => 'setReason',
-        'satisfaction' => 'setSatisfaction',
-        'feedback' => 'setFeedback',
-        'partner' => 'setPartner'
+        'max' => 'setMax',
+        'count' => 'setCount',
+        'open_for_offers' => 'setOpenForOffers',
+        'offers' => 'setOffers'
     ];
 
 
@@ -94,10 +94,10 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reason' => 'getReason',
-        'satisfaction' => 'getSatisfaction',
-        'feedback' => 'getFeedback',
-        'partner' => 'getPartner'
+        'max' => 'getMax',
+        'count' => 'getCount',
+        'open_for_offers' => 'getOpenForOffers',
+        'offers' => 'getOffers'
     ];
 
     public static function attributeMap()
@@ -131,10 +131,10 @@ class LeadFeedbackResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
-        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['open_for_offers'] = isset($data['open_for_offers']) ? $data['open_for_offers'] : false;
+        $this->container['offers'] = isset($data['offers']) ? $data['offers'] : null;
     }
 
     /**
@@ -163,85 +163,85 @@ class LeadFeedbackResource implements ArrayAccess
 
 
     /**
-     * Gets reason
-     * @return string
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     * @param string $reason The reason for choosing the partner
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets satisfaction
+     * Gets max
      * @return int
      */
-    public function getSatisfaction()
+    public function getMax()
     {
-        return $this->container['satisfaction'];
+        return $this->container['max'];
     }
 
     /**
-     * Sets satisfaction
-     * @param int $satisfaction Satisfaction
+     * Sets max
+     * @param int $max Max Offer count.
      * @return $this
      */
-    public function setSatisfaction($satisfaction)
+    public function setMax($max)
     {
-        $this->container['satisfaction'] = $satisfaction;
+        $this->container['max'] = $max;
 
         return $this;
     }
 
     /**
-     * Gets feedback
-     * @return string
+     * Gets count
+     * @return int
      */
-    public function getFeedback()
+    public function getCount()
     {
-        return $this->container['feedback'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets feedback
-     * @param string $feedback Feedback
+     * Sets count
+     * @param int $count Number of offers.
      * @return $this
      */
-    public function setFeedback($feedback)
+    public function setCount($count)
     {
-        $this->container['feedback'] = $feedback;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * Gets open_for_offers
+     * @return bool
      */
-    public function getPartner()
+    public function getOpenForOffers()
     {
-        return $this->container['partner'];
+        return $this->container['open_for_offers'];
     }
 
     /**
-     * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * Sets open_for_offers
+     * @param bool $open_for_offers Open for quotes.
      * @return $this
      */
-    public function setPartner($partner)
+    public function setOpenForOffers($open_for_offers)
     {
-        $this->container['partner'] = $partner;
+        $this->container['open_for_offers'] = $open_for_offers;
+
+        return $this;
+    }
+
+    /**
+     * Gets offers
+     * @return \Ageras\Api\LeadOffersInfoItemResource[]
+     */
+    public function getOffers()
+    {
+        return $this->container['offers'];
+    }
+
+    /**
+     * Sets offers
+     * @param \Ageras\Api\LeadOffersInfoItemResource[] $offers List of offers.
+     * @return $this
+     */
+    public function setOffers($offers)
+    {
+        $this->container['offers'] = $offers;
 
         return $this;
     }

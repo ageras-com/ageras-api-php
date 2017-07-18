@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSuggestResourceTest
+ * LeadCustomerInfoResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerSuggestResourceTest Class Doc Comment
+ * LeadCustomerInfoResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerSuggestResource
+// * @description LeadCustomerInfoResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
+class LeadCustomerInfoResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,17 +75,25 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerSuggestResource"
+     * Test "LeadCustomerInfoResource"
      */
-    public function testPartnerSuggestResource()
+    public function testLeadCustomerInfoResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "first_name"
      */
-    public function testPropertyId()
+    public function testPropertyFirstName()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
     {
 
     }
@@ -99,57 +107,33 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "email"
      */
-    public function testPropertySlug()
+    public function testPropertyEmail()
     {
 
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "phone"
      */
-    public function testPropertyState()
+    public function testPropertyPhone()
     {
 
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "mobile"
      */
-    public function testPropertyStatus()
+    public function testPropertyMobile()
     {
 
     }
 
     /**
-     * Test attribute "zip_code"
+     * Test attribute "vat_number"
      */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_state"
-     */
-    public function testPropertyPartnerState()
+    public function testPropertyVatNumber()
     {
 
     }
