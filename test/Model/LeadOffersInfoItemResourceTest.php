@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSuggestResourceTest
+ * LeadOffersInfoItemResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerSuggestResourceTest Class Doc Comment
+ * LeadOffersInfoItemResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerSuggestResource
+// * @description LeadOffersInfoItemResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
+class LeadOffersInfoItemResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerSuggestResource"
+     * Test "LeadOffersInfoItemResource"
      */
-    public function testPartnerSuggestResource()
+    public function testLeadOffersInfoItemResource()
     {
 
     }
@@ -91,65 +91,25 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "won"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyWon()
     {
 
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "created_at"
      */
-    public function testPropertySlug()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "partner"
      */
-    public function testPropertyState()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "zip_code"
-     */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_state"
-     */
-    public function testPropertyPartnerState()
+    public function testPropertyPartner()
     {
 
     }

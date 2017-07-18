@@ -134,8 +134,12 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\ConversationsApi();
 $criteria = [
         'conversation_id' => "conversation_id_example"; // string | Conversation id.
-        'project_id' => 56; // int | Project id
-        'partner_id' => 56; // int | Partner id
+        'project_id' => "project_id_example"; // string | Project id
+        'partner_id' => "partner_id_example"; // string | Partner id
+        'partner_user_id' => "partner_user_id_example"; // string | Partner user id
+        'client_id' => "client_id_example"; // string | Client id
+        'employee_id' => "employee_id_example"; // string | Employee id
+        'lead_id' => "lead_id_example"; // string | Lead id
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -155,8 +159,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**| Conversation id. | [optional]
- **project_id** | **int**| Project id | [optional]
- **partner_id** | **int**| Partner id | [optional]
+ **project_id** | **string**| Project id | [optional]
+ **partner_id** | **string**| Partner id | [optional]
+ **partner_user_id** | **string**| Partner user id | [optional]
+ **client_id** | **string**| Client id | [optional]
+ **employee_id** | **string**| Employee id | [optional]
+ **lead_id** | **string**| Lead id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

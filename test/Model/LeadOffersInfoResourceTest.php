@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSuggestResourceTest
+ * LeadOffersInfoResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerSuggestResourceTest Class Doc Comment
+ * LeadOffersInfoResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerSuggestResource
+// * @description LeadOffersInfoResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
+class LeadOffersInfoResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,41 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerSuggestResource"
+     * Test "LeadOffersInfoResource"
      */
-    public function testPartnerSuggestResource()
+    public function testLeadOffersInfoResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "max"
      */
-    public function testPropertyId()
+    public function testPropertyMax()
     {
 
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "count"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyCount()
     {
 
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "open_for_offers"
      */
-    public function testPropertySlug()
+    public function testPropertyOpenForOffers()
     {
 
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "offers"
      */
-    public function testPropertyState()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "zip_code"
-     */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_state"
-     */
-    public function testPropertyPartnerState()
+    public function testPropertyOffers()
     {
 
     }

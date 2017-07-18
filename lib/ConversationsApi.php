@@ -265,8 +265,12 @@ class ConversationsApi
      *
      * @param $criteria = [
      *    'conversation_id' => string,
-     *    'project_id' => int,
-     *    'partner_id' => int,
+     *    'project_id' => string,
+     *    'partner_id' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
+     *    'employee_id' => string,
+     *    'lead_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -287,8 +291,12 @@ class ConversationsApi
      *
      * @param $criteria = [
      *    'conversation_id' => string,
-     *    'project_id' => int,
-     *    'partner_id' => int,
+     *    'project_id' => string,
+     *    'partner_id' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
+     *    'employee_id' => string,
+     *    'lead_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -321,6 +329,22 @@ class ConversationsApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['partner_user_id'])) {
+            $queryParams['partner_user_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_user_id']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
         }
         // query params
         if (isset($criteria['limit'])) {

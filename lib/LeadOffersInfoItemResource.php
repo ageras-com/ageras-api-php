@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadFeedbackResource
+ * LeadOffersInfoItemResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadFeedbackResource Class Doc Comment
+ * LeadOffersInfoItemResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadFeedbackResource implements ArrayAccess
+class LeadOffersInfoItemResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,16 @@ class LeadFeedbackResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadFeedbackResource';
+    protected static $swaggerModelName = 'LeadOffersInfoItemResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reason' => 'string',
-        'satisfaction' => 'int',
-        'feedback' => 'string',
+        'id' => 'int',
+        'won' => 'bool',
+        'created_at' => 'string',
         'partner' => '\Ageras\Api\PartnerSuggestResource'
     ];
 
@@ -70,9 +70,9 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason' => 'reason',
-        'satisfaction' => 'satisfaction',
-        'feedback' => 'feedback',
+        'id' => 'id',
+        'won' => 'won',
+        'created_at' => 'created_at',
         'partner' => 'partner'
     ];
 
@@ -82,9 +82,9 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reason' => 'setReason',
-        'satisfaction' => 'setSatisfaction',
-        'feedback' => 'setFeedback',
+        'id' => 'setId',
+        'won' => 'setWon',
+        'created_at' => 'setCreatedAt',
         'partner' => 'setPartner'
     ];
 
@@ -94,9 +94,9 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reason' => 'getReason',
-        'satisfaction' => 'getSatisfaction',
-        'feedback' => 'getFeedback',
+        'id' => 'getId',
+        'won' => 'getWon',
+        'created_at' => 'getCreatedAt',
         'partner' => 'getPartner'
     ];
 
@@ -131,9 +131,9 @@ class LeadFeedbackResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
-        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['won'] = isset($data['won']) ? $data['won'] : false;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
     }
 
@@ -163,64 +163,64 @@ class LeadFeedbackResource implements ArrayAccess
 
 
     /**
-     * Gets reason
-     * @return string
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     * @param string $reason The reason for choosing the partner
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets satisfaction
+     * Gets id
      * @return int
      */
-    public function getSatisfaction()
+    public function getId()
     {
-        return $this->container['satisfaction'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets satisfaction
-     * @param int $satisfaction Satisfaction
+     * Sets id
+     * @param int $id The offers's id.
      * @return $this
      */
-    public function setSatisfaction($satisfaction)
+    public function setId($id)
     {
-        $this->container['satisfaction'] = $satisfaction;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets feedback
-     * @return string
+     * Gets won
+     * @return bool
      */
-    public function getFeedback()
+    public function getWon()
     {
-        return $this->container['feedback'];
+        return $this->container['won'];
     }
 
     /**
-     * Sets feedback
-     * @param string $feedback Feedback
+     * Sets won
+     * @param bool $won Did this offer win
      * @return $this
      */
-    public function setFeedback($feedback)
+    public function setWon($won)
     {
-        $this->container['feedback'] = $feedback;
+        $this->container['won'] = $won;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }

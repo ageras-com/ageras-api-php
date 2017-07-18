@@ -55,6 +55,7 @@ class LeadOfferResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'won' => 'bool',
         'partner_id' => 'int',
         'punch_price' => 'int',
         'method' => 'string',
@@ -76,6 +77,7 @@ class LeadOfferResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'won' => 'won',
         'partner_id' => 'partner_id',
         'punch_price' => 'punch_price',
         'method' => 'method',
@@ -93,6 +95,7 @@ class LeadOfferResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'won' => 'setWon',
         'partner_id' => 'setPartnerId',
         'punch_price' => 'setPunchPrice',
         'method' => 'setMethod',
@@ -110,6 +113,7 @@ class LeadOfferResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'won' => 'getWon',
         'partner_id' => 'getPartnerId',
         'punch_price' => 'getPunchPrice',
         'method' => 'getMethod',
@@ -176,6 +180,7 @@ class LeadOfferResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['won'] = isset($data['won']) ? $data['won'] : false;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['punch_price'] = isset($data['punch_price']) ? $data['punch_price'] : null;
         $this->container['method'] = isset($data['method']) ? $data['method'] : 'unknown';
@@ -237,6 +242,27 @@ class LeadOfferResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets won
+     * @return bool
+     */
+    public function getWon()
+    {
+        return $this->container['won'];
+    }
+
+    /**
+     * Sets won
+     * @param bool $won Is the offer won.
+     * @return $this
+     */
+    public function setWon($won)
+    {
+        $this->container['won'] = $won;
 
         return $this;
     }

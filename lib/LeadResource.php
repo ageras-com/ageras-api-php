@@ -59,20 +59,22 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'string',
         'validated_at' => 'string',
         'status' => 'string',
-        'open_for_offers' => 'bool',
+        'progress' => '\Ageras\Api\LeadProgressResource[]',
         'title' => 'string',
         'description' => 'string',
-        'customer' => '\Ageras\Api\LeadCustomerResource',
+        'client' => '\Ageras\Api\LeadClientResource',
+        'customer_info' => '\Ageras\Api\LeadCustomerInfoResource',
+        'requirements' => '\Ageras\Api\LeadRequirementsResource',
         'punch_price' => 'int',
+        'service_fee' => '\Ageras\Api\AmountResource',
         'geo' => '\Ageras\Api\LeadGeoResource',
         'attributes' => '\Ageras\Api\LeadAttributeResource[]',
         'industries' => '\Ageras\Api\LeadIndustryPairResource',
         'meeting' => '\Ageras\Api\LeadMeetingResource',
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
-        'offers_info' => '\Ageras\Api\LeadOfferInfoResource',
+        'offers_info' => '\Ageras\Api\LeadOffersInfoResource',
+        'quotes_info' => '\Ageras\Api\LeadQuotesInfoResource',
         'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
-        'client_id' => 'int',
-        'progress' => '\Ageras\Api\LeadProgressResource[]',
         'feedback' => '\Ageras\Api\LeadFeedbackResource'
     ];
 
@@ -91,20 +93,22 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'validated_at' => 'validated_at',
         'status' => 'status',
-        'open_for_offers' => 'open_for_offers',
+        'progress' => 'progress',
         'title' => 'title',
         'description' => 'description',
-        'customer' => 'customer',
+        'client' => 'client',
+        'customer_info' => 'customer_info',
+        'requirements' => 'requirements',
         'punch_price' => 'punch_price',
+        'service_fee' => 'service_fee',
         'geo' => 'geo',
         'attributes' => 'attributes',
         'industries' => 'industries',
         'meeting' => 'meeting',
         'accepted' => 'accepted',
         'offers_info' => 'offers_info',
+        'quotes_info' => 'quotes_info',
         'affiliate_campaign' => 'affiliate_campaign',
-        'client_id' => 'client_id',
-        'progress' => 'progress',
         'feedback' => 'feedback'
     ];
 
@@ -119,20 +123,22 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'validated_at' => 'setValidatedAt',
         'status' => 'setStatus',
-        'open_for_offers' => 'setOpenForOffers',
+        'progress' => 'setProgress',
         'title' => 'setTitle',
         'description' => 'setDescription',
-        'customer' => 'setCustomer',
+        'client' => 'setClient',
+        'customer_info' => 'setCustomerInfo',
+        'requirements' => 'setRequirements',
         'punch_price' => 'setPunchPrice',
+        'service_fee' => 'setServiceFee',
         'geo' => 'setGeo',
         'attributes' => 'setAttributes',
         'industries' => 'setIndustries',
         'meeting' => 'setMeeting',
         'accepted' => 'setAccepted',
         'offers_info' => 'setOffersInfo',
+        'quotes_info' => 'setQuotesInfo',
         'affiliate_campaign' => 'setAffiliateCampaign',
-        'client_id' => 'setClientId',
-        'progress' => 'setProgress',
         'feedback' => 'setFeedback'
     ];
 
@@ -147,20 +153,22 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'validated_at' => 'getValidatedAt',
         'status' => 'getStatus',
-        'open_for_offers' => 'getOpenForOffers',
+        'progress' => 'getProgress',
         'title' => 'getTitle',
         'description' => 'getDescription',
-        'customer' => 'getCustomer',
+        'client' => 'getClient',
+        'customer_info' => 'getCustomerInfo',
+        'requirements' => 'getRequirements',
         'punch_price' => 'getPunchPrice',
+        'service_fee' => 'getServiceFee',
         'geo' => 'getGeo',
         'attributes' => 'getAttributes',
         'industries' => 'getIndustries',
         'meeting' => 'getMeeting',
         'accepted' => 'getAccepted',
         'offers_info' => 'getOffersInfo',
+        'quotes_info' => 'getQuotesInfo',
         'affiliate_campaign' => 'getAffiliateCampaign',
-        'client_id' => 'getClientId',
-        'progress' => 'getProgress',
         'feedback' => 'getFeedback'
     ];
 
@@ -218,20 +226,22 @@ class LeadResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['validated_at'] = isset($data['validated_at']) ? $data['validated_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
-        $this->container['open_for_offers'] = isset($data['open_for_offers']) ? $data['open_for_offers'] : false;
+        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['customer_info'] = isset($data['customer_info']) ? $data['customer_info'] : null;
+        $this->container['requirements'] = isset($data['requirements']) ? $data['requirements'] : null;
         $this->container['punch_price'] = isset($data['punch_price']) ? $data['punch_price'] : null;
+        $this->container['service_fee'] = isset($data['service_fee']) ? $data['service_fee'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
         $this->container['industries'] = isset($data['industries']) ? $data['industries'] : null;
         $this->container['meeting'] = isset($data['meeting']) ? $data['meeting'] : null;
         $this->container['accepted'] = isset($data['accepted']) ? $data['accepted'] : null;
         $this->container['offers_info'] = isset($data['offers_info']) ? $data['offers_info'] : null;
+        $this->container['quotes_info'] = isset($data['quotes_info']) ? $data['quotes_info'] : null;
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
-        $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
-        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
     }
 
@@ -379,22 +389,22 @@ class LeadResource implements ArrayAccess
     }
 
     /**
-     * Gets open_for_offers
-     * @return bool
+     * Gets progress
+     * @return \Ageras\Api\LeadProgressResource[]
      */
-    public function getOpenForOffers()
+    public function getProgress()
     {
-        return $this->container['open_for_offers'];
+        return $this->container['progress'];
     }
 
     /**
-     * Sets open_for_offers
-     * @param bool $open_for_offers Is the current lead open for offers.
+     * Sets progress
+     * @param \Ageras\Api\LeadProgressResource[] $progress Progress
      * @return $this
      */
-    public function setOpenForOffers($open_for_offers)
+    public function setProgress($progress)
     {
-        $this->container['open_for_offers'] = $open_for_offers;
+        $this->container['progress'] = $progress;
 
         return $this;
     }
@@ -442,22 +452,64 @@ class LeadResource implements ArrayAccess
     }
 
     /**
-     * Gets customer
-     * @return \Ageras\Api\LeadCustomerResource
+     * Gets client
+     * @return \Ageras\Api\LeadClientResource
      */
-    public function getCustomer()
+    public function getClient()
     {
-        return $this->container['customer'];
+        return $this->container['client'];
     }
 
     /**
-     * Sets customer
-     * @param \Ageras\Api\LeadCustomerResource $customer
+     * Sets client
+     * @param \Ageras\Api\LeadClientResource $client
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setClient($client)
     {
-        $this->container['customer'] = $customer;
+        $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_info
+     * @return \Ageras\Api\LeadCustomerInfoResource
+     */
+    public function getCustomerInfo()
+    {
+        return $this->container['customer_info'];
+    }
+
+    /**
+     * Sets customer_info
+     * @param \Ageras\Api\LeadCustomerInfoResource $customer_info
+     * @return $this
+     */
+    public function setCustomerInfo($customer_info)
+    {
+        $this->container['customer_info'] = $customer_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets requirements
+     * @return \Ageras\Api\LeadRequirementsResource
+     */
+    public function getRequirements()
+    {
+        return $this->container['requirements'];
+    }
+
+    /**
+     * Sets requirements
+     * @param \Ageras\Api\LeadRequirementsResource $requirements
+     * @return $this
+     */
+    public function setRequirements($requirements)
+    {
+        $this->container['requirements'] = $requirements;
 
         return $this;
     }
@@ -479,6 +531,27 @@ class LeadResource implements ArrayAccess
     public function setPunchPrice($punch_price)
     {
         $this->container['punch_price'] = $punch_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_fee
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getServiceFee()
+    {
+        return $this->container['service_fee'];
+    }
+
+    /**
+     * Sets service_fee
+     * @param \Ageras\Api\AmountResource $service_fee
+     * @return $this
+     */
+    public function setServiceFee($service_fee)
+    {
+        $this->container['service_fee'] = $service_fee;
 
         return $this;
     }
@@ -590,7 +663,7 @@ class LeadResource implements ArrayAccess
 
     /**
      * Gets offers_info
-     * @return \Ageras\Api\LeadOfferInfoResource
+     * @return \Ageras\Api\LeadOffersInfoResource
      */
     public function getOffersInfo()
     {
@@ -599,12 +672,33 @@ class LeadResource implements ArrayAccess
 
     /**
      * Sets offers_info
-     * @param \Ageras\Api\LeadOfferInfoResource $offers_info
+     * @param \Ageras\Api\LeadOffersInfoResource $offers_info
      * @return $this
      */
     public function setOffersInfo($offers_info)
     {
         $this->container['offers_info'] = $offers_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets quotes_info
+     * @return \Ageras\Api\LeadQuotesInfoResource
+     */
+    public function getQuotesInfo()
+    {
+        return $this->container['quotes_info'];
+    }
+
+    /**
+     * Sets quotes_info
+     * @param \Ageras\Api\LeadQuotesInfoResource $quotes_info
+     * @return $this
+     */
+    public function setQuotesInfo($quotes_info)
+    {
+        $this->container['quotes_info'] = $quotes_info;
 
         return $this;
     }
@@ -626,48 +720,6 @@ class LeadResource implements ArrayAccess
     public function setAffiliateCampaign($affiliate_campaign)
     {
         $this->container['affiliate_campaign'] = $affiliate_campaign;
-
-        return $this;
-    }
-
-    /**
-     * Gets client_id
-     * @return int
-     */
-    public function getClientId()
-    {
-        return $this->container['client_id'];
-    }
-
-    /**
-     * Sets client_id
-     * @param int $client_id Client id
-     * @return $this
-     */
-    public function setClientId($client_id)
-    {
-        $this->container['client_id'] = $client_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets progress
-     * @return \Ageras\Api\LeadProgressResource[]
-     */
-    public function getProgress()
-    {
-        return $this->container['progress'];
-    }
-
-    /**
-     * Sets progress
-     * @param \Ageras\Api\LeadProgressResource[] $progress Progress
-     * @return $this
-     */
-    public function setProgress($progress)
-    {
-        $this->container['progress'] = $progress;
 
         return $this;
     }
