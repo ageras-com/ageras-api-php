@@ -91,6 +91,30 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "reserved_at"
+     */
+    public function testPropertyReservedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "company_name"
      */
     public function testPropertyCompanyName()
@@ -99,9 +123,225 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+
+    }
+
+    /**
+     * Test attribute "slug"
+     */
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_enabled"
+     */
+    public function testPropertyIsEnabled()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_public"
+     */
+    public function testPropertyIsPublic()
+    {
+
+    }
+
+    /**
+     * Test attribute "has_subscription"
+     */
+    public function testPropertyHasSubscription()
+    {
+
+    }
+
+    /**
+     * Test attribute "state"
+     */
+    public function testPropertyState()
+    {
+
+    }
+
+    /**
+     * Test attribute "access"
+     */
+    public function testPropertyAccess()
+    {
+
+    }
+
+    /**
      * Test attribute "company_information"
      */
     public function testPropertyCompanyInformation()
+    {
+
+    }
+
+    /**
+     * Test attribute "company_information_html"
+     */
+    public function testPropertyCompanyInformationHtml()
+    {
+
+    }
+
+    /**
+     * Test attribute "vat_number"
+     */
+    public function testPropertyVatNumber()
+    {
+
+    }
+
+    /**
+     * Test attribute "website"
+     */
+    public function testPropertyWebsite()
+    {
+
+    }
+
+    /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo"
+     */
+    public function testPropertyGeo()
+    {
+
+    }
+
+    /**
+     * Test attribute "rating"
+     */
+    public function testPropertyRating()
+    {
+
+    }
+
+    /**
+     * Test attribute "employee"
+     */
+    public function testPropertyEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscription_employee"
+     */
+    public function testPropertySubscriptionEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_types"
+     */
+    public function testPropertyLeadTypes()
+    {
+
+    }
+
+    /**
+     * Test attribute "industry"
+     */
+    public function testPropertyIndustry()
+    {
+
+    }
+
+    /**
+     * Test attribute "satisfaction"
+     */
+    public function testPropertySatisfaction()
+    {
+
+    }
+
+    /**
+     * Test attribute "alerts"
+     */
+    public function testPropertyAlerts()
+    {
+
+    }
+
+    /**
+     * Test attribute "kpi"
+     */
+    public function testPropertyKpi()
+    {
+
+    }
+
+    /**
+     * Test attribute "invoicing"
+     */
+    public function testPropertyInvoicing()
+    {
+
+    }
+
+    /**
+     * Test attribute "preferences"
+     */
+    public function testPropertyPreferences()
+    {
+
+    }
+
+    /**
+     * Test attribute "refill"
+     */
+    public function testPropertyRefill()
+    {
+
+    }
+
+    /**
+     * Test attribute "demo"
+     */
+    public function testPropertyDemo()
+    {
+
+    }
+
+    /**
+     * Test attribute "canvas"
+     */
+    public function testPropertyCanvas()
+    {
+
+    }
+
+    /**
+     * Test attribute "tasks"
+     */
+    public function testPropertyTasks()
     {
 
     }

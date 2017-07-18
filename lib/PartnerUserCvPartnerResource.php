@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerUserCvExperienceResource
+ * PartnerUserCvPartnerResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerUserCvExperienceResource Class Doc Comment
+ * PartnerUserCvPartnerResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerUserCvExperienceResource implements ArrayAccess
+class PartnerUserCvPartnerResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PartnerUserCvExperienceResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerUserCvExperienceResource';
+    protected static $swaggerModelName = 'PartnerUserCvPartnerResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,13 +55,8 @@ class PartnerUserCvExperienceResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'title' => 'string',
         'company_name' => 'string',
-        'content' => 'string',
-        'from_date' => 'string',
-        'to_date' => 'string',
-        'partner' => '\Ageras\Api\PartnerUserCvPartnerResource',
-        'validation' => 'string'
+        'company_information' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -75,13 +70,8 @@ class PartnerUserCvExperienceResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'title' => 'title',
         'company_name' => 'company_name',
-        'content' => 'content',
-        'from_date' => 'from_date',
-        'to_date' => 'to_date',
-        'partner' => 'partner',
-        'validation' => 'validation'
+        'company_information' => 'company_information'
     ];
 
 
@@ -91,13 +81,8 @@ class PartnerUserCvExperienceResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'title' => 'setTitle',
         'company_name' => 'setCompanyName',
-        'content' => 'setContent',
-        'from_date' => 'setFromDate',
-        'to_date' => 'setToDate',
-        'partner' => 'setPartner',
-        'validation' => 'setValidation'
+        'company_information' => 'setCompanyInformation'
     ];
 
 
@@ -107,13 +92,8 @@ class PartnerUserCvExperienceResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'title' => 'getTitle',
         'company_name' => 'getCompanyName',
-        'content' => 'getContent',
-        'from_date' => 'getFromDate',
-        'to_date' => 'getToDate',
-        'partner' => 'getPartner',
-        'validation' => 'getValidation'
+        'company_information' => 'getCompanyInformation'
     ];
 
     public static function attributeMap()
@@ -148,13 +128,8 @@ class PartnerUserCvExperienceResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
-        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['from_date'] = isset($data['from_date']) ? $data['from_date'] : null;
-        $this->container['to_date'] = isset($data['to_date']) ? $data['to_date'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
-        $this->container['validation'] = isset($data['validation']) ? $data['validation'] : null;
+        $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
     }
 
     /**
@@ -193,33 +168,12 @@ class PartnerUserCvExperienceResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Experience ID.
+     * @param int $id The partner's id.
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     * @param string $title Job Title.
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->container['title'] = $title;
 
         return $this;
     }
@@ -235,7 +189,7 @@ class PartnerUserCvExperienceResource implements ArrayAccess
 
     /**
      * Sets company_name
-     * @param string $company_name Company Name.
+     * @param string $company_name The company name of the partner.
      * @return $this
      */
     public function setCompanyName($company_name)
@@ -246,106 +200,22 @@ class PartnerUserCvExperienceResource implements ArrayAccess
     }
 
     /**
-     * Gets content
+     * Gets company_information
      * @return string
      */
-    public function getContent()
+    public function getCompanyInformation()
     {
-        return $this->container['content'];
+        return $this->container['company_information'];
     }
 
     /**
-     * Sets content
-     * @param string $content Job description.
+     * Sets company_information
+     * @param string $company_information Information regarding the partner company.
      * @return $this
      */
-    public function setContent($content)
+    public function setCompanyInformation($company_information)
     {
-        $this->container['content'] = $content;
-
-        return $this;
-    }
-
-    /**
-     * Gets from_date
-     * @return string
-     */
-    public function getFromDate()
-    {
-        return $this->container['from_date'];
-    }
-
-    /**
-     * Sets from_date
-     * @param string $from_date Job start at time stamp.
-     * @return $this
-     */
-    public function setFromDate($from_date)
-    {
-        $this->container['from_date'] = $from_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets to_date
-     * @return string
-     */
-    public function getToDate()
-    {
-        return $this->container['to_date'];
-    }
-
-    /**
-     * Sets to_date
-     * @param string $to_date Job ended at time stamp.
-     * @return $this
-     */
-    public function setToDate($to_date)
-    {
-        $this->container['to_date'] = $to_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner
-     * @return \Ageras\Api\PartnerUserCvPartnerResource
-     */
-    public function getPartner()
-    {
-        return $this->container['partner'];
-    }
-
-    /**
-     * Sets partner
-     * @param \Ageras\Api\PartnerUserCvPartnerResource $partner
-     * @return $this
-     */
-    public function setPartner($partner)
-    {
-        $this->container['partner'] = $partner;
-
-        return $this;
-    }
-
-    /**
-     * Gets validation
-     * @return string
-     */
-    public function getValidation()
-    {
-        return $this->container['validation'];
-    }
-
-    /**
-     * Sets validation
-     * @param string $validation
-     * @return $this
-     */
-    public function setValidation($validation)
-    {
-        $this->container['validation'] = $validation;
+        $this->container['company_information'] = $company_information;
 
         return $this;
     }
