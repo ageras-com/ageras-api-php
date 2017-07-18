@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSuggestResourceTest
+ * LeadClientResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerSuggestResourceTest Class Doc Comment
+ * LeadClientResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerSuggestResource
+// * @description LeadClientResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
+class LeadClientResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerSuggestResource"
+     * Test "LeadClientResource"
      */
-    public function testPartnerSuggestResource()
+    public function testLeadClientResource()
     {
 
     }
@@ -91,6 +91,22 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+
+    }
+
+    /**
      * Test attribute "company_name"
      */
     public function testPropertyCompanyName()
@@ -99,57 +115,9 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "email"
      */
-    public function testPropertySlug()
-    {
-
-    }
-
-    /**
-     * Test attribute "state"
-     */
-    public function testPropertyState()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "zip_code"
-     */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_state"
-     */
-    public function testPropertyPartnerState()
+    public function testPropertyEmail()
     {
 
     }

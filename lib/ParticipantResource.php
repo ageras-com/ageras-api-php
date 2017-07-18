@@ -63,7 +63,9 @@ class ParticipantResource implements ArrayAccess
         'type' => 'string',
         'employee_id' => 'int',
         'lead_id' => 'int',
-        'partner_user_id' => 'int'
+        'partner_user_id' => 'int',
+        'client_id' => 'int',
+        'partner_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,9 @@ class ParticipantResource implements ArrayAccess
         'type' => 'type',
         'employee_id' => 'employee_id',
         'lead_id' => 'lead_id',
-        'partner_user_id' => 'partner_user_id'
+        'partner_user_id' => 'partner_user_id',
+        'client_id' => 'client_id',
+        'partner_id' => 'partner_id'
     ];
 
 
@@ -103,7 +107,9 @@ class ParticipantResource implements ArrayAccess
         'type' => 'setType',
         'employee_id' => 'setEmployeeId',
         'lead_id' => 'setLeadId',
-        'partner_user_id' => 'setPartnerUserId'
+        'partner_user_id' => 'setPartnerUserId',
+        'client_id' => 'setClientId',
+        'partner_id' => 'setPartnerId'
     ];
 
 
@@ -121,7 +127,9 @@ class ParticipantResource implements ArrayAccess
         'type' => 'getType',
         'employee_id' => 'getEmployeeId',
         'lead_id' => 'getLeadId',
-        'partner_user_id' => 'getPartnerUserId'
+        'partner_user_id' => 'getPartnerUserId',
+        'client_id' => 'getClientId',
+        'partner_id' => 'getPartnerId'
     ];
 
     public static function attributeMap()
@@ -165,6 +173,8 @@ class ParticipantResource implements ArrayAccess
         $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
         $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
         $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
+        $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
     }
 
     /**
@@ -398,6 +408,48 @@ class ParticipantResource implements ArrayAccess
     public function setPartnerUserId($partner_user_id)
     {
         $this->container['partner_user_id'] = $partner_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_id
+     * @return int
+     */
+    public function getClientId()
+    {
+        return $this->container['client_id'];
+    }
+
+    /**
+     * Sets client_id
+     * @param int $client_id
+     * @return $this
+     */
+    public function setClientId($client_id)
+    {
+        $this->container['client_id'] = $client_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     * @return int
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     * @param int $partner_id
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }

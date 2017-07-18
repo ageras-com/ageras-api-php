@@ -245,6 +245,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $criteria = [
         'lead_id' => "lead_id_example"; // string | List of leads identification(ID).
+        'needs_more_quotes' => false; // bool | Only list leads that need more quotes.
         'needs_more_offers' => false; // bool | Only list leads that need more offers.
         'phone' => "phone_example"; // string | Filter by a given phone number.
         'filter' => "none"; // string | Apply a pre-defined filter.
@@ -272,6 +273,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**| List of leads identification(ID). | [optional]
+ **needs_more_quotes** | **bool**| Only list leads that need more quotes. | [optional] [default to false]
  **needs_more_offers** | **bool**| Only list leads that need more offers. | [optional] [default to false]
  **phone** | **string**| Filter by a given phone number. | [optional]
  **filter** | **string**| Apply a pre-defined filter. | [optional] [default to none]
@@ -529,6 +531,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $criteria = [
+        'client_id' => "client_id_example"; // string | List of client ids
         'lead_id' => "lead_id_example"; // string | List of leads identification(ID).
         'lead_offer_id' => "lead_offer_id_example"; // string | List of lead offers identification(ID).
         'partner_id' => "partner_id_example"; // string | Offers belonging to a given partner.
@@ -550,6 +553,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **client_id** | **string**| List of client ids | [optional]
  **lead_id** | **string**| List of leads identification(ID). | [optional]
  **lead_offer_id** | **string**| List of lead offers identification(ID). | [optional]
  **partner_id** | **string**| Offers belonging to a given partner. | [optional]
@@ -593,6 +597,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
 $criteria = [
+        'client_id' => "client_id_example"; // string | List of client ids
         'lead_offer_id' => "lead_offer_id_example"; // string | List of lead offers identification(ID).
         'partner_id' => "partner_id_example"; // string | Offers belonging to a given partner.
         'limit' => 56; // int | The number of resources to be returned.
@@ -614,6 +619,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
+ **client_id** | **string**| List of client ids | [optional]
  **lead_offer_id** | **string**| List of lead offers identification(ID). | [optional]
  **partner_id** | **string**| Offers belonging to a given partner. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]

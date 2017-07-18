@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerSuggestResourceTest
+ * LeadQuotesInfoResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerSuggestResourceTest Class Doc Comment
+ * LeadQuotesInfoResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerSuggestResource
+// * @description LeadQuotesInfoResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
+class LeadQuotesInfoResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,49 @@ class PartnerSuggestResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerSuggestResource"
+     * Test "LeadQuotesInfoResource"
      */
-    public function testPartnerSuggestResource()
+    public function testLeadQuotesInfoResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "max"
      */
-    public function testPropertyId()
+    public function testPropertyMax()
     {
 
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "count"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyCount()
     {
 
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "open_for_quotes"
      */
-    public function testPropertySlug()
+    public function testPropertyOpenForQuotes()
     {
 
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "accepted_quote"
      */
-    public function testPropertyState()
+    public function testPropertyAcceptedQuote()
     {
 
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "quotes"
      */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "zip_code"
-     */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_state"
-     */
-    public function testPropertyPartnerState()
+    public function testPropertyQuotes()
     {
 
     }

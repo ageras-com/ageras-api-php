@@ -68,6 +68,7 @@ class PartnerUserResource implements ArrayAccess
         'profile_picture' => 'string',
         'wants_emails' => 'bool',
         'wants_text_messages' => 'bool',
+        'wants_daily_email' => 'bool',
         'is_visible' => 'bool',
         'is_active' => 'bool',
         'access_type' => 'string',
@@ -101,6 +102,7 @@ class PartnerUserResource implements ArrayAccess
         'profile_picture' => 'profile_picture',
         'wants_emails' => 'wants_emails',
         'wants_text_messages' => 'wants_text_messages',
+        'wants_daily_email' => 'wants_daily_email',
         'is_visible' => 'is_visible',
         'is_active' => 'is_active',
         'access_type' => 'access_type',
@@ -130,6 +132,7 @@ class PartnerUserResource implements ArrayAccess
         'profile_picture' => 'setProfilePicture',
         'wants_emails' => 'setWantsEmails',
         'wants_text_messages' => 'setWantsTextMessages',
+        'wants_daily_email' => 'setWantsDailyEmail',
         'is_visible' => 'setIsVisible',
         'is_active' => 'setIsActive',
         'access_type' => 'setAccessType',
@@ -159,6 +162,7 @@ class PartnerUserResource implements ArrayAccess
         'profile_picture' => 'getProfilePicture',
         'wants_emails' => 'getWantsEmails',
         'wants_text_messages' => 'getWantsTextMessages',
+        'wants_daily_email' => 'getWantsDailyEmail',
         'is_visible' => 'getIsVisible',
         'is_active' => 'getIsActive',
         'access_type' => 'getAccessType',
@@ -213,6 +217,7 @@ class PartnerUserResource implements ArrayAccess
         $this->container['profile_picture'] = isset($data['profile_picture']) ? $data['profile_picture'] : null;
         $this->container['wants_emails'] = isset($data['wants_emails']) ? $data['wants_emails'] : false;
         $this->container['wants_text_messages'] = isset($data['wants_text_messages']) ? $data['wants_text_messages'] : false;
+        $this->container['wants_daily_email'] = isset($data['wants_daily_email']) ? $data['wants_daily_email'] : false;
         $this->container['is_visible'] = isset($data['is_visible']) ? $data['is_visible'] : false;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : null;
@@ -537,6 +542,27 @@ class PartnerUserResource implements ArrayAccess
     public function setWantsTextMessages($wants_text_messages)
     {
         $this->container['wants_text_messages'] = $wants_text_messages;
+
+        return $this;
+    }
+
+    /**
+     * Gets wants_daily_email
+     * @return bool
+     */
+    public function getWantsDailyEmail()
+    {
+        return $this->container['wants_daily_email'];
+    }
+
+    /**
+     * Sets wants_daily_email
+     * @param bool $wants_daily_email Partner User is interested in daily emails.
+     * @return $this
+     */
+    public function setWantsDailyEmail($wants_daily_email)
+    {
+        $this->container['wants_daily_email'] = $wants_daily_email;
 
         return $this;
     }

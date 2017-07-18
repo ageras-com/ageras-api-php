@@ -442,6 +442,7 @@ class LeadsApi
      *
      * @param $criteria = [
      *    'lead_id' => string,
+     *    'needs_more_quotes' => bool,
      *    'needs_more_offers' => bool,
      *    'phone' => string,
      *    'filter' => string,
@@ -470,6 +471,7 @@ class LeadsApi
      *
      * @param $criteria = [
      *    'lead_id' => string,
+     *    'needs_more_quotes' => bool,
      *    'needs_more_offers' => bool,
      *    'phone' => string,
      *    'filter' => string,
@@ -502,6 +504,10 @@ class LeadsApi
         // query params
         if (isset($criteria['lead_id'])) {
             $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['needs_more_quotes'])) {
+            $queryParams['needs_more_quotes'] = $this->apiClient->getSerializer()->toQueryValue($criteria['needs_more_quotes']);
         }
         // query params
         if (isset($criteria['needs_more_offers'])) {
@@ -966,6 +972,7 @@ class LeadsApi
      * List the offers connected to a given Lead.
      *
      * @param $criteria = [
+     *    'client_id' => string,
      *    'lead_id' => string,
      *    'lead_offer_id' => string,
      *    'partner_id' => string,
@@ -988,6 +995,7 @@ class LeadsApi
      * List the offers connected to a given Lead.
      *
      * @param $criteria = [
+     *    'client_id' => string,
      *    'lead_id' => string,
      *    'lead_offer_id' => string,
      *    'partner_id' => string,
@@ -1012,6 +1020,10 @@ class LeadsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
         // query params
         if (isset($criteria['lead_id'])) {
             $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
@@ -1084,6 +1096,7 @@ class LeadsApi
      *
      * @param string $lead_id 
      * @param $criteria = [
+     *    'client_id' => string,
      *    'lead_offer_id' => string,
      *    'partner_id' => string,
      *    'limit' => int,
@@ -1106,6 +1119,7 @@ class LeadsApi
      *
      * @param string $lead_id 
      * @param $criteria = [
+     *    'client_id' => string,
      *    'lead_offer_id' => string,
      *    'partner_id' => string,
      *    'limit' => int,
@@ -1129,6 +1143,10 @@ class LeadsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
         // query params
         if (isset($criteria['lead_offer_id'])) {
             $queryParams['lead_offer_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_offer_id']);

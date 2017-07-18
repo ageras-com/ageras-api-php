@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadFeedbackResource
+ * LeadCustomerInfoResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadFeedbackResource Class Doc Comment
+ * LeadCustomerInfoResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadFeedbackResource implements ArrayAccess
+class LeadCustomerInfoResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,20 @@ class LeadFeedbackResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadFeedbackResource';
+    protected static $swaggerModelName = 'LeadCustomerInfoResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reason' => 'string',
-        'satisfaction' => 'int',
-        'feedback' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource'
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'company_name' => 'string',
+        'email' => 'string',
+        'phone' => 'string',
+        'mobile' => 'string',
+        'vat_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +73,13 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason' => 'reason',
-        'satisfaction' => 'satisfaction',
-        'feedback' => 'feedback',
-        'partner' => 'partner'
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'company_name' => 'company_name',
+        'email' => 'email',
+        'phone' => 'phone',
+        'mobile' => 'mobile',
+        'vat_number' => 'vat_number'
     ];
 
 
@@ -82,10 +88,13 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reason' => 'setReason',
-        'satisfaction' => 'setSatisfaction',
-        'feedback' => 'setFeedback',
-        'partner' => 'setPartner'
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'company_name' => 'setCompanyName',
+        'email' => 'setEmail',
+        'phone' => 'setPhone',
+        'mobile' => 'setMobile',
+        'vat_number' => 'setVatNumber'
     ];
 
 
@@ -94,10 +103,13 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reason' => 'getReason',
-        'satisfaction' => 'getSatisfaction',
-        'feedback' => 'getFeedback',
-        'partner' => 'getPartner'
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'company_name' => 'getCompanyName',
+        'email' => 'getEmail',
+        'phone' => 'getPhone',
+        'mobile' => 'getMobile',
+        'vat_number' => 'getVatNumber'
     ];
 
     public static function attributeMap()
@@ -131,10 +143,13 @@ class LeadFeedbackResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
-        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
+        $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
     }
 
     /**
@@ -163,85 +178,148 @@ class LeadFeedbackResource implements ArrayAccess
 
 
     /**
-     * Gets reason
+     * Gets first_name
      * @return string
      */
-    public function getReason()
+    public function getFirstName()
     {
-        return $this->container['reason'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets reason
-     * @param string $reason The reason for choosing the partner
+     * Sets first_name
+     * @param string $first_name The first name for the customer.
      * @return $this
      */
-    public function setReason($reason)
+    public function setFirstName($first_name)
     {
-        $this->container['reason'] = $reason;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets satisfaction
-     * @return int
-     */
-    public function getSatisfaction()
-    {
-        return $this->container['satisfaction'];
-    }
-
-    /**
-     * Sets satisfaction
-     * @param int $satisfaction Satisfaction
-     * @return $this
-     */
-    public function setSatisfaction($satisfaction)
-    {
-        $this->container['satisfaction'] = $satisfaction;
-
-        return $this;
-    }
-
-    /**
-     * Gets feedback
+     * Gets last_name
      * @return string
      */
-    public function getFeedback()
+    public function getLastName()
     {
-        return $this->container['feedback'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets feedback
-     * @param string $feedback Feedback
+     * Sets last_name
+     * @param string $last_name The last name for the customer.
      * @return $this
      */
-    public function setFeedback($feedback)
+    public function setLastName($last_name)
     {
-        $this->container['feedback'] = $feedback;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
 
     /**
-     * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * Gets company_name
+     * @return string
      */
-    public function getPartner()
+    public function getCompanyName()
     {
-        return $this->container['partner'];
+        return $this->container['company_name'];
     }
 
     /**
-     * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * Sets company_name
+     * @param string $company_name The name of the company.
      * @return $this
      */
-    public function setPartner($partner)
+    public function setCompanyName($company_name)
     {
-        $this->container['partner'] = $partner;
+        $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email The email used to contact the customer.
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     * @param string $phone The Phone Number used to contact the customer.
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile
+     * @return string
+     */
+    public function getMobile()
+    {
+        return $this->container['mobile'];
+    }
+
+    /**
+     * Sets mobile
+     * @param string $mobile The Mobile Phone Number used to contact the customer.
+     * @return $this
+     */
+    public function setMobile($mobile)
+    {
+        $this->container['mobile'] = $mobile;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_number
+     * @return string
+     */
+    public function getVatNumber()
+    {
+        return $this->container['vat_number'];
+    }
+
+    /**
+     * Sets vat_number
+     * @param string $vat_number VAT Number for the customer.
+     * @return $this
+     */
+    public function setVatNumber($vat_number)
+    {
+        $this->container['vat_number'] = $vat_number;
 
         return $this;
     }

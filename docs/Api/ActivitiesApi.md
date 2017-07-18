@@ -31,6 +31,7 @@ $criteria = [
         'partner_id' => "partner_id_example"; // string | 
         'lead_id' => "lead_id_example"; // string | 
         'client_id' => "client_id_example"; // string | 
+        'geo_code' => "geo_code_example"; // string | 
         'employee_id' => "employee_id_example"; // string | 
         'partner_user_id' => "partner_user_id_example"; // string | 
         'type' => "type_example"; // string | 
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **partner_id** | **string**|  | [optional]
  **lead_id** | **string**|  | [optional]
  **client_id** | **string**|  | [optional]
+ **geo_code** | **string**|  | [optional]
  **employee_id** | **string**|  | [optional]
  **partner_user_id** | **string**|  | [optional]
  **type** | **string**|  | [optional]

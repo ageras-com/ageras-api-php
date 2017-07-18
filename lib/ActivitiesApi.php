@@ -97,6 +97,7 @@ class ActivitiesApi
      *    'partner_id' => string,
      *    'lead_id' => string,
      *    'client_id' => string,
+     *    'geo_code' => string,
      *    'employee_id' => string,
      *    'partner_user_id' => string,
      *    'type' => string,
@@ -123,6 +124,7 @@ class ActivitiesApi
      *    'partner_id' => string,
      *    'lead_id' => string,
      *    'client_id' => string,
+     *    'geo_code' => string,
      *    'employee_id' => string,
      *    'partner_user_id' => string,
      *    'type' => string,
@@ -162,6 +164,10 @@ class ActivitiesApi
         // query params
         if (isset($criteria['client_id'])) {
             $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
         }
         // query params
         if (isset($criteria['employee_id'])) {

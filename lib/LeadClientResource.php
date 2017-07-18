@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadFeedbackResource
+ * LeadClientResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadFeedbackResource Class Doc Comment
+ * LeadClientResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadFeedbackResource implements ArrayAccess
+class LeadClientResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,18 @@ class LeadFeedbackResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadFeedbackResource';
+    protected static $swaggerModelName = 'LeadClientResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reason' => 'string',
-        'satisfaction' => 'int',
-        'feedback' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource'
+        'id' => 'int',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'company_name' => 'string',
+        'email' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +71,11 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reason' => 'reason',
-        'satisfaction' => 'satisfaction',
-        'feedback' => 'feedback',
-        'partner' => 'partner'
+        'id' => 'id',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'company_name' => 'company_name',
+        'email' => 'email'
     ];
 
 
@@ -82,10 +84,11 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reason' => 'setReason',
-        'satisfaction' => 'setSatisfaction',
-        'feedback' => 'setFeedback',
-        'partner' => 'setPartner'
+        'id' => 'setId',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'company_name' => 'setCompanyName',
+        'email' => 'setEmail'
     ];
 
 
@@ -94,10 +97,11 @@ class LeadFeedbackResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reason' => 'getReason',
-        'satisfaction' => 'getSatisfaction',
-        'feedback' => 'getFeedback',
-        'partner' => 'getPartner'
+        'id' => 'getId',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'company_name' => 'getCompanyName',
+        'email' => 'getEmail'
     ];
 
     public static function attributeMap()
@@ -131,10 +135,11 @@ class LeadFeedbackResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
-        $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -163,85 +168,106 @@ class LeadFeedbackResource implements ArrayAccess
 
 
     /**
-     * Gets reason
-     * @return string
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     * @param string $reason The reason for choosing the partner
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets satisfaction
+     * Gets id
      * @return int
      */
-    public function getSatisfaction()
+    public function getId()
     {
-        return $this->container['satisfaction'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets satisfaction
-     * @param int $satisfaction Satisfaction
+     * Sets id
+     * @param int $id Id of the client
      * @return $this
      */
-    public function setSatisfaction($satisfaction)
+    public function setId($id)
     {
-        $this->container['satisfaction'] = $satisfaction;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets feedback
+     * Gets first_name
      * @return string
      */
-    public function getFeedback()
+    public function getFirstName()
     {
-        return $this->container['feedback'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets feedback
-     * @param string $feedback Feedback
+     * Sets first_name
+     * @param string $first_name The first name for the client.
      * @return $this
      */
-    public function setFeedback($feedback)
+    public function setFirstName($first_name)
     {
-        $this->container['feedback'] = $feedback;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * Gets last_name
+     * @return string
      */
-    public function getPartner()
+    public function getLastName()
     {
-        return $this->container['partner'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * Sets last_name
+     * @param string $last_name The last name for the client.
      * @return $this
      */
-    public function setPartner($partner)
+    public function setLastName($last_name)
     {
-        $this->container['partner'] = $partner;
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_name
+     * @return string
+     */
+    public function getCompanyName()
+    {
+        return $this->container['company_name'];
+    }
+
+    /**
+     * Sets company_name
+     * @param string $company_name The name of the company.
+     * @return $this
+     */
+    public function setCompanyName($company_name)
+    {
+        $this->container['company_name'] = $company_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email The email used to contact the client.
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }
