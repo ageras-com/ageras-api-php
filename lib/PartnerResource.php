@@ -55,8 +55,38 @@ class PartnerResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'created_at' => 'string',
+        'updated_at' => 'string',
+        'reserved_at' => 'string',
         'company_name' => 'string',
-        'company_information' => 'string'
+        'title' => 'string',
+        'slug' => 'string',
+        'is_enabled' => 'bool',
+        'is_public' => 'bool',
+        'has_subscription' => 'bool',
+        'state' => 'string',
+        'access' => 'string',
+        'company_information' => 'string',
+        'company_information_html' => 'string',
+        'vat_number' => 'string',
+        'website' => 'string',
+        'logo' => 'string',
+        'phone' => 'string',
+        'geo' => '\Ageras\Api\PartnerGeoResource',
+        'rating' => '\Ageras\Api\PartnerRatingResource',
+        'employee' => '\Ageras\Api\PartnerEmployeeResource',
+        'subscription_employee' => '\Ageras\Api\PartnerEmployeeResource',
+        'lead_types' => '\Ageras\Api\PartnerLeadTypeResource[]',
+        'industry' => '\Ageras\Api\PartnerIndustryResource',
+        'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource',
+        'alerts' => '\Ageras\Api\PartnerAlertResource[]',
+        'kpi' => '\Ageras\Api\PartnerKPIResource',
+        'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
+        'preferences' => '\Ageras\Api\PartnerPreferencesResource',
+        'refill' => '\Ageras\Api\PartnerRefillResource',
+        'demo' => '\Ageras\Api\PartnerDemoResource',
+        'canvas' => '\Ageras\Api\PartnerCanvasResource',
+        'tasks' => '\Ageras\Api\PartnerTasksResource'
     ];
 
     public static function swaggerTypes()
@@ -70,8 +100,38 @@ class PartnerResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'reserved_at' => 'reserved_at',
         'company_name' => 'company_name',
-        'company_information' => 'company_information'
+        'title' => 'title',
+        'slug' => 'slug',
+        'is_enabled' => 'is_enabled',
+        'is_public' => 'is_public',
+        'has_subscription' => 'has_subscription',
+        'state' => 'state',
+        'access' => 'access',
+        'company_information' => 'company_information',
+        'company_information_html' => 'company_information_html',
+        'vat_number' => 'vat_number',
+        'website' => 'website',
+        'logo' => 'logo',
+        'phone' => 'phone',
+        'geo' => 'geo',
+        'rating' => 'rating',
+        'employee' => 'employee',
+        'subscription_employee' => 'subscription_employee',
+        'lead_types' => 'lead_types',
+        'industry' => 'industry',
+        'satisfaction' => 'satisfaction',
+        'alerts' => 'alerts',
+        'kpi' => 'kpi',
+        'invoicing' => 'invoicing',
+        'preferences' => 'preferences',
+        'refill' => 'refill',
+        'demo' => 'demo',
+        'canvas' => 'canvas',
+        'tasks' => 'tasks'
     ];
 
 
@@ -81,8 +141,38 @@ class PartnerResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'reserved_at' => 'setReservedAt',
         'company_name' => 'setCompanyName',
-        'company_information' => 'setCompanyInformation'
+        'title' => 'setTitle',
+        'slug' => 'setSlug',
+        'is_enabled' => 'setIsEnabled',
+        'is_public' => 'setIsPublic',
+        'has_subscription' => 'setHasSubscription',
+        'state' => 'setState',
+        'access' => 'setAccess',
+        'company_information' => 'setCompanyInformation',
+        'company_information_html' => 'setCompanyInformationHtml',
+        'vat_number' => 'setVatNumber',
+        'website' => 'setWebsite',
+        'logo' => 'setLogo',
+        'phone' => 'setPhone',
+        'geo' => 'setGeo',
+        'rating' => 'setRating',
+        'employee' => 'setEmployee',
+        'subscription_employee' => 'setSubscriptionEmployee',
+        'lead_types' => 'setLeadTypes',
+        'industry' => 'setIndustry',
+        'satisfaction' => 'setSatisfaction',
+        'alerts' => 'setAlerts',
+        'kpi' => 'setKpi',
+        'invoicing' => 'setInvoicing',
+        'preferences' => 'setPreferences',
+        'refill' => 'setRefill',
+        'demo' => 'setDemo',
+        'canvas' => 'setCanvas',
+        'tasks' => 'setTasks'
     ];
 
 
@@ -92,8 +182,38 @@ class PartnerResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'reserved_at' => 'getReservedAt',
         'company_name' => 'getCompanyName',
-        'company_information' => 'getCompanyInformation'
+        'title' => 'getTitle',
+        'slug' => 'getSlug',
+        'is_enabled' => 'getIsEnabled',
+        'is_public' => 'getIsPublic',
+        'has_subscription' => 'getHasSubscription',
+        'state' => 'getState',
+        'access' => 'getAccess',
+        'company_information' => 'getCompanyInformation',
+        'company_information_html' => 'getCompanyInformationHtml',
+        'vat_number' => 'getVatNumber',
+        'website' => 'getWebsite',
+        'logo' => 'getLogo',
+        'phone' => 'getPhone',
+        'geo' => 'getGeo',
+        'rating' => 'getRating',
+        'employee' => 'getEmployee',
+        'subscription_employee' => 'getSubscriptionEmployee',
+        'lead_types' => 'getLeadTypes',
+        'industry' => 'getIndustry',
+        'satisfaction' => 'getSatisfaction',
+        'alerts' => 'getAlerts',
+        'kpi' => 'getKpi',
+        'invoicing' => 'getInvoicing',
+        'preferences' => 'getPreferences',
+        'refill' => 'getRefill',
+        'demo' => 'getDemo',
+        'canvas' => 'getCanvas',
+        'tasks' => 'getTasks'
     ];
 
     public static function attributeMap()
@@ -111,8 +231,36 @@ class PartnerResource implements ArrayAccess
         return self::$getters;
     }
 
+    const STATE_UNKNOWN = 'unknown';
+    const STATE_CANVAS = 'canvas';
+    const STATE_DEMO = 'demo';
+    const STATE_INACTIVE = 'inactive';
+    const STATE_EX_PARTNER = 'ex_partner';
+    const STATE_ACTIVE = 'active';
+    const STATE_DISABLED = 'disabled';
+    const STATE_CLOSED = 'closed';
+    const STATE_BUSINESS_PARTNER = 'business_partner';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_UNKNOWN,
+            self::STATE_CANVAS,
+            self::STATE_DEMO,
+            self::STATE_INACTIVE,
+            self::STATE_EX_PARTNER,
+            self::STATE_ACTIVE,
+            self::STATE_DISABLED,
+            self::STATE_CLOSED,
+            self::STATE_BUSINESS_PARTNER,
+        ];
+    }
     
 
     /**
@@ -128,8 +276,38 @@ class PartnerResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['reserved_at'] = isset($data['reserved_at']) ? $data['reserved_at'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
+        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : false;
+        $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
+        $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
+        $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
+        $this->container['company_information_html'] = isset($data['company_information_html']) ? $data['company_information_html'] : null;
+        $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
+        $this->container['website'] = isset($data['website']) ? $data['website'] : null;
+        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
+        $this->container['rating'] = isset($data['rating']) ? $data['rating'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['subscription_employee'] = isset($data['subscription_employee']) ? $data['subscription_employee'] : null;
+        $this->container['lead_types'] = isset($data['lead_types']) ? $data['lead_types'] : null;
+        $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
+        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
+        $this->container['alerts'] = isset($data['alerts']) ? $data['alerts'] : null;
+        $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
+        $this->container['invoicing'] = isset($data['invoicing']) ? $data['invoicing'] : null;
+        $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
+        $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
+        $this->container['demo'] = isset($data['demo']) ? $data['demo'] : null;
+        $this->container['canvas'] = isset($data['canvas']) ? $data['canvas'] : null;
+        $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
     }
 
     /**
@@ -140,6 +318,11 @@ class PartnerResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "disabled", "closed", "business_partner"];
+        if (!in_array($this->container['state'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner'.";
+        }
 
         return $invalid_properties;
     }
@@ -153,6 +336,10 @@ class PartnerResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "disabled", "closed", "business_partner"];
+        if (!in_array($this->container['state'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -179,6 +366,69 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at When was the partner created in the system.
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at At what date was the partner last updated.
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets reserved_at
+     * @return string
+     */
+    public function getReservedAt()
+    {
+        return $this->container['reserved_at'];
+    }
+
+    /**
+     * Sets reserved_at
+     * @param string $reserved_at reserved at.
+     * @return $this
+     */
+    public function setReservedAt($reserved_at)
+    {
+        $this->container['reserved_at'] = $reserved_at;
+
+        return $this;
+    }
+
+    /**
      * Gets company_name
      * @return string
      */
@@ -200,6 +450,157 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets title
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     * @param string $title Partner's title based on industry
+     * @return $this
+     */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug The slug for the given partner
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_enabled
+     * @return bool
+     */
+    public function getIsEnabled()
+    {
+        return $this->container['is_enabled'];
+    }
+
+    /**
+     * Sets is_enabled
+     * @param bool $is_enabled Has the partner been disabled.
+     * @return $this
+     */
+    public function setIsEnabled($is_enabled)
+    {
+        $this->container['is_enabled'] = $is_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_public
+     * @return bool
+     */
+    public function getIsPublic()
+    {
+        return $this->container['is_public'];
+    }
+
+    /**
+     * Sets is_public
+     * @param bool $is_public Is it a public partner
+     * @return $this
+     */
+    public function setIsPublic($is_public)
+    {
+        $this->container['is_public'] = $is_public;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_subscription
+     * @return bool
+     */
+    public function getHasSubscription()
+    {
+        return $this->container['has_subscription'];
+    }
+
+    /**
+     * Sets has_subscription
+     * @param bool $has_subscription Has the partner an active subscription.
+     * @return $this
+     */
+    public function setHasSubscription($has_subscription)
+    {
+        $this->container['has_subscription'] = $has_subscription;
+
+        return $this;
+    }
+
+    /**
+     * Gets state
+     * @return string
+     */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+     * Sets state
+     * @param string $state What is the current state of the partner.
+     * @return $this
+     */
+    public function setState($state)
+    {
+        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner');
+        if (!is_null($state) && (!in_array($state, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner'");
+        }
+        $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets access
+     * @return string
+     */
+    public function getAccess()
+    {
+        return $this->container['access'];
+    }
+
+    /**
+     * Sets access
+     * @param string $access Access information regarding the partner.
+     * @return $this
+     */
+    public function setAccess($access)
+    {
+        $this->container['access'] = $access;
+
+        return $this;
+    }
+
+    /**
      * Gets company_information
      * @return string
      */
@@ -216,6 +617,426 @@ class PartnerResource implements ArrayAccess
     public function setCompanyInformation($company_information)
     {
         $this->container['company_information'] = $company_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_information_html
+     * @return string
+     */
+    public function getCompanyInformationHtml()
+    {
+        return $this->container['company_information_html'];
+    }
+
+    /**
+     * Sets company_information_html
+     * @param string $company_information_html Formatted Company Information.
+     * @return $this
+     */
+    public function setCompanyInformationHtml($company_information_html)
+    {
+        $this->container['company_information_html'] = $company_information_html;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_number
+     * @return string
+     */
+    public function getVatNumber()
+    {
+        return $this->container['vat_number'];
+    }
+
+    /**
+     * Sets vat_number
+     * @param string $vat_number Vat information about he company.
+     * @return $this
+     */
+    public function setVatNumber($vat_number)
+    {
+        $this->container['vat_number'] = $vat_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets website
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->container['website'];
+    }
+
+    /**
+     * Sets website
+     * @param string $website Website for the partner.
+     * @return $this
+     */
+    public function setWebsite($website)
+    {
+        $this->container['website'] = $website;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo
+     * @return string
+     */
+    public function getLogo()
+    {
+        return $this->container['logo'];
+    }
+
+    /**
+     * Sets logo
+     * @param string $logo Logo for the partner.
+     * @return $this
+     */
+    public function setLogo($logo)
+    {
+        $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     * @param string $phone Phone number to contact the partner.
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo
+     * @return \Ageras\Api\PartnerGeoResource
+     */
+    public function getGeo()
+    {
+        return $this->container['geo'];
+    }
+
+    /**
+     * Sets geo
+     * @param \Ageras\Api\PartnerGeoResource $geo
+     * @return $this
+     */
+    public function setGeo($geo)
+    {
+        $this->container['geo'] = $geo;
+
+        return $this;
+    }
+
+    /**
+     * Gets rating
+     * @return \Ageras\Api\PartnerRatingResource
+     */
+    public function getRating()
+    {
+        return $this->container['rating'];
+    }
+
+    /**
+     * Sets rating
+     * @param \Ageras\Api\PartnerRatingResource $rating
+     * @return $this
+     */
+    public function setRating($rating)
+    {
+        $this->container['rating'] = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee
+     * @return \Ageras\Api\PartnerEmployeeResource
+     */
+    public function getEmployee()
+    {
+        return $this->container['employee'];
+    }
+
+    /**
+     * Sets employee
+     * @param \Ageras\Api\PartnerEmployeeResource $employee
+     * @return $this
+     */
+    public function setEmployee($employee)
+    {
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_employee
+     * @return \Ageras\Api\PartnerEmployeeResource
+     */
+    public function getSubscriptionEmployee()
+    {
+        return $this->container['subscription_employee'];
+    }
+
+    /**
+     * Sets subscription_employee
+     * @param \Ageras\Api\PartnerEmployeeResource $subscription_employee
+     * @return $this
+     */
+    public function setSubscriptionEmployee($subscription_employee)
+    {
+        $this->container['subscription_employee'] = $subscription_employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_types
+     * @return \Ageras\Api\PartnerLeadTypeResource[]
+     */
+    public function getLeadTypes()
+    {
+        return $this->container['lead_types'];
+    }
+
+    /**
+     * Sets lead_types
+     * @param \Ageras\Api\PartnerLeadTypeResource[] $lead_types Lead Types.
+     * @return $this
+     */
+    public function setLeadTypes($lead_types)
+    {
+        $this->container['lead_types'] = $lead_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets industry
+     * @return \Ageras\Api\PartnerIndustryResource
+     */
+    public function getIndustry()
+    {
+        return $this->container['industry'];
+    }
+
+    /**
+     * Sets industry
+     * @param \Ageras\Api\PartnerIndustryResource $industry
+     * @return $this
+     */
+    public function setIndustry($industry)
+    {
+        $this->container['industry'] = $industry;
+
+        return $this;
+    }
+
+    /**
+     * Gets satisfaction
+     * @return \Ageras\Api\PartnerSatisfactionResource
+     */
+    public function getSatisfaction()
+    {
+        return $this->container['satisfaction'];
+    }
+
+    /**
+     * Sets satisfaction
+     * @param \Ageras\Api\PartnerSatisfactionResource $satisfaction
+     * @return $this
+     */
+    public function setSatisfaction($satisfaction)
+    {
+        $this->container['satisfaction'] = $satisfaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets alerts
+     * @return \Ageras\Api\PartnerAlertResource[]
+     */
+    public function getAlerts()
+    {
+        return $this->container['alerts'];
+    }
+
+    /**
+     * Sets alerts
+     * @param \Ageras\Api\PartnerAlertResource[] $alerts Partner Alerts.
+     * @return $this
+     */
+    public function setAlerts($alerts)
+    {
+        $this->container['alerts'] = $alerts;
+
+        return $this;
+    }
+
+    /**
+     * Gets kpi
+     * @return \Ageras\Api\PartnerKPIResource
+     */
+    public function getKpi()
+    {
+        return $this->container['kpi'];
+    }
+
+    /**
+     * Sets kpi
+     * @param \Ageras\Api\PartnerKPIResource $kpi
+     * @return $this
+     */
+    public function setKpi($kpi)
+    {
+        $this->container['kpi'] = $kpi;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoicing
+     * @return \Ageras\Api\PartnerInvoicingResource
+     */
+    public function getInvoicing()
+    {
+        return $this->container['invoicing'];
+    }
+
+    /**
+     * Sets invoicing
+     * @param \Ageras\Api\PartnerInvoicingResource $invoicing
+     * @return $this
+     */
+    public function setInvoicing($invoicing)
+    {
+        $this->container['invoicing'] = $invoicing;
+
+        return $this;
+    }
+
+    /**
+     * Gets preferences
+     * @return \Ageras\Api\PartnerPreferencesResource
+     */
+    public function getPreferences()
+    {
+        return $this->container['preferences'];
+    }
+
+    /**
+     * Sets preferences
+     * @param \Ageras\Api\PartnerPreferencesResource $preferences
+     * @return $this
+     */
+    public function setPreferences($preferences)
+    {
+        $this->container['preferences'] = $preferences;
+
+        return $this;
+    }
+
+    /**
+     * Gets refill
+     * @return \Ageras\Api\PartnerRefillResource
+     */
+    public function getRefill()
+    {
+        return $this->container['refill'];
+    }
+
+    /**
+     * Sets refill
+     * @param \Ageras\Api\PartnerRefillResource $refill
+     * @return $this
+     */
+    public function setRefill($refill)
+    {
+        $this->container['refill'] = $refill;
+
+        return $this;
+    }
+
+    /**
+     * Gets demo
+     * @return \Ageras\Api\PartnerDemoResource
+     */
+    public function getDemo()
+    {
+        return $this->container['demo'];
+    }
+
+    /**
+     * Sets demo
+     * @param \Ageras\Api\PartnerDemoResource $demo
+     * @return $this
+     */
+    public function setDemo($demo)
+    {
+        $this->container['demo'] = $demo;
+
+        return $this;
+    }
+
+    /**
+     * Gets canvas
+     * @return \Ageras\Api\PartnerCanvasResource
+     */
+    public function getCanvas()
+    {
+        return $this->container['canvas'];
+    }
+
+    /**
+     * Sets canvas
+     * @param \Ageras\Api\PartnerCanvasResource $canvas
+     * @return $this
+     */
+    public function setCanvas($canvas)
+    {
+        $this->container['canvas'] = $canvas;
+
+        return $this;
+    }
+
+    /**
+     * Gets tasks
+     * @return \Ageras\Api\PartnerTasksResource
+     */
+    public function getTasks()
+    {
+        return $this->container['tasks'];
+    }
+
+    /**
+     * Sets tasks
+     * @param \Ageras\Api\PartnerTasksResource $tasks
+     * @return $this
+     */
+    public function setTasks($tasks)
+    {
+        $this->container['tasks'] = $tasks;
 
         return $this;
     }
