@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadProgressResource
+ * CheckoutPartnerLeadQuoteResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadProgressResource Class Doc Comment
+ * CheckoutPartnerLeadQuoteResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadProgressResource implements ArrayAccess
+class CheckoutPartnerLeadQuoteResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class LeadProgressResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadProgressResource';
+    protected static $swaggerModelName = 'CheckoutPartnerLeadQuoteResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'step' => 'string',
-        'is_completed' => 'bool'
+        'id' => 'int',
+        'name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'step' => 'step',
-        'is_completed' => 'is_completed'
+        'id' => 'id',
+        'name' => 'name'
     ];
 
 
@@ -78,8 +78,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'step' => 'setStep',
-        'is_completed' => 'setIsCompleted'
+        'id' => 'setId',
+        'name' => 'setName'
     ];
 
 
@@ -88,8 +88,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'step' => 'getStep',
-        'is_completed' => 'getIsCompleted'
+        'id' => 'getId',
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -107,34 +107,8 @@ class LeadProgressResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STEP_NONE = 'none';
-    const STEP_VALIDATION = 'validation';
-    const STEP_AWAITING_OFFERS = 'awaiting_offers';
-    const STEP_AWAITING_QUOTES = 'awaiting_quotes';
-    const STEP_QUOTE_CHOSEN = 'quote_chosen';
-    const STEP_MATCH_VALIDATION = 'match_validation';
-    const STEP_FOLLOW_UP = 'follow_up';
-    const STEP_DONE = 'done';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getStepAllowableValues()
-    {
-        return [
-            self::STEP_NONE,
-            self::STEP_VALIDATION,
-            self::STEP_AWAITING_OFFERS,
-            self::STEP_AWAITING_QUOTES,
-            self::STEP_QUOTE_CHOSEN,
-            self::STEP_MATCH_VALIDATION,
-            self::STEP_FOLLOW_UP,
-            self::STEP_DONE,
-        ];
-    }
     
 
     /**
@@ -149,8 +123,8 @@ class LeadProgressResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['step'] = isset($data['step']) ? $data['step'] : 'none';
-        $this->container['is_completed'] = isset($data['is_completed']) ? $data['is_completed'] : false;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -161,11 +135,6 @@ class LeadProgressResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
-        }
 
         return $invalid_properties;
     }
@@ -179,56 +148,48 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets step
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getStep()
+    public function getId()
     {
-        return $this->container['step'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets step
-     * @param string $step Progress step
+     * Sets id
+     * @param int $id Partner id.
      * @return $this
      */
-    public function setStep($step)
+    public function setId($id)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
-        if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
-        }
-        $this->container['step'] = $step;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets is_completed
-     * @return bool
+     * Gets name
+     * @return string
      */
-    public function getIsCompleted()
+    public function getName()
     {
-        return $this->container['is_completed'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets is_completed
-     * @param bool $is_completed Has been completed
+     * Sets name
+     * @param string $name Name of the quote
      * @return $this
      */
-    public function setIsCompleted($is_completed)
+    public function setName($name)
     {
-        $this->container['is_completed'] = $is_completed;
+        $this->container['name'] = $name;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadProgressResource
+ * CheckoutConsumerResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadProgressResource Class Doc Comment
+ * CheckoutConsumerResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadProgressResource implements ArrayAccess
+class CheckoutConsumerResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,17 @@ class LeadProgressResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadProgressResource';
+    protected static $swaggerModelName = 'CheckoutConsumerResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'step' => 'string',
-        'is_completed' => 'bool'
+        'type' => 'string',
+        'partner' => '\Ageras\Api\CheckoutPartnerResource',
+        'client' => '\Ageras\Api\CheckoutClientResource',
+        'employee' => '\Ageras\Api\CheckoutEmployeeResource'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,10 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'step' => 'step',
-        'is_completed' => 'is_completed'
+        'type' => 'type',
+        'partner' => 'partner',
+        'client' => 'client',
+        'employee' => 'employee'
     ];
 
 
@@ -78,8 +82,10 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'step' => 'setStep',
-        'is_completed' => 'setIsCompleted'
+        'type' => 'setType',
+        'partner' => 'setPartner',
+        'client' => 'setClient',
+        'employee' => 'setEmployee'
     ];
 
 
@@ -88,8 +94,10 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'step' => 'getStep',
-        'is_completed' => 'getIsCompleted'
+        'type' => 'getType',
+        'partner' => 'getPartner',
+        'client' => 'getClient',
+        'employee' => 'getEmployee'
     ];
 
     public static function attributeMap()
@@ -107,14 +115,11 @@ class LeadProgressResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STEP_NONE = 'none';
-    const STEP_VALIDATION = 'validation';
-    const STEP_AWAITING_OFFERS = 'awaiting_offers';
-    const STEP_AWAITING_QUOTES = 'awaiting_quotes';
-    const STEP_QUOTE_CHOSEN = 'quote_chosen';
-    const STEP_MATCH_VALIDATION = 'match_validation';
-    const STEP_FOLLOW_UP = 'follow_up';
-    const STEP_DONE = 'done';
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_PARTNER = 'partner';
+    const TYPE_PARTNER_USER = 'partner_user';
+    const TYPE_EMPLOYEE = 'employee';
+    const TYPE_CLIENT = 'client';
     
 
     
@@ -122,17 +127,14 @@ class LeadProgressResource implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStepAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::STEP_NONE,
-            self::STEP_VALIDATION,
-            self::STEP_AWAITING_OFFERS,
-            self::STEP_AWAITING_QUOTES,
-            self::STEP_QUOTE_CHOSEN,
-            self::STEP_MATCH_VALIDATION,
-            self::STEP_FOLLOW_UP,
-            self::STEP_DONE,
+            self::TYPE_UNKNOWN,
+            self::TYPE_PARTNER,
+            self::TYPE_PARTNER_USER,
+            self::TYPE_EMPLOYEE,
+            self::TYPE_CLIENT,
         ];
     }
     
@@ -149,8 +151,10 @@ class LeadProgressResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['step'] = isset($data['step']) ? $data['step'] : 'none';
-        $this->container['is_completed'] = isset($data['is_completed']) ? $data['is_completed'] : false;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
     }
 
     /**
@@ -162,9 +166,9 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
+        $allowed_values = ["unknown", "partner", "partner_user", "employee", "client"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'partner', 'partner_user', 'employee', 'client'.";
         }
 
         return $invalid_properties;
@@ -179,8 +183,8 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
+        $allowed_values = ["unknown", "partner", "partner_user", "employee", "client"];
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -188,47 +192,89 @@ class LeadProgressResource implements ArrayAccess
 
 
     /**
-     * Gets step
+     * Gets type
      * @return string
      */
-    public function getStep()
+    public function getType()
     {
-        return $this->container['step'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets step
-     * @param string $step Progress step
+     * Sets type
+     * @param string $type Type of consumer for the checkout
      * @return $this
      */
-    public function setStep($step)
+    public function setType($type)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
-        if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
+        $allowed_values = array('unknown', 'partner', 'partner_user', 'employee', 'client');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'partner', 'partner_user', 'employee', 'client'");
         }
-        $this->container['step'] = $step;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets is_completed
-     * @return bool
+     * Gets partner
+     * @return \Ageras\Api\CheckoutPartnerResource
      */
-    public function getIsCompleted()
+    public function getPartner()
     {
-        return $this->container['is_completed'];
+        return $this->container['partner'];
     }
 
     /**
-     * Sets is_completed
-     * @param bool $is_completed Has been completed
+     * Sets partner
+     * @param \Ageras\Api\CheckoutPartnerResource $partner
      * @return $this
      */
-    public function setIsCompleted($is_completed)
+    public function setPartner($partner)
     {
-        $this->container['is_completed'] = $is_completed;
+        $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     * @return \Ageras\Api\CheckoutClientResource
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     * @param \Ageras\Api\CheckoutClientResource $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee
+     * @return \Ageras\Api\CheckoutEmployeeResource
+     */
+    public function getEmployee()
+    {
+        return $this->container['employee'];
+    }
+
+    /**
+     * Sets employee
+     * @param \Ageras\Api\CheckoutEmployeeResource $employee
+     * @return $this
+     */
+    public function setEmployee($employee)
+    {
+        $this->container['employee'] = $employee;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadProgressResource
+ * CheckoutPaymentInstallmentResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadProgressResource Class Doc Comment
+ * CheckoutPaymentInstallmentResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadProgressResource implements ArrayAccess
+class CheckoutPaymentInstallmentResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,18 @@ class LeadProgressResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadProgressResource';
+    protected static $swaggerModelName = 'CheckoutPaymentInstallmentResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'step' => 'string',
-        'is_completed' => 'bool'
+        'type' => 'string',
+        'fee' => '\Ageras\Api\AmountResource',
+        'vat_amount' => '\Ageras\Api\AmountResource',
+        'price_incl_vat' => '\Ageras\Api\AmountResource',
+        'price_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +71,11 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'step' => 'step',
-        'is_completed' => 'is_completed'
+        'type' => 'type',
+        'fee' => 'fee',
+        'vat_amount' => 'vat_amount',
+        'price_incl_vat' => 'price_incl_vat',
+        'price_excl_vat' => 'price_excl_vat'
     ];
 
 
@@ -78,8 +84,11 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'step' => 'setStep',
-        'is_completed' => 'setIsCompleted'
+        'type' => 'setType',
+        'fee' => 'setFee',
+        'vat_amount' => 'setVatAmount',
+        'price_incl_vat' => 'setPriceInclVat',
+        'price_excl_vat' => 'setPriceExclVat'
     ];
 
 
@@ -88,8 +97,11 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'step' => 'getStep',
-        'is_completed' => 'getIsCompleted'
+        'type' => 'getType',
+        'fee' => 'getFee',
+        'vat_amount' => 'getVatAmount',
+        'price_incl_vat' => 'getPriceInclVat',
+        'price_excl_vat' => 'getPriceExclVat'
     ];
 
     public static function attributeMap()
@@ -107,14 +119,10 @@ class LeadProgressResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STEP_NONE = 'none';
-    const STEP_VALIDATION = 'validation';
-    const STEP_AWAITING_OFFERS = 'awaiting_offers';
-    const STEP_AWAITING_QUOTES = 'awaiting_quotes';
-    const STEP_QUOTE_CHOSEN = 'quote_chosen';
-    const STEP_MATCH_VALIDATION = 'match_validation';
-    const STEP_FOLLOW_UP = 'follow_up';
-    const STEP_DONE = 'done';
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_UP_FRONT = 'up_front';
+    const TYPE_ON_DELIVERY = 'on_delivery';
+    const TYPE_PERIOD = 'period';
     
 
     
@@ -122,17 +130,13 @@ class LeadProgressResource implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStepAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::STEP_NONE,
-            self::STEP_VALIDATION,
-            self::STEP_AWAITING_OFFERS,
-            self::STEP_AWAITING_QUOTES,
-            self::STEP_QUOTE_CHOSEN,
-            self::STEP_MATCH_VALIDATION,
-            self::STEP_FOLLOW_UP,
-            self::STEP_DONE,
+            self::TYPE_UNKNOWN,
+            self::TYPE_UP_FRONT,
+            self::TYPE_ON_DELIVERY,
+            self::TYPE_PERIOD,
         ];
     }
     
@@ -149,8 +153,11 @@ class LeadProgressResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['step'] = isset($data['step']) ? $data['step'] : 'none';
-        $this->container['is_completed'] = isset($data['is_completed']) ? $data['is_completed'] : false;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['fee'] = isset($data['fee']) ? $data['fee'] : null;
+        $this->container['vat_amount'] = isset($data['vat_amount']) ? $data['vat_amount'] : null;
+        $this->container['price_incl_vat'] = isset($data['price_incl_vat']) ? $data['price_incl_vat'] : null;
+        $this->container['price_excl_vat'] = isset($data['price_excl_vat']) ? $data['price_excl_vat'] : null;
     }
 
     /**
@@ -162,9 +169,9 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
+        $allowed_values = ["unknown", "up_front", "on_delivery", "period"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'up_front', 'on_delivery', 'period'.";
         }
 
         return $invalid_properties;
@@ -179,8 +186,8 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
+        $allowed_values = ["unknown", "up_front", "on_delivery", "period"];
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -188,47 +195,110 @@ class LeadProgressResource implements ArrayAccess
 
 
     /**
-     * Gets step
+     * Gets type
      * @return string
      */
-    public function getStep()
+    public function getType()
     {
-        return $this->container['step'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets step
-     * @param string $step Progress step
+     * Sets type
+     * @param string $type
      * @return $this
      */
-    public function setStep($step)
+    public function setType($type)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
-        if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
+        $allowed_values = array('unknown', 'up_front', 'on_delivery', 'period');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'up_front', 'on_delivery', 'period'");
         }
-        $this->container['step'] = $step;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets is_completed
-     * @return bool
+     * Gets fee
+     * @return \Ageras\Api\AmountResource
      */
-    public function getIsCompleted()
+    public function getFee()
     {
-        return $this->container['is_completed'];
+        return $this->container['fee'];
     }
 
     /**
-     * Sets is_completed
-     * @param bool $is_completed Has been completed
+     * Sets fee
+     * @param \Ageras\Api\AmountResource $fee
      * @return $this
      */
-    public function setIsCompleted($is_completed)
+    public function setFee($fee)
     {
-        $this->container['is_completed'] = $is_completed;
+        $this->container['fee'] = $fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_amount
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getVatAmount()
+    {
+        return $this->container['vat_amount'];
+    }
+
+    /**
+     * Sets vat_amount
+     * @param \Ageras\Api\AmountResource $vat_amount
+     * @return $this
+     */
+    public function setVatAmount($vat_amount)
+    {
+        $this->container['vat_amount'] = $vat_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_incl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getPriceInclVat()
+    {
+        return $this->container['price_incl_vat'];
+    }
+
+    /**
+     * Sets price_incl_vat
+     * @param \Ageras\Api\AmountResource $price_incl_vat
+     * @return $this
+     */
+    public function setPriceInclVat($price_incl_vat)
+    {
+        $this->container['price_incl_vat'] = $price_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getPriceExclVat()
+    {
+        return $this->container['price_excl_vat'];
+    }
+
+    /**
+     * Sets price_excl_vat
+     * @param \Ageras\Api\AmountResource $price_excl_vat
+     * @return $this
+     */
+    public function setPriceExclVat($price_excl_vat)
+    {
+        $this->container['price_excl_vat'] = $price_excl_vat;
 
         return $this;
     }

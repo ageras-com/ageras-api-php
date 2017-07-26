@@ -81,6 +81,7 @@ $api_instance = new Ageras\Api\Api\InvoicesApi();
 $criteria = [
         'invoice_id' => "invoice_id_example"; // string | Invoice Id.
         'partner_id' => "partner_id_example"; // string | Filter Invoices by a given Partner.
+        'client_id' => "client_id_example"; // string | Filter Invoices by a given Client.
         'is_paid' => false; // bool | Filter invoices by whether or not they are paid.
         'is_overdue' => false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
         'sort' => "created_at"; // string | Desired sorting.
@@ -105,6 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **string**| Invoice Id. | [optional]
  **partner_id** | **string**| Filter Invoices by a given Partner. | [optional]
+ **client_id** | **string**| Filter Invoices by a given Client. | [optional]
  **is_paid** | **bool**| Filter invoices by whether or not they are paid. | [optional] [default to false]
  **is_overdue** | **bool**| Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. | [optional] [default to false]
  **sort** | **string**| Desired sorting. | [optional] [default to created_at]
