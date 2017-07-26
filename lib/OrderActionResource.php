@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadProgressResource
+ * OrderActionResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadProgressResource Class Doc Comment
+ * OrderActionResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadProgressResource implements ArrayAccess
+class OrderActionResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,16 @@ class LeadProgressResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadProgressResource';
+    protected static $swaggerModelName = 'OrderActionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'step' => 'string',
-        'is_completed' => 'bool'
+        'quote_id' => 'int',
+        'action' => 'string',
+        'date' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +69,9 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'step' => 'step',
-        'is_completed' => 'is_completed'
+        'quote_id' => 'quote_id',
+        'action' => 'action',
+        'date' => 'date'
     ];
 
 
@@ -78,8 +80,9 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'step' => 'setStep',
-        'is_completed' => 'setIsCompleted'
+        'quote_id' => 'setQuoteId',
+        'action' => 'setAction',
+        'date' => 'setDate'
     ];
 
 
@@ -88,8 +91,9 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'step' => 'getStep',
-        'is_completed' => 'getIsCompleted'
+        'quote_id' => 'getQuoteId',
+        'action' => 'getAction',
+        'date' => 'getDate'
     ];
 
     public static function attributeMap()
@@ -107,14 +111,7 @@ class LeadProgressResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STEP_NONE = 'none';
-    const STEP_VALIDATION = 'validation';
-    const STEP_AWAITING_OFFERS = 'awaiting_offers';
-    const STEP_AWAITING_QUOTES = 'awaiting_quotes';
-    const STEP_QUOTE_CHOSEN = 'quote_chosen';
-    const STEP_MATCH_VALIDATION = 'match_validation';
-    const STEP_FOLLOW_UP = 'follow_up';
-    const STEP_DONE = 'done';
+    const ACTION_GENERATE = 'generate';
     
 
     
@@ -122,17 +119,10 @@ class LeadProgressResource implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStepAllowableValues()
+    public function getActionAllowableValues()
     {
         return [
-            self::STEP_NONE,
-            self::STEP_VALIDATION,
-            self::STEP_AWAITING_OFFERS,
-            self::STEP_AWAITING_QUOTES,
-            self::STEP_QUOTE_CHOSEN,
-            self::STEP_MATCH_VALIDATION,
-            self::STEP_FOLLOW_UP,
-            self::STEP_DONE,
+            self::ACTION_GENERATE,
         ];
     }
     
@@ -149,8 +139,9 @@ class LeadProgressResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['step'] = isset($data['step']) ? $data['step'] : 'none';
-        $this->container['is_completed'] = isset($data['is_completed']) ? $data['is_completed'] : false;
+        $this->container['quote_id'] = isset($data['quote_id']) ? $data['quote_id'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'generate';
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
     }
 
     /**
@@ -162,9 +153,9 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
+        $allowed_values = ["generate"];
+        if (!in_array($this->container['action'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'action', must be one of 'generate'.";
         }
 
         return $invalid_properties;
@@ -179,8 +170,8 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
+        $allowed_values = ["generate"];
+        if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
         return true;
@@ -188,47 +179,68 @@ class LeadProgressResource implements ArrayAccess
 
 
     /**
-     * Gets step
-     * @return string
+     * Gets quote_id
+     * @return int
      */
-    public function getStep()
+    public function getQuoteId()
     {
-        return $this->container['step'];
+        return $this->container['quote_id'];
     }
 
     /**
-     * Sets step
-     * @param string $step Progress step
+     * Sets quote_id
+     * @param int $quote_id
      * @return $this
      */
-    public function setStep($step)
+    public function setQuoteId($quote_id)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
-        if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
-        }
-        $this->container['step'] = $step;
+        $this->container['quote_id'] = $quote_id;
 
         return $this;
     }
 
     /**
-     * Gets is_completed
-     * @return bool
+     * Gets action
+     * @return string
      */
-    public function getIsCompleted()
+    public function getAction()
     {
-        return $this->container['is_completed'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets is_completed
-     * @param bool $is_completed Has been completed
+     * Sets action
+     * @param string $action
      * @return $this
      */
-    public function setIsCompleted($is_completed)
+    public function setAction($action)
     {
-        $this->container['is_completed'] = $is_completed;
+        $allowed_values = array('generate');
+        if (!is_null($action) && (!in_array($action, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'generate'");
+        }
+        $this->container['action'] = $action;
+
+        return $this;
+    }
+
+    /**
+     * Gets date
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->container['date'];
+    }
+
+    /**
+     * Sets date
+     * @param string $date
+     * @return $this
+     */
+    public function setDate($date)
+    {
+        $this->container['date'] = $date;
 
         return $this;
     }

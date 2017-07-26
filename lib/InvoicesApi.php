@@ -182,6 +182,7 @@ class InvoicesApi
      * @param $criteria = [
      *    'invoice_id' => string,
      *    'partner_id' => string,
+     *    'client_id' => string,
      *    'is_paid' => bool,
      *    'is_overdue' => bool,
      *    'sort' => string,
@@ -207,6 +208,7 @@ class InvoicesApi
      * @param $criteria = [
      *    'invoice_id' => string,
      *    'partner_id' => string,
+     *    'client_id' => string,
      *    'is_paid' => bool,
      *    'is_overdue' => bool,
      *    'sort' => string,
@@ -239,6 +241,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
         }
         // query params
         if (isset($criteria['is_paid'])) {

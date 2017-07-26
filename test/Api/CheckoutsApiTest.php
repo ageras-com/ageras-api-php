@@ -1,6 +1,6 @@
 <?php
 /**
- * ConversationsApiTest
+ * CheckoutsApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Ageras\Api\ApiException;
 use \Ageras\Api\ObjectSerializer;
 
 /**
- * ConversationsApiTest Class Doc Comment
+ * CheckoutsApiTest Class Doc Comment
  *
  * @category Class
  * @package  Ageras\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConversationsApiTest extends \PHPUnit_Framework_TestCase
+class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,89 +77,45 @@ class ConversationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for conversationsAttachmentsIndex
+     * Test case for checkoutsCreate
      *
-     * List conversation's attachments.
+     * Create a new Checkout.
      *
      */
-    public function testConversationsAttachmentsIndex()
+    public function testCheckoutsCreate()
     {
 
     }
 
     /**
-     * Test case for conversationsCreate
+     * Test case for checkoutsGet
      *
-     * Create a new conversation..
+     * Get a checkout resource.
      *
      */
-    public function testConversationsCreate()
+    public function testCheckoutsGet()
     {
 
     }
 
     /**
-     * Test case for conversationsGet
+     * Test case for checkoutsIndex
      *
-     * Get a conversations by conversation_id..
+     * List Checkout resources.
      *
      */
-    public function testConversationsGet()
+    public function testCheckoutsIndex()
     {
 
     }
 
     /**
-     * Test case for conversationsIndex
+     * Test case for checkoutsUpdate
      *
-     * List conversations..
-     *
-     */
-    public function testConversationsIndex()
-    {
-
-    }
-
-    /**
-     * Test case for conversationsMessagesCreate
-     *
-     * Create a new message.
+     * Update a given checkout resource.
      *
      */
-    public function testConversationsMessagesCreate()
-    {
-
-    }
-
-    /**
-     * Test case for conversationsMessagesCreate2
-     *
-     * Create a new message.
-     *
-     */
-    public function testConversationsMessagesCreate2()
-    {
-
-    }
-
-    /**
-     * Test case for conversationsMessagesIndex
-     *
-     * Get messages by conversation_id..
-     *
-     */
-    public function testConversationsMessagesIndex()
-    {
-
-    }
-
-    /**
-     * Test case for conversationsMessagesIndex2
-     *
-     * Get messages by conversation_id..
-     *
-     */
-    public function testConversationsMessagesIndex2()
+    public function testCheckoutsUpdate()
     {
 
     }

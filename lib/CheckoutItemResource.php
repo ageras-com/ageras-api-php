@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadProgressResource
+ * CheckoutItemResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadProgressResource Class Doc Comment
+ * CheckoutItemResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadProgressResource implements ArrayAccess
+class CheckoutItemResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class LeadProgressResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadProgressResource';
+    protected static $swaggerModelName = 'CheckoutItemResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'step' => 'string',
-        'is_completed' => 'bool'
+        'type' => 'string',
+        'quote' => '\Ageras\Api\CheckoutPartnerLeadQuoteResource'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'step' => 'step',
-        'is_completed' => 'is_completed'
+        'type' => 'type',
+        'quote' => 'quote'
     ];
 
 
@@ -78,8 +78,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'step' => 'setStep',
-        'is_completed' => 'setIsCompleted'
+        'type' => 'setType',
+        'quote' => 'setQuote'
     ];
 
 
@@ -88,8 +88,8 @@ class LeadProgressResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'step' => 'getStep',
-        'is_completed' => 'getIsCompleted'
+        'type' => 'getType',
+        'quote' => 'getQuote'
     ];
 
     public static function attributeMap()
@@ -107,14 +107,8 @@ class LeadProgressResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STEP_NONE = 'none';
-    const STEP_VALIDATION = 'validation';
-    const STEP_AWAITING_OFFERS = 'awaiting_offers';
-    const STEP_AWAITING_QUOTES = 'awaiting_quotes';
-    const STEP_QUOTE_CHOSEN = 'quote_chosen';
-    const STEP_MATCH_VALIDATION = 'match_validation';
-    const STEP_FOLLOW_UP = 'follow_up';
-    const STEP_DONE = 'done';
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_QUOTE = 'quote';
     
 
     
@@ -122,17 +116,11 @@ class LeadProgressResource implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStepAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::STEP_NONE,
-            self::STEP_VALIDATION,
-            self::STEP_AWAITING_OFFERS,
-            self::STEP_AWAITING_QUOTES,
-            self::STEP_QUOTE_CHOSEN,
-            self::STEP_MATCH_VALIDATION,
-            self::STEP_FOLLOW_UP,
-            self::STEP_DONE,
+            self::TYPE_UNKNOWN,
+            self::TYPE_QUOTE,
         ];
     }
     
@@ -149,8 +137,8 @@ class LeadProgressResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['step'] = isset($data['step']) ? $data['step'] : 'none';
-        $this->container['is_completed'] = isset($data['is_completed']) ? $data['is_completed'] : false;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
     }
 
     /**
@@ -162,9 +150,9 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
+        $allowed_values = ["unknown", "quote"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'quote'.";
         }
 
         return $invalid_properties;
@@ -179,8 +167,8 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
-        if (!in_array($this->container['step'], $allowed_values)) {
+        $allowed_values = ["unknown", "quote"];
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -188,47 +176,47 @@ class LeadProgressResource implements ArrayAccess
 
 
     /**
-     * Gets step
+     * Gets type
      * @return string
      */
-    public function getStep()
+    public function getType()
     {
-        return $this->container['step'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets step
-     * @param string $step Progress step
+     * Sets type
+     * @param string $type Type of consumer for the checkout
      * @return $this
      */
-    public function setStep($step)
+    public function setType($type)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
-        if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
+        $allowed_values = array('unknown', 'quote');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'quote'");
         }
-        $this->container['step'] = $step;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets is_completed
-     * @return bool
+     * Gets quote
+     * @return \Ageras\Api\CheckoutPartnerLeadQuoteResource
      */
-    public function getIsCompleted()
+    public function getQuote()
     {
-        return $this->container['is_completed'];
+        return $this->container['quote'];
     }
 
     /**
-     * Sets is_completed
-     * @param bool $is_completed Has been completed
+     * Sets quote
+     * @param \Ageras\Api\CheckoutPartnerLeadQuoteResource $quote
      * @return $this
      */
-    public function setIsCompleted($is_completed)
+    public function setQuote($quote)
     {
-        $this->container['is_completed'] = $is_completed;
+        $this->container['quote'] = $quote;
 
         return $this;
     }
