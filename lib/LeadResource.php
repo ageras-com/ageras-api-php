@@ -58,6 +58,7 @@ class LeadResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'validated_at' => 'string',
+        'expires_at' => 'string',
         'status' => 'string',
         'progress' => '\Ageras\Api\LeadProgressResource[]',
         'title' => 'string',
@@ -92,6 +93,7 @@ class LeadResource implements ArrayAccess
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'validated_at' => 'validated_at',
+        'expires_at' => 'expires_at',
         'status' => 'status',
         'progress' => 'progress',
         'title' => 'title',
@@ -122,6 +124,7 @@ class LeadResource implements ArrayAccess
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'validated_at' => 'setValidatedAt',
+        'expires_at' => 'setExpiresAt',
         'status' => 'setStatus',
         'progress' => 'setProgress',
         'title' => 'setTitle',
@@ -152,6 +155,7 @@ class LeadResource implements ArrayAccess
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'validated_at' => 'getValidatedAt',
+        'expires_at' => 'getExpiresAt',
         'status' => 'getStatus',
         'progress' => 'getProgress',
         'title' => 'getTitle',
@@ -225,6 +229,7 @@ class LeadResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['validated_at'] = isset($data['validated_at']) ? $data['validated_at'] : null;
+        $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
@@ -359,6 +364,27 @@ class LeadResource implements ArrayAccess
     public function setValidatedAt($validated_at)
     {
         $this->container['validated_at'] = $validated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets expires_at
+     * @return string
+     */
+    public function getExpiresAt()
+    {
+        return $this->container['expires_at'];
+    }
+
+    /**
+     * Sets expires_at
+     * @param string $expires_at Date the Lead Expires.
+     * @return $this
+     */
+    public function setExpiresAt($expires_at)
+    {
+        $this->container['expires_at'] = $expires_at;
 
         return $this;
     }

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **lead_id** | **int** |  | [optional] 
 **partner** | [**\Ageras\Api\PartnerSuggestResource**](PartnerSuggestResource.md) |  | [optional] 
 **partner_lead_offer_id** | **int** | For the given partner and lead, | [optional] 
+**partner_terms** | **string** | Partners terms for the given quote | [optional] 
 **title** | **string** | Title | [optional] 
 **description** | **string** | Description | [optional] 
 **items** | [**\Ageras\Api\LeadQuoteItemResource[]**](LeadQuoteItemResource.md) | Quote Items | [optional] 

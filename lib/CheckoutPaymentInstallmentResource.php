@@ -120,9 +120,11 @@ class CheckoutPaymentInstallmentResource implements ArrayAccess
     }
 
     const TYPE_UNKNOWN = 'unknown';
+    const TYPE_DISCOUNT = 'discount';
+    const TYPE_PAYMENT = 'payment';
     const TYPE_UP_FRONT = 'up_front';
     const TYPE_ON_DELIVERY = 'on_delivery';
-    const TYPE_PERIOD = 'period';
+    const TYPE_RECURRING = 'recurring';
     
 
     
@@ -134,9 +136,11 @@ class CheckoutPaymentInstallmentResource implements ArrayAccess
     {
         return [
             self::TYPE_UNKNOWN,
+            self::TYPE_DISCOUNT,
+            self::TYPE_PAYMENT,
             self::TYPE_UP_FRONT,
             self::TYPE_ON_DELIVERY,
-            self::TYPE_PERIOD,
+            self::TYPE_RECURRING,
         ];
     }
     
@@ -169,9 +173,9 @@ class CheckoutPaymentInstallmentResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "up_front", "on_delivery", "period"];
+        $allowed_values = ["unknown", "discount", "payment", "up_front", "on_delivery", "recurring"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'up_front', 'on_delivery', 'period'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'discount', 'payment', 'up_front', 'on_delivery', 'recurring'.";
         }
 
         return $invalid_properties;
@@ -186,7 +190,7 @@ class CheckoutPaymentInstallmentResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "up_front", "on_delivery", "period"];
+        $allowed_values = ["unknown", "discount", "payment", "up_front", "on_delivery", "recurring"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -210,9 +214,9 @@ class CheckoutPaymentInstallmentResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'up_front', 'on_delivery', 'period');
+        $allowed_values = array('unknown', 'discount', 'payment', 'up_front', 'on_delivery', 'recurring');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'up_front', 'on_delivery', 'period'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'discount', 'payment', 'up_front', 'on_delivery', 'recurring'");
         }
         $this->container['type'] = $type;
 

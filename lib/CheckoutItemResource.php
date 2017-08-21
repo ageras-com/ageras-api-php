@@ -55,7 +55,9 @@ class CheckoutItemResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'type' => 'string',
-        'quote' => '\Ageras\Api\CheckoutPartnerLeadQuoteResource'
+        'quote' => '\Ageras\Api\CheckoutPartnerLeadQuoteResource',
+        'package' => '\Ageras\Api\CheckoutPackageResource',
+        'discount' => '\Ageras\Api\CheckoutDiscountResource'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +71,9 @@ class CheckoutItemResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'quote' => 'quote'
+        'quote' => 'quote',
+        'package' => 'package',
+        'discount' => 'discount'
     ];
 
 
@@ -79,7 +83,9 @@ class CheckoutItemResource implements ArrayAccess
      */
     protected static $setters = [
         'type' => 'setType',
-        'quote' => 'setQuote'
+        'quote' => 'setQuote',
+        'package' => 'setPackage',
+        'discount' => 'setDiscount'
     ];
 
 
@@ -89,7 +95,9 @@ class CheckoutItemResource implements ArrayAccess
      */
     protected static $getters = [
         'type' => 'getType',
-        'quote' => 'getQuote'
+        'quote' => 'getQuote',
+        'package' => 'getPackage',
+        'discount' => 'getDiscount'
     ];
 
     public static function attributeMap()
@@ -109,6 +117,8 @@ class CheckoutItemResource implements ArrayAccess
 
     const TYPE_UNKNOWN = 'unknown';
     const TYPE_QUOTE = 'quote';
+    const TYPE_PACKAGE = 'package';
+    const TYPE_DISCOUNT = 'discount';
     
 
     
@@ -121,6 +131,8 @@ class CheckoutItemResource implements ArrayAccess
         return [
             self::TYPE_UNKNOWN,
             self::TYPE_QUOTE,
+            self::TYPE_PACKAGE,
+            self::TYPE_DISCOUNT,
         ];
     }
     
@@ -139,6 +151,8 @@ class CheckoutItemResource implements ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
         $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
+        $this->container['package'] = isset($data['package']) ? $data['package'] : null;
+        $this->container['discount'] = isset($data['discount']) ? $data['discount'] : null;
     }
 
     /**
@@ -150,9 +164,9 @@ class CheckoutItemResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "quote"];
+        $allowed_values = ["unknown", "quote", "package", "discount"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'quote'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount'.";
         }
 
         return $invalid_properties;
@@ -167,7 +181,7 @@ class CheckoutItemResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "quote"];
+        $allowed_values = ["unknown", "quote", "package", "discount"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -191,9 +205,9 @@ class CheckoutItemResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'quote');
+        $allowed_values = array('unknown', 'quote', 'package', 'discount');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'quote'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount'");
         }
         $this->container['type'] = $type;
 
@@ -217,6 +231,48 @@ class CheckoutItemResource implements ArrayAccess
     public function setQuote($quote)
     {
         $this->container['quote'] = $quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets package
+     * @return \Ageras\Api\CheckoutPackageResource
+     */
+    public function getPackage()
+    {
+        return $this->container['package'];
+    }
+
+    /**
+     * Sets package
+     * @param \Ageras\Api\CheckoutPackageResource $package
+     * @return $this
+     */
+    public function setPackage($package)
+    {
+        $this->container['package'] = $package;
+
+        return $this;
+    }
+
+    /**
+     * Gets discount
+     * @return \Ageras\Api\CheckoutDiscountResource
+     */
+    public function getDiscount()
+    {
+        return $this->container['discount'];
+    }
+
+    /**
+     * Sets discount
+     * @param \Ageras\Api\CheckoutDiscountResource $discount
+     * @return $this
+     */
+    public function setDiscount($discount)
+    {
+        $this->container['discount'] = $discount;
 
         return $this;
     }

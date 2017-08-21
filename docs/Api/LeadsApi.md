@@ -21,6 +21,13 @@ Method | HTTP request | Description
 [**leadsQuotesGet2**](LeadsApi.md#leadsQuotesGet2) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | Get an quote by id.
 [**leadsQuotesIndex**](LeadsApi.md#leadsQuotesIndex) | **GET** /leads/quotes | List the quotes connected to a given Lead.
 [**leadsQuotesIndex2**](LeadsApi.md#leadsQuotesIndex2) | **GET** /leads/{lead_id}/quotes | List the quotes connected to a given Lead.
+[**leadsQuotesItemsCreate**](LeadsApi.md#leadsQuotesItemsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/items | Create a new quote item for a given Quote.
+[**leadsQuotesItemsDelete**](LeadsApi.md#leadsQuotesItemsDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Delete a quote item.
+[**leadsQuotesItemsGet**](LeadsApi.md#leadsQuotesItemsGet) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Get a quote item by id.
+[**leadsQuotesItemsIndex**](LeadsApi.md#leadsQuotesItemsIndex) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items | List the quote items connected to a given Quote.
+[**leadsQuotesItemsUpdate**](LeadsApi.md#leadsQuotesItemsUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Update a quote item.
+[**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | Update a quote.
+[**leadsQuotesUpdate2**](LeadsApi.md#leadsQuotesUpdate2) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
 [**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | Index lead types.
 [**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | Update Properties on a given Lead.
 
@@ -259,6 +266,7 @@ $criteria = [
         'sort' => "created_at"; // string | Sort Leads by a given attribute.
         'status' => "unknown"; // string | Status for the given lead.
         'client_id' => 56; // int | Lead's client
+        'employee_id' => "employee_id_example"; // string | Lead's client's assigned employee ID
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -286,6 +294,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Sort Leads by a given attribute. | [optional] [default to created_at]
  **status** | **string**| Status for the given lead. | [optional] [default to unknown]
  **client_id** | **int**| Lead&#39;s client | [optional]
+ **employee_id** | **string**| Lead&#39;s client&#39;s assigned employee ID | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -975,6 +984,396 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadQuoteResult**](../Model/LeadQuoteResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesItemsCreate**
+> \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsCreate($lead_id,  $lead_quote_id , $lead_quote_item_resource)
+
+Create a new quote item for a given Quote.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_item_resource = new \Ageras\Api\LeadQuoteItemResource(); // \Ageras\Api\LeadQuoteItemResource | 
+
+try {
+    $result = $api_instance->leadsQuotesItemsCreate($lead_id,  $lead_quote_id , $lead_quote_item_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesItemsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_item_resource** | [**\Ageras\Api\LeadQuoteItemResource**](../Model/\Ageras\Api\LeadQuoteItemResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteItemResource**](../Model/LeadQuoteItemResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesItemsDelete**
+> leadsQuotesItemsDelete($lead_id,  $lead_quote_id,  $lead_quote_item_id )
+
+Delete a quote item.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_item_id = "lead_quote_item_id_example"; // string | 
+
+try {
+    $api_instance->leadsQuotesItemsDelete($lead_id,  $lead_quote_id,  $lead_quote_item_id );
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesItemsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_item_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesItemsGet**
+> \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsGet($lead_id,  $lead_quote_id,  $lead_quote_item_id )
+
+Get a quote item by id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_item_id = "lead_quote_item_id_example"; // string | 
+
+try {
+    $result = $api_instance->leadsQuotesItemsGet($lead_id,  $lead_quote_id,  $lead_quote_item_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesItemsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_item_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteItemResource**](../Model/LeadQuoteItemResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesItemsIndex**
+> \Ageras\Api\LeadQuoteItemResult leadsQuotesItemsIndex($lead_id,  $lead_quote_id , $criteria)
+
+List the quote items connected to a given Quote.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->leadsQuotesItemsIndex($lead_id,  $lead_quote_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesItemsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteItemResult**](../Model/LeadQuoteItemResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesItemsUpdate**
+> \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsUpdate($lead_id,  $lead_quote_id,  $lead_quote_item_id , $lead_quote_item_resource)
+
+Update a quote item.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_item_id = "lead_quote_item_id_example"; // string | 
+$lead_quote_item_resource = new \Ageras\Api\LeadQuoteItemResource(); // \Ageras\Api\LeadQuoteItemResource | 
+
+try {
+    $result = $api_instance->leadsQuotesItemsUpdate($lead_id,  $lead_quote_id,  $lead_quote_item_id , $lead_quote_item_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesItemsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_item_id** | **string**|  |
+ **lead_quote_item_resource** | [**\Ageras\Api\LeadQuoteItemResource**](../Model/\Ageras\Api\LeadQuoteItemResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteItemResource**](../Model/LeadQuoteItemResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesUpdate**
+> \Ageras\Api\LeadQuoteResource leadsQuotesUpdate($lead_quote_id , $lead_quote_resource)
+
+Update a quote.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_resource = new \Ageras\Api\LeadQuoteResource(); // \Ageras\Api\LeadQuoteResource | 
+
+try {
+    $result = $api_instance->leadsQuotesUpdate($lead_quote_id , $lead_quote_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_quote_id** | **string**|  |
+ **lead_quote_resource** | [**\Ageras\Api\LeadQuoteResource**](../Model/\Ageras\Api\LeadQuoteResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteResource**](../Model/LeadQuoteResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesUpdate2**
+> \Ageras\Api\LeadQuoteResource leadsQuotesUpdate2($lead_id,  $lead_quote_id , $lead_quote_resource)
+
+Update a quote.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_resource = new \Ageras\Api\LeadQuoteResource(); // \Ageras\Api\LeadQuoteResource | 
+
+try {
+    $result = $api_instance->leadsQuotesUpdate2($lead_id,  $lead_quote_id , $lead_quote_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesUpdate2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_resource** | [**\Ageras\Api\LeadQuoteResource**](../Model/\Ageras\Api\LeadQuoteResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteResource**](../Model/LeadQuoteResource.md)
 
 ### Authorization
 

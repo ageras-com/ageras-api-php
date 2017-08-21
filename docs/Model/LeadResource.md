@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **created_at** | **string** | Date the Lead was created. | [optional] 
 **updated_at** | **string** | Date the Lead was updated. | [optional] 
 **validated_at** | **string** | Date the Lead was Updated. | [optional] 
+**expires_at** | **string** | Date the Lead Expires. | [optional] 
 **status** | **string** | Current Validation Status of the Lead. | [optional] [default to 'unknown']
 **progress** | [**\Ageras\Api\LeadProgressResource[]**](LeadProgressResource.md) | Progress | [optional] 
 **title** | **string** | Title for the Lead. | [optional] 

@@ -99,6 +99,14 @@ class CheckoutPaymentEventResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "provider"
+     */
+    public function testPropertyProvider()
+    {
+
+    }
+
+    /**
      * Test attribute "fee"
      */
     public function testPropertyFee()

@@ -77,6 +77,17 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for paymentsCardsCreate
+     *
+     * Create a payment card..
+     *
+     */
+    public function testPaymentsCardsCreate()
+    {
+
+    }
+
+    /**
      * Test case for paymentsCardsGet
      *
      * Get a Partner from a given partner_id..
@@ -105,28 +116,6 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPaymentsCardsIndex()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsEpayCardsCreate
-     *
-     * Create an epay payment card..
-     *
-     */
-    public function testPaymentsEpayCardsCreate()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsEpayWindowCreate
-     *
-     * Create epay window..
-     *
-     */
-    public function testPaymentsEpayWindowCreate()
     {
 
     }

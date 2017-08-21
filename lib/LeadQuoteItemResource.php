@@ -59,7 +59,7 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'type' => 'string',
-        'vat_percent' => 'int',
+        'vat_percent' => 'float',
         'vat_amount' => '\Ageras\Api\AmountResource',
         'amount_excl_vat' => '\Ageras\Api\AmountResource',
         'amount_incl_vat' => '\Ageras\Api\AmountResource'
@@ -323,7 +323,7 @@ class LeadQuoteItemResource implements ArrayAccess
 
     /**
      * Gets vat_percent
-     * @return int
+     * @return float
      */
     public function getVatPercent()
     {
@@ -332,7 +332,7 @@ class LeadQuoteItemResource implements ArrayAccess
 
     /**
      * Sets vat_percent
-     * @param int $vat_percent
+     * @param float $vat_percent
      * @return $this
      */
     public function setVatPercent($vat_percent)

@@ -65,7 +65,8 @@ class ParticipantResource implements ArrayAccess
         'lead_id' => 'int',
         'partner_user_id' => 'int',
         'client_id' => 'int',
-        'partner_id' => 'int'
+        'partner_id' => 'int',
+        'customer_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -89,7 +90,8 @@ class ParticipantResource implements ArrayAccess
         'lead_id' => 'lead_id',
         'partner_user_id' => 'partner_user_id',
         'client_id' => 'client_id',
-        'partner_id' => 'partner_id'
+        'partner_id' => 'partner_id',
+        'customer_id' => 'customer_id'
     ];
 
 
@@ -109,7 +111,8 @@ class ParticipantResource implements ArrayAccess
         'lead_id' => 'setLeadId',
         'partner_user_id' => 'setPartnerUserId',
         'client_id' => 'setClientId',
-        'partner_id' => 'setPartnerId'
+        'partner_id' => 'setPartnerId',
+        'customer_id' => 'setCustomerId'
     ];
 
 
@@ -129,7 +132,8 @@ class ParticipantResource implements ArrayAccess
         'lead_id' => 'getLeadId',
         'partner_user_id' => 'getPartnerUserId',
         'client_id' => 'getClientId',
-        'partner_id' => 'getPartnerId'
+        'partner_id' => 'getPartnerId',
+        'customer_id' => 'getCustomerId'
     ];
 
     public static function attributeMap()
@@ -175,6 +179,7 @@ class ParticipantResource implements ArrayAccess
         $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -450,6 +455,27 @@ class ParticipantResource implements ArrayAccess
     public function setPartnerId($partner_id)
     {
         $this->container['partner_id'] = $partner_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_id
+     * @return int
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customer_id'];
+    }
+
+    /**
+     * Sets customer_id
+     * @param int $customer_id
+     * @return $this
+     */
+    public function setCustomerId($customer_id)
+    {
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

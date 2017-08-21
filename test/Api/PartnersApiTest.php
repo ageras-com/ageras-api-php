@@ -99,6 +99,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBankaccountsCreate
+     *
+     * Subscribe a partner..
+     *
+     */
+    public function testPartnersBankaccountsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBankaccountsIndex
+     *
+     * Get partner's bank accounts..
+     *
+     */
+    public function testPartnersBankaccountsIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersCertificationsCreate
      *
      * Attach certification to partner..
@@ -677,6 +699,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersUsersUpdate2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersVerificationsIndex
+     *
+     * Get Partner verifications..
+     *
+     */
+    public function testPartnersVerificationsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersVerificationsIndex2
+     *
+     * Get Partner verifications..
+     *
+     */
+    public function testPartnersVerificationsIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersVerificationsUpdate
+     *
+     * Update Partner verification data..
+     *
+     */
+    public function testPartnersVerificationsUpdate()
     {
 
     }

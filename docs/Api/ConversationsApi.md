@@ -4,6 +4,7 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**conversationsAttachmentsCreate**](ConversationsApi.md#conversationsAttachmentsCreate) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
 [**conversationsAttachmentsIndex**](ConversationsApi.md#conversationsAttachmentsIndex) | **GET** /conversations/{conversation_id}/attachments | List conversation&#39;s attachments
 [**conversationsCreate**](ConversationsApi.md#conversationsCreate) | **POST** /conversations | Create a new conversation.
 [**conversationsGet**](ConversationsApi.md#conversationsGet) | **GET** /conversations/{conversation_id} | Get a conversations by conversation_id.
@@ -13,6 +14,59 @@ Method | HTTP request | Description
 [**conversationsMessagesIndex**](ConversationsApi.md#conversationsMessagesIndex) | **GET** /conversations/messages | Get messages by conversation_id.
 [**conversationsMessagesIndex2**](ConversationsApi.md#conversationsMessagesIndex2) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
 
+
+# **conversationsAttachmentsCreate**
+> \Ageras\Api\AttachmentResource conversationsAttachmentsCreate($conversation_id , $message_attachment_resource)
+
+Create a new attachment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\ConversationsApi();
+$conversation_id = "conversation_id_example"; // string | 
+$message_attachment_resource = new \Ageras\Api\MessageAttachmentResource(); // \Ageras\Api\MessageAttachmentResource | 
+
+try {
+    $result = $api_instance->conversationsAttachmentsCreate($conversation_id , $message_attachment_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ConversationsApi->conversationsAttachmentsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **string**|  |
+ **message_attachment_resource** | [**\Ageras\Api\MessageAttachmentResource**](../Model/\Ageras\Api\MessageAttachmentResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\AttachmentResource**](../Model/AttachmentResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsAttachmentsIndex**
 > \Ageras\Api\AttachmentResult conversationsAttachmentsIndex($conversation_id , $criteria)

@@ -55,11 +55,13 @@ class PaymentCardResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'partner_id' => 'int',
+        'owner' => '\Ageras\Api\PaymentCardOwnerResource',
         'card_mask' => 'string',
-        'provider' => 'string',
-        'provider_id' => 'string',
-        'is_being_used' => 'bool'
+        'provider' => '\Ageras\Api\PaymentProviderResource',
+        'provider_token' => 'string',
+        'subscription_id' => 'string',
+        'is_being_used' => 'bool',
+        'data' => '\Ageras\Api\PaymentCardDataResource'
     ];
 
     public static function swaggerTypes()
@@ -73,11 +75,13 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'partner_id' => 'partner_id',
+        'owner' => 'owner',
         'card_mask' => 'card_mask',
         'provider' => 'provider',
-        'provider_id' => 'provider_id',
-        'is_being_used' => 'is_being_used'
+        'provider_token' => 'provider_token',
+        'subscription_id' => 'subscription_id',
+        'is_being_used' => 'is_being_used',
+        'data' => 'data'
     ];
 
 
@@ -87,11 +91,13 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'partner_id' => 'setPartnerId',
+        'owner' => 'setOwner',
         'card_mask' => 'setCardMask',
         'provider' => 'setProvider',
-        'provider_id' => 'setProviderId',
-        'is_being_used' => 'setIsBeingUsed'
+        'provider_token' => 'setProviderToken',
+        'subscription_id' => 'setSubscriptionId',
+        'is_being_used' => 'setIsBeingUsed',
+        'data' => 'setData'
     ];
 
 
@@ -101,11 +107,13 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'partner_id' => 'getPartnerId',
+        'owner' => 'getOwner',
         'card_mask' => 'getCardMask',
         'provider' => 'getProvider',
-        'provider_id' => 'getProviderId',
-        'is_being_used' => 'getIsBeingUsed'
+        'provider_token' => 'getProviderToken',
+        'subscription_id' => 'getSubscriptionId',
+        'is_being_used' => 'getIsBeingUsed',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -140,11 +148,13 @@ class PaymentCardResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['provider_id'] = isset($data['provider_id']) ? $data['provider_id'] : null;
+        $this->container['provider_token'] = isset($data['provider_token']) ? $data['provider_token'] : null;
+        $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -194,22 +204,22 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
-     * Gets partner_id
-     * @return int
+     * Gets owner
+     * @return \Ageras\Api\PaymentCardOwnerResource
      */
-    public function getPartnerId()
+    public function getOwner()
     {
-        return $this->container['partner_id'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets partner_id
-     * @param int $partner_id Id to the given partner the card belongs to.
+     * Sets owner
+     * @param \Ageras\Api\PaymentCardOwnerResource $owner
      * @return $this
      */
-    public function setPartnerId($partner_id)
+    public function setOwner($owner)
     {
-        $this->container['partner_id'] = $partner_id;
+        $this->container['owner'] = $owner;
 
         return $this;
     }
@@ -237,7 +247,7 @@ class PaymentCardResource implements ArrayAccess
 
     /**
      * Gets provider
-     * @return string
+     * @return \Ageras\Api\PaymentProviderResource
      */
     public function getProvider()
     {
@@ -246,7 +256,7 @@ class PaymentCardResource implements ArrayAccess
 
     /**
      * Sets provider
-     * @param string $provider Id to the given partner the card belongs to.
+     * @param \Ageras\Api\PaymentProviderResource $provider
      * @return $this
      */
     public function setProvider($provider)
@@ -257,22 +267,43 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
-     * Gets provider_id
+     * Gets provider_token
      * @return string
      */
-    public function getProviderId()
+    public function getProviderToken()
     {
-        return $this->container['provider_id'];
+        return $this->container['provider_token'];
     }
 
     /**
-     * Sets provider_id
-     * @param string $provider_id Subscription id.
+     * Sets provider_token
+     * @param string $provider_token Token or ID retrieved from the payment provider.
      * @return $this
      */
-    public function setProviderId($provider_id)
+    public function setProviderToken($provider_token)
     {
-        $this->container['provider_id'] = $provider_id;
+        $this->container['provider_token'] = $provider_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_id
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->container['subscription_id'];
+    }
+
+    /**
+     * Sets subscription_id
+     * @param string $subscription_id Subscription id.
+     * @return $this
+     */
+    public function setSubscriptionId($subscription_id)
+    {
+        $this->container['subscription_id'] = $subscription_id;
 
         return $this;
     }
@@ -294,6 +325,27 @@ class PaymentCardResource implements ArrayAccess
     public function setIsBeingUsed($is_being_used)
     {
         $this->container['is_being_used'] = $is_being_used;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\PaymentCardDataResource
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\PaymentCardDataResource $data
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

@@ -91,9 +91,9 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "partner_id"
+     * Test attribute "owner"
      */
-    public function testPropertyPartnerId()
+    public function testPropertyOwner()
     {
 
     }
@@ -115,9 +115,17 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "provider_id"
+     * Test attribute "provider_token"
      */
-    public function testPropertyProviderId()
+    public function testPropertyProviderToken()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscription_id"
+     */
+    public function testPropertySubscriptionId()
     {
 
     }
@@ -126,6 +134,14 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "is_being_used"
      */
     public function testPropertyIsBeingUsed()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
 
     }

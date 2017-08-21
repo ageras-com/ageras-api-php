@@ -79,10 +79,21 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ordersActionsCreate
      *
-     * Coupon action.
+     * Invoke actions on orders.
      *
      */
     public function testOrdersActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for ordersIndex
+     *
+     * Invoke actions on orders.
+     *
+     */
+    public function testOrdersIndex()
     {
 
     }

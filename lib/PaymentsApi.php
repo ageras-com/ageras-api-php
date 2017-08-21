@@ -88,6 +88,90 @@ class PaymentsApi
     }
 
     /**
+     * Operation paymentsCardsCreate
+     *
+     * Create a payment card.
+     *
+     * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PaymentCardResource
+     */
+    public function paymentsCardsCreate($payment_card_resource)
+    {
+        list($response) = $this->paymentsCardsCreateWithHttpInfo($payment_card_resource);
+        return $response;
+    }
+
+    /**
+     * Operation paymentsCardsCreateWithHttpInfo
+     *
+     * Create a payment card.
+     *
+     * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PaymentCardResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentsCardsCreateWithHttpInfo($payment_card_resource)
+    {
+        // parse inputs
+        $resourcePath = "/payments/cards";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($payment_card_resource)) {
+            $_tempBody = $payment_card_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PaymentCardResource',
+                '/payments/cards'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PaymentCardResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentCardResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation paymentsCardsGet
      *
      * Get a Partner from a given partner_id.
@@ -278,6 +362,8 @@ class PaymentsApi
      *
      * @param $criteria = [
      *    'partner_id' => int,
+     *    'partner_user_id' => int,
+     *    'client_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -298,6 +384,8 @@ class PaymentsApi
      *
      * @param $criteria = [
      *    'partner_id' => int,
+     *    'partner_user_id' => int,
+     *    'client_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -322,6 +410,14 @@ class PaymentsApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['partner_user_id'])) {
+            $queryParams['partner_user_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_user_id']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -368,174 +464,6 @@ class PaymentsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentCardResult', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation paymentsEpayCardsCreate
-     *
-     * Create an epay payment card.
-     *
-     * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\PaymentCardResource
-     */
-    public function paymentsEpayCardsCreate($payment_card_resource)
-    {
-        list($response) = $this->paymentsEpayCardsCreateWithHttpInfo($payment_card_resource);
-        return $response;
-    }
-
-    /**
-     * Operation paymentsEpayCardsCreateWithHttpInfo
-     *
-     * Create an epay payment card.
-     *
-     * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\PaymentCardResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function paymentsEpayCardsCreateWithHttpInfo($payment_card_resource)
-    {
-        // parse inputs
-        $resourcePath = "/payments/epay/cards";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // body params
-        $_tempBody = null;
-        if (isset($payment_card_resource)) {
-            $_tempBody = $payment_card_resource;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\PaymentCardResource',
-                '/payments/epay/cards'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PaymentCardResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentCardResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation paymentsEpayWindowCreate
-     *
-     * Create epay window.
-     *
-     * @param \Ageras\Api\PaymentWindowResource $payment_window_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\PaymentWindowResource
-     */
-    public function paymentsEpayWindowCreate($payment_window_resource)
-    {
-        list($response) = $this->paymentsEpayWindowCreateWithHttpInfo($payment_window_resource);
-        return $response;
-    }
-
-    /**
-     * Operation paymentsEpayWindowCreateWithHttpInfo
-     *
-     * Create epay window.
-     *
-     * @param \Ageras\Api\PaymentWindowResource $payment_window_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\PaymentWindowResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function paymentsEpayWindowCreateWithHttpInfo($payment_window_resource)
-    {
-        // parse inputs
-        $resourcePath = "/payments/epay/window";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // body params
-        $_tempBody = null;
-        if (isset($payment_window_resource)) {
-            $_tempBody = $payment_window_resource;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\PaymentWindowResource',
-                '/payments/epay/window'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PaymentWindowResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentWindowResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

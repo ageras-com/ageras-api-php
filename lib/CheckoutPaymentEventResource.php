@@ -56,6 +56,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
     protected static $swaggerTypes = [
         'identifier' => 'string',
         'callback' => 'string',
+        'provider' => '\Ageras\Api\CheckoutPaymentProviderResource',
         'fee' => '\Ageras\Api\AmountResource',
         'vat_amount' => '\Ageras\Api\AmountResource',
         'price_incl_vat' => '\Ageras\Api\AmountResource',
@@ -74,6 +75,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
     protected static $attributeMap = [
         'identifier' => 'identifier',
         'callback' => 'callback',
+        'provider' => 'provider',
         'fee' => 'fee',
         'vat_amount' => 'vat_amount',
         'price_incl_vat' => 'price_incl_vat',
@@ -88,6 +90,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
     protected static $setters = [
         'identifier' => 'setIdentifier',
         'callback' => 'setCallback',
+        'provider' => 'setProvider',
         'fee' => 'setFee',
         'vat_amount' => 'setVatAmount',
         'price_incl_vat' => 'setPriceInclVat',
@@ -102,6 +105,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
     protected static $getters = [
         'identifier' => 'getIdentifier',
         'callback' => 'getCallback',
+        'provider' => 'getProvider',
         'fee' => 'getFee',
         'vat_amount' => 'getVatAmount',
         'price_incl_vat' => 'getPriceInclVat',
@@ -141,6 +145,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
     {
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
+        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['fee'] = isset($data['fee']) ? $data['fee'] : null;
         $this->container['vat_amount'] = isset($data['vat_amount']) ? $data['vat_amount'] : null;
         $this->container['price_incl_vat'] = isset($data['price_incl_vat']) ? $data['price_incl_vat'] : null;
@@ -183,7 +188,7 @@ class CheckoutPaymentEventResource implements ArrayAccess
 
     /**
      * Sets identifier
-     * @param string $identifier
+     * @param string $identifier payment event identifier
      * @return $this
      */
     public function setIdentifier($identifier)
@@ -204,12 +209,33 @@ class CheckoutPaymentEventResource implements ArrayAccess
 
     /**
      * Sets callback
-     * @param string $callback
+     * @param string $callback callback for
      * @return $this
      */
     public function setCallback($callback)
     {
         $this->container['callback'] = $callback;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider
+     * @return \Ageras\Api\CheckoutPaymentProviderResource
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Ageras\Api\CheckoutPaymentProviderResource $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
 
         return $this;
     }

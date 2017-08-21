@@ -54,12 +54,13 @@ class CheckoutResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
+        'id' => 'string',
         'created_at' => 'string',
         'updated_at' => 'string',
         'geo_code' => 'string',
         'status' => 'string',
-        'validation_summary' => 'null[]',
+        'scope' => 'string',
+        'validation_summary' => 'string[]',
         'payments' => '\Ageras\Api\CheckoutPaymentResource',
         'creator' => '\Ageras\Api\CheckoutConsumerResource',
         'buyer' => '\Ageras\Api\CheckoutConsumerResource',
@@ -84,6 +85,7 @@ class CheckoutResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'geo_code' => 'geo_code',
         'status' => 'status',
+        'scope' => 'scope',
         'validation_summary' => 'validation_summary',
         'payments' => 'payments',
         'creator' => 'creator',
@@ -105,6 +107,7 @@ class CheckoutResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'geo_code' => 'setGeoCode',
         'status' => 'setStatus',
+        'scope' => 'setScope',
         'validation_summary' => 'setValidationSummary',
         'payments' => 'setPayments',
         'creator' => 'setCreator',
@@ -126,6 +129,7 @@ class CheckoutResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'geo_code' => 'getGeoCode',
         'status' => 'getStatus',
+        'scope' => 'getScope',
         'validation_summary' => 'getValidationSummary',
         'payments' => 'getPayments',
         'creator' => 'getCreator',
@@ -155,9 +159,19 @@ class CheckoutResource implements ArrayAccess
     const STATUS_CREATED = 'created';
     const STATUS_INVALID = 'invalid';
     const STATUS_VALID = 'valid';
+    const STATUS_IN_PROGRESS = 'in_progress';
     const STATUS_PAYMENT_IN_PROGRESS = 'payment_in_progress';
+    const STATUS_PAID = 'paid';
     const STATUS_FAILED = 'failed';
     const STATUS_COMPLETED = 'completed';
+    const VALIDATION_SUMMARY_UNKNOWN = 'unknown';
+    const VALIDATION_SUMMARY_MISSING_BUYER = 'missing_buyer';
+    const VALIDATION_SUMMARY_MISSING_PAYMENT_SOLUTION = 'missing_payment_solution';
+    const VALIDATION_SUMMARY_INVALID_ITEM = 'invalid_item';
+    const VALIDATION_SUMMARY_NO_CHECKOUT_LINES = 'no_checkout_lines';
+    const VALIDATION_SUMMARY_ITEM_NOT_IN_STOCK = 'item_not_in_stock';
+    const VALIDATION_SUMMARY_ITEM_ALREADY_PURCHASED = 'item_already_purchased';
+    const VALIDATION_SUMMARY_INVALID_QUANTITY = 'invalid_quantity';
     
 
     
@@ -172,9 +186,29 @@ class CheckoutResource implements ArrayAccess
             self::STATUS_CREATED,
             self::STATUS_INVALID,
             self::STATUS_VALID,
+            self::STATUS_IN_PROGRESS,
             self::STATUS_PAYMENT_IN_PROGRESS,
+            self::STATUS_PAID,
             self::STATUS_FAILED,
             self::STATUS_COMPLETED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getValidationSummaryAllowableValues()
+    {
+        return [
+            self::VALIDATION_SUMMARY_UNKNOWN,
+            self::VALIDATION_SUMMARY_MISSING_BUYER,
+            self::VALIDATION_SUMMARY_MISSING_PAYMENT_SOLUTION,
+            self::VALIDATION_SUMMARY_INVALID_ITEM,
+            self::VALIDATION_SUMMARY_NO_CHECKOUT_LINES,
+            self::VALIDATION_SUMMARY_ITEM_NOT_IN_STOCK,
+            self::VALIDATION_SUMMARY_ITEM_ALREADY_PURCHASED,
+            self::VALIDATION_SUMMARY_INVALID_QUANTITY,
         ];
     }
     
@@ -196,6 +230,7 @@ class CheckoutResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['validation_summary'] = isset($data['validation_summary']) ? $data['validation_summary'] : null;
         $this->container['payments'] = isset($data['payments']) ? $data['payments'] : null;
         $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
@@ -215,9 +250,9 @@ class CheckoutResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "created", "invalid", "valid", "payment_in_progress", "failed", "completed"];
+        $allowed_values = ["unknown", "created", "invalid", "valid", "in_progress", "payment_in_progress", "paid", "failed", "completed"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'created', 'invalid', 'valid', 'payment_in_progress', 'failed', 'completed'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'created', 'invalid', 'valid', 'in_progress', 'payment_in_progress', 'paid', 'failed', 'completed'.";
         }
 
         return $invalid_properties;
@@ -232,7 +267,7 @@ class CheckoutResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "created", "invalid", "valid", "payment_in_progress", "failed", "completed"];
+        $allowed_values = ["unknown", "created", "invalid", "valid", "in_progress", "payment_in_progress", "paid", "failed", "completed"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -242,7 +277,7 @@ class CheckoutResource implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return string
      */
     public function getId()
     {
@@ -251,7 +286,7 @@ class CheckoutResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Client id.
+     * @param string $id Client id.
      * @return $this
      */
     public function setId($id)
@@ -340,9 +375,9 @@ class CheckoutResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('unknown', 'created', 'invalid', 'valid', 'payment_in_progress', 'failed', 'completed');
+        $allowed_values = array('unknown', 'created', 'invalid', 'valid', 'in_progress', 'payment_in_progress', 'paid', 'failed', 'completed');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'created', 'invalid', 'valid', 'payment_in_progress', 'failed', 'completed'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'created', 'invalid', 'valid', 'in_progress', 'payment_in_progress', 'paid', 'failed', 'completed'");
         }
         $this->container['status'] = $status;
 
@@ -350,8 +385,29 @@ class CheckoutResource implements ArrayAccess
     }
 
     /**
+     * Gets scope
+     * @return string
+     */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+     * Sets scope
+     * @param string $scope
+     * @return $this
+     */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
+
+        return $this;
+    }
+
+    /**
      * Gets validation_summary
-     * @return null[]
+     * @return string[]
      */
     public function getValidationSummary()
     {
@@ -360,11 +416,15 @@ class CheckoutResource implements ArrayAccess
 
     /**
      * Sets validation_summary
-     * @param null[] $validation_summary
+     * @param string[] $validation_summary
      * @return $this
      */
     public function setValidationSummary($validation_summary)
     {
+        $allowed_values = array('unknown', 'missing_buyer', 'missing_payment_solution', 'invalid_item', 'no_checkout_lines', 'item_not_in_stock', 'item_already_purchased', 'invalid_quantity');
+        if (!is_null($validation_summary) && (array_diff($validation_summary, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'validation_summary', must be one of 'unknown', 'missing_buyer', 'missing_payment_solution', 'invalid_item', 'no_checkout_lines', 'item_not_in_stock', 'item_already_purchased', 'invalid_quantity'");
+        }
         $this->container['validation_summary'] = $validation_summary;
 
         return $this;
