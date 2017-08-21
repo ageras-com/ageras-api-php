@@ -155,6 +155,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_terms"
+     */
+    public function testPropertyPartnerTerms()
+    {
+
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()

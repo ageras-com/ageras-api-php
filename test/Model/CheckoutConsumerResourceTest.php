@@ -99,6 +99,14 @@ class CheckoutConsumerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_user"
+     */
+    public function testPropertyPartnerUser()
+    {
+
+    }
+
+    /**
      * Test attribute "client"
      */
     public function testPropertyClient()

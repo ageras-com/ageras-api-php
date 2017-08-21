@@ -66,7 +66,8 @@ class ProjectResource implements ArrayAccess
         'partner' => '\Ageras\Api\PartnerResource',
         'partner_user' => '\Ageras\Api\PartnerUserResource',
         'customers' => '\Ageras\Api\ProjectCustomerResource[]',
-        'geo' => '\Ageras\Api\ProjectGeoResource'
+        'geo' => '\Ageras\Api\ProjectGeoResource',
+        'quote' => '\Ageras\Api\LeadQuoteResource'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +92,8 @@ class ProjectResource implements ArrayAccess
         'partner' => 'partner',
         'partner_user' => 'partner_user',
         'customers' => 'customers',
-        'geo' => 'geo'
+        'geo' => 'geo',
+        'quote' => 'quote'
     ];
 
 
@@ -112,7 +114,8 @@ class ProjectResource implements ArrayAccess
         'partner' => 'setPartner',
         'partner_user' => 'setPartnerUser',
         'customers' => 'setCustomers',
-        'geo' => 'setGeo'
+        'geo' => 'setGeo',
+        'quote' => 'setQuote'
     ];
 
 
@@ -133,7 +136,8 @@ class ProjectResource implements ArrayAccess
         'partner' => 'getPartner',
         'partner_user' => 'getPartnerUser',
         'customers' => 'getCustomers',
-        'geo' => 'getGeo'
+        'geo' => 'getGeo',
+        'quote' => 'getQuote'
     ];
 
     public static function attributeMap()
@@ -180,6 +184,7 @@ class ProjectResource implements ArrayAccess
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
         $this->container['customers'] = isset($data['customers']) ? $data['customers'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
+        $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
     }
 
     /**
@@ -476,6 +481,27 @@ class ProjectResource implements ArrayAccess
     public function setGeo($geo)
     {
         $this->container['geo'] = $geo;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote
+     * @return \Ageras\Api\LeadQuoteResource
+     */
+    public function getQuote()
+    {
+        return $this->container['quote'];
+    }
+
+    /**
+     * Sets quote
+     * @param \Ageras\Api\LeadQuoteResource $quote
+     * @return $this
+     */
+    public function setQuote($quote)
+    {
+        $this->container['quote'] = $quote;
 
         return $this;
     }

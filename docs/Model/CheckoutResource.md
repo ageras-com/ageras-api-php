@@ -3,12 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Client id. | [optional] 
+**id** | **string** | Client id. | [optional] 
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 **geo_code** | **string** |  | [optional] 
 **status** | **string** |  | [optional] [default to 'unknown']
-**validation_summary** | [**null[]**](.md) |  | [optional] 
+**scope** | **string** |  | [optional] 
+**validation_summary** | **string[]** |  | [optional] 
 **payments** | [**\Ageras\Api\CheckoutPaymentResource**](CheckoutPaymentResource.md) |  | [optional] 
 **creator** | [**\Ageras\Api\CheckoutConsumerResource**](CheckoutConsumerResource.md) |  | [optional] 
 **buyer** | [**\Ageras\Api\CheckoutConsumerResource**](CheckoutConsumerResource.md) |  | [optional] 

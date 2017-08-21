@@ -123,6 +123,14 @@ class CheckoutResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "scope"
+     */
+    public function testPropertyScope()
+    {
+
+    }
+
+    /**
      * Test attribute "validation_summary"
      */
     public function testPropertyValidationSummary()

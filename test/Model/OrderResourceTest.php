@@ -139,9 +139,9 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "checkout"
+     * Test attribute "status"
      */
-    public function testPropertyCheckout()
+    public function testPropertyStatus()
     {
 
     }
@@ -150,6 +150,14 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "price"
      */
     public function testPropertyPrice()
+    {
+
+    }
+
+    /**
+     * Test attribute "installments"
+     */
+    public function testPropertyInstallments()
     {
 
     }

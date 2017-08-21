@@ -61,8 +61,9 @@ class OrderResource implements ArrayAccess
         'expires_at' => 'string',
         'type' => 'string',
         'due_at' => 'string',
-        'checkout' => '\Ageras\Api\CheckoutResource',
-        'price' => 'string'
+        'status' => 'string',
+        'price' => 'string',
+        'installments' => '\Ageras\Api\OrderInstallmentResource[]'
     ];
 
     public static function swaggerTypes()
@@ -82,8 +83,9 @@ class OrderResource implements ArrayAccess
         'expires_at' => 'expires_at',
         'type' => 'type',
         'due_at' => 'due_at',
-        'checkout' => 'checkout',
-        'price' => 'price'
+        'status' => 'status',
+        'price' => 'price',
+        'installments' => 'installments'
     ];
 
 
@@ -99,8 +101,9 @@ class OrderResource implements ArrayAccess
         'expires_at' => 'setExpiresAt',
         'type' => 'setType',
         'due_at' => 'setDueAt',
-        'checkout' => 'setCheckout',
-        'price' => 'setPrice'
+        'status' => 'setStatus',
+        'price' => 'setPrice',
+        'installments' => 'setInstallments'
     ];
 
 
@@ -116,8 +119,9 @@ class OrderResource implements ArrayAccess
         'expires_at' => 'getExpiresAt',
         'type' => 'getType',
         'due_at' => 'getDueAt',
-        'checkout' => 'getCheckout',
-        'price' => 'getPrice'
+        'status' => 'getStatus',
+        'price' => 'getPrice',
+        'installments' => 'getInstallments'
     ];
 
     public static function attributeMap()
@@ -135,8 +139,24 @@ class OrderResource implements ArrayAccess
         return self::$getters;
     }
 
+    const STATUS_UNKNOWN = 'unknown';
+    const STATUS_CREATED = 'created';
+    const STATUS_COMPLETED = 'completed';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_UNKNOWN,
+            self::STATUS_CREATED,
+            self::STATUS_COMPLETED,
+        ];
+    }
     
 
     /**
@@ -158,8 +178,9 @@ class OrderResource implements ArrayAccess
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['due_at'] = isset($data['due_at']) ? $data['due_at'] : null;
-        $this->container['checkout'] = isset($data['checkout']) ? $data['checkout'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['installments'] = isset($data['installments']) ? $data['installments'] : null;
     }
 
     /**
@@ -170,6 +191,11 @@ class OrderResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["unknown", "created", "completed"];
+        if (!in_array($this->container['status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'created', 'completed'.";
+        }
 
         return $invalid_properties;
     }
@@ -183,6 +209,10 @@ class OrderResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["unknown", "created", "completed"];
+        if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -335,22 +365,26 @@ class OrderResource implements ArrayAccess
     }
 
     /**
-     * Gets checkout
-     * @return \Ageras\Api\CheckoutResource
+     * Gets status
+     * @return string
      */
-    public function getCheckout()
+    public function getStatus()
     {
-        return $this->container['checkout'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets checkout
-     * @param \Ageras\Api\CheckoutResource $checkout
+     * Sets status
+     * @param string $status order status
      * @return $this
      */
-    public function setCheckout($checkout)
+    public function setStatus($status)
     {
-        $this->container['checkout'] = $checkout;
+        $allowed_values = array('unknown', 'created', 'completed');
+        if (!is_null($status) && (!in_array($status, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'created', 'completed'");
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }
@@ -372,6 +406,27 @@ class OrderResource implements ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets installments
+     * @return \Ageras\Api\OrderInstallmentResource[]
+     */
+    public function getInstallments()
+    {
+        return $this->container['installments'];
+    }
+
+    /**
+     * Sets installments
+     * @param \Ageras\Api\OrderInstallmentResource[] $installments Installments.
+     * @return $this
+     */
+    public function setInstallments($installments)
+    {
+        $this->container['installments'] = $installments;
 
         return $this;
     }

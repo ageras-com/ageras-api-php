@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **string** |  | [optional] 
-**callback** | **string** |  | [optional] 
+**identifier** | **string** | payment event identifier | [optional] 
+**callback** | **string** | callback for | [optional] 
+**provider** | [**\Ageras\Api\CheckoutPaymentProviderResource**](CheckoutPaymentProviderResource.md) |  | [optional] 
 **fee** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **vat_amount** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **price_incl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 

@@ -264,6 +264,83 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsQuotesItemsCreate
+     *
+     * Create a new quote item for a given Quote..
+     *
+     */
+    public function testLeadsQuotesItemsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsDelete
+     *
+     * Delete a quote item..
+     *
+     */
+    public function testLeadsQuotesItemsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsGet
+     *
+     * Get a quote item by id..
+     *
+     */
+    public function testLeadsQuotesItemsGet()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsIndex
+     *
+     * List the quote items connected to a given Quote..
+     *
+     */
+    public function testLeadsQuotesItemsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsUpdate
+     *
+     * Update a quote item..
+     *
+     */
+    public function testLeadsQuotesItemsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesUpdate
+     *
+     * Update a quote..
+     *
+     */
+    public function testLeadsQuotesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesUpdate2
+     *
+     * Update a quote..
+     *
+     */
+    public function testLeadsQuotesUpdate2()
+    {
+
+    }
+
+    /**
      * Test case for leadsTypesIndex
      *
      * Index lead types..

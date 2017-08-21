@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **partner_user** | [**\Ageras\Api\PartnerUserResource**](PartnerUserResource.md) |  | [optional] 
 **customers** | [**\Ageras\Api\ProjectCustomerResource[]**](ProjectCustomerResource.md) |  | [optional] 
 **geo** | [**\Ageras\Api\ProjectGeoResource**](ProjectGeoResource.md) |  | [optional] 
+**quote** | [**\Ageras\Api\LeadQuoteResource**](LeadQuoteResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

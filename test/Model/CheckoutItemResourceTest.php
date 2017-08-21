@@ -98,4 +98,20 @@ class CheckoutItemResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "package"
+     */
+    public function testPropertyPackage()
+    {
+
+    }
+
+    /**
+     * Test attribute "discount"
+     */
+    public function testPropertyDiscount()
+    {
+
+    }
+
 }

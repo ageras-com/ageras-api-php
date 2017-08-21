@@ -163,7 +163,7 @@ class CheckoutPartnerLeadQuoteResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Partner id.
+     * @param int $id Lead quote id id.
      * @return $this
      */
     public function setId($id)

@@ -63,6 +63,7 @@ class LeadQuoteResource implements ArrayAccess
         'lead_id' => 'int',
         'partner' => '\Ageras\Api\PartnerSuggestResource',
         'partner_lead_offer_id' => 'int',
+        'partner_terms' => 'string',
         'title' => 'string',
         'description' => 'string',
         'items' => '\Ageras\Api\LeadQuoteItemResource[]',
@@ -92,6 +93,7 @@ class LeadQuoteResource implements ArrayAccess
         'lead_id' => 'lead_id',
         'partner' => 'partner',
         'partner_lead_offer_id' => 'partner_lead_offer_id',
+        'partner_terms' => 'partner_terms',
         'title' => 'title',
         'description' => 'description',
         'items' => 'items',
@@ -117,6 +119,7 @@ class LeadQuoteResource implements ArrayAccess
         'lead_id' => 'setLeadId',
         'partner' => 'setPartner',
         'partner_lead_offer_id' => 'setPartnerLeadOfferId',
+        'partner_terms' => 'setPartnerTerms',
         'title' => 'setTitle',
         'description' => 'setDescription',
         'items' => 'setItems',
@@ -142,6 +145,7 @@ class LeadQuoteResource implements ArrayAccess
         'lead_id' => 'getLeadId',
         'partner' => 'getPartner',
         'partner_lead_offer_id' => 'getPartnerLeadOfferId',
+        'partner_terms' => 'getPartnerTerms',
         'title' => 'getTitle',
         'description' => 'getDescription',
         'items' => 'getItems',
@@ -210,6 +214,7 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['partner_lead_offer_id'] = isset($data['partner_lead_offer_id']) ? $data['partner_lead_offer_id'] : null;
+        $this->container['partner_terms'] = isset($data['partner_terms']) ? $data['partner_terms'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
@@ -443,6 +448,27 @@ class LeadQuoteResource implements ArrayAccess
     public function setPartnerLeadOfferId($partner_lead_offer_id)
     {
         $this->container['partner_lead_offer_id'] = $partner_lead_offer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_terms
+     * @return string
+     */
+    public function getPartnerTerms()
+    {
+        return $this->container['partner_terms'];
+    }
+
+    /**
+     * Sets partner_terms
+     * @param string $partner_terms Partners terms for the given quote
+     * @return $this
+     */
+    public function setPartnerTerms($partner_terms)
+    {
+        $this->container['partner_terms'] = $partner_terms;
 
         return $this;
     }

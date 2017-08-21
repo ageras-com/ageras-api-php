@@ -56,6 +56,7 @@ class CheckoutConsumerResource implements ArrayAccess
     protected static $swaggerTypes = [
         'type' => 'string',
         'partner' => '\Ageras\Api\CheckoutPartnerResource',
+        'partner_user' => '\Ageras\Api\CheckoutPartnerUserResource',
         'client' => '\Ageras\Api\CheckoutClientResource',
         'employee' => '\Ageras\Api\CheckoutEmployeeResource'
     ];
@@ -72,6 +73,7 @@ class CheckoutConsumerResource implements ArrayAccess
     protected static $attributeMap = [
         'type' => 'type',
         'partner' => 'partner',
+        'partner_user' => 'partner_user',
         'client' => 'client',
         'employee' => 'employee'
     ];
@@ -84,6 +86,7 @@ class CheckoutConsumerResource implements ArrayAccess
     protected static $setters = [
         'type' => 'setType',
         'partner' => 'setPartner',
+        'partner_user' => 'setPartnerUser',
         'client' => 'setClient',
         'employee' => 'setEmployee'
     ];
@@ -96,6 +99,7 @@ class CheckoutConsumerResource implements ArrayAccess
     protected static $getters = [
         'type' => 'getType',
         'partner' => 'getPartner',
+        'partner_user' => 'getPartnerUser',
         'client' => 'getClient',
         'employee' => 'getEmployee'
     ];
@@ -153,6 +157,7 @@ class CheckoutConsumerResource implements ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
     }
@@ -233,6 +238,27 @@ class CheckoutConsumerResource implements ArrayAccess
     public function setPartner($partner)
     {
         $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_user
+     * @return \Ageras\Api\CheckoutPartnerUserResource
+     */
+    public function getPartnerUser()
+    {
+        return $this->container['partner_user'];
+    }
+
+    /**
+     * Sets partner_user
+     * @param \Ageras\Api\CheckoutPartnerUserResource $partner_user
+     * @return $this
+     */
+    public function setPartnerUser($partner_user)
+    {
+        $this->container['partner_user'] = $partner_user;
 
         return $this;
     }
