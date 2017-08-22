@@ -58,7 +58,8 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'string',
         'identifier' => 'string',
         'headline' => 'string',
-        'terms' => 'string'
+        'body' => 'string',
+        'body_html' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'geo_code',
         'identifier' => 'identifier',
         'headline' => 'headline',
-        'terms' => 'terms'
+        'body' => 'body',
+        'body_html' => 'body_html'
     ];
 
 
@@ -88,7 +90,8 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'setGeoCode',
         'identifier' => 'setIdentifier',
         'headline' => 'setHeadline',
-        'terms' => 'setTerms'
+        'body' => 'setBody',
+        'body_html' => 'setBodyHtml'
     ];
 
 
@@ -101,7 +104,8 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'getGeoCode',
         'identifier' => 'getIdentifier',
         'headline' => 'getHeadline',
-        'terms' => 'getTerms'
+        'body' => 'getBody',
+        'body_html' => 'getBodyHtml'
     ];
 
     public static function attributeMap()
@@ -139,7 +143,8 @@ class TermsResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['headline'] = isset($data['headline']) ? $data['headline'] : null;
-        $this->container['terms'] = isset($data['terms']) ? $data['terms'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['body_html'] = isset($data['body_html']) ? $data['body_html'] : null;
     }
 
     /**
@@ -252,22 +257,43 @@ class TermsResource implements ArrayAccess
     }
 
     /**
-     * Gets terms
+     * Gets body
      * @return string
      */
-    public function getTerms()
+    public function getBody()
     {
-        return $this->container['terms'];
+        return $this->container['body'];
     }
 
     /**
-     * Sets terms
-     * @param string $terms Terms markup.
+     * Sets body
+     * @param string $body Terms body.
      * @return $this
      */
-    public function setTerms($terms)
+    public function setBody($body)
     {
-        $this->container['terms'] = $terms;
+        $this->container['body'] = $body;
+
+        return $this;
+    }
+
+    /**
+     * Gets body_html
+     * @return string
+     */
+    public function getBodyHtml()
+    {
+        return $this->container['body_html'];
+    }
+
+    /**
+     * Sets body_html
+     * @param string $body_html Terms body formatted.
+     * @return $this
+     */
+    public function setBodyHtml($body_html)
+    {
+        $this->container['body_html'] = $body_html;
 
         return $this;
     }
