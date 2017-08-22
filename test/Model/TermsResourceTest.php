@@ -115,9 +115,17 @@ class TermsResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "terms"
+     * Test attribute "body"
      */
-    public function testPropertyTerms()
+    public function testPropertyBody()
+    {
+
+    }
+
+    /**
+     * Test attribute "body_html"
+     */
+    public function testPropertyBodyHtml()
     {
 
     }
