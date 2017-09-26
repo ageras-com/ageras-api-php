@@ -116,6 +116,7 @@ class LeadActionResource implements ArrayAccess
     const ACTION_ACCEPT_QUOTE = 'accept_quote';
     const ACTION_PUBLISH_QUOTE = 'publish_quote';
     const ACTION_REJECT_ALL_QUOTES = 'reject_all_quotes';
+    const ACTION_POSTPONE_CLIENT_MATCH_DECISION = 'postpone_client_match_decision';
     
 
     
@@ -131,6 +132,7 @@ class LeadActionResource implements ArrayAccess
             self::ACTION_ACCEPT_QUOTE,
             self::ACTION_PUBLISH_QUOTE,
             self::ACTION_REJECT_ALL_QUOTES,
+            self::ACTION_POSTPONE_CLIENT_MATCH_DECISION,
         ];
     }
     
@@ -161,9 +163,9 @@ class LeadActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote", "reject_all_quotes"];
+        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote", "reject_all_quotes", "postpone_client_match_decision"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'postpone_client_match_decision'.";
         }
 
         return $invalid_properties;
@@ -178,7 +180,7 @@ class LeadActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote", "reject_all_quotes"];
+        $allowed_values = ["unknown", "call", "accept_quote", "publish_quote", "reject_all_quotes", "postpone_client_match_decision"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -202,9 +204,9 @@ class LeadActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes');
+        $allowed_values = array('unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'postpone_client_match_decision');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'postpone_client_match_decision'");
         }
         $this->container['action'] = $action;
 

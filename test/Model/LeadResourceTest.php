@@ -266,4 +266,12 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "validator"
+     */
+    public function testPropertyValidator()
+    {
+
+    }
+
 }

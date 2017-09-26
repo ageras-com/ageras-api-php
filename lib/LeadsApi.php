@@ -451,6 +451,9 @@ class LeadsApi
      *    'status' => string,
      *    'client_id' => int,
      *    'employee_id' => string,
+     *    'client_decision_postponed' => bool,
+     *    'all_quotes_published_before' => string,
+     *    'expires_within' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -480,6 +483,9 @@ class LeadsApi
      *    'status' => string,
      *    'client_id' => int,
      *    'employee_id' => string,
+     *    'client_decision_postponed' => bool,
+     *    'all_quotes_published_before' => string,
+     *    'expires_within' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -540,6 +546,18 @@ class LeadsApi
         // query params
         if (isset($criteria['employee_id'])) {
             $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['client_decision_postponed'])) {
+            $queryParams['client_decision_postponed'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_decision_postponed']);
+        }
+        // query params
+        if (isset($criteria['all_quotes_published_before'])) {
+            $queryParams['all_quotes_published_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['all_quotes_published_before']);
+        }
+        // query params
+        if (isset($criteria['expires_within'])) {
+            $queryParams['expires_within'] = $this->apiClient->getSerializer()->toQueryValue($criteria['expires_within']);
         }
         // query params
         if (isset($criteria['limit'])) {

@@ -56,6 +56,7 @@ class LeadQuoteResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'status' => 'string',
+        'progress' => 'string',
         'created_at' => 'string',
         'paid_at' => 'string',
         'expires_at' => 'string',
@@ -86,6 +87,7 @@ class LeadQuoteResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'status' => 'status',
+        'progress' => 'progress',
         'created_at' => 'created_at',
         'paid_at' => 'paid_at',
         'expires_at' => 'expires_at',
@@ -112,6 +114,7 @@ class LeadQuoteResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'status' => 'setStatus',
+        'progress' => 'setProgress',
         'created_at' => 'setCreatedAt',
         'paid_at' => 'setPaidAt',
         'expires_at' => 'setExpiresAt',
@@ -138,6 +141,7 @@ class LeadQuoteResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'status' => 'getStatus',
+        'progress' => 'getProgress',
         'created_at' => 'getCreatedAt',
         'paid_at' => 'getPaidAt',
         'expires_at' => 'getExpiresAt',
@@ -175,6 +179,13 @@ class LeadQuoteResource implements ArrayAccess
     const STATUS_ACCEPTED = 'accepted';
     const STATUS_REJECTED = 'rejected';
     const STATUS_EXPIRED = 'expired';
+    const PROGRESS_UNKNOWN = 'unknown';
+    const PROGRESS_QUOTE_PROVIDED = 'quote_provided';
+    const PROGRESS_BID_ROUND_CLOSED = 'bid_round_closed';
+    const PROGRESS_PENDING_DECISION = 'pending_decision';
+    const PROGRESS_FOLLOW_UP = 'follow_up';
+    const PROGRESS_WON = 'won';
+    const PROGRESS_LOST = 'lost';
     
 
     
@@ -189,6 +200,23 @@ class LeadQuoteResource implements ArrayAccess
             self::STATUS_ACCEPTED,
             self::STATUS_REJECTED,
             self::STATUS_EXPIRED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getProgressAllowableValues()
+    {
+        return [
+            self::PROGRESS_UNKNOWN,
+            self::PROGRESS_QUOTE_PROVIDED,
+            self::PROGRESS_BID_ROUND_CLOSED,
+            self::PROGRESS_PENDING_DECISION,
+            self::PROGRESS_FOLLOW_UP,
+            self::PROGRESS_WON,
+            self::PROGRESS_LOST,
         ];
     }
     
@@ -207,6 +235,7 @@ class LeadQuoteResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'new';
+        $this->container['progress'] = isset($data['progress']) ? $data['progress'] : 'unknown';
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
@@ -239,6 +268,11 @@ class LeadQuoteResource implements ArrayAccess
             $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'.";
         }
 
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "follow_up", "won", "lost"];
+        if (!in_array($this->container['progress'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -253,6 +287,10 @@ class LeadQuoteResource implements ArrayAccess
 
         $allowed_values = ["new", "accepted", "rejected", "expired"];
         if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "follow_up", "won", "lost"];
+        if (!in_array($this->container['progress'], $allowed_values)) {
             return false;
         }
         return true;
@@ -301,6 +339,31 @@ class LeadQuoteResource implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'");
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets progress
+     * @return string
+     */
+    public function getProgress()
+    {
+        return $this->container['progress'];
+    }
+
+    /**
+     * Sets progress
+     * @param string $progress Description of progress from partner's perspective.
+     * @return $this
+     */
+    public function setProgress($progress)
+    {
+        $allowed_values = array('unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost');
+        if (!is_null($progress) && (!in_array($progress, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost'");
+        }
+        $this->container['progress'] = $progress;
 
         return $this;
     }

@@ -123,17 +123,17 @@ class LeadQuoteItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "vat_percent"
+     * Test attribute "quantity"
      */
-    public function testPropertyVatPercent()
+    public function testPropertyQuantity()
     {
 
     }
 
     /**
-     * Test attribute "vat_amount"
+     * Test attribute "amount_vat"
      */
-    public function testPropertyVatAmount()
+    public function testPropertyAmountVat()
     {
 
     }
@@ -150,6 +150,30 @@ class LeadQuoteItemResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "amount_incl_vat"
      */
     public function testPropertyAmountInclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_vat"
+     */
+    public function testPropertyTotalAmountVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_excl_vat"
+     */
+    public function testPropertyTotalAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_incl_vat"
+     */
+    public function testPropertyTotalAmountInclVat()
     {
 
     }

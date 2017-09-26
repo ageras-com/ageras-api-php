@@ -253,6 +253,204 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersDeliverablesCreate
+     *
+     * Create Deliverable for partners.
+     *
+     */
+    public function testPartnersDeliverablesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesCreate2
+     *
+     * Create Deliverable for partners.
+     *
+     */
+    public function testPartnersDeliverablesCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesGet
+     *
+     * Retrieve a single deliverable id.
+     *
+     */
+    public function testPartnersDeliverablesGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesGet2
+     *
+     * Retrieve a single deliverable id.
+     *
+     */
+    public function testPartnersDeliverablesGet2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesIndex
+     *
+     * List Partner deliverables.
+     *
+     */
+    public function testPartnersDeliverablesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesIndex2
+     *
+     * List Partner deliverables.
+     *
+     */
+    public function testPartnersDeliverablesIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesCreate
+     *
+     * Create item for Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesCreate2
+     *
+     * Create item for Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesDelete
+     *
+     * Delete item from Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesDelete2
+     *
+     * Delete item from Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesDelete2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesGet
+     *
+     * Get Partner Deliverable Item.
+     *
+     */
+    public function testPartnersDeliverablesLinesGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesGet2
+     *
+     * Get Partner Deliverable Item.
+     *
+     */
+    public function testPartnersDeliverablesLinesGet2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesIndex
+     *
+     * List Partner Deliverable Items.
+     *
+     */
+    public function testPartnersDeliverablesLinesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesIndex2
+     *
+     * List Partner Deliverable Items.
+     *
+     */
+    public function testPartnersDeliverablesLinesIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesUpdate
+     *
+     * Update item for Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesLinesUpdate2
+     *
+     * Update item for Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesLinesUpdate2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesUpdate
+     *
+     * Update Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDeliverablesUpdate2
+     *
+     * Update Partner Deliverable.
+     *
+     */
+    public function testPartnersDeliverablesUpdate2()
+    {
+
+    }
+
+    /**
      * Test case for partnersGet
      *
      * Get a Partner from a given partner_id..

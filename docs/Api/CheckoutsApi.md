@@ -133,6 +133,8 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\CheckoutsApi();
 $criteria = [
         'checkout_id' => "checkout_id_example"; // string | Id of checkouts to retrieve
+        'client_id' => "client_id_example"; // string | Clients
+        'partner_id' => "partner_id_example"; // string | Partners
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -152,6 +154,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checkout_id** | **string**| Id of checkouts to retrieve | [optional]
+ **client_id** | **string**| Clients | [optional]
+ **partner_id** | **string**| Partners | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

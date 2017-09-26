@@ -267,6 +267,9 @@ $criteria = [
         'status' => "unknown"; // string | Status for the given lead.
         'client_id' => 56; // int | Lead's client
         'employee_id' => "employee_id_example"; // string | Lead's client's assigned employee ID
+        'client_decision_postponed' => false; // bool | Client decision to choose a quote match is postponed or not.
+        'all_quotes_published_before' => "all_quotes_published_before_example"; // string | Lead received its latest quote match before this date.
+        'expires_within' => 56; // int | Get leads expiring within this many minutes.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -295,6 +298,9 @@ Name | Type | Description  | Notes
  **status** | **string**| Status for the given lead. | [optional] [default to unknown]
  **client_id** | **int**| Lead&#39;s client | [optional]
  **employee_id** | **string**| Lead&#39;s client&#39;s assigned employee ID | [optional]
+ **client_decision_postponed** | **bool**| Client decision to choose a quote match is postponed or not. | [optional] [default to false]
+ **all_quotes_published_before** | **string**| Lead received its latest quote match before this date. | [optional]
+ **expires_within** | **int**| Get leads expiring within this many minutes. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

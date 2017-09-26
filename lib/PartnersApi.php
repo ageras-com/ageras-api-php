@@ -1777,6 +1777,1902 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersDeliverablesCreate
+     *
+     * Create Deliverable for partners
+     *
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesCreate($partner_deliverable_resource)
+    {
+        list($response) = $this->partnersDeliverablesCreateWithHttpInfo($partner_deliverable_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesCreateWithHttpInfo
+     *
+     * Create Deliverable for partners
+     *
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesCreateWithHttpInfo($partner_deliverable_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_resource)) {
+            $_tempBody = $partner_deliverable_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/deliverables'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesCreate2
+     *
+     * Create Deliverable for partners
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesCreate2($partner_id , $partner_deliverable_resource)
+    {
+        list($response) = $this->partnersDeliverablesCreate2WithHttpInfo($partner_id, $partner_deliverable_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesCreate2WithHttpInfo
+     *
+     * Create Deliverable for partners
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesCreate2WithHttpInfo($partner_id , $partner_deliverable_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_resource)) {
+            $_tempBody = $partner_deliverable_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/{partner_id}/deliverables'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesGet
+     *
+     * Retrieve a single deliverable id
+     *
+     * @param string $partner_deliverable_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesGet($partner_deliverable_id )
+    {
+        list($response) = $this->partnersDeliverablesGetWithHttpInfo($partner_deliverable_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesGetWithHttpInfo
+     *
+     * Retrieve a single deliverable id
+     *
+     * @param string $partner_deliverable_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesGetWithHttpInfo($partner_deliverable_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/deliverables/{partnerDeliverable_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesGet2
+     *
+     * Retrieve a single deliverable id
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesGet2($partner_id,  $partner_deliverable_id )
+    {
+        list($response) = $this->partnersDeliverablesGet2WithHttpInfo($partner_id, $partner_deliverable_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesGet2WithHttpInfo
+     *
+     * Retrieve a single deliverable id
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesGet2WithHttpInfo($partner_id,  $partner_deliverable_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesIndex
+     *
+     * List Partner deliverables
+     *
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_id' => string,
+     *    'partner_deliverable_id' => string,
+     *    'status' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResult
+     */
+    public function partnersDeliverablesIndex($criteria = [])
+    {
+        list($response) = $this->partnersDeliverablesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesIndexWithHttpInfo
+     *
+     * List Partner deliverables
+     *
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_id' => string,
+     *    'partner_deliverable_id' => string,
+     *    'status' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['partner_deliverable_id'])) {
+            $queryParams['partner_deliverable_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_deliverable_id']);
+        }
+        // query params
+        if (isset($criteria['status'])) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResult',
+                '/partners/deliverables'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesIndex2
+     *
+     * List Partner deliverables
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_deliverable_id' => string,
+     *    'status' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResult
+     */
+    public function partnersDeliverablesIndex2($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersDeliverablesIndex2WithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesIndex2WithHttpInfo
+     *
+     * List Partner deliverables
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_deliverable_id' => string,
+     *    'status' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesIndex2WithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['partner_deliverable_id'])) {
+            $queryParams['partner_deliverable_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_deliverable_id']);
+        }
+        // query params
+        if (isset($criteria['status'])) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResult',
+                '/partners/{partner_id}/deliverables'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesCreate
+     *
+     * Create item for Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesCreate($partner_deliverable_id , $partner_deliverable_line_resource)
+    {
+        list($response) = $this->partnersDeliverablesLinesCreateWithHttpInfo($partner_deliverable_id, $partner_deliverable_line_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesCreateWithHttpInfo
+     *
+     * Create item for Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesCreateWithHttpInfo($partner_deliverable_id , $partner_deliverable_line_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}/lines";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_line_resource)) {
+            $_tempBody = $partner_deliverable_line_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/deliverables/{partnerDeliverable_id}/lines'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesCreate2
+     *
+     * Create item for Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesCreate2($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
+    {
+        list($response) = $this->partnersDeliverablesLinesCreate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesCreate2WithHttpInfo
+     *
+     * Create item for Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesCreate2WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_line_resource)) {
+            $_tempBody = $partner_deliverable_line_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesDelete
+     *
+     * Delete item from Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersDeliverablesLinesDelete($partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        list($response) = $this->partnersDeliverablesLinesDeleteWithHttpInfo($partner_deliverable_id, $partner_deliverable_line_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesDeleteWithHttpInfo
+     *
+     * Delete item from Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesDeleteWithHttpInfo($partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesDelete2
+     *
+     * Delete item from Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersDeliverablesLinesDelete2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        list($response) = $this->partnersDeliverablesLinesDelete2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesDelete2WithHttpInfo
+     *
+     * Delete item from Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesDelete2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesGet
+     *
+     * Get Partner Deliverable Item
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesGet($partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        list($response) = $this->partnersDeliverablesLinesGetWithHttpInfo($partner_deliverable_id, $partner_deliverable_line_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesGetWithHttpInfo
+     *
+     * Get Partner Deliverable Item
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesGetWithHttpInfo($partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesGet2
+     *
+     * Get Partner Deliverable Item
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesGet2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        list($response) = $this->partnersDeliverablesLinesGet2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesGet2WithHttpInfo
+     *
+     * Get Partner Deliverable Item
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesGet2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesIndex
+     *
+     * List Partner Deliverable Items
+     *
+     * @param string $partner_deliverable_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResult
+     */
+    public function partnersDeliverablesLinesIndex($partner_deliverable_id , $criteria = [])
+    {
+        list($response) = $this->partnersDeliverablesLinesIndexWithHttpInfo($partner_deliverable_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesIndexWithHttpInfo
+     *
+     * List Partner Deliverable Items
+     *
+     * @param string $partner_deliverable_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesIndexWithHttpInfo($partner_deliverable_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}/lines";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResult',
+                '/partners/deliverables/{partnerDeliverable_id}/lines'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesIndex2
+     *
+     * List Partner Deliverable Items
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResult
+     */
+    public function partnersDeliverablesLinesIndex2($partner_id,  $partner_deliverable_id , $criteria = [])
+    {
+        list($response) = $this->partnersDeliverablesLinesIndex2WithHttpInfo($partner_id, $partner_deliverable_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesIndex2WithHttpInfo
+     *
+     * List Partner Deliverable Items
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param $criteria = [
+     *    'client_id' => string,
+     *    'lead_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesIndex2WithHttpInfo($partner_id,  $partner_deliverable_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResult',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesUpdate
+     *
+     * Update item for Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesUpdate($partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    {
+        list($response) = $this->partnersDeliverablesLinesUpdateWithHttpInfo($partner_deliverable_id, $partner_deliverable_line_id, $partner_deliverable_line_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesUpdateWithHttpInfo
+     *
+     * Update item for Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesUpdateWithHttpInfo($partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_line_resource)) {
+            $_tempBody = $partner_deliverable_line_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesUpdate2
+     *
+     * Update item for Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableLineResource
+     */
+    public function partnersDeliverablesLinesUpdate2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    {
+        list($response) = $this->partnersDeliverablesLinesUpdate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id, $partner_deliverable_line_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesLinesUpdate2WithHttpInfo
+     *
+     * Update item for Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param string $partner_deliverable_line_id 
+     * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesLinesUpdate2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverableLine_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_line_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_line_resource)) {
+            $_tempBody = $partner_deliverable_line_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableLineResource',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableLineResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableLineResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesUpdate
+     *
+     * Update Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesUpdate($partner_deliverable_id , $partner_deliverable_resource)
+    {
+        list($response) = $this->partnersDeliverablesUpdateWithHttpInfo($partner_deliverable_id, $partner_deliverable_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesUpdateWithHttpInfo
+     *
+     * Update Partner Deliverable
+     *
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesUpdateWithHttpInfo($partner_deliverable_id , $partner_deliverable_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/deliverables/{partnerDeliverable_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_resource)) {
+            $_tempBody = $partner_deliverable_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/deliverables/{partnerDeliverable_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDeliverablesUpdate2
+     *
+     * Update Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDeliverableResource
+     */
+    public function partnersDeliverablesUpdate2($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
+    {
+        list($response) = $this->partnersDeliverablesUpdate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDeliverablesUpdate2WithHttpInfo
+     *
+     * Update Partner Deliverable
+     *
+     * @param string $partner_id 
+     * @param string $partner_deliverable_id 
+     * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDeliverablesUpdate2WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_deliverable_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partnerDeliverable_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_deliverable_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_deliverable_resource)) {
+            $_tempBody = $partner_deliverable_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDeliverableResource',
+                '/partners/{partner_id}/deliverables/{partnerDeliverable_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDeliverableResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDeliverableResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersGet
      *
      * Get a Partner from a given partner_id.
@@ -3975,6 +5871,7 @@ class PartnersApi
      *
      * @param string $partner_id 
      * @param $criteria = [
+     *    'is_active' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -3995,6 +5892,7 @@ class PartnersApi
      *
      * @param string $partner_id 
      * @param $criteria = [
+     *    'is_active' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -4016,6 +5914,10 @@ class PartnersApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['is_active'])) {
+            $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
+        }
         // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);

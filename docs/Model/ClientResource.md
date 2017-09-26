@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Client id. | [optional] 
+**access_token** | **string** | Client token | [optional] 
 **assigned_employee** | [**\Ageras\Api\EmployeeResource**](EmployeeResource.md) |  | [optional] 
 **phone** | **string** | Phone number | [optional] 
 **email** | **string** | Email | [optional] 

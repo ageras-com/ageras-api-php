@@ -91,6 +91,22 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "geo_code"
+     */
+    public function testPropertyGeoCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
@@ -107,25 +123,9 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "accepted_at"
+     * Test attribute "paid_at"
      */
-    public function testPropertyAcceptedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "expires_at"
-     */
-    public function testPropertyExpiresAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
+    public function testPropertyPaidAt()
     {
 
     }
@@ -139,17 +139,17 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "buyer"
      */
-    public function testPropertyStatus()
+    public function testPropertyBuyer()
     {
 
     }
 
     /**
-     * Test attribute "price"
+     * Test attribute "lines"
      */
-    public function testPropertyPrice()
+    public function testPropertyLines()
     {
 
     }
@@ -158,6 +158,30 @@ class OrderResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "installments"
      */
     public function testPropertyInstallments()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_vat_amount"
+     */
+    public function testPropertyTotalVatAmount()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_excl_vat"
+     */
+    public function testPropertyTotalAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "total_amount_incl_vat"
+     */
+    public function testPropertyTotalAmountInclVat()
     {
 
     }

@@ -59,10 +59,13 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'type' => 'string',
-        'vat_percent' => 'float',
-        'vat_amount' => '\Ageras\Api\AmountResource',
+        'quantity' => 'int',
+        'amount_vat' => '\Ageras\Api\AmountResource',
         'amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'total_amount_vat' => '\Ageras\Api\AmountResource',
+        'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -80,10 +83,13 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'type' => 'type',
-        'vat_percent' => 'vat_percent',
-        'vat_amount' => 'vat_amount',
+        'quantity' => 'quantity',
+        'amount_vat' => 'amount_vat',
         'amount_excl_vat' => 'amount_excl_vat',
-        'amount_incl_vat' => 'amount_incl_vat'
+        'amount_incl_vat' => 'amount_incl_vat',
+        'total_amount_vat' => 'total_amount_vat',
+        'total_amount_excl_vat' => 'total_amount_excl_vat',
+        'total_amount_incl_vat' => 'total_amount_incl_vat'
     ];
 
 
@@ -97,10 +103,13 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'type' => 'setType',
-        'vat_percent' => 'setVatPercent',
-        'vat_amount' => 'setVatAmount',
+        'quantity' => 'setQuantity',
+        'amount_vat' => 'setAmountVat',
         'amount_excl_vat' => 'setAmountExclVat',
-        'amount_incl_vat' => 'setAmountInclVat'
+        'amount_incl_vat' => 'setAmountInclVat',
+        'total_amount_vat' => 'setTotalAmountVat',
+        'total_amount_excl_vat' => 'setTotalAmountExclVat',
+        'total_amount_incl_vat' => 'setTotalAmountInclVat'
     ];
 
 
@@ -114,10 +123,13 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'type' => 'getType',
-        'vat_percent' => 'getVatPercent',
-        'vat_amount' => 'getVatAmount',
+        'quantity' => 'getQuantity',
+        'amount_vat' => 'getAmountVat',
         'amount_excl_vat' => 'getAmountExclVat',
-        'amount_incl_vat' => 'getAmountInclVat'
+        'amount_incl_vat' => 'getAmountInclVat',
+        'total_amount_vat' => 'getTotalAmountVat',
+        'total_amount_excl_vat' => 'getTotalAmountExclVat',
+        'total_amount_incl_vat' => 'getTotalAmountInclVat'
     ];
 
     public static function attributeMap()
@@ -136,8 +148,10 @@ class LeadQuoteItemResource implements ArrayAccess
     }
 
     const TYPE_UNKNOWN = 'unknown';
-    const TYPE_PRODUCT = 'product';
-    const TYPE_SERVICE_FEE = 'service_fee';
+    const TYPE_UNIT = 'unit';
+    const TYPE_YEARLY = 'yearly';
+    const TYPE_QUARTERLY = 'quarterly';
+    const TYPE_MONTHLY = 'monthly';
     
 
     
@@ -149,8 +163,10 @@ class LeadQuoteItemResource implements ArrayAccess
     {
         return [
             self::TYPE_UNKNOWN,
-            self::TYPE_PRODUCT,
-            self::TYPE_SERVICE_FEE,
+            self::TYPE_UNIT,
+            self::TYPE_YEARLY,
+            self::TYPE_QUARTERLY,
+            self::TYPE_MONTHLY,
         ];
     }
     
@@ -172,10 +188,13 @@ class LeadQuoteItemResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
-        $this->container['vat_percent'] = isset($data['vat_percent']) ? $data['vat_percent'] : null;
-        $this->container['vat_amount'] = isset($data['vat_amount']) ? $data['vat_amount'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['amount_vat'] = isset($data['amount_vat']) ? $data['amount_vat'] : null;
         $this->container['amount_excl_vat'] = isset($data['amount_excl_vat']) ? $data['amount_excl_vat'] : null;
         $this->container['amount_incl_vat'] = isset($data['amount_incl_vat']) ? $data['amount_incl_vat'] : null;
+        $this->container['total_amount_vat'] = isset($data['total_amount_vat']) ? $data['total_amount_vat'] : null;
+        $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
+        $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
     }
 
     /**
@@ -187,9 +206,9 @@ class LeadQuoteItemResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "product", "service_fee"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'product', 'service_fee'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'.";
         }
 
         return $invalid_properties;
@@ -204,7 +223,7 @@ class LeadQuoteItemResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "product", "service_fee"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -312,9 +331,9 @@ class LeadQuoteItemResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'product', 'service_fee');
+        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'product', 'service_fee'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'");
         }
         $this->container['type'] = $type;
 
@@ -322,43 +341,43 @@ class LeadQuoteItemResource implements ArrayAccess
     }
 
     /**
-     * Gets vat_percent
-     * @return float
+     * Gets quantity
+     * @return int
      */
-    public function getVatPercent()
+    public function getQuantity()
     {
-        return $this->container['vat_percent'];
+        return $this->container['quantity'];
     }
 
     /**
-     * Sets vat_percent
-     * @param float $vat_percent
+     * Sets quantity
+     * @param int $quantity Quantity of this item
      * @return $this
      */
-    public function setVatPercent($vat_percent)
+    public function setQuantity($quantity)
     {
-        $this->container['vat_percent'] = $vat_percent;
+        $this->container['quantity'] = $quantity;
 
         return $this;
     }
 
     /**
-     * Gets vat_amount
+     * Gets amount_vat
      * @return \Ageras\Api\AmountResource
      */
-    public function getVatAmount()
+    public function getAmountVat()
     {
-        return $this->container['vat_amount'];
+        return $this->container['amount_vat'];
     }
 
     /**
-     * Sets vat_amount
-     * @param \Ageras\Api\AmountResource $vat_amount
+     * Sets amount_vat
+     * @param \Ageras\Api\AmountResource $amount_vat
      * @return $this
      */
-    public function setVatAmount($vat_amount)
+    public function setAmountVat($amount_vat)
     {
-        $this->container['vat_amount'] = $vat_amount;
+        $this->container['amount_vat'] = $amount_vat;
 
         return $this;
     }
@@ -401,6 +420,69 @@ class LeadQuoteItemResource implements ArrayAccess
     public function setAmountInclVat($amount_incl_vat)
     {
         $this->container['amount_incl_vat'] = $amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalAmountVat()
+    {
+        return $this->container['total_amount_vat'];
+    }
+
+    /**
+     * Sets total_amount_vat
+     * @param \Ageras\Api\AmountResource $total_amount_vat
+     * @return $this
+     */
+    public function setTotalAmountVat($total_amount_vat)
+    {
+        $this->container['total_amount_vat'] = $total_amount_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalAmountExclVat()
+    {
+        return $this->container['total_amount_excl_vat'];
+    }
+
+    /**
+     * Sets total_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $total_amount_excl_vat
+     * @return $this
+     */
+    public function setTotalAmountExclVat($total_amount_excl_vat)
+    {
+        $this->container['total_amount_excl_vat'] = $total_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount_incl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalAmountInclVat()
+    {
+        return $this->container['total_amount_incl_vat'];
+    }
+
+    /**
+     * Sets total_amount_incl_vat
+     * @param \Ageras\Api\AmountResource $total_amount_incl_vat
+     * @return $this
+     */
+    public function setTotalAmountInclVat($total_amount_incl_vat)
+    {
+        $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
 
         return $this;
     }

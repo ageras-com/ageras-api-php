@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The quote&#39;s id. | [optional] 
 **status** | **string** |  | [optional] [default to 'new']
+**progress** | **string** | Description of progress from partner&#39;s perspective. | [optional] [default to 'unknown']
 **created_at** | **string** |  | [optional] 
 **paid_at** | **string** |  | [optional] 
 **expires_at** | **string** |  | [optional] 

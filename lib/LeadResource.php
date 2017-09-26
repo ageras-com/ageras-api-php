@@ -76,7 +76,8 @@ class LeadResource implements ArrayAccess
         'offers_info' => '\Ageras\Api\LeadOffersInfoResource',
         'quotes_info' => '\Ageras\Api\LeadQuotesInfoResource',
         'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
-        'feedback' => '\Ageras\Api\LeadFeedbackResource'
+        'feedback' => '\Ageras\Api\LeadFeedbackResource',
+        'validator' => '\Ageras\Api\LeadEmployeeResource'
     ];
 
     public static function swaggerTypes()
@@ -111,7 +112,8 @@ class LeadResource implements ArrayAccess
         'offers_info' => 'offers_info',
         'quotes_info' => 'quotes_info',
         'affiliate_campaign' => 'affiliate_campaign',
-        'feedback' => 'feedback'
+        'feedback' => 'feedback',
+        'validator' => 'validator'
     ];
 
 
@@ -142,7 +144,8 @@ class LeadResource implements ArrayAccess
         'offers_info' => 'setOffersInfo',
         'quotes_info' => 'setQuotesInfo',
         'affiliate_campaign' => 'setAffiliateCampaign',
-        'feedback' => 'setFeedback'
+        'feedback' => 'setFeedback',
+        'validator' => 'setValidator'
     ];
 
 
@@ -173,7 +176,8 @@ class LeadResource implements ArrayAccess
         'offers_info' => 'getOffersInfo',
         'quotes_info' => 'getQuotesInfo',
         'affiliate_campaign' => 'getAffiliateCampaign',
-        'feedback' => 'getFeedback'
+        'feedback' => 'getFeedback',
+        'validator' => 'getValidator'
     ];
 
     public static function attributeMap()
@@ -248,6 +252,7 @@ class LeadResource implements ArrayAccess
         $this->container['quotes_info'] = isset($data['quotes_info']) ? $data['quotes_info'] : null;
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
         $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
+        $this->container['validator'] = isset($data['validator']) ? $data['validator'] : null;
     }
 
     /**
@@ -767,6 +772,27 @@ class LeadResource implements ArrayAccess
     public function setFeedback($feedback)
     {
         $this->container['feedback'] = $feedback;
+
+        return $this;
+    }
+
+    /**
+     * Gets validator
+     * @return \Ageras\Api\LeadEmployeeResource
+     */
+    public function getValidator()
+    {
+        return $this->container['validator'];
+    }
+
+    /**
+     * Sets validator
+     * @param \Ageras\Api\LeadEmployeeResource $validator
+     * @return $this
+     */
+    public function setValidator($validator)
+    {
+        $this->container['validator'] = $validator;
 
         return $this;
     }

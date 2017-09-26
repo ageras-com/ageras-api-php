@@ -99,6 +99,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "progress"
+     */
+    public function testPropertyProgress()
+    {
+
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
