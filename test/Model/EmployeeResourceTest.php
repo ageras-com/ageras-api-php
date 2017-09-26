@@ -115,6 +115,14 @@ class EmployeeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "external_job_title"
+     */
+    public function testPropertyExternalJobTitle()
+    {
+
+    }
+
+    /**
      * Test attribute "geo_code"
      */
     public function testPropertyGeoCode()

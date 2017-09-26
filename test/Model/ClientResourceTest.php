@@ -91,6 +91,14 @@ class ClientResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "access_token"
+     */
+    public function testPropertyAccessToken()
+    {
+
+    }
+
+    /**
      * Test attribute "assigned_employee"
      */
     public function testPropertyAssignedEmployee()

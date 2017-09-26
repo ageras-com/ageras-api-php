@@ -55,15 +55,18 @@ class OrderResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
+        'geo_code' => 'string',
+        'status' => 'string',
         'created_at' => 'string',
         'updated_at' => 'string',
-        'accepted_at' => 'string',
-        'expires_at' => 'string',
-        'type' => 'string',
+        'paid_at' => 'string',
         'due_at' => 'string',
-        'status' => 'string',
-        'price' => 'string',
-        'installments' => '\Ageras\Api\OrderInstallmentResource[]'
+        'buyer' => '\Ageras\Api\OrderConsumerResource',
+        'lines' => '\Ageras\Api\OrderLineResource[]',
+        'installments' => '\Ageras\Api\OrderInstallmentResource[]',
+        'total_vat_amount' => '\Ageras\Api\AmountResource',
+        'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -77,15 +80,18 @@ class OrderResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'geo_code' => 'geo_code',
+        'status' => 'status',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'accepted_at' => 'accepted_at',
-        'expires_at' => 'expires_at',
-        'type' => 'type',
+        'paid_at' => 'paid_at',
         'due_at' => 'due_at',
-        'status' => 'status',
-        'price' => 'price',
-        'installments' => 'installments'
+        'buyer' => 'buyer',
+        'lines' => 'lines',
+        'installments' => 'installments',
+        'total_vat_amount' => 'total_vat_amount',
+        'total_amount_excl_vat' => 'total_amount_excl_vat',
+        'total_amount_incl_vat' => 'total_amount_incl_vat'
     ];
 
 
@@ -95,15 +101,18 @@ class OrderResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'geo_code' => 'setGeoCode',
+        'status' => 'setStatus',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'accepted_at' => 'setAcceptedAt',
-        'expires_at' => 'setExpiresAt',
-        'type' => 'setType',
+        'paid_at' => 'setPaidAt',
         'due_at' => 'setDueAt',
-        'status' => 'setStatus',
-        'price' => 'setPrice',
-        'installments' => 'setInstallments'
+        'buyer' => 'setBuyer',
+        'lines' => 'setLines',
+        'installments' => 'setInstallments',
+        'total_vat_amount' => 'setTotalVatAmount',
+        'total_amount_excl_vat' => 'setTotalAmountExclVat',
+        'total_amount_incl_vat' => 'setTotalAmountInclVat'
     ];
 
 
@@ -113,15 +122,18 @@ class OrderResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'geo_code' => 'getGeoCode',
+        'status' => 'getStatus',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'accepted_at' => 'getAcceptedAt',
-        'expires_at' => 'getExpiresAt',
-        'type' => 'getType',
+        'paid_at' => 'getPaidAt',
         'due_at' => 'getDueAt',
-        'status' => 'getStatus',
-        'price' => 'getPrice',
-        'installments' => 'getInstallments'
+        'buyer' => 'getBuyer',
+        'lines' => 'getLines',
+        'installments' => 'getInstallments',
+        'total_vat_amount' => 'getTotalVatAmount',
+        'total_amount_excl_vat' => 'getTotalAmountExclVat',
+        'total_amount_incl_vat' => 'getTotalAmountInclVat'
     ];
 
     public static function attributeMap()
@@ -139,24 +151,8 @@ class OrderResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_UNKNOWN = 'unknown';
-    const STATUS_CREATED = 'created';
-    const STATUS_COMPLETED = 'completed';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_UNKNOWN,
-            self::STATUS_CREATED,
-            self::STATUS_COMPLETED,
-        ];
-    }
     
 
     /**
@@ -172,15 +168,18 @@ class OrderResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
-        $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
         $this->container['due_at'] = isset($data['due_at']) ? $data['due_at'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['buyer'] = isset($data['buyer']) ? $data['buyer'] : null;
+        $this->container['lines'] = isset($data['lines']) ? $data['lines'] : null;
         $this->container['installments'] = isset($data['installments']) ? $data['installments'] : null;
+        $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
+        $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
+        $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
     }
 
     /**
@@ -191,11 +190,6 @@ class OrderResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "created", "completed"];
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'created', 'completed'.";
-        }
 
         return $invalid_properties;
     }
@@ -209,10 +203,6 @@ class OrderResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "created", "completed"];
-        if (!in_array($this->container['status'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
@@ -228,7 +218,7 @@ class OrderResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id Offer ID.
+     * @param string $id Order ID.
      * @return $this
      */
     public function setId($id)
@@ -239,127 +229,22 @@ class OrderResource implements ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets geo_code
      * @return string
      */
-    public function getCreatedAt()
+    public function getGeoCode()
     {
-        return $this->container['created_at'];
+        return $this->container['geo_code'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at Offer creation date.
+     * Sets geo_code
+     * @param string $geo_code order geo code
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setGeoCode($geo_code)
     {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return string
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param string $updated_at Offer Last update.
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets accepted_at
-     * @return string
-     */
-    public function getAcceptedAt()
-    {
-        return $this->container['accepted_at'];
-    }
-
-    /**
-     * Sets accepted_at
-     * @param string $accepted_at Offer acceptance date.
-     * @return $this
-     */
-    public function setAcceptedAt($accepted_at)
-    {
-        $this->container['accepted_at'] = $accepted_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets expires_at
-     * @return string
-     */
-    public function getExpiresAt()
-    {
-        return $this->container['expires_at'];
-    }
-
-    /**
-     * Sets expires_at
-     * @param string $expires_at Offer expiration date.
-     * @return $this
-     */
-    public function setExpiresAt($expires_at)
-    {
-        $this->container['expires_at'] = $expires_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Offer type.
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets due_at
-     * @return string
-     */
-    public function getDueAt()
-    {
-        return $this->container['due_at'];
-    }
-
-    /**
-     * Sets due_at
-     * @param string $due_at Offer due date.
-     * @return $this
-     */
-    public function setDueAt($due_at)
-    {
-        $this->container['due_at'] = $due_at;
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }
@@ -380,32 +265,133 @@ class OrderResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('unknown', 'created', 'completed');
-        if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'created', 'completed'");
-        }
         $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets price
+     * Gets created_at
      * @return string
      */
-    public function getPrice()
+    public function getCreatedAt()
     {
-        return $this->container['price'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets price
-     * @param string $price Price of offer.
+     * Sets created_at
+     * @param string $created_at Order creation date.
      * @return $this
      */
-    public function setPrice($price)
+    public function setCreatedAt($created_at)
     {
-        $this->container['price'] = $price;
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at Order Last update.
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets paid_at
+     * @return string
+     */
+    public function getPaidAt()
+    {
+        return $this->container['paid_at'];
+    }
+
+    /**
+     * Sets paid_at
+     * @param string $paid_at Order payment date.
+     * @return $this
+     */
+    public function setPaidAt($paid_at)
+    {
+        $this->container['paid_at'] = $paid_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets due_at
+     * @return string
+     */
+    public function getDueAt()
+    {
+        return $this->container['due_at'];
+    }
+
+    /**
+     * Sets due_at
+     * @param string $due_at Order due date
+     * @return $this
+     */
+    public function setDueAt($due_at)
+    {
+        $this->container['due_at'] = $due_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets buyer
+     * @return \Ageras\Api\OrderConsumerResource
+     */
+    public function getBuyer()
+    {
+        return $this->container['buyer'];
+    }
+
+    /**
+     * Sets buyer
+     * @param \Ageras\Api\OrderConsumerResource $buyer
+     * @return $this
+     */
+    public function setBuyer($buyer)
+    {
+        $this->container['buyer'] = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * Gets lines
+     * @return \Ageras\Api\OrderLineResource[]
+     */
+    public function getLines()
+    {
+        return $this->container['lines'];
+    }
+
+    /**
+     * Sets lines
+     * @param \Ageras\Api\OrderLineResource[] $lines order lines
+     * @return $this
+     */
+    public function setLines($lines)
+    {
+        $this->container['lines'] = $lines;
 
         return $this;
     }
@@ -427,6 +413,69 @@ class OrderResource implements ArrayAccess
     public function setInstallments($installments)
     {
         $this->container['installments'] = $installments;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_vat_amount
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalVatAmount()
+    {
+        return $this->container['total_vat_amount'];
+    }
+
+    /**
+     * Sets total_vat_amount
+     * @param \Ageras\Api\AmountResource $total_vat_amount
+     * @return $this
+     */
+    public function setTotalVatAmount($total_vat_amount)
+    {
+        $this->container['total_vat_amount'] = $total_vat_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalAmountExclVat()
+    {
+        return $this->container['total_amount_excl_vat'];
+    }
+
+    /**
+     * Sets total_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $total_amount_excl_vat
+     * @return $this
+     */
+    public function setTotalAmountExclVat($total_amount_excl_vat)
+    {
+        $this->container['total_amount_excl_vat'] = $total_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_amount_incl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getTotalAmountInclVat()
+    {
+        return $this->container['total_amount_incl_vat'];
+    }
+
+    /**
+     * Sets total_amount_incl_vat
+     * @param \Ageras\Api\AmountResource $total_amount_incl_vat
+     * @return $this
+     */
+    public function setTotalAmountInclVat($total_amount_incl_vat)
+    {
+        $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
 
         return $this;
     }

@@ -60,7 +60,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'paid_at' => 'string',
         'expires_at' => 'string',
         'published_at' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource',
+        'partner' => '\Ageras\Api\LeadPartnerResource',
         'partner_lead_offer_id' => 'int',
         'title' => 'string',
         'description' => 'string',
@@ -68,7 +68,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'total_vat_amount' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'total_amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'prepayment_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'prepayment_amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'items' => '\Ageras\Api\LeadQuoteItemResource[]'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +96,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
         'total_amount_incl_vat' => 'total_amount_incl_vat',
-        'prepayment_amount_incl_vat' => 'prepayment_amount_incl_vat'
+        'prepayment_amount_incl_vat' => 'prepayment_amount_incl_vat',
+        'items' => 'items'
     ];
 
 
@@ -118,7 +120,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
         'total_amount_incl_vat' => 'setTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'setPrepaymentAmountInclVat'
+        'prepayment_amount_incl_vat' => 'setPrepaymentAmountInclVat',
+        'items' => 'setItems'
     ];
 
 
@@ -141,7 +144,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
         'total_amount_incl_vat' => 'getTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'getPrepaymentAmountInclVat'
+        'prepayment_amount_incl_vat' => 'getPrepaymentAmountInclVat',
+        'items' => 'getItems'
     ];
 
     public static function attributeMap()
@@ -208,6 +212,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
         $this->container['prepayment_amount_incl_vat'] = isset($data['prepayment_amount_incl_vat']) ? $data['prepayment_amount_incl_vat'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -376,7 +381,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * @return \Ageras\Api\LeadPartnerResource
      */
     public function getPartner()
     {
@@ -385,7 +390,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * @param \Ageras\Api\LeadPartnerResource $partner
      * @return $this
      */
     public function setPartner($partner)
@@ -559,6 +564,27 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     public function setPrepaymentAmountInclVat($prepayment_amount_incl_vat)
     {
         $this->container['prepayment_amount_incl_vat'] = $prepayment_amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets items
+     * @return \Ageras\Api\LeadQuoteItemResource[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     * @param \Ageras\Api\LeadQuoteItemResource[] $items List of quote items.
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
 
         return $this;
     }

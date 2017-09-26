@@ -57,7 +57,9 @@ class CheckoutItemResource implements ArrayAccess
         'type' => 'string',
         'quote' => '\Ageras\Api\CheckoutPartnerLeadQuoteResource',
         'package' => '\Ageras\Api\CheckoutPackageResource',
-        'discount' => '\Ageras\Api\CheckoutDiscountResource'
+        'discount' => '\Ageras\Api\CheckoutDiscountResource',
+        'deliverable' => '\Ageras\Api\CheckoutDeliverableResource',
+        'deliverable_line' => '\Ageras\Api\CheckoutDeliverableLineResource'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +75,9 @@ class CheckoutItemResource implements ArrayAccess
         'type' => 'type',
         'quote' => 'quote',
         'package' => 'package',
-        'discount' => 'discount'
+        'discount' => 'discount',
+        'deliverable' => 'deliverable',
+        'deliverable_line' => 'deliverable_line'
     ];
 
 
@@ -85,7 +89,9 @@ class CheckoutItemResource implements ArrayAccess
         'type' => 'setType',
         'quote' => 'setQuote',
         'package' => 'setPackage',
-        'discount' => 'setDiscount'
+        'discount' => 'setDiscount',
+        'deliverable' => 'setDeliverable',
+        'deliverable_line' => 'setDeliverableLine'
     ];
 
 
@@ -97,7 +103,9 @@ class CheckoutItemResource implements ArrayAccess
         'type' => 'getType',
         'quote' => 'getQuote',
         'package' => 'getPackage',
-        'discount' => 'getDiscount'
+        'discount' => 'getDiscount',
+        'deliverable' => 'getDeliverable',
+        'deliverable_line' => 'getDeliverableLine'
     ];
 
     public static function attributeMap()
@@ -119,6 +127,8 @@ class CheckoutItemResource implements ArrayAccess
     const TYPE_QUOTE = 'quote';
     const TYPE_PACKAGE = 'package';
     const TYPE_DISCOUNT = 'discount';
+    const TYPE_DELIVERABLE = 'deliverable';
+    const TYPE_DELIVERABLE_LINE = 'deliverable_line';
     
 
     
@@ -133,6 +143,8 @@ class CheckoutItemResource implements ArrayAccess
             self::TYPE_QUOTE,
             self::TYPE_PACKAGE,
             self::TYPE_DISCOUNT,
+            self::TYPE_DELIVERABLE,
+            self::TYPE_DELIVERABLE_LINE,
         ];
     }
     
@@ -153,6 +165,8 @@ class CheckoutItemResource implements ArrayAccess
         $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
         $this->container['package'] = isset($data['package']) ? $data['package'] : null;
         $this->container['discount'] = isset($data['discount']) ? $data['discount'] : null;
+        $this->container['deliverable'] = isset($data['deliverable']) ? $data['deliverable'] : null;
+        $this->container['deliverable_line'] = isset($data['deliverable_line']) ? $data['deliverable_line'] : null;
     }
 
     /**
@@ -164,9 +178,9 @@ class CheckoutItemResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "quote", "package", "discount"];
+        $allowed_values = ["unknown", "quote", "package", "discount", "deliverable", "deliverable_line"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount', 'deliverable', 'deliverable_line'.";
         }
 
         return $invalid_properties;
@@ -181,7 +195,7 @@ class CheckoutItemResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "quote", "package", "discount"];
+        $allowed_values = ["unknown", "quote", "package", "discount", "deliverable", "deliverable_line"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -205,9 +219,9 @@ class CheckoutItemResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'quote', 'package', 'discount');
+        $allowed_values = array('unknown', 'quote', 'package', 'discount', 'deliverable', 'deliverable_line');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'quote', 'package', 'discount', 'deliverable', 'deliverable_line'");
         }
         $this->container['type'] = $type;
 
@@ -273,6 +287,48 @@ class CheckoutItemResource implements ArrayAccess
     public function setDiscount($discount)
     {
         $this->container['discount'] = $discount;
+
+        return $this;
+    }
+
+    /**
+     * Gets deliverable
+     * @return \Ageras\Api\CheckoutDeliverableResource
+     */
+    public function getDeliverable()
+    {
+        return $this->container['deliverable'];
+    }
+
+    /**
+     * Sets deliverable
+     * @param \Ageras\Api\CheckoutDeliverableResource $deliverable
+     * @return $this
+     */
+    public function setDeliverable($deliverable)
+    {
+        $this->container['deliverable'] = $deliverable;
+
+        return $this;
+    }
+
+    /**
+     * Gets deliverable_line
+     * @return \Ageras\Api\CheckoutDeliverableLineResource
+     */
+    public function getDeliverableLine()
+    {
+        return $this->container['deliverable_line'];
+    }
+
+    /**
+     * Sets deliverable_line
+     * @param \Ageras\Api\CheckoutDeliverableLineResource $deliverable_line
+     * @return $this
+     */
+    public function setDeliverableLine($deliverable_line)
+    {
+        $this->container['deliverable_line'] = $deliverable_line;
 
         return $this;
     }

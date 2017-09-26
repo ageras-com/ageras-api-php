@@ -58,7 +58,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'count' => 'int',
         'open_for_quotes' => 'bool',
         'accepted_quote' => '\Ageras\Api\LeadQuoteInfoEntryResource',
-        'quotes' => '\Ageras\Api\LeadQuoteInfoEntryResource[]'
+        'quotes' => '\Ageras\Api\LeadQuoteInfoEntryResource[]',
+        'client_decision_postponed_to' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'count' => 'count',
         'open_for_quotes' => 'open_for_quotes',
         'accepted_quote' => 'accepted_quote',
-        'quotes' => 'quotes'
+        'quotes' => 'quotes',
+        'client_decision_postponed_to' => 'client_decision_postponed_to'
     ];
 
 
@@ -88,7 +90,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'count' => 'setCount',
         'open_for_quotes' => 'setOpenForQuotes',
         'accepted_quote' => 'setAcceptedQuote',
-        'quotes' => 'setQuotes'
+        'quotes' => 'setQuotes',
+        'client_decision_postponed_to' => 'setClientDecisionPostponedTo'
     ];
 
 
@@ -101,7 +104,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'count' => 'getCount',
         'open_for_quotes' => 'getOpenForQuotes',
         'accepted_quote' => 'getAcceptedQuote',
-        'quotes' => 'getQuotes'
+        'quotes' => 'getQuotes',
+        'client_decision_postponed_to' => 'getClientDecisionPostponedTo'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class LeadQuotesInfoResource implements ArrayAccess
         $this->container['open_for_quotes'] = isset($data['open_for_quotes']) ? $data['open_for_quotes'] : false;
         $this->container['accepted_quote'] = isset($data['accepted_quote']) ? $data['accepted_quote'] : null;
         $this->container['quotes'] = isset($data['quotes']) ? $data['quotes'] : null;
+        $this->container['client_decision_postponed_to'] = isset($data['client_decision_postponed_to']) ? $data['client_decision_postponed_to'] : null;
     }
 
     /**
@@ -268,6 +273,27 @@ class LeadQuotesInfoResource implements ArrayAccess
     public function setQuotes($quotes)
     {
         $this->container['quotes'] = $quotes;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_decision_postponed_to
+     * @return string
+     */
+    public function getClientDecisionPostponedTo()
+    {
+        return $this->container['client_decision_postponed_to'];
+    }
+
+    /**
+     * Sets client_decision_postponed_to
+     * @param string $client_decision_postponed_to Date the client match decision is postponed to.
+     * @return $this
+     */
+    public function setClientDecisionPostponedTo($client_decision_postponed_to)
+    {
+        $this->container['client_decision_postponed_to'] = $client_decision_postponed_to;
 
         return $this;
     }

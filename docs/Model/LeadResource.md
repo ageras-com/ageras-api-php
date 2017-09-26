@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **quotes_info** | [**\Ageras\Api\LeadQuotesInfoResource**](LeadQuotesInfoResource.md) |  | [optional] 
 **affiliate_campaign** | [**\Ageras\Api\AffiliateCampaignResource**](AffiliateCampaignResource.md) |  | [optional] 
 **feedback** | [**\Ageras\Api\LeadFeedbackResource**](LeadFeedbackResource.md) |  | [optional] 
+**validator** | [**\Ageras\Api\LeadEmployeeResource**](LeadEmployeeResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

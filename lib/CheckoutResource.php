@@ -166,12 +166,13 @@ class CheckoutResource implements ArrayAccess
     const STATUS_COMPLETED = 'completed';
     const VALIDATION_SUMMARY_UNKNOWN = 'unknown';
     const VALIDATION_SUMMARY_MISSING_BUYER = 'missing_buyer';
-    const VALIDATION_SUMMARY_MISSING_PAYMENT_SOLUTION = 'missing_payment_solution';
-    const VALIDATION_SUMMARY_INVALID_ITEM = 'invalid_item';
     const VALIDATION_SUMMARY_NO_CHECKOUT_LINES = 'no_checkout_lines';
+    const VALIDATION_SUMMARY_INVALID_ITEM = 'invalid_item';
+    const VALIDATION_SUMMARY_INVALID_QUANTITY = 'invalid_quantity';
     const VALIDATION_SUMMARY_ITEM_NOT_IN_STOCK = 'item_not_in_stock';
     const VALIDATION_SUMMARY_ITEM_ALREADY_PURCHASED = 'item_already_purchased';
-    const VALIDATION_SUMMARY_INVALID_QUANTITY = 'invalid_quantity';
+    const VALIDATION_SUMMARY_INVALID_CHAINED_ITEM = 'invalid_chained_item';
+    const VALIDATION_SUMMARY_MORE_THAN_ONE_SELLER = 'more_than_one_seller';
     
 
     
@@ -203,12 +204,13 @@ class CheckoutResource implements ArrayAccess
         return [
             self::VALIDATION_SUMMARY_UNKNOWN,
             self::VALIDATION_SUMMARY_MISSING_BUYER,
-            self::VALIDATION_SUMMARY_MISSING_PAYMENT_SOLUTION,
-            self::VALIDATION_SUMMARY_INVALID_ITEM,
             self::VALIDATION_SUMMARY_NO_CHECKOUT_LINES,
+            self::VALIDATION_SUMMARY_INVALID_ITEM,
+            self::VALIDATION_SUMMARY_INVALID_QUANTITY,
             self::VALIDATION_SUMMARY_ITEM_NOT_IN_STOCK,
             self::VALIDATION_SUMMARY_ITEM_ALREADY_PURCHASED,
-            self::VALIDATION_SUMMARY_INVALID_QUANTITY,
+            self::VALIDATION_SUMMARY_INVALID_CHAINED_ITEM,
+            self::VALIDATION_SUMMARY_MORE_THAN_ONE_SELLER,
         ];
     }
     
@@ -421,9 +423,9 @@ class CheckoutResource implements ArrayAccess
      */
     public function setValidationSummary($validation_summary)
     {
-        $allowed_values = array('unknown', 'missing_buyer', 'missing_payment_solution', 'invalid_item', 'no_checkout_lines', 'item_not_in_stock', 'item_already_purchased', 'invalid_quantity');
+        $allowed_values = array('unknown', 'missing_buyer', 'no_checkout_lines', 'invalid_item', 'invalid_quantity', 'item_not_in_stock', 'item_already_purchased', 'invalid_chained_item', 'more_than_one_seller');
         if (!is_null($validation_summary) && (array_diff($validation_summary, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'validation_summary', must be one of 'unknown', 'missing_buyer', 'missing_payment_solution', 'invalid_item', 'no_checkout_lines', 'item_not_in_stock', 'item_already_purchased', 'invalid_quantity'");
+            throw new \InvalidArgumentException("Invalid value for 'validation_summary', must be one of 'unknown', 'missing_buyer', 'no_checkout_lines', 'invalid_item', 'invalid_quantity', 'item_not_in_stock', 'item_already_purchased', 'invalid_chained_item', 'more_than_one_seller'");
         }
         $this->container['validation_summary'] = $validation_summary;
 

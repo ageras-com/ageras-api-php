@@ -265,6 +265,8 @@ class CheckoutsApi
      *
      * @param $criteria = [
      *    'checkout_id' => string,
+     *    'client_id' => string,
+     *    'partner_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -285,6 +287,8 @@ class CheckoutsApi
      *
      * @param $criteria = [
      *    'checkout_id' => string,
+     *    'client_id' => string,
+     *    'partner_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -309,6 +313,14 @@ class CheckoutsApi
         // query params
         if (isset($criteria['checkout_id'])) {
             $queryParams['checkout_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['checkout_id']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
