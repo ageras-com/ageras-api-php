@@ -62,7 +62,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'expires_at' => 'string',
         'canceled_at' => 'string',
         'created_at' => 'string',
-        'updated_at' => 'string'
+        'updated_at' => 'string',
+        'package_type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'expires_at' => 'expires_at',
         'canceled_at' => 'canceled_at',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'updated_at' => 'updated_at',
+        'package_type' => 'package_type'
     ];
 
 
@@ -100,7 +102,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'expires_at' => 'setExpiresAt',
         'canceled_at' => 'setCanceledAt',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'updated_at' => 'setUpdatedAt',
+        'package_type' => 'setPackageType'
     ];
 
 
@@ -117,7 +120,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'expires_at' => 'getExpiresAt',
         'canceled_at' => 'getCanceledAt',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'updated_at' => 'getUpdatedAt',
+        'package_type' => 'getPackageType'
     ];
 
     public static function attributeMap()
@@ -160,6 +164,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         $this->container['canceled_at'] = isset($data['canceled_at']) ? $data['canceled_at'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['package_type'] = isset($data['package_type']) ? $data['package_type'] : null;
     }
 
     /**
@@ -372,6 +377,27 @@ class PartnerSubscriptionResource implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_type
+     * @return string
+     */
+    public function getPackageType()
+    {
+        return $this->container['package_type'];
+    }
+
+    /**
+     * Sets package_type
+     * @param string $package_type Package type
+     * @return $this
+     */
+    public function setPackageType($package_type)
+    {
+        $this->container['package_type'] = $package_type;
 
         return $this;
     }

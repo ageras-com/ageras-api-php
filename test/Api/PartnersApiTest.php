@@ -638,28 +638,6 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersRefillsCreate
-     *
-     * Create partner refill..
-     *
-     */
-    public function testPartnersRefillsCreate()
-    {
-
-    }
-
-    /**
-     * Test case for partnersRefillsIndex
-     *
-     * Get partner refills..
-     *
-     */
-    public function testPartnersRefillsIndex()
-    {
-
-    }
-
-    /**
      * Test case for partnersSubscriptionsActionsCreate
      *
      * Cancel subscription..

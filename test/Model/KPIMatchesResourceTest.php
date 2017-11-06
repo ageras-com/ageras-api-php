@@ -106,4 +106,12 @@ class KPIMatchesResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "quote_matches"
+     */
+    public function testPropertyQuoteMatches()
+    {
+
+    }
+
 }

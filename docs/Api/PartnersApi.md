@@ -55,8 +55,6 @@ Method | HTTP request | Description
 [**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
 [**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
-[**partnersRefillsCreate**](PartnersApi.md#partnersRefillsCreate) | **POST** /partners/{partner_id}/refills | Create partner refill.
-[**partnersRefillsIndex**](PartnersApi.md#partnersRefillsIndex) | **GET** /partners/{partner_id}/refills | Get partner refills.
 [**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
 [**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
 [**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
@@ -173,6 +171,7 @@ $criteria = [
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
         'is_public' => false; // bool | Only show partners that are visible to the public
+        'package_type' => "package_type_example"; // string | Partner subscription package type
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -207,6 +206,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
  **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
+ **package_type** | **string**| Partner subscription package type | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -2096,6 +2096,7 @@ $criteria = [
         'sort' => "relevance"; // string | Sort Partner's by a given property.
         'canvas_status' => "canvas_status_example"; // string | Canvas Status
         'is_public' => false; // bool | Only show partners that are visible to the public
+        'package_type' => "package_type_example"; // string | Partner subscription package type
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -2130,6 +2131,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Sort Partner&#39;s by a given property. | [optional] [default to relevance]
  **canvas_status** | **string**| Canvas Status | [optional]
  **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
+ **package_type** | **string**| Partner subscription package type | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -2970,118 +2972,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
-
-### Authorization
-
-[jwt](../../README.md#jwt), [login](../../README.md#login)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **partnersRefillsCreate**
-> \Ageras\Api\PartnerRefillResource partnersRefillsCreate($partner_id , $partner_refill_resource)
-
-Create partner refill.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-// Configure HTTP basic authorization: login
-Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
-
-$api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$partner_refill_resource = new \Ageras\Api\PartnerRefillResource(); // \Ageras\Api\PartnerRefillResource | 
-
-try {
-    $result = $api_instance->partnersRefillsCreate($partner_id , $partner_refill_resource);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersRefillsCreate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **partner_id** | **string**|  |
- **partner_refill_resource** | [**\Ageras\Api\PartnerRefillResource**](../Model/\Ageras\Api\PartnerRefillResource.md)|  |
-
-### Return type
-
-[**\Ageras\Api\PartnerRefillResource**](../Model/PartnerRefillResource.md)
-
-### Authorization
-
-[jwt](../../README.md#jwt), [login](../../README.md#login)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **partnersRefillsIndex**
-> \Ageras\Api\PartnerRefillResult partnersRefillsIndex($partner_id , $criteria)
-
-Get partner refills.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-// Configure HTTP basic authorization: login
-Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
-
-$api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$criteria = [
-        'limit' => 56; // int | The number of resources to be returned.
-        'page' => 56; // int | The page position in the result.
-        'query' => "query_example"; // string | The search wildcard.
-    ];
-
-try {
-    $result = $api_instance->partnersRefillsIndex($partner_id , $criteria);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersRefillsIndex: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **partner_id** | **string**|  |
- **limit** | **int**| The number of resources to be returned. | [optional]
- **page** | **int**| The page position in the result. | [optional]
- **query** | **string**| The search wildcard. | [optional]
-
-### Return type
-
-[**\Ageras\Api\PartnerRefillResult**](../Model/PartnerRefillResult.md)
 
 ### Authorization
 

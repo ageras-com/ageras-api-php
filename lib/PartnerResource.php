@@ -83,10 +83,10 @@ class PartnerResource implements ArrayAccess
         'kpi' => '\Ageras\Api\PartnerKPIResource',
         'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
         'preferences' => '\Ageras\Api\PartnerPreferencesResource',
-        'refill' => '\Ageras\Api\PartnerRefillResource',
         'demo' => '\Ageras\Api\PartnerDemoResource',
         'canvas' => '\Ageras\Api\PartnerCanvasResource',
-        'tasks' => '\Ageras\Api\PartnerTasksResource'
+        'tasks' => '\Ageras\Api\PartnerTasksResource',
+        'subscription' => '\Ageras\Api\PartnerSubscriptionResource[]'
     ];
 
     public static function swaggerTypes()
@@ -128,10 +128,10 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'kpi',
         'invoicing' => 'invoicing',
         'preferences' => 'preferences',
-        'refill' => 'refill',
         'demo' => 'demo',
         'canvas' => 'canvas',
-        'tasks' => 'tasks'
+        'tasks' => 'tasks',
+        'subscription' => 'subscription'
     ];
 
 
@@ -169,10 +169,10 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'setKpi',
         'invoicing' => 'setInvoicing',
         'preferences' => 'setPreferences',
-        'refill' => 'setRefill',
         'demo' => 'setDemo',
         'canvas' => 'setCanvas',
-        'tasks' => 'setTasks'
+        'tasks' => 'setTasks',
+        'subscription' => 'setSubscription'
     ];
 
 
@@ -210,10 +210,10 @@ class PartnerResource implements ArrayAccess
         'kpi' => 'getKpi',
         'invoicing' => 'getInvoicing',
         'preferences' => 'getPreferences',
-        'refill' => 'getRefill',
         'demo' => 'getDemo',
         'canvas' => 'getCanvas',
-        'tasks' => 'getTasks'
+        'tasks' => 'getTasks',
+        'subscription' => 'getSubscription'
     ];
 
     public static function attributeMap()
@@ -304,10 +304,10 @@ class PartnerResource implements ArrayAccess
         $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
         $this->container['invoicing'] = isset($data['invoicing']) ? $data['invoicing'] : null;
         $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
-        $this->container['refill'] = isset($data['refill']) ? $data['refill'] : null;
         $this->container['demo'] = isset($data['demo']) ? $data['demo'] : null;
         $this->container['canvas'] = isset($data['canvas']) ? $data['canvas'] : null;
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
+        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
     }
 
     /**
@@ -958,27 +958,6 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
-     * Gets refill
-     * @return \Ageras\Api\PartnerRefillResource
-     */
-    public function getRefill()
-    {
-        return $this->container['refill'];
-    }
-
-    /**
-     * Sets refill
-     * @param \Ageras\Api\PartnerRefillResource $refill
-     * @return $this
-     */
-    public function setRefill($refill)
-    {
-        $this->container['refill'] = $refill;
-
-        return $this;
-    }
-
-    /**
      * Gets demo
      * @return \Ageras\Api\PartnerDemoResource
      */
@@ -1037,6 +1016,27 @@ class PartnerResource implements ArrayAccess
     public function setTasks($tasks)
     {
         $this->container['tasks'] = $tasks;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription
+     * @return \Ageras\Api\PartnerSubscriptionResource[]
+     */
+    public function getSubscription()
+    {
+        return $this->container['subscription'];
+    }
+
+    /**
+     * Sets subscription
+     * @param \Ageras\Api\PartnerSubscriptionResource[] $subscription Partner subscription data
+     * @return $this
+     */
+    public function setSubscription($subscription)
+    {
+        $this->container['subscription'] = $subscription;
 
         return $this;
     }

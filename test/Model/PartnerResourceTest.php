@@ -315,14 +315,6 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "refill"
-     */
-    public function testPropertyRefill()
-    {
-
-    }
-
-    /**
      * Test attribute "demo"
      */
     public function testPropertyDemo()
@@ -342,6 +334,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "tasks"
      */
     public function testPropertyTasks()
+    {
+
+    }
+
+    /**
+     * Test attribute "subscription"
+     */
+    public function testPropertySubscription()
     {
 
     }

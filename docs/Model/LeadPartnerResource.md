@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **partner_state** | **string** | Partner State. | [optional] 
 **rating** | [**\Ageras\Api\PartnerRatingResource**](PartnerRatingResource.md) |  | [optional] 
 **logo** | **string** | Partner logo. | [optional] 
+**partner_user** | [**\Ageras\Api\LeadPartnerUserResource**](LeadPartnerUserResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

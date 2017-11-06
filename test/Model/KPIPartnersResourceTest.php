@@ -162,4 +162,12 @@ class KPIPartnersResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "active_partner_packages"
+     */
+    public function testPropertyActivePartnerPackages()
+    {
+
+    }
+
 }

@@ -123,6 +123,22 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+
+    }
+
+    /**
      * Test attribute "score"
      */
     public function testPropertyScore()
@@ -214,6 +230,22 @@ class RatingResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "featured_at"
      */
     public function testPropertyFeaturedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_id"
+     */
+    public function testPropertyLeadId()
+    {
+
+    }
+
+    /**
+     * Test attribute "ip"
+     */
+    public function testPropertyIp()
     {
 
     }

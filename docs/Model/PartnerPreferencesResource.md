@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**currency** | [**\Ageras\Api\CurrencyResource**](CurrencyResource.md) |  | [optional] 
 **lead_distance** | **int** | Maximum distance to leads in kilometres. Used to segment the right leads for the partner. | [optional] 
 **digital_leads** | **bool** | If partner wants digital leads | [optional] [default to false]
 

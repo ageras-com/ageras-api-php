@@ -130,4 +130,28 @@ class AttachmentResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "owner_name"
+     */
+    public function testPropertyOwnerName()
+    {
+
+    }
+
+    /**
+     * Test attribute "conversation_id"
+     */
+    public function testPropertyConversationId()
+    {
+
+    }
+
 }

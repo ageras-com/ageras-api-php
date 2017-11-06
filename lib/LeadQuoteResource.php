@@ -68,11 +68,10 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'string',
         'description' => 'string',
         'items' => '\Ageras\Api\LeadQuoteItemResource[]',
+        'payment' => '\Ageras\Api\LeadQuotePaymentResource',
         'total_vat_amount' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'total_amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'prepayment_amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'prepayment_percentage' => 'float'
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -99,11 +98,10 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'title',
         'description' => 'description',
         'items' => 'items',
+        'payment' => 'payment',
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
-        'total_amount_incl_vat' => 'total_amount_incl_vat',
-        'prepayment_amount_incl_vat' => 'prepayment_amount_incl_vat',
-        'prepayment_percentage' => 'prepayment_percentage'
+        'total_amount_incl_vat' => 'total_amount_incl_vat'
     ];
 
 
@@ -126,11 +124,10 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'setTitle',
         'description' => 'setDescription',
         'items' => 'setItems',
+        'payment' => 'setPayment',
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
-        'total_amount_incl_vat' => 'setTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'setPrepaymentAmountInclVat',
-        'prepayment_percentage' => 'setPrepaymentPercentage'
+        'total_amount_incl_vat' => 'setTotalAmountInclVat'
     ];
 
 
@@ -153,11 +150,10 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'getTitle',
         'description' => 'getDescription',
         'items' => 'getItems',
+        'payment' => 'getPayment',
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
-        'total_amount_incl_vat' => 'getTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'getPrepaymentAmountInclVat',
-        'prepayment_percentage' => 'getPrepaymentPercentage'
+        'total_amount_incl_vat' => 'getTotalAmountInclVat'
     ];
 
     public static function attributeMap()
@@ -183,7 +179,6 @@ class LeadQuoteResource implements ArrayAccess
     const PROGRESS_QUOTE_PROVIDED = 'quote_provided';
     const PROGRESS_BID_ROUND_CLOSED = 'bid_round_closed';
     const PROGRESS_PENDING_DECISION = 'pending_decision';
-    const PROGRESS_FOLLOW_UP = 'follow_up';
     const PROGRESS_WON = 'won';
     const PROGRESS_LOST = 'lost';
     
@@ -214,7 +209,6 @@ class LeadQuoteResource implements ArrayAccess
             self::PROGRESS_QUOTE_PROVIDED,
             self::PROGRESS_BID_ROUND_CLOSED,
             self::PROGRESS_PENDING_DECISION,
-            self::PROGRESS_FOLLOW_UP,
             self::PROGRESS_WON,
             self::PROGRESS_LOST,
         ];
@@ -247,11 +241,10 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['payment'] = isset($data['payment']) ? $data['payment'] : null;
         $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
-        $this->container['prepayment_amount_incl_vat'] = isset($data['prepayment_amount_incl_vat']) ? $data['prepayment_amount_incl_vat'] : null;
-        $this->container['prepayment_percentage'] = isset($data['prepayment_percentage']) ? $data['prepayment_percentage'] : null;
     }
 
     /**
@@ -268,9 +261,9 @@ class LeadQuoteResource implements ArrayAccess
             $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'.";
         }
 
-        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "follow_up", "won", "lost"];
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost"];
         if (!in_array($this->container['progress'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost'.";
+            $invalid_properties[] = "invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost'.";
         }
 
         return $invalid_properties;
@@ -289,7 +282,7 @@ class LeadQuoteResource implements ArrayAccess
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "follow_up", "won", "lost"];
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost"];
         if (!in_array($this->container['progress'], $allowed_values)) {
             return false;
         }
@@ -359,9 +352,9 @@ class LeadQuoteResource implements ArrayAccess
      */
     public function setProgress($progress)
     {
-        $allowed_values = array('unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost');
+        $allowed_values = array('unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost');
         if (!is_null($progress) && (!in_array($progress, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'follow_up', 'won', 'lost'");
+            throw new \InvalidArgumentException("Invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost'");
         }
         $this->container['progress'] = $progress;
 
@@ -600,6 +593,27 @@ class LeadQuoteResource implements ArrayAccess
     }
 
     /**
+     * Gets payment
+     * @return \Ageras\Api\LeadQuotePaymentResource
+     */
+    public function getPayment()
+    {
+        return $this->container['payment'];
+    }
+
+    /**
+     * Sets payment
+     * @param \Ageras\Api\LeadQuotePaymentResource $payment
+     * @return $this
+     */
+    public function setPayment($payment)
+    {
+        $this->container['payment'] = $payment;
+
+        return $this;
+    }
+
+    /**
      * Gets total_vat_amount
      * @return \Ageras\Api\AmountResource
      */
@@ -658,48 +672,6 @@ class LeadQuoteResource implements ArrayAccess
     public function setTotalAmountInclVat($total_amount_incl_vat)
     {
         $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets prepayment_amount_incl_vat
-     * @return \Ageras\Api\AmountResource
-     */
-    public function getPrepaymentAmountInclVat()
-    {
-        return $this->container['prepayment_amount_incl_vat'];
-    }
-
-    /**
-     * Sets prepayment_amount_incl_vat
-     * @param \Ageras\Api\AmountResource $prepayment_amount_incl_vat
-     * @return $this
-     */
-    public function setPrepaymentAmountInclVat($prepayment_amount_incl_vat)
-    {
-        $this->container['prepayment_amount_incl_vat'] = $prepayment_amount_incl_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets prepayment_percentage
-     * @return float
-     */
-    public function getPrepaymentPercentage()
-    {
-        return $this->container['prepayment_percentage'];
-    }
-
-    /**
-     * Sets prepayment_percentage
-     * @param float $prepayment_percentage
-     * @return $this
-     */
-    public function setPrepaymentPercentage($prepayment_percentage)
-    {
-        $this->container['prepayment_percentage'] = $prepayment_percentage;
 
         return $this;
     }

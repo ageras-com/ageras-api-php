@@ -270,6 +270,7 @@ $criteria = [
         'client_decision_postponed' => false; // bool | Client decision to choose a quote match is postponed or not.
         'all_quotes_published_before' => "all_quotes_published_before_example"; // string | Lead received its latest quote match before this date.
         'expires_within' => 56; // int | Get leads expiring within this many minutes.
+        'industry' => "industry_example"; // string | Industry code for the given lead.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -301,6 +302,7 @@ Name | Type | Description  | Notes
  **client_decision_postponed** | **bool**| Client decision to choose a quote match is postponed or not. | [optional] [default to false]
  **all_quotes_published_before** | **string**| Lead received its latest quote match before this date. | [optional]
  **expires_within** | **int**| Get leads expiring within this many minutes. | [optional]
+ **industry** | **string**| Industry code for the given lead. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

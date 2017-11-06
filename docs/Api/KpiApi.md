@@ -27,6 +27,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\KpiApi();
 $criteria = [
+        'kpi_id' => "kpi_id_example"; // string | Identifiers for the kpi's
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'industry' => "industry_example"; // string | Industry code for the kpi
         'industry_id' => "industry_id_example"; // string | Industry id for the kpi
@@ -50,6 +51,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **kpi_id** | **string**| Identifiers for the kpi&#39;s | [optional]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **industry** | **string**| Industry code for the kpi | [optional]
  **industry_id** | **string**| Industry id for the kpi | [optional]

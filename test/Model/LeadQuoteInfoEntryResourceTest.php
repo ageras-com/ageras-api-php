@@ -163,9 +163,17 @@ class LeadQuoteInfoEntryResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "price"
+     * Test attribute "items"
      */
-    public function testPropertyPrice()
+    public function testPropertyItems()
+    {
+
+    }
+
+    /**
+     * Test attribute "payment"
+     */
+    public function testPropertyPayment()
     {
 
     }
@@ -190,22 +198,6 @@ class LeadQuoteInfoEntryResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "total_amount_incl_vat"
      */
     public function testPropertyTotalAmountInclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "prepayment_amount_incl_vat"
-     */
-    public function testPropertyPrepaymentAmountInclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "items"
-     */
-    public function testPropertyItems()
     {
 
     }
