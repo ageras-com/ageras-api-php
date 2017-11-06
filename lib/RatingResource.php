@@ -57,8 +57,10 @@ class RatingResource implements ArrayAccess
         'id' => 'int',
         'created_at' => 'string',
         'updated_at' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource',
+        'partner' => '\Ageras\Api\RatingPartnerResource',
         'name' => 'string',
+        'email' => 'string',
+        'phone' => 'string',
         'score' => '\Ageras\Api\RatingScoreResource',
         'stars' => 'int',
         'reply' => '\Ageras\Api\RatingReplyResource',
@@ -70,7 +72,9 @@ class RatingResource implements ArrayAccess
         'is_validated' => 'bool',
         'is_featured' => 'bool',
         'is_public' => 'bool',
-        'featured_at' => 'string'
+        'featured_at' => 'string',
+        'lead_id' => 'int',
+        'ip' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -88,6 +92,8 @@ class RatingResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'partner' => 'partner',
         'name' => 'name',
+        'email' => 'email',
+        'phone' => 'phone',
         'score' => 'score',
         'stars' => 'stars',
         'reply' => 'reply',
@@ -99,7 +105,9 @@ class RatingResource implements ArrayAccess
         'is_validated' => 'is_validated',
         'is_featured' => 'is_featured',
         'is_public' => 'is_public',
-        'featured_at' => 'featured_at'
+        'featured_at' => 'featured_at',
+        'lead_id' => 'lead_id',
+        'ip' => 'ip'
     ];
 
 
@@ -113,6 +121,8 @@ class RatingResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'partner' => 'setPartner',
         'name' => 'setName',
+        'email' => 'setEmail',
+        'phone' => 'setPhone',
         'score' => 'setScore',
         'stars' => 'setStars',
         'reply' => 'setReply',
@@ -124,7 +134,9 @@ class RatingResource implements ArrayAccess
         'is_validated' => 'setIsValidated',
         'is_featured' => 'setIsFeatured',
         'is_public' => 'setIsPublic',
-        'featured_at' => 'setFeaturedAt'
+        'featured_at' => 'setFeaturedAt',
+        'lead_id' => 'setLeadId',
+        'ip' => 'setIp'
     ];
 
 
@@ -138,6 +150,8 @@ class RatingResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'partner' => 'getPartner',
         'name' => 'getName',
+        'email' => 'getEmail',
+        'phone' => 'getPhone',
         'score' => 'getScore',
         'stars' => 'getStars',
         'reply' => 'getReply',
@@ -149,7 +163,9 @@ class RatingResource implements ArrayAccess
         'is_validated' => 'getIsValidated',
         'is_featured' => 'getIsFeatured',
         'is_public' => 'getIsPublic',
-        'featured_at' => 'getFeaturedAt'
+        'featured_at' => 'getFeaturedAt',
+        'lead_id' => 'getLeadId',
+        'ip' => 'getIp'
     ];
 
     public static function attributeMap()
@@ -188,6 +204,8 @@ class RatingResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['score'] = isset($data['score']) ? $data['score'] : null;
         $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
         $this->container['reply'] = isset($data['reply']) ? $data['reply'] : null;
@@ -200,6 +218,8 @@ class RatingResource implements ArrayAccess
         $this->container['is_featured'] = isset($data['is_featured']) ? $data['is_featured'] : false;
         $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
         $this->container['featured_at'] = isset($data['featured_at']) ? $data['featured_at'] : null;
+        $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -292,7 +312,7 @@ class RatingResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * @return \Ageras\Api\RatingPartnerResource
      */
     public function getPartner()
     {
@@ -301,7 +321,7 @@ class RatingResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * @param \Ageras\Api\RatingPartnerResource $partner
      * @return $this
      */
     public function setPartner($partner)
@@ -328,6 +348,48 @@ class RatingResource implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Email of the reviewer.
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     * @param string $phone Phone number of the reviewer.
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
 
         return $this;
     }
@@ -580,6 +642,48 @@ class RatingResource implements ArrayAccess
     public function setFeaturedAt($featured_at)
     {
         $this->container['featured_at'] = $featured_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_id
+     * @return int
+     */
+    public function getLeadId()
+    {
+        return $this->container['lead_id'];
+    }
+
+    /**
+     * Sets lead_id
+     * @param int $lead_id Lead ID this rating relates to.
+     * @return $this
+     */
+    public function setLeadId($lead_id)
+    {
+        $this->container['lead_id'] = $lead_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip
+     * @return string
+     */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+     * Sets ip
+     * @param string $ip IP address of the reviewer.
+     * @return $this
+     */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
 
         return $this;
     }

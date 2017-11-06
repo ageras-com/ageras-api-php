@@ -66,7 +66,8 @@ class LeadPartnerResource implements ArrayAccess
         'geo_code' => 'string',
         'partner_state' => 'string',
         'rating' => '\Ageras\Api\PartnerRatingResource',
-        'logo' => 'string'
+        'logo' => 'string',
+        'partner_user' => '\Ageras\Api\LeadPartnerUserResource'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +92,8 @@ class LeadPartnerResource implements ArrayAccess
         'geo_code' => 'geo_code',
         'partner_state' => 'partner_state',
         'rating' => 'rating',
-        'logo' => 'logo'
+        'logo' => 'logo',
+        'partner_user' => 'partner_user'
     ];
 
 
@@ -112,7 +114,8 @@ class LeadPartnerResource implements ArrayAccess
         'geo_code' => 'setGeoCode',
         'partner_state' => 'setPartnerState',
         'rating' => 'setRating',
-        'logo' => 'setLogo'
+        'logo' => 'setLogo',
+        'partner_user' => 'setPartnerUser'
     ];
 
 
@@ -133,7 +136,8 @@ class LeadPartnerResource implements ArrayAccess
         'geo_code' => 'getGeoCode',
         'partner_state' => 'getPartnerState',
         'rating' => 'getRating',
-        'logo' => 'getLogo'
+        'logo' => 'getLogo',
+        'partner_user' => 'getPartnerUser'
     ];
 
     public static function attributeMap()
@@ -208,6 +212,7 @@ class LeadPartnerResource implements ArrayAccess
         $this->container['partner_state'] = isset($data['partner_state']) ? $data['partner_state'] : null;
         $this->container['rating'] = isset($data['rating']) ? $data['rating'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
     }
 
     /**
@@ -517,6 +522,27 @@ class LeadPartnerResource implements ArrayAccess
     public function setLogo($logo)
     {
         $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_user
+     * @return \Ageras\Api\LeadPartnerUserResource
+     */
+    public function getPartnerUser()
+    {
+        return $this->container['partner_user'];
+    }
+
+    /**
+     * Sets partner_user
+     * @param \Ageras\Api\LeadPartnerUserResource $partner_user
+     * @return $this
+     */
+    public function setPartnerUser($partner_user)
+    {
+        $this->container['partner_user'] = $partner_user;
 
         return $this;
     }

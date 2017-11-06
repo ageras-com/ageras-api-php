@@ -123,6 +123,22 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "expiration_boosted_at"
+     */
+    public function testPropertyExpirationBoostedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "working_hours_expires_at"
+     */
+    public function testPropertyWorkingHoursExpiresAt()
+    {
+
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()

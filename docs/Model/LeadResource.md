@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **updated_at** | **string** | Date the Lead was updated. | [optional] 
 **validated_at** | **string** | Date the Lead was Updated. | [optional] 
 **expires_at** | **string** | Date the Lead Expires. | [optional] 
+**expiration_boosted_at** | **string** | Date where a lead has been extended/boosted. | [optional] 
+**working_hours_expires_at** | **string** | Date the Lead Expires taking into account only working hours. | [optional] 
 **status** | **string** | Current Validation Status of the Lead. | [optional] [default to 'unknown']
 **progress** | [**\Ageras\Api\LeadProgressResource[]**](LeadProgressResource.md) | Progress | [optional] 
 **title** | **string** | Title for the Lead. | [optional] 

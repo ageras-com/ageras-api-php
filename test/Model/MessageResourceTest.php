@@ -91,6 +91,14 @@ class MessageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "conversation_id"
+     */
+    public function testPropertyConversationId()
+    {
+
+    }
+
+    /**
      * Test attribute "reply_to_message_id"
      */
     public function testPropertyReplyToMessageId()

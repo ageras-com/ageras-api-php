@@ -77,6 +77,17 @@ class RatingsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for ratingsCreate
+     *
+     * Create a rating..
+     *
+     */
+    public function testRatingsCreate()
+    {
+
+    }
+
+    /**
      * Test case for ratingsGet
      *
      * Return a rating from a rating ID..

@@ -56,7 +56,8 @@ class KPIMatchesResource implements ArrayAccess
     protected static $swaggerTypes = [
         'actual' => '\Ageras\Api\KPINumberResource',
         'past' => '\Ageras\Api\KPINumberResource',
-        'ratio' => '\Ageras\Api\KPIMatchesRatioResource'
+        'ratio' => '\Ageras\Api\KPIMatchesRatioResource',
+        'quote_matches' => '\Ageras\Api\KPINumberResource'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +72,8 @@ class KPIMatchesResource implements ArrayAccess
     protected static $attributeMap = [
         'actual' => 'actual',
         'past' => 'past',
-        'ratio' => 'ratio'
+        'ratio' => 'ratio',
+        'quote_matches' => 'quote_matches'
     ];
 
 
@@ -82,7 +84,8 @@ class KPIMatchesResource implements ArrayAccess
     protected static $setters = [
         'actual' => 'setActual',
         'past' => 'setPast',
-        'ratio' => 'setRatio'
+        'ratio' => 'setRatio',
+        'quote_matches' => 'setQuoteMatches'
     ];
 
 
@@ -93,7 +96,8 @@ class KPIMatchesResource implements ArrayAccess
     protected static $getters = [
         'actual' => 'getActual',
         'past' => 'getPast',
-        'ratio' => 'getRatio'
+        'ratio' => 'getRatio',
+        'quote_matches' => 'getQuoteMatches'
     ];
 
     public static function attributeMap()
@@ -130,6 +134,7 @@ class KPIMatchesResource implements ArrayAccess
         $this->container['actual'] = isset($data['actual']) ? $data['actual'] : null;
         $this->container['past'] = isset($data['past']) ? $data['past'] : null;
         $this->container['ratio'] = isset($data['ratio']) ? $data['ratio'] : null;
+        $this->container['quote_matches'] = isset($data['quote_matches']) ? $data['quote_matches'] : null;
     }
 
     /**
@@ -216,6 +221,27 @@ class KPIMatchesResource implements ArrayAccess
     public function setRatio($ratio)
     {
         $this->container['ratio'] = $ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote_matches
+     * @return \Ageras\Api\KPINumberResource
+     */
+    public function getQuoteMatches()
+    {
+        return $this->container['quote_matches'];
+    }
+
+    /**
+     * Sets quote_matches
+     * @param \Ageras\Api\KPINumberResource $quote_matches
+     * @return $this
+     */
+    public function setQuoteMatches($quote_matches)
+    {
+        $this->container['quote_matches'] = $quote_matches;
 
         return $this;
     }

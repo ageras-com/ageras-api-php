@@ -195,6 +195,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "payment"
+     */
+    public function testPropertyPayment()
+    {
+
+    }
+
+    /**
      * Test attribute "total_vat_amount"
      */
     public function testPropertyTotalVatAmount()
@@ -214,22 +222,6 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "total_amount_incl_vat"
      */
     public function testPropertyTotalAmountInclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "prepayment_amount_incl_vat"
-     */
-    public function testPropertyPrepaymentAmountInclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "prepayment_percentage"
-     */
-    public function testPropertyPrepaymentPercentage()
     {
 
     }

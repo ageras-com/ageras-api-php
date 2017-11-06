@@ -54,6 +54,7 @@ class PartnerPreferencesResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'currency' => '\Ageras\Api\CurrencyResource',
         'lead_distance' => 'int',
         'digital_leads' => 'bool'
     ];
@@ -68,6 +69,7 @@ class PartnerPreferencesResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'currency' => 'currency',
         'lead_distance' => 'lead_distance',
         'digital_leads' => 'digital_leads'
     ];
@@ -78,6 +80,7 @@ class PartnerPreferencesResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'currency' => 'setCurrency',
         'lead_distance' => 'setLeadDistance',
         'digital_leads' => 'setDigitalLeads'
     ];
@@ -88,6 +91,7 @@ class PartnerPreferencesResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'currency' => 'getCurrency',
         'lead_distance' => 'getLeadDistance',
         'digital_leads' => 'getDigitalLeads'
     ];
@@ -123,6 +127,7 @@ class PartnerPreferencesResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['lead_distance'] = isset($data['lead_distance']) ? $data['lead_distance'] : null;
         $this->container['digital_leads'] = isset($data['digital_leads']) ? $data['digital_leads'] : false;
     }
@@ -151,6 +156,27 @@ class PartnerPreferencesResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets currency
+     * @return \Ageras\Api\CurrencyResource
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     * @param \Ageras\Api\CurrencyResource $currency
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
+
+        return $this;
+    }
 
     /**
      * Gets lead_distance

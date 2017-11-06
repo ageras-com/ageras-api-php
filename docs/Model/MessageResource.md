@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**conversation_id** | **int** |  | [optional] 
 **reply_to_message_id** | **int** |  | [optional] 
 **text** | **string** |  | [optional] 
 **participant** | [**\Ageras\Api\ParticipantResource**](ParticipantResource.md) |  | [optional] 

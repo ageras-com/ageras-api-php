@@ -203,6 +203,7 @@ class PartnersApi
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'is_public' => bool,
+     *    'package_type' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -238,6 +239,7 @@ class PartnersApi
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'is_public' => bool,
+     *    'package_type' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -322,6 +324,10 @@ class PartnersApi
         // query params
         if (isset($criteria['is_public'])) {
             $queryParams['is_public'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_public']);
+        }
+        // query params
+        if (isset($criteria['package_type'])) {
+            $queryParams['package_type'] = $this->apiClient->getSerializer()->toQueryValue($criteria['package_type']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -3781,6 +3787,7 @@ class PartnersApi
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'is_public' => bool,
+     *    'package_type' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -3816,6 +3823,7 @@ class PartnersApi
      *    'sort' => string,
      *    'canvas_status' => string,
      *    'is_public' => bool,
+     *    'package_type' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -3900,6 +3908,10 @@ class PartnersApi
         // query params
         if (isset($criteria['is_public'])) {
             $queryParams['is_public'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_public']);
+        }
+        // query params
+        if (isset($criteria['package_type'])) {
+            $queryParams['package_type'] = $this->apiClient->getSerializer()->toQueryValue($criteria['package_type']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -5455,209 +5467,6 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerNoteResult', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation partnersRefillsCreate
-     *
-     * Create partner refill.
-     *
-     * @param string $partner_id 
-     * @param \Ageras\Api\PartnerRefillResource $partner_refill_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\PartnerRefillResource
-     */
-    public function partnersRefillsCreate($partner_id , $partner_refill_resource)
-    {
-        list($response) = $this->partnersRefillsCreateWithHttpInfo($partner_id, $partner_refill_resource);
-        return $response;
-    }
-
-    /**
-     * Operation partnersRefillsCreateWithHttpInfo
-     *
-     * Create partner refill.
-     *
-     * @param string $partner_id 
-     * @param \Ageras\Api\PartnerRefillResource $partner_refill_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\PartnerRefillResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function partnersRefillsCreateWithHttpInfo($partner_id , $partner_refill_resource)
-    {
-        // parse inputs
-        $resourcePath = "/partners/{partner_id}/refills";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($partner_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "partner_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($partner_id),
-                $resourcePath
-            );
-        }
-        // body params
-        $_tempBody = null;
-        if (isset($partner_refill_resource)) {
-            $_tempBody = $partner_refill_resource;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\PartnerRefillResource',
-                '/partners/{partner_id}/refills'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerRefillResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRefillResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation partnersRefillsIndex
-     *
-     * Get partner refills.
-     *
-     * @param string $partner_id 
-     * @param $criteria = [
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\PartnerRefillResult
-     */
-    public function partnersRefillsIndex($partner_id , $criteria = [])
-    {
-        list($response) = $this->partnersRefillsIndexWithHttpInfo($partner_id, $criteria);
-        return $response;
-    }
-
-    /**
-     * Operation partnersRefillsIndexWithHttpInfo
-     *
-     * Get partner refills.
-     *
-     * @param string $partner_id 
-     * @param $criteria = [
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\PartnerRefillResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function partnersRefillsIndexWithHttpInfo($partner_id , $criteria = [])
-    {
-        // parse inputs
-        $resourcePath = "/partners/{partner_id}/refills";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // query params
-        if (isset($criteria['limit'])) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
-        }
-        // query params
-        if (isset($criteria['page'])) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
-        }
-        // query params
-        if (isset($criteria['query'])) {
-            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
-        }
-        // path params
-        if ($partner_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "partner_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($partner_id),
-                $resourcePath
-            );
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\PartnerRefillResult',
-                '/partners/{partner_id}/refills'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerRefillResult', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRefillResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

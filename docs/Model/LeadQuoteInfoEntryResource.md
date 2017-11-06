@@ -13,12 +13,11 @@ Name | Type | Description | Notes
 **partner_lead_offer_id** | **int** | For the given partner and lead, | [optional] 
 **title** | **string** | Title | [optional] 
 **description** | **string** | Description | [optional] 
-**price** | **string** | Total price for the given quote | [optional] 
+**items** | [**\Ageras\Api\LeadQuoteItemResource[]**](LeadQuoteItemResource.md) | List of quote items. | [optional] 
+**payment** | [**\Ageras\Api\LeadQuotePaymentResource**](LeadQuotePaymentResource.md) |  | [optional] 
 **total_vat_amount** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **total_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **total_amount_incl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
-**prepayment_amount_incl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
-**items** | [**\Ageras\Api\LeadQuoteItemResource[]**](LeadQuoteItemResource.md) | List of quote items. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

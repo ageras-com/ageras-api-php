@@ -109,4 +109,37 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for organisationEmployeesKpiIndex
+     *
+     * List employee KPIs..
+     *
+     */
+    public function testOrganisationEmployeesKpiIndex()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesKpiIndex2
+     *
+     * List employee KPIs..
+     *
+     */
+    public function testOrganisationEmployeesKpiIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesKpiIndex4
+     *
+     * List employee KPIs..
+     *
+     */
+    public function testOrganisationEmployeesKpiIndex4()
+    {
+
+    }
+
 }

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **canceled_at** | **string** |  | [optional] 
 **created_at** | **string** | Package created at time stamp. | [optional] 
 **updated_at** | **string** | Package update at time stamp. | [optional] 
+**package_type** | **string** | Package type | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

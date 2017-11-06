@@ -454,6 +454,7 @@ class LeadsApi
      *    'client_decision_postponed' => bool,
      *    'all_quotes_published_before' => string,
      *    'expires_within' => int,
+     *    'industry' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -486,6 +487,7 @@ class LeadsApi
      *    'client_decision_postponed' => bool,
      *    'all_quotes_published_before' => string,
      *    'expires_within' => int,
+     *    'industry' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -558,6 +560,10 @@ class LeadsApi
         // query params
         if (isset($criteria['expires_within'])) {
             $queryParams['expires_within'] = $this->apiClient->getSerializer()->toQueryValue($criteria['expires_within']);
+        }
+        // query params
+        if (isset($criteria['industry'])) {
+            $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry']);
         }
         // query params
         if (isset($criteria['limit'])) {

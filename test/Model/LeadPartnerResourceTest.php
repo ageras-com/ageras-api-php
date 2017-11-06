@@ -186,4 +186,12 @@ class LeadPartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "partner_user"
+     */
+    public function testPropertyPartnerUser()
+    {
+
+    }
+
 }

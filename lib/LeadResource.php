@@ -59,6 +59,8 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'string',
         'validated_at' => 'string',
         'expires_at' => 'string',
+        'expiration_boosted_at' => 'string',
+        'working_hours_expires_at' => 'string',
         'status' => 'string',
         'progress' => '\Ageras\Api\LeadProgressResource[]',
         'title' => 'string',
@@ -95,6 +97,8 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'validated_at' => 'validated_at',
         'expires_at' => 'expires_at',
+        'expiration_boosted_at' => 'expiration_boosted_at',
+        'working_hours_expires_at' => 'working_hours_expires_at',
         'status' => 'status',
         'progress' => 'progress',
         'title' => 'title',
@@ -127,6 +131,8 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'validated_at' => 'setValidatedAt',
         'expires_at' => 'setExpiresAt',
+        'expiration_boosted_at' => 'setExpirationBoostedAt',
+        'working_hours_expires_at' => 'setWorkingHoursExpiresAt',
         'status' => 'setStatus',
         'progress' => 'setProgress',
         'title' => 'setTitle',
@@ -159,6 +165,8 @@ class LeadResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'validated_at' => 'getValidatedAt',
         'expires_at' => 'getExpiresAt',
+        'expiration_boosted_at' => 'getExpirationBoostedAt',
+        'working_hours_expires_at' => 'getWorkingHoursExpiresAt',
         'status' => 'getStatus',
         'progress' => 'getProgress',
         'title' => 'getTitle',
@@ -234,6 +242,8 @@ class LeadResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['validated_at'] = isset($data['validated_at']) ? $data['validated_at'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
+        $this->container['expiration_boosted_at'] = isset($data['expiration_boosted_at']) ? $data['expiration_boosted_at'] : null;
+        $this->container['working_hours_expires_at'] = isset($data['working_hours_expires_at']) ? $data['working_hours_expires_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
@@ -390,6 +400,48 @@ class LeadResource implements ArrayAccess
     public function setExpiresAt($expires_at)
     {
         $this->container['expires_at'] = $expires_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiration_boosted_at
+     * @return string
+     */
+    public function getExpirationBoostedAt()
+    {
+        return $this->container['expiration_boosted_at'];
+    }
+
+    /**
+     * Sets expiration_boosted_at
+     * @param string $expiration_boosted_at Date where a lead has been extended/boosted.
+     * @return $this
+     */
+    public function setExpirationBoostedAt($expiration_boosted_at)
+    {
+        $this->container['expiration_boosted_at'] = $expiration_boosted_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets working_hours_expires_at
+     * @return string
+     */
+    public function getWorkingHoursExpiresAt()
+    {
+        return $this->container['working_hours_expires_at'];
+    }
+
+    /**
+     * Sets working_hours_expires_at
+     * @param string $working_hours_expires_at Date the Lead Expires taking into account only working hours.
+     * @return $this
+     */
+    public function setWorkingHoursExpiresAt($working_hours_expires_at)
+    {
+        $this->container['working_hours_expires_at'] = $working_hours_expires_at;
 
         return $this;
     }

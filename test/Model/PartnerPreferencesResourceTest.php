@@ -83,6 +83,14 @@ class PartnerPreferencesResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+
+    }
+
+    /**
      * Test attribute "lead_distance"
      */
     public function testPropertyLeadDistance()

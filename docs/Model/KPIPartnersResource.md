@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **satisfactions** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 **success_ratio** | [**\Ageras\Api\KPIPartnersSuccessRatioResource**](KPIPartnersSuccessRatioResource.md) |  | [optional] 
 **unique_spending** | [**\Ageras\Api\KPIPartnersUniqueSpendingResource**](KPIPartnersUniqueSpendingResource.md) |  | [optional] 
+**active_partner_packages** | [**\Ageras\Api\KPINumberResource**](KPINumberResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
