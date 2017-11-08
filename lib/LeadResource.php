@@ -204,9 +204,13 @@ class LeadResource implements ArrayAccess
     }
 
     const STATUS_UNKNOWN = 'unknown';
-    const STATUS_VALIDATED = 'validated';
-    const STATUS_INVALID = 'invalid';
+    const STATUS_COMPLETED = 'completed';
+    const STATUS_DUPLICATE = 'duplicate';
     const STATUS_TEST = 'test';
+    const STATUS_NOT_SERIOUS = 'not_serious';
+    const STATUS_SEND_TO_ADVISOR = 'send_to_advisor';
+    const STATUS_SPAM = 'spam';
+    const STATUS_VALIDATED = 'validated';
     
 
     
@@ -218,9 +222,13 @@ class LeadResource implements ArrayAccess
     {
         return [
             self::STATUS_UNKNOWN,
-            self::STATUS_VALIDATED,
-            self::STATUS_INVALID,
+            self::STATUS_COMPLETED,
+            self::STATUS_DUPLICATE,
             self::STATUS_TEST,
+            self::STATUS_NOT_SERIOUS,
+            self::STATUS_SEND_TO_ADVISOR,
+            self::STATUS_SPAM,
+            self::STATUS_VALIDATED,
         ];
     }
     
@@ -274,9 +282,9 @@ class LeadResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "validated", "invalid", "test"];
+        $allowed_values = ["unknown", "completed", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'validated', 'invalid', 'test'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated'.";
         }
 
         return $invalid_properties;
@@ -291,7 +299,7 @@ class LeadResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "validated", "invalid", "test"];
+        $allowed_values = ["unknown", "completed", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -462,9 +470,9 @@ class LeadResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('unknown', 'validated', 'invalid', 'test');
+        $allowed_values = array('unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'validated', 'invalid', 'test'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated'");
         }
         $this->container['status'] = $status;
 
