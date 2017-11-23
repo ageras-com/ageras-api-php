@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardOwnerResource
+ * LeadProductResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PaymentCardOwnerResource Class Doc Comment
+ * LeadProductResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardOwnerResource implements ArrayAccess
+class LeadProductResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,18 @@ class PaymentCardOwnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentCardOwnerResource';
+    protected static $swaggerModelName = 'LeadProductResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
-        'client' => '\Ageras\Api\CardClientResource',
-        'partner_user' => 'string'
+        'id' => 'int',
+        'lead_id' => 'string',
+        'product' => '\Ageras\Api\ProductResource',
+        'description' => 'string',
+        'type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +71,11 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'client' => 'client',
-        'partner_user' => 'partner_user'
+        'id' => 'id',
+        'lead_id' => 'lead_id',
+        'product' => 'product',
+        'description' => 'description',
+        'type' => 'type'
     ];
 
 
@@ -80,9 +84,11 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'client' => 'setClient',
-        'partner_user' => 'setPartnerUser'
+        'id' => 'setId',
+        'lead_id' => 'setLeadId',
+        'product' => 'setProduct',
+        'description' => 'setDescription',
+        'type' => 'setType'
     ];
 
 
@@ -91,9 +97,11 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'client' => 'getClient',
-        'partner_user' => 'getPartnerUser'
+        'id' => 'getId',
+        'lead_id' => 'getLeadId',
+        'product' => 'getProduct',
+        'description' => 'getDescription',
+        'type' => 'getType'
     ];
 
     public static function attributeMap()
@@ -112,8 +120,10 @@ class PaymentCardOwnerResource implements ArrayAccess
     }
 
     const TYPE_UNKNOWN = 'unknown';
-    const TYPE_PARTNER = 'partner';
-    const TYPE_CLIENT = 'client';
+    const TYPE_UNIT = 'unit';
+    const TYPE_YEARLY = 'yearly';
+    const TYPE_QUARTERLY = 'quarterly';
+    const TYPE_MONTHLY = 'monthly';
     
 
     
@@ -125,8 +135,10 @@ class PaymentCardOwnerResource implements ArrayAccess
     {
         return [
             self::TYPE_UNKNOWN,
-            self::TYPE_PARTNER,
-            self::TYPE_CLIENT,
+            self::TYPE_UNIT,
+            self::TYPE_YEARLY,
+            self::TYPE_QUARTERLY,
+            self::TYPE_MONTHLY,
         ];
     }
     
@@ -143,9 +155,11 @@ class PaymentCardOwnerResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
-        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
     }
 
     /**
@@ -157,9 +171,9 @@ class PaymentCardOwnerResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "partner", "client"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'partner', 'client'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'.";
         }
 
         return $invalid_properties;
@@ -174,13 +188,97 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "partner", "client"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id LeadProduct id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_id
+     * @return string
+     */
+    public function getLeadId()
+    {
+        return $this->container['lead_id'];
+    }
+
+    /**
+     * Sets lead_id
+     * @param string $lead_id Lead id
+     * @return $this
+     */
+    public function setLeadId($lead_id)
+    {
+        $this->container['lead_id'] = $lead_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     * @return \Ageras\Api\ProductResource
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     * @param \Ageras\Api\ProductResource $product
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description Product description specific to this lead
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
 
     /**
      * Gets type
@@ -193,58 +291,16 @@ class PaymentCardOwnerResource implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type
+     * @param string $type Yearly, quarterly, monthly, unit etc
      * @return $this
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'partner', 'client');
+        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'partner', 'client'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'");
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets client
-     * @return \Ageras\Api\CardClientResource
-     */
-    public function getClient()
-    {
-        return $this->container['client'];
-    }
-
-    /**
-     * Sets client
-     * @param \Ageras\Api\CardClientResource $client
-     * @return $this
-     */
-    public function setClient($client)
-    {
-        $this->container['client'] = $client;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner_user
-     * @return string
-     */
-    public function getPartnerUser()
-    {
-        return $this->container['partner_user'];
-    }
-
-    /**
-     * Sets partner_user
-     * @param string $partner_user
-     * @return $this
-     */
-    public function setPartnerUser($partner_user)
-    {
-        $this->container['partner_user'] = $partner_user;
 
         return $this;
     }

@@ -73,6 +73,7 @@ class LeadResource implements ArrayAccess
         'geo' => '\Ageras\Api\LeadGeoResource',
         'attributes' => '\Ageras\Api\LeadAttributeResource[]',
         'industries' => '\Ageras\Api\LeadIndustryPairResource',
+        'products' => '\Ageras\Api\LeadProductResource[]',
         'meeting' => '\Ageras\Api\LeadMeetingResource',
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
         'offers_info' => '\Ageras\Api\LeadOffersInfoResource',
@@ -111,6 +112,7 @@ class LeadResource implements ArrayAccess
         'geo' => 'geo',
         'attributes' => 'attributes',
         'industries' => 'industries',
+        'products' => 'products',
         'meeting' => 'meeting',
         'accepted' => 'accepted',
         'offers_info' => 'offers_info',
@@ -145,6 +147,7 @@ class LeadResource implements ArrayAccess
         'geo' => 'setGeo',
         'attributes' => 'setAttributes',
         'industries' => 'setIndustries',
+        'products' => 'setProducts',
         'meeting' => 'setMeeting',
         'accepted' => 'setAccepted',
         'offers_info' => 'setOffersInfo',
@@ -179,6 +182,7 @@ class LeadResource implements ArrayAccess
         'geo' => 'getGeo',
         'attributes' => 'getAttributes',
         'industries' => 'getIndustries',
+        'products' => 'getProducts',
         'meeting' => 'getMeeting',
         'accepted' => 'getAccepted',
         'offers_info' => 'getOffersInfo',
@@ -264,6 +268,7 @@ class LeadResource implements ArrayAccess
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
         $this->container['industries'] = isset($data['industries']) ? $data['industries'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['meeting'] = isset($data['meeting']) ? $data['meeting'] : null;
         $this->container['accepted'] = isset($data['accepted']) ? $data['accepted'] : null;
         $this->container['offers_info'] = isset($data['offers_info']) ? $data['offers_info'] : null;
@@ -706,6 +711,27 @@ class LeadResource implements ArrayAccess
     public function setIndustries($industries)
     {
         $this->container['industries'] = $industries;
+
+        return $this;
+    }
+
+    /**
+     * Gets products
+     * @return \Ageras\Api\LeadProductResource[]
+     */
+    public function getProducts()
+    {
+        return $this->container['products'];
+    }
+
+    /**
+     * Sets products
+     * @param \Ageras\Api\LeadProductResource[] $products What products are connected to this Lead.
+     * @return $this
+     */
+    public function setProducts($products)
+    {
+        $this->container['products'] = $products;
 
         return $this;
     }

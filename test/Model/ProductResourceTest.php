@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardResourceTest
+ * ProductResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PaymentCardResourceTest Class Doc Comment
+ * ProductResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentCardResource
+// * @description ProductResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
+class ProductResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentCardResource"
+     * Test "ProductResource"
      */
-    public function testPaymentCardResource()
+    public function testProductResource()
     {
 
     }
@@ -91,73 +91,25 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "geo_code"
      */
-    public function testPropertyOwner()
+    public function testPropertyGeoCode()
     {
 
     }
 
     /**
-     * Test attribute "provider"
+     * Test attribute "name"
      */
-    public function testPropertyProvider()
+    public function testPropertyName()
     {
 
     }
 
     /**
-     * Test attribute "card_type"
+     * Test attribute "creator_employee"
      */
-    public function testPropertyCardType()
-    {
-
-    }
-
-    /**
-     * Test attribute "card_mask"
-     */
-    public function testPropertyCardMask()
-    {
-
-    }
-
-    /**
-     * Test attribute "expiration"
-     */
-    public function testPropertyExpiration()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider_token"
-     */
-    public function testPropertyProviderToken()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_being_used"
-     */
-    public function testPropertyIsBeingUsed()
-    {
-
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyCreatorEmployee()
     {
 
     }

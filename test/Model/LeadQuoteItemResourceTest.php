@@ -123,6 +123,22 @@ class LeadQuoteItemResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "lead_product_id"
+     */
+    public function testPropertyLeadProductId()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_product"
+     */
+    public function testPropertyIsProduct()
+    {
+
+    }
+
+    /**
      * Test attribute "quantity"
      */
     public function testPropertyQuantity()

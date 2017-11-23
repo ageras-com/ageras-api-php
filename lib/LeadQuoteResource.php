@@ -181,6 +181,7 @@ class LeadQuoteResource implements ArrayAccess
     const PROGRESS_PENDING_DECISION = 'pending_decision';
     const PROGRESS_WON = 'won';
     const PROGRESS_LOST = 'lost';
+    const PROGRESS_DRAFT = 'draft';
     
 
     
@@ -211,6 +212,7 @@ class LeadQuoteResource implements ArrayAccess
             self::PROGRESS_PENDING_DECISION,
             self::PROGRESS_WON,
             self::PROGRESS_LOST,
+            self::PROGRESS_DRAFT,
         ];
     }
     
@@ -261,9 +263,9 @@ class LeadQuoteResource implements ArrayAccess
             $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'.";
         }
 
-        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost"];
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost", "draft"];
         if (!in_array($this->container['progress'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost'.";
+            $invalid_properties[] = "invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost', 'draft'.";
         }
 
         return $invalid_properties;
@@ -282,7 +284,7 @@ class LeadQuoteResource implements ArrayAccess
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost"];
+        $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost", "draft"];
         if (!in_array($this->container['progress'], $allowed_values)) {
             return false;
         }
@@ -352,9 +354,9 @@ class LeadQuoteResource implements ArrayAccess
      */
     public function setProgress($progress)
     {
-        $allowed_values = array('unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost');
+        $allowed_values = array('unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost', 'draft');
         if (!is_null($progress) && (!in_array($progress, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost'");
+            throw new \InvalidArgumentException("Invalid value for 'progress', must be one of 'unknown', 'quote_provided', 'bid_round_closed', 'pending_decision', 'won', 'lost', 'draft'");
         }
         $this->container['progress'] = $progress;
 

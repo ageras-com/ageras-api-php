@@ -56,8 +56,8 @@ class KpiResource implements ArrayAccess
     protected static $swaggerTypes = [
         'calls_made' => 'int',
         'actions_taken' => 'int',
-        'validation_efficiency_long_term' => 'int',
-        'validation_efficiency_short_term' => 'int'
+        'validation_efficiency_long_term' => 'float',
+        'validation_efficiency_short_term' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -206,7 +206,7 @@ class KpiResource implements ArrayAccess
 
     /**
      * Gets validation_efficiency_long_term
-     * @return int
+     * @return float
      */
     public function getValidationEfficiencyLongTerm()
     {
@@ -215,7 +215,7 @@ class KpiResource implements ArrayAccess
 
     /**
      * Sets validation_efficiency_long_term
-     * @param int $validation_efficiency_long_term Emplyee-level validation ratio for long term, e.g. last 60 days.
+     * @param float $validation_efficiency_long_term Emplyee-level validation ratio for long term, e.g. last 60 days.
      * @return $this
      */
     public function setValidationEfficiencyLongTerm($validation_efficiency_long_term)
@@ -227,7 +227,7 @@ class KpiResource implements ArrayAccess
 
     /**
      * Gets validation_efficiency_short_term
-     * @return int
+     * @return float
      */
     public function getValidationEfficiencyShortTerm()
     {
@@ -236,7 +236,7 @@ class KpiResource implements ArrayAccess
 
     /**
      * Sets validation_efficiency_short_term
-     * @param int $validation_efficiency_short_term Emplyee-level validation ratio for short term, e.g. last 10 days.
+     * @param float $validation_efficiency_short_term Emplyee-level validation ratio for short term, e.g. last 10 days.
      * @return $this
      */
     public function setValidationEfficiencyShortTerm($validation_efficiency_short_term)

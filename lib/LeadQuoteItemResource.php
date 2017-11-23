@@ -59,6 +59,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'type' => 'string',
+        'lead_product_id' => 'int',
+        'is_product' => 'string',
         'quantity' => 'int',
         'amount_vat' => '\Ageras\Api\AmountResource',
         'amount_excl_vat' => '\Ageras\Api\AmountResource',
@@ -83,6 +85,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'type' => 'type',
+        'lead_product_id' => 'lead_product_id',
+        'is_product' => 'is_product',
         'quantity' => 'quantity',
         'amount_vat' => 'amount_vat',
         'amount_excl_vat' => 'amount_excl_vat',
@@ -103,6 +107,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'type' => 'setType',
+        'lead_product_id' => 'setLeadProductId',
+        'is_product' => 'setIsProduct',
         'quantity' => 'setQuantity',
         'amount_vat' => 'setAmountVat',
         'amount_excl_vat' => 'setAmountExclVat',
@@ -123,6 +129,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'type' => 'getType',
+        'lead_product_id' => 'getLeadProductId',
+        'is_product' => 'getIsProduct',
         'quantity' => 'getQuantity',
         'amount_vat' => 'getAmountVat',
         'amount_excl_vat' => 'getAmountExclVat',
@@ -188,6 +196,8 @@ class LeadQuoteItemResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['lead_product_id'] = isset($data['lead_product_id']) ? $data['lead_product_id'] : null;
+        $this->container['is_product'] = isset($data['is_product']) ? $data['is_product'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
         $this->container['amount_vat'] = isset($data['amount_vat']) ? $data['amount_vat'] : null;
         $this->container['amount_excl_vat'] = isset($data['amount_excl_vat']) ? $data['amount_excl_vat'] : null;
@@ -336,6 +346,48 @@ class LeadQuoteItemResource implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'");
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_product_id
+     * @return int
+     */
+    public function getLeadProductId()
+    {
+        return $this->container['lead_product_id'];
+    }
+
+    /**
+     * Sets lead_product_id
+     * @param int $lead_product_id Product id of quote item
+     * @return $this
+     */
+    public function setLeadProductId($lead_product_id)
+    {
+        $this->container['lead_product_id'] = $lead_product_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_product
+     * @return string
+     */
+    public function getIsProduct()
+    {
+        return $this->container['is_product'];
+    }
+
+    /**
+     * Sets is_product
+     * @param string $is_product Determine if quote is standard product
+     * @return $this
+     */
+    public function setIsProduct($is_product)
+    {
+        $this->container['is_product'] = $is_product;
 
         return $this;
     }

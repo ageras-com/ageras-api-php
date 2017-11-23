@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardResourceTest
+ * PaymentCardExpirationResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PaymentCardResourceTest Class Doc Comment
+ * PaymentCardExpirationResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentCardResource
+// * @description PaymentCardExpirationResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
+class PaymentCardExpirationResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,89 +75,25 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentCardResource"
+     * Test "PaymentCardExpirationResource"
      */
-    public function testPaymentCardResource()
+    public function testPaymentCardExpirationResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "month"
      */
-    public function testPropertyId()
+    public function testPropertyMonth()
     {
 
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "year"
      */
-    public function testPropertyOwner()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider"
-     */
-    public function testPropertyProvider()
-    {
-
-    }
-
-    /**
-     * Test attribute "card_type"
-     */
-    public function testPropertyCardType()
-    {
-
-    }
-
-    /**
-     * Test attribute "card_mask"
-     */
-    public function testPropertyCardMask()
-    {
-
-    }
-
-    /**
-     * Test attribute "expiration"
-     */
-    public function testPropertyExpiration()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider_token"
-     */
-    public function testPropertyProviderToken()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_being_used"
-     */
-    public function testPropertyIsBeingUsed()
-    {
-
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyYear()
     {
 
     }

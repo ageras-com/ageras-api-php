@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **geo** | [**\Ageras\Api\LeadGeoResource**](LeadGeoResource.md) |  | [optional] 
 **attributes** | [**\Ageras\Api\LeadAttributeResource[]**](LeadAttributeResource.md) | Attributes for the lead. | [optional] 
 **industries** | [**\Ageras\Api\LeadIndustryPairResource**](LeadIndustryPairResource.md) |  | [optional] 
+**products** | [**\Ageras\Api\LeadProductResource[]**](LeadProductResource.md) | What products are connected to this Lead. | [optional] 
 **meeting** | [**\Ageras\Api\LeadMeetingResource**](LeadMeetingResource.md) |  | [optional] 
 **accepted** | [**\Ageras\Api\LeadAcceptedResource**](LeadAcceptedResource.md) |  | [optional] 
 **offers_info** | [**\Ageras\Api\LeadOffersInfoResource**](LeadOffersInfoResource.md) |  | [optional] 

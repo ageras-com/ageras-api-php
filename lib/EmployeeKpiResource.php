@@ -56,6 +56,7 @@ class EmployeeKpiResource implements ArrayAccess
     protected static $swaggerTypes = [
         'employee_id' => 'int',
         'name' => 'string',
+        'image' => 'string',
         'kpis' => '\Ageras\Api\KpiResource'
     ];
 
@@ -71,6 +72,7 @@ class EmployeeKpiResource implements ArrayAccess
     protected static $attributeMap = [
         'employee_id' => 'employee_id',
         'name' => 'name',
+        'image' => 'image',
         'kpis' => 'kpis'
     ];
 
@@ -82,6 +84,7 @@ class EmployeeKpiResource implements ArrayAccess
     protected static $setters = [
         'employee_id' => 'setEmployeeId',
         'name' => 'setName',
+        'image' => 'setImage',
         'kpis' => 'setKpis'
     ];
 
@@ -93,6 +96,7 @@ class EmployeeKpiResource implements ArrayAccess
     protected static $getters = [
         'employee_id' => 'getEmployeeId',
         'name' => 'getName',
+        'image' => 'getImage',
         'kpis' => 'getKpis'
     ];
 
@@ -129,6 +133,7 @@ class EmployeeKpiResource implements ArrayAccess
     {
         $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['kpis'] = isset($data['kpis']) ? $data['kpis'] : null;
     }
 
@@ -195,6 +200,27 @@ class EmployeeKpiResource implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets image
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->container['image'];
+    }
+
+    /**
+     * Sets image
+     * @param string $image Employee's image URL.
+     * @return $this
+     */
+    public function setImage($image)
+    {
+        $this->container['image'] = $image;
 
         return $this;
     }

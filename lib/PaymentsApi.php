@@ -172,6 +172,182 @@ class PaymentsApi
     }
 
     /**
+     * Operation paymentsCardsDelete
+     *
+     * Delete a card for a given id.
+     *
+     * @param string $card_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function paymentsCardsDelete($card_id )
+    {
+        list($response) = $this->paymentsCardsDeleteWithHttpInfo($card_id);
+        return $response;
+    }
+
+    /**
+     * Operation paymentsCardsDeleteWithHttpInfo
+     *
+     * Delete a card for a given id.
+     *
+     * @param string $card_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentsCardsDeleteWithHttpInfo($card_id )
+    {
+        // parse inputs
+        $resourcePath = "/payments/cards/{card_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($card_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "card_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($card_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/payments/cards/{card_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation paymentsCardsDelete2
+     *
+     * Delete a card for a given id.
+     *
+     * @param string $payment_id 
+     * @param string $card_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function paymentsCardsDelete2($payment_id,  $card_id )
+    {
+        list($response) = $this->paymentsCardsDelete2WithHttpInfo($payment_id, $card_id);
+        return $response;
+    }
+
+    /**
+     * Operation paymentsCardsDelete2WithHttpInfo
+     *
+     * Delete a card for a given id.
+     *
+     * @param string $payment_id 
+     * @param string $card_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentsCardsDelete2WithHttpInfo($payment_id,  $card_id )
+    {
+        // parse inputs
+        $resourcePath = "/payments/{payment_id}/cards/{card_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($payment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "payment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($payment_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($card_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "card_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($card_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/payments/{payment_id}/cards/{card_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation paymentsCardsGet
      *
      * Get a Partner from a given partner_id.
@@ -361,9 +537,10 @@ class PaymentsApi
      * List payment cards.
      *
      * @param $criteria = [
-     *    'partner_id' => int,
-     *    'partner_user_id' => int,
-     *    'client_id' => int,
+     *    'payment_card_id' => string,
+     *    'partner_id' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -383,9 +560,10 @@ class PaymentsApi
      * List payment cards.
      *
      * @param $criteria = [
-     *    'partner_id' => int,
-     *    'partner_user_id' => int,
-     *    'client_id' => int,
+     *    'payment_card_id' => string,
+     *    'partner_id' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -407,6 +585,10 @@ class PaymentsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['payment_card_id'])) {
+            $queryParams['payment_card_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['payment_card_id']);
+        }
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);

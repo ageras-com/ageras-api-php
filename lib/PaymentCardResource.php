@@ -56,8 +56,10 @@ class PaymentCardResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'owner' => '\Ageras\Api\PaymentCardOwnerResource',
-        'card_mask' => 'string',
         'provider' => '\Ageras\Api\PaymentProviderResource',
+        'card_type' => 'string',
+        'card_mask' => 'string',
+        'expiration' => '\Ageras\Api\PaymentCardExpirationResource',
         'provider_token' => 'string',
         'subscription_id' => 'string',
         'is_being_used' => 'bool',
@@ -76,8 +78,10 @@ class PaymentCardResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'owner' => 'owner',
-        'card_mask' => 'card_mask',
         'provider' => 'provider',
+        'card_type' => 'card_type',
+        'card_mask' => 'card_mask',
+        'expiration' => 'expiration',
         'provider_token' => 'provider_token',
         'subscription_id' => 'subscription_id',
         'is_being_used' => 'is_being_used',
@@ -92,8 +96,10 @@ class PaymentCardResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'owner' => 'setOwner',
-        'card_mask' => 'setCardMask',
         'provider' => 'setProvider',
+        'card_type' => 'setCardType',
+        'card_mask' => 'setCardMask',
+        'expiration' => 'setExpiration',
         'provider_token' => 'setProviderToken',
         'subscription_id' => 'setSubscriptionId',
         'is_being_used' => 'setIsBeingUsed',
@@ -108,8 +114,10 @@ class PaymentCardResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'owner' => 'getOwner',
-        'card_mask' => 'getCardMask',
         'provider' => 'getProvider',
+        'card_type' => 'getCardType',
+        'card_mask' => 'getCardMask',
+        'expiration' => 'getExpiration',
         'provider_token' => 'getProviderToken',
         'subscription_id' => 'getSubscriptionId',
         'is_being_used' => 'getIsBeingUsed',
@@ -149,8 +157,10 @@ class PaymentCardResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
+        $this->container['card_type'] = isset($data['card_type']) ? $data['card_type'] : null;
+        $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
+        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['provider_token'] = isset($data['provider_token']) ? $data['provider_token'] : null;
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
@@ -225,6 +235,48 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
+     * Gets provider
+     * @return \Ageras\Api\PaymentProviderResource
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Ageras\Api\PaymentProviderResource $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_type
+     * @return string
+     */
+    public function getCardType()
+    {
+        return $this->container['card_type'];
+    }
+
+    /**
+     * Sets card_type
+     * @param string $card_type Type of card
+     * @return $this
+     */
+    public function setCardType($card_type)
+    {
+        $this->container['card_type'] = $card_type;
+
+        return $this;
+    }
+
+    /**
      * Gets card_mask
      * @return string
      */
@@ -246,22 +298,22 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
-     * Gets provider
-     * @return \Ageras\Api\PaymentProviderResource
+     * Gets expiration
+     * @return \Ageras\Api\PaymentCardExpirationResource
      */
-    public function getProvider()
+    public function getExpiration()
     {
-        return $this->container['provider'];
+        return $this->container['expiration'];
     }
 
     /**
-     * Sets provider
-     * @param \Ageras\Api\PaymentProviderResource $provider
+     * Sets expiration
+     * @param \Ageras\Api\PaymentCardExpirationResource $expiration
      * @return $this
      */
-    public function setProvider($provider)
+    public function setExpiration($expiration)
     {
-        $this->container['provider'] = $provider;
+        $this->container['expiration'] = $expiration;
 
         return $this;
     }
