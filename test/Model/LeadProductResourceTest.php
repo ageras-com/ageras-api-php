@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardResourceTest
+ * LeadProductResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PaymentCardResourceTest Class Doc Comment
+ * LeadProductResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentCardResource
+// * @description LeadProductResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
+class LeadProductResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentCardResource"
+     * Test "LeadProductResource"
      */
-    public function testPaymentCardResource()
+    public function testLeadProductResource()
     {
 
     }
@@ -91,73 +91,33 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "lead_id"
      */
-    public function testPropertyOwner()
+    public function testPropertyLeadId()
     {
 
     }
 
     /**
-     * Test attribute "provider"
+     * Test attribute "product"
      */
-    public function testPropertyProvider()
+    public function testPropertyProduct()
     {
 
     }
 
     /**
-     * Test attribute "card_type"
+     * Test attribute "description"
      */
-    public function testPropertyCardType()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "card_mask"
+     * Test attribute "type"
      */
-    public function testPropertyCardMask()
-    {
-
-    }
-
-    /**
-     * Test attribute "expiration"
-     */
-    public function testPropertyExpiration()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider_token"
-     */
-    public function testPropertyProviderToken()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_being_used"
-     */
-    public function testPropertyIsBeingUsed()
-    {
-
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyType()
     {
 
     }

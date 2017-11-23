@@ -235,6 +235,14 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "products"
+     */
+    public function testPropertyProducts()
+    {
+
+    }
+
+    /**
      * Test attribute "meeting"
      */
     public function testPropertyMeeting()

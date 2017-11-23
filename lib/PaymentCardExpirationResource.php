@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardOwnerResource
+ * PaymentCardExpirationResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PaymentCardOwnerResource Class Doc Comment
+ * PaymentCardExpirationResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardOwnerResource implements ArrayAccess
+class PaymentCardExpirationResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,15 @@ class PaymentCardOwnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentCardOwnerResource';
+    protected static $swaggerModelName = 'PaymentCardExpirationResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
-        'client' => '\Ageras\Api\CardClientResource',
-        'partner_user' => 'string'
+        'month' => 'int',
+        'year' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +68,8 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'client' => 'client',
-        'partner_user' => 'partner_user'
+        'month' => 'month',
+        'year' => 'year'
     ];
 
 
@@ -80,9 +78,8 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'client' => 'setClient',
-        'partner_user' => 'setPartnerUser'
+        'month' => 'setMonth',
+        'year' => 'setYear'
     ];
 
 
@@ -91,9 +88,8 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'client' => 'getClient',
-        'partner_user' => 'getPartnerUser'
+        'month' => 'getMonth',
+        'year' => 'getYear'
     ];
 
     public static function attributeMap()
@@ -111,24 +107,8 @@ class PaymentCardOwnerResource implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_UNKNOWN = 'unknown';
-    const TYPE_PARTNER = 'partner';
-    const TYPE_CLIENT = 'client';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_UNKNOWN,
-            self::TYPE_PARTNER,
-            self::TYPE_CLIENT,
-        ];
-    }
     
 
     /**
@@ -143,9 +123,8 @@ class PaymentCardOwnerResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
-        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['month'] = isset($data['month']) ? $data['month'] : null;
+        $this->container['year'] = isset($data['year']) ? $data['year'] : null;
     }
 
     /**
@@ -156,11 +135,6 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'partner', 'client'.";
-        }
 
         return $invalid_properties;
     }
@@ -174,77 +148,48 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets type
-     * @return string
+     * Gets month
+     * @return int
      */
-    public function getType()
+    public function getMonth()
     {
-        return $this->container['type'];
+        return $this->container['month'];
     }
 
     /**
-     * Sets type
-     * @param string $type
+     * Sets month
+     * @param int $month
      * @return $this
      */
-    public function setType($type)
+    public function setMonth($month)
     {
-        $allowed_values = array('unknown', 'partner', 'client');
-        if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'partner', 'client'");
-        }
-        $this->container['type'] = $type;
+        $this->container['month'] = $month;
 
         return $this;
     }
 
     /**
-     * Gets client
-     * @return \Ageras\Api\CardClientResource
+     * Gets year
+     * @return int
      */
-    public function getClient()
+    public function getYear()
     {
-        return $this->container['client'];
+        return $this->container['year'];
     }
 
     /**
-     * Sets client
-     * @param \Ageras\Api\CardClientResource $client
+     * Sets year
+     * @param int $year
      * @return $this
      */
-    public function setClient($client)
+    public function setYear($year)
     {
-        $this->container['client'] = $client;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner_user
-     * @return string
-     */
-    public function getPartnerUser()
-    {
-        return $this->container['partner_user'];
-    }
-
-    /**
-     * Sets partner_user
-     * @param string $partner_user
-     * @return $this
-     */
-    public function setPartnerUser($partner_user)
-    {
-        $this->container['partner_user'] = $partner_user;
+        $this->container['year'] = $year;
 
         return $this;
     }

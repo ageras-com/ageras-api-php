@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardOwnerResource
+ * ProductResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PaymentCardOwnerResource Class Doc Comment
+ * ProductResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardOwnerResource implements ArrayAccess
+class ProductResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,19 @@ class PaymentCardOwnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentCardOwnerResource';
+    protected static $swaggerModelName = 'ProductResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
-        'client' => '\Ageras\Api\CardClientResource',
-        'partner_user' => 'string'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\ProductResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +72,12 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'client' => 'client',
-        'partner_user' => 'partner_user'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -80,9 +86,12 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'client' => 'setClient',
-        'partner_user' => 'setPartnerUser'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -91,9 +100,12 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'client' => 'getClient',
-        'partner_user' => 'getPartnerUser'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -111,24 +123,8 @@ class PaymentCardOwnerResource implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_UNKNOWN = 'unknown';
-    const TYPE_PARTNER = 'partner';
-    const TYPE_CLIENT = 'client';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_UNKNOWN,
-            self::TYPE_PARTNER,
-            self::TYPE_CLIENT,
-        ];
-    }
     
 
     /**
@@ -143,9 +139,12 @@ class PaymentCardOwnerResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
-        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -156,11 +155,6 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'partner', 'client'.";
-        }
 
         return $invalid_properties;
     }
@@ -174,77 +168,132 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets type
-     * @return string
+     * Gets page
+     * @return int
      */
-    public function getType()
+    public function getPage()
     {
-        return $this->container['type'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets type
-     * @param string $type
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setType($type)
+    public function setPage($page)
     {
-        $allowed_values = array('unknown', 'partner', 'client');
-        if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'partner', 'client'");
-        }
-        $this->container['type'] = $type;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets client
-     * @return \Ageras\Api\CardClientResource
+     * Gets limit
+     * @return int
      */
-    public function getClient()
+    public function getLimit()
     {
-        return $this->container['client'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets client
-     * @param \Ageras\Api\CardClientResource $client
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setClient($client)
+    public function setLimit($limit)
     {
-        $this->container['client'] = $client;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets partner_user
-     * @return string
+     * Gets pages
+     * @return int
      */
-    public function getPartnerUser()
+    public function getPages()
     {
-        return $this->container['partner_user'];
+        return $this->container['pages'];
     }
 
     /**
-     * Sets partner_user
-     * @param string $partner_user
+     * Sets pages
+     * @param int $pages Number of pages.
      * @return $this
      */
-    public function setPartnerUser($partner_user)
+    public function setPages($pages)
     {
-        $this->container['partner_user'] = $partner_user;
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\ProductResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\ProductResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
+     * @return string
+     */
+    public function getDidYouMean()
+    {
+        return $this->container['did_you_mean'];
+    }
+
+    /**
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
+     * @return $this
+     */
+    public function setDidYouMean($did_you_mean)
+    {
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

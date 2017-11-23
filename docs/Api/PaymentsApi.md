@@ -5,6 +5,8 @@ All URIs are relative to *https://api.ageras.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymentsCardsCreate**](PaymentsApi.md#paymentsCardsCreate) | **POST** /payments/cards | Create a payment card.
+[**paymentsCardsDelete**](PaymentsApi.md#paymentsCardsDelete) | **DELETE** /payments/cards/{card_id} | Delete a card for a given id.
+[**paymentsCardsDelete2**](PaymentsApi.md#paymentsCardsDelete2) | **DELETE** /payments/{payment_id}/cards/{card_id} | Delete a card for a given id.
 [**paymentsCardsGet**](PaymentsApi.md#paymentsCardsGet) | **GET** /payments/cards/{payment_card_id} | Get a Partner from a given partner_id.
 [**paymentsCardsGet2**](PaymentsApi.md#paymentsCardsGet2) | **GET** /payments/{payment_id}/cards/{payment_card_id} | Get a Partner from a given partner_id.
 [**paymentsCardsIndex**](PaymentsApi.md#paymentsCardsIndex) | **GET** /payments/cards | List payment cards.
@@ -49,6 +51,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PaymentCardResource**](../Model/PaymentCardResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **paymentsCardsDelete**
+> paymentsCardsDelete($card_id )
+
+Delete a card for a given id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PaymentsApi();
+$card_id = "card_id_example"; // string | 
+
+try {
+    $api_instance->paymentsCardsDelete($card_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentsApi->paymentsCardsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **card_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **paymentsCardsDelete2**
+> paymentsCardsDelete2($payment_id,  $card_id )
+
+Delete a card for a given id.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PaymentsApi();
+$payment_id = "payment_id_example"; // string | 
+$card_id = "card_id_example"; // string | 
+
+try {
+    $api_instance->paymentsCardsDelete2($payment_id,  $card_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentsApi->paymentsCardsDelete2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payment_id** | **string**|  |
+ **card_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -185,9 +289,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PaymentsApi();
 $criteria = [
-        'partner_id' => 56; // int | Partner id for the payment cards to filter by.
-        'partner_user_id' => 56; // int | Partner user id for the payment cards to filter by.
-        'client_id' => 56; // int | Client id for the payment cards to filter by.
+        'payment_card_id' => "payment_card_id_example"; // string | Payment Card Id
+        'partner_id' => "partner_id_example"; // string | Partner id for the payment cards to filter by.
+        'partner_user_id' => "partner_user_id_example"; // string | Partner user id for the payment cards to filter by.
+        'client_id' => "client_id_example"; // string | Client id for the payment cards to filter by.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -206,9 +311,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_id** | **int**| Partner id for the payment cards to filter by. | [optional]
- **partner_user_id** | **int**| Partner user id for the payment cards to filter by. | [optional]
- **client_id** | **int**| Client id for the payment cards to filter by. | [optional]
+ **payment_card_id** | **string**| Payment Card Id | [optional]
+ **partner_id** | **string**| Partner id for the payment cards to filter by. | [optional]
+ **partner_user_id** | **string**| Partner user id for the payment cards to filter by. | [optional]
+ **client_id** | **string**| Client id for the payment cards to filter by. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

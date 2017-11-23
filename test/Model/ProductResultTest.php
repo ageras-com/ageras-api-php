@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardResourceTest
+ * ProductResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PaymentCardResourceTest Class Doc Comment
+ * ProductResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentCardResource
+// * @description ProductResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
+class ProductResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,41 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentCardResource"
+     * Test "ProductResult"
      */
-    public function testPaymentCardResource()
+    public function testProductResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "limit"
      */
-    public function testPropertyOwner()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "provider"
+     * Test attribute "pages"
      */
-    public function testPropertyProvider()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "card_type"
+     * Test attribute "total"
      */
-    public function testPropertyCardType()
-    {
-
-    }
-
-    /**
-     * Test attribute "card_mask"
-     */
-    public function testPropertyCardMask()
-    {
-
-    }
-
-    /**
-     * Test attribute "expiration"
-     */
-    public function testPropertyExpiration()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider_token"
-     */
-    public function testPropertyProviderToken()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_being_used"
-     */
-    public function testPropertyIsBeingUsed()
+    public function testPropertyTotal()
     {
 
     }
@@ -158,6 +118,14 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "data"
      */
     public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

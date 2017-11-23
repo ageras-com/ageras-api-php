@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentCardOwnerResource
+ * ProductResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PaymentCardOwnerResource Class Doc Comment
+ * ProductResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardOwnerResource implements ArrayAccess
+class ProductResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class PaymentCardOwnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentCardOwnerResource';
+    protected static $swaggerModelName = 'ProductResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => 'string',
-        'client' => '\Ageras\Api\CardClientResource',
-        'partner_user' => 'string'
+        'id' => 'int',
+        'geo_code' => 'string',
+        'name' => 'string',
+        'creator_employee' => '\Ageras\Api\EmployeeResource'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +70,10 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'client' => 'client',
-        'partner_user' => 'partner_user'
+        'id' => 'id',
+        'geo_code' => 'geo_code',
+        'name' => 'name',
+        'creator_employee' => 'creator_employee'
     ];
 
 
@@ -80,9 +82,10 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'client' => 'setClient',
-        'partner_user' => 'setPartnerUser'
+        'id' => 'setId',
+        'geo_code' => 'setGeoCode',
+        'name' => 'setName',
+        'creator_employee' => 'setCreatorEmployee'
     ];
 
 
@@ -91,9 +94,10 @@ class PaymentCardOwnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'client' => 'getClient',
-        'partner_user' => 'getPartnerUser'
+        'id' => 'getId',
+        'geo_code' => 'getGeoCode',
+        'name' => 'getName',
+        'creator_employee' => 'getCreatorEmployee'
     ];
 
     public static function attributeMap()
@@ -111,24 +115,8 @@ class PaymentCardOwnerResource implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_UNKNOWN = 'unknown';
-    const TYPE_PARTNER = 'partner';
-    const TYPE_CLIENT = 'client';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_UNKNOWN,
-            self::TYPE_PARTNER,
-            self::TYPE_CLIENT,
-        ];
-    }
     
 
     /**
@@ -143,9 +131,10 @@ class PaymentCardOwnerResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
-        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['creator_employee'] = isset($data['creator_employee']) ? $data['creator_employee'] : null;
     }
 
     /**
@@ -156,11 +145,6 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'partner', 'client'.";
-        }
 
         return $invalid_properties;
     }
@@ -174,77 +158,90 @@ class PaymentCardOwnerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "partner", "client"];
-        if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets type
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getType()
+    public function getId()
     {
-        return $this->container['type'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets type
-     * @param string $type
+     * Sets id
+     * @param int $id The product's id.
      * @return $this
      */
-    public function setType($type)
+    public function setId($id)
     {
-        $allowed_values = array('unknown', 'partner', 'client');
-        if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'partner', 'client'");
-        }
-        $this->container['type'] = $type;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets client
-     * @return \Ageras\Api\CardClientResource
+     * Gets geo_code
+     * @return string
      */
-    public function getClient()
+    public function getGeoCode()
     {
-        return $this->container['client'];
+        return $this->container['geo_code'];
     }
 
     /**
-     * Sets client
-     * @param \Ageras\Api\CardClientResource $client
+     * Sets geo_code
+     * @param string $geo_code Geo code for product
      * @return $this
      */
-    public function setClient($client)
+    public function setGeoCode($geo_code)
     {
-        $this->container['client'] = $client;
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }
 
     /**
-     * Gets partner_user
+     * Gets name
      * @return string
      */
-    public function getPartnerUser()
+    public function getName()
     {
-        return $this->container['partner_user'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets partner_user
-     * @param string $partner_user
+     * Sets name
+     * @param string $name Product's name
      * @return $this
      */
-    public function setPartnerUser($partner_user)
+    public function setName($name)
     {
-        $this->container['partner_user'] = $partner_user;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets creator_employee
+     * @return \Ageras\Api\EmployeeResource
+     */
+    public function getCreatorEmployee()
+    {
+        return $this->container['creator_employee'];
+    }
+
+    /**
+     * Sets creator_employee
+     * @param \Ageras\Api\EmployeeResource $creator_employee
+     * @return $this
+     */
+    public function setCreatorEmployee($creator_employee)
+    {
+        $this->container['creator_employee'] = $creator_employee;
 
         return $this;
     }

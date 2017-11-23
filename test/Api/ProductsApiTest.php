@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentsApiTest
+ * ProductsApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Ageras\Api\ApiException;
 use \Ageras\Api\ObjectSerializer;
 
 /**
- * PaymentsApiTest Class Doc Comment
+ * ProductsApiTest Class Doc Comment
  *
  * @category Class
  * @package  Ageras\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PaymentsApiTest extends \PHPUnit_Framework_TestCase
+class ProductsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,67 +77,23 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for paymentsCardsCreate
+     * Test case for productsCreate
      *
-     * Create a payment card..
+     * Create product..
      *
      */
-    public function testPaymentsCardsCreate()
+    public function testProductsCreate()
     {
 
     }
 
     /**
-     * Test case for paymentsCardsDelete
+     * Test case for productsIndex
      *
-     * Delete a card for a given id..
-     *
-     */
-    public function testPaymentsCardsDelete()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsCardsDelete2
-     *
-     * Delete a card for a given id..
+     * List products..
      *
      */
-    public function testPaymentsCardsDelete2()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsCardsGet
-     *
-     * Get a Partner from a given partner_id..
-     *
-     */
-    public function testPaymentsCardsGet()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsCardsGet2
-     *
-     * Get a Partner from a given partner_id..
-     *
-     */
-    public function testPaymentsCardsGet2()
-    {
-
-    }
-
-    /**
-     * Test case for paymentsCardsIndex
-     *
-     * List payment cards..
-     *
-     */
-    public function testPaymentsCardsIndex()
+    public function testProductsIndex()
     {
 
     }

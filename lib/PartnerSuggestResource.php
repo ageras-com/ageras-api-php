@@ -141,7 +141,6 @@ class PartnerSuggestResource implements ArrayAccess
     const STATE_INACTIVE = 'inactive';
     const STATE_EX_PARTNER = 'ex_partner';
     const STATE_ACTIVE = 'active';
-    const STATE_DISABLED = 'disabled';
     const STATE_CLOSED = 'closed';
     const STATE_BUSINESS_PARTNER = 'business_partner';
     
@@ -160,7 +159,6 @@ class PartnerSuggestResource implements ArrayAccess
             self::STATE_INACTIVE,
             self::STATE_EX_PARTNER,
             self::STATE_ACTIVE,
-            self::STATE_DISABLED,
             self::STATE_CLOSED,
             self::STATE_BUSINESS_PARTNER,
         ];
@@ -199,9 +197,9 @@ class PartnerSuggestResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "disabled", "closed", "business_partner"];
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "closed", "business_partner"];
         if (!in_array($this->container['state'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner'.";
+            $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner'.";
         }
 
         return $invalid_properties;
@@ -216,7 +214,7 @@ class PartnerSuggestResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "disabled", "closed", "business_partner"];
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "closed", "business_partner"];
         if (!in_array($this->container['state'], $allowed_values)) {
             return false;
         }
@@ -303,9 +301,9 @@ class PartnerSuggestResource implements ArrayAccess
      */
     public function setState($state)
     {
-        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner');
+        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner');
         if (!is_null($state) && (!in_array($state, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'disabled', 'closed', 'business_partner'");
+            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner'");
         }
         $this->container['state'] = $state;
 

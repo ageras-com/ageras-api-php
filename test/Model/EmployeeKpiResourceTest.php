@@ -99,6 +99,14 @@ class EmployeeKpiResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "image"
+     */
+    public function testPropertyImage()
+    {
+
+    }
+
+    /**
      * Test attribute "kpis"
      */
     public function testPropertyKpis()
