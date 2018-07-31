@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadCustomerInfoResourceTest
+ * CardPartnerUserResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadCustomerInfoResourceTest Class Doc Comment
+ * CardPartnerUserResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadCustomerInfoResource
+// * @description CardPartnerUserResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadCustomerInfoResourceTest extends \PHPUnit_Framework_TestCase
+class CardPartnerUserResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,17 @@ class LeadCustomerInfoResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadCustomerInfoResource"
+     * Test "CardPartnerUserResource"
      */
-    public function testLeadCustomerInfoResource()
+    public function testCardPartnerUserResource()
     {
 
     }
 
     /**
-     * Test attribute "first_name"
+     * Test attribute "id"
      */
-    public function testPropertyFirstName()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
-    {
-
-    }
-
-    /**
-     * Test attribute "company_name"
-     */
-    public function testPropertyCompanyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
-     * Test attribute "phone"
-     */
-    public function testPropertyPhone()
-    {
-
-    }
-
-    /**
-     * Test attribute "mobile"
-     */
-    public function testPropertyMobile()
-    {
-
-    }
-
-    /**
-     * Test attribute "vat_number"
-     */
-    public function testPropertyVatNumber()
-    {
-
-    }
-
-    /**
-     * Test attribute "customer_type"
-     */
-    public function testPropertyCustomerType()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_prices_including_vat"
-     */
-    public function testPropertyShowPricesIncludingVat()
+    public function testPropertyId()
     {
 
     }
