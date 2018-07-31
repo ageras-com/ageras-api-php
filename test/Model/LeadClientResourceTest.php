@@ -1,6 +1,6 @@
 <?php
 /**
- * MessageAttachmentResourceTest
+ * LeadClientResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MessageAttachmentResourceTest Class Doc Comment
+ * LeadClientResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description MessageAttachmentResource
+// * @description LeadClientResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MessageAttachmentResourceTest extends \PHPUnit_Framework_TestCase
+class LeadClientResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,81 @@ class MessageAttachmentResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MessageAttachmentResource"
+     * Test "LeadClientResource"
      */
-    public function testMessageAttachmentResource()
+    public function testLeadClientResource()
     {
 
     }
 
     /**
-     * Test attribute "conversation_id"
+     * Test attribute "id"
      */
-    public function testPropertyConversationId()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "files"
+     * Test attribute "full_name"
      */
-    public function testPropertyFiles()
+    public function testPropertyFullName()
+    {
+
+    }
+
+    /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+
+    }
+
+    /**
+     * Test attribute "company_name"
+     */
+    public function testPropertyCompanyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+
+    }
+
+    /**
+     * Test attribute "mobile"
+     */
+    public function testPropertyMobile()
+    {
+
+    }
+
+    /**
+     * Test attribute "vat_number"
+     */
+    public function testPropertyVatNumber()
     {
 
     }
