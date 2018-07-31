@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -149,7 +149,7 @@ class RefundResource implements ArrayAccess
 
     const STATUS_REJECTED = 'rejected';
     const STATUS_REFUNDED = 'refunded';
-    const STATUS_NEW = 'new';
+    const STATUS__NEW = 'new';
     
 
     
@@ -162,7 +162,7 @@ class RefundResource implements ArrayAccess
         return [
             self::STATUS_REJECTED,
             self::STATUS_REFUNDED,
-            self::STATUS_NEW,
+            self::STATUS__NEW,
         ];
     }
     

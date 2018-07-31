@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -55,10 +55,14 @@ class LeadClientResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'full_name' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'company_name' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'phone' => 'string',
+        'mobile' => 'string',
+        'vat_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -72,10 +76,14 @@ class LeadClientResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'full_name' => 'full_name',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'company_name' => 'company_name',
-        'email' => 'email'
+        'email' => 'email',
+        'phone' => 'phone',
+        'mobile' => 'mobile',
+        'vat_number' => 'vat_number'
     ];
 
 
@@ -85,10 +93,14 @@ class LeadClientResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'full_name' => 'setFullName',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'company_name' => 'setCompanyName',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'phone' => 'setPhone',
+        'mobile' => 'setMobile',
+        'vat_number' => 'setVatNumber'
     ];
 
 
@@ -98,10 +110,14 @@ class LeadClientResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'full_name' => 'getFullName',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'company_name' => 'getCompanyName',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'phone' => 'getPhone',
+        'mobile' => 'getMobile',
+        'vat_number' => 'getVatNumber'
     ];
 
     public static function attributeMap()
@@ -136,10 +152,14 @@ class LeadClientResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
+        $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
     }
 
     /**
@@ -184,6 +204,27 @@ class LeadClientResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name The full name for the client.
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }
@@ -268,6 +309,69 @@ class LeadClientResource implements ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     * @param string $phone Phone number.
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile
+     * @return string
+     */
+    public function getMobile()
+    {
+        return $this->container['mobile'];
+    }
+
+    /**
+     * Sets mobile
+     * @param string $mobile Mobile number.
+     * @return $this
+     */
+    public function setMobile($mobile)
+    {
+        $this->container['mobile'] = $mobile;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_number
+     * @return string
+     */
+    public function getVatNumber()
+    {
+        return $this->container['vat_number'];
+    }
+
+    /**
+     * Sets vat_number
+     * @param string $vat_number VAT number.
+     * @return $this
+     */
+    public function setVatNumber($vat_number)
+    {
+        $this->container['vat_number'] = $vat_number;
 
         return $this;
     }

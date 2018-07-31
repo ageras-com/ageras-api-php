@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -54,8 +54,11 @@ class PaymentSolutionResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'name' => 'string',
-        'payment_card_id' => 'int'
+        'identifier' => 'string',
+        'geo_code' => 'string',
+        'created_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +71,11 @@ class PaymentSolutionResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'name' => 'name',
-        'payment_card_id' => 'payment_card_id'
+        'identifier' => 'identifier',
+        'geo_code' => 'geo_code',
+        'created_at' => 'created_at'
     ];
 
 
@@ -78,8 +84,11 @@ class PaymentSolutionResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'name' => 'setName',
-        'payment_card_id' => 'setPaymentCardId'
+        'identifier' => 'setIdentifier',
+        'geo_code' => 'setGeoCode',
+        'created_at' => 'setCreatedAt'
     ];
 
 
@@ -88,8 +97,11 @@ class PaymentSolutionResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'name' => 'getName',
-        'payment_card_id' => 'getPaymentCardId'
+        'identifier' => 'getIdentifier',
+        'geo_code' => 'getGeoCode',
+        'created_at' => 'getCreatedAt'
     ];
 
     public static function attributeMap()
@@ -107,8 +119,15 @@ class PaymentSolutionResource implements ArrayAccess
         return self::$getters;
     }
 
-    const NAME_INVOICE = 'invoice';
-    const NAME_CARD = 'card';
+    const IDENTIFIER_INVOICE = 'invoice';
+    const IDENTIFIER_CARD = 'card';
+    const IDENTIFIER_INVOICE_NO_FEE = 'invoice_no_fee';
+    const IDENTIFIER_GIROPAY = 'giropay';
+    const IDENTIFIER_SEPA_DIRECT_DEBIT = 'sepa_direct_debit';
+    const IDENTIFIER_FREE = 'free';
+    const IDENTIFIER_IDEAL = 'ideal';
+    const IDENTIFIER_MANUAL = 'manual';
+    const IDENTIFIER_PUNCHES = 'punches';
     
 
     
@@ -116,11 +135,18 @@ class PaymentSolutionResource implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getNameAllowableValues()
+    public function getIdentifierAllowableValues()
     {
         return [
-            self::NAME_INVOICE,
-            self::NAME_CARD,
+            self::IDENTIFIER_INVOICE,
+            self::IDENTIFIER_CARD,
+            self::IDENTIFIER_INVOICE_NO_FEE,
+            self::IDENTIFIER_GIROPAY,
+            self::IDENTIFIER_SEPA_DIRECT_DEBIT,
+            self::IDENTIFIER_FREE,
+            self::IDENTIFIER_IDEAL,
+            self::IDENTIFIER_MANUAL,
+            self::IDENTIFIER_PUNCHES,
         ];
     }
     
@@ -137,8 +163,11 @@ class PaymentSolutionResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : 'invoice';
-        $this->container['payment_card_id'] = isset($data['payment_card_id']) ? $data['payment_card_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : 'invoice';
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
     }
 
     /**
@@ -150,9 +179,9 @@ class PaymentSolutionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["invoice", "card"];
-        if (!in_array($this->container['name'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'name', must be one of 'invoice', 'card'.";
+        $allowed_values = ["invoice", "card", "invoice_no_fee", "giropay", "sepa_direct_debit", "free", "ideal", "manual", "punches"];
+        if (!in_array($this->container['identifier'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'identifier', must be one of 'invoice', 'card', 'invoice_no_fee', 'giropay', 'sepa_direct_debit', 'free', 'ideal', 'manual', 'punches'.";
         }
 
         return $invalid_properties;
@@ -167,13 +196,34 @@ class PaymentSolutionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["invoice", "card"];
-        if (!in_array($this->container['name'], $allowed_values)) {
+        $allowed_values = ["invoice", "card", "invoice_no_fee", "giropay", "sepa_direct_debit", "free", "ideal", "manual", "punches"];
+        if (!in_array($this->container['identifier'], $allowed_values)) {
             return false;
         }
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id Identifier of payment solution.
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets name
@@ -186,37 +236,79 @@ class PaymentSolutionResource implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Identifier of payment solution.
+     * @param string $name Name of payment solution.
      * @return $this
      */
     public function setName($name)
     {
-        $allowed_values = array('invoice', 'card');
-        if (!is_null($name) && (!in_array($name, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'name', must be one of 'invoice', 'card'");
-        }
         $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets payment_card_id
-     * @return int
+     * Gets identifier
+     * @return string
      */
-    public function getPaymentCardId()
+    public function getIdentifier()
     {
-        return $this->container['payment_card_id'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets payment_card_id
-     * @param int $payment_card_id Id of payment card.
+     * Sets identifier
+     * @param string $identifier Identifier name of payment solution.
      * @return $this
      */
-    public function setPaymentCardId($payment_card_id)
+    public function setIdentifier($identifier)
     {
-        $this->container['payment_card_id'] = $payment_card_id;
+        $allowed_values = array('invoice', 'card', 'invoice_no_fee', 'giropay', 'sepa_direct_debit', 'free', 'ideal', 'manual', 'punches');
+        if (!is_null($identifier) && (!in_array($identifier, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'identifier', must be one of 'invoice', 'card', 'invoice_no_fee', 'giropay', 'sepa_direct_debit', 'free', 'ideal', 'manual', 'punches'");
+        }
+        $this->container['identifier'] = $identifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo_code
+     * @return string
+     */
+    public function getGeoCode()
+    {
+        return $this->container['geo_code'];
+    }
+
+    /**
+     * Sets geo_code
+     * @param string $geo_code Identifier name of payment solution.
+     * @return $this
+     */
+    public function setGeoCode($geo_code)
+    {
+        $this->container['geo_code'] = $geo_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at Date of creation of payment solution.
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }

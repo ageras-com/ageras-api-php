@@ -98,4 +98,70 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for invoicesRefundrequestsActionsCreate
+     *
+     * Perform an action on a refund reuqest..
+     *
+     */
+    public function testInvoicesRefundrequestsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for invoicesRefundrequestsCreate
+     *
+     * Create refund request for a given invoice_id..
+     *
+     */
+    public function testInvoicesRefundrequestsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for invoicesRefundrequestsGet
+     *
+     * Get a refund request by ID..
+     *
+     */
+    public function testInvoicesRefundrequestsGet()
+    {
+
+    }
+
+    /**
+     * Test case for invoicesRefundrequestsGet2
+     *
+     * Get a refund request by ID..
+     *
+     */
+    public function testInvoicesRefundrequestsGet2()
+    {
+
+    }
+
+    /**
+     * Test case for invoicesRefundrequestsIndex
+     *
+     * Get refund requests from a given invoice_id..
+     *
+     */
+    public function testInvoicesRefundrequestsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for invoicesRefundrequestsIndex2
+     *
+     * Get refund requests from a given invoice_id..
+     *
+     */
+    public function testInvoicesRefundrequestsIndex2()
+    {
+
+    }
+
 }

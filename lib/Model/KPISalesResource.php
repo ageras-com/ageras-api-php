@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -57,7 +57,8 @@ class KPISalesResource implements ArrayAccess
         'avg_price' => '\Ageras\Api\Model\KPISalesAvgPriceResource',
         'new_sales' => '\Ageras\Api\Model\KPISalesNewSalesResource',
         'refills' => '\Ageras\Api\Model\KPISalesRefillsResource',
-        'total' => '\Ageras\Api\Model\KPISalesTotalResource'
+        'total' => '\Ageras\Api\Model\KPISalesTotalResource',
+        'total_net_fee' => '\Ageras\Api\Model\KPITotalNetFeeResource'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class KPISalesResource implements ArrayAccess
         'avg_price' => 'avg_price',
         'new_sales' => 'new_sales',
         'refills' => 'refills',
-        'total' => 'total'
+        'total' => 'total',
+        'total_net_fee' => 'total_net_fee'
     ];
 
 
@@ -85,7 +87,8 @@ class KPISalesResource implements ArrayAccess
         'avg_price' => 'setAvgPrice',
         'new_sales' => 'setNewSales',
         'refills' => 'setRefills',
-        'total' => 'setTotal'
+        'total' => 'setTotal',
+        'total_net_fee' => 'setTotalNetFee'
     ];
 
 
@@ -97,7 +100,8 @@ class KPISalesResource implements ArrayAccess
         'avg_price' => 'getAvgPrice',
         'new_sales' => 'getNewSales',
         'refills' => 'getRefills',
-        'total' => 'getTotal'
+        'total' => 'getTotal',
+        'total_net_fee' => 'getTotalNetFee'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class KPISalesResource implements ArrayAccess
         $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
         $this->container['refills'] = isset($data['refills']) ? $data['refills'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['total_net_fee'] = isset($data['total_net_fee']) ? $data['total_net_fee'] : null;
     }
 
     /**
@@ -242,6 +247,27 @@ class KPISalesResource implements ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_net_fee
+     * @return \Ageras\Api\Model\KPITotalNetFeeResource
+     */
+    public function getTotalNetFee()
+    {
+        return $this->container['total_net_fee'];
+    }
+
+    /**
+     * Sets total_net_fee
+     * @param \Ageras\Api\Model\KPITotalNetFeeResource $total_net_fee
+     * @return $this
+     */
+    public function setTotalNetFee($total_net_fee)
+    {
+        $this->container['total_net_fee'] = $total_net_fee;
 
         return $this;
     }

@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -55,6 +55,7 @@ class MessageResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'conversation_id' => 'int',
         'reply_to_message_id' => 'int',
         'text' => 'string',
         'participant' => '\Ageras\Api\Model\ParticipantResource',
@@ -78,6 +79,7 @@ class MessageResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'conversation_id' => 'conversation_id',
         'reply_to_message_id' => 'reply_to_message_id',
         'text' => 'text',
         'participant' => 'participant',
@@ -97,6 +99,7 @@ class MessageResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'conversation_id' => 'setConversationId',
         'reply_to_message_id' => 'setReplyToMessageId',
         'text' => 'setText',
         'participant' => 'setParticipant',
@@ -116,6 +119,7 @@ class MessageResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'conversation_id' => 'getConversationId',
         'reply_to_message_id' => 'getReplyToMessageId',
         'text' => 'getText',
         'participant' => 'getParticipant',
@@ -160,6 +164,7 @@ class MessageResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['conversation_id'] = isset($data['conversation_id']) ? $data['conversation_id'] : null;
         $this->container['reply_to_message_id'] = isset($data['reply_to_message_id']) ? $data['reply_to_message_id'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
         $this->container['participant'] = isset($data['participant']) ? $data['participant'] : null;
@@ -214,6 +219,27 @@ class MessageResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets conversation_id
+     * @return int
+     */
+    public function getConversationId()
+    {
+        return $this->container['conversation_id'];
+    }
+
+    /**
+     * Sets conversation_id
+     * @param int $conversation_id
+     * @return $this
+     */
+    public function setConversationId($conversation_id)
+    {
+        $this->container['conversation_id'] = $conversation_id;
 
         return $this;
     }

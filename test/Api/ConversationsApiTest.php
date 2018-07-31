@@ -77,6 +77,83 @@ class ConversationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for conversationsActionsCreate
+     *
+     * Conversation action.
+     *
+     */
+    public function testConversationsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsCreate
+     *
+     * Create a new attachment.
+     *
+     */
+    public function testConversationsAttachmentsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsCreate2
+     *
+     * Create a new attachment.
+     *
+     */
+    public function testConversationsAttachmentsCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsGet
+     *
+     * Get an attachment.
+     *
+     */
+    public function testConversationsAttachmentsGet()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsGet2
+     *
+     * Get an attachment.
+     *
+     */
+    public function testConversationsAttachmentsGet2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsIndex
+     *
+     * List conversation's attachments.
+     *
+     */
+    public function testConversationsAttachmentsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsAttachmentsIndex2
+     *
+     * List conversation's attachments.
+     *
+     */
+    public function testConversationsAttachmentsIndex2()
+    {
+
+    }
+
+    /**
      * Test case for conversationsCreate
      *
      * Create a new conversation..
@@ -110,6 +187,105 @@ class ConversationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for conversationsMessagesAttachmentsCreate
+     *
+     * Create a new attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsCreate2
+     *
+     * Create a new attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsCreate4
+     *
+     * Create a new attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsCreate4()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsGet
+     *
+     * get a message attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsGet()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsGet2
+     *
+     * get a message attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsGet2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsGet4
+     *
+     * get a message attachment.
+     *
+     */
+    public function testConversationsMessagesAttachmentsGet4()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsIndex
+     *
+     * List message attachments.
+     *
+     */
+    public function testConversationsMessagesAttachmentsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsIndex2
+     *
+     * List message attachments.
+     *
+     */
+    public function testConversationsMessagesAttachmentsIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesAttachmentsIndex4
+     *
+     * List message attachments.
+     *
+     */
+    public function testConversationsMessagesAttachmentsIndex4()
+    {
+
+    }
+
+    /**
      * Test case for conversationsMessagesCreate
      *
      * Create a new message.
@@ -127,6 +303,50 @@ class ConversationsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testConversationsMessagesCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesGet
+     *
+     * Get message by message_id.
+     *
+     */
+    public function testConversationsMessagesGet()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesGet2
+     *
+     * Get message by message_id.
+     *
+     */
+    public function testConversationsMessagesGet2()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesIndex
+     *
+     * Get messages by conversation_id..
+     *
+     */
+    public function testConversationsMessagesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for conversationsMessagesIndex2
+     *
+     * Get messages by conversation_id..
+     *
+     */
+    public function testConversationsMessagesIndex2()
     {
 
     }

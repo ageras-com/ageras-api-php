@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -54,10 +54,10 @@ class AffiliateCampaignResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'industry' => 'string',
+        'key' => 'string',
+        'utm_campaign' => 'string',
         'name' => 'string',
-        'affiliate' => 'string'
+        'affiliate' => '\Ageras\Api\Model\AffiliateResource'
     ];
 
     public static function swaggerTypes()
@@ -70,8 +70,8 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'industry' => 'industry',
+        'key' => 'key',
+        'utm_campaign' => 'utm_campaign',
         'name' => 'name',
         'affiliate' => 'affiliate'
     ];
@@ -82,8 +82,8 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'industry' => 'setIndustry',
+        'key' => 'setKey',
+        'utm_campaign' => 'setUtmCampaign',
         'name' => 'setName',
         'affiliate' => 'setAffiliate'
     ];
@@ -94,8 +94,8 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'industry' => 'getIndustry',
+        'key' => 'getKey',
+        'utm_campaign' => 'getUtmCampaign',
         'name' => 'getName',
         'affiliate' => 'getAffiliate'
     ];
@@ -131,8 +131,8 @@ class AffiliateCampaignResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['utm_campaign'] = isset($data['utm_campaign']) ? $data['utm_campaign'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['affiliate'] = isset($data['affiliate']) ? $data['affiliate'] : null;
     }
@@ -163,43 +163,43 @@ class AffiliateCampaignResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets key
      * @return string
      */
-    public function getId()
+    public function getKey()
     {
-        return $this->container['id'];
+        return $this->container['key'];
     }
 
     /**
-     * Sets id
-     * @param string $id Id for the affiliate campaign.
+     * Sets key
+     * @param string $key Campaign key. @var string
      * @return $this
      */
-    public function setId($id)
+    public function setKey($key)
     {
-        $this->container['id'] = $id;
+        $this->container['key'] = $key;
 
         return $this;
     }
 
     /**
-     * Gets industry
+     * Gets utm_campaign
      * @return string
      */
-    public function getIndustry()
+    public function getUtmCampaign()
     {
-        return $this->container['industry'];
+        return $this->container['utm_campaign'];
     }
 
     /**
-     * Sets industry
-     * @param string $industry The industry that the affiliate is part of.
+     * Sets utm_campaign
+     * @param string $utm_campaign Campaign ID. @var string
      * @return $this
      */
-    public function setIndustry($industry)
+    public function setUtmCampaign($utm_campaign)
     {
-        $this->container['industry'] = $industry;
+        $this->container['utm_campaign'] = $utm_campaign;
 
         return $this;
     }
@@ -215,7 +215,7 @@ class AffiliateCampaignResource implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name The name of the affiliate campaign.
+     * @param string $name Campaign name @var string
      * @return $this
      */
     public function setName($name)
@@ -227,7 +227,7 @@ class AffiliateCampaignResource implements ArrayAccess
 
     /**
      * Gets affiliate
-     * @return string
+     * @return \Ageras\Api\Model\AffiliateResource
      */
     public function getAffiliate()
     {
@@ -236,7 +236,7 @@ class AffiliateCampaignResource implements ArrayAccess
 
     /**
      * Sets affiliate
-     * @param string $affiliate The afflilate.
+     * @param \Ageras\Api\Model\AffiliateResource $affiliate
      * @return $this
      */
     public function setAffiliate($affiliate)

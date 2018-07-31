@@ -154,4 +154,12 @@ class PartnerSubscriptionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "package_type"
+     */
+    public function testPropertyPackageType()
+    {
+
+    }
+
 }

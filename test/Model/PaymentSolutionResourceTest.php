@@ -83,6 +83,14 @@ class PaymentSolutionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -91,9 +99,25 @@ class PaymentSolutionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "payment_card_id"
+     * Test attribute "identifier"
      */
-    public function testPropertyPaymentCardId()
+    public function testPropertyIdentifier()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo_code"
+     */
+    public function testPropertyGeoCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
     {
 
     }

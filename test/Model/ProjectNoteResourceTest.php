@@ -123,9 +123,9 @@ class ProjectNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "project"
+     * Test attribute "project_id"
      */
-    public function testPropertyProject()
+    public function testPropertyProjectId()
     {
 
     }

@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/\Ageras\Api\Model\NotificationActionResource.md)|  |
+ **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/NotificationActionResource.md)|  |
 
 ### Return type
 
@@ -97,7 +97,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **notification_id** | **string**|  |
- **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/\Ageras\Api\Model\NotificationActionResource.md)|  |
+ **notification_action_resource** | [**\Ageras\Api\Model\NotificationActionResource**](../Model/NotificationActionResource.md)|  |
 
 ### Return type
 
@@ -185,8 +185,12 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\NotificationsApi();
 $criteria = [
-        'sort' => "relevance"; // string | 
-        'created_after' => "created_after_example"; // string | 
+        'geo_code' => "geo_code_example"; // string | Geo Code
+        'sort' => "relevance"; // string | Sort notifications
+        'created_after' => "created_after_example"; // string | Only show notifications created after a given date
+        'partner_user_id' => "partner_user_id_example"; // string | Id's of the partner users to filter
+        'client_id' => "client_id_example"; // string | Id's of the clients to filter
+        'employee_id' => "employee_id_example"; // string | Id's of the employees to filter
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -205,8 +209,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sort** | **string**|  | [optional] [default to relevance]
- **created_after** | **string**|  | [optional]
+ **geo_code** | **string**| Geo Code | [optional]
+ **sort** | **string**| Sort notifications | [optional] [default to relevance]
+ **created_after** | **string**| Only show notifications created after a given date | [optional]
+ **partner_user_id** | **string**| Id&#39;s of the partner users to filter | [optional]
+ **client_id** | **string**| Id&#39;s of the clients to filter | [optional]
+ **employee_id** | **string**| Id&#39;s of the employees to filter | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

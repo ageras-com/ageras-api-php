@@ -95,7 +95,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **string**|  |
- **client_resource** | [**\Ageras\Api\Model\ClientResource**](../Model/\Ageras\Api\Model\ClientResource.md)|  |
+ **client_resource** | [**\Ageras\Api\Model\ClientResource**](../Model/ClientResource.md)|  |
 
 ### Return type
 

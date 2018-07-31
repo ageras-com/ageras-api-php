@@ -91,6 +91,14 @@ class LeadClientResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -118,6 +126,30 @@ class LeadClientResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "email"
      */
     public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+
+    }
+
+    /**
+     * Test attribute "mobile"
+     */
+    public function testPropertyMobile()
+    {
+
+    }
+
+    /**
+     * Test attribute "vat_number"
+     */
+    public function testPropertyVatNumber()
     {
 
     }

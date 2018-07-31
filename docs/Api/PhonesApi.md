@@ -43,7 +43,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone_id** | **string**|  |
- **phone_action_resource** | [**\Ageras\Api\Model\PhoneActionResource**](../Model/\Ageras\Api\Model\PhoneActionResource.md)|  |
+ **phone_action_resource** | [**\Ageras\Api\Model\PhoneActionResource**](../Model/PhoneActionResource.md)|  |
 
 ### Return type
 

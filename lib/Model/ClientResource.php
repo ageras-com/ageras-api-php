@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -55,6 +55,7 @@ class ClientResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'access_token' => 'string',
         'assigned_employee' => '\Ageras\Api\Model\EmployeeResource',
         'phone' => 'string',
         'email' => 'string',
@@ -75,6 +76,7 @@ class ClientResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'access_token' => 'access_token',
         'assigned_employee' => 'assigned_employee',
         'phone' => 'phone',
         'email' => 'email',
@@ -91,6 +93,7 @@ class ClientResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'access_token' => 'setAccessToken',
         'assigned_employee' => 'setAssignedEmployee',
         'phone' => 'setPhone',
         'email' => 'setEmail',
@@ -107,6 +110,7 @@ class ClientResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'access_token' => 'getAccessToken',
         'assigned_employee' => 'getAssignedEmployee',
         'phone' => 'getPhone',
         'email' => 'getEmail',
@@ -148,6 +152,7 @@ class ClientResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['access_token'] = isset($data['access_token']) ? $data['access_token'] : null;
         $this->container['assigned_employee'] = isset($data['assigned_employee']) ? $data['assigned_employee'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -199,6 +204,27 @@ class ClientResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets access_token
+     * @return string
+     */
+    public function getAccessToken()
+    {
+        return $this->container['access_token'];
+    }
+
+    /**
+     * Sets access_token
+     * @param string $access_token Client token
+     * @return $this
+     */
+    public function setAccessToken($access_token)
+    {
+        $this->container['access_token'] = $access_token;
 
         return $this;
     }

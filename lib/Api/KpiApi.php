@@ -93,6 +93,7 @@ class KpiApi
      * List the different KPI's
      *
      * @param $criteria = [
+     *    'kpi_id' => string,
      *    'geo_code' => string,
      *    'industry' => string,
      *    'industry_id' => string,
@@ -117,6 +118,7 @@ class KpiApi
      * List the different KPI's
      *
      * @param $criteria = [
+     *    'kpi_id' => string,
      *    'geo_code' => string,
      *    'industry' => string,
      *    'industry_id' => string,
@@ -143,6 +145,10 @@ class KpiApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['kpi_id'])) {
+            $queryParams['kpi_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['kpi_id']);
+        }
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);

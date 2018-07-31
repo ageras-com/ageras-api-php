@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **sort** | **string** | Sort the employee. | [optional] 
 **name** | **string** | Employees name. | [optional] 
 **title** | **string** | Title for the employee. | [optional] 
+**external_job_title** | **string** | Job title shown to clients and partners. | [optional] 
 **geo_code** | **string** | Location for the employee. | [optional] 
 **image** | **string** | Photo of the employee. | [optional] 
 **email** | **string** | Email for the employee. | [optional] 

@@ -115,9 +115,41 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "expires_at"
+     */
+    public function testPropertyExpiresAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "expiration_boosted_at"
+     */
+    public function testPropertyExpirationBoostedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "working_hours_expires_at"
+     */
+    public function testPropertyWorkingHoursExpiresAt()
+    {
+
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
+    {
+
+    }
+
+    /**
+     * Test attribute "reservation_status"
+     */
+    public function testPropertyReservationStatus()
     {
 
     }
@@ -187,6 +219,22 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "service_fee_subsequent_years_amount_excl_vat"
+     */
+    public function testPropertyServiceFeeSubsequentYearsAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "minimum_quote_amount_excl_vat"
+     */
+    public function testPropertyMinimumQuoteAmountExclVat()
+    {
+
+    }
+
+    /**
      * Test attribute "geo"
      */
     public function testPropertyGeo()
@@ -206,6 +254,14 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "industries"
      */
     public function testPropertyIndustries()
+    {
+
+    }
+
+    /**
+     * Test attribute "products"
+     */
+    public function testPropertyProducts()
     {
 
     }
@@ -254,6 +310,62 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "feedback"
      */
     public function testPropertyFeedback()
+    {
+
+    }
+
+    /**
+     * Test attribute "validator"
+     */
+    public function testPropertyValidator()
+    {
+
+    }
+
+    /**
+     * Test attribute "custom_variables"
+     */
+    public function testPropertyCustomVariables()
+    {
+
+    }
+
+    /**
+     * Test attribute "category"
+     */
+    public function testPropertyCategory()
+    {
+
+    }
+
+    /**
+     * Test attribute "revenue_amount_excl_vat"
+     */
+    public function testPropertyRevenueAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_service_fee"
+     */
+    public function testPropertyIsServiceFee()
+    {
+
+    }
+
+    /**
+     * Test attribute "wants_local_partner"
+     */
+    public function testPropertyWantsLocalPartner()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_digital"
+     */
+    public function testPropertyIsDigital()
     {
 
     }

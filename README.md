@@ -105,19 +105,46 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**authPermissionsIndex**](docs/Api/AuthApi.md#authpermissionsindex) | **GET** /auth/permissions | List the Permissions for the given authenticated user.
 *AuthApi* | [**authUpdate**](docs/Api/AuthApi.md#authupdate) | **PUT** /auth/token | Renew authentication session.
 *CertificationsApi* | [**certificationsIndex**](docs/Api/CertificationsApi.md#certificationsindex) | **GET** /certifications | Get all available certifications.
+*ChargesApi* | [**chargesIndex**](docs/Api/ChargesApi.md#chargesindex) | **GET** /charges | List charges
+*CheckoutsApi* | [**checkoutsCreate**](docs/Api/CheckoutsApi.md#checkoutscreate) | **POST** /checkouts | Create a new Checkout
+*CheckoutsApi* | [**checkoutsGet**](docs/Api/CheckoutsApi.md#checkoutsget) | **GET** /checkouts/{checkout_id} | Get a checkout resource
+*CheckoutsApi* | [**checkoutsIndex**](docs/Api/CheckoutsApi.md#checkoutsindex) | **GET** /checkouts | List Checkout resources
+*CheckoutsApi* | [**checkoutsUpdate**](docs/Api/CheckoutsApi.md#checkoutsupdate) | **PUT** /checkouts/{checkout_id} | Update a given checkout resource
 *ClientsApi* | [**clientsGet**](docs/Api/ClientsApi.md#clientsget) | **GET** /clients/{client_id} | Return a Client
 *ClientsApi* | [**clientsUpdate**](docs/Api/ClientsApi.md#clientsupdate) | **PUT** /clients/{client_id} | Update a client
+*ContactarchivesApi* | [**contactarchivesActionsCreate**](docs/Api/ContactarchivesApi.md#contactarchivesactionscreate) | **POST** /contactarchives/{contact_archive_id}/actions | Contact archive actions
+*ContactarchivesApi* | [**contactarchivesIndex**](docs/Api/ContactarchivesApi.md#contactarchivesindex) | **GET** /contactarchives | Search for contact&#39;s correspondence (e-mails and text messages) by a given set of criteria.
 *ContentsApi* | [**contentsPagesAggregationsIndex**](docs/Api/ContentsApi.md#contentspagesaggregationsindex) | **GET** /contents/pages/aggregations | Aggreate the Pages by the letters
 *ContentsApi* | [**contentsPagesAggregationsIndex2**](docs/Api/ContentsApi.md#contentspagesaggregationsindex2) | **GET** /contents/{content_id}/pages/aggregations | Aggreate the Pages by the letters
 *ContentsApi* | [**contentsPagesGet**](docs/Api/ContentsApi.md#contentspagesget) | **GET** /contents/pages/{content_page_id} | Return a Page from a given id
 *ContentsApi* | [**contentsPagesGet2**](docs/Api/ContentsApi.md#contentspagesget2) | **GET** /contents/{content_id}/pages/{content_page_id} | Return a Page from a given id
 *ContentsApi* | [**contentsPagesIndex**](docs/Api/ContentsApi.md#contentspagesindex) | **GET** /contents/pages | List Pages
 *ContentsApi* | [**contentsPagesTypesIndex**](docs/Api/ContentsApi.md#contentspagestypesindex) | **GET** /contents/pages/types | List content page types.
+*ConversationsApi* | [**conversationsActionsCreate**](docs/Api/ConversationsApi.md#conversationsactionscreate) | **POST** /conversations/{conversation_id}/actions | Conversation action
+*ConversationsApi* | [**conversationsAttachmentsCreate**](docs/Api/ConversationsApi.md#conversationsattachmentscreate) | **POST** /conversations/attachments | Create a new attachment
+*ConversationsApi* | [**conversationsAttachmentsCreate2**](docs/Api/ConversationsApi.md#conversationsattachmentscreate2) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
+*ConversationsApi* | [**conversationsAttachmentsGet**](docs/Api/ConversationsApi.md#conversationsattachmentsget) | **GET** /conversations/attachments/{attachment_id} | Get an attachment
+*ConversationsApi* | [**conversationsAttachmentsGet2**](docs/Api/ConversationsApi.md#conversationsattachmentsget2) | **GET** /conversations/{conversation_id}/attachments/{attachment_id} | Get an attachment
+*ConversationsApi* | [**conversationsAttachmentsIndex**](docs/Api/ConversationsApi.md#conversationsattachmentsindex) | **GET** /conversations/attachments | List conversation&#39;s attachments
+*ConversationsApi* | [**conversationsAttachmentsIndex2**](docs/Api/ConversationsApi.md#conversationsattachmentsindex2) | **GET** /conversations/{conversation_id}/attachments | List conversation&#39;s attachments
 *ConversationsApi* | [**conversationsCreate**](docs/Api/ConversationsApi.md#conversationscreate) | **POST** /conversations | Create a new conversation.
 *ConversationsApi* | [**conversationsGet**](docs/Api/ConversationsApi.md#conversationsget) | **GET** /conversations/{conversation_id} | Get a conversations by conversation_id.
 *ConversationsApi* | [**conversationsIndex**](docs/Api/ConversationsApi.md#conversationsindex) | **GET** /conversations | List conversations.
+*ConversationsApi* | [**conversationsMessagesAttachmentsCreate**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentscreate) | **POST** /conversations/conversations/messages/attachments | Create a new attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsCreate2**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentscreate2) | **POST** /conversations/messages/attachments | Create a new attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsCreate4**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentscreate4) | **POST** /conversations/{conversation_id}/messages/attachments | Create a new attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsGet**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsget) | **GET** /conversations/conversations/messages/attachments/{attachment_id} | get a message attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsGet2**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsget2) | **GET** /conversations/messages/attachments/{attachment_id} | get a message attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsGet4**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsget4) | **GET** /conversations/{conversation_id}/messages/attachments/{attachment_id} | get a message attachment
+*ConversationsApi* | [**conversationsMessagesAttachmentsIndex**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsindex) | **GET** /conversations/conversations/messages/attachments | List message attachments
+*ConversationsApi* | [**conversationsMessagesAttachmentsIndex2**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsindex2) | **GET** /conversations/messages/attachments | List message attachments
+*ConversationsApi* | [**conversationsMessagesAttachmentsIndex4**](docs/Api/ConversationsApi.md#conversationsmessagesattachmentsindex4) | **GET** /conversations/{conversation_id}/messages/attachments | List message attachments
 *ConversationsApi* | [**conversationsMessagesCreate**](docs/Api/ConversationsApi.md#conversationsmessagescreate) | **POST** /conversations/messages | Create a new message
 *ConversationsApi* | [**conversationsMessagesCreate2**](docs/Api/ConversationsApi.md#conversationsmessagescreate2) | **POST** /conversations/{conversation_id}/messages | Create a new message
+*ConversationsApi* | [**conversationsMessagesGet**](docs/Api/ConversationsApi.md#conversationsmessagesget) | **GET** /conversations/messages/{message_id} | Get message by message_id
+*ConversationsApi* | [**conversationsMessagesGet2**](docs/Api/ConversationsApi.md#conversationsmessagesget2) | **GET** /conversations/{conversation_id}/messages/{message_id} | Get message by message_id
+*ConversationsApi* | [**conversationsMessagesIndex**](docs/Api/ConversationsApi.md#conversationsmessagesindex) | **GET** /conversations/messages | Get messages by conversation_id.
+*ConversationsApi* | [**conversationsMessagesIndex2**](docs/Api/ConversationsApi.md#conversationsmessagesindex2) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
 *CvApi* | [**cvAwardCreate**](docs/Api/CvApi.md#cvawardcreate) | **POST** /cv/{partner_user_id}/award | Create partner user award.
 *CvApi* | [**cvAwardDelete**](docs/Api/CvApi.md#cvawarddelete) | **DELETE** /cv/{partner_user_id}/award/{award_id} | Delete partner user award.
 *CvApi* | [**cvAwardUpdate**](docs/Api/CvApi.md#cvawardupdate) | **PUT** /cv/{partner_user_id}/award | Update partner user award.
@@ -146,14 +173,26 @@ Class | Method | HTTP request | Description
 *CvApi* | [**cvSocialDelete**](docs/Api/CvApi.md#cvsocialdelete) | **DELETE** /cv/cv/{partner_user_id}/social | Delete partner user social media.
 *CvApi* | [**cvSocialDelete2**](docs/Api/CvApi.md#cvsocialdelete2) | **DELETE** /cv/{partner_user_id}/social | Delete partner user social media.
 *CvApi* | [**cvSocialUpdate**](docs/Api/CvApi.md#cvsocialupdate) | **PUT** /cv/{partner_user_id}/social | Update partner user social media.
+*DatafieldsApi* | [**datafieldsIndex**](docs/Api/DatafieldsApi.md#datafieldsindex) | **GET** /datafields | List DataFields.
 *IndustriesApi* | [**industriesIndex**](docs/Api/IndustriesApi.md#industriesindex) | **GET** /industries | List Industries and filter by parent industry.
 *InvoicesApi* | [**invoicesGet**](docs/Api/InvoicesApi.md#invoicesget) | **GET** /invoices/{invoice_id} | Get an Invoice from a given invoice_id.
 *InvoicesApi* | [**invoicesIndex**](docs/Api/InvoicesApi.md#invoicesindex) | **GET** /invoices | Search and find invoices by specific criterias.
+*InvoicesApi* | [**invoicesRefundrequestsActionsCreate**](docs/Api/InvoicesApi.md#invoicesrefundrequestsactionscreate) | **POST** /invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}/actions | Perform an action on a refund reuqest.
+*InvoicesApi* | [**invoicesRefundrequestsCreate**](docs/Api/InvoicesApi.md#invoicesrefundrequestscreate) | **POST** /invoices/{invoice_id}/refundrequests | Create refund request for a given invoice_id.
+*InvoicesApi* | [**invoicesRefundrequestsGet**](docs/Api/InvoicesApi.md#invoicesrefundrequestsget) | **GET** /invoices/refundrequests/{voucher_refund_request_id} | Get a refund request by ID.
+*InvoicesApi* | [**invoicesRefundrequestsGet2**](docs/Api/InvoicesApi.md#invoicesrefundrequestsget2) | **GET** /invoices/{invoice_id}/refundrequests/{voucher_refund_request_id} | Get a refund request by ID.
+*InvoicesApi* | [**invoicesRefundrequestsIndex**](docs/Api/InvoicesApi.md#invoicesrefundrequestsindex) | **GET** /invoices/refundrequests | Get refund requests from a given invoice_id.
+*InvoicesApi* | [**invoicesRefundrequestsIndex2**](docs/Api/InvoicesApi.md#invoicesrefundrequestsindex2) | **GET** /invoices/{voucher_id}/refundrequests | Get refund requests from a given invoice_id.
 *KpiApi* | [**kpiIndex**](docs/Api/KpiApi.md#kpiindex) | **GET** /kpi | List the different KPI&#39;s
 *LanguagesApi* | [**languagesIndex**](docs/Api/LanguagesApi.md#languagesindex) | **GET** /languages | List Languages available.
 *LeadsApi* | [**leadsActionsCreate**](docs/Api/LeadsApi.md#leadsactionscreate) | **POST** /leads/{lead_id}/actions | Coupon action
+*LeadsApi* | [**leadsAggregationsIndex**](docs/Api/LeadsApi.md#leadsaggregationsindex) | **GET** /leads/aggregations | List facets and aggregations for the Lead Search.
+*LeadsApi* | [**leadsCategoriesIndex**](docs/Api/LeadsApi.md#leadscategoriesindex) | **GET** /leads/categories | Index lead categories .
 *LeadsApi* | [**leadsCreate**](docs/Api/LeadsApi.md#leadscreate) | **POST** /leads | Create a new Lead.
 *LeadsApi* | [**leadsDelete**](docs/Api/LeadsApi.md#leadsdelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
+*LeadsApi* | [**leadsExcludedpartnersCreate**](docs/Api/LeadsApi.md#leadsexcludedpartnerscreate) | **POST** /leads/{lead_id}/excludedpartners | Add partner to lead&#39;s excluded partner list
+*LeadsApi* | [**leadsExcludedpartnersDelete**](docs/Api/LeadsApi.md#leadsexcludedpartnersdelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | Remove partner from the lead&#39;s excluded partner list
+*LeadsApi* | [**leadsExcludedpartnersIndex**](docs/Api/LeadsApi.md#leadsexcludedpartnersindex) | **GET** /leads/{lead_id}/excludedpartners | Show all excluded partners for a specific lead.
 *LeadsApi* | [**leadsGet**](docs/Api/LeadsApi.md#leadsget) | **GET** /leads/{lead_id} | Return a Lead from a Lead Id.
 *LeadsApi* | [**leadsIndex**](docs/Api/LeadsApi.md#leadsindex) | **GET** /leads | Search for Lead&#39;s by a given set of criteria.
 *LeadsApi* | [**leadsNotesCreate**](docs/Api/LeadsApi.md#leadsnotescreate) | **POST** /leads/{lead_id}/notes | Create lead note
@@ -162,6 +201,21 @@ Class | Method | HTTP request | Description
 *LeadsApi* | [**leadsOffersGet2**](docs/Api/LeadsApi.md#leadsoffersget2) | **GET** /leads/{lead_id}/offers/{lead_offer_id} | Get an offer by id.
 *LeadsApi* | [**leadsOffersIndex**](docs/Api/LeadsApi.md#leadsoffersindex) | **GET** /leads/offers | List the offers connected to a given Lead.
 *LeadsApi* | [**leadsOffersIndex2**](docs/Api/LeadsApi.md#leadsoffersindex2) | **GET** /leads/{lead_id}/offers | List the offers connected to a given Lead.
+*LeadsApi* | [**leadsQuotesActionsCreate**](docs/Api/LeadsApi.md#leadsquotesactionscreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/actions | Publish a given quote, accept it and other actions.
+*LeadsApi* | [**leadsQuotesCreate**](docs/Api/LeadsApi.md#leadsquotescreate) | **POST** /leads/{lead_id}/quotes | Create a new quote for a given Lead.
+*LeadsApi* | [**leadsQuotesDelete**](docs/Api/LeadsApi.md#leadsquotesdelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | Delete a quote for a given Lead.
+*LeadsApi* | [**leadsQuotesGet**](docs/Api/LeadsApi.md#leadsquotesget) | **GET** /leads/quotes/{lead_quote_id} | Get an quote by id.
+*LeadsApi* | [**leadsQuotesGet2**](docs/Api/LeadsApi.md#leadsquotesget2) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | Get an quote by id.
+*LeadsApi* | [**leadsQuotesIndex**](docs/Api/LeadsApi.md#leadsquotesindex) | **GET** /leads/quotes | List the quotes connected to a given Lead.
+*LeadsApi* | [**leadsQuotesIndex2**](docs/Api/LeadsApi.md#leadsquotesindex2) | **GET** /leads/{lead_id}/quotes | List the quotes connected to a given Lead.
+*LeadsApi* | [**leadsQuotesItemsCreate**](docs/Api/LeadsApi.md#leadsquotesitemscreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/items | Create a new quote item for a given Quote.
+*LeadsApi* | [**leadsQuotesItemsDelete**](docs/Api/LeadsApi.md#leadsquotesitemsdelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Delete a quote item.
+*LeadsApi* | [**leadsQuotesItemsGet**](docs/Api/LeadsApi.md#leadsquotesitemsget) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Get a quote item by id.
+*LeadsApi* | [**leadsQuotesItemsIndex**](docs/Api/LeadsApi.md#leadsquotesitemsindex) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items | List the quote items connected to a given Quote.
+*LeadsApi* | [**leadsQuotesItemsUpdate**](docs/Api/LeadsApi.md#leadsquotesitemsupdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Update a quote item.
+*LeadsApi* | [**leadsQuotesProgressstepsIndex**](docs/Api/LeadsApi.md#leadsquotesprogressstepsindex) | **GET** /leads/quotes/progresssteps | Get quote progress statuses.
+*LeadsApi* | [**leadsQuotesUpdate**](docs/Api/LeadsApi.md#leadsquotesupdate) | **PUT** /leads/quotes/{lead_quote_id} | Update a quote.
+*LeadsApi* | [**leadsQuotesUpdate2**](docs/Api/LeadsApi.md#leadsquotesupdate2) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
 *LeadsApi* | [**leadsTypesIndex**](docs/Api/LeadsApi.md#leadstypesindex) | **GET** /leads/types | Index lead types.
 *LeadsApi* | [**leadsUpdate**](docs/Api/LeadsApi.md#leadsupdate) | **PUT** /leads/{lead_id} | Update Properties on a given Lead.
 *LocationsApi* | [**locationsGet**](docs/Api/LocationsApi.md#locationsget) | **GET** /locations/{location_id} | Retrieve a location from a given location_id.
@@ -174,18 +228,26 @@ Class | Method | HTTP request | Description
 *OffersApi* | [**offersActionsCreate**](docs/Api/OffersApi.md#offersactionscreate) | **POST** /offers/{offer_id}/actions | Perform an action on an offer.
 *OffersApi* | [**offersGet**](docs/Api/OffersApi.md#offersget) | **GET** /offers/{offer_id} | Get an offer by id.
 *OffersApi* | [**offersIndex**](docs/Api/OffersApi.md#offersindex) | **GET** /offers | Get all partner offer.
+*OrdersApi* | [**ordersActionsCreate**](docs/Api/OrdersApi.md#ordersactionscreate) | **POST** /orders/{order_id}/actions | Invoke actions on orders
+*OrdersApi* | [**ordersIndex**](docs/Api/OrdersApi.md#ordersindex) | **GET** /orders | Invoke actions on orders
 *OrganisationApi* | [**organisationEmployeesGet**](docs/Api/OrganisationApi.md#organisationemployeesget) | **GET** /organisation/employees/{employee_id} | Get an employee by a given employee id.
 *OrganisationApi* | [**organisationEmployeesGet2**](docs/Api/OrganisationApi.md#organisationemployeesget2) | **GET** /organisation/{organisation_id}/employees/{employee_id} | Get an employee by a given employee id.
 *OrganisationApi* | [**organisationEmployeesIndex**](docs/Api/OrganisationApi.md#organisationemployeesindex) | **GET** /organisation/employees | List and Search for employees working at Ageras.
+*OrganisationApi* | [**organisationEmployeesKpiIndex**](docs/Api/OrganisationApi.md#organisationemployeeskpiindex) | **GET** /organisation/employees/kpi | List employee KPIs.
+*OrganisationApi* | [**organisationEmployeesKpiIndex2**](docs/Api/OrganisationApi.md#organisationemployeeskpiindex2) | **GET** /organisation/organisation/employees/kpi | List employee KPIs.
+*OrganisationApi* | [**organisationEmployeesKpiIndex4**](docs/Api/OrganisationApi.md#organisationemployeeskpiindex4) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
 *PackagesApi* | [**packagesFeaturesIndex**](docs/Api/PackagesApi.md#packagesfeaturesindex) | **GET** /packages/features | Get all package features.
 *PackagesApi* | [**packagesGet**](docs/Api/PackagesApi.md#packagesget) | **GET** /packages/{id} | Get an individual package by ID.
 *PackagesApi* | [**packagesIndex**](docs/Api/PackagesApi.md#packagesindex) | **GET** /packages | Get all active packages for a given geo_code.
 *PartnersApi* | [**partnersActionsCreate**](docs/Api/PartnersApi.md#partnersactionscreate) | **POST** /partners/{partner_id}/actions | Partner actions.
 *PartnersApi* | [**partnersAggregationsIndex**](docs/Api/PartnersApi.md#partnersaggregationsindex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
+*PartnersApi* | [**partnersBankaccountsCreate**](docs/Api/PartnersApi.md#partnersbankaccountscreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
+*PartnersApi* | [**partnersBankaccountsIndex**](docs/Api/PartnersApi.md#partnersbankaccountsindex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
 *PartnersApi* | [**partnersCertificationsCreate**](docs/Api/PartnersApi.md#partnerscertificationscreate) | **POST** /partners/{partner_id}/certifications | Attach certification to partner.
 *PartnersApi* | [**partnersCertificationsDelete**](docs/Api/PartnersApi.md#partnerscertificationsdelete) | **DELETE** /partners/{partner_id}/certifications/{certification_id} | Detach certification from partner.
 *PartnersApi* | [**partnersCertificationsGet**](docs/Api/PartnersApi.md#partnerscertificationsget) | **GET** /partners/{partner_id}/certifications/{certification_id} | Get Partner certification.
 *PartnersApi* | [**partnersCertificationsIndex**](docs/Api/PartnersApi.md#partnerscertificationsindex) | **GET** /partners/{partner_id}/certifications | Get partner certifications.
+*PartnersApi* | [**partnersCertificationsUpdate**](docs/Api/PartnersApi.md#partnerscertificationsupdate) | **PUT** /partners/{partner_id}/certifications | Update partner certifications.
 *PartnersApi* | [**partnersContentsDelete**](docs/Api/PartnersApi.md#partnerscontentsdelete) | **DELETE** /partners/{partner_id}/contents/{content_key} | Delete content for a given partner.
 *PartnersApi* | [**partnersContentsGet**](docs/Api/PartnersApi.md#partnerscontentsget) | **GET** /partners/{partner_id}/contents/{content_key} | Get the content of a given partner.
 *PartnersApi* | [**partnersContentsUpdate**](docs/Api/PartnersApi.md#partnerscontentsupdate) | **PUT** /partners/{partner_id}/contents/{content_key} | Update content for a given partner.
@@ -194,6 +256,27 @@ Class | Method | HTTP request | Description
 *PartnersApi* | [**partnersCouponsIndex**](docs/Api/PartnersApi.md#partnerscouponsindex) | **GET** /partners/{partner_id}/coupons | List Partner Coupons.
 *PartnersApi* | [**partnersCreate**](docs/Api/PartnersApi.md#partnerscreate) | **POST** /partners | Create a Partner.
 *PartnersApi* | [**partnersDelete**](docs/Api/PartnersApi.md#partnersdelete) | **DELETE** /partners/{partner_id} | Delete a Partner.
+*PartnersApi* | [**partnersDeliverablesCreate**](docs/Api/PartnersApi.md#partnersdeliverablescreate) | **POST** /partners/deliverables | Create Deliverable for partners
+*PartnersApi* | [**partnersDeliverablesCreate2**](docs/Api/PartnersApi.md#partnersdeliverablescreate2) | **POST** /partners/{partner_id}/deliverables | Create Deliverable for partners
+*PartnersApi* | [**partnersDeliverablesGet**](docs/Api/PartnersApi.md#partnersdeliverablesget) | **GET** /partners/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
+*PartnersApi* | [**partnersDeliverablesGet2**](docs/Api/PartnersApi.md#partnersdeliverablesget2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
+*PartnersApi* | [**partnersDeliverablesIndex**](docs/Api/PartnersApi.md#partnersdeliverablesindex) | **GET** /partners/deliverables | List Partner deliverables
+*PartnersApi* | [**partnersDeliverablesIndex2**](docs/Api/PartnersApi.md#partnersdeliverablesindex2) | **GET** /partners/{partner_id}/deliverables | List Partner deliverables
+*PartnersApi* | [**partnersDeliverablesLinesCreate**](docs/Api/PartnersApi.md#partnersdeliverableslinescreate) | **POST** /partners/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesLinesCreate2**](docs/Api/PartnersApi.md#partnersdeliverableslinescreate2) | **POST** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesLinesDelete**](docs/Api/PartnersApi.md#partnersdeliverableslinesdelete) | **DELETE** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesLinesDelete2**](docs/Api/PartnersApi.md#partnersdeliverableslinesdelete2) | **DELETE** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesLinesGet**](docs/Api/PartnersApi.md#partnersdeliverableslinesget) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
+*PartnersApi* | [**partnersDeliverablesLinesGet2**](docs/Api/PartnersApi.md#partnersdeliverableslinesget2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
+*PartnersApi* | [**partnersDeliverablesLinesIndex**](docs/Api/PartnersApi.md#partnersdeliverableslinesindex) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
+*PartnersApi* | [**partnersDeliverablesLinesIndex2**](docs/Api/PartnersApi.md#partnersdeliverableslinesindex2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
+*PartnersApi* | [**partnersDeliverablesLinesUpdate**](docs/Api/PartnersApi.md#partnersdeliverableslinesupdate) | **PUT** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesLinesUpdate2**](docs/Api/PartnersApi.md#partnersdeliverableslinesupdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesUpdate**](docs/Api/PartnersApi.md#partnersdeliverablesupdate) | **PUT** /partners/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
+*PartnersApi* | [**partnersDeliverablesUpdate2**](docs/Api/PartnersApi.md#partnersdeliverablesupdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
+*PartnersApi* | [**partnersFeesCreate**](docs/Api/PartnersApi.md#partnersfeescreate) | **POST** /partners/{partner_id}/fees | Create partner fee
+*PartnersApi* | [**partnersFeesDelete**](docs/Api/PartnersApi.md#partnersfeesdelete) | **DELETE** /partners/{partner_id}/fees/{id} | Delete a partner fee
+*PartnersApi* | [**partnersFeesIndex**](docs/Api/PartnersApi.md#partnersfeesindex) | **GET** /partners/fees | Get all partner fees.
 *PartnersApi* | [**partnersGet**](docs/Api/PartnersApi.md#partnersget) | **GET** /partners/{partner_id} | Get a Partner from a given partner_id.
 *PartnersApi* | [**partnersIndex**](docs/Api/PartnersApi.md#partnersindex) | **GET** /partners | List Partners.
 *PartnersApi* | [**partnersIndustriesCreate**](docs/Api/PartnersApi.md#partnersindustriescreate) | **POST** /partners/{partner_id}/industries | Attach industry to partner.
@@ -211,13 +294,12 @@ Class | Method | HTTP request | Description
 *PartnersApi* | [**partnersNotesGet**](docs/Api/PartnersApi.md#partnersnotesget) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 *PartnersApi* | [**partnersNotesIndex**](docs/Api/PartnersApi.md#partnersnotesindex) | **GET** /partners/notes | Retrieve lists of notes.
 *PartnersApi* | [**partnersNotesIndex2**](docs/Api/PartnersApi.md#partnersnotesindex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
-*PartnersApi* | [**partnersRefillsCreate**](docs/Api/PartnersApi.md#partnersrefillscreate) | **POST** /partners/{partner_id}/refills | Create partner refill.
-*PartnersApi* | [**partnersRefillsIndex**](docs/Api/PartnersApi.md#partnersrefillsindex) | **GET** /partners/{partner_id}/refills | Get partner refills.
 *PartnersApi* | [**partnersSubscriptionsActionsCreate**](docs/Api/PartnersApi.md#partnerssubscriptionsactionscreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
 *PartnersApi* | [**partnersSubscriptionsCreate**](docs/Api/PartnersApi.md#partnerssubscriptionscreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
 *PartnersApi* | [**partnersSubscriptionsIndex**](docs/Api/PartnersApi.md#partnerssubscriptionsindex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
 *PartnersApi* | [**partnersSubscriptionsUpdate**](docs/Api/PartnersApi.md#partnerssubscriptionsupdate) | **PUT** /partners/{partner_id}/subscriptions | Update partner subscription.
 *PartnersApi* | [**partnersSuggestIndex**](docs/Api/PartnersApi.md#partnerssuggestindex) | **GET** /partners/suggest | Suggest Partners to search for.
+*PartnersApi* | [**partnersTitlesIndex**](docs/Api/PartnersApi.md#partnerstitlesindex) | **GET** /partners/titles | Get all partner titles.
 *PartnersApi* | [**partnersTransactionsIndex**](docs/Api/PartnersApi.md#partnerstransactionsindex) | **GET** /partners/{partner_id}/transactions | List Transactions for a given Partner.
 *PartnersApi* | [**partnersUpdate**](docs/Api/PartnersApi.md#partnersupdate) | **PUT** /partners/{partner_id} | Update a Partner.
 *PartnersApi* | [**partnersUsersContentsDelete**](docs/Api/PartnersApi.md#partnersuserscontentsdelete) | **DELETE** /partners/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
@@ -235,12 +317,20 @@ Class | Method | HTTP request | Description
 *PartnersApi* | [**partnersUsersIndex2**](docs/Api/PartnersApi.md#partnersusersindex2) | **GET** /partners/{partner_id}/users | List partner users.
 *PartnersApi* | [**partnersUsersUpdate**](docs/Api/PartnersApi.md#partnersusersupdate) | **PUT** /partners/users/{partner_user_id} | Update partner user profile.
 *PartnersApi* | [**partnersUsersUpdate2**](docs/Api/PartnersApi.md#partnersusersupdate2) | **PUT** /partners/{partner_id}/users/{partner_user_id} | Update partner user profile.
+*PartnersApi* | [**partnersVerificationsIndex**](docs/Api/PartnersApi.md#partnersverificationsindex) | **GET** /partners/verifications | Get Partner verifications.
+*PartnersApi* | [**partnersVerificationsIndex2**](docs/Api/PartnersApi.md#partnersverificationsindex2) | **GET** /partners/{partner_id}/verifications | Get Partner verifications.
+*PartnersApi* | [**partnersVerificationsUpdate**](docs/Api/PartnersApi.md#partnersverificationsupdate) | **PUT** /partners/{partner_id}/verifications | Update Partner verification data.
+*PaymentsApi* | [**paymentsCardsCreate**](docs/Api/PaymentsApi.md#paymentscardscreate) | **POST** /payments/cards | Create a payment card.
+*PaymentsApi* | [**paymentsCardsDelete**](docs/Api/PaymentsApi.md#paymentscardsdelete) | **DELETE** /payments/cards/{card_id} | Delete a card for a given id.
+*PaymentsApi* | [**paymentsCardsDelete2**](docs/Api/PaymentsApi.md#paymentscardsdelete2) | **DELETE** /payments/{payment_id}/cards/{card_id} | Delete a card for a given id.
 *PaymentsApi* | [**paymentsCardsGet**](docs/Api/PaymentsApi.md#paymentscardsget) | **GET** /payments/cards/{payment_card_id} | Get a Partner from a given partner_id.
 *PaymentsApi* | [**paymentsCardsGet2**](docs/Api/PaymentsApi.md#paymentscardsget2) | **GET** /payments/{payment_id}/cards/{payment_card_id} | Get a Partner from a given partner_id.
 *PaymentsApi* | [**paymentsCardsIndex**](docs/Api/PaymentsApi.md#paymentscardsindex) | **GET** /payments/cards | List payment cards.
-*PaymentsApi* | [**paymentsEpayCardsCreate**](docs/Api/PaymentsApi.md#paymentsepaycardscreate) | **POST** /payments/epay/cards | Create an epay payment card.
-*PaymentsApi* | [**paymentsEpayWindowCreate**](docs/Api/PaymentsApi.md#paymentsepaywindowcreate) | **POST** /payments/epay/window | Create epay window.
+*PaymentschedulesApi* | [**paymentschedulesIndex**](docs/Api/PaymentschedulesApi.md#paymentschedulesindex) | **GET** /paymentschedules | List partner payment schedules.
+*PaymentsolutionsApi* | [**paymentsolutionsIndex**](docs/Api/PaymentsolutionsApi.md#paymentsolutionsindex) | **GET** /paymentsolutions | List payment solutions or get available payment solutions for partner filtering by partner_id.
 *PhonesApi* | [**phonesActionsCreate**](docs/Api/PhonesApi.md#phonesactionscreate) | **POST** /phones/{phone_id}/actions | Phone actions.
+*ProductsApi* | [**productsCreate**](docs/Api/ProductsApi.md#productscreate) | **POST** /products | Create product.
+*ProductsApi* | [**productsIndex**](docs/Api/ProductsApi.md#productsindex) | **GET** /products | List products.
 *ProjectsApi* | [**projectsCreate**](docs/Api/ProjectsApi.md#projectscreate) | **POST** /projects | Create Project.
 *ProjectsApi* | [**projectsDelete**](docs/Api/ProjectsApi.md#projectsdelete) | **DELETE** /projects/{project_id} | Delete a project for a given project id.
 *ProjectsApi* | [**projectsEventsCreate**](docs/Api/ProjectsApi.md#projectseventscreate) | **POST** /projects/events | Create events for a given project.
@@ -268,6 +358,7 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**projectsUpdate**](docs/Api/ProjectsApi.md#projectsupdate) | **PUT** /projects/{project_id} | Update a project.
 *PromptsApi* | [**promptsActionsCreate**](docs/Api/PromptsApi.md#promptsactionscreate) | **POST** /prompts/{prompt_id}/actions | Action on prompt
 *PromptsApi* | [**promptsIndex**](docs/Api/PromptsApi.md#promptsindex) | **GET** /prompts | List of prompts
+*RatingsApi* | [**ratingsCreate**](docs/Api/RatingsApi.md#ratingscreate) | **POST** /ratings | Create a rating.
 *RatingsApi* | [**ratingsGet**](docs/Api/RatingsApi.md#ratingsget) | **GET** /ratings/{rating_id} | Return a rating from a rating ID.
 *RatingsApi* | [**ratingsIndex**](docs/Api/RatingsApi.md#ratingsindex) | **GET** /ratings | Search for Lead&#39;s by a given set of criteria.
 *RatingsApi* | [**ratingsUpdate**](docs/Api/RatingsApi.md#ratingsupdate) | **PUT** /ratings/{rating_id} | Update a rating.
@@ -275,11 +366,6 @@ Class | Method | HTTP request | Description
 *RefundsApi* | [**refundsCreate2**](docs/Api/RefundsApi.md#refundscreate2) | **POST** /refunds/{refund_id} | Post refund request.
 *RefundsApi* | [**refundsGet**](docs/Api/RefundsApi.md#refundsget) | **GET** /refunds/{refund_id} | Get a single refund request.
 *RefundsApi* | [**refundsIndex**](docs/Api/RefundsApi.md#refundsindex) | **GET** /refunds | List refund requests.
-*SalesopportunitiesApi* | [**salesOpportunitiesAggregationsIndex**](docs/Api/SalesopportunitiesApi.md#salesopportunitiesaggregationsindex) | **GET** /sales-opportunities/aggregations | Index aggregations.
-*SalesopportunitiesApi* | [**salesOpportunitiesCreate**](docs/Api/SalesopportunitiesApi.md#salesopportunitiescreate) | **POST** /sales-opportunities | Create sale opportunity.
-*SalesopportunitiesApi* | [**salesOpportunitiesDelete**](docs/Api/SalesopportunitiesApi.md#salesopportunitiesdelete) | **DELETE** /sales-opportunities/{sales_opportunity_id} | Delete Sales opportunity.
-*SalesopportunitiesApi* | [**salesOpportunitiesIndex**](docs/Api/SalesopportunitiesApi.md#salesopportunitiesindex) | **GET** /sales-opportunities | Get list sales pipelines opportunities.
-*SalesopportunitiesApi* | [**salesOpportunitiesUpdate**](docs/Api/SalesopportunitiesApi.md#salesopportunitiesupdate) | **PUT** /sales-opportunities/{sales_opportunity_id} | Create Sales opportunity resource.
 *SearchApi* | [**searchIndex**](docs/Api/SearchApi.md#searchindex) | **GET** /search | Search by criterias.
 *SearchApi* | [**searchSuggestIndex**](docs/Api/SearchApi.md#searchsuggestindex) | **GET** /search/suggest | Suggest by criteria.
 *SearchApi* | [**searchTypeaheadIndex**](docs/Api/SearchApi.md#searchtypeaheadindex) | **GET** /search/typeahead | Typeahead recommendations.
@@ -298,10 +384,15 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**tasksTaskablesGet**](docs/Api/TasksApi.md#taskstaskablesget) | **GET** /tasks/{task_id}/taskables/{taskable_id} | Get a taskable item from a given taskable id.
 *TasksApi* | [**tasksTaskablesIndex**](docs/Api/TasksApi.md#taskstaskablesindex) | **GET** /tasks/{task_id}/taskables | List the taskables for a given task.
 *TasksApi* | [**tasksUpdate**](docs/Api/TasksApi.md#tasksupdate) | **PUT** /tasks/{task_id} | Update a given task by its task_id.
+*TermsApi* | [**termsAcceptedIndex**](docs/Api/TermsApi.md#termsacceptedindex) | **GET** /terms/accepted | Get accepted terms.
+*TermsApi* | [**termsActionsCreate**](docs/Api/TermsApi.md#termsactionscreate) | **POST** /terms/{terms_id}/actions | Term actions.
+*TermsApi* | [**termsGet**](docs/Api/TermsApi.md#termsget) | **GET** /terms/{terms_id} | Retrieve a terms set from a given location_id.
+*TermsApi* | [**termsIndex**](docs/Api/TermsApi.md#termsindex) | **GET** /terms | Search and find terms by different criterias.
 
 
 ## Documentation For Models
 
+ - [ActionerResource](docs/Model/ActionerResource.md)
  - [ActivityBehalfResource](docs/Model/ActivityBehalfResource.md)
  - [ActivityCallResource](docs/Model/ActivityCallResource.md)
  - [ActivityClientResource](docs/Model/ActivityClientResource.md)
@@ -319,24 +410,59 @@ Class | Method | HTTP request | Description
  - [ActivitySatisfactionResource](docs/Model/ActivitySatisfactionResource.md)
  - [ActivityTaskResource](docs/Model/ActivityTaskResource.md)
  - [AffiliateCampaignResource](docs/Model/AffiliateCampaignResource.md)
+ - [AffiliateResource](docs/Model/AffiliateResource.md)
  - [AggregationItemResource](docs/Model/AggregationItemResource.md)
  - [AggregationResource](docs/Model/AggregationResource.md)
  - [AggregationResult](docs/Model/AggregationResult.md)
  - [AggregationSubItemResource](docs/Model/AggregationSubItemResource.md)
  - [AmountResource](docs/Model/AmountResource.md)
  - [AttachmentResource](docs/Model/AttachmentResource.md)
+ - [AttachmentResult](docs/Model/AttachmentResult.md)
  - [AuthResource](docs/Model/AuthResource.md)
+ - [CardClientResource](docs/Model/CardClientResource.md)
  - [CertificationResource](docs/Model/CertificationResource.md)
  - [CertificationResult](docs/Model/CertificationResult.md)
+ - [ChargeResource](docs/Model/ChargeResource.md)
+ - [ChargeResult](docs/Model/ChargeResult.md)
+ - [CheckoutClientResource](docs/Model/CheckoutClientResource.md)
+ - [CheckoutConsumerResource](docs/Model/CheckoutConsumerResource.md)
+ - [CheckoutDeliverableLineResource](docs/Model/CheckoutDeliverableLineResource.md)
+ - [CheckoutDeliverableResource](docs/Model/CheckoutDeliverableResource.md)
+ - [CheckoutDiscountResource](docs/Model/CheckoutDiscountResource.md)
+ - [CheckoutEmployeeResource](docs/Model/CheckoutEmployeeResource.md)
+ - [CheckoutItemResource](docs/Model/CheckoutItemResource.md)
+ - [CheckoutLineResource](docs/Model/CheckoutLineResource.md)
+ - [CheckoutPackageResource](docs/Model/CheckoutPackageResource.md)
+ - [CheckoutPartnerLeadQuoteResource](docs/Model/CheckoutPartnerLeadQuoteResource.md)
+ - [CheckoutPartnerResource](docs/Model/CheckoutPartnerResource.md)
+ - [CheckoutPartnerUserResource](docs/Model/CheckoutPartnerUserResource.md)
+ - [CheckoutPaymentEventResource](docs/Model/CheckoutPaymentEventResource.md)
+ - [CheckoutPaymentInstallmentResource](docs/Model/CheckoutPaymentInstallmentResource.md)
+ - [CheckoutPaymentProviderResource](docs/Model/CheckoutPaymentProviderResource.md)
+ - [CheckoutPaymentResource](docs/Model/CheckoutPaymentResource.md)
+ - [CheckoutResource](docs/Model/CheckoutResource.md)
+ - [CheckoutResult](docs/Model/CheckoutResult.md)
  - [ClientGeoResource](docs/Model/ClientGeoResource.md)
  - [ClientResource](docs/Model/ClientResource.md)
+ - [ContactArchiveActionResource](docs/Model/ContactArchiveActionResource.md)
+ - [ContactArchiveChannelResource](docs/Model/ContactArchiveChannelResource.md)
+ - [ContactArchiveResource](docs/Model/ContactArchiveResource.md)
+ - [ContactArchiveResult](docs/Model/ContactArchiveResult.md)
  - [ContentPageFieldResource](docs/Model/ContentPageFieldResource.md)
  - [ContentPageResource](docs/Model/ContentPageResource.md)
  - [ContentPageResult](docs/Model/ContentPageResult.md)
  - [ContentPageTypeResource](docs/Model/ContentPageTypeResource.md)
  - [ContentPageTypeResult](docs/Model/ContentPageTypeResult.md)
+ - [ConversationActionResource](docs/Model/ConversationActionResource.md)
  - [ConversationResource](docs/Model/ConversationResource.md)
  - [ConversationResult](docs/Model/ConversationResult.md)
+ - [CurrencyResource](docs/Model/CurrencyResource.md)
+ - [DataFieldGeoResource](docs/Model/DataFieldGeoResource.md)
+ - [DataFieldResource](docs/Model/DataFieldResource.md)
+ - [DataFieldResult](docs/Model/DataFieldResult.md)
+ - [DataFieldValueResource](docs/Model/DataFieldValueResource.md)
+ - [EmployeeKpiResource](docs/Model/EmployeeKpiResource.md)
+ - [EmployeeKpiResult](docs/Model/EmployeeKpiResult.md)
  - [EmployeeResource](docs/Model/EmployeeResource.md)
  - [EmployeeResult](docs/Model/EmployeeResult.md)
  - [EmployeeRoleResource](docs/Model/EmployeeRoleResource.md)
@@ -344,6 +470,8 @@ Class | Method | HTTP request | Description
  - [IndustryResource](docs/Model/IndustryResource.md)
  - [IndustryResult](docs/Model/IndustryResult.md)
  - [InvoiceLineResource](docs/Model/InvoiceLineResource.md)
+ - [InvoicePartnerResource](docs/Model/InvoicePartnerResource.md)
+ - [InvoicePartnerUserResource](docs/Model/InvoicePartnerUserResource.md)
  - [InvoiceResource](docs/Model/InvoiceResource.md)
  - [InvoiceResult](docs/Model/InvoiceResult.md)
  - [KPIAmountResource](docs/Model/KPIAmountResource.md)
@@ -383,16 +511,24 @@ Class | Method | HTTP request | Description
  - [KPISalesRefillsResource](docs/Model/KPISalesRefillsResource.md)
  - [KPISalesResource](docs/Model/KPISalesResource.md)
  - [KPISalesTotalResource](docs/Model/KPISalesTotalResource.md)
+ - [KPITotalNetFeeResource](docs/Model/KPITotalNetFeeResource.md)
+ - [KeyValueResource](docs/Model/KeyValueResource.md)
+ - [KpiResource](docs/Model/KpiResource.md)
  - [LanguageResource](docs/Model/LanguageResource.md)
  - [LanguageResult](docs/Model/LanguageResult.md)
  - [LeadAcceptedResource](docs/Model/LeadAcceptedResource.md)
+ - [LeadActionQuoteReasonResource](docs/Model/LeadActionQuoteReasonResource.md)
  - [LeadActionResource](docs/Model/LeadActionResource.md)
  - [LeadAttributeResource](docs/Model/LeadAttributeResource.md)
+ - [LeadCategoryResource](docs/Model/LeadCategoryResource.md)
+ - [LeadCategoryResult](docs/Model/LeadCategoryResult.md)
  - [LeadClientResource](docs/Model/LeadClientResource.md)
  - [LeadCustomerInfoResource](docs/Model/LeadCustomerInfoResource.md)
+ - [LeadCustomerTypeResource](docs/Model/LeadCustomerTypeResource.md)
+ - [LeadEmployeeResource](docs/Model/LeadEmployeeResource.md)
  - [LeadFeedbackResource](docs/Model/LeadFeedbackResource.md)
  - [LeadGeoResource](docs/Model/LeadGeoResource.md)
- - [LeadIndustryPairResource](docs/Model/LeadIndustryPairResource.md)
+ - [LeadIndustriesResource](docs/Model/LeadIndustriesResource.md)
  - [LeadIndustryResource](docs/Model/LeadIndustryResource.md)
  - [LeadMeetingResource](docs/Model/LeadMeetingResource.md)
  - [LeadNoteResource](docs/Model/LeadNoteResource.md)
@@ -400,8 +536,20 @@ Class | Method | HTTP request | Description
  - [LeadOfferResult](docs/Model/LeadOfferResult.md)
  - [LeadOffersInfoItemResource](docs/Model/LeadOffersInfoItemResource.md)
  - [LeadOffersInfoResource](docs/Model/LeadOffersInfoResource.md)
+ - [LeadPartnerResource](docs/Model/LeadPartnerResource.md)
+ - [LeadPartnerResult](docs/Model/LeadPartnerResult.md)
+ - [LeadPartnerUserResource](docs/Model/LeadPartnerUserResource.md)
+ - [LeadProductResource](docs/Model/LeadProductResource.md)
  - [LeadProgressResource](docs/Model/LeadProgressResource.md)
+ - [LeadQuoteActionResource](docs/Model/LeadQuoteActionResource.md)
  - [LeadQuoteInfoEntryResource](docs/Model/LeadQuoteInfoEntryResource.md)
+ - [LeadQuoteItemResource](docs/Model/LeadQuoteItemResource.md)
+ - [LeadQuoteItemResult](docs/Model/LeadQuoteItemResult.md)
+ - [LeadQuotePaymentResource](docs/Model/LeadQuotePaymentResource.md)
+ - [LeadQuoteProgressResource](docs/Model/LeadQuoteProgressResource.md)
+ - [LeadQuoteProgressResult](docs/Model/LeadQuoteProgressResult.md)
+ - [LeadQuoteResource](docs/Model/LeadQuoteResource.md)
+ - [LeadQuoteResult](docs/Model/LeadQuoteResult.md)
  - [LeadQuotesInfoResource](docs/Model/LeadQuotesInfoResource.md)
  - [LeadRequirementsResource](docs/Model/LeadRequirementsResource.md)
  - [LeadResource](docs/Model/LeadResource.md)
@@ -416,6 +564,7 @@ Class | Method | HTTP request | Description
  - [MatchResource](docs/Model/MatchResource.md)
  - [MatchResult](docs/Model/MatchResult.md)
  - [MessageResource](docs/Model/MessageResource.md)
+ - [MessageResult](docs/Model/MessageResult.md)
  - [NotificationActionResource](docs/Model/NotificationActionResource.md)
  - [NotificationRecipientResource](docs/Model/NotificationRecipientResource.md)
  - [NotificationResource](docs/Model/NotificationResource.md)
@@ -423,27 +572,64 @@ Class | Method | HTTP request | Description
  - [NotificationSubjectResource](docs/Model/NotificationSubjectResource.md)
  - [NotificationTriggerResource](docs/Model/NotificationTriggerResource.md)
  - [OfferActionResource](docs/Model/OfferActionResource.md)
+ - [OrderActionResource](docs/Model/OrderActionResource.md)
+ - [OrderClientResource](docs/Model/OrderClientResource.md)
+ - [OrderConsumerResource](docs/Model/OrderConsumerResource.md)
+ - [OrderDiscountResource](docs/Model/OrderDiscountResource.md)
+ - [OrderEmployeeResource](docs/Model/OrderEmployeeResource.md)
+ - [OrderInstallmentResource](docs/Model/OrderInstallmentResource.md)
+ - [OrderItemResource](docs/Model/OrderItemResource.md)
+ - [OrderLineResource](docs/Model/OrderLineResource.md)
+ - [OrderLineSellerResource](docs/Model/OrderLineSellerResource.md)
+ - [OrderPackageResource](docs/Model/OrderPackageResource.md)
+ - [OrderPartnerLeadQuoteResource](docs/Model/OrderPartnerLeadQuoteResource.md)
+ - [OrderPartnerResource](docs/Model/OrderPartnerResource.md)
+ - [OrderPartnerUserResource](docs/Model/OrderPartnerUserResource.md)
+ - [OrderResource](docs/Model/OrderResource.md)
+ - [OrderResult](docs/Model/OrderResult.md)
  - [PackageFeatureResource](docs/Model/PackageFeatureResource.md)
  - [PackageFeatureResult](docs/Model/PackageFeatureResult.md)
  - [PackageResource](docs/Model/PackageResource.md)
  - [PackageResult](docs/Model/PackageResult.md)
  - [ParticipantResource](docs/Model/ParticipantResource.md)
  - [PartnerActionResource](docs/Model/PartnerActionResource.md)
+ - [PartnerAlertResource](docs/Model/PartnerAlertResource.md)
+ - [PartnerAttributeResource](docs/Model/PartnerAttributeResource.md)
+ - [PartnerBankaccountResource](docs/Model/PartnerBankaccountResource.md)
+ - [PartnerBankaccountResult](docs/Model/PartnerBankaccountResult.md)
+ - [PartnerCanvasResource](docs/Model/PartnerCanvasResource.md)
+ - [PartnerCertificationsResource](docs/Model/PartnerCertificationsResource.md)
  - [PartnerContentResource](docs/Model/PartnerContentResource.md)
  - [PartnerCouponActionResource](docs/Model/PartnerCouponActionResource.md)
  - [PartnerCouponResource](docs/Model/PartnerCouponResource.md)
  - [PartnerCouponResult](docs/Model/PartnerCouponResult.md)
  - [PartnerCouponTransactionResource](docs/Model/PartnerCouponTransactionResource.md)
  - [PartnerCouponTransactionResult](docs/Model/PartnerCouponTransactionResult.md)
+ - [PartnerDeliverableLeadResource](docs/Model/PartnerDeliverableLeadResource.md)
+ - [PartnerDeliverableLineItemResource](docs/Model/PartnerDeliverableLineItemResource.md)
+ - [PartnerDeliverableLineResource](docs/Model/PartnerDeliverableLineResource.md)
+ - [PartnerDeliverableLineResult](docs/Model/PartnerDeliverableLineResult.md)
+ - [PartnerDeliverableQuoteItemResource](docs/Model/PartnerDeliverableQuoteItemResource.md)
+ - [PartnerDeliverableResource](docs/Model/PartnerDeliverableResource.md)
+ - [PartnerDeliverableResult](docs/Model/PartnerDeliverableResult.md)
+ - [PartnerDemoResource](docs/Model/PartnerDemoResource.md)
+ - [PartnerEmployeeResource](docs/Model/PartnerEmployeeResource.md)
+ - [PartnerFeeResource](docs/Model/PartnerFeeResource.md)
+ - [PartnerFeeResult](docs/Model/PartnerFeeResult.md)
+ - [PartnerGeoResource](docs/Model/PartnerGeoResource.md)
  - [PartnerIndustryResource](docs/Model/PartnerIndustryResource.md)
  - [PartnerIndustryResult](docs/Model/PartnerIndustryResult.md)
+ - [PartnerInvoicingResource](docs/Model/PartnerInvoicingResource.md)
+ - [PartnerKPIResource](docs/Model/PartnerKPIResource.md)
+ - [PartnerLeadTypeResource](docs/Model/PartnerLeadTypeResource.md)
  - [PartnerNoteResource](docs/Model/PartnerNoteResource.md)
  - [PartnerNoteResult](docs/Model/PartnerNoteResult.md)
  - [PartnerOfferResource](docs/Model/PartnerOfferResource.md)
  - [PartnerOfferResult](docs/Model/PartnerOfferResult.md)
- - [PartnerRefillCustomOfferResource](docs/Model/PartnerRefillCustomOfferResource.md)
- - [PartnerRefillResource](docs/Model/PartnerRefillResource.md)
- - [PartnerRefillResult](docs/Model/PartnerRefillResult.md)
+ - [PartnerPaymentScheduleResource](docs/Model/PartnerPaymentScheduleResource.md)
+ - [PartnerPaymentScheduleResult](docs/Model/PartnerPaymentScheduleResult.md)
+ - [PartnerPreferencesResource](docs/Model/PartnerPreferencesResource.md)
+ - [PartnerRatingResource](docs/Model/PartnerRatingResource.md)
  - [PartnerResource](docs/Model/PartnerResource.md)
  - [PartnerResult](docs/Model/PartnerResult.md)
  - [PartnerSatisfactionResource](docs/Model/PartnerSatisfactionResource.md)
@@ -452,6 +638,9 @@ Class | Method | HTTP request | Description
  - [PartnerSubscriptionResult](docs/Model/PartnerSubscriptionResult.md)
  - [PartnerSuggestResource](docs/Model/PartnerSuggestResource.md)
  - [PartnerSuggestResult](docs/Model/PartnerSuggestResult.md)
+ - [PartnerTasksResource](docs/Model/PartnerTasksResource.md)
+ - [PartnerTitleResource](docs/Model/PartnerTitleResource.md)
+ - [PartnerTitleResult](docs/Model/PartnerTitleResult.md)
  - [PartnerTypesResource](docs/Model/PartnerTypesResource.md)
  - [PartnerTypesResult](docs/Model/PartnerTypesResult.md)
  - [PartnerUserCvAwardResource](docs/Model/PartnerUserCvAwardResource.md)
@@ -462,18 +651,26 @@ Class | Method | HTTP request | Description
  - [PartnerUserCvExperienceResource](docs/Model/PartnerUserCvExperienceResource.md)
  - [PartnerUserCvExpertiseResource](docs/Model/PartnerUserCvExpertiseResource.md)
  - [PartnerUserCvLanguageResource](docs/Model/PartnerUserCvLanguageResource.md)
+ - [PartnerUserCvPartnerResource](docs/Model/PartnerUserCvPartnerResource.md)
  - [PartnerUserCvResource](docs/Model/PartnerUserCvResource.md)
  - [PartnerUserCvResult](docs/Model/PartnerUserCvResult.md)
  - [PartnerUserCvSocialMediaResource](docs/Model/PartnerUserCvSocialMediaResource.md)
  - [PartnerUserResource](docs/Model/PartnerUserResource.md)
  - [PartnerUserResult](docs/Model/PartnerUserResult.md)
+ - [PartnerVerificationEntryResource](docs/Model/PartnerVerificationEntryResource.md)
+ - [PartnerVerificationResource](docs/Model/PartnerVerificationResource.md)
+ - [PartnerVerificationResult](docs/Model/PartnerVerificationResult.md)
  - [PasswordReminderResource](docs/Model/PasswordReminderResource.md)
  - [PasswordResetResource](docs/Model/PasswordResetResource.md)
+ - [PaymentCardDataResource](docs/Model/PaymentCardDataResource.md)
+ - [PaymentCardExpirationResource](docs/Model/PaymentCardExpirationResource.md)
+ - [PaymentCardOwnerResource](docs/Model/PaymentCardOwnerResource.md)
  - [PaymentCardResource](docs/Model/PaymentCardResource.md)
  - [PaymentCardResult](docs/Model/PaymentCardResult.md)
+ - [PaymentMethodResource](docs/Model/PaymentMethodResource.md)
+ - [PaymentProviderResource](docs/Model/PaymentProviderResource.md)
  - [PaymentSolutionResource](docs/Model/PaymentSolutionResource.md)
- - [PaymentWindowDataResource](docs/Model/PaymentWindowDataResource.md)
- - [PaymentWindowResource](docs/Model/PaymentWindowResource.md)
+ - [PaymentSolutionResult](docs/Model/PaymentSolutionResult.md)
  - [PermissionResource](docs/Model/PermissionResource.md)
  - [PermissionResult](docs/Model/PermissionResult.md)
  - [PhoneActionCallResource](docs/Model/PhoneActionCallResource.md)
@@ -481,9 +678,12 @@ Class | Method | HTTP request | Description
  - [PhoneEmployeeResource](docs/Model/PhoneEmployeeResource.md)
  - [PhoneGeoResource](docs/Model/PhoneGeoResource.md)
  - [PhoneResource](docs/Model/PhoneResource.md)
+ - [ProductResource](docs/Model/ProductResource.md)
+ - [ProductResult](docs/Model/ProductResult.md)
  - [ProjectCustomerResource](docs/Model/ProjectCustomerResource.md)
  - [ProjectEventResource](docs/Model/ProjectEventResource.md)
  - [ProjectGeoResource](docs/Model/ProjectGeoResource.md)
+ - [ProjectLeadResource](docs/Model/ProjectLeadResource.md)
  - [ProjectNoteResource](docs/Model/ProjectNoteResource.md)
  - [ProjectNoteResult](docs/Model/ProjectNoteResult.md)
  - [ProjectPartnerUserResource](docs/Model/ProjectPartnerUserResource.md)
@@ -495,6 +695,7 @@ Class | Method | HTTP request | Description
  - [PromptAttributeResource](docs/Model/PromptAttributeResource.md)
  - [PromptResource](docs/Model/PromptResource.md)
  - [PromptResult](docs/Model/PromptResult.md)
+ - [RatingPartnerResource](docs/Model/RatingPartnerResource.md)
  - [RatingReplyResource](docs/Model/RatingReplyResource.md)
  - [RatingResource](docs/Model/RatingResource.md)
  - [RatingResult](docs/Model/RatingResult.md)
@@ -502,8 +703,6 @@ Class | Method | HTTP request | Description
  - [RecipientResource](docs/Model/RecipientResource.md)
  - [RefundResource](docs/Model/RefundResource.md)
  - [RefundResult](docs/Model/RefundResult.md)
- - [SalesOpportunityResource](docs/Model/SalesOpportunityResource.md)
- - [SalesOpportunityResult](docs/Model/SalesOpportunityResult.md)
  - [SearchResource](docs/Model/SearchResource.md)
  - [SearchResult](docs/Model/SearchResult.md)
  - [TaskPriorityResource](docs/Model/TaskPriorityResource.md)
@@ -517,8 +716,15 @@ Class | Method | HTTP request | Description
  - [TaskablePartnerResource](docs/Model/TaskablePartnerResource.md)
  - [TaskableResource](docs/Model/TaskableResource.md)
  - [TaskableResult](docs/Model/TaskableResult.md)
+ - [TermsActionResource](docs/Model/TermsActionResource.md)
+ - [TermsResource](docs/Model/TermsResource.md)
+ - [TermsResult](docs/Model/TermsResult.md)
  - [TypeaheadResource](docs/Model/TypeaheadResource.md)
  - [TypeaheadResult](docs/Model/TypeaheadResult.md)
+ - [VoucherRefundRequestActionResource](docs/Model/VoucherRefundRequestActionResource.md)
+ - [VoucherRefundRequestResource](docs/Model/VoucherRefundRequestResource.md)
+ - [VoucherRefundRequestResult](docs/Model/VoucherRefundRequestResult.md)
+ - [VoucherRefundRequestVoucherResource](docs/Model/VoucherRefundRequestVoucherResource.md)
 
 
 ## Documentation For Authorization

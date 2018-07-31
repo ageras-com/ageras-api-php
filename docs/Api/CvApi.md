@@ -70,7 +70,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/\Ageras\Api\Model\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
@@ -175,7 +175,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/\Ageras\Api\Model\PartnerUserCvAwardResource.md)|  |
+ **partner_user_cv_award_resource** | [**\Ageras\Api\Model\PartnerUserCvAwardResource**](../Model/PartnerUserCvAwardResource.md)|  |
 
 ### Return type
 
@@ -228,7 +228,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_badge_resource** | [**\Ageras\Api\Model\PartnerUserCvBadgeResource**](../Model/\Ageras\Api\Model\PartnerUserCvBadgeResource.md)|  |
+ **partner_user_cv_badge_resource** | [**\Ageras\Api\Model\PartnerUserCvBadgeResource**](../Model/PartnerUserCvBadgeResource.md)|  |
 
 ### Return type
 
@@ -333,7 +333,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/\Ageras\Api\Model\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
@@ -438,7 +438,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/\Ageras\Api\Model\PartnerUserCvCourseResource.md)|  |
+ **partner_user_cv_course_resource** | [**\Ageras\Api\Model\PartnerUserCvCourseResource**](../Model/PartnerUserCvCourseResource.md)|  |
 
 ### Return type
 
@@ -491,7 +491,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\Model\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
@@ -596,7 +596,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/\Ageras\Api\Model\PartnerUserCvDescriptionResource.md)|  |
+ **partner_user_cv_description_resource** | [**\Ageras\Api\Model\PartnerUserCvDescriptionResource**](../Model/PartnerUserCvDescriptionResource.md)|  |
 
 ### Return type
 
@@ -649,7 +649,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/\Ageras\Api\Model\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
@@ -754,7 +754,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/\Ageras\Api\Model\PartnerUserCvEducationResource.md)|  |
+ **partner_user_cv_education_resource** | [**\Ageras\Api\Model\PartnerUserCvEducationResource**](../Model/PartnerUserCvEducationResource.md)|  |
 
 ### Return type
 
@@ -807,7 +807,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\Model\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
@@ -912,7 +912,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/\Ageras\Api\Model\PartnerUserCvExperienceResource.md)|  |
+ **partner_user_cv_experience_resource** | [**\Ageras\Api\Model\PartnerUserCvExperienceResource**](../Model/PartnerUserCvExperienceResource.md)|  |
 
 ### Return type
 
@@ -965,7 +965,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\Model\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
@@ -1070,7 +1070,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/\Ageras\Api\Model\PartnerUserCvExpertiseResource.md)|  |
+ **partner_user_cv_expertise_resource** | [**\Ageras\Api\Model\PartnerUserCvExpertiseResource**](../Model/PartnerUserCvExpertiseResource.md)|  |
 
 ### Return type
 
@@ -1235,7 +1235,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\Model\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
@@ -1340,7 +1340,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/\Ageras\Api\Model\PartnerUserCvLanguageResource.md)|  |
+ **partner_user_cv_language_resource** | [**\Ageras\Api\Model\PartnerUserCvLanguageResource**](../Model/PartnerUserCvLanguageResource.md)|  |
 
 ### Return type
 
@@ -1493,7 +1493,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_user_id** | **string**|  |
- **partner_user_cv_social_media_resource** | [**\Ageras\Api\Model\PartnerUserCvSocialMediaResource**](../Model/\Ageras\Api\Model\PartnerUserCvSocialMediaResource.md)|  |
+ **partner_user_cv_social_media_resource** | [**\Ageras\Api\Model\PartnerUserCvSocialMediaResource**](../Model/PartnerUserCvSocialMediaResource.md)|  |
 
 ### Return type
 

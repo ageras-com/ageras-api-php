@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -167,7 +167,7 @@ class PartnerOfferResource implements ArrayAccess
     const TYPE_DEMO = 'demo';
     const TYPE_PARTNER = 'partner';
     const TYPE_STANDARD = 'standard';
-    const STATUS_NEW = 'new';
+    const STATUS__NEW = 'new';
     const STATUS_EXPIRED = 'expired';
     const STATUS_ACCEPTED = 'accepted';
     
@@ -194,7 +194,7 @@ class PartnerOfferResource implements ArrayAccess
     public function getStatusAllowableValues()
     {
         return [
-            self::STATUS_NEW,
+            self::STATUS__NEW,
             self::STATUS_EXPIRED,
             self::STATUS_ACCEPTED,
         ];

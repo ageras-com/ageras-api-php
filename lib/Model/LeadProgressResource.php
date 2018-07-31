@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -111,6 +111,7 @@ class LeadProgressResource implements ArrayAccess
     const STEP_VALIDATION = 'validation';
     const STEP_AWAITING_OFFERS = 'awaiting_offers';
     const STEP_AWAITING_QUOTES = 'awaiting_quotes';
+    const STEP_QUOTE_CHOSEN = 'quote_chosen';
     const STEP_MATCH_VALIDATION = 'match_validation';
     const STEP_FOLLOW_UP = 'follow_up';
     const STEP_DONE = 'done';
@@ -128,6 +129,7 @@ class LeadProgressResource implements ArrayAccess
             self::STEP_VALIDATION,
             self::STEP_AWAITING_OFFERS,
             self::STEP_AWAITING_QUOTES,
+            self::STEP_QUOTE_CHOSEN,
             self::STEP_MATCH_VALIDATION,
             self::STEP_FOLLOW_UP,
             self::STEP_DONE,
@@ -160,9 +162,9 @@ class LeadProgressResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "match_validation", "follow_up", "done"];
+        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
         if (!in_array($this->container['step'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'match_validation', 'follow_up', 'done'.";
+            $invalid_properties[] = "invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'.";
         }
 
         return $invalid_properties;
@@ -177,7 +179,7 @@ class LeadProgressResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "match_validation", "follow_up", "done"];
+        $allowed_values = ["none", "validation", "awaiting_offers", "awaiting_quotes", "quote_chosen", "match_validation", "follow_up", "done"];
         if (!in_array($this->container['step'], $allowed_values)) {
             return false;
         }
@@ -201,9 +203,9 @@ class LeadProgressResource implements ArrayAccess
      */
     public function setStep($step)
     {
-        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'match_validation', 'follow_up', 'done');
+        $allowed_values = array('none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done');
         if (!is_null($step) && (!in_array($step, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'match_validation', 'follow_up', 'done'");
+            throw new \InvalidArgumentException("Invalid value for 'step', must be one of 'none', 'validation', 'awaiting_offers', 'awaiting_quotes', 'quote_chosen', 'match_validation', 'follow_up', 'done'");
         }
         $this->container['step'] = $step;
 

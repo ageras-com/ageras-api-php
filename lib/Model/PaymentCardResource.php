@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -55,11 +55,14 @@ class PaymentCardResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'partner_id' => 'int',
+        'owner' => '\Ageras\Api\Model\PaymentCardOwnerResource',
+        'provider' => '\Ageras\Api\Model\PaymentProviderResource',
+        'card_name' => 'string',
+        'card_type' => 'string',
         'card_mask' => 'string',
-        'provider' => 'string',
-        'provider_id' => 'string',
-        'is_being_used' => 'bool'
+        'expiration' => '\Ageras\Api\Model\PaymentCardExpirationResource',
+        'is_being_used' => 'bool',
+        'data' => '\Ageras\Api\Model\PaymentCardDataResource'
     ];
 
     public static function swaggerTypes()
@@ -73,11 +76,14 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'partner_id' => 'partner_id',
-        'card_mask' => 'card_mask',
+        'owner' => 'owner',
         'provider' => 'provider',
-        'provider_id' => 'provider_id',
-        'is_being_used' => 'is_being_used'
+        'card_name' => 'card_name',
+        'card_type' => 'card_type',
+        'card_mask' => 'card_mask',
+        'expiration' => 'expiration',
+        'is_being_used' => 'is_being_used',
+        'data' => 'data'
     ];
 
 
@@ -87,11 +93,14 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'partner_id' => 'setPartnerId',
-        'card_mask' => 'setCardMask',
+        'owner' => 'setOwner',
         'provider' => 'setProvider',
-        'provider_id' => 'setProviderId',
-        'is_being_used' => 'setIsBeingUsed'
+        'card_name' => 'setCardName',
+        'card_type' => 'setCardType',
+        'card_mask' => 'setCardMask',
+        'expiration' => 'setExpiration',
+        'is_being_used' => 'setIsBeingUsed',
+        'data' => 'setData'
     ];
 
 
@@ -101,11 +110,14 @@ class PaymentCardResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'partner_id' => 'getPartnerId',
-        'card_mask' => 'getCardMask',
+        'owner' => 'getOwner',
         'provider' => 'getProvider',
-        'provider_id' => 'getProviderId',
-        'is_being_used' => 'getIsBeingUsed'
+        'card_name' => 'getCardName',
+        'card_type' => 'getCardType',
+        'card_mask' => 'getCardMask',
+        'expiration' => 'getExpiration',
+        'is_being_used' => 'getIsBeingUsed',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -140,11 +152,14 @@ class PaymentCardResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
-        $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['provider_id'] = isset($data['provider_id']) ? $data['provider_id'] : null;
+        $this->container['card_name'] = isset($data['card_name']) ? $data['card_name'] : null;
+        $this->container['card_type'] = isset($data['card_type']) ? $data['card_type'] : null;
+        $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
+        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -194,22 +209,85 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
-     * Gets partner_id
-     * @return int
+     * Gets owner
+     * @return \Ageras\Api\Model\PaymentCardOwnerResource
      */
-    public function getPartnerId()
+    public function getOwner()
     {
-        return $this->container['partner_id'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets partner_id
-     * @param int $partner_id Id to the given partner the card belongs to.
+     * Sets owner
+     * @param \Ageras\Api\Model\PaymentCardOwnerResource $owner
      * @return $this
      */
-    public function setPartnerId($partner_id)
+    public function setOwner($owner)
     {
-        $this->container['partner_id'] = $partner_id;
+        $this->container['owner'] = $owner;
+
+        return $this;
+    }
+
+    /**
+     * Gets provider
+     * @return \Ageras\Api\Model\PaymentProviderResource
+     */
+    public function getProvider()
+    {
+        return $this->container['provider'];
+    }
+
+    /**
+     * Sets provider
+     * @param \Ageras\Api\Model\PaymentProviderResource $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        $this->container['provider'] = $provider;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_name
+     * @return string
+     */
+    public function getCardName()
+    {
+        return $this->container['card_name'];
+    }
+
+    /**
+     * Sets card_name
+     * @param string $card_name Card name.
+     * @return $this
+     */
+    public function setCardName($card_name)
+    {
+        $this->container['card_name'] = $card_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_type
+     * @return string
+     */
+    public function getCardType()
+    {
+        return $this->container['card_type'];
+    }
+
+    /**
+     * Sets card_type
+     * @param string $card_type Type of card
+     * @return $this
+     */
+    public function setCardType($card_type)
+    {
+        $this->container['card_type'] = $card_type;
 
         return $this;
     }
@@ -236,43 +314,22 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
-     * Gets provider
-     * @return string
+     * Gets expiration
+     * @return \Ageras\Api\Model\PaymentCardExpirationResource
      */
-    public function getProvider()
+    public function getExpiration()
     {
-        return $this->container['provider'];
+        return $this->container['expiration'];
     }
 
     /**
-     * Sets provider
-     * @param string $provider Id to the given partner the card belongs to.
+     * Sets expiration
+     * @param \Ageras\Api\Model\PaymentCardExpirationResource $expiration
      * @return $this
      */
-    public function setProvider($provider)
+    public function setExpiration($expiration)
     {
-        $this->container['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * Gets provider_id
-     * @return string
-     */
-    public function getProviderId()
-    {
-        return $this->container['provider_id'];
-    }
-
-    /**
-     * Sets provider_id
-     * @param string $provider_id Subscription id.
-     * @return $this
-     */
-    public function setProviderId($provider_id)
-    {
-        $this->container['provider_id'] = $provider_id;
+        $this->container['expiration'] = $expiration;
 
         return $this;
     }
@@ -294,6 +351,27 @@ class PaymentCardResource implements ArrayAccess
     public function setIsBeingUsed($is_being_used)
     {
         $this->container['is_being_used'] = $is_being_used;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\Model\PaymentCardDataResource
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\Model\PaymentCardDataResource $data
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

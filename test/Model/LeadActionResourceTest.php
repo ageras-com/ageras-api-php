@@ -106,4 +106,44 @@ class LeadActionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "rejection_reasons"
+     */
+    public function testPropertyRejectionReasons()
+    {
+
+    }
+
+    /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
+    {
+
+    }
+
+    /**
+     * Test attribute "reason_completed"
+     */
+    public function testPropertyReasonCompleted()
+    {
+
+    }
+
+    /**
+     * Test attribute "discard_status"
+     */
+    public function testPropertyDiscardStatus()
+    {
+
+    }
+
+    /**
+     * Test attribute "discard_status_note"
+     */
+    public function testPropertyDiscardStatusNote()
+    {
+
+    }
+
 }

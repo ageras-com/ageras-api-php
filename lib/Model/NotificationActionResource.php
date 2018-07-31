@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -107,8 +107,9 @@ class NotificationActionResource implements ArrayAccess
         return self::$getters;
     }
 
-    const ACTION_SEEN = 'has_been_seen';
-    const ACTION_READ = 'has_been_read';
+    const ACTION_UNKNOWN = 'unknown';
+    const ACTION_MARK_SEEN = 'mark_seen';
+    const ACTION_MARK_READ = 'mark_read';
     
 
     
@@ -119,8 +120,9 @@ class NotificationActionResource implements ArrayAccess
     public function getActionAllowableValues()
     {
         return [
-            self::ACTION_SEEN,
-            self::ACTION_READ,
+            self::ACTION_UNKNOWN,
+            self::ACTION_MARK_SEEN,
+            self::ACTION_MARK_READ,
         ];
     }
     
@@ -138,7 +140,7 @@ class NotificationActionResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['notification_ids'] = isset($data['notification_ids']) ? $data['notification_ids'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : 'has_been_seen';
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
     }
 
     /**
@@ -150,9 +152,9 @@ class NotificationActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["has_been_seen", "has_been_read"];
+        $allowed_values = ["unknown", "mark_seen", "mark_read"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'has_been_seen', 'has_been_read'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'mark_seen', 'mark_read'.";
         }
 
         return $invalid_properties;
@@ -167,7 +169,7 @@ class NotificationActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["has_been_seen", "has_been_read"];
+        $allowed_values = ["unknown", "mark_seen", "mark_read"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -212,9 +214,9 @@ class NotificationActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('has_been_seen', 'has_been_read');
+        $allowed_values = array('unknown', 'mark_seen', 'mark_read');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'has_been_seen', 'has_been_read'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'mark_seen', 'mark_read'");
         }
         $this->container['action'] = $action;
 

@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -60,7 +60,7 @@ class PartnerUserCvExperienceResource implements ArrayAccess
         'content' => 'string',
         'from_date' => 'string',
         'to_date' => 'string',
-        'partner' => '\Ageras\Api\Model\PartnerResource',
+        'partner' => '\Ageras\Api\Model\PartnerUserCvPartnerResource',
         'validation' => 'string'
     ];
 
@@ -310,7 +310,7 @@ class PartnerUserCvExperienceResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\Model\PartnerResource
+     * @return \Ageras\Api\Model\PartnerUserCvPartnerResource
      */
     public function getPartner()
     {
@@ -319,7 +319,7 @@ class PartnerUserCvExperienceResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\Model\PartnerResource $partner
+     * @param \Ageras\Api\Model\PartnerUserCvPartnerResource $partner
      * @return $this
      */
     public function setPartner($partner)

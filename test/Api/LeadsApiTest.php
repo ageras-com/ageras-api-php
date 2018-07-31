@@ -88,6 +88,28 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsAggregationsIndex
+     *
+     * List facets and aggregations for the Lead Search..
+     *
+     */
+    public function testLeadsAggregationsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsCategoriesIndex
+     *
+     * Index lead categories ..
+     *
+     */
+    public function testLeadsCategoriesIndex()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
      * Create a new Lead..
@@ -105,6 +127,39 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersCreate
+     *
+     * Add partner to lead's excluded partner list.
+     *
+     */
+    public function testLeadsExcludedpartnersCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersDelete
+     *
+     * Remove partner from the lead's excluded partner list.
+     *
+     */
+    public function testLeadsExcludedpartnersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersIndex
+     *
+     * Show all excluded partners for a specific lead..
+     *
+     */
+    public function testLeadsExcludedpartnersIndex()
     {
 
     }
@@ -193,6 +248,171 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsOffersIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesActionsCreate
+     *
+     * Publish a given quote, accept it and other actions..
+     *
+     */
+    public function testLeadsQuotesActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesCreate
+     *
+     * Create a new quote for a given Lead..
+     *
+     */
+    public function testLeadsQuotesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesDelete
+     *
+     * Delete a quote for a given Lead..
+     *
+     */
+    public function testLeadsQuotesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesGet
+     *
+     * Get an quote by id..
+     *
+     */
+    public function testLeadsQuotesGet()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesGet2
+     *
+     * Get an quote by id..
+     *
+     */
+    public function testLeadsQuotesGet2()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesIndex
+     *
+     * List the quotes connected to a given Lead..
+     *
+     */
+    public function testLeadsQuotesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesIndex2
+     *
+     * List the quotes connected to a given Lead..
+     *
+     */
+    public function testLeadsQuotesIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsCreate
+     *
+     * Create a new quote item for a given Quote..
+     *
+     */
+    public function testLeadsQuotesItemsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsDelete
+     *
+     * Delete a quote item..
+     *
+     */
+    public function testLeadsQuotesItemsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsGet
+     *
+     * Get a quote item by id..
+     *
+     */
+    public function testLeadsQuotesItemsGet()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsIndex
+     *
+     * List the quote items connected to a given Quote..
+     *
+     */
+    public function testLeadsQuotesItemsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesItemsUpdate
+     *
+     * Update a quote item..
+     *
+     */
+    public function testLeadsQuotesItemsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesProgressstepsIndex
+     *
+     * Get quote progress statuses..
+     *
+     */
+    public function testLeadsQuotesProgressstepsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesUpdate
+     *
+     * Update a quote..
+     *
+     */
+    public function testLeadsQuotesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesUpdate2
+     *
+     * Update a quote..
+     *
+     */
+    public function testLeadsQuotesUpdate2()
     {
 
     }

@@ -45,7 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offer_id** | **string**|  |
- **offer_action_resource** | [**\Ageras\Api\Model\OfferActionResource**](../Model/\Ageras\Api\Model\OfferActionResource.md)|  |
+ **offer_action_resource** | [**\Ageras\Api\Model\OfferActionResource**](../Model/OfferActionResource.md)|  |
 
 ### Return type
 

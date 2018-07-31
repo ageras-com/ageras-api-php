@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -60,7 +60,9 @@ class LeadCustomerInfoResource implements ArrayAccess
         'email' => 'string',
         'phone' => 'string',
         'mobile' => 'string',
-        'vat_number' => 'string'
+        'vat_number' => 'string',
+        'customer_type' => '\Ageras\Api\Model\LeadCustomerTypeResource',
+        'show_prices_including_vat' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,9 @@ class LeadCustomerInfoResource implements ArrayAccess
         'email' => 'email',
         'phone' => 'phone',
         'mobile' => 'mobile',
-        'vat_number' => 'vat_number'
+        'vat_number' => 'vat_number',
+        'customer_type' => 'customer_type',
+        'show_prices_including_vat' => 'show_prices_including_vat'
     ];
 
 
@@ -94,7 +98,9 @@ class LeadCustomerInfoResource implements ArrayAccess
         'email' => 'setEmail',
         'phone' => 'setPhone',
         'mobile' => 'setMobile',
-        'vat_number' => 'setVatNumber'
+        'vat_number' => 'setVatNumber',
+        'customer_type' => 'setCustomerType',
+        'show_prices_including_vat' => 'setShowPricesIncludingVat'
     ];
 
 
@@ -109,7 +115,9 @@ class LeadCustomerInfoResource implements ArrayAccess
         'email' => 'getEmail',
         'phone' => 'getPhone',
         'mobile' => 'getMobile',
-        'vat_number' => 'getVatNumber'
+        'vat_number' => 'getVatNumber',
+        'customer_type' => 'getCustomerType',
+        'show_prices_including_vat' => 'getShowPricesIncludingVat'
     ];
 
     public static function attributeMap()
@@ -150,6 +158,8 @@ class LeadCustomerInfoResource implements ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
+        $this->container['customer_type'] = isset($data['customer_type']) ? $data['customer_type'] : null;
+        $this->container['show_prices_including_vat'] = isset($data['show_prices_including_vat']) ? $data['show_prices_including_vat'] : false;
     }
 
     /**
@@ -320,6 +330,48 @@ class LeadCustomerInfoResource implements ArrayAccess
     public function setVatNumber($vat_number)
     {
         $this->container['vat_number'] = $vat_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_type
+     * @return \Ageras\Api\Model\LeadCustomerTypeResource
+     */
+    public function getCustomerType()
+    {
+        return $this->container['customer_type'];
+    }
+
+    /**
+     * Sets customer_type
+     * @param \Ageras\Api\Model\LeadCustomerTypeResource $customer_type
+     * @return $this
+     */
+    public function setCustomerType($customer_type)
+    {
+        $this->container['customer_type'] = $customer_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets show_prices_including_vat
+     * @return bool
+     */
+    public function getShowPricesIncludingVat()
+    {
+        return $this->container['show_prices_including_vat'];
+    }
+
+    /**
+     * Sets show_prices_including_vat
+     * @param bool $show_prices_including_vat If true, prices should be displayed to the customer including VAT
+     * @return $this
+     */
+    public function setShowPricesIncludingVat($show_prices_including_vat)
+    {
+        $this->container['show_prices_including_vat'] = $show_prices_including_vat;
 
         return $this;
     }

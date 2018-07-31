@@ -1,21 +1,13 @@
-# KPIResource
+# KpiResource
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Id for the given kpi | [optional] 
-**created_at** | **string** | When the kpi was calculated | [optional] 
-**geo_code** | **string** | Geo Location Geo | [optional] 
-**industry** | [**\Ageras\Api\Model\IndustryResource**](IndustryResource.md) |  | [optional] 
-**employee** | [**\Ageras\Api\Model\EmployeeResource**](EmployeeResource.md) |  | [optional] 
-**partner** | [**\Ageras\Api\Model\PartnerSuggestResource**](PartnerSuggestResource.md) |  | [optional] 
-**leads** | [**\Ageras\Api\Model\KPILeadsResource**](KPILeadsResource.md) |  | [optional] 
-**credits** | [**\Ageras\Api\Model\KPICreditsResource**](KPICreditsResource.md) |  | [optional] 
-**matches** | [**\Ageras\Api\Model\KPIMatchesResource**](KPIMatchesResource.md) |  | [optional] 
-**partners** | [**\Ageras\Api\Model\KPIPartnersResource**](KPIPartnersResource.md) |  | [optional] 
-**refills** | [**\Ageras\Api\Model\KPIRefillsResource**](KPIRefillsResource.md) |  | [optional] 
-**new_sales** | [**\Ageras\Api\Model\KPINewSalesResource**](KPINewSalesResource.md) |  | [optional] 
-**sales** | [**\Ageras\Api\Model\KPISalesResource**](KPISalesResource.md) |  | [optional] 
+**calls_made** | **int** | Number of calls made. | [optional] 
+**actions_taken** | **int** | Number of actions taken by the employee. | [optional] 
+**validation_efficiency_long_term** | **float** | Emplyee-level validation ratio for long term, e.g. last 60 days. | [optional] 
+**validation_efficiency_short_term** | **float** | Emplyee-level validation ratio for short term, e.g. last 10 days. | [optional] 
+**validated_leads** | **int** | Number of validated leads this month. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

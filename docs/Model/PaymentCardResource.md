@@ -4,11 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | User Id. | [optional] 
-**partner_id** | **int** | Id to the given partner the card belongs to. | [optional] 
+**owner** | [**\Ageras\Api\Model\PaymentCardOwnerResource**](PaymentCardOwnerResource.md) |  | [optional] 
+**provider** | [**\Ageras\Api\Model\PaymentProviderResource**](PaymentProviderResource.md) |  | [optional] 
+**card_name** | **string** | Card name. | [optional] 
+**card_type** | **string** | Type of card | [optional] 
 **card_mask** | **string** | Card mask. | [optional] 
-**provider** | **string** | Id to the given partner the card belongs to. | [optional] 
-**provider_id** | **string** | Subscription id. | [optional] 
+**expiration** | [**\Ageras\Api\Model\PaymentCardExpirationResource**](PaymentCardExpirationResource.md) |  | [optional] 
 **is_being_used** | **bool** | Is payment card is being used in any package. | [optional] [default to false]
+**data** | [**\Ageras\Api\Model\PaymentCardDataResource**](PaymentCardDataResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

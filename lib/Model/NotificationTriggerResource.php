@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -57,7 +57,8 @@ class NotificationTriggerResource implements ArrayAccess
         'type' => 'string',
         'partner_user' => '\Ageras\Api\Model\PartnerUserResource',
         'employee' => '\Ageras\Api\Model\EmployeeResource',
-        'project_customer' => '\Ageras\Api\Model\ProjectCustomerResource'
+        'project_customer' => '\Ageras\Api\Model\ProjectCustomerResource',
+        'client' => '\Ageras\Api\Model\ClientResource'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class NotificationTriggerResource implements ArrayAccess
         'type' => 'type',
         'partner_user' => 'partner_user',
         'employee' => 'employee',
-        'project_customer' => 'project_customer'
+        'project_customer' => 'project_customer',
+        'client' => 'client'
     ];
 
 
@@ -85,7 +87,8 @@ class NotificationTriggerResource implements ArrayAccess
         'type' => 'setType',
         'partner_user' => 'setPartnerUser',
         'employee' => 'setEmployee',
-        'project_customer' => 'setProjectCustomer'
+        'project_customer' => 'setProjectCustomer',
+        'client' => 'setClient'
     ];
 
 
@@ -97,7 +100,8 @@ class NotificationTriggerResource implements ArrayAccess
         'type' => 'getType',
         'partner_user' => 'getPartnerUser',
         'employee' => 'getEmployee',
-        'project_customer' => 'getProjectCustomer'
+        'project_customer' => 'getProjectCustomer',
+        'client' => 'getClient'
     ];
 
     public static function attributeMap()
@@ -116,6 +120,7 @@ class NotificationTriggerResource implements ArrayAccess
     }
 
     const TYPE_UNKNOWN = 'unknown';
+    const TYPE_CLIENT = 'client';
     const TYPE_EMPLOYEE = 'employee';
     const TYPE_PARTNER_USER = 'partner_user';
     const TYPE_PROJECT_CUSTOMER = 'project_customer';
@@ -130,6 +135,7 @@ class NotificationTriggerResource implements ArrayAccess
     {
         return [
             self::TYPE_UNKNOWN,
+            self::TYPE_CLIENT,
             self::TYPE_EMPLOYEE,
             self::TYPE_PARTNER_USER,
             self::TYPE_PROJECT_CUSTOMER,
@@ -153,6 +159,7 @@ class NotificationTriggerResource implements ArrayAccess
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
         $this->container['project_customer'] = isset($data['project_customer']) ? $data['project_customer'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
     }
 
     /**
@@ -164,9 +171,9 @@ class NotificationTriggerResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "employee", "partner_user", "project_customer"];
+        $allowed_values = ["unknown", "client", "employee", "partner_user", "project_customer"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'employee', 'partner_user', 'project_customer'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'client', 'employee', 'partner_user', 'project_customer'.";
         }
 
         return $invalid_properties;
@@ -181,7 +188,7 @@ class NotificationTriggerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "employee", "partner_user", "project_customer"];
+        $allowed_values = ["unknown", "client", "employee", "partner_user", "project_customer"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -205,9 +212,9 @@ class NotificationTriggerResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'employee', 'partner_user', 'project_customer');
+        $allowed_values = array('unknown', 'client', 'employee', 'partner_user', 'project_customer');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'employee', 'partner_user', 'project_customer'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'client', 'employee', 'partner_user', 'project_customer'");
         }
         $this->container['type'] = $type;
 
@@ -273,6 +280,27 @@ class NotificationTriggerResource implements ArrayAccess
     public function setProjectCustomer($project_customer)
     {
         $this->container['project_customer'] = $project_customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     * @return \Ageras\Api\Model\ClientResource
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     * @param \Ageras\Api\Model\ClientResource $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->container['client'] = $client;
 
         return $this;
     }

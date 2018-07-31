@@ -44,7 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prompt_id** | **string**|  |
- **prompt_action_resource** | [**\Ageras\Api\Model\PromptActionResource**](../Model/\Ageras\Api\Model\PromptActionResource.md)|  |
+ **prompt_action_resource** | [**\Ageras\Api\Model\PromptActionResource**](../Model/PromptActionResource.md)|  |
 
 ### Return type
 

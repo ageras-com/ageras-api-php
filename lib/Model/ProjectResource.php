@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -66,7 +66,9 @@ class ProjectResource implements ArrayAccess
         'partner' => '\Ageras\Api\Model\PartnerResource',
         'partner_user' => '\Ageras\Api\Model\PartnerUserResource',
         'customers' => '\Ageras\Api\Model\ProjectCustomerResource[]',
-        'geo' => '\Ageras\Api\Model\ProjectGeoResource'
+        'geo' => '\Ageras\Api\Model\ProjectGeoResource',
+        'quote' => '\Ageras\Api\Model\LeadQuoteResource',
+        'notes' => '\Ageras\Api\Model\ProjectNoteResource[]'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,9 @@ class ProjectResource implements ArrayAccess
         'partner' => 'partner',
         'partner_user' => 'partner_user',
         'customers' => 'customers',
-        'geo' => 'geo'
+        'geo' => 'geo',
+        'quote' => 'quote',
+        'notes' => 'notes'
     ];
 
 
@@ -112,7 +116,9 @@ class ProjectResource implements ArrayAccess
         'partner' => 'setPartner',
         'partner_user' => 'setPartnerUser',
         'customers' => 'setCustomers',
-        'geo' => 'setGeo'
+        'geo' => 'setGeo',
+        'quote' => 'setQuote',
+        'notes' => 'setNotes'
     ];
 
 
@@ -133,7 +139,9 @@ class ProjectResource implements ArrayAccess
         'partner' => 'getPartner',
         'partner_user' => 'getPartnerUser',
         'customers' => 'getCustomers',
-        'geo' => 'getGeo'
+        'geo' => 'getGeo',
+        'quote' => 'getQuote',
+        'notes' => 'getNotes'
     ];
 
     public static function attributeMap()
@@ -180,6 +188,8 @@ class ProjectResource implements ArrayAccess
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
         $this->container['customers'] = isset($data['customers']) ? $data['customers'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
+        $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
     }
 
     /**
@@ -476,6 +486,48 @@ class ProjectResource implements ArrayAccess
     public function setGeo($geo)
     {
         $this->container['geo'] = $geo;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote
+     * @return \Ageras\Api\Model\LeadQuoteResource
+     */
+    public function getQuote()
+    {
+        return $this->container['quote'];
+    }
+
+    /**
+     * Sets quote
+     * @param \Ageras\Api\Model\LeadQuoteResource $quote
+     * @return $this
+     */
+    public function setQuote($quote)
+    {
+        $this->container['quote'] = $quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \Ageras\Api\Model\ProjectNoteResource[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \Ageras\Api\Model\ProjectNoteResource[] $notes
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }

@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -59,7 +59,10 @@ class AttachmentResource implements ArrayAccess
         'content' => 'string',
         'url' => 'string',
         'type' => 'string',
-        'size' => 'int'
+        'size' => 'int',
+        'created_at' => 'string',
+        'owner_name' => 'string',
+        'conversation_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -77,7 +80,10 @@ class AttachmentResource implements ArrayAccess
         'content' => 'content',
         'url' => 'url',
         'type' => 'type',
-        'size' => 'size'
+        'size' => 'size',
+        'created_at' => 'created_at',
+        'owner_name' => 'owner_name',
+        'conversation_id' => 'conversation_id'
     ];
 
 
@@ -91,7 +97,10 @@ class AttachmentResource implements ArrayAccess
         'content' => 'setContent',
         'url' => 'setUrl',
         'type' => 'setType',
-        'size' => 'setSize'
+        'size' => 'setSize',
+        'created_at' => 'setCreatedAt',
+        'owner_name' => 'setOwnerName',
+        'conversation_id' => 'setConversationId'
     ];
 
 
@@ -105,7 +114,10 @@ class AttachmentResource implements ArrayAccess
         'content' => 'getContent',
         'url' => 'getUrl',
         'type' => 'getType',
-        'size' => 'getSize'
+        'size' => 'getSize',
+        'created_at' => 'getCreatedAt',
+        'owner_name' => 'getOwnerName',
+        'conversation_id' => 'getConversationId'
     ];
 
     public static function attributeMap()
@@ -145,6 +157,9 @@ class AttachmentResource implements ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
+        $this->container['conversation_id'] = isset($data['conversation_id']) ? $data['conversation_id'] : null;
     }
 
     /**
@@ -294,6 +309,69 @@ class AttachmentResource implements ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_name
+     * @return string
+     */
+    public function getOwnerName()
+    {
+        return $this->container['owner_name'];
+    }
+
+    /**
+     * Sets owner_name
+     * @param string $owner_name
+     * @return $this
+     */
+    public function setOwnerName($owner_name)
+    {
+        $this->container['owner_name'] = $owner_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets conversation_id
+     * @return int
+     */
+    public function getConversationId()
+    {
+        return $this->container['conversation_id'];
+    }
+
+    /**
+     * Sets conversation_id
+     * @param int $conversation_id
+     * @return $this
+     */
+    public function setConversationId($conversation_id)
+    {
+        $this->container['conversation_id'] = $conversation_id;
 
         return $this;
     }

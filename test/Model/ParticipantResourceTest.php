@@ -178,4 +178,28 @@ class ParticipantResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "customer_id"
+     */
+    public function testPropertyCustomerId()
+    {
+
+    }
+
+    /**
+     * Test attribute "zip_code"
+     */
+    public function testPropertyZipCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "city"
+     */
+    public function testPropertyCity()
+    {
+
+    }
+
 }

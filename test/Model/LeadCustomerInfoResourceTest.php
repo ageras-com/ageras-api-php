@@ -138,4 +138,20 @@ class LeadCustomerInfoResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "customer_type"
+     */
+    public function testPropertyCustomerType()
+    {
+
+    }
+
+    /**
+     * Test attribute "show_prices_including_vat"
+     */
+    public function testPropertyShowPricesIncludingVat()
+    {
+
+    }
+
 }

@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -116,11 +116,13 @@ class PartnerActionResource implements ArrayAccess
     const ACTION_MAKE_DEMO = 'make-demo';
     const ACTION_CONTINUE_DEMO = 'continue-demo';
     const ACTION_NOT_INTERESTED = 'not-interested';
+    const ACTION_STRIPE_SYNC = 'stripe-sync';
     const ACTION_CANVAS_POSTPONE = 'canvas-postpone';
     const ACTION_CANVAS_NOT_IN_INDUSTRY = 'canvas-not-in-industry';
     const ACTION_CANVAS_OUT_OF_BUSINESS = 'canvas-out-of-business';
     const ACTION_CANVAS_ALREADY_PARTNER = 'canvas-already-partner';
     const ACTION_CANVAS_NOT_RELEVANT = 'canvas-not-relevant';
+    const ACTION_EMPLOYEE_CALLS_PARTNER = 'employee-calls-partner';
     
 
     
@@ -136,11 +138,13 @@ class PartnerActionResource implements ArrayAccess
             self::ACTION_MAKE_DEMO,
             self::ACTION_CONTINUE_DEMO,
             self::ACTION_NOT_INTERESTED,
+            self::ACTION_STRIPE_SYNC,
             self::ACTION_CANVAS_POSTPONE,
             self::ACTION_CANVAS_NOT_IN_INDUSTRY,
             self::ACTION_CANVAS_OUT_OF_BUSINESS,
             self::ACTION_CANVAS_ALREADY_PARTNER,
             self::ACTION_CANVAS_NOT_RELEVANT,
+            self::ACTION_EMPLOYEE_CALLS_PARTNER,
         ];
     }
     
@@ -171,9 +175,9 @@ class PartnerActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner'.";
         }
 
         return $invalid_properties;
@@ -188,7 +192,7 @@ class PartnerActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -212,9 +216,9 @@ class PartnerActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant');
+        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner'");
         }
         $this->container['action'] = $action;
 

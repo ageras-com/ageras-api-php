@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -63,7 +63,8 @@ class KPIPartnersResource implements ArrayAccess
         'cancellations' => '\Ageras\Api\Model\KPINumberResource',
         'satisfactions' => '\Ageras\Api\Model\KPINumberResource',
         'success_ratio' => '\Ageras\Api\Model\KPIPartnersSuccessRatioResource',
-        'unique_spending' => '\Ageras\Api\Model\KPIPartnersUniqueSpendingResource'
+        'unique_spending' => '\Ageras\Api\Model\KPIPartnersUniqueSpendingResource',
+        'active_partner_packages' => '\Ageras\Api\Model\KPINumberResource'
     ];
 
     public static function swaggerTypes()
@@ -85,7 +86,8 @@ class KPIPartnersResource implements ArrayAccess
         'cancellations' => 'cancellations',
         'satisfactions' => 'satisfactions',
         'success_ratio' => 'success_ratio',
-        'unique_spending' => 'unique_spending'
+        'unique_spending' => 'unique_spending',
+        'active_partner_packages' => 'active_partner_packages'
     ];
 
 
@@ -103,7 +105,8 @@ class KPIPartnersResource implements ArrayAccess
         'cancellations' => 'setCancellations',
         'satisfactions' => 'setSatisfactions',
         'success_ratio' => 'setSuccessRatio',
-        'unique_spending' => 'setUniqueSpending'
+        'unique_spending' => 'setUniqueSpending',
+        'active_partner_packages' => 'setActivePartnerPackages'
     ];
 
 
@@ -121,7 +124,8 @@ class KPIPartnersResource implements ArrayAccess
         'cancellations' => 'getCancellations',
         'satisfactions' => 'getSatisfactions',
         'success_ratio' => 'getSuccessRatio',
-        'unique_spending' => 'getUniqueSpending'
+        'unique_spending' => 'getUniqueSpending',
+        'active_partner_packages' => 'getActivePartnerPackages'
     ];
 
     public static function attributeMap()
@@ -165,6 +169,7 @@ class KPIPartnersResource implements ArrayAccess
         $this->container['satisfactions'] = isset($data['satisfactions']) ? $data['satisfactions'] : null;
         $this->container['success_ratio'] = isset($data['success_ratio']) ? $data['success_ratio'] : null;
         $this->container['unique_spending'] = isset($data['unique_spending']) ? $data['unique_spending'] : null;
+        $this->container['active_partner_packages'] = isset($data['active_partner_packages']) ? $data['active_partner_packages'] : null;
     }
 
     /**
@@ -398,6 +403,27 @@ class KPIPartnersResource implements ArrayAccess
     public function setUniqueSpending($unique_spending)
     {
         $this->container['unique_spending'] = $unique_spending;
+
+        return $this;
+    }
+
+    /**
+     * Gets active_partner_packages
+     * @return \Ageras\Api\Model\KPINumberResource
+     */
+    public function getActivePartnerPackages()
+    {
+        return $this->container['active_partner_packages'];
+    }
+
+    /**
+     * Sets active_partner_packages
+     * @param \Ageras\Api\Model\KPINumberResource $active_partner_packages
+     * @return $this
+     */
+    public function setActivePartnerPackages($active_partner_packages)
+    {
+        $this->container['active_partner_packages'] = $active_partner_packages;
 
         return $this;
     }

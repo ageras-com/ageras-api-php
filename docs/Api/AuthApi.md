@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/\Ageras\Api\Model\AuthResource.md)| Authentication Resource with authorize information |
+ **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/AuthResource.md)| Authentication Resource with authorize information |
 
 ### Return type
 
@@ -192,7 +192,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/\Ageras\Api\Model\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/PasswordResetResource.md)|  |
 
 ### Return type
 
@@ -243,7 +243,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/\Ageras\Api\Model\PasswordResetResource.md)|  |
+ **password_reset_resource** | [**\Ageras\Api\Model\PasswordResetResource**](../Model/PasswordResetResource.md)|  |
 
 ### Return type
 
@@ -294,7 +294,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reminder_resource** | [**\Ageras\Api\Model\PasswordReminderResource**](../Model/\Ageras\Api\Model\PasswordReminderResource.md)|  |
+ **password_reminder_resource** | [**\Ageras\Api\Model\PasswordReminderResource**](../Model/PasswordReminderResource.md)|  |
 
 ### Return type
 
@@ -402,7 +402,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/\Ageras\Api\Model\AuthResource.md)|  |
+ **auth_resource** | [**\Ageras\Api\Model\AuthResource**](../Model/AuthResource.md)|  |
 
 ### Return type
 

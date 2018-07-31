@@ -182,10 +182,12 @@ class InvoicesApi
      * @param $criteria = [
      *    'invoice_id' => string,
      *    'partner_id' => string,
+     *    'client_id' => string,
      *    'is_paid' => bool,
      *    'is_overdue' => bool,
      *    'sort' => string,
      *    'geo_code' => string,
+     *    'invoice_number' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -207,10 +209,12 @@ class InvoicesApi
      * @param $criteria = [
      *    'invoice_id' => string,
      *    'partner_id' => string,
+     *    'client_id' => string,
      *    'is_paid' => bool,
      *    'is_overdue' => bool,
      *    'sort' => string,
      *    'geo_code' => string,
+     *    'invoice_number' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -241,6 +245,10 @@ class InvoicesApi
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
         }
         // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
         if (isset($criteria['is_paid'])) {
             $queryParams['is_paid'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_paid']);
         }
@@ -255,6 +263,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['invoice_number'])) {
+            $queryParams['invoice_number'] = $this->apiClient->getSerializer()->toQueryValue($criteria['invoice_number']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -301,6 +313,662 @@ class InvoicesApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\InvoiceResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsActionsCreate
+     *
+     * Perform an action on a refund reuqest.
+     *
+     * @param string $invoice_id 
+     * @param string $voucher_refund_request_id 
+     * @param \Ageras\Api\Model\VoucherRefundRequestActionResource $voucher_refund_request_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResource
+     */
+    public function invoicesRefundrequestsActionsCreate($invoice_id,  $voucher_refund_request_id , $voucher_refund_request_action_resource)
+    {
+        list($response) = $this->invoicesRefundrequestsActionsCreateWithHttpInfo($invoice_id, $voucher_refund_request_id, $voucher_refund_request_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsActionsCreateWithHttpInfo
+     *
+     * Perform an action on a refund reuqest.
+     *
+     * @param string $invoice_id 
+     * @param string $voucher_refund_request_id 
+     * @param \Ageras\Api\Model\VoucherRefundRequestActionResource $voucher_refund_request_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsActionsCreateWithHttpInfo($invoice_id,  $voucher_refund_request_id , $voucher_refund_request_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($invoice_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "invoice_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($invoice_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($voucher_refund_request_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "voucher_refund_request_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($voucher_refund_request_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($voucher_refund_request_action_resource)) {
+            $_tempBody = $voucher_refund_request_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResource',
+                '/invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsCreate
+     *
+     * Create refund request for a given invoice_id.
+     *
+     * @param string $invoice_id 
+     * @param \Ageras\Api\Model\VoucherRefundRequestResource $voucher_refund_request_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResource
+     */
+    public function invoicesRefundrequestsCreate($invoice_id , $voucher_refund_request_resource)
+    {
+        list($response) = $this->invoicesRefundrequestsCreateWithHttpInfo($invoice_id, $voucher_refund_request_resource);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsCreateWithHttpInfo
+     *
+     * Create refund request for a given invoice_id.
+     *
+     * @param string $invoice_id 
+     * @param \Ageras\Api\Model\VoucherRefundRequestResource $voucher_refund_request_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsCreateWithHttpInfo($invoice_id , $voucher_refund_request_resource)
+    {
+        // parse inputs
+        $resourcePath = "/invoices/{invoice_id}/refundrequests";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($invoice_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "invoice_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($invoice_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($voucher_refund_request_resource)) {
+            $_tempBody = $voucher_refund_request_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResource',
+                '/invoices/{invoice_id}/refundrequests'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsGet
+     *
+     * Get a refund request by ID.
+     *
+     * @param string $voucher_refund_request_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResource
+     */
+    public function invoicesRefundrequestsGet($voucher_refund_request_id )
+    {
+        list($response) = $this->invoicesRefundrequestsGetWithHttpInfo($voucher_refund_request_id);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsGetWithHttpInfo
+     *
+     * Get a refund request by ID.
+     *
+     * @param string $voucher_refund_request_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsGetWithHttpInfo($voucher_refund_request_id )
+    {
+        // parse inputs
+        $resourcePath = "/invoices/refundrequests/{voucher_refund_request_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($voucher_refund_request_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "voucher_refund_request_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($voucher_refund_request_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResource',
+                '/invoices/refundrequests/{voucher_refund_request_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsGet2
+     *
+     * Get a refund request by ID.
+     *
+     * @param string $invoice_id 
+     * @param string $voucher_refund_request_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResource
+     */
+    public function invoicesRefundrequestsGet2($invoice_id,  $voucher_refund_request_id )
+    {
+        list($response) = $this->invoicesRefundrequestsGet2WithHttpInfo($invoice_id, $voucher_refund_request_id);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsGet2WithHttpInfo
+     *
+     * Get a refund request by ID.
+     *
+     * @param string $invoice_id 
+     * @param string $voucher_refund_request_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsGet2WithHttpInfo($invoice_id,  $voucher_refund_request_id )
+    {
+        // parse inputs
+        $resourcePath = "/invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($invoice_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "invoice_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($invoice_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($voucher_refund_request_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "voucher_refund_request_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($voucher_refund_request_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResource',
+                '/invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsIndex
+     *
+     * Get refund requests from a given invoice_id.
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'voucher_id' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResult
+     */
+    public function invoicesRefundrequestsIndex($criteria = [])
+    {
+        list($response) = $this->invoicesRefundrequestsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsIndexWithHttpInfo
+     *
+     * Get refund requests from a given invoice_id.
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'voucher_id' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/invoices/refundrequests";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['id'])) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['id']);
+        }
+        // query params
+        if (isset($criteria['voucher_id'])) {
+            $queryParams['voucher_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['voucher_id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['status'])) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResult',
+                '/invoices/refundrequests'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation invoicesRefundrequestsIndex2
+     *
+     * Get refund requests from a given invoice_id.
+     *
+     * @param string $voucher_id 
+     * @param $criteria = [
+     *    'id' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\VoucherRefundRequestResult
+     */
+    public function invoicesRefundrequestsIndex2($voucher_id , $criteria = [])
+    {
+        list($response) = $this->invoicesRefundrequestsIndex2WithHttpInfo($voucher_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation invoicesRefundrequestsIndex2WithHttpInfo
+     *
+     * Get refund requests from a given invoice_id.
+     *
+     * @param string $voucher_id 
+     * @param $criteria = [
+     *    'id' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\VoucherRefundRequestResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function invoicesRefundrequestsIndex2WithHttpInfo($voucher_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/invoices/{voucher_id}/refundrequests";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['id'])) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['status'])) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($voucher_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "voucher_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($voucher_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\VoucherRefundRequestResult',
+                '/invoices/{voucher_id}/refundrequests'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\VoucherRefundRequestResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\VoucherRefundRequestResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

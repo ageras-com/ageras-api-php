@@ -195,6 +195,14 @@ class PartnerUserResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "wants_daily_email"
+     */
+    public function testPropertyWantsDailyEmail()
+    {
+
+    }
+
+    /**
      * Test attribute "is_visible"
      */
     public function testPropertyIsVisible()

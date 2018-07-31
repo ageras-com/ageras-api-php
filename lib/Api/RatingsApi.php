@@ -88,6 +88,90 @@ class RatingsApi
     }
 
     /**
+     * Operation ratingsCreate
+     *
+     * Create a rating.
+     *
+     * @param \Ageras\Api\Model\RatingResource $rating_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\RatingResource
+     */
+    public function ratingsCreate($rating_resource)
+    {
+        list($response) = $this->ratingsCreateWithHttpInfo($rating_resource);
+        return $response;
+    }
+
+    /**
+     * Operation ratingsCreateWithHttpInfo
+     *
+     * Create a rating.
+     *
+     * @param \Ageras\Api\Model\RatingResource $rating_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\RatingResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function ratingsCreateWithHttpInfo($rating_resource)
+    {
+        // parse inputs
+        $resourcePath = "/ratings";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($rating_resource)) {
+            $_tempBody = $rating_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\RatingResource',
+                '/ratings'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\RatingResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\RatingResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation ratingsGet
      *
      * Return a rating from a rating ID.

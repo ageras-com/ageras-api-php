@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -60,15 +60,15 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'paid_at' => 'string',
         'expires_at' => 'string',
         'published_at' => 'string',
-        'partner' => '\Ageras\Api\Model\PartnerSuggestResource',
+        'partner' => '\Ageras\Api\Model\LeadPartnerResource',
         'partner_lead_offer_id' => 'int',
         'title' => 'string',
         'description' => 'string',
-        'price' => 'string',
+        'items' => '\Ageras\Api\Model\LeadQuoteItemResource[]',
+        'payment' => '\Ageras\Api\Model\LeadQuotePaymentResource',
         'total_vat_amount' => '\Ageras\Api\Model\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\Model\AmountResource',
-        'total_amount_incl_vat' => '\Ageras\Api\Model\AmountResource',
-        'prepayment_amount_incl_vat' => '\Ageras\Api\Model\AmountResource'
+        'total_amount_incl_vat' => '\Ageras\Api\Model\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -91,11 +91,11 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'partner_lead_offer_id' => 'partner_lead_offer_id',
         'title' => 'title',
         'description' => 'description',
-        'price' => 'price',
+        'items' => 'items',
+        'payment' => 'payment',
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
-        'total_amount_incl_vat' => 'total_amount_incl_vat',
-        'prepayment_amount_incl_vat' => 'prepayment_amount_incl_vat'
+        'total_amount_incl_vat' => 'total_amount_incl_vat'
     ];
 
 
@@ -114,11 +114,11 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'partner_lead_offer_id' => 'setPartnerLeadOfferId',
         'title' => 'setTitle',
         'description' => 'setDescription',
-        'price' => 'setPrice',
+        'items' => 'setItems',
+        'payment' => 'setPayment',
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
-        'total_amount_incl_vat' => 'setTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'setPrepaymentAmountInclVat'
+        'total_amount_incl_vat' => 'setTotalAmountInclVat'
     ];
 
 
@@ -137,11 +137,11 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'partner_lead_offer_id' => 'getPartnerLeadOfferId',
         'title' => 'getTitle',
         'description' => 'getDescription',
-        'price' => 'getPrice',
+        'items' => 'getItems',
+        'payment' => 'getPayment',
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
-        'total_amount_incl_vat' => 'getTotalAmountInclVat',
-        'prepayment_amount_incl_vat' => 'getPrepaymentAmountInclVat'
+        'total_amount_incl_vat' => 'getTotalAmountInclVat'
     ];
 
     public static function attributeMap()
@@ -159,7 +159,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_NEW = 'new';
+    const STATUS__NEW = 'new';
     const STATUS_ACCEPTED = 'accepted';
     const STATUS_REJECTED = 'rejected';
     const STATUS_EXPIRED = 'expired';
@@ -173,7 +173,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     public function getStatusAllowableValues()
     {
         return [
-            self::STATUS_NEW,
+            self::STATUS__NEW,
             self::STATUS_ACCEPTED,
             self::STATUS_REJECTED,
             self::STATUS_EXPIRED,
@@ -203,11 +203,11 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         $this->container['partner_lead_offer_id'] = isset($data['partner_lead_offer_id']) ? $data['partner_lead_offer_id'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['payment'] = isset($data['payment']) ? $data['payment'] : null;
         $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
-        $this->container['prepayment_amount_incl_vat'] = isset($data['prepayment_amount_incl_vat']) ? $data['prepayment_amount_incl_vat'] : null;
     }
 
     /**
@@ -376,7 +376,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\Model\PartnerSuggestResource
+     * @return \Ageras\Api\Model\LeadPartnerResource
      */
     public function getPartner()
     {
@@ -385,7 +385,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\Model\PartnerSuggestResource $partner
+     * @param \Ageras\Api\Model\LeadPartnerResource $partner
      * @return $this
      */
     public function setPartner($partner)
@@ -459,22 +459,43 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     }
 
     /**
-     * Gets price
-     * @return string
+     * Gets items
+     * @return \Ageras\Api\Model\LeadQuoteItemResource[]
      */
-    public function getPrice()
+    public function getItems()
     {
-        return $this->container['price'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets price
-     * @param string $price Total price for the given quote
+     * Sets items
+     * @param \Ageras\Api\Model\LeadQuoteItemResource[] $items List of quote items.
      * @return $this
      */
-    public function setPrice($price)
+    public function setItems($items)
     {
-        $this->container['price'] = $price;
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment
+     * @return \Ageras\Api\Model\LeadQuotePaymentResource
+     */
+    public function getPayment()
+    {
+        return $this->container['payment'];
+    }
+
+    /**
+     * Sets payment
+     * @param \Ageras\Api\Model\LeadQuotePaymentResource $payment
+     * @return $this
+     */
+    public function setPayment($payment)
+    {
+        $this->container['payment'] = $payment;
 
         return $this;
     }
@@ -538,27 +559,6 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     public function setTotalAmountInclVat($total_amount_incl_vat)
     {
         $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets prepayment_amount_incl_vat
-     * @return \Ageras\Api\Model\AmountResource
-     */
-    public function getPrepaymentAmountInclVat()
-    {
-        return $this->container['prepayment_amount_incl_vat'];
-    }
-
-    /**
-     * Sets prepayment_amount_incl_vat
-     * @param \Ageras\Api\Model\AmountResource $prepayment_amount_incl_vat
-     * @return $this
-     */
-    public function setPrepaymentAmountInclVat($prepayment_amount_incl_vat)
-    {
-        $this->container['prepayment_amount_incl_vat'] = $prepayment_amount_incl_vat;
 
         return $this;
     }

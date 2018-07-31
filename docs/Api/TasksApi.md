@@ -55,7 +55,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/\Ageras\Api\Model\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/TaskResource.md)|  |
 
 ### Return type
 
@@ -616,7 +616,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **taskable_resource** | [**\Ageras\Api\Model\TaskableResource**](../Model/\Ageras\Api\Model\TaskableResource.md)|  |
+ **taskable_resource** | [**\Ageras\Api\Model\TaskableResource**](../Model/TaskableResource.md)|  |
 
 ### Return type
 
@@ -835,7 +835,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**|  |
- **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/\Ageras\Api\Model\TaskResource.md)|  |
+ **task_resource** | [**\Ageras\Api\Model\TaskResource**](../Model/TaskResource.md)|  |
 
 ### Return type
 

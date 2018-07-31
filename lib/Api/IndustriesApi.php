@@ -96,9 +96,9 @@ class IndustriesApi
      *    'industry_id' => string,
      *    'name' => string,
      *    'geo_code' => string,
-     *    'status' => bool,
+     *    'is_active' => bool,
      *    'limit' => int,
-     *    'parent_industry_id' => int,
+     *    'parent_industry_id' => string,
      *    'identifier' => string,
      *    'page' => int,
      *    'query' => string,
@@ -121,9 +121,9 @@ class IndustriesApi
      *    'industry_id' => string,
      *    'name' => string,
      *    'geo_code' => string,
-     *    'status' => bool,
+     *    'is_active' => bool,
      *    'limit' => int,
-     *    'parent_industry_id' => int,
+     *    'parent_industry_id' => string,
      *    'identifier' => string,
      *    'page' => int,
      *    'query' => string,
@@ -158,8 +158,8 @@ class IndustriesApi
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
         }
         // query params
-        if (isset($criteria['status'])) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        if (isset($criteria['is_active'])) {
+            $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
         }
         // query params
         if (isset($criteria['limit'])) {

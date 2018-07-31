@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **profile_picture** | **string** | Portrait of the partner user. | [optional] 
 **wants_emails** | **bool** | Partner User is interested in emails. | [optional] [default to false]
 **wants_text_messages** | **bool** | Partner User is interested in text messsages. | [optional] [default to false]
+**wants_daily_email** | **bool** | Partner User is interested in daily emails. | [optional] [default to false]
 **is_visible** | **bool** | Partner User is visible. | [optional] [default to false]
 **is_active** | **bool** | Partner User is Active. | [optional] [default to false]
 **access_type** | **string** | The Type of Access the Partner User has. | [optional] 

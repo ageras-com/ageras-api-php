@@ -30,9 +30,9 @@ $criteria = [
         'industry_id' => "industry_id_example"; // string | Industry ID.
         'name' => "name_example"; // string | Industry name in its native language.
         'geo_code' => "geo_code_example"; // string | Industry geo code origin.
-        'status' => false; // bool | Determinate if industry is active or not.
+        'is_active' => false; // bool | Determinate if industry is active or not.
         'limit' => 56; // int | Limit of industries per page.
-        'parent_industry_id' => 56; // int | Parent industry to filter by.
+        'parent_industry_id' => "parent_industry_id_example"; // string | Parent industry to filter by.
         'identifier' => "identifier_example"; // string | identifier for the industry
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -54,9 +54,9 @@ Name | Type | Description  | Notes
  **industry_id** | **string**| Industry ID. | [optional]
  **name** | **string**| Industry name in its native language. | [optional]
  **geo_code** | **string**| Industry geo code origin. | [optional]
- **status** | **bool**| Determinate if industry is active or not. | [optional] [default to false]
+ **is_active** | **bool**| Determinate if industry is active or not. | [optional] [default to false]
  **limit** | **int**| Limit of industries per page. | [optional]
- **parent_industry_id** | **int**| Parent industry to filter by. | [optional]
+ **parent_industry_id** | **string**| Parent industry to filter by. | [optional]
  **identifier** | **string**| identifier for the industry | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

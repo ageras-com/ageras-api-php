@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Id for the affiliate campaign. | [optional] 
-**industry** | **string** | The industry that the affiliate is part of. | [optional] 
-**name** | **string** | The name of the affiliate campaign. | [optional] 
-**affiliate** | **string** | The afflilate. | [optional] 
+**key** | **string** | Campaign key. @var string | [optional] 
+**utm_campaign** | **string** | Campaign ID. @var string | [optional] 
+**name** | **string** | Campaign name @var string | [optional] 
+**affiliate** | [**\Ageras\Api\Model\AffiliateResource**](AffiliateResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

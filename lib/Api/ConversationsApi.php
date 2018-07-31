@@ -88,6 +88,700 @@ class ConversationsApi
     }
 
     /**
+     * Operation conversationsActionsCreate
+     *
+     * Conversation action
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\ConversationActionResource $conversation_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\ConversationResource
+     */
+    public function conversationsActionsCreate($conversation_id , $conversation_action_resource)
+    {
+        list($response) = $this->conversationsActionsCreateWithHttpInfo($conversation_id, $conversation_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsActionsCreateWithHttpInfo
+     *
+     * Conversation action
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\ConversationActionResource $conversation_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\ConversationResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsActionsCreateWithHttpInfo($conversation_id , $conversation_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($conversation_action_resource)) {
+            $_tempBody = $conversation_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\ConversationResource',
+                '/conversations/{conversation_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\ConversationResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\ConversationResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsCreate
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsAttachmentsCreate($attachment_resource)
+    {
+        list($response) = $this->conversationsAttachmentsCreateWithHttpInfo($attachment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsCreateWithHttpInfo
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsCreateWithHttpInfo($attachment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($attachment_resource)) {
+            $_tempBody = $attachment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsCreate2
+     *
+     * Create a new attachment
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsAttachmentsCreate2($conversation_id , $attachment_resource)
+    {
+        list($response) = $this->conversationsAttachmentsCreate2WithHttpInfo($conversation_id, $attachment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsCreate2WithHttpInfo
+     *
+     * Create a new attachment
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsCreate2WithHttpInfo($conversation_id , $attachment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($attachment_resource)) {
+            $_tempBody = $attachment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/{conversation_id}/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsGet
+     *
+     * Get an attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsAttachmentsGet($attachment_id )
+    {
+        list($response) = $this->conversationsAttachmentsGetWithHttpInfo($attachment_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsGetWithHttpInfo
+     *
+     * Get an attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsGetWithHttpInfo($attachment_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/attachments/{attachment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($attachment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "attachment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($attachment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/attachments/{attachment_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsGet2
+     *
+     * Get an attachment
+     *
+     * @param string $conversation_id 
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsAttachmentsGet2($conversation_id,  $attachment_id )
+    {
+        list($response) = $this->conversationsAttachmentsGet2WithHttpInfo($conversation_id, $attachment_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsGet2WithHttpInfo
+     *
+     * Get an attachment
+     *
+     * @param string $conversation_id 
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsGet2WithHttpInfo($conversation_id,  $attachment_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/attachments/{attachment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($attachment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "attachment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($attachment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/{conversation_id}/attachments/{attachment_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsIndex
+     *
+     * List conversation's attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResult
+     */
+    public function conversationsAttachmentsIndex($criteria = [])
+    {
+        list($response) = $this->conversationsAttachmentsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsIndexWithHttpInfo
+     *
+     * List conversation's attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['conversation_id'])) {
+            $queryParams['conversation_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['conversation_id']);
+        }
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResult',
+                '/conversations/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsAttachmentsIndex2
+     *
+     * List conversation's attachments
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResult
+     */
+    public function conversationsAttachmentsIndex2($conversation_id , $criteria = [])
+    {
+        list($response) = $this->conversationsAttachmentsIndex2WithHttpInfo($conversation_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsAttachmentsIndex2WithHttpInfo
+     *
+     * List conversation's attachments
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsAttachmentsIndex2WithHttpInfo($conversation_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResult',
+                '/conversations/{conversation_id}/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation conversationsCreate
      *
      * Create a new conversation.
@@ -271,6 +965,7 @@ class ConversationsApi
      *    'client_id' => string,
      *    'employee_id' => string,
      *    'lead_id' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -297,6 +992,7 @@ class ConversationsApi
      *    'client_id' => string,
      *    'employee_id' => string,
      *    'lead_id' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -347,6 +1043,10 @@ class ConversationsApi
             $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
         }
         // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
         }
@@ -391,6 +1091,894 @@ class ConversationsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\ConversationResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreate
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsCreate($attachment_resource)
+    {
+        list($response) = $this->conversationsMessagesAttachmentsCreateWithHttpInfo($attachment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreateWithHttpInfo
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsCreateWithHttpInfo($attachment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/conversations/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($attachment_resource)) {
+            $_tempBody = $attachment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/conversations/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreate2
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsCreate2($attachment_resource)
+    {
+        list($response) = $this->conversationsMessagesAttachmentsCreate2WithHttpInfo($attachment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreate2WithHttpInfo
+     *
+     * Create a new attachment
+     *
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsCreate2WithHttpInfo($attachment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($attachment_resource)) {
+            $_tempBody = $attachment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreate4
+     *
+     * Create a new attachment
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsCreate4($conversation_id , $attachment_resource)
+    {
+        list($response) = $this->conversationsMessagesAttachmentsCreate4WithHttpInfo($conversation_id, $attachment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsCreate4WithHttpInfo
+     *
+     * Create a new attachment
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\Model\AttachmentResource $attachment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsCreate4WithHttpInfo($conversation_id , $attachment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($attachment_resource)) {
+            $_tempBody = $attachment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/{conversation_id}/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGet
+     *
+     * get a message attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsGet($attachment_id )
+    {
+        list($response) = $this->conversationsMessagesAttachmentsGetWithHttpInfo($attachment_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGetWithHttpInfo
+     *
+     * get a message attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsGetWithHttpInfo($attachment_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/conversations/messages/attachments/{attachment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($attachment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "attachment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($attachment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/conversations/messages/attachments/{attachment_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGet2
+     *
+     * get a message attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsGet2($attachment_id )
+    {
+        list($response) = $this->conversationsMessagesAttachmentsGet2WithHttpInfo($attachment_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGet2WithHttpInfo
+     *
+     * get a message attachment
+     *
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsGet2WithHttpInfo($attachment_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/messages/attachments/{attachment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($attachment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "attachment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($attachment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/messages/attachments/{attachment_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGet4
+     *
+     * get a message attachment
+     *
+     * @param string $conversation_id 
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResource
+     */
+    public function conversationsMessagesAttachmentsGet4($conversation_id,  $attachment_id )
+    {
+        list($response) = $this->conversationsMessagesAttachmentsGet4WithHttpInfo($conversation_id, $attachment_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsGet4WithHttpInfo
+     *
+     * get a message attachment
+     *
+     * @param string $conversation_id 
+     * @param string $attachment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsGet4WithHttpInfo($conversation_id,  $attachment_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/messages/attachments/{attachment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($attachment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "attachment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($attachment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResource',
+                '/conversations/{conversation_id}/messages/attachments/{attachment_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndex
+     *
+     * List message attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResult
+     */
+    public function conversationsMessagesAttachmentsIndex($criteria = [])
+    {
+        list($response) = $this->conversationsMessagesAttachmentsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndexWithHttpInfo
+     *
+     * List message attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/conversations/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['conversation_id'])) {
+            $queryParams['conversation_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['conversation_id']);
+        }
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResult',
+                '/conversations/conversations/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndex2
+     *
+     * List message attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResult
+     */
+    public function conversationsMessagesAttachmentsIndex2($criteria = [])
+    {
+        list($response) = $this->conversationsMessagesAttachmentsIndex2WithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndex2WithHttpInfo
+     *
+     * List message attachments
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsIndex2WithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['conversation_id'])) {
+            $queryParams['conversation_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['conversation_id']);
+        }
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResult',
+                '/conversations/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndex4
+     *
+     * List message attachments
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\AttachmentResult
+     */
+    public function conversationsMessagesAttachmentsIndex4($conversation_id , $criteria = [])
+    {
+        list($response) = $this->conversationsMessagesAttachmentsIndex4WithHttpInfo($conversation_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesAttachmentsIndex4WithHttpInfo
+     *
+     * List message attachments
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesAttachmentsIndex4WithHttpInfo($conversation_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/messages/attachments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\AttachmentResult',
+                '/conversations/{conversation_id}/messages/attachments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\AttachmentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\AttachmentResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -569,6 +2157,452 @@ class ConversationsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\MessageResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesGet
+     *
+     * Get message by message_id
+     *
+     * @param string $message_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\MessageResource
+     */
+    public function conversationsMessagesGet($message_id )
+    {
+        list($response) = $this->conversationsMessagesGetWithHttpInfo($message_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesGetWithHttpInfo
+     *
+     * Get message by message_id
+     *
+     * @param string $message_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\MessageResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesGetWithHttpInfo($message_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/messages/{message_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($message_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "message_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($message_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\MessageResource',
+                '/conversations/messages/{message_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\MessageResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\MessageResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesGet2
+     *
+     * Get message by message_id
+     *
+     * @param string $conversation_id 
+     * @param string $message_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\MessageResource
+     */
+    public function conversationsMessagesGet2($conversation_id,  $message_id )
+    {
+        list($response) = $this->conversationsMessagesGet2WithHttpInfo($conversation_id, $message_id);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesGet2WithHttpInfo
+     *
+     * Get message by message_id
+     *
+     * @param string $conversation_id 
+     * @param string $message_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\MessageResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesGet2WithHttpInfo($conversation_id,  $message_id )
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/messages/{message_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($message_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "message_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($message_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\MessageResource',
+                '/conversations/{conversation_id}/messages/{message_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\MessageResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\MessageResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesIndex
+     *
+     * Get messages by conversation_id.
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\MessageResult
+     */
+    public function conversationsMessagesIndex($criteria = [])
+    {
+        list($response) = $this->conversationsMessagesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesIndexWithHttpInfo
+     *
+     * Get messages by conversation_id.
+     *
+     * @param $criteria = [
+     *    'conversation_id' => string,
+     *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\MessageResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/messages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['conversation_id'])) {
+            $queryParams['conversation_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['conversation_id']);
+        }
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['participant_id'])) {
+            $queryParams['participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['participant_id']);
+        }
+        // query params
+        if (isset($criteria['unread_by_participant_id'])) {
+            $queryParams['unread_by_participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['unread_by_participant_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\MessageResult',
+                '/conversations/messages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\MessageResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\MessageResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation conversationsMessagesIndex2
+     *
+     * Get messages by conversation_id.
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\Model\MessageResult
+     */
+    public function conversationsMessagesIndex2($conversation_id , $criteria = [])
+    {
+        list($response) = $this->conversationsMessagesIndex2WithHttpInfo($conversation_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsMessagesIndex2WithHttpInfo
+     *
+     * Get messages by conversation_id.
+     *
+     * @param string $conversation_id 
+     * @param $criteria = [
+     *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
+     *    'sort' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\Model\MessageResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsMessagesIndex2WithHttpInfo($conversation_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/messages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['message_id'])) {
+            $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['participant_id'])) {
+            $queryParams['participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['participant_id']);
+        }
+        // query params
+        if (isset($criteria['unread_by_participant_id'])) {
+            $queryParams['unread_by_participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['unread_by_participant_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\Model\MessageResult',
+                '/conversations/{conversation_id}/messages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\Model\MessageResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\Model\MessageResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

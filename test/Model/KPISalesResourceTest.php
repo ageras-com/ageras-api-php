@@ -114,4 +114,12 @@ class KPISalesResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "total_net_fee"
+     */
+    public function testPropertyTotalNetFee()
+    {
+
+    }
+
 }

@@ -4,10 +4,62 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ratingsCreate**](RatingsApi.md#ratingsCreate) | **POST** /ratings | Create a rating.
 [**ratingsGet**](RatingsApi.md#ratingsGet) | **GET** /ratings/{rating_id} | Return a rating from a rating ID.
 [**ratingsIndex**](RatingsApi.md#ratingsIndex) | **GET** /ratings | Search for Lead&#39;s by a given set of criteria.
 [**ratingsUpdate**](RatingsApi.md#ratingsUpdate) | **PUT** /ratings/{rating_id} | Update a rating.
 
+
+# **ratingsCreate**
+> \Ageras\Api\Model\RatingResource ratingsCreate($rating_resource)
+
+Create a rating.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\RatingsApi();
+$rating_resource = new \Ageras\Api\Model\RatingResource(); // \Ageras\Api\Model\RatingResource | 
+
+try {
+    $result = $api_instance->ratingsCreate($rating_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RatingsApi->ratingsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rating_resource** | [**\Ageras\Api\Model\RatingResource**](../Model/RatingResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\Model\RatingResource**](../Model/RatingResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ratingsGet**
 > \Ageras\Api\Model\RatingResource ratingsGet($rating_id )
@@ -171,7 +223,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rating_id** | **string**|  |
- **rating_resource** | [**\Ageras\Api\Model\RatingResource**](../Model/\Ageras\Api\Model\RatingResource.md)|  |
+ **rating_resource** | [**\Ageras\Api\Model\RatingResource**](../Model/RatingResource.md)|  |
 
 ### Return type
 

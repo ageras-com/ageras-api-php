@@ -6,7 +6,7 @@
  *
  * @category Class
  * @package  Ageras\Api
- * @author   Swaagger Codegen team
+ * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -58,6 +58,7 @@ class EmployeeResource implements ArrayAccess
         'sort' => 'string',
         'name' => 'string',
         'title' => 'string',
+        'external_job_title' => 'string',
         'geo_code' => 'string',
         'image' => 'string',
         'email' => 'string',
@@ -83,6 +84,7 @@ class EmployeeResource implements ArrayAccess
         'sort' => 'sort',
         'name' => 'name',
         'title' => 'title',
+        'external_job_title' => 'external_job_title',
         'geo_code' => 'geo_code',
         'image' => 'image',
         'email' => 'email',
@@ -104,6 +106,7 @@ class EmployeeResource implements ArrayAccess
         'sort' => 'setSort',
         'name' => 'setName',
         'title' => 'setTitle',
+        'external_job_title' => 'setExternalJobTitle',
         'geo_code' => 'setGeoCode',
         'image' => 'setImage',
         'email' => 'setEmail',
@@ -125,6 +128,7 @@ class EmployeeResource implements ArrayAccess
         'sort' => 'getSort',
         'name' => 'getName',
         'title' => 'getTitle',
+        'external_job_title' => 'getExternalJobTitle',
         'geo_code' => 'getGeoCode',
         'image' => 'getImage',
         'email' => 'getEmail',
@@ -171,6 +175,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['external_job_title'] = isset($data['external_job_title']) ? $data['external_job_title'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -287,6 +292,27 @@ class EmployeeResource implements ArrayAccess
     public function setTitle($title)
     {
         $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_job_title
+     * @return string
+     */
+    public function getExternalJobTitle()
+    {
+        return $this->container['external_job_title'];
+    }
+
+    /**
+     * Sets external_job_title
+     * @param string $external_job_title Job title shown to clients and partners.
+     * @return $this
+     */
+    public function setExternalJobTitle($external_job_title)
+    {
+        $this->container['external_job_title'] = $external_job_title;
 
         return $this;
     }

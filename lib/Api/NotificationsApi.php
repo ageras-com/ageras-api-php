@@ -358,8 +358,12 @@ class NotificationsApi
      * List notifications
      *
      * @param $criteria = [
+     *    'geo_code' => string,
      *    'sort' => string,
      *    'created_after' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
+     *    'employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -379,8 +383,12 @@ class NotificationsApi
      * List notifications
      *
      * @param $criteria = [
+     *    'geo_code' => string,
      *    'sort' => string,
      *    'created_after' => string,
+     *    'partner_user_id' => string,
+     *    'client_id' => string,
+     *    'employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -403,12 +411,28 @@ class NotificationsApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
         if (isset($criteria['sort'])) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['created_after'])) {
             $queryParams['created_after'] = $this->apiClient->getSerializer()->toQueryValue($criteria['created_after']);
+        }
+        // query params
+        if (isset($criteria['partner_user_id'])) {
+            $queryParams['partner_user_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_user_id']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
