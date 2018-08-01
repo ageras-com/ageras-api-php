@@ -57,11 +57,10 @@ class PaymentCardResource implements ArrayAccess
         'id' => 'int',
         'owner' => '\Ageras\Api\PaymentCardOwnerResource',
         'provider' => '\Ageras\Api\PaymentProviderResource',
+        'card_name' => 'string',
         'card_type' => 'string',
         'card_mask' => 'string',
         'expiration' => '\Ageras\Api\PaymentCardExpirationResource',
-        'provider_token' => 'string',
-        'subscription_id' => 'string',
         'is_being_used' => 'bool',
         'data' => '\Ageras\Api\PaymentCardDataResource'
     ];
@@ -79,11 +78,10 @@ class PaymentCardResource implements ArrayAccess
         'id' => 'id',
         'owner' => 'owner',
         'provider' => 'provider',
+        'card_name' => 'card_name',
         'card_type' => 'card_type',
         'card_mask' => 'card_mask',
         'expiration' => 'expiration',
-        'provider_token' => 'provider_token',
-        'subscription_id' => 'subscription_id',
         'is_being_used' => 'is_being_used',
         'data' => 'data'
     ];
@@ -97,11 +95,10 @@ class PaymentCardResource implements ArrayAccess
         'id' => 'setId',
         'owner' => 'setOwner',
         'provider' => 'setProvider',
+        'card_name' => 'setCardName',
         'card_type' => 'setCardType',
         'card_mask' => 'setCardMask',
         'expiration' => 'setExpiration',
-        'provider_token' => 'setProviderToken',
-        'subscription_id' => 'setSubscriptionId',
         'is_being_used' => 'setIsBeingUsed',
         'data' => 'setData'
     ];
@@ -115,11 +112,10 @@ class PaymentCardResource implements ArrayAccess
         'id' => 'getId',
         'owner' => 'getOwner',
         'provider' => 'getProvider',
+        'card_name' => 'getCardName',
         'card_type' => 'getCardType',
         'card_mask' => 'getCardMask',
         'expiration' => 'getExpiration',
-        'provider_token' => 'getProviderToken',
-        'subscription_id' => 'getSubscriptionId',
         'is_being_used' => 'getIsBeingUsed',
         'data' => 'getData'
     ];
@@ -158,11 +154,10 @@ class PaymentCardResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
+        $this->container['card_name'] = isset($data['card_name']) ? $data['card_name'] : null;
         $this->container['card_type'] = isset($data['card_type']) ? $data['card_type'] : null;
         $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
         $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
-        $this->container['provider_token'] = isset($data['provider_token']) ? $data['provider_token'] : null;
-        $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
@@ -256,6 +251,27 @@ class PaymentCardResource implements ArrayAccess
     }
 
     /**
+     * Gets card_name
+     * @return string
+     */
+    public function getCardName()
+    {
+        return $this->container['card_name'];
+    }
+
+    /**
+     * Sets card_name
+     * @param string $card_name Card name.
+     * @return $this
+     */
+    public function setCardName($card_name)
+    {
+        $this->container['card_name'] = $card_name;
+
+        return $this;
+    }
+
+    /**
      * Gets card_type
      * @return string
      */
@@ -314,48 +330,6 @@ class PaymentCardResource implements ArrayAccess
     public function setExpiration($expiration)
     {
         $this->container['expiration'] = $expiration;
-
-        return $this;
-    }
-
-    /**
-     * Gets provider_token
-     * @return string
-     */
-    public function getProviderToken()
-    {
-        return $this->container['provider_token'];
-    }
-
-    /**
-     * Sets provider_token
-     * @param string $provider_token Token or ID retrieved from the payment provider.
-     * @return $this
-     */
-    public function setProviderToken($provider_token)
-    {
-        $this->container['provider_token'] = $provider_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscription_id
-     * @return string
-     */
-    public function getSubscriptionId()
-    {
-        return $this->container['subscription_id'];
-    }
-
-    /**
-     * Sets subscription_id
-     * @param string $subscription_id Subscription id.
-     * @return $this
-     */
-    public function setSubscriptionId($subscription_id)
-    {
-        $this->container['subscription_id'] = $subscription_id;
 
         return $this;
     }

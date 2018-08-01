@@ -77,6 +77,17 @@ class ConversationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for conversationsActionsCreate
+     *
+     * Conversation action.
+     *
+     */
+    public function testConversationsActionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for conversationsAttachmentsCreate
      *
      * Create a new attachment.

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **expiration_boosted_at** | **string** | Date where a lead has been extended/boosted. | [optional] 
 **working_hours_expires_at** | **string** | Date the Lead Expires taking into account only working hours. | [optional] 
 **status** | **string** | Current Validation Status of the Lead. | [optional] [default to 'unknown']
+**reservation_status** | **string** | Current reservation status of the Lead. | [optional] 
 **progress** | [**\Ageras\Api\LeadProgressResource[]**](LeadProgressResource.md) | Progress | [optional] 
 **title** | **string** | Title for the Lead. | [optional] 
 **description** | **string** | A description of the given Lead. | [optional] 
@@ -19,9 +20,11 @@ Name | Type | Description | Notes
 **requirements** | [**\Ageras\Api\LeadRequirementsResource**](LeadRequirementsResource.md) |  | [optional] 
 **punch_price** | **int** | The price for the given lead. | [optional] 
 **service_fee** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**service_fee_subsequent_years_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**minimum_quote_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **geo** | [**\Ageras\Api\LeadGeoResource**](LeadGeoResource.md) |  | [optional] 
 **attributes** | [**\Ageras\Api\LeadAttributeResource[]**](LeadAttributeResource.md) | Attributes for the lead. | [optional] 
-**industries** | [**\Ageras\Api\LeadIndustryPairResource**](LeadIndustryPairResource.md) |  | [optional] 
+**industries** | [**\Ageras\Api\LeadIndustriesResource**](LeadIndustriesResource.md) |  | [optional] 
 **products** | [**\Ageras\Api\LeadProductResource[]**](LeadProductResource.md) | What products are connected to this Lead. | [optional] 
 **meeting** | [**\Ageras\Api\LeadMeetingResource**](LeadMeetingResource.md) |  | [optional] 
 **accepted** | [**\Ageras\Api\LeadAcceptedResource**](LeadAcceptedResource.md) |  | [optional] 
@@ -30,6 +33,12 @@ Name | Type | Description | Notes
 **affiliate_campaign** | [**\Ageras\Api\AffiliateCampaignResource**](AffiliateCampaignResource.md) |  | [optional] 
 **feedback** | [**\Ageras\Api\LeadFeedbackResource**](LeadFeedbackResource.md) |  | [optional] 
 **validator** | [**\Ageras\Api\LeadEmployeeResource**](LeadEmployeeResource.md) |  | [optional] 
+**custom_variables** | [**\Ageras\Api\KeyValueResource[]**](KeyValueResource.md) | Colleciton of custom key-value pairs. | [optional] 
+**category** | [**\Ageras\Api\LeadCategoryResource**](LeadCategoryResource.md) |  | [optional] 
+**revenue_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**is_service_fee** | **bool** | Does this lead have a service fee | [optional] [default to false]
+**wants_local_partner** | **bool** | Does the lead want a local partner | [optional] [default to false]
+**is_digital** | **bool** | Digital communication? | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

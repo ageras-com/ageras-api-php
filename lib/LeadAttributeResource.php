@@ -54,10 +54,12 @@ class LeadAttributeResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'field_id' => 'int',
-        'field_label' => 'string',
-        'value' => 'string',
-        'choice' => 'string'
+        'id' => 'int',
+        'identifier' => 'string',
+        'label' => 'string',
+        'is_multiple' => 'bool',
+        'selected' => '\Ageras\Api\DataFieldValueResource[]',
+        'type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +72,12 @@ class LeadAttributeResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'field_id' => 'field_id',
-        'field_label' => 'field_label',
-        'value' => 'value',
-        'choice' => 'choice'
+        'id' => 'id',
+        'identifier' => 'identifier',
+        'label' => 'label',
+        'is_multiple' => 'is_multiple',
+        'selected' => 'selected',
+        'type' => 'type'
     ];
 
 
@@ -82,10 +86,12 @@ class LeadAttributeResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'field_id' => 'setFieldId',
-        'field_label' => 'setFieldLabel',
-        'value' => 'setValue',
-        'choice' => 'setChoice'
+        'id' => 'setId',
+        'identifier' => 'setIdentifier',
+        'label' => 'setLabel',
+        'is_multiple' => 'setIsMultiple',
+        'selected' => 'setSelected',
+        'type' => 'setType'
     ];
 
 
@@ -94,10 +100,12 @@ class LeadAttributeResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'field_id' => 'getFieldId',
-        'field_label' => 'getFieldLabel',
-        'value' => 'getValue',
-        'choice' => 'getChoice'
+        'id' => 'getId',
+        'identifier' => 'getIdentifier',
+        'label' => 'getLabel',
+        'is_multiple' => 'getIsMultiple',
+        'selected' => 'getSelected',
+        'type' => 'getType'
     ];
 
     public static function attributeMap()
@@ -115,8 +123,30 @@ class LeadAttributeResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_UNKNOWN = 'unknown';
+    const TYPE_TEXT = 'text';
+    const TYPE_NUMBER = 'number';
+    const TYPE_CHECKBOX = 'checkbox';
+    const TYPE_TEXTBOX = 'textbox';
+    const TYPE_DROPDOWN = 'dropdown';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_UNKNOWN,
+            self::TYPE_TEXT,
+            self::TYPE_NUMBER,
+            self::TYPE_CHECKBOX,
+            self::TYPE_TEXTBOX,
+            self::TYPE_DROPDOWN,
+        ];
+    }
     
 
     /**
@@ -131,10 +161,12 @@ class LeadAttributeResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['field_id'] = isset($data['field_id']) ? $data['field_id'] : null;
-        $this->container['field_label'] = isset($data['field_label']) ? $data['field_label'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['choice'] = isset($data['choice']) ? $data['choice'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['is_multiple'] = isset($data['is_multiple']) ? $data['is_multiple'] : false;
+        $this->container['selected'] = isset($data['selected']) ? $data['selected'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
     }
 
     /**
@@ -145,6 +177,11 @@ class LeadAttributeResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["unknown", "text", "number", "checkbox", "textbox", "dropdown"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'text', 'number', 'checkbox', 'textbox', 'dropdown'.";
+        }
 
         return $invalid_properties;
     }
@@ -158,90 +195,140 @@ class LeadAttributeResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["unknown", "text", "number", "checkbox", "textbox", "dropdown"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets field_id
+     * Gets id
      * @return int
      */
-    public function getFieldId()
+    public function getId()
     {
-        return $this->container['field_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets field_id
-     * @param int $field_id Lead Field Id.
+     * Sets id
+     * @param int $id Lead Field Id.
      * @return $this
      */
-    public function setFieldId($field_id)
+    public function setId($id)
     {
-        $this->container['field_id'] = $field_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets field_label
+     * Gets identifier
      * @return string
      */
-    public function getFieldLabel()
+    public function getIdentifier()
     {
-        return $this->container['field_label'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets field_label
-     * @param string $field_label Label for the given Lead Field.
+     * Sets identifier
+     * @param string $identifier Identifier for the Lead Field
      * @return $this
      */
-    public function setFieldLabel($field_label)
+    public function setIdentifier($identifier)
     {
-        $this->container['field_label'] = $field_label;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets label
      * @return string
      */
-    public function getValue()
+    public function getLabel()
     {
-        return $this->container['value'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets value
-     * @param string $value Value.
+     * Sets label
+     * @param string $label Label for the given Lead Field.
      * @return $this
      */
-    public function setValue($value)
+    public function setLabel($label)
     {
-        $this->container['value'] = $value;
+        $this->container['label'] = $label;
 
         return $this;
     }
 
     /**
-     * Gets choice
-     * @return string
+     * Gets is_multiple
+     * @return bool
      */
-    public function getChoice()
+    public function getIsMultiple()
     {
-        return $this->container['choice'];
+        return $this->container['is_multiple'];
     }
 
     /**
-     * Sets choice
-     * @param string $choice Choise made ( can be made ? ) for the given Field.
+     * Sets is_multiple
+     * @param bool $is_multiple Flag whether data field can have multiple values
      * @return $this
      */
-    public function setChoice($choice)
+    public function setIsMultiple($is_multiple)
     {
-        $this->container['choice'] = $choice;
+        $this->container['is_multiple'] = $is_multiple;
+
+        return $this;
+    }
+
+    /**
+     * Gets selected
+     * @return \Ageras\Api\DataFieldValueResource[]
+     */
+    public function getSelected()
+    {
+        return $this->container['selected'];
+    }
+
+    /**
+     * Sets selected
+     * @param \Ageras\Api\DataFieldValueResource[] $selected Array of selected values.
+     * @return $this
+     */
+    public function setSelected($selected)
+    {
+        $this->container['selected'] = $selected;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type Type of field
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('unknown', 'text', 'number', 'checkbox', 'textbox', 'dropdown');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'text', 'number', 'checkbox', 'textbox', 'dropdown'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

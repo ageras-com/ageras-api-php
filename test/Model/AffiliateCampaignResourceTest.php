@@ -83,17 +83,17 @@ class AffiliateCampaignResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "key"
      */
-    public function testPropertyId()
+    public function testPropertyKey()
     {
 
     }
 
     /**
-     * Test attribute "industry"
+     * Test attribute "utm_campaign"
      */
-    public function testPropertyIndustry()
+    public function testPropertyUtmCampaign()
     {
 
     }

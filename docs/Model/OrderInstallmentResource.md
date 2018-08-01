@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **amount_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **amount_incl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
-**payment_solution** | [**\Ageras\Api\PaymentSolutionResource**](PaymentSolutionResource.md) |  | [optional] 
+**payment_solution** | [**\Ageras\Api\PaymentMethodResource**](PaymentMethodResource.md) |  | [optional] 
 **payment_provider** | [**\Ageras\Api\PaymentProviderResource**](PaymentProviderResource.md) |  | [optional] 
 **payment_card** | [**\Ageras\Api\PaymentCardResource**](PaymentCardResource.md) |  | [optional] 
 **ready_for_payment** | **bool** |  | [optional] [default to false]

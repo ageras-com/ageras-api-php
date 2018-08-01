@@ -55,10 +55,11 @@ class LeadProductResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'lead_id' => 'string',
+        'lead_id' => 'int',
         'product' => '\Ageras\Api\ProductResource',
         'description' => 'string',
-        'type' => 'string'
+        'type' => 'string',
+        'quantity' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class LeadProductResource implements ArrayAccess
         'lead_id' => 'lead_id',
         'product' => 'product',
         'description' => 'description',
-        'type' => 'type'
+        'type' => 'type',
+        'quantity' => 'quantity'
     ];
 
 
@@ -88,7 +90,8 @@ class LeadProductResource implements ArrayAccess
         'lead_id' => 'setLeadId',
         'product' => 'setProduct',
         'description' => 'setDescription',
-        'type' => 'setType'
+        'type' => 'setType',
+        'quantity' => 'setQuantity'
     ];
 
 
@@ -101,7 +104,8 @@ class LeadProductResource implements ArrayAccess
         'lead_id' => 'getLeadId',
         'product' => 'getProduct',
         'description' => 'getDescription',
-        'type' => 'getType'
+        'type' => 'getType',
+        'quantity' => 'getQuantity'
     ];
 
     public static function attributeMap()
@@ -160,6 +164,7 @@ class LeadProductResource implements ArrayAccess
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
     }
 
     /**
@@ -219,7 +224,7 @@ class LeadProductResource implements ArrayAccess
 
     /**
      * Gets lead_id
-     * @return string
+     * @return int
      */
     public function getLeadId()
     {
@@ -228,7 +233,7 @@ class LeadProductResource implements ArrayAccess
 
     /**
      * Sets lead_id
-     * @param string $lead_id Lead id
+     * @param int $lead_id Lead id
      * @return $this
      */
     public function setLeadId($lead_id)
@@ -301,6 +306,27 @@ class LeadProductResource implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'");
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantity
+     * @return int
+     */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+     * Sets quantity
+     * @param int $quantity Quantity
+     * @return $this
+     */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
 
         return $this;
     }

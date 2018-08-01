@@ -59,7 +59,7 @@ class ProjectNoteResource implements ArrayAccess
         'updated_at' => 'string',
         'name' => 'string',
         'content' => 'string',
-        'project' => '\Ageras\Api\ProjectResource',
+        'project_id' => 'int',
         'partner_user' => '\Ageras\Api\ProjectPartnerUserResource'
     ];
 
@@ -78,7 +78,7 @@ class ProjectNoteResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'name' => 'name',
         'content' => 'content',
-        'project' => 'project',
+        'project_id' => 'project_id',
         'partner_user' => 'partner_user'
     ];
 
@@ -93,7 +93,7 @@ class ProjectNoteResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'name' => 'setName',
         'content' => 'setContent',
-        'project' => 'setProject',
+        'project_id' => 'setProjectId',
         'partner_user' => 'setPartnerUser'
     ];
 
@@ -108,7 +108,7 @@ class ProjectNoteResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'name' => 'getName',
         'content' => 'getContent',
-        'project' => 'getProject',
+        'project_id' => 'getProjectId',
         'partner_user' => 'getPartnerUser'
     ];
 
@@ -148,7 +148,7 @@ class ProjectNoteResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['project'] = isset($data['project']) ? $data['project'] : null;
+        $this->container['project_id'] = isset($data['project_id']) ? $data['project_id'] : null;
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
     }
 
@@ -283,22 +283,22 @@ class ProjectNoteResource implements ArrayAccess
     }
 
     /**
-     * Gets project
-     * @return \Ageras\Api\ProjectResource
+     * Gets project_id
+     * @return int
      */
-    public function getProject()
+    public function getProjectId()
     {
-        return $this->container['project'];
+        return $this->container['project_id'];
     }
 
     /**
-     * Sets project
-     * @param \Ageras\Api\ProjectResource $project
+     * Sets project_id
+     * @param int $project_id
      * @return $this
      */
-    public function setProject($project)
+    public function setProjectId($project_id)
     {
-        $this->container['project'] = $project;
+        $this->container['project_id'] = $project_id;
 
         return $this;
     }

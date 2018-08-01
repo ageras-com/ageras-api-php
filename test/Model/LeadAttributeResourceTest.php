@@ -83,33 +83,49 @@ class LeadAttributeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "field_id"
+     * Test attribute "id"
      */
-    public function testPropertyFieldId()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "field_label"
+     * Test attribute "identifier"
      */
-    public function testPropertyFieldLabel()
+    public function testPropertyIdentifier()
     {
 
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "label"
      */
-    public function testPropertyValue()
+    public function testPropertyLabel()
     {
 
     }
 
     /**
-     * Test attribute "choice"
+     * Test attribute "is_multiple"
      */
-    public function testPropertyChoice()
+    public function testPropertyIsMultiple()
+    {
+
+    }
+
+    /**
+     * Test attribute "selected"
+     */
+    public function testPropertySelected()
+    {
+
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
     {
 
     }

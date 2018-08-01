@@ -1293,6 +1293,7 @@ class ProjectsApi
      *    'name' => string,
      *    'geo_code' => string,
      *    'status' => string,
+     *    'progress' => string,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -1320,6 +1321,7 @@ class ProjectsApi
      *    'name' => string,
      *    'geo_code' => string,
      *    'status' => string,
+     *    'progress' => string,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -1369,6 +1371,10 @@ class ProjectsApi
         // query params
         if (isset($criteria['status'])) {
             $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['progress'])) {
+            $queryParams['progress'] = $this->apiClient->getSerializer()->toQueryValue($criteria['progress']);
         }
         // query params
         if (isset($criteria['sort'])) {

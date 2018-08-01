@@ -88,6 +88,123 @@ class TermsApi
     }
 
     /**
+     * Operation termsAcceptedIndex
+     *
+     * Get accepted terms.
+     *
+     * @param $criteria = [
+     *    'acceptor_id' => int,
+     *    'acceptor_type' => string,
+     *    'terms_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\TermsResult
+     */
+    public function termsAcceptedIndex($criteria = [])
+    {
+        list($response) = $this->termsAcceptedIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation termsAcceptedIndexWithHttpInfo
+     *
+     * Get accepted terms.
+     *
+     * @param $criteria = [
+     *    'acceptor_id' => int,
+     *    'acceptor_type' => string,
+     *    'terms_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\TermsResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function termsAcceptedIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/terms/accepted";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['acceptor_id'])) {
+            $queryParams['acceptor_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['acceptor_id']);
+        }
+        // query params
+        if (isset($criteria['acceptor_type'])) {
+            $queryParams['acceptor_type'] = $this->apiClient->getSerializer()->toQueryValue($criteria['acceptor_type']);
+        }
+        // query params
+        if (isset($criteria['terms_id'])) {
+            $queryParams['terms_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['terms_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\TermsResult',
+                '/terms/accepted'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\TermsResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\TermsResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation termsActionsCreate
      *
      * Term actions.

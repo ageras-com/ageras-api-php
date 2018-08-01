@@ -115,6 +115,14 @@ class LeadPartnerUserResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "mobile"
+     */
+    public function testPropertyMobile()
+    {
+
+    }
+
+    /**
      * Test attribute "profile_picture"
      */
     public function testPropertyProfilePicture()

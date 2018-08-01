@@ -107,6 +107,14 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "card_name"
+     */
+    public function testPropertyCardName()
+    {
+
+    }
+
+    /**
      * Test attribute "card_type"
      */
     public function testPropertyCardType()
@@ -126,22 +134,6 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "expiration"
      */
     public function testPropertyExpiration()
-    {
-
-    }
-
-    /**
-     * Test attribute "provider_token"
-     */
-    public function testPropertyProviderToken()
-    {
-
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
     {
 
     }

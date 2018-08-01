@@ -88,6 +88,100 @@ class ConversationsApi
     }
 
     /**
+     * Operation conversationsActionsCreate
+     *
+     * Conversation action
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\ConversationActionResource $conversation_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\ConversationResource
+     */
+    public function conversationsActionsCreate($conversation_id , $conversation_action_resource)
+    {
+        list($response) = $this->conversationsActionsCreateWithHttpInfo($conversation_id, $conversation_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation conversationsActionsCreateWithHttpInfo
+     *
+     * Conversation action
+     *
+     * @param string $conversation_id 
+     * @param \Ageras\Api\ConversationActionResource $conversation_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\ConversationResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function conversationsActionsCreateWithHttpInfo($conversation_id , $conversation_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/conversations/{conversation_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "conversation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($conversation_action_resource)) {
+            $_tempBody = $conversation_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\ConversationResource',
+                '/conversations/{conversation_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\ConversationResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\ConversationResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation conversationsAttachmentsCreate
      *
      * Create a new attachment
@@ -871,6 +965,7 @@ class ConversationsApi
      *    'client_id' => string,
      *    'employee_id' => string,
      *    'lead_id' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -897,6 +992,7 @@ class ConversationsApi
      *    'client_id' => string,
      *    'employee_id' => string,
      *    'lead_id' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -945,6 +1041,10 @@ class ConversationsApi
         // query params
         if (isset($criteria['lead_id'])) {
             $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2257,6 +2357,8 @@ class ConversationsApi
      * @param $criteria = [
      *    'conversation_id' => string,
      *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -2279,6 +2381,8 @@ class ConversationsApi
      * @param $criteria = [
      *    'conversation_id' => string,
      *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -2308,6 +2412,14 @@ class ConversationsApi
         // query params
         if (isset($criteria['message_id'])) {
             $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['participant_id'])) {
+            $queryParams['participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['participant_id']);
+        }
+        // query params
+        if (isset($criteria['unread_by_participant_id'])) {
+            $queryParams['unread_by_participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['unread_by_participant_id']);
         }
         // query params
         if (isset($criteria['sort'])) {
@@ -2374,6 +2486,8 @@ class ConversationsApi
      * @param string $conversation_id 
      * @param $criteria = [
      *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -2396,6 +2510,8 @@ class ConversationsApi
      * @param string $conversation_id 
      * @param $criteria = [
      *    'message_id' => string,
+     *    'participant_id' => int,
+     *    'unread_by_participant_id' => int,
      *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
@@ -2421,6 +2537,14 @@ class ConversationsApi
         // query params
         if (isset($criteria['message_id'])) {
             $queryParams['message_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['message_id']);
+        }
+        // query params
+        if (isset($criteria['participant_id'])) {
+            $queryParams['participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['participant_id']);
+        }
+        // query params
+        if (isset($criteria['unread_by_participant_id'])) {
+            $queryParams['unread_by_participant_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['unread_by_participant_id']);
         }
         // query params
         if (isset($criteria['sort'])) {

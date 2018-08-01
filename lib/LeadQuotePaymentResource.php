@@ -62,10 +62,10 @@ class LeadQuotePaymentResource implements ArrayAccess
         'revenue_share_vat_amount' => '\Ageras\Api\AmountResource',
         'revenue_share_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'revenue_share_amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'revenue_share_recurring_percentage' => 'float',
-        'revenue_share_recurring_vat_amount' => '\Ageras\Api\AmountResource',
-        'revenue_share_recurring_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'revenue_share_recurring_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'revenue_share_subsequent_years_percentage' => 'float',
+        'revenue_share_subsequent_years_vat_amount' => '\Ageras\Api\AmountResource',
+        'revenue_share_subsequent_years_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'revenue_share_subsequent_years_amount_incl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -86,10 +86,10 @@ class LeadQuotePaymentResource implements ArrayAccess
         'revenue_share_vat_amount' => 'revenue_share_vat_amount',
         'revenue_share_amount_excl_vat' => 'revenue_share_amount_excl_vat',
         'revenue_share_amount_incl_vat' => 'revenue_share_amount_incl_vat',
-        'revenue_share_recurring_percentage' => 'revenue_share_recurring_percentage',
-        'revenue_share_recurring_vat_amount' => 'revenue_share_recurring_vat_amount',
-        'revenue_share_recurring_amount_excl_vat' => 'revenue_share_recurring_amount_excl_vat',
-        'revenue_share_recurring_amount_incl_vat' => 'revenue_share_recurring_amount_incl_vat'
+        'revenue_share_subsequent_years_percentage' => 'revenue_share_subsequent_years_percentage',
+        'revenue_share_subsequent_years_vat_amount' => 'revenue_share_subsequent_years_vat_amount',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'revenue_share_subsequent_years_amount_excl_vat',
+        'revenue_share_subsequent_years_amount_incl_vat' => 'revenue_share_subsequent_years_amount_incl_vat'
     ];
 
 
@@ -106,10 +106,10 @@ class LeadQuotePaymentResource implements ArrayAccess
         'revenue_share_vat_amount' => 'setRevenueShareVatAmount',
         'revenue_share_amount_excl_vat' => 'setRevenueShareAmountExclVat',
         'revenue_share_amount_incl_vat' => 'setRevenueShareAmountInclVat',
-        'revenue_share_recurring_percentage' => 'setRevenueShareRecurringPercentage',
-        'revenue_share_recurring_vat_amount' => 'setRevenueShareRecurringVatAmount',
-        'revenue_share_recurring_amount_excl_vat' => 'setRevenueShareRecurringAmountExclVat',
-        'revenue_share_recurring_amount_incl_vat' => 'setRevenueShareRecurringAmountInclVat'
+        'revenue_share_subsequent_years_percentage' => 'setRevenueShareSubsequentYearsPercentage',
+        'revenue_share_subsequent_years_vat_amount' => 'setRevenueShareSubsequentYearsVatAmount',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'setRevenueShareSubsequentYearsAmountExclVat',
+        'revenue_share_subsequent_years_amount_incl_vat' => 'setRevenueShareSubsequentYearsAmountInclVat'
     ];
 
 
@@ -126,10 +126,10 @@ class LeadQuotePaymentResource implements ArrayAccess
         'revenue_share_vat_amount' => 'getRevenueShareVatAmount',
         'revenue_share_amount_excl_vat' => 'getRevenueShareAmountExclVat',
         'revenue_share_amount_incl_vat' => 'getRevenueShareAmountInclVat',
-        'revenue_share_recurring_percentage' => 'getRevenueShareRecurringPercentage',
-        'revenue_share_recurring_vat_amount' => 'getRevenueShareRecurringVatAmount',
-        'revenue_share_recurring_amount_excl_vat' => 'getRevenueShareRecurringAmountExclVat',
-        'revenue_share_recurring_amount_incl_vat' => 'getRevenueShareRecurringAmountInclVat'
+        'revenue_share_subsequent_years_percentage' => 'getRevenueShareSubsequentYearsPercentage',
+        'revenue_share_subsequent_years_vat_amount' => 'getRevenueShareSubsequentYearsVatAmount',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'getRevenueShareSubsequentYearsAmountExclVat',
+        'revenue_share_subsequent_years_amount_incl_vat' => 'getRevenueShareSubsequentYearsAmountInclVat'
     ];
 
     public static function attributeMap()
@@ -171,10 +171,10 @@ class LeadQuotePaymentResource implements ArrayAccess
         $this->container['revenue_share_vat_amount'] = isset($data['revenue_share_vat_amount']) ? $data['revenue_share_vat_amount'] : null;
         $this->container['revenue_share_amount_excl_vat'] = isset($data['revenue_share_amount_excl_vat']) ? $data['revenue_share_amount_excl_vat'] : null;
         $this->container['revenue_share_amount_incl_vat'] = isset($data['revenue_share_amount_incl_vat']) ? $data['revenue_share_amount_incl_vat'] : null;
-        $this->container['revenue_share_recurring_percentage'] = isset($data['revenue_share_recurring_percentage']) ? $data['revenue_share_recurring_percentage'] : null;
-        $this->container['revenue_share_recurring_vat_amount'] = isset($data['revenue_share_recurring_vat_amount']) ? $data['revenue_share_recurring_vat_amount'] : null;
-        $this->container['revenue_share_recurring_amount_excl_vat'] = isset($data['revenue_share_recurring_amount_excl_vat']) ? $data['revenue_share_recurring_amount_excl_vat'] : null;
-        $this->container['revenue_share_recurring_amount_incl_vat'] = isset($data['revenue_share_recurring_amount_incl_vat']) ? $data['revenue_share_recurring_amount_incl_vat'] : null;
+        $this->container['revenue_share_subsequent_years_percentage'] = isset($data['revenue_share_subsequent_years_percentage']) ? $data['revenue_share_subsequent_years_percentage'] : null;
+        $this->container['revenue_share_subsequent_years_vat_amount'] = isset($data['revenue_share_subsequent_years_vat_amount']) ? $data['revenue_share_subsequent_years_vat_amount'] : null;
+        $this->container['revenue_share_subsequent_years_amount_excl_vat'] = isset($data['revenue_share_subsequent_years_amount_excl_vat']) ? $data['revenue_share_subsequent_years_amount_excl_vat'] : null;
+        $this->container['revenue_share_subsequent_years_amount_incl_vat'] = isset($data['revenue_share_subsequent_years_amount_incl_vat']) ? $data['revenue_share_subsequent_years_amount_incl_vat'] : null;
     }
 
     /**
@@ -371,85 +371,85 @@ class LeadQuotePaymentResource implements ArrayAccess
     }
 
     /**
-     * Gets revenue_share_recurring_percentage
+     * Gets revenue_share_subsequent_years_percentage
      * @return float
      */
-    public function getRevenueShareRecurringPercentage()
+    public function getRevenueShareSubsequentYearsPercentage()
     {
-        return $this->container['revenue_share_recurring_percentage'];
+        return $this->container['revenue_share_subsequent_years_percentage'];
     }
 
     /**
-     * Sets revenue_share_recurring_percentage
-     * @param float $revenue_share_recurring_percentage
+     * Sets revenue_share_subsequent_years_percentage
+     * @param float $revenue_share_subsequent_years_percentage
      * @return $this
      */
-    public function setRevenueShareRecurringPercentage($revenue_share_recurring_percentage)
+    public function setRevenueShareSubsequentYearsPercentage($revenue_share_subsequent_years_percentage)
     {
-        $this->container['revenue_share_recurring_percentage'] = $revenue_share_recurring_percentage;
+        $this->container['revenue_share_subsequent_years_percentage'] = $revenue_share_subsequent_years_percentage;
 
         return $this;
     }
 
     /**
-     * Gets revenue_share_recurring_vat_amount
+     * Gets revenue_share_subsequent_years_vat_amount
      * @return \Ageras\Api\AmountResource
      */
-    public function getRevenueShareRecurringVatAmount()
+    public function getRevenueShareSubsequentYearsVatAmount()
     {
-        return $this->container['revenue_share_recurring_vat_amount'];
+        return $this->container['revenue_share_subsequent_years_vat_amount'];
     }
 
     /**
-     * Sets revenue_share_recurring_vat_amount
-     * @param \Ageras\Api\AmountResource $revenue_share_recurring_vat_amount
+     * Sets revenue_share_subsequent_years_vat_amount
+     * @param \Ageras\Api\AmountResource $revenue_share_subsequent_years_vat_amount
      * @return $this
      */
-    public function setRevenueShareRecurringVatAmount($revenue_share_recurring_vat_amount)
+    public function setRevenueShareSubsequentYearsVatAmount($revenue_share_subsequent_years_vat_amount)
     {
-        $this->container['revenue_share_recurring_vat_amount'] = $revenue_share_recurring_vat_amount;
+        $this->container['revenue_share_subsequent_years_vat_amount'] = $revenue_share_subsequent_years_vat_amount;
 
         return $this;
     }
 
     /**
-     * Gets revenue_share_recurring_amount_excl_vat
+     * Gets revenue_share_subsequent_years_amount_excl_vat
      * @return \Ageras\Api\AmountResource
      */
-    public function getRevenueShareRecurringAmountExclVat()
+    public function getRevenueShareSubsequentYearsAmountExclVat()
     {
-        return $this->container['revenue_share_recurring_amount_excl_vat'];
+        return $this->container['revenue_share_subsequent_years_amount_excl_vat'];
     }
 
     /**
-     * Sets revenue_share_recurring_amount_excl_vat
-     * @param \Ageras\Api\AmountResource $revenue_share_recurring_amount_excl_vat
+     * Sets revenue_share_subsequent_years_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $revenue_share_subsequent_years_amount_excl_vat
      * @return $this
      */
-    public function setRevenueShareRecurringAmountExclVat($revenue_share_recurring_amount_excl_vat)
+    public function setRevenueShareSubsequentYearsAmountExclVat($revenue_share_subsequent_years_amount_excl_vat)
     {
-        $this->container['revenue_share_recurring_amount_excl_vat'] = $revenue_share_recurring_amount_excl_vat;
+        $this->container['revenue_share_subsequent_years_amount_excl_vat'] = $revenue_share_subsequent_years_amount_excl_vat;
 
         return $this;
     }
 
     /**
-     * Gets revenue_share_recurring_amount_incl_vat
+     * Gets revenue_share_subsequent_years_amount_incl_vat
      * @return \Ageras\Api\AmountResource
      */
-    public function getRevenueShareRecurringAmountInclVat()
+    public function getRevenueShareSubsequentYearsAmountInclVat()
     {
-        return $this->container['revenue_share_recurring_amount_incl_vat'];
+        return $this->container['revenue_share_subsequent_years_amount_incl_vat'];
     }
 
     /**
-     * Sets revenue_share_recurring_amount_incl_vat
-     * @param \Ageras\Api\AmountResource $revenue_share_recurring_amount_incl_vat
+     * Sets revenue_share_subsequent_years_amount_incl_vat
+     * @param \Ageras\Api\AmountResource $revenue_share_subsequent_years_amount_incl_vat
      * @return $this
      */
-    public function setRevenueShareRecurringAmountInclVat($revenue_share_recurring_amount_incl_vat)
+    public function setRevenueShareSubsequentYearsAmountInclVat($revenue_share_subsequent_years_amount_incl_vat)
     {
-        $this->container['revenue_share_recurring_amount_incl_vat'] = $revenue_share_recurring_amount_incl_vat;
+        $this->container['revenue_share_subsequent_years_amount_incl_vat'] = $revenue_share_subsequent_years_amount_incl_vat;
 
         return $this;
     }

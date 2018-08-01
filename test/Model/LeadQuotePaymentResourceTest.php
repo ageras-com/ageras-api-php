@@ -147,33 +147,33 @@ class LeadQuotePaymentResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "revenue_share_recurring_percentage"
+     * Test attribute "revenue_share_subsequent_years_percentage"
      */
-    public function testPropertyRevenueShareRecurringPercentage()
+    public function testPropertyRevenueShareSubsequentYearsPercentage()
     {
 
     }
 
     /**
-     * Test attribute "revenue_share_recurring_vat_amount"
+     * Test attribute "revenue_share_subsequent_years_vat_amount"
      */
-    public function testPropertyRevenueShareRecurringVatAmount()
+    public function testPropertyRevenueShareSubsequentYearsVatAmount()
     {
 
     }
 
     /**
-     * Test attribute "revenue_share_recurring_amount_excl_vat"
+     * Test attribute "revenue_share_subsequent_years_amount_excl_vat"
      */
-    public function testPropertyRevenueShareRecurringAmountExclVat()
+    public function testPropertyRevenueShareSubsequentYearsAmountExclVat()
     {
 
     }
 
     /**
-     * Test attribute "revenue_share_recurring_amount_incl_vat"
+     * Test attribute "revenue_share_subsequent_years_amount_incl_vat"
      */
-    public function testPropertyRevenueShareRecurringAmountInclVat()
+    public function testPropertyRevenueShareSubsequentYearsAmountInclVat()
     {
 
     }

@@ -114,4 +114,12 @@ class NotificationTriggerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "client"
+     */
+    public function testPropertyClient()
+    {
+
+    }
+
 }

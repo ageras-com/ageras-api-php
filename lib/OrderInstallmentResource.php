@@ -61,7 +61,7 @@ class OrderInstallmentResource implements ArrayAccess
         'amount_vat' => '\Ageras\Api\AmountResource',
         'amount_excl_vat' => '\Ageras\Api\AmountResource',
         'amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'payment_solution' => '\Ageras\Api\PaymentSolutionResource',
+        'payment_solution' => '\Ageras\Api\PaymentMethodResource',
         'payment_provider' => '\Ageras\Api\PaymentProviderResource',
         'payment_card' => '\Ageras\Api\PaymentCardResource',
         'ready_for_payment' => 'bool',
@@ -361,7 +361,7 @@ class OrderInstallmentResource implements ArrayAccess
 
     /**
      * Gets payment_solution
-     * @return \Ageras\Api\PaymentSolutionResource
+     * @return \Ageras\Api\PaymentMethodResource
      */
     public function getPaymentSolution()
     {
@@ -370,7 +370,7 @@ class OrderInstallmentResource implements ArrayAccess
 
     /**
      * Sets payment_solution
-     * @param \Ageras\Api\PaymentSolutionResource $payment_solution
+     * @param \Ageras\Api\PaymentMethodResource $payment_solution
      * @return $this
      */
     public function setPaymentSolution($payment_solution)

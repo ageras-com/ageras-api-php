@@ -36,6 +36,9 @@ Name | Type | Description | Notes
 **canvas** | [**\Ageras\Api\PartnerCanvasResource**](PartnerCanvasResource.md) |  | [optional] 
 **tasks** | [**\Ageras\Api\PartnerTasksResource**](PartnerTasksResource.md) |  | [optional] 
 **subscription** | [**\Ageras\Api\PartnerSubscriptionResource[]**](PartnerSubscriptionResource.md) | Partner subscription data | [optional] 
+**preferred_payment_solution** | [**\Ageras\Api\PaymentSolutionResource**](PaymentSolutionResource.md) |  | [optional] 
+**payment_schedule** | **string** | Partner payment schedule | [optional] [default to 'immediate']
+**attributes** | [**\Ageras\Api\PartnerAttributeResource[]**](PartnerAttributeResource.md) | Attributes for the partner. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,6 +4,7 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**conversationsActionsCreate**](ConversationsApi.md#conversationsActionsCreate) | **POST** /conversations/{conversation_id}/actions | Conversation action
 [**conversationsAttachmentsCreate**](ConversationsApi.md#conversationsAttachmentsCreate) | **POST** /conversations/attachments | Create a new attachment
 [**conversationsAttachmentsCreate2**](ConversationsApi.md#conversationsAttachmentsCreate2) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
 [**conversationsAttachmentsGet**](ConversationsApi.md#conversationsAttachmentsGet) | **GET** /conversations/attachments/{attachment_id} | Get an attachment
@@ -29,6 +30,59 @@ Method | HTTP request | Description
 [**conversationsMessagesIndex**](ConversationsApi.md#conversationsMessagesIndex) | **GET** /conversations/messages | Get messages by conversation_id.
 [**conversationsMessagesIndex2**](ConversationsApi.md#conversationsMessagesIndex2) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
 
+
+# **conversationsActionsCreate**
+> \Ageras\Api\ConversationResource conversationsActionsCreate($conversation_id , $conversation_action_resource)
+
+Conversation action
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\ConversationsApi();
+$conversation_id = "conversation_id_example"; // string | 
+$conversation_action_resource = new \Ageras\Api\ConversationActionResource(); // \Ageras\Api\ConversationActionResource | 
+
+try {
+    $result = $api_instance->conversationsActionsCreate($conversation_id , $conversation_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ConversationsApi->conversationsActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_id** | **string**|  |
+ **conversation_action_resource** | [**\Ageras\Api\ConversationActionResource**](../Model/\Ageras\Api\ConversationActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\ConversationResource**](../Model/ConversationResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **conversationsAttachmentsCreate**
 > \Ageras\Api\AttachmentResource conversationsAttachmentsCreate($attachment_resource)
@@ -493,6 +547,7 @@ $criteria = [
         'client_id' => "client_id_example"; // string | Client id
         'employee_id' => "employee_id_example"; // string | Employee id
         'lead_id' => "lead_id_example"; // string | Lead id
+        'sort' => "latest_activity"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -518,6 +573,7 @@ Name | Type | Description  | Notes
  **client_id** | **string**| Client id | [optional]
  **employee_id** | **string**| Employee id | [optional]
  **lead_id** | **string**| Lead id | [optional]
+ **sort** | **string**|  | [optional] [default to latest_activity]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1266,6 +1322,8 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $criteria = [
         'conversation_id' => "conversation_id_example"; // string | Conversation id @var int
         'message_id' => "message_id_example"; // string | Message ID. @var int
+        'participant_id' => 56; // int | Message Participant ID. @var int
+        'unread_by_participant_id' => 56; // int | Parameter for getting unread messages by participant_id @var int
         'sort' => "created_at"; // string | Sort messages
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -1287,6 +1345,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**| Conversation id @var int | [optional]
  **message_id** | **string**| Message ID. @var int | [optional]
+ **participant_id** | **int**| Message Participant ID. @var int | [optional]
+ **unread_by_participant_id** | **int**| Parameter for getting unread messages by participant_id @var int | [optional]
  **sort** | **string**| Sort messages | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -1329,6 +1389,8 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $conversation_id = "conversation_id_example"; // string | 
 $criteria = [
         'message_id' => "message_id_example"; // string | Message ID. @var int
+        'participant_id' => 56; // int | Message Participant ID. @var int
+        'unread_by_participant_id' => 56; // int | Parameter for getting unread messages by participant_id @var int
         'sort' => "created_at"; // string | Sort messages
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -1350,6 +1412,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_id** | **string**|  |
  **message_id** | **string**| Message ID. @var int | [optional]
+ **participant_id** | **int**| Message Participant ID. @var int | [optional]
+ **unread_by_participant_id** | **int**| Parameter for getting unread messages by participant_id @var int | [optional]
  **sort** | **string**| Sort messages | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

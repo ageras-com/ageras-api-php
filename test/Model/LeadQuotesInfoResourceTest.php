@@ -99,9 +99,25 @@ class LeadQuotesInfoResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "reserved"
+     */
+    public function testPropertyReserved()
+    {
+
+    }
+
+    /**
      * Test attribute "open_for_quotes"
      */
     public function testPropertyOpenForQuotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "open_for_reservations"
+     */
+    public function testPropertyOpenForReservations()
     {
 
     }

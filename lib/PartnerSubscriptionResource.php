@@ -57,7 +57,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         'id' => 'int',
         'partner_id' => 'int',
         'package_id' => 'int',
-        'payment_solution' => '\Ageras\Api\PaymentSolutionResource',
+        'payment_solution' => '\Ageras\Api\PaymentMethodResource',
         'monthly_price' => '\Ageras\Api\AmountResource',
         'expires_at' => 'string',
         'canceled_at' => 'string',
@@ -257,7 +257,7 @@ class PartnerSubscriptionResource implements ArrayAccess
 
     /**
      * Gets payment_solution
-     * @return \Ageras\Api\PaymentSolutionResource
+     * @return \Ageras\Api\PaymentMethodResource
      */
     public function getPaymentSolution()
     {
@@ -266,7 +266,7 @@ class PartnerSubscriptionResource implements ArrayAccess
 
     /**
      * Sets payment_solution
-     * @param \Ageras\Api\PaymentSolutionResource $payment_solution
+     * @param \Ageras\Api\PaymentMethodResource $payment_solution
      * @return $this
      */
     public function setPaymentSolution($payment_solution)

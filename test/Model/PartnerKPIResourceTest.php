@@ -91,97 +91,9 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "punches_use_speed"
-     */
-    public function testPropertyPunchesUseSpeed()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_left"
-     */
-    public function testPropertyPunchesLeft()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_spent_monthly"
-     */
-    public function testPropertyPunchesSpentMonthly()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_spent_month"
-     */
-    public function testPropertyPunchesSpentMonth()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_spent_6months"
-     */
-    public function testPropertyPunchesSpent6months()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_spent_total"
-     */
-    public function testPropertyPunchesSpentTotal()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_bought_month"
-     */
-    public function testPropertyPunchesBoughtMonth()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_bought_6months"
-     */
-    public function testPropertyPunchesBought6months()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_bought_total"
-     */
-    public function testPropertyPunchesBoughtTotal()
-    {
-
-    }
-
-    /**
-     * Test attribute "punches_total"
-     */
-    public function testPropertyPunchesTotal()
-    {
-
-    }
-
-    /**
      * Test attribute "last_login"
      */
     public function testPropertyLastLogin()
-    {
-
-    }
-
-    /**
-     * Test attribute "last_lead_bought"
-     */
-    public function testPropertyLastLeadBought()
     {
 
     }
@@ -195,14 +107,6 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "last_coupon_size"
-     */
-    public function testPropertyLastCouponSize()
-    {
-
-    }
-
-    /**
      * Test attribute "last_phone_call"
      */
     public function testPropertyLastPhoneCall()
@@ -211,9 +115,17 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "golden_ratio_6months"
+     * Test attribute "last_published_quote"
      */
-    public function testPropertyGoldenRatio6months()
+    public function testPropertyLastPublishedQuote()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_subscription_start_date"
+     */
+    public function testPropertyLastSubscriptionStartDate()
     {
 
     }
@@ -243,41 +155,41 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "success_rate"
+     * Test attribute "accepted_quotes_count"
      */
-    public function testPropertySuccessRate()
+    public function testPropertyAcceptedQuotesCount()
     {
 
     }
 
     /**
-     * Test attribute "success_total"
+     * Test attribute "published_quotes_count"
      */
-    public function testPropertySuccessTotal()
+    public function testPropertyPublishedQuotesCount()
     {
 
     }
 
     /**
-     * Test attribute "avg_punch_price_6months"
+     * Test attribute "unmatched_count"
      */
-    public function testPropertyAvgPunchPrice6months()
+    public function testPropertyUnmatchedCount()
     {
 
     }
 
     /**
-     * Test attribute "avg_due_days_6months"
+     * Test attribute "unmatched_percent"
      */
-    public function testPropertyAvgDueDays6months()
+    public function testPropertyUnmatchedPercent()
     {
 
     }
 
     /**
-     * Test attribute "avg_paid_days_6months"
+     * Test attribute "win_ratio"
      */
-    public function testPropertyAvgPaidDays6months()
+    public function testPropertyWinRatio()
     {
 
     }

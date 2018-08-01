@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **phone** | **string** | The Phone Number used to contact the customer. | [optional] 
 **mobile** | **string** | The Mobile Phone Number used to contact the customer. | [optional] 
 **vat_number** | **string** | VAT Number for the customer. | [optional] 
+**customer_type** | [**\Ageras\Api\LeadCustomerTypeResource**](LeadCustomerTypeResource.md) |  | [optional] 
+**show_prices_including_vat** | **bool** | If true, prices should be displayed to the customer including VAT | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

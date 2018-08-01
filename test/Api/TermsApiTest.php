@@ -77,6 +77,17 @@ class TermsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for termsAcceptedIndex
+     *
+     * Get accepted terms..
+     *
+     */
+    public function testTermsAcceptedIndex()
+    {
+
+    }
+
+    /**
      * Test case for termsActionsCreate
      *
      * Term actions..

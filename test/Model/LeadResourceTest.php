@@ -147,6 +147,14 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "reservation_status"
+     */
+    public function testPropertyReservationStatus()
+    {
+
+    }
+
+    /**
      * Test attribute "progress"
      */
     public function testPropertyProgress()
@@ -206,6 +214,22 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "service_fee"
      */
     public function testPropertyServiceFee()
+    {
+
+    }
+
+    /**
+     * Test attribute "service_fee_subsequent_years_amount_excl_vat"
+     */
+    public function testPropertyServiceFeeSubsequentYearsAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "minimum_quote_amount_excl_vat"
+     */
+    public function testPropertyMinimumQuoteAmountExclVat()
     {
 
     }
@@ -294,6 +318,54 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "validator"
      */
     public function testPropertyValidator()
+    {
+
+    }
+
+    /**
+     * Test attribute "custom_variables"
+     */
+    public function testPropertyCustomVariables()
+    {
+
+    }
+
+    /**
+     * Test attribute "category"
+     */
+    public function testPropertyCategory()
+    {
+
+    }
+
+    /**
+     * Test attribute "revenue_amount_excl_vat"
+     */
+    public function testPropertyRevenueAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_service_fee"
+     */
+    public function testPropertyIsServiceFee()
+    {
+
+    }
+
+    /**
+     * Test attribute "wants_local_partner"
+     */
+    public function testPropertyWantsLocalPartner()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_digital"
+     */
+    public function testPropertyIsDigital()
     {
 
     }

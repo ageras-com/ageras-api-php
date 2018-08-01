@@ -346,4 +346,28 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "preferred_payment_solution"
+     */
+    public function testPropertyPreferredPaymentSolution()
+    {
+
+    }
+
+    /**
+     * Test attribute "payment_schedule"
+     */
+    public function testPropertyPaymentSchedule()
+    {
+
+    }
+
+    /**
+     * Test attribute "attributes"
+     */
+    public function testPropertyAttributes()
+    {
+
+    }
+
 }

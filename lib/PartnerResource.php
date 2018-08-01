@@ -86,7 +86,10 @@ class PartnerResource implements ArrayAccess
         'demo' => '\Ageras\Api\PartnerDemoResource',
         'canvas' => '\Ageras\Api\PartnerCanvasResource',
         'tasks' => '\Ageras\Api\PartnerTasksResource',
-        'subscription' => '\Ageras\Api\PartnerSubscriptionResource[]'
+        'subscription' => '\Ageras\Api\PartnerSubscriptionResource[]',
+        'preferred_payment_solution' => '\Ageras\Api\PaymentSolutionResource',
+        'payment_schedule' => 'string',
+        'attributes' => '\Ageras\Api\PartnerAttributeResource[]'
     ];
 
     public static function swaggerTypes()
@@ -131,7 +134,10 @@ class PartnerResource implements ArrayAccess
         'demo' => 'demo',
         'canvas' => 'canvas',
         'tasks' => 'tasks',
-        'subscription' => 'subscription'
+        'subscription' => 'subscription',
+        'preferred_payment_solution' => 'preferred_payment_solution',
+        'payment_schedule' => 'payment_schedule',
+        'attributes' => 'attributes'
     ];
 
 
@@ -172,7 +178,10 @@ class PartnerResource implements ArrayAccess
         'demo' => 'setDemo',
         'canvas' => 'setCanvas',
         'tasks' => 'setTasks',
-        'subscription' => 'setSubscription'
+        'subscription' => 'setSubscription',
+        'preferred_payment_solution' => 'setPreferredPaymentSolution',
+        'payment_schedule' => 'setPaymentSchedule',
+        'attributes' => 'setAttributes'
     ];
 
 
@@ -213,7 +222,10 @@ class PartnerResource implements ArrayAccess
         'demo' => 'getDemo',
         'canvas' => 'getCanvas',
         'tasks' => 'getTasks',
-        'subscription' => 'getSubscription'
+        'subscription' => 'getSubscription',
+        'preferred_payment_solution' => 'getPreferredPaymentSolution',
+        'payment_schedule' => 'getPaymentSchedule',
+        'attributes' => 'getAttributes'
     ];
 
     public static function attributeMap()
@@ -239,6 +251,8 @@ class PartnerResource implements ArrayAccess
     const STATE_ACTIVE = 'active';
     const STATE_CLOSED = 'closed';
     const STATE_BUSINESS_PARTNER = 'business_partner';
+    const PAYMENT_SCHEDULE_WITH_SUBSCRIPTION_PERIOD = 'with_subscription_period';
+    const PAYMENT_SCHEDULE_IMMEDIATE = 'immediate';
     
 
     
@@ -257,6 +271,18 @@ class PartnerResource implements ArrayAccess
             self::STATE_ACTIVE,
             self::STATE_CLOSED,
             self::STATE_BUSINESS_PARTNER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPaymentScheduleAllowableValues()
+    {
+        return [
+            self::PAYMENT_SCHEDULE_WITH_SUBSCRIPTION_PERIOD,
+            self::PAYMENT_SCHEDULE_IMMEDIATE,
         ];
     }
     
@@ -306,6 +332,9 @@ class PartnerResource implements ArrayAccess
         $this->container['canvas'] = isset($data['canvas']) ? $data['canvas'] : null;
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
         $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
+        $this->container['preferred_payment_solution'] = isset($data['preferred_payment_solution']) ? $data['preferred_payment_solution'] : null;
+        $this->container['payment_schedule'] = isset($data['payment_schedule']) ? $data['payment_schedule'] : 'immediate';
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
     }
 
     /**
@@ -322,6 +351,11 @@ class PartnerResource implements ArrayAccess
             $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner'.";
         }
 
+        $allowed_values = ["with_subscription_period", "immediate"];
+        if (!in_array($this->container['payment_schedule'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'payment_schedule', must be one of 'with_subscription_period', 'immediate'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -336,6 +370,10 @@ class PartnerResource implements ArrayAccess
 
         $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "closed", "business_partner"];
         if (!in_array($this->container['state'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["with_subscription_period", "immediate"];
+        if (!in_array($this->container['payment_schedule'], $allowed_values)) {
             return false;
         }
         return true;
@@ -1035,6 +1073,73 @@ class PartnerResource implements ArrayAccess
     public function setSubscription($subscription)
     {
         $this->container['subscription'] = $subscription;
+
+        return $this;
+    }
+
+    /**
+     * Gets preferred_payment_solution
+     * @return \Ageras\Api\PaymentSolutionResource
+     */
+    public function getPreferredPaymentSolution()
+    {
+        return $this->container['preferred_payment_solution'];
+    }
+
+    /**
+     * Sets preferred_payment_solution
+     * @param \Ageras\Api\PaymentSolutionResource $preferred_payment_solution
+     * @return $this
+     */
+    public function setPreferredPaymentSolution($preferred_payment_solution)
+    {
+        $this->container['preferred_payment_solution'] = $preferred_payment_solution;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_schedule
+     * @return string
+     */
+    public function getPaymentSchedule()
+    {
+        return $this->container['payment_schedule'];
+    }
+
+    /**
+     * Sets payment_schedule
+     * @param string $payment_schedule Partner payment schedule
+     * @return $this
+     */
+    public function setPaymentSchedule($payment_schedule)
+    {
+        $allowed_values = array('with_subscription_period', 'immediate');
+        if (!is_null($payment_schedule) && (!in_array($payment_schedule, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'payment_schedule', must be one of 'with_subscription_period', 'immediate'");
+        }
+        $this->container['payment_schedule'] = $payment_schedule;
+
+        return $this;
+    }
+
+    /**
+     * Gets attributes
+     * @return \Ageras\Api\PartnerAttributeResource[]
+     */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+     * Sets attributes
+     * @param \Ageras\Api\PartnerAttributeResource[] $attributes Attributes for the partner.
+     * @return $this
+     */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
 
         return $this;
     }

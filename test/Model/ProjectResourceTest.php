@@ -194,4 +194,12 @@ class ProjectResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+
+    }
+
 }

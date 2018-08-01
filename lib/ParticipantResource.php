@@ -66,7 +66,9 @@ class ParticipantResource implements ArrayAccess
         'partner_user_id' => 'int',
         'client_id' => 'int',
         'partner_id' => 'int',
-        'customer_id' => 'int'
+        'customer_id' => 'int',
+        'zip_code' => 'string',
+        'city' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,9 @@ class ParticipantResource implements ArrayAccess
         'partner_user_id' => 'partner_user_id',
         'client_id' => 'client_id',
         'partner_id' => 'partner_id',
-        'customer_id' => 'customer_id'
+        'customer_id' => 'customer_id',
+        'zip_code' => 'zip_code',
+        'city' => 'city'
     ];
 
 
@@ -112,7 +116,9 @@ class ParticipantResource implements ArrayAccess
         'partner_user_id' => 'setPartnerUserId',
         'client_id' => 'setClientId',
         'partner_id' => 'setPartnerId',
-        'customer_id' => 'setCustomerId'
+        'customer_id' => 'setCustomerId',
+        'zip_code' => 'setZipCode',
+        'city' => 'setCity'
     ];
 
 
@@ -133,7 +139,9 @@ class ParticipantResource implements ArrayAccess
         'partner_user_id' => 'getPartnerUserId',
         'client_id' => 'getClientId',
         'partner_id' => 'getPartnerId',
-        'customer_id' => 'getCustomerId'
+        'customer_id' => 'getCustomerId',
+        'zip_code' => 'getZipCode',
+        'city' => 'getCity'
     ];
 
     public static function attributeMap()
@@ -180,6 +188,8 @@ class ParticipantResource implements ArrayAccess
         $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
     }
 
     /**
@@ -476,6 +486,48 @@ class ParticipantResource implements ArrayAccess
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets zip_code
+     * @return string
+     */
+    public function getZipCode()
+    {
+        return $this->container['zip_code'];
+    }
+
+    /**
+     * Sets zip_code
+     * @param string $zip_code
+     * @return $this
+     */
+    public function setZipCode($zip_code)
+    {
+        $this->container['zip_code'] = $zip_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     * @param string $city
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
 
         return $this;
     }

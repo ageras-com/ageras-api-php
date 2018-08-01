@@ -115,6 +115,22 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "accepted_at"
+     */
+    public function testPropertyAcceptedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "rejected_at"
+     */
+    public function testPropertyRejectedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "paid_at"
      */
     public function testPropertyPaidAt()
@@ -142,6 +158,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "lead_id"
      */
     public function testPropertyLeadId()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead"
+     */
+    public function testPropertyLead()
     {
 
     }
@@ -222,6 +246,70 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "total_amount_incl_vat"
      */
     public function testPropertyTotalAmountInclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "client"
+     */
+    public function testPropertyClient()
+    {
+
+    }
+
+    /**
+     * Test attribute "service_fee"
+     */
+    public function testPropertyServiceFee()
+    {
+
+    }
+
+    /**
+     * Test attribute "reservation_expires_at"
+     */
+    public function testPropertyReservationExpiresAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "revenue_share_amount_excl_vat"
+     */
+    public function testPropertyRevenueShareAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "revenue_share_subsequent_years_amount_excl_vat"
+     */
+    public function testPropertyRevenueShareSubsequentYearsAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_below_minimum_amount"
+     */
+    public function testPropertyIsBelowMinimumAmount()
+    {
+
+    }
+
+    /**
+     * Test attribute "accepted_by_actioner"
+     */
+    public function testPropertyAcceptedByActioner()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_products"
+     */
+    public function testPropertyLeadProducts()
     {
 
     }

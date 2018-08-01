@@ -67,7 +67,8 @@ class ProjectResource implements ArrayAccess
         'partner_user' => '\Ageras\Api\PartnerUserResource',
         'customers' => '\Ageras\Api\ProjectCustomerResource[]',
         'geo' => '\Ageras\Api\ProjectGeoResource',
-        'quote' => '\Ageras\Api\LeadQuoteResource'
+        'quote' => '\Ageras\Api\LeadQuoteResource',
+        'notes' => '\Ageras\Api\ProjectNoteResource[]'
     ];
 
     public static function swaggerTypes()
@@ -93,7 +94,8 @@ class ProjectResource implements ArrayAccess
         'partner_user' => 'partner_user',
         'customers' => 'customers',
         'geo' => 'geo',
-        'quote' => 'quote'
+        'quote' => 'quote',
+        'notes' => 'notes'
     ];
 
 
@@ -115,7 +117,8 @@ class ProjectResource implements ArrayAccess
         'partner_user' => 'setPartnerUser',
         'customers' => 'setCustomers',
         'geo' => 'setGeo',
-        'quote' => 'setQuote'
+        'quote' => 'setQuote',
+        'notes' => 'setNotes'
     ];
 
 
@@ -137,7 +140,8 @@ class ProjectResource implements ArrayAccess
         'partner_user' => 'getPartnerUser',
         'customers' => 'getCustomers',
         'geo' => 'getGeo',
-        'quote' => 'getQuote'
+        'quote' => 'getQuote',
+        'notes' => 'getNotes'
     ];
 
     public static function attributeMap()
@@ -185,6 +189,7 @@ class ProjectResource implements ArrayAccess
         $this->container['customers'] = isset($data['customers']) ? $data['customers'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
     }
 
     /**
@@ -502,6 +507,27 @@ class ProjectResource implements ArrayAccess
     public function setQuote($quote)
     {
         $this->container['quote'] = $quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \Ageras\Api\ProjectNoteResource[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \Ageras\Api\ProjectNoteResource[] $notes
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }

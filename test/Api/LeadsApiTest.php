@@ -88,6 +88,28 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsAggregationsIndex
+     *
+     * List facets and aggregations for the Lead Search..
+     *
+     */
+    public function testLeadsAggregationsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsCategoriesIndex
+     *
+     * Index lead categories ..
+     *
+     */
+    public function testLeadsCategoriesIndex()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
      * Create a new Lead..
@@ -105,6 +127,39 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersCreate
+     *
+     * Add partner to lead's excluded partner list.
+     *
+     */
+    public function testLeadsExcludedpartnersCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersDelete
+     *
+     * Remove partner from the lead's excluded partner list.
+     *
+     */
+    public function testLeadsExcludedpartnersDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsExcludedpartnersIndex
+     *
+     * Show all excluded partners for a specific lead..
+     *
+     */
+    public function testLeadsExcludedpartnersIndex()
     {
 
     }
@@ -220,6 +275,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsQuotesDelete
+     *
+     * Delete a quote for a given Lead..
+     *
+     */
+    public function testLeadsQuotesDelete()
+    {
+
+    }
+
+    /**
      * Test case for leadsQuotesGet
      *
      * Get an quote by id..
@@ -314,6 +380,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsQuotesItemsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotesProgressstepsIndex
+     *
+     * Get quote progress statuses..
+     *
+     */
+    public function testLeadsQuotesProgressstepsIndex()
     {
 
     }

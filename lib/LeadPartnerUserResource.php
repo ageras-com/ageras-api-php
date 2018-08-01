@@ -58,6 +58,7 @@ class LeadPartnerUserResource implements ArrayAccess
         'name' => 'string',
         'email' => 'string',
         'phone' => 'string',
+        'mobile' => 'string',
         'profile_picture' => 'string'
     ];
 
@@ -75,6 +76,7 @@ class LeadPartnerUserResource implements ArrayAccess
         'name' => 'name',
         'email' => 'email',
         'phone' => 'phone',
+        'mobile' => 'mobile',
         'profile_picture' => 'profile_picture'
     ];
 
@@ -88,6 +90,7 @@ class LeadPartnerUserResource implements ArrayAccess
         'name' => 'setName',
         'email' => 'setEmail',
         'phone' => 'setPhone',
+        'mobile' => 'setMobile',
         'profile_picture' => 'setProfilePicture'
     ];
 
@@ -101,6 +104,7 @@ class LeadPartnerUserResource implements ArrayAccess
         'name' => 'getName',
         'email' => 'getEmail',
         'phone' => 'getPhone',
+        'mobile' => 'getMobile',
         'profile_picture' => 'getProfilePicture'
     ];
 
@@ -139,6 +143,7 @@ class LeadPartnerUserResource implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
         $this->container['profile_picture'] = isset($data['profile_picture']) ? $data['profile_picture'] : null;
     }
 
@@ -247,6 +252,27 @@ class LeadPartnerUserResource implements ArrayAccess
     public function setPhone($phone)
     {
         $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile
+     * @return string
+     */
+    public function getMobile()
+    {
+        return $this->container['mobile'];
+    }
+
+    /**
+     * Sets mobile
+     * @param string $mobile Partner user mobile @var string
+     * @return $this
+     */
+    public function setMobile($mobile)
+    {
+        $this->container['mobile'] = $mobile;
 
         return $this;
     }

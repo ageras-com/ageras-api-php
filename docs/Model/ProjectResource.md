@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **customers** | [**\Ageras\Api\ProjectCustomerResource[]**](ProjectCustomerResource.md) |  | [optional] 
 **geo** | [**\Ageras\Api\ProjectGeoResource**](ProjectGeoResource.md) |  | [optional] 
 **quote** | [**\Ageras\Api\LeadQuoteResource**](LeadQuoteResource.md) |  | [optional] 
+**notes** | [**\Ageras\Api\ProjectNoteResource[]**](ProjectNoteResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

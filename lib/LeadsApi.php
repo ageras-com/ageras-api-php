@@ -182,6 +182,384 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsAggregationsIndex
+     *
+     * List facets and aggregations for the Lead Search.
+     *
+     * @param $criteria = [
+     *    'lead_id' => string,
+     *    'phone' => string,
+     *    'partner_id' => int,
+     *    'geo_code' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'client_id' => int,
+     *    'employee_id' => string,
+     *    'client_decision_postponed' => bool,
+     *    'all_quotes_published_before' => string,
+     *    'expires_within' => int,
+     *    'industry' => string,
+     *    'is_quotes_lead' => bool,
+     *    'has_max_quotes' => bool,
+     *    'has_accepted_quote' => bool,
+     *    'has_rejected_quote' => bool,
+     *    'segmented_for_partner_id' => int,
+     *    'relevant_for_partner_id' => int,
+     *    'no_quote_for_partner_id' => int,
+     *    'is_match_priority' => bool,
+     *    'is_completed_call_priority' => bool,
+     *    'geo_point' => string,
+     *    'geo_rect' => string,
+     *    'geo_distance' => int,
+     *    'minimum_revenue_amount_excl_vat' => string,
+     *    'maximum_revenue_amount_excl_vat' => string,
+     *    'lead_category' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\AggregationResult
+     */
+    public function leadsAggregationsIndex($criteria = [])
+    {
+        list($response) = $this->leadsAggregationsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsAggregationsIndexWithHttpInfo
+     *
+     * List facets and aggregations for the Lead Search.
+     *
+     * @param $criteria = [
+     *    'lead_id' => string,
+     *    'phone' => string,
+     *    'partner_id' => int,
+     *    'geo_code' => string,
+     *    'sort' => string,
+     *    'status' => string,
+     *    'client_id' => int,
+     *    'employee_id' => string,
+     *    'client_decision_postponed' => bool,
+     *    'all_quotes_published_before' => string,
+     *    'expires_within' => int,
+     *    'industry' => string,
+     *    'is_quotes_lead' => bool,
+     *    'has_max_quotes' => bool,
+     *    'has_accepted_quote' => bool,
+     *    'has_rejected_quote' => bool,
+     *    'segmented_for_partner_id' => int,
+     *    'relevant_for_partner_id' => int,
+     *    'no_quote_for_partner_id' => int,
+     *    'is_match_priority' => bool,
+     *    'is_completed_call_priority' => bool,
+     *    'geo_point' => string,
+     *    'geo_rect' => string,
+     *    'geo_distance' => int,
+     *    'minimum_revenue_amount_excl_vat' => string,
+     *    'maximum_revenue_amount_excl_vat' => string,
+     *    'lead_category' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\AggregationResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsAggregationsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/aggregations";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['phone'])) {
+            $queryParams['phone'] = $this->apiClient->getSerializer()->toQueryValue($criteria['phone']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['status'])) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($criteria['status']);
+        }
+        // query params
+        if (isset($criteria['client_id'])) {
+            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['client_decision_postponed'])) {
+            $queryParams['client_decision_postponed'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_decision_postponed']);
+        }
+        // query params
+        if (isset($criteria['all_quotes_published_before'])) {
+            $queryParams['all_quotes_published_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['all_quotes_published_before']);
+        }
+        // query params
+        if (isset($criteria['expires_within'])) {
+            $queryParams['expires_within'] = $this->apiClient->getSerializer()->toQueryValue($criteria['expires_within']);
+        }
+        // query params
+        if (isset($criteria['industry'])) {
+            $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry']);
+        }
+        // query params
+        if (isset($criteria['is_quotes_lead'])) {
+            $queryParams['is_quotes_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_quotes_lead']);
+        }
+        // query params
+        if (isset($criteria['has_max_quotes'])) {
+            $queryParams['has_max_quotes'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_max_quotes']);
+        }
+        // query params
+        if (isset($criteria['has_accepted_quote'])) {
+            $queryParams['has_accepted_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_accepted_quote']);
+        }
+        // query params
+        if (isset($criteria['has_rejected_quote'])) {
+            $queryParams['has_rejected_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_rejected_quote']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_partner_id'])) {
+            $queryParams['segmented_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['relevant_for_partner_id'])) {
+            $queryParams['relevant_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['relevant_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['no_quote_for_partner_id'])) {
+            $queryParams['no_quote_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['no_quote_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['is_match_priority'])) {
+            $queryParams['is_match_priority'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_match_priority']);
+        }
+        // query params
+        if (isset($criteria['is_completed_call_priority'])) {
+            $queryParams['is_completed_call_priority'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_completed_call_priority']);
+        }
+        // query params
+        if (isset($criteria['geo_point'])) {
+            $queryParams['geo_point'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_point']);
+        }
+        // query params
+        if (isset($criteria['geo_rect'])) {
+            $queryParams['geo_rect'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_rect']);
+        }
+        // query params
+        if (isset($criteria['geo_distance'])) {
+            $queryParams['geo_distance'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_distance']);
+        }
+        // query params
+        if (isset($criteria['minimum_revenue_amount_excl_vat'])) {
+            $queryParams['minimum_revenue_amount_excl_vat'] = $this->apiClient->getSerializer()->toQueryValue($criteria['minimum_revenue_amount_excl_vat']);
+        }
+        // query params
+        if (isset($criteria['maximum_revenue_amount_excl_vat'])) {
+            $queryParams['maximum_revenue_amount_excl_vat'] = $this->apiClient->getSerializer()->toQueryValue($criteria['maximum_revenue_amount_excl_vat']);
+        }
+        // query params
+        if (isset($criteria['lead_category'])) {
+            $queryParams['lead_category'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_category']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\AggregationResult',
+                '/leads/aggregations'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\AggregationResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\AggregationResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsCategoriesIndex
+     *
+     * Index lead categories .
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'identifier' => string,
+     *    'title' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadCategoryResult
+     */
+    public function leadsCategoriesIndex($criteria = [])
+    {
+        list($response) = $this->leadsCategoriesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsCategoriesIndexWithHttpInfo
+     *
+     * Index lead categories .
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'identifier' => string,
+     *    'title' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadCategoryResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsCategoriesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/categories";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['id'])) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['id']);
+        }
+        // query params
+        if (isset($criteria['identifier'])) {
+            $queryParams['identifier'] = $this->apiClient->getSerializer()->toQueryValue($criteria['identifier']);
+        }
+        // query params
+        if (isset($criteria['title'])) {
+            $queryParams['title'] = $this->apiClient->getSerializer()->toQueryValue($criteria['title']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadCategoryResult',
+                '/leads/categories'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadCategoryResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadCategoryResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsCreate
      *
      * Create a new Lead.
@@ -349,6 +727,302 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsExcludedpartnersCreate
+     *
+     * Add partner to lead's excluded partner list
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\PartnerSuggestResource $partner_suggest_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadResource
+     */
+    public function leadsExcludedpartnersCreate($lead_id , $partner_suggest_resource)
+    {
+        list($response) = $this->leadsExcludedpartnersCreateWithHttpInfo($lead_id, $partner_suggest_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsExcludedpartnersCreateWithHttpInfo
+     *
+     * Add partner to lead's excluded partner list
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\PartnerSuggestResource $partner_suggest_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsExcludedpartnersCreateWithHttpInfo($lead_id , $partner_suggest_resource)
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/excludedpartners";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_suggest_resource)) {
+            $_tempBody = $partner_suggest_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadResource',
+                '/leads/{lead_id}/excludedpartners'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsExcludedpartnersDelete
+     *
+     * Remove partner from the lead's excluded partner list
+     *
+     * @param string $lead_id 
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function leadsExcludedpartnersDelete($lead_id,  $partner_id )
+    {
+        list($response) = $this->leadsExcludedpartnersDeleteWithHttpInfo($lead_id, $partner_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsExcludedpartnersDeleteWithHttpInfo
+     *
+     * Remove partner from the lead's excluded partner list
+     *
+     * @param string $lead_id 
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsExcludedpartnersDeleteWithHttpInfo($lead_id,  $partner_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/excludedpartners/{partner_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/leads/{lead_id}/excludedpartners/{partner_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsExcludedpartnersIndex
+     *
+     * Show all excluded partners for a specific lead.
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadPartnerResult
+     */
+    public function leadsExcludedpartnersIndex($lead_id , $criteria = [])
+    {
+        list($response) = $this->leadsExcludedpartnersIndexWithHttpInfo($lead_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsExcludedpartnersIndexWithHttpInfo
+     *
+     * Show all excluded partners for a specific lead.
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadPartnerResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsExcludedpartnersIndexWithHttpInfo($lead_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/excludedpartners";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadPartnerResult',
+                '/leads/{lead_id}/excludedpartners'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadPartnerResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadPartnerResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsGet
      *
      * Return a Lead from a Lead Id.
@@ -443,8 +1117,6 @@ class LeadsApi
      * @param $criteria = [
      *    'lead_id' => string,
      *    'phone' => string,
-     *    'filter' => string,
-     *    'partner_filter' => string,
      *    'partner_id' => int,
      *    'geo_code' => string,
      *    'sort' => string,
@@ -455,6 +1127,21 @@ class LeadsApi
      *    'all_quotes_published_before' => string,
      *    'expires_within' => int,
      *    'industry' => string,
+     *    'is_quotes_lead' => bool,
+     *    'has_max_quotes' => bool,
+     *    'has_accepted_quote' => bool,
+     *    'has_rejected_quote' => bool,
+     *    'segmented_for_partner_id' => int,
+     *    'relevant_for_partner_id' => int,
+     *    'no_quote_for_partner_id' => int,
+     *    'is_match_priority' => bool,
+     *    'is_completed_call_priority' => bool,
+     *    'geo_point' => string,
+     *    'geo_rect' => string,
+     *    'geo_distance' => int,
+     *    'minimum_revenue_amount_excl_vat' => string,
+     *    'maximum_revenue_amount_excl_vat' => string,
+     *    'lead_category' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -476,8 +1163,6 @@ class LeadsApi
      * @param $criteria = [
      *    'lead_id' => string,
      *    'phone' => string,
-     *    'filter' => string,
-     *    'partner_filter' => string,
      *    'partner_id' => int,
      *    'geo_code' => string,
      *    'sort' => string,
@@ -488,6 +1173,21 @@ class LeadsApi
      *    'all_quotes_published_before' => string,
      *    'expires_within' => int,
      *    'industry' => string,
+     *    'is_quotes_lead' => bool,
+     *    'has_max_quotes' => bool,
+     *    'has_accepted_quote' => bool,
+     *    'has_rejected_quote' => bool,
+     *    'segmented_for_partner_id' => int,
+     *    'relevant_for_partner_id' => int,
+     *    'no_quote_for_partner_id' => int,
+     *    'is_match_priority' => bool,
+     *    'is_completed_call_priority' => bool,
+     *    'geo_point' => string,
+     *    'geo_rect' => string,
+     *    'geo_distance' => int,
+     *    'minimum_revenue_amount_excl_vat' => string,
+     *    'maximum_revenue_amount_excl_vat' => string,
+     *    'lead_category' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -516,14 +1216,6 @@ class LeadsApi
         // query params
         if (isset($criteria['phone'])) {
             $queryParams['phone'] = $this->apiClient->getSerializer()->toQueryValue($criteria['phone']);
-        }
-        // query params
-        if (isset($criteria['filter'])) {
-            $queryParams['filter'] = $this->apiClient->getSerializer()->toQueryValue($criteria['filter']);
-        }
-        // query params
-        if (isset($criteria['partner_filter'])) {
-            $queryParams['partner_filter'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_filter']);
         }
         // query params
         if (isset($criteria['partner_id'])) {
@@ -564,6 +1256,66 @@ class LeadsApi
         // query params
         if (isset($criteria['industry'])) {
             $queryParams['industry'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry']);
+        }
+        // query params
+        if (isset($criteria['is_quotes_lead'])) {
+            $queryParams['is_quotes_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_quotes_lead']);
+        }
+        // query params
+        if (isset($criteria['has_max_quotes'])) {
+            $queryParams['has_max_quotes'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_max_quotes']);
+        }
+        // query params
+        if (isset($criteria['has_accepted_quote'])) {
+            $queryParams['has_accepted_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_accepted_quote']);
+        }
+        // query params
+        if (isset($criteria['has_rejected_quote'])) {
+            $queryParams['has_rejected_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_rejected_quote']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_partner_id'])) {
+            $queryParams['segmented_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['relevant_for_partner_id'])) {
+            $queryParams['relevant_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['relevant_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['no_quote_for_partner_id'])) {
+            $queryParams['no_quote_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['no_quote_for_partner_id']);
+        }
+        // query params
+        if (isset($criteria['is_match_priority'])) {
+            $queryParams['is_match_priority'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_match_priority']);
+        }
+        // query params
+        if (isset($criteria['is_completed_call_priority'])) {
+            $queryParams['is_completed_call_priority'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_completed_call_priority']);
+        }
+        // query params
+        if (isset($criteria['geo_point'])) {
+            $queryParams['geo_point'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_point']);
+        }
+        // query params
+        if (isset($criteria['geo_rect'])) {
+            $queryParams['geo_rect'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_rect']);
+        }
+        // query params
+        if (isset($criteria['geo_distance'])) {
+            $queryParams['geo_distance'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_distance']);
+        }
+        // query params
+        if (isset($criteria['minimum_revenue_amount_excl_vat'])) {
+            $queryParams['minimum_revenue_amount_excl_vat'] = $this->apiClient->getSerializer()->toQueryValue($criteria['minimum_revenue_amount_excl_vat']);
+        }
+        // query params
+        if (isset($criteria['maximum_revenue_amount_excl_vat'])) {
+            $queryParams['maximum_revenue_amount_excl_vat'] = $this->apiClient->getSerializer()->toQueryValue($criteria['maximum_revenue_amount_excl_vat']);
+        }
+        // query params
+        if (isset($criteria['lead_category'])) {
+            $queryParams['lead_category'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_category']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1439,6 +2191,99 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsQuotesDelete
+     *
+     * Delete a quote for a given Lead.
+     *
+     * @param string $lead_id 
+     * @param string $lead_quote_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function leadsQuotesDelete($lead_id,  $lead_quote_id )
+    {
+        list($response) = $this->leadsQuotesDeleteWithHttpInfo($lead_id, $lead_quote_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsQuotesDeleteWithHttpInfo
+     *
+     * Delete a quote for a given Lead.
+     *
+     * @param string $lead_id 
+     * @param string $lead_quote_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsQuotesDeleteWithHttpInfo($lead_id,  $lead_quote_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/quotes/{lead_quote_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($lead_quote_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_quote_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_quote_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/leads/{lead_id}/quotes/{lead_quote_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsQuotesGet
      *
      * Get an quote by id.
@@ -1632,6 +2477,11 @@ class LeadsApi
      *    'lead_id' => string,
      *    'lead_quote_id' => string,
      *    'partner_id' => string,
+     *    'geo_code' => string,
+     *    'is_accepted' => bool,
+     *    'is_published' => bool,
+     *    'is_rejected' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1655,6 +2505,11 @@ class LeadsApi
      *    'lead_id' => string,
      *    'lead_quote_id' => string,
      *    'partner_id' => string,
+     *    'geo_code' => string,
+     *    'is_accepted' => bool,
+     *    'is_published' => bool,
+     *    'is_rejected' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1691,6 +2546,26 @@ class LeadsApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['is_accepted'])) {
+            $queryParams['is_accepted'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_accepted']);
+        }
+        // query params
+        if (isset($criteria['is_published'])) {
+            $queryParams['is_published'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_published']);
+        }
+        // query params
+        if (isset($criteria['is_rejected'])) {
+            $queryParams['is_rejected'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_rejected']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1755,6 +2630,11 @@ class LeadsApi
      *    'client_id' => string,
      *    'lead_quote_id' => string,
      *    'partner_id' => string,
+     *    'geo_code' => string,
+     *    'is_accepted' => bool,
+     *    'is_published' => bool,
+     *    'is_rejected' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1778,6 +2658,11 @@ class LeadsApi
      *    'client_id' => string,
      *    'lead_quote_id' => string,
      *    'partner_id' => string,
+     *    'geo_code' => string,
+     *    'is_accepted' => bool,
+     *    'is_published' => bool,
+     *    'is_rejected' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1810,6 +2695,26 @@ class LeadsApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['is_accepted'])) {
+            $queryParams['is_accepted'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_accepted']);
+        }
+        // query params
+        if (isset($criteria['is_published'])) {
+            $queryParams['is_published'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_published']);
+        }
+        // query params
+        if (isset($criteria['is_rejected'])) {
+            $queryParams['is_rejected'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_rejected']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2411,6 +3316,111 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteItemResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsQuotesProgressstepsIndex
+     *
+     * Get quote progress statuses.
+     *
+     * @param $criteria = [
+     *    'title' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadQuoteProgressResult
+     */
+    public function leadsQuotesProgressstepsIndex($criteria = [])
+    {
+        list($response) = $this->leadsQuotesProgressstepsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsQuotesProgressstepsIndexWithHttpInfo
+     *
+     * Get quote progress statuses.
+     *
+     * @param $criteria = [
+     *    'title' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadQuoteProgressResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsQuotesProgressstepsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/quotes/progresssteps";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['title'])) {
+            $queryParams['title'] = $this->apiClient->getSerializer()->toQueryValue($criteria['title']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadQuoteProgressResult',
+                '/leads/quotes/progresssteps'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadQuoteProgressResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteProgressResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

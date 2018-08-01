@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** | Partner user full name @var string | [optional] 
 **email** | **string** | Partner user email @var string | [optional] 
 **phone** | **string** | Partner user phone @var string | [optional] 
+**mobile** | **string** | Partner user mobile @var string | [optional] 
 **profile_picture** | **string** | Partner User Profile picture @var | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

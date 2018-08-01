@@ -165,6 +165,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersCertificationsUpdate
+     *
+     * Update partner certifications..
+     *
+     */
+    public function testPartnersCertificationsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersContentsDelete
      *
      * Delete content for a given partner..
@@ -451,6 +462,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersFeesCreate
+     *
+     * Create partner fee.
+     *
+     */
+    public function testPartnersFeesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersFeesDelete
+     *
+     * Delete a partner fee.
+     *
+     */
+    public function testPartnersFeesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersFeesIndex
+     *
+     * Get all partner fees..
+     *
+     */
+    public function testPartnersFeesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersGet
      *
      * Get a Partner from a given partner_id..
@@ -688,6 +732,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersSuggestIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersTitlesIndex
+     *
+     * Get all partner titles..
+     *
+     */
+    public function testPartnersTitlesIndex()
     {
 
     }

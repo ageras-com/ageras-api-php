@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **updated_at** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **content** | **string** |  | [optional] 
-**project** | [**\Ageras\Api\ProjectResource**](ProjectResource.md) |  | [optional] 
+**project_id** | **int** |  | [optional] 
 **partner_user** | [**\Ageras\Api\ProjectPartnerUserResource**](ProjectPartnerUserResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

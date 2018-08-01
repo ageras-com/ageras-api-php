@@ -720,6 +720,7 @@ $criteria = [
         'name' => "name_example"; // string | Project name in its native language.
         'geo_code' => "geo_code_example"; // string | Project geo code origin.
         'status' => "status_example"; // string | Project Status.
+        'progress' => "progress_example"; // string | Project quote progress.
         'sort' => "created_at"; // string | Sort projects
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -746,6 +747,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Project name in its native language. | [optional]
  **geo_code** | **string**| Project geo code origin. | [optional]
  **status** | **string**| Project Status. | [optional]
+ **progress** | **string**| Project quote progress. | [optional]
  **sort** | **string**| Sort projects | [optional] [default to created_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

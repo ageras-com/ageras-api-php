@@ -56,7 +56,9 @@ class LeadQuotesInfoResource implements ArrayAccess
     protected static $swaggerTypes = [
         'max' => 'int',
         'count' => 'int',
+        'reserved' => 'int',
         'open_for_quotes' => 'bool',
+        'open_for_reservations' => 'bool',
         'accepted_quote' => '\Ageras\Api\LeadQuoteInfoEntryResource',
         'quotes' => '\Ageras\Api\LeadQuoteInfoEntryResource[]',
         'client_decision_postponed_to' => 'string'
@@ -74,7 +76,9 @@ class LeadQuotesInfoResource implements ArrayAccess
     protected static $attributeMap = [
         'max' => 'max',
         'count' => 'count',
+        'reserved' => 'reserved',
         'open_for_quotes' => 'open_for_quotes',
+        'open_for_reservations' => 'open_for_reservations',
         'accepted_quote' => 'accepted_quote',
         'quotes' => 'quotes',
         'client_decision_postponed_to' => 'client_decision_postponed_to'
@@ -88,7 +92,9 @@ class LeadQuotesInfoResource implements ArrayAccess
     protected static $setters = [
         'max' => 'setMax',
         'count' => 'setCount',
+        'reserved' => 'setReserved',
         'open_for_quotes' => 'setOpenForQuotes',
+        'open_for_reservations' => 'setOpenForReservations',
         'accepted_quote' => 'setAcceptedQuote',
         'quotes' => 'setQuotes',
         'client_decision_postponed_to' => 'setClientDecisionPostponedTo'
@@ -102,7 +108,9 @@ class LeadQuotesInfoResource implements ArrayAccess
     protected static $getters = [
         'max' => 'getMax',
         'count' => 'getCount',
+        'reserved' => 'getReserved',
         'open_for_quotes' => 'getOpenForQuotes',
+        'open_for_reservations' => 'getOpenForReservations',
         'accepted_quote' => 'getAcceptedQuote',
         'quotes' => 'getQuotes',
         'client_decision_postponed_to' => 'getClientDecisionPostponedTo'
@@ -141,7 +149,9 @@ class LeadQuotesInfoResource implements ArrayAccess
     {
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['reserved'] = isset($data['reserved']) ? $data['reserved'] : null;
         $this->container['open_for_quotes'] = isset($data['open_for_quotes']) ? $data['open_for_quotes'] : false;
+        $this->container['open_for_reservations'] = isset($data['open_for_reservations']) ? $data['open_for_reservations'] : false;
         $this->container['accepted_quote'] = isset($data['accepted_quote']) ? $data['accepted_quote'] : null;
         $this->container['quotes'] = isset($data['quotes']) ? $data['quotes'] : null;
         $this->container['client_decision_postponed_to'] = isset($data['client_decision_postponed_to']) ? $data['client_decision_postponed_to'] : null;
@@ -215,6 +225,27 @@ class LeadQuotesInfoResource implements ArrayAccess
     }
 
     /**
+     * Gets reserved
+     * @return int
+     */
+    public function getReserved()
+    {
+        return $this->container['reserved'];
+    }
+
+    /**
+     * Sets reserved
+     * @param int $reserved Number of reserved spots.
+     * @return $this
+     */
+    public function setReserved($reserved)
+    {
+        $this->container['reserved'] = $reserved;
+
+        return $this;
+    }
+
+    /**
      * Gets open_for_quotes
      * @return bool
      */
@@ -231,6 +262,27 @@ class LeadQuotesInfoResource implements ArrayAccess
     public function setOpenForQuotes($open_for_quotes)
     {
         $this->container['open_for_quotes'] = $open_for_quotes;
+
+        return $this;
+    }
+
+    /**
+     * Gets open_for_reservations
+     * @return bool
+     */
+    public function getOpenForReservations()
+    {
+        return $this->container['open_for_reservations'];
+    }
+
+    /**
+     * Sets open_for_reservations
+     * @param bool $open_for_reservations Status of the reservation
+     * @return $this
+     */
+    public function setOpenForReservations($open_for_reservations)
+    {
+        $this->container['open_for_reservations'] = $open_for_reservations;
 
         return $this;
     }

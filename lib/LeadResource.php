@@ -62,6 +62,7 @@ class LeadResource implements ArrayAccess
         'expiration_boosted_at' => 'string',
         'working_hours_expires_at' => 'string',
         'status' => 'string',
+        'reservation_status' => 'string',
         'progress' => '\Ageras\Api\LeadProgressResource[]',
         'title' => 'string',
         'description' => 'string',
@@ -70,9 +71,11 @@ class LeadResource implements ArrayAccess
         'requirements' => '\Ageras\Api\LeadRequirementsResource',
         'punch_price' => 'int',
         'service_fee' => '\Ageras\Api\AmountResource',
+        'service_fee_subsequent_years_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'minimum_quote_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'geo' => '\Ageras\Api\LeadGeoResource',
         'attributes' => '\Ageras\Api\LeadAttributeResource[]',
-        'industries' => '\Ageras\Api\LeadIndustryPairResource',
+        'industries' => '\Ageras\Api\LeadIndustriesResource',
         'products' => '\Ageras\Api\LeadProductResource[]',
         'meeting' => '\Ageras\Api\LeadMeetingResource',
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
@@ -80,7 +83,13 @@ class LeadResource implements ArrayAccess
         'quotes_info' => '\Ageras\Api\LeadQuotesInfoResource',
         'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
         'feedback' => '\Ageras\Api\LeadFeedbackResource',
-        'validator' => '\Ageras\Api\LeadEmployeeResource'
+        'validator' => '\Ageras\Api\LeadEmployeeResource',
+        'custom_variables' => '\Ageras\Api\KeyValueResource[]',
+        'category' => '\Ageras\Api\LeadCategoryResource',
+        'revenue_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'is_service_fee' => 'bool',
+        'wants_local_partner' => 'bool',
+        'is_digital' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -101,6 +110,7 @@ class LeadResource implements ArrayAccess
         'expiration_boosted_at' => 'expiration_boosted_at',
         'working_hours_expires_at' => 'working_hours_expires_at',
         'status' => 'status',
+        'reservation_status' => 'reservation_status',
         'progress' => 'progress',
         'title' => 'title',
         'description' => 'description',
@@ -109,6 +119,8 @@ class LeadResource implements ArrayAccess
         'requirements' => 'requirements',
         'punch_price' => 'punch_price',
         'service_fee' => 'service_fee',
+        'service_fee_subsequent_years_amount_excl_vat' => 'service_fee_subsequent_years_amount_excl_vat',
+        'minimum_quote_amount_excl_vat' => 'minimum_quote_amount_excl_vat',
         'geo' => 'geo',
         'attributes' => 'attributes',
         'industries' => 'industries',
@@ -119,7 +131,13 @@ class LeadResource implements ArrayAccess
         'quotes_info' => 'quotes_info',
         'affiliate_campaign' => 'affiliate_campaign',
         'feedback' => 'feedback',
-        'validator' => 'validator'
+        'validator' => 'validator',
+        'custom_variables' => 'custom_variables',
+        'category' => 'category',
+        'revenue_amount_excl_vat' => 'revenue_amount_excl_vat',
+        'is_service_fee' => 'is_service_fee',
+        'wants_local_partner' => 'wants_local_partner',
+        'is_digital' => 'is_digital'
     ];
 
 
@@ -136,6 +154,7 @@ class LeadResource implements ArrayAccess
         'expiration_boosted_at' => 'setExpirationBoostedAt',
         'working_hours_expires_at' => 'setWorkingHoursExpiresAt',
         'status' => 'setStatus',
+        'reservation_status' => 'setReservationStatus',
         'progress' => 'setProgress',
         'title' => 'setTitle',
         'description' => 'setDescription',
@@ -144,6 +163,8 @@ class LeadResource implements ArrayAccess
         'requirements' => 'setRequirements',
         'punch_price' => 'setPunchPrice',
         'service_fee' => 'setServiceFee',
+        'service_fee_subsequent_years_amount_excl_vat' => 'setServiceFeeSubsequentYearsAmountExclVat',
+        'minimum_quote_amount_excl_vat' => 'setMinimumQuoteAmountExclVat',
         'geo' => 'setGeo',
         'attributes' => 'setAttributes',
         'industries' => 'setIndustries',
@@ -154,7 +175,13 @@ class LeadResource implements ArrayAccess
         'quotes_info' => 'setQuotesInfo',
         'affiliate_campaign' => 'setAffiliateCampaign',
         'feedback' => 'setFeedback',
-        'validator' => 'setValidator'
+        'validator' => 'setValidator',
+        'custom_variables' => 'setCustomVariables',
+        'category' => 'setCategory',
+        'revenue_amount_excl_vat' => 'setRevenueAmountExclVat',
+        'is_service_fee' => 'setIsServiceFee',
+        'wants_local_partner' => 'setWantsLocalPartner',
+        'is_digital' => 'setIsDigital'
     ];
 
 
@@ -171,6 +198,7 @@ class LeadResource implements ArrayAccess
         'expiration_boosted_at' => 'getExpirationBoostedAt',
         'working_hours_expires_at' => 'getWorkingHoursExpiresAt',
         'status' => 'getStatus',
+        'reservation_status' => 'getReservationStatus',
         'progress' => 'getProgress',
         'title' => 'getTitle',
         'description' => 'getDescription',
@@ -179,6 +207,8 @@ class LeadResource implements ArrayAccess
         'requirements' => 'getRequirements',
         'punch_price' => 'getPunchPrice',
         'service_fee' => 'getServiceFee',
+        'service_fee_subsequent_years_amount_excl_vat' => 'getServiceFeeSubsequentYearsAmountExclVat',
+        'minimum_quote_amount_excl_vat' => 'getMinimumQuoteAmountExclVat',
         'geo' => 'getGeo',
         'attributes' => 'getAttributes',
         'industries' => 'getIndustries',
@@ -189,7 +219,13 @@ class LeadResource implements ArrayAccess
         'quotes_info' => 'getQuotesInfo',
         'affiliate_campaign' => 'getAffiliateCampaign',
         'feedback' => 'getFeedback',
-        'validator' => 'getValidator'
+        'validator' => 'getValidator',
+        'custom_variables' => 'getCustomVariables',
+        'category' => 'getCategory',
+        'revenue_amount_excl_vat' => 'getRevenueAmountExclVat',
+        'is_service_fee' => 'getIsServiceFee',
+        'wants_local_partner' => 'getWantsLocalPartner',
+        'is_digital' => 'getIsDigital'
     ];
 
     public static function attributeMap()
@@ -208,13 +244,13 @@ class LeadResource implements ArrayAccess
     }
 
     const STATUS_UNKNOWN = 'unknown';
-    const STATUS_COMPLETED = 'completed';
     const STATUS_DUPLICATE = 'duplicate';
     const STATUS_TEST = 'test';
     const STATUS_NOT_SERIOUS = 'not_serious';
     const STATUS_SEND_TO_ADVISOR = 'send_to_advisor';
     const STATUS_SPAM = 'spam';
     const STATUS_VALIDATED = 'validated';
+    const STATUS_UNTREATED = 'untreated';
     
 
     
@@ -226,13 +262,13 @@ class LeadResource implements ArrayAccess
     {
         return [
             self::STATUS_UNKNOWN,
-            self::STATUS_COMPLETED,
             self::STATUS_DUPLICATE,
             self::STATUS_TEST,
             self::STATUS_NOT_SERIOUS,
             self::STATUS_SEND_TO_ADVISOR,
             self::STATUS_SPAM,
             self::STATUS_VALIDATED,
+            self::STATUS_UNTREATED,
         ];
     }
     
@@ -257,6 +293,7 @@ class LeadResource implements ArrayAccess
         $this->container['expiration_boosted_at'] = isset($data['expiration_boosted_at']) ? $data['expiration_boosted_at'] : null;
         $this->container['working_hours_expires_at'] = isset($data['working_hours_expires_at']) ? $data['working_hours_expires_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'unknown';
+        $this->container['reservation_status'] = isset($data['reservation_status']) ? $data['reservation_status'] : null;
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -265,6 +302,8 @@ class LeadResource implements ArrayAccess
         $this->container['requirements'] = isset($data['requirements']) ? $data['requirements'] : null;
         $this->container['punch_price'] = isset($data['punch_price']) ? $data['punch_price'] : null;
         $this->container['service_fee'] = isset($data['service_fee']) ? $data['service_fee'] : null;
+        $this->container['service_fee_subsequent_years_amount_excl_vat'] = isset($data['service_fee_subsequent_years_amount_excl_vat']) ? $data['service_fee_subsequent_years_amount_excl_vat'] : null;
+        $this->container['minimum_quote_amount_excl_vat'] = isset($data['minimum_quote_amount_excl_vat']) ? $data['minimum_quote_amount_excl_vat'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
         $this->container['industries'] = isset($data['industries']) ? $data['industries'] : null;
@@ -276,6 +315,12 @@ class LeadResource implements ArrayAccess
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
         $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
         $this->container['validator'] = isset($data['validator']) ? $data['validator'] : null;
+        $this->container['custom_variables'] = isset($data['custom_variables']) ? $data['custom_variables'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['revenue_amount_excl_vat'] = isset($data['revenue_amount_excl_vat']) ? $data['revenue_amount_excl_vat'] : null;
+        $this->container['is_service_fee'] = isset($data['is_service_fee']) ? $data['is_service_fee'] : false;
+        $this->container['wants_local_partner'] = isset($data['wants_local_partner']) ? $data['wants_local_partner'] : false;
+        $this->container['is_digital'] = isset($data['is_digital']) ? $data['is_digital'] : false;
     }
 
     /**
@@ -287,9 +332,9 @@ class LeadResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "completed", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated"];
+        $allowed_values = ["unknown", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated", "untreated"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'unknown', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated', 'untreated'.";
         }
 
         return $invalid_properties;
@@ -304,7 +349,7 @@ class LeadResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "completed", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated"];
+        $allowed_values = ["unknown", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated", "untreated"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -475,11 +520,32 @@ class LeadResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated');
+        $allowed_values = array('unknown', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated', 'untreated');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'completed', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'unknown', 'duplicate', 'test', 'not_serious', 'send_to_advisor', 'spam', 'validated', 'untreated'");
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets reservation_status
+     * @return string
+     */
+    public function getReservationStatus()
+    {
+        return $this->container['reservation_status'];
+    }
+
+    /**
+     * Sets reservation_status
+     * @param string $reservation_status Current reservation status of the Lead.
+     * @return $this
+     */
+    public function setReservationStatus($reservation_status)
+    {
+        $this->container['reservation_status'] = $reservation_status;
 
         return $this;
     }
@@ -653,6 +719,48 @@ class LeadResource implements ArrayAccess
     }
 
     /**
+     * Gets service_fee_subsequent_years_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getServiceFeeSubsequentYearsAmountExclVat()
+    {
+        return $this->container['service_fee_subsequent_years_amount_excl_vat'];
+    }
+
+    /**
+     * Sets service_fee_subsequent_years_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $service_fee_subsequent_years_amount_excl_vat
+     * @return $this
+     */
+    public function setServiceFeeSubsequentYearsAmountExclVat($service_fee_subsequent_years_amount_excl_vat)
+    {
+        $this->container['service_fee_subsequent_years_amount_excl_vat'] = $service_fee_subsequent_years_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets minimum_quote_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getMinimumQuoteAmountExclVat()
+    {
+        return $this->container['minimum_quote_amount_excl_vat'];
+    }
+
+    /**
+     * Sets minimum_quote_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $minimum_quote_amount_excl_vat
+     * @return $this
+     */
+    public function setMinimumQuoteAmountExclVat($minimum_quote_amount_excl_vat)
+    {
+        $this->container['minimum_quote_amount_excl_vat'] = $minimum_quote_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
      * Gets geo
      * @return \Ageras\Api\LeadGeoResource
      */
@@ -696,7 +804,7 @@ class LeadResource implements ArrayAccess
 
     /**
      * Gets industries
-     * @return \Ageras\Api\LeadIndustryPairResource
+     * @return \Ageras\Api\LeadIndustriesResource
      */
     public function getIndustries()
     {
@@ -705,7 +813,7 @@ class LeadResource implements ArrayAccess
 
     /**
      * Sets industries
-     * @param \Ageras\Api\LeadIndustryPairResource $industries
+     * @param \Ageras\Api\LeadIndustriesResource $industries
      * @return $this
      */
     public function setIndustries($industries)
@@ -879,6 +987,132 @@ class LeadResource implements ArrayAccess
     public function setValidator($validator)
     {
         $this->container['validator'] = $validator;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_variables
+     * @return \Ageras\Api\KeyValueResource[]
+     */
+    public function getCustomVariables()
+    {
+        return $this->container['custom_variables'];
+    }
+
+    /**
+     * Sets custom_variables
+     * @param \Ageras\Api\KeyValueResource[] $custom_variables Colleciton of custom key-value pairs.
+     * @return $this
+     */
+    public function setCustomVariables($custom_variables)
+    {
+        $this->container['custom_variables'] = $custom_variables;
+
+        return $this;
+    }
+
+    /**
+     * Gets category
+     * @return \Ageras\Api\LeadCategoryResource
+     */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+     * Sets category
+     * @param \Ageras\Api\LeadCategoryResource $category
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getRevenueAmountExclVat()
+    {
+        return $this->container['revenue_amount_excl_vat'];
+    }
+
+    /**
+     * Sets revenue_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $revenue_amount_excl_vat
+     * @return $this
+     */
+    public function setRevenueAmountExclVat($revenue_amount_excl_vat)
+    {
+        $this->container['revenue_amount_excl_vat'] = $revenue_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_service_fee
+     * @return bool
+     */
+    public function getIsServiceFee()
+    {
+        return $this->container['is_service_fee'];
+    }
+
+    /**
+     * Sets is_service_fee
+     * @param bool $is_service_fee Does this lead have a service fee
+     * @return $this
+     */
+    public function setIsServiceFee($is_service_fee)
+    {
+        $this->container['is_service_fee'] = $is_service_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets wants_local_partner
+     * @return bool
+     */
+    public function getWantsLocalPartner()
+    {
+        return $this->container['wants_local_partner'];
+    }
+
+    /**
+     * Sets wants_local_partner
+     * @param bool $wants_local_partner Does the lead want a local partner
+     * @return $this
+     */
+    public function setWantsLocalPartner($wants_local_partner)
+    {
+        $this->container['wants_local_partner'] = $wants_local_partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_digital
+     * @return bool
+     */
+    public function getIsDigital()
+    {
+        return $this->container['is_digital'];
+    }
+
+    /**
+     * Sets is_digital
+     * @param bool $is_digital Digital communication?
+     * @return $this
+     */
+    public function setIsDigital($is_digital)
+    {
+        $this->container['is_digital'] = $is_digital;
 
         return $this;
     }

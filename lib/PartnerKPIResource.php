@@ -55,30 +55,19 @@ class PartnerKPIResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'punches_monthly' => 'int',
-        'punches_use_speed' => 'float',
-        'punches_left' => 'int',
-        'punches_spent_monthly' => 'float',
-        'punches_spent_month' => 'int',
-        'punches_spent_6months' => 'int',
-        'punches_spent_total' => 'int',
-        'punches_bought_month' => 'int',
-        'punches_bought_6months' => 'int',
-        'punches_bought_total' => 'int',
-        'punches_total' => 'int',
         'last_login' => 'string',
-        'last_lead_bought' => 'string',
         'last_invoice' => 'string',
-        'last_coupon_size' => 'int',
         'last_phone_call' => 'string',
-        'golden_ratio_6months' => 'float',
+        'last_published_quote' => 'string',
+        'last_subscription_start_date' => 'string',
         'revenue_month' => '\Ageras\Api\AmountResource',
         'revenue_6months' => '\Ageras\Api\AmountResource',
         'revenue_total' => '\Ageras\Api\AmountResource',
-        'success_rate' => 'float',
-        'success_total' => 'float',
-        'avg_punch_price_6months' => '\Ageras\Api\AmountResource',
-        'avg_due_days_6months' => 'float',
-        'avg_paid_days_6months' => 'float'
+        'accepted_quotes_count' => 'int',
+        'published_quotes_count' => 'int',
+        'unmatched_count' => 'int',
+        'unmatched_percent' => 'float',
+        'win_ratio' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -92,30 +81,19 @@ class PartnerKPIResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'punches_monthly' => 'punches_monthly',
-        'punches_use_speed' => 'punches_use_speed',
-        'punches_left' => 'punches_left',
-        'punches_spent_monthly' => 'punches_spent_monthly',
-        'punches_spent_month' => 'punches_spent_month',
-        'punches_spent_6months' => 'punches_spent_6months',
-        'punches_spent_total' => 'punches_spent_total',
-        'punches_bought_month' => 'punches_bought_month',
-        'punches_bought_6months' => 'punches_bought_6months',
-        'punches_bought_total' => 'punches_bought_total',
-        'punches_total' => 'punches_total',
         'last_login' => 'last_login',
-        'last_lead_bought' => 'last_lead_bought',
         'last_invoice' => 'last_invoice',
-        'last_coupon_size' => 'last_coupon_size',
         'last_phone_call' => 'last_phone_call',
-        'golden_ratio_6months' => 'golden_ratio_6months',
+        'last_published_quote' => 'last_published_quote',
+        'last_subscription_start_date' => 'last_subscription_start_date',
         'revenue_month' => 'revenue_month',
         'revenue_6months' => 'revenue_6months',
         'revenue_total' => 'revenue_total',
-        'success_rate' => 'success_rate',
-        'success_total' => 'success_total',
-        'avg_punch_price_6months' => 'avg_punch_price_6months',
-        'avg_due_days_6months' => 'avg_due_days_6months',
-        'avg_paid_days_6months' => 'avg_paid_days_6months'
+        'accepted_quotes_count' => 'accepted_quotes_count',
+        'published_quotes_count' => 'published_quotes_count',
+        'unmatched_count' => 'unmatched_count',
+        'unmatched_percent' => 'unmatched_percent',
+        'win_ratio' => 'win_ratio'
     ];
 
 
@@ -125,30 +103,19 @@ class PartnerKPIResource implements ArrayAccess
      */
     protected static $setters = [
         'punches_monthly' => 'setPunchesMonthly',
-        'punches_use_speed' => 'setPunchesUseSpeed',
-        'punches_left' => 'setPunchesLeft',
-        'punches_spent_monthly' => 'setPunchesSpentMonthly',
-        'punches_spent_month' => 'setPunchesSpentMonth',
-        'punches_spent_6months' => 'setPunchesSpent6months',
-        'punches_spent_total' => 'setPunchesSpentTotal',
-        'punches_bought_month' => 'setPunchesBoughtMonth',
-        'punches_bought_6months' => 'setPunchesBought6months',
-        'punches_bought_total' => 'setPunchesBoughtTotal',
-        'punches_total' => 'setPunchesTotal',
         'last_login' => 'setLastLogin',
-        'last_lead_bought' => 'setLastLeadBought',
         'last_invoice' => 'setLastInvoice',
-        'last_coupon_size' => 'setLastCouponSize',
         'last_phone_call' => 'setLastPhoneCall',
-        'golden_ratio_6months' => 'setGoldenRatio6months',
+        'last_published_quote' => 'setLastPublishedQuote',
+        'last_subscription_start_date' => 'setLastSubscriptionStartDate',
         'revenue_month' => 'setRevenueMonth',
         'revenue_6months' => 'setRevenue6months',
         'revenue_total' => 'setRevenueTotal',
-        'success_rate' => 'setSuccessRate',
-        'success_total' => 'setSuccessTotal',
-        'avg_punch_price_6months' => 'setAvgPunchPrice6months',
-        'avg_due_days_6months' => 'setAvgDueDays6months',
-        'avg_paid_days_6months' => 'setAvgPaidDays6months'
+        'accepted_quotes_count' => 'setAcceptedQuotesCount',
+        'published_quotes_count' => 'setPublishedQuotesCount',
+        'unmatched_count' => 'setUnmatchedCount',
+        'unmatched_percent' => 'setUnmatchedPercent',
+        'win_ratio' => 'setWinRatio'
     ];
 
 
@@ -158,30 +125,19 @@ class PartnerKPIResource implements ArrayAccess
      */
     protected static $getters = [
         'punches_monthly' => 'getPunchesMonthly',
-        'punches_use_speed' => 'getPunchesUseSpeed',
-        'punches_left' => 'getPunchesLeft',
-        'punches_spent_monthly' => 'getPunchesSpentMonthly',
-        'punches_spent_month' => 'getPunchesSpentMonth',
-        'punches_spent_6months' => 'getPunchesSpent6months',
-        'punches_spent_total' => 'getPunchesSpentTotal',
-        'punches_bought_month' => 'getPunchesBoughtMonth',
-        'punches_bought_6months' => 'getPunchesBought6months',
-        'punches_bought_total' => 'getPunchesBoughtTotal',
-        'punches_total' => 'getPunchesTotal',
         'last_login' => 'getLastLogin',
-        'last_lead_bought' => 'getLastLeadBought',
         'last_invoice' => 'getLastInvoice',
-        'last_coupon_size' => 'getLastCouponSize',
         'last_phone_call' => 'getLastPhoneCall',
-        'golden_ratio_6months' => 'getGoldenRatio6months',
+        'last_published_quote' => 'getLastPublishedQuote',
+        'last_subscription_start_date' => 'getLastSubscriptionStartDate',
         'revenue_month' => 'getRevenueMonth',
         'revenue_6months' => 'getRevenue6months',
         'revenue_total' => 'getRevenueTotal',
-        'success_rate' => 'getSuccessRate',
-        'success_total' => 'getSuccessTotal',
-        'avg_punch_price_6months' => 'getAvgPunchPrice6months',
-        'avg_due_days_6months' => 'getAvgDueDays6months',
-        'avg_paid_days_6months' => 'getAvgPaidDays6months'
+        'accepted_quotes_count' => 'getAcceptedQuotesCount',
+        'published_quotes_count' => 'getPublishedQuotesCount',
+        'unmatched_count' => 'getUnmatchedCount',
+        'unmatched_percent' => 'getUnmatchedPercent',
+        'win_ratio' => 'getWinRatio'
     ];
 
     public static function attributeMap()
@@ -216,30 +172,19 @@ class PartnerKPIResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['punches_monthly'] = isset($data['punches_monthly']) ? $data['punches_monthly'] : null;
-        $this->container['punches_use_speed'] = isset($data['punches_use_speed']) ? $data['punches_use_speed'] : null;
-        $this->container['punches_left'] = isset($data['punches_left']) ? $data['punches_left'] : null;
-        $this->container['punches_spent_monthly'] = isset($data['punches_spent_monthly']) ? $data['punches_spent_monthly'] : null;
-        $this->container['punches_spent_month'] = isset($data['punches_spent_month']) ? $data['punches_spent_month'] : null;
-        $this->container['punches_spent_6months'] = isset($data['punches_spent_6months']) ? $data['punches_spent_6months'] : null;
-        $this->container['punches_spent_total'] = isset($data['punches_spent_total']) ? $data['punches_spent_total'] : null;
-        $this->container['punches_bought_month'] = isset($data['punches_bought_month']) ? $data['punches_bought_month'] : null;
-        $this->container['punches_bought_6months'] = isset($data['punches_bought_6months']) ? $data['punches_bought_6months'] : null;
-        $this->container['punches_bought_total'] = isset($data['punches_bought_total']) ? $data['punches_bought_total'] : null;
-        $this->container['punches_total'] = isset($data['punches_total']) ? $data['punches_total'] : null;
         $this->container['last_login'] = isset($data['last_login']) ? $data['last_login'] : null;
-        $this->container['last_lead_bought'] = isset($data['last_lead_bought']) ? $data['last_lead_bought'] : null;
         $this->container['last_invoice'] = isset($data['last_invoice']) ? $data['last_invoice'] : null;
-        $this->container['last_coupon_size'] = isset($data['last_coupon_size']) ? $data['last_coupon_size'] : null;
         $this->container['last_phone_call'] = isset($data['last_phone_call']) ? $data['last_phone_call'] : null;
-        $this->container['golden_ratio_6months'] = isset($data['golden_ratio_6months']) ? $data['golden_ratio_6months'] : null;
+        $this->container['last_published_quote'] = isset($data['last_published_quote']) ? $data['last_published_quote'] : null;
+        $this->container['last_subscription_start_date'] = isset($data['last_subscription_start_date']) ? $data['last_subscription_start_date'] : null;
         $this->container['revenue_month'] = isset($data['revenue_month']) ? $data['revenue_month'] : null;
         $this->container['revenue_6months'] = isset($data['revenue_6months']) ? $data['revenue_6months'] : null;
         $this->container['revenue_total'] = isset($data['revenue_total']) ? $data['revenue_total'] : null;
-        $this->container['success_rate'] = isset($data['success_rate']) ? $data['success_rate'] : null;
-        $this->container['success_total'] = isset($data['success_total']) ? $data['success_total'] : null;
-        $this->container['avg_punch_price_6months'] = isset($data['avg_punch_price_6months']) ? $data['avg_punch_price_6months'] : null;
-        $this->container['avg_due_days_6months'] = isset($data['avg_due_days_6months']) ? $data['avg_due_days_6months'] : null;
-        $this->container['avg_paid_days_6months'] = isset($data['avg_paid_days_6months']) ? $data['avg_paid_days_6months'] : null;
+        $this->container['accepted_quotes_count'] = isset($data['accepted_quotes_count']) ? $data['accepted_quotes_count'] : null;
+        $this->container['published_quotes_count'] = isset($data['published_quotes_count']) ? $data['published_quotes_count'] : null;
+        $this->container['unmatched_count'] = isset($data['unmatched_count']) ? $data['unmatched_count'] : null;
+        $this->container['unmatched_percent'] = isset($data['unmatched_percent']) ? $data['unmatched_percent'] : null;
+        $this->container['win_ratio'] = isset($data['win_ratio']) ? $data['win_ratio'] : null;
     }
 
     /**
@@ -289,216 +234,6 @@ class PartnerKPIResource implements ArrayAccess
     }
 
     /**
-     * Gets punches_use_speed
-     * @return float
-     */
-    public function getPunchesUseSpeed()
-    {
-        return $this->container['punches_use_speed'];
-    }
-
-    /**
-     * Sets punches_use_speed
-     * @param float $punches_use_speed
-     * @return $this
-     */
-    public function setPunchesUseSpeed($punches_use_speed)
-    {
-        $this->container['punches_use_speed'] = $punches_use_speed;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_left
-     * @return int
-     */
-    public function getPunchesLeft()
-    {
-        return $this->container['punches_left'];
-    }
-
-    /**
-     * Sets punches_left
-     * @param int $punches_left
-     * @return $this
-     */
-    public function setPunchesLeft($punches_left)
-    {
-        $this->container['punches_left'] = $punches_left;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_spent_monthly
-     * @return float
-     */
-    public function getPunchesSpentMonthly()
-    {
-        return $this->container['punches_spent_monthly'];
-    }
-
-    /**
-     * Sets punches_spent_monthly
-     * @param float $punches_spent_monthly
-     * @return $this
-     */
-    public function setPunchesSpentMonthly($punches_spent_monthly)
-    {
-        $this->container['punches_spent_monthly'] = $punches_spent_monthly;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_spent_month
-     * @return int
-     */
-    public function getPunchesSpentMonth()
-    {
-        return $this->container['punches_spent_month'];
-    }
-
-    /**
-     * Sets punches_spent_month
-     * @param int $punches_spent_month
-     * @return $this
-     */
-    public function setPunchesSpentMonth($punches_spent_month)
-    {
-        $this->container['punches_spent_month'] = $punches_spent_month;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_spent_6months
-     * @return int
-     */
-    public function getPunchesSpent6months()
-    {
-        return $this->container['punches_spent_6months'];
-    }
-
-    /**
-     * Sets punches_spent_6months
-     * @param int $punches_spent_6months
-     * @return $this
-     */
-    public function setPunchesSpent6months($punches_spent_6months)
-    {
-        $this->container['punches_spent_6months'] = $punches_spent_6months;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_spent_total
-     * @return int
-     */
-    public function getPunchesSpentTotal()
-    {
-        return $this->container['punches_spent_total'];
-    }
-
-    /**
-     * Sets punches_spent_total
-     * @param int $punches_spent_total
-     * @return $this
-     */
-    public function setPunchesSpentTotal($punches_spent_total)
-    {
-        $this->container['punches_spent_total'] = $punches_spent_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_bought_month
-     * @return int
-     */
-    public function getPunchesBoughtMonth()
-    {
-        return $this->container['punches_bought_month'];
-    }
-
-    /**
-     * Sets punches_bought_month
-     * @param int $punches_bought_month
-     * @return $this
-     */
-    public function setPunchesBoughtMonth($punches_bought_month)
-    {
-        $this->container['punches_bought_month'] = $punches_bought_month;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_bought_6months
-     * @return int
-     */
-    public function getPunchesBought6months()
-    {
-        return $this->container['punches_bought_6months'];
-    }
-
-    /**
-     * Sets punches_bought_6months
-     * @param int $punches_bought_6months
-     * @return $this
-     */
-    public function setPunchesBought6months($punches_bought_6months)
-    {
-        $this->container['punches_bought_6months'] = $punches_bought_6months;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_bought_total
-     * @return int
-     */
-    public function getPunchesBoughtTotal()
-    {
-        return $this->container['punches_bought_total'];
-    }
-
-    /**
-     * Sets punches_bought_total
-     * @param int $punches_bought_total
-     * @return $this
-     */
-    public function setPunchesBoughtTotal($punches_bought_total)
-    {
-        $this->container['punches_bought_total'] = $punches_bought_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets punches_total
-     * @return int
-     */
-    public function getPunchesTotal()
-    {
-        return $this->container['punches_total'];
-    }
-
-    /**
-     * Sets punches_total
-     * @param int $punches_total
-     * @return $this
-     */
-    public function setPunchesTotal($punches_total)
-    {
-        $this->container['punches_total'] = $punches_total;
-
-        return $this;
-    }
-
-    /**
      * Gets last_login
      * @return string
      */
@@ -515,27 +250,6 @@ class PartnerKPIResource implements ArrayAccess
     public function setLastLogin($last_login)
     {
         $this->container['last_login'] = $last_login;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_lead_bought
-     * @return string
-     */
-    public function getLastLeadBought()
-    {
-        return $this->container['last_lead_bought'];
-    }
-
-    /**
-     * Sets last_lead_bought
-     * @param string $last_lead_bought
-     * @return $this
-     */
-    public function setLastLeadBought($last_lead_bought)
-    {
-        $this->container['last_lead_bought'] = $last_lead_bought;
 
         return $this;
     }
@@ -562,27 +276,6 @@ class PartnerKPIResource implements ArrayAccess
     }
 
     /**
-     * Gets last_coupon_size
-     * @return int
-     */
-    public function getLastCouponSize()
-    {
-        return $this->container['last_coupon_size'];
-    }
-
-    /**
-     * Sets last_coupon_size
-     * @param int $last_coupon_size
-     * @return $this
-     */
-    public function setLastCouponSize($last_coupon_size)
-    {
-        $this->container['last_coupon_size'] = $last_coupon_size;
-
-        return $this;
-    }
-
-    /**
      * Gets last_phone_call
      * @return string
      */
@@ -604,22 +297,43 @@ class PartnerKPIResource implements ArrayAccess
     }
 
     /**
-     * Gets golden_ratio_6months
-     * @return float
+     * Gets last_published_quote
+     * @return string
      */
-    public function getGoldenRatio6months()
+    public function getLastPublishedQuote()
     {
-        return $this->container['golden_ratio_6months'];
+        return $this->container['last_published_quote'];
     }
 
     /**
-     * Sets golden_ratio_6months
-     * @param float $golden_ratio_6months
+     * Sets last_published_quote
+     * @param string $last_published_quote
      * @return $this
      */
-    public function setGoldenRatio6months($golden_ratio_6months)
+    public function setLastPublishedQuote($last_published_quote)
     {
-        $this->container['golden_ratio_6months'] = $golden_ratio_6months;
+        $this->container['last_published_quote'] = $last_published_quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_subscription_start_date
+     * @return string
+     */
+    public function getLastSubscriptionStartDate()
+    {
+        return $this->container['last_subscription_start_date'];
+    }
+
+    /**
+     * Sets last_subscription_start_date
+     * @param string $last_subscription_start_date
+     * @return $this
+     */
+    public function setLastSubscriptionStartDate($last_subscription_start_date)
+    {
+        $this->container['last_subscription_start_date'] = $last_subscription_start_date;
 
         return $this;
     }
@@ -688,106 +402,106 @@ class PartnerKPIResource implements ArrayAccess
     }
 
     /**
-     * Gets success_rate
-     * @return float
+     * Gets accepted_quotes_count
+     * @return int
      */
-    public function getSuccessRate()
+    public function getAcceptedQuotesCount()
     {
-        return $this->container['success_rate'];
+        return $this->container['accepted_quotes_count'];
     }
 
     /**
-     * Sets success_rate
-     * @param float $success_rate
+     * Sets accepted_quotes_count
+     * @param int $accepted_quotes_count
      * @return $this
      */
-    public function setSuccessRate($success_rate)
+    public function setAcceptedQuotesCount($accepted_quotes_count)
     {
-        $this->container['success_rate'] = $success_rate;
+        $this->container['accepted_quotes_count'] = $accepted_quotes_count;
 
         return $this;
     }
 
     /**
-     * Gets success_total
-     * @return float
+     * Gets published_quotes_count
+     * @return int
      */
-    public function getSuccessTotal()
+    public function getPublishedQuotesCount()
     {
-        return $this->container['success_total'];
+        return $this->container['published_quotes_count'];
     }
 
     /**
-     * Sets success_total
-     * @param float $success_total
+     * Sets published_quotes_count
+     * @param int $published_quotes_count
      * @return $this
      */
-    public function setSuccessTotal($success_total)
+    public function setPublishedQuotesCount($published_quotes_count)
     {
-        $this->container['success_total'] = $success_total;
+        $this->container['published_quotes_count'] = $published_quotes_count;
 
         return $this;
     }
 
     /**
-     * Gets avg_punch_price_6months
-     * @return \Ageras\Api\AmountResource
+     * Gets unmatched_count
+     * @return int
      */
-    public function getAvgPunchPrice6months()
+    public function getUnmatchedCount()
     {
-        return $this->container['avg_punch_price_6months'];
+        return $this->container['unmatched_count'];
     }
 
     /**
-     * Sets avg_punch_price_6months
-     * @param \Ageras\Api\AmountResource $avg_punch_price_6months
+     * Sets unmatched_count
+     * @param int $unmatched_count
      * @return $this
      */
-    public function setAvgPunchPrice6months($avg_punch_price_6months)
+    public function setUnmatchedCount($unmatched_count)
     {
-        $this->container['avg_punch_price_6months'] = $avg_punch_price_6months;
+        $this->container['unmatched_count'] = $unmatched_count;
 
         return $this;
     }
 
     /**
-     * Gets avg_due_days_6months
+     * Gets unmatched_percent
      * @return float
      */
-    public function getAvgDueDays6months()
+    public function getUnmatchedPercent()
     {
-        return $this->container['avg_due_days_6months'];
+        return $this->container['unmatched_percent'];
     }
 
     /**
-     * Sets avg_due_days_6months
-     * @param float $avg_due_days_6months
+     * Sets unmatched_percent
+     * @param float $unmatched_percent
      * @return $this
      */
-    public function setAvgDueDays6months($avg_due_days_6months)
+    public function setUnmatchedPercent($unmatched_percent)
     {
-        $this->container['avg_due_days_6months'] = $avg_due_days_6months;
+        $this->container['unmatched_percent'] = $unmatched_percent;
 
         return $this;
     }
 
     /**
-     * Gets avg_paid_days_6months
+     * Gets win_ratio
      * @return float
      */
-    public function getAvgPaidDays6months()
+    public function getWinRatio()
     {
-        return $this->container['avg_paid_days_6months'];
+        return $this->container['win_ratio'];
     }
 
     /**
-     * Sets avg_paid_days_6months
-     * @param float $avg_paid_days_6months
+     * Sets win_ratio
+     * @param float $win_ratio
      * @return $this
      */
-    public function setAvgPaidDays6months($avg_paid_days_6months)
+    public function setWinRatio($win_ratio)
     {
-        $this->container['avg_paid_days_6months'] = $avg_paid_days_6months;
+        $this->container['win_ratio'] = $win_ratio;
 
         return $this;
     }

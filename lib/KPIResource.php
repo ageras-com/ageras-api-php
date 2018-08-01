@@ -57,7 +57,8 @@ class KpiResource implements ArrayAccess
         'calls_made' => 'int',
         'actions_taken' => 'int',
         'validation_efficiency_long_term' => 'float',
-        'validation_efficiency_short_term' => 'float'
+        'validation_efficiency_short_term' => 'float',
+        'validated_leads' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class KpiResource implements ArrayAccess
         'calls_made' => 'calls_made',
         'actions_taken' => 'actions_taken',
         'validation_efficiency_long_term' => 'validation_efficiency_long_term',
-        'validation_efficiency_short_term' => 'validation_efficiency_short_term'
+        'validation_efficiency_short_term' => 'validation_efficiency_short_term',
+        'validated_leads' => 'validated_leads'
     ];
 
 
@@ -85,7 +87,8 @@ class KpiResource implements ArrayAccess
         'calls_made' => 'setCallsMade',
         'actions_taken' => 'setActionsTaken',
         'validation_efficiency_long_term' => 'setValidationEfficiencyLongTerm',
-        'validation_efficiency_short_term' => 'setValidationEfficiencyShortTerm'
+        'validation_efficiency_short_term' => 'setValidationEfficiencyShortTerm',
+        'validated_leads' => 'setValidatedLeads'
     ];
 
 
@@ -97,7 +100,8 @@ class KpiResource implements ArrayAccess
         'calls_made' => 'getCallsMade',
         'actions_taken' => 'getActionsTaken',
         'validation_efficiency_long_term' => 'getValidationEfficiencyLongTerm',
-        'validation_efficiency_short_term' => 'getValidationEfficiencyShortTerm'
+        'validation_efficiency_short_term' => 'getValidationEfficiencyShortTerm',
+        'validated_leads' => 'getValidatedLeads'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class KpiResource implements ArrayAccess
         $this->container['actions_taken'] = isset($data['actions_taken']) ? $data['actions_taken'] : null;
         $this->container['validation_efficiency_long_term'] = isset($data['validation_efficiency_long_term']) ? $data['validation_efficiency_long_term'] : null;
         $this->container['validation_efficiency_short_term'] = isset($data['validation_efficiency_short_term']) ? $data['validation_efficiency_short_term'] : null;
+        $this->container['validated_leads'] = isset($data['validated_leads']) ? $data['validated_leads'] : null;
     }
 
     /**
@@ -242,6 +247,27 @@ class KpiResource implements ArrayAccess
     public function setValidationEfficiencyShortTerm($validation_efficiency_short_term)
     {
         $this->container['validation_efficiency_short_term'] = $validation_efficiency_short_term;
+
+        return $this;
+    }
+
+    /**
+     * Gets validated_leads
+     * @return int
+     */
+    public function getValidatedLeads()
+    {
+        return $this->container['validated_leads'];
+    }
+
+    /**
+     * Sets validated_leads
+     * @param int $validated_leads Number of validated leads this month.
+     * @return $this
+     */
+    public function setValidatedLeads($validated_leads)
+    {
+        $this->container['validated_leads'] = $validated_leads;
 
         return $this;
     }

@@ -58,10 +58,13 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'string',
         'progress' => 'string',
         'created_at' => 'string',
+        'accepted_at' => 'string',
+        'rejected_at' => 'string',
         'paid_at' => 'string',
         'expires_at' => 'string',
         'published_at' => 'string',
         'lead_id' => 'int',
+        'lead' => '\Ageras\Api\ProjectLeadResource',
         'partner' => '\Ageras\Api\PartnerSuggestResource',
         'partner_lead_offer_id' => 'int',
         'partner_terms' => 'string',
@@ -71,7 +74,15 @@ class LeadQuoteResource implements ArrayAccess
         'payment' => '\Ageras\Api\LeadQuotePaymentResource',
         'total_vat_amount' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'client' => '\Ageras\Api\LeadClientResource',
+        'service_fee' => '\Ageras\Api\AmountResource',
+        'reservation_expires_at' => 'string',
+        'revenue_share_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'revenue_share_subsequent_years_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'is_below_minimum_amount' => 'bool',
+        'accepted_by_actioner' => '\Ageras\Api\ActionerResource',
+        'lead_products' => '\Ageras\Api\LeadProductResource[]'
     ];
 
     public static function swaggerTypes()
@@ -88,10 +99,13 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'status',
         'progress' => 'progress',
         'created_at' => 'created_at',
+        'accepted_at' => 'accepted_at',
+        'rejected_at' => 'rejected_at',
         'paid_at' => 'paid_at',
         'expires_at' => 'expires_at',
         'published_at' => 'published_at',
         'lead_id' => 'lead_id',
+        'lead' => 'lead',
         'partner' => 'partner',
         'partner_lead_offer_id' => 'partner_lead_offer_id',
         'partner_terms' => 'partner_terms',
@@ -101,7 +115,15 @@ class LeadQuoteResource implements ArrayAccess
         'payment' => 'payment',
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
-        'total_amount_incl_vat' => 'total_amount_incl_vat'
+        'total_amount_incl_vat' => 'total_amount_incl_vat',
+        'client' => 'client',
+        'service_fee' => 'service_fee',
+        'reservation_expires_at' => 'reservation_expires_at',
+        'revenue_share_amount_excl_vat' => 'revenue_share_amount_excl_vat',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'revenue_share_subsequent_years_amount_excl_vat',
+        'is_below_minimum_amount' => 'is_below_minimum_amount',
+        'accepted_by_actioner' => 'accepted_by_actioner',
+        'lead_products' => 'lead_products'
     ];
 
 
@@ -114,10 +136,13 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'setStatus',
         'progress' => 'setProgress',
         'created_at' => 'setCreatedAt',
+        'accepted_at' => 'setAcceptedAt',
+        'rejected_at' => 'setRejectedAt',
         'paid_at' => 'setPaidAt',
         'expires_at' => 'setExpiresAt',
         'published_at' => 'setPublishedAt',
         'lead_id' => 'setLeadId',
+        'lead' => 'setLead',
         'partner' => 'setPartner',
         'partner_lead_offer_id' => 'setPartnerLeadOfferId',
         'partner_terms' => 'setPartnerTerms',
@@ -127,7 +152,15 @@ class LeadQuoteResource implements ArrayAccess
         'payment' => 'setPayment',
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
-        'total_amount_incl_vat' => 'setTotalAmountInclVat'
+        'total_amount_incl_vat' => 'setTotalAmountInclVat',
+        'client' => 'setClient',
+        'service_fee' => 'setServiceFee',
+        'reservation_expires_at' => 'setReservationExpiresAt',
+        'revenue_share_amount_excl_vat' => 'setRevenueShareAmountExclVat',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'setRevenueShareSubsequentYearsAmountExclVat',
+        'is_below_minimum_amount' => 'setIsBelowMinimumAmount',
+        'accepted_by_actioner' => 'setAcceptedByActioner',
+        'lead_products' => 'setLeadProducts'
     ];
 
 
@@ -140,10 +173,13 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'getStatus',
         'progress' => 'getProgress',
         'created_at' => 'getCreatedAt',
+        'accepted_at' => 'getAcceptedAt',
+        'rejected_at' => 'getRejectedAt',
         'paid_at' => 'getPaidAt',
         'expires_at' => 'getExpiresAt',
         'published_at' => 'getPublishedAt',
         'lead_id' => 'getLeadId',
+        'lead' => 'getLead',
         'partner' => 'getPartner',
         'partner_lead_offer_id' => 'getPartnerLeadOfferId',
         'partner_terms' => 'getPartnerTerms',
@@ -153,7 +189,15 @@ class LeadQuoteResource implements ArrayAccess
         'payment' => 'getPayment',
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
-        'total_amount_incl_vat' => 'getTotalAmountInclVat'
+        'total_amount_incl_vat' => 'getTotalAmountInclVat',
+        'client' => 'getClient',
+        'service_fee' => 'getServiceFee',
+        'reservation_expires_at' => 'getReservationExpiresAt',
+        'revenue_share_amount_excl_vat' => 'getRevenueShareAmountExclVat',
+        'revenue_share_subsequent_years_amount_excl_vat' => 'getRevenueShareSubsequentYearsAmountExclVat',
+        'is_below_minimum_amount' => 'getIsBelowMinimumAmount',
+        'accepted_by_actioner' => 'getAcceptedByActioner',
+        'lead_products' => 'getLeadProducts'
     ];
 
     public static function attributeMap()
@@ -233,10 +277,13 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'new';
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : 'unknown';
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
+        $this->container['rejected_at'] = isset($data['rejected_at']) ? $data['rejected_at'] : null;
         $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['published_at'] = isset($data['published_at']) ? $data['published_at'] : null;
         $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
+        $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['partner_lead_offer_id'] = isset($data['partner_lead_offer_id']) ? $data['partner_lead_offer_id'] : null;
         $this->container['partner_terms'] = isset($data['partner_terms']) ? $data['partner_terms'] : null;
@@ -247,6 +294,14 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['service_fee'] = isset($data['service_fee']) ? $data['service_fee'] : null;
+        $this->container['reservation_expires_at'] = isset($data['reservation_expires_at']) ? $data['reservation_expires_at'] : null;
+        $this->container['revenue_share_amount_excl_vat'] = isset($data['revenue_share_amount_excl_vat']) ? $data['revenue_share_amount_excl_vat'] : null;
+        $this->container['revenue_share_subsequent_years_amount_excl_vat'] = isset($data['revenue_share_subsequent_years_amount_excl_vat']) ? $data['revenue_share_subsequent_years_amount_excl_vat'] : null;
+        $this->container['is_below_minimum_amount'] = isset($data['is_below_minimum_amount']) ? $data['is_below_minimum_amount'] : false;
+        $this->container['accepted_by_actioner'] = isset($data['accepted_by_actioner']) ? $data['accepted_by_actioner'] : null;
+        $this->container['lead_products'] = isset($data['lead_products']) ? $data['lead_products'] : null;
     }
 
     /**
@@ -324,7 +379,7 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets status
-     * @param string $status
+     * @param string $status Quote status
      * @return $this
      */
     public function setStatus($status)
@@ -374,12 +429,54 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param string $created_at
+     * @param string $created_at Created time
      * @return $this
      */
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets accepted_at
+     * @return string
+     */
+    public function getAcceptedAt()
+    {
+        return $this->container['accepted_at'];
+    }
+
+    /**
+     * Sets accepted_at
+     * @param string $accepted_at Quote accepted at
+     * @return $this
+     */
+    public function setAcceptedAt($accepted_at)
+    {
+        $this->container['accepted_at'] = $accepted_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets rejected_at
+     * @return string
+     */
+    public function getRejectedAt()
+    {
+        return $this->container['rejected_at'];
+    }
+
+    /**
+     * Sets rejected_at
+     * @param string $rejected_at Quote rejected at
+     * @return $this
+     */
+    public function setRejectedAt($rejected_at)
+    {
+        $this->container['rejected_at'] = $rejected_at;
 
         return $this;
     }
@@ -395,7 +492,7 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets paid_at
-     * @param string $paid_at
+     * @param string $paid_at Created time
      * @return $this
      */
     public function setPaidAt($paid_at)
@@ -416,7 +513,7 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets expires_at
-     * @param string $expires_at
+     * @param string $expires_at Created time
      * @return $this
      */
     public function setExpiresAt($expires_at)
@@ -437,7 +534,7 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets published_at
-     * @param string $published_at
+     * @param string $published_at Created time
      * @return $this
      */
     public function setPublishedAt($published_at)
@@ -458,12 +555,33 @@ class LeadQuoteResource implements ArrayAccess
 
     /**
      * Sets lead_id
-     * @param int $lead_id
+     * @param int $lead_id Lead Id
      * @return $this
      */
     public function setLeadId($lead_id)
     {
         $this->container['lead_id'] = $lead_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead
+     * @return \Ageras\Api\ProjectLeadResource
+     */
+    public function getLead()
+    {
+        return $this->container['lead'];
+    }
+
+    /**
+     * Sets lead
+     * @param \Ageras\Api\ProjectLeadResource $lead
+     * @return $this
+     */
+    public function setLead($lead)
+    {
+        $this->container['lead'] = $lead;
 
         return $this;
     }
@@ -674,6 +792,174 @@ class LeadQuoteResource implements ArrayAccess
     public function setTotalAmountInclVat($total_amount_incl_vat)
     {
         $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     * @return \Ageras\Api\LeadClientResource
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     * @param \Ageras\Api\LeadClientResource $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_fee
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getServiceFee()
+    {
+        return $this->container['service_fee'];
+    }
+
+    /**
+     * Sets service_fee
+     * @param \Ageras\Api\AmountResource $service_fee
+     * @return $this
+     */
+    public function setServiceFee($service_fee)
+    {
+        $this->container['service_fee'] = $service_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets reservation_expires_at
+     * @return string
+     */
+    public function getReservationExpiresAt()
+    {
+        return $this->container['reservation_expires_at'];
+    }
+
+    /**
+     * Sets reservation_expires_at
+     * @param string $reservation_expires_at Reservation time expiry date
+     * @return $this
+     */
+    public function setReservationExpiresAt($reservation_expires_at)
+    {
+        $this->container['reservation_expires_at'] = $reservation_expires_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_share_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getRevenueShareAmountExclVat()
+    {
+        return $this->container['revenue_share_amount_excl_vat'];
+    }
+
+    /**
+     * Sets revenue_share_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $revenue_share_amount_excl_vat
+     * @return $this
+     */
+    public function setRevenueShareAmountExclVat($revenue_share_amount_excl_vat)
+    {
+        $this->container['revenue_share_amount_excl_vat'] = $revenue_share_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_share_subsequent_years_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getRevenueShareSubsequentYearsAmountExclVat()
+    {
+        return $this->container['revenue_share_subsequent_years_amount_excl_vat'];
+    }
+
+    /**
+     * Sets revenue_share_subsequent_years_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $revenue_share_subsequent_years_amount_excl_vat
+     * @return $this
+     */
+    public function setRevenueShareSubsequentYearsAmountExclVat($revenue_share_subsequent_years_amount_excl_vat)
+    {
+        $this->container['revenue_share_subsequent_years_amount_excl_vat'] = $revenue_share_subsequent_years_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_below_minimum_amount
+     * @return bool
+     */
+    public function getIsBelowMinimumAmount()
+    {
+        return $this->container['is_below_minimum_amount'];
+    }
+
+    /**
+     * Sets is_below_minimum_amount
+     * @param bool $is_below_minimum_amount If the total quote amount is below the minimum quote amount specified on the lead
+     * @return $this
+     */
+    public function setIsBelowMinimumAmount($is_below_minimum_amount)
+    {
+        $this->container['is_below_minimum_amount'] = $is_below_minimum_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets accepted_by_actioner
+     * @return \Ageras\Api\ActionerResource
+     */
+    public function getAcceptedByActioner()
+    {
+        return $this->container['accepted_by_actioner'];
+    }
+
+    /**
+     * Sets accepted_by_actioner
+     * @param \Ageras\Api\ActionerResource $accepted_by_actioner
+     * @return $this
+     */
+    public function setAcceptedByActioner($accepted_by_actioner)
+    {
+        $this->container['accepted_by_actioner'] = $accepted_by_actioner;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_products
+     * @return \Ageras\Api\LeadProductResource[]
+     */
+    public function getLeadProducts()
+    {
+        return $this->container['lead_products'];
+    }
+
+    /**
+     * Sets lead_products
+     * @param \Ageras\Api\LeadProductResource[] $lead_products List of lead products.
+     * @return $this
+     */
+    public function setLeadProducts($lead_products)
+    {
+        $this->container['lead_products'] = $lead_products;
 
         return $this;
     }
