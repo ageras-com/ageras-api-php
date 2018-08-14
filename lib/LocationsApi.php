@@ -186,6 +186,7 @@ class LocationsApi
      *    'slug' => string,
      *    'sort' => string,
      *    'is_primary' => bool,
+     *    'min_partner_count' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -211,6 +212,7 @@ class LocationsApi
      *    'slug' => string,
      *    'sort' => string,
      *    'is_primary' => bool,
+     *    'min_partner_count' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -255,6 +257,10 @@ class LocationsApi
         // query params
         if (isset($criteria['is_primary'])) {
             $queryParams['is_primary'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_primary']);
+        }
+        // query params
+        if (isset($criteria['min_partner_count'])) {
+            $queryParams['min_partner_count'] = $this->apiClient->getSerializer()->toQueryValue($criteria['min_partner_count']);
         }
         // query params
         if (isset($criteria['limit'])) {

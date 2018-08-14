@@ -85,6 +85,7 @@ $criteria = [
         'slug' => "slug_example"; // string | Slug for url friendly strings.
         'sort' => "name"; // string | Sort types for Locations
         'is_primary' => false; // bool | Only Primary Locations
+        'min_partner_count' => 56; // int | Filtering based on minimum partner count
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -109,6 +110,7 @@ Name | Type | Description  | Notes
  **slug** | **string**| Slug for url friendly strings. | [optional]
  **sort** | **string**| Sort types for Locations | [optional] [default to name]
  **is_primary** | **bool**| Only Primary Locations | [optional] [default to false]
+ **min_partner_count** | **int**| Filtering based on minimum partner count | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
