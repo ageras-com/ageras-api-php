@@ -130,4 +130,12 @@ class LeadProductResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "subsequent_years"
+     */
+    public function testPropertySubsequentYears()
+    {
+
+    }
+
 }

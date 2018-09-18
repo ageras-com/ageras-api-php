@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **is_service_fee** | **bool** | Does this lead have a service fee | [optional] [default to false]
 **wants_local_partner** | **bool** | Does the lead want a local partner | [optional] [default to false]
 **is_digital** | **bool** | Digital communication? | [optional] [default to false]
+**email_optin** | **bool** | Does the lead optin for email communication with Ageras? | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

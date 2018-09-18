@@ -110,6 +110,39 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsCertificationsCreate
+     *
+     * Add a certification to a lead..
+     *
+     */
+    public function testLeadsCertificationsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsCertificationsDelete
+     *
+     * Delete a certification from a lead..
+     *
+     */
+    public function testLeadsCertificationsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for leadsCertificationsIndex
+     *
+     * List a lead's certifications..
+     *
+     */
+    public function testLeadsCertificationsIndex()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
      * Create a new Lead..

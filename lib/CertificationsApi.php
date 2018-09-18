@@ -95,6 +95,7 @@ class CertificationsApi
      * @param $criteria = [
      *    'geo_code' => string,
      *    'industry_id' => int,
+     *    'is_segmentable' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -116,6 +117,7 @@ class CertificationsApi
      * @param $criteria = [
      *    'geo_code' => string,
      *    'industry_id' => int,
+     *    'is_segmentable' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -144,6 +146,10 @@ class CertificationsApi
         // query params
         if (isset($criteria['industry_id'])) {
             $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry_id']);
+        }
+        // query params
+        if (isset($criteria['is_segmentable'])) {
+            $queryParams['is_segmentable'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_segmentable']);
         }
         // query params
         if (isset($criteria['limit'])) {

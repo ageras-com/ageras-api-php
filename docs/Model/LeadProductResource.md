@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **description** | **string** | Product description specific to this lead | [optional] 
 **type** | **string** | Yearly, quarterly, monthly, unit etc | [optional] [default to 'unknown']
 **quantity** | **int** | Quantity | [optional] 
+**subsequent_years** | **bool** | Subsequent years | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

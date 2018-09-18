@@ -89,7 +89,8 @@ class LeadResource implements ArrayAccess
         'revenue_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'is_service_fee' => 'bool',
         'wants_local_partner' => 'bool',
-        'is_digital' => 'bool'
+        'is_digital' => 'bool',
+        'email_optin' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -137,7 +138,8 @@ class LeadResource implements ArrayAccess
         'revenue_amount_excl_vat' => 'revenue_amount_excl_vat',
         'is_service_fee' => 'is_service_fee',
         'wants_local_partner' => 'wants_local_partner',
-        'is_digital' => 'is_digital'
+        'is_digital' => 'is_digital',
+        'email_optin' => 'email_optin'
     ];
 
 
@@ -181,7 +183,8 @@ class LeadResource implements ArrayAccess
         'revenue_amount_excl_vat' => 'setRevenueAmountExclVat',
         'is_service_fee' => 'setIsServiceFee',
         'wants_local_partner' => 'setWantsLocalPartner',
-        'is_digital' => 'setIsDigital'
+        'is_digital' => 'setIsDigital',
+        'email_optin' => 'setEmailOptin'
     ];
 
 
@@ -225,7 +228,8 @@ class LeadResource implements ArrayAccess
         'revenue_amount_excl_vat' => 'getRevenueAmountExclVat',
         'is_service_fee' => 'getIsServiceFee',
         'wants_local_partner' => 'getWantsLocalPartner',
-        'is_digital' => 'getIsDigital'
+        'is_digital' => 'getIsDigital',
+        'email_optin' => 'getEmailOptin'
     ];
 
     public static function attributeMap()
@@ -321,6 +325,7 @@ class LeadResource implements ArrayAccess
         $this->container['is_service_fee'] = isset($data['is_service_fee']) ? $data['is_service_fee'] : false;
         $this->container['wants_local_partner'] = isset($data['wants_local_partner']) ? $data['wants_local_partner'] : false;
         $this->container['is_digital'] = isset($data['is_digital']) ? $data['is_digital'] : false;
+        $this->container['email_optin'] = isset($data['email_optin']) ? $data['email_optin'] : false;
     }
 
     /**
@@ -1113,6 +1118,27 @@ class LeadResource implements ArrayAccess
     public function setIsDigital($is_digital)
     {
         $this->container['is_digital'] = $is_digital;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_optin
+     * @return bool
+     */
+    public function getEmailOptin()
+    {
+        return $this->container['email_optin'];
+    }
+
+    /**
+     * Sets email_optin
+     * @param bool $email_optin Does the lead optin for email communication with Ageras?
+     * @return $this
+     */
+    public function setEmailOptin($email_optin)
+    {
+        $this->container['email_optin'] = $email_optin;
 
         return $this;
     }

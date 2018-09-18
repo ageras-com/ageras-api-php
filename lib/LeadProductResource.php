@@ -59,7 +59,8 @@ class LeadProductResource implements ArrayAccess
         'product' => '\Ageras\Api\ProductResource',
         'description' => 'string',
         'type' => 'string',
-        'quantity' => 'int'
+        'quantity' => 'int',
+        'subsequent_years' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -77,7 +78,8 @@ class LeadProductResource implements ArrayAccess
         'product' => 'product',
         'description' => 'description',
         'type' => 'type',
-        'quantity' => 'quantity'
+        'quantity' => 'quantity',
+        'subsequent_years' => 'subsequent_years'
     ];
 
 
@@ -91,7 +93,8 @@ class LeadProductResource implements ArrayAccess
         'product' => 'setProduct',
         'description' => 'setDescription',
         'type' => 'setType',
-        'quantity' => 'setQuantity'
+        'quantity' => 'setQuantity',
+        'subsequent_years' => 'setSubsequentYears'
     ];
 
 
@@ -105,7 +108,8 @@ class LeadProductResource implements ArrayAccess
         'product' => 'getProduct',
         'description' => 'getDescription',
         'type' => 'getType',
-        'quantity' => 'getQuantity'
+        'quantity' => 'getQuantity',
+        'subsequent_years' => 'getSubsequentYears'
     ];
 
     public static function attributeMap()
@@ -165,6 +169,7 @@ class LeadProductResource implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['subsequent_years'] = isset($data['subsequent_years']) ? $data['subsequent_years'] : false;
     }
 
     /**
@@ -327,6 +332,27 @@ class LeadProductResource implements ArrayAccess
     public function setQuantity($quantity)
     {
         $this->container['quantity'] = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets subsequent_years
+     * @return bool
+     */
+    public function getSubsequentYears()
+    {
+        return $this->container['subsequent_years'];
+    }
+
+    /**
+     * Sets subsequent_years
+     * @param bool $subsequent_years Subsequent years
+     * @return $this
+     */
+    public function setSubsequentYears($subsequent_years)
+    {
+        $this->container['subsequent_years'] = $subsequent_years;
 
         return $this;
     }

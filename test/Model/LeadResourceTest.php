@@ -370,4 +370,12 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "email_optin"
+     */
+    public function testPropertyEmailOptin()
+    {
+
+    }
+
 }

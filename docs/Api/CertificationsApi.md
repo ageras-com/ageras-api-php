@@ -29,6 +29,7 @@ $api_instance = new Ageras\Api\Api\CertificationsApi();
 $criteria = [
         'geo_code' => "geo_code_example"; // string | 
         'industry_id' => 56; // int | 
+        'is_segmentable' => false; // bool | Is the certification used for segmentation?
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -49,6 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**|  | [optional]
  **industry_id** | **int**|  | [optional]
+ **is_segmentable** | **bool**| Is the certification used for segmentation? | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
