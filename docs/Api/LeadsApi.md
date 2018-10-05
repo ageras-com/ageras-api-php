@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | Add a certification to a lead.
 [**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | Delete a certification from a lead.
 [**leadsCertificationsIndex**](LeadsApi.md#leadsCertificationsIndex) | **GET** /leads/{lead_id}/certifications | List a lead&#39;s certifications.
+[**leadsCertificationsUpdate**](LeadsApi.md#leadsCertificationsUpdate) | **PUT** /leads/{lead_id}/certifications | Replace a lead&#39;s certifications.
 [**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | Create a new Lead.
 [**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
 [**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | Add partner to lead&#39;s excluded partner list
@@ -142,6 +143,8 @@ $criteria = [
         'minimum_revenue_amount_excl_vat' => "minimum_revenue_amount_excl_vat_example"; // string | Get leads that will create at least this amount (in euros) of revenue if matched.
         'maximum_revenue_amount_excl_vat' => "maximum_revenue_amount_excl_vat_example"; // string | Get leads that will create no more than this amount (in euros) of revenue if matched.
         'lead_category' => "basic"; // string | Lead's category
+        'validator_id' => "validator_id_example"; // string | Lead's validator
+        'is_given_up' => false; // bool | Is the lead given up on?
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -187,6 +190,8 @@ Name | Type | Description  | Notes
  **minimum_revenue_amount_excl_vat** | **string**| Get leads that will create at least this amount (in euros) of revenue if matched. | [optional]
  **maximum_revenue_amount_excl_vat** | **string**| Get leads that will create no more than this amount (in euros) of revenue if matched. | [optional]
  **lead_category** | **string**| Lead&#39;s category | [optional] [default to basic]
+ **validator_id** | **string**| Lead&#39;s validator | [optional]
+ **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -423,6 +428,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\CertificationResult**](../Model/CertificationResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsCertificationsUpdate**
+> \Ageras\Api\CertificationResource leadsCertificationsUpdate($lead_id , $lead_certifications_resource)
+
+Replace a lead's certifications.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_certifications_resource = new \Ageras\Api\LeadCertificationsResource(); // \Ageras\Api\LeadCertificationsResource | 
+
+try {
+    $result = $api_instance->leadsCertificationsUpdate($lead_id , $lead_certifications_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsCertificationsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_certifications_resource** | [**\Ageras\Api\LeadCertificationsResource**](../Model/\Ageras\Api\LeadCertificationsResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\CertificationResource**](../Model/CertificationResource.md)
 
 ### Authorization
 
@@ -798,6 +856,8 @@ $criteria = [
         'minimum_revenue_amount_excl_vat' => "minimum_revenue_amount_excl_vat_example"; // string | Get leads that will create at least this amount (in euros) of revenue if matched.
         'maximum_revenue_amount_excl_vat' => "maximum_revenue_amount_excl_vat_example"; // string | Get leads that will create no more than this amount (in euros) of revenue if matched.
         'lead_category' => "basic"; // string | Lead's category
+        'validator_id' => "validator_id_example"; // string | Lead's validator
+        'is_given_up' => false; // bool | Is the lead given up on?
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -843,6 +903,8 @@ Name | Type | Description  | Notes
  **minimum_revenue_amount_excl_vat** | **string**| Get leads that will create at least this amount (in euros) of revenue if matched. | [optional]
  **maximum_revenue_amount_excl_vat** | **string**| Get leads that will create no more than this amount (in euros) of revenue if matched. | [optional]
  **lead_category** | **string**| Lead&#39;s category | [optional] [default to basic]
+ **validator_id** | **string**| Lead&#39;s validator | [optional]
+ **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

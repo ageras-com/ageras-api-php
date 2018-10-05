@@ -265,6 +265,7 @@ class RatingsApi
      *
      * @param $criteria = [
      *    'partner_id' => string,
+     *    'industry_id' => string,
      *    'rating_id' => string,
      *    'sort' => string,
      *    'geo_code' => string,
@@ -293,6 +294,7 @@ class RatingsApi
      *
      * @param $criteria = [
      *    'partner_id' => string,
+     *    'industry_id' => string,
      *    'rating_id' => string,
      *    'sort' => string,
      *    'geo_code' => string,
@@ -325,6 +327,10 @@ class RatingsApi
         // query params
         if (isset($criteria['partner_id'])) {
             $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['industry_id'])) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry_id']);
         }
         // query params
         if (isset($criteria['rating_id'])) {

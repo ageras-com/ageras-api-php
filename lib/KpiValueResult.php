@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResource
+ * KpiValueResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadNoteResource Class Doc Comment
+ * KpiValueResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResource implements ArrayAccess
+class KpiValueResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,19 @@ class LeadNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadNoteResource';
+    protected static $swaggerModelName = 'KpiValueResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note' => 'string',
-        'employee_id' => 'int',
-        'created_at' => 'string'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\KpiValueResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +72,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'note' => 'note',
-        'employee_id' => 'employee_id',
-        'created_at' => 'created_at'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -80,9 +86,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'note' => 'setNote',
-        'employee_id' => 'setEmployeeId',
-        'created_at' => 'setCreatedAt'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -91,9 +100,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'note' => 'getNote',
-        'employee_id' => 'getEmployeeId',
-        'created_at' => 'getCreatedAt'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -127,9 +139,12 @@ class LeadNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -158,64 +173,127 @@ class LeadNoteResource implements ArrayAccess
 
 
     /**
-     * Gets note
-     * @return string
-     */
-    public function getNote()
-    {
-        return $this->container['note'];
-    }
-
-    /**
-     * Sets note
-     * @param string $note Note
-     * @return $this
-     */
-    public function setNote($note)
-    {
-        $this->container['note'] = $note;
-
-        return $this;
-    }
-
-    /**
-     * Gets employee_id
+     * Gets page
      * @return int
      */
-    public function getEmployeeId()
+    public function getPage()
     {
-        return $this->container['employee_id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets employee_id
-     * @param int $employee_id Employee creator id
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setEmployeeId($employee_id)
+    public function setPage($page)
     {
-        $this->container['employee_id'] = $employee_id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets created_at
-     * @return string
+     * Gets limit
+     * @return int
      */
-    public function getCreatedAt()
+    public function getLimit()
     {
-        return $this->container['created_at'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at Date
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setLimit($limit)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\KpiValueResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\KpiValueResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
+     * @return string
+     */
+    public function getDidYouMean()
+    {
+        return $this->container['did_you_mean'];
+    }
+
+    /**
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
+     * @return $this
+     */
+    public function setDidYouMean($did_you_mean)
+    {
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

@@ -40,6 +40,7 @@ Name | Type | Description | Notes
 **wants_local_partner** | **bool** | Does the lead want a local partner | [optional] [default to false]
 **is_digital** | **bool** | Digital communication? | [optional] [default to false]
 **email_optin** | **bool** | Does the lead optin for email communication with Ageras? | [optional] [default to false]
+**actions_info** | [**\Ageras\Api\LeadActionsInfoResource**](LeadActionsInfoResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

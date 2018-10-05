@@ -1,11 +1,9 @@
-# LeadNoteResource
+# LeadCertificationsResource
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**note** | **string** | Note | [optional] 
-**employee_id** | **int** | Employee creator id | [optional] 
-**created_at** | **string** | Date | [optional] 
+**certification_ids** | **int[]** | Certification IDs. @var int[] | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResourceTest
+ * KpiTargetResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadNoteResourceTest Class Doc Comment
+ * KpiTargetResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadNoteResource
+// * @description KpiTargetResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
+class KpiTargetResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,17 +75,73 @@ class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadNoteResource"
+     * Test "KpiTargetResource"
      */
-    public function testLeadNoteResource()
+    public function testKpiTargetResource()
     {
 
     }
 
     /**
-     * Test attribute "note"
+     * Test attribute "id"
      */
-    public function testPropertyNote()
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "identifier"
+     */
+    public function testPropertyIdentifier()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo_code"
+     */
+    public function testPropertyGeoCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "year"
+     */
+    public function testPropertyYear()
+    {
+
+    }
+
+    /**
+     * Test attribute "month"
+     */
+    public function testPropertyMonth()
+    {
+
+    }
+
+    /**
+     * Test attribute "day"
+     */
+    public function testPropertyDay()
     {
 
     }
@@ -99,9 +155,17 @@ class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "industry_id"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyIndustryId()
+    {
+
+    }
+
+    /**
+     * Test attribute "value"
+     */
+    public function testPropertyValue()
     {
 
     }

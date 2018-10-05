@@ -682,6 +682,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersRevenuerangesCreate
+     *
+     * Create a revenue range..
+     *
+     */
+    public function testPartnersRevenuerangesCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersSubscriptionsActionsCreate
      *
      * Cancel subscription..

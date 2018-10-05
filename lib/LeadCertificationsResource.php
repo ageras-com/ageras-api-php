@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResource
+ * LeadCertificationsResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadNoteResource Class Doc Comment
+ * LeadCertificationsResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResource implements ArrayAccess
+class LeadCertificationsResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,14 @@ class LeadNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadNoteResource';
+    protected static $swaggerModelName = 'LeadCertificationsResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note' => 'string',
-        'employee_id' => 'int',
-        'created_at' => 'string'
+        'certification_ids' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +67,7 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'note' => 'note',
-        'employee_id' => 'employee_id',
-        'created_at' => 'created_at'
+        'certification_ids' => 'certification_ids'
     ];
 
 
@@ -80,9 +76,7 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'note' => 'setNote',
-        'employee_id' => 'setEmployeeId',
-        'created_at' => 'setCreatedAt'
+        'certification_ids' => 'setCertificationIds'
     ];
 
 
@@ -91,9 +85,7 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'note' => 'getNote',
-        'employee_id' => 'getEmployeeId',
-        'created_at' => 'getCreatedAt'
+        'certification_ids' => 'getCertificationIds'
     ];
 
     public static function attributeMap()
@@ -127,9 +119,7 @@ class LeadNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['certification_ids'] = isset($data['certification_ids']) ? $data['certification_ids'] : null;
     }
 
     /**
@@ -158,64 +148,22 @@ class LeadNoteResource implements ArrayAccess
 
 
     /**
-     * Gets note
-     * @return string
+     * Gets certification_ids
+     * @return int[]
      */
-    public function getNote()
+    public function getCertificationIds()
     {
-        return $this->container['note'];
+        return $this->container['certification_ids'];
     }
 
     /**
-     * Sets note
-     * @param string $note Note
+     * Sets certification_ids
+     * @param int[] $certification_ids Certification IDs. @var int[]
      * @return $this
      */
-    public function setNote($note)
+    public function setCertificationIds($certification_ids)
     {
-        $this->container['note'] = $note;
-
-        return $this;
-    }
-
-    /**
-     * Gets employee_id
-     * @return int
-     */
-    public function getEmployeeId()
-    {
-        return $this->container['employee_id'];
-    }
-
-    /**
-     * Sets employee_id
-     * @param int $employee_id Employee creator id
-     * @return $this
-     */
-    public function setEmployeeId($employee_id)
-    {
-        $this->container['employee_id'] = $employee_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param string $created_at Date
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
+        $this->container['certification_ids'] = $certification_ids;
 
         return $this;
     }

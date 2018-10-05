@@ -221,4 +221,205 @@ class KpiApi
             throw $e;
         }
     }
+
+    /**
+     * Operation kpiTargetsCreate
+     *
+     * Create kpi target
+     *
+     * @param \Ageras\Api\KpiTargetResource $kpi_target_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\KpiTargetResource
+     */
+    public function kpiTargetsCreate($kpi_target_resource)
+    {
+        list($response) = $this->kpiTargetsCreateWithHttpInfo($kpi_target_resource);
+        return $response;
+    }
+
+    /**
+     * Operation kpiTargetsCreateWithHttpInfo
+     *
+     * Create kpi target
+     *
+     * @param \Ageras\Api\KpiTargetResource $kpi_target_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\KpiTargetResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function kpiTargetsCreateWithHttpInfo($kpi_target_resource)
+    {
+        // parse inputs
+        $resourcePath = "/kpi/targets";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($kpi_target_resource)) {
+            $_tempBody = $kpi_target_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\KpiTargetResource',
+                '/kpi/targets'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\KpiTargetResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\KpiTargetResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation kpiValuesIndex
+     *
+     * Get employee performance KPIs.
+     *
+     * @param $criteria = [
+     *    'kpi_identifier' => string,
+     *    'employee_id' => string,
+     *    'temporal_scope' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\KpiValueResult
+     */
+    public function kpiValuesIndex($criteria = [])
+    {
+        list($response) = $this->kpiValuesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation kpiValuesIndexWithHttpInfo
+     *
+     * Get employee performance KPIs.
+     *
+     * @param $criteria = [
+     *    'kpi_identifier' => string,
+     *    'employee_id' => string,
+     *    'temporal_scope' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\KpiValueResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function kpiValuesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/kpi/values";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['kpi_identifier'])) {
+            $queryParams['kpi_identifier'] = $this->apiClient->getSerializer()->toQueryValue($criteria['kpi_identifier']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['temporal_scope'])) {
+            $queryParams['temporal_scope'] = $this->apiClient->getSerializer()->toQueryValue($criteria['temporal_scope']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\KpiValueResult',
+                '/kpi/values'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\KpiValueResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\KpiValueResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

@@ -59,6 +59,7 @@ Method | HTTP request | Description
 [**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
 [**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
+[**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
 [**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
 [**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
 [**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
@@ -3202,6 +3203,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersRevenuerangesCreate**
+> \Ageras\Api\PartnerRevenueRangeResource partnersRevenuerangesCreate($partner_id , $partner_revenue_range_resource)
+
+Create a revenue range.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_revenue_range_resource = new \Ageras\Api\PartnerRevenueRangeResource(); // \Ageras\Api\PartnerRevenueRangeResource | 
+
+try {
+    $result = $api_instance->partnersRevenuerangesCreate($partner_id , $partner_revenue_range_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersRevenuerangesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_revenue_range_resource** | [**\Ageras\Api\PartnerRevenueRangeResource**](../Model/\Ageras\Api\PartnerRevenueRangeResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerRevenueRangeResource**](../Model/PartnerRevenueRangeResource.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResource
+ * PartnerRevenueRangeResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadNoteResource Class Doc Comment
+ * PartnerRevenueRangeResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResource implements ArrayAccess
+class PartnerRevenueRangeResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class LeadNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadNoteResource';
+    protected static $swaggerModelName = 'PartnerRevenueRangeResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note' => 'string',
-        'employee_id' => 'int',
-        'created_at' => 'string'
+        'id' => 'int',
+        'minimum_revenue' => 'float',
+        'maximum_revenue' => 'float',
+        'revenue_currency' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +70,10 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'note' => 'note',
-        'employee_id' => 'employee_id',
-        'created_at' => 'created_at'
+        'id' => 'id',
+        'minimum_revenue' => 'minimum_revenue',
+        'maximum_revenue' => 'maximum_revenue',
+        'revenue_currency' => 'revenue_currency'
     ];
 
 
@@ -80,9 +82,10 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'note' => 'setNote',
-        'employee_id' => 'setEmployeeId',
-        'created_at' => 'setCreatedAt'
+        'id' => 'setId',
+        'minimum_revenue' => 'setMinimumRevenue',
+        'maximum_revenue' => 'setMaximumRevenue',
+        'revenue_currency' => 'setRevenueCurrency'
     ];
 
 
@@ -91,9 +94,10 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'note' => 'getNote',
-        'employee_id' => 'getEmployeeId',
-        'created_at' => 'getCreatedAt'
+        'id' => 'getId',
+        'minimum_revenue' => 'getMinimumRevenue',
+        'maximum_revenue' => 'getMaximumRevenue',
+        'revenue_currency' => 'getRevenueCurrency'
     ];
 
     public static function attributeMap()
@@ -127,9 +131,10 @@ class LeadNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['minimum_revenue'] = isset($data['minimum_revenue']) ? $data['minimum_revenue'] : null;
+        $this->container['maximum_revenue'] = isset($data['maximum_revenue']) ? $data['maximum_revenue'] : null;
+        $this->container['revenue_currency'] = isset($data['revenue_currency']) ? $data['revenue_currency'] : null;
     }
 
     /**
@@ -158,64 +163,85 @@ class LeadNoteResource implements ArrayAccess
 
 
     /**
-     * Gets note
-     * @return string
-     */
-    public function getNote()
-    {
-        return $this->container['note'];
-    }
-
-    /**
-     * Sets note
-     * @param string $note Note
-     * @return $this
-     */
-    public function setNote($note)
-    {
-        $this->container['note'] = $note;
-
-        return $this;
-    }
-
-    /**
-     * Gets employee_id
+     * Gets id
      * @return int
      */
-    public function getEmployeeId()
+    public function getId()
     {
-        return $this->container['employee_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets employee_id
-     * @param int $employee_id Employee creator id
+     * Sets id
+     * @param int $id ID.
      * @return $this
      */
-    public function setEmployeeId($employee_id)
+    public function setId($id)
     {
-        $this->container['employee_id'] = $employee_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets created_at
-     * @return string
+     * Gets minimum_revenue
+     * @return float
      */
-    public function getCreatedAt()
+    public function getMinimumRevenue()
     {
-        return $this->container['created_at'];
+        return $this->container['minimum_revenue'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at Date
+     * Sets minimum_revenue
+     * @param float $minimum_revenue Minimum revenue.
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setMinimumRevenue($minimum_revenue)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['minimum_revenue'] = $minimum_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets maximum_revenue
+     * @return float
+     */
+    public function getMaximumRevenue()
+    {
+        return $this->container['maximum_revenue'];
+    }
+
+    /**
+     * Sets maximum_revenue
+     * @param float $maximum_revenue Maximum revenue.
+     * @return $this
+     */
+    public function setMaximumRevenue($maximum_revenue)
+    {
+        $this->container['maximum_revenue'] = $maximum_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_currency
+     * @return string
+     */
+    public function getRevenueCurrency()
+    {
+        return $this->container['revenue_currency'];
+    }
+
+    /**
+     * Sets revenue_currency
+     * @param string $revenue_currency Currency for the min and max revenues.
+     * @return $this
+     */
+    public function setRevenueCurrency($revenue_currency)
+    {
+        $this->container['revenue_currency'] = $revenue_currency;
 
         return $this;
     }

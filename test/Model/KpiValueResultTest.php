@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResourceTest
+ * KpiValueResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadNoteResourceTest Class Doc Comment
+ * KpiValueResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadNoteResource
+// * @description KpiValueResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
+class KpiValueResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,33 +75,57 @@ class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadNoteResource"
+     * Test "KpiValueResult"
      */
-    public function testLeadNoteResource()
+    public function testKpiValueResult()
     {
 
     }
 
     /**
-     * Test attribute "note"
+     * Test attribute "page"
      */
-    public function testPropertyNote()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "limit"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "pages"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyPages()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

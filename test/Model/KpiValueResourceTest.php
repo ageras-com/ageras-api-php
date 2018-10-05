@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResourceTest
+ * KpiValueResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadNoteResourceTest Class Doc Comment
+ * KpiValueResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadNoteResource
+// * @description KpiValueResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
+class KpiValueResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,17 +75,17 @@ class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadNoteResource"
+     * Test "KpiValueResource"
      */
-    public function testLeadNoteResource()
+    public function testKpiValueResource()
     {
 
     }
 
     /**
-     * Test attribute "note"
+     * Test attribute "kpi_identifier"
      */
-    public function testPropertyNote()
+    public function testPropertyKpiIdentifier()
     {
 
     }
@@ -99,9 +99,33 @@ class LeadNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "year"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyYear()
+    {
+
+    }
+
+    /**
+     * Test attribute "month"
+     */
+    public function testPropertyMonth()
+    {
+
+    }
+
+    /**
+     * Test attribute "day"
+     */
+    public function testPropertyDay()
+    {
+
+    }
+
+    /**
+     * Test attribute "value"
+     */
+    public function testPropertyValue()
     {
 
     }

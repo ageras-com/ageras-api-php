@@ -133,6 +133,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\RatingsApi();
 $criteria = [
         'partner_id' => "partner_id_example"; // string | Partner id for the ratings to be filtered by.
+        'industry_id' => "industry_id_example"; // string | Partner industry id for the ratings to be filtered by.
         'rating_id' => "rating_id_example"; // string | Rating ids.
         'sort' => "created_at"; // string | Sort ratings by a given property.
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
@@ -160,6 +161,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**| Partner id for the ratings to be filtered by. | [optional]
+ **industry_id** | **string**| Partner industry id for the ratings to be filtered by. | [optional]
  **rating_id** | **string**| Rating ids. | [optional]
  **sort** | **string**| Sort ratings by a given property. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]

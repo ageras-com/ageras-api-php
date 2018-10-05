@@ -90,7 +90,8 @@ class LeadResource implements ArrayAccess
         'is_service_fee' => 'bool',
         'wants_local_partner' => 'bool',
         'is_digital' => 'bool',
-        'email_optin' => 'bool'
+        'email_optin' => 'bool',
+        'actions_info' => '\Ageras\Api\LeadActionsInfoResource'
     ];
 
     public static function swaggerTypes()
@@ -139,7 +140,8 @@ class LeadResource implements ArrayAccess
         'is_service_fee' => 'is_service_fee',
         'wants_local_partner' => 'wants_local_partner',
         'is_digital' => 'is_digital',
-        'email_optin' => 'email_optin'
+        'email_optin' => 'email_optin',
+        'actions_info' => 'actions_info'
     ];
 
 
@@ -184,7 +186,8 @@ class LeadResource implements ArrayAccess
         'is_service_fee' => 'setIsServiceFee',
         'wants_local_partner' => 'setWantsLocalPartner',
         'is_digital' => 'setIsDigital',
-        'email_optin' => 'setEmailOptin'
+        'email_optin' => 'setEmailOptin',
+        'actions_info' => 'setActionsInfo'
     ];
 
 
@@ -229,7 +232,8 @@ class LeadResource implements ArrayAccess
         'is_service_fee' => 'getIsServiceFee',
         'wants_local_partner' => 'getWantsLocalPartner',
         'is_digital' => 'getIsDigital',
-        'email_optin' => 'getEmailOptin'
+        'email_optin' => 'getEmailOptin',
+        'actions_info' => 'getActionsInfo'
     ];
 
     public static function attributeMap()
@@ -326,6 +330,7 @@ class LeadResource implements ArrayAccess
         $this->container['wants_local_partner'] = isset($data['wants_local_partner']) ? $data['wants_local_partner'] : false;
         $this->container['is_digital'] = isset($data['is_digital']) ? $data['is_digital'] : false;
         $this->container['email_optin'] = isset($data['email_optin']) ? $data['email_optin'] : false;
+        $this->container['actions_info'] = isset($data['actions_info']) ? $data['actions_info'] : null;
     }
 
     /**
@@ -1139,6 +1144,27 @@ class LeadResource implements ArrayAccess
     public function setEmailOptin($email_optin)
     {
         $this->container['email_optin'] = $email_optin;
+
+        return $this;
+    }
+
+    /**
+     * Gets actions_info
+     * @return \Ageras\Api\LeadActionsInfoResource
+     */
+    public function getActionsInfo()
+    {
+        return $this->container['actions_info'];
+    }
+
+    /**
+     * Sets actions_info
+     * @param \Ageras\Api\LeadActionsInfoResource $actions_info
+     * @return $this
+     */
+    public function setActionsInfo($actions_info)
+    {
+        $this->container['actions_info'] = $actions_info;
 
         return $this;
     }

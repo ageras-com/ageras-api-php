@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResource
+ * KpiValueResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadNoteResource Class Doc Comment
+ * KpiValueResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResource implements ArrayAccess
+class KpiValueResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,19 @@ class LeadNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadNoteResource';
+    protected static $swaggerModelName = 'KpiValueResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note' => 'string',
+        'kpi_identifier' => 'string',
         'employee_id' => 'int',
-        'created_at' => 'string'
+        'year' => 'int',
+        'month' => 'int',
+        'day' => 'int',
+        'value' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +72,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'note' => 'note',
+        'kpi_identifier' => 'kpi_identifier',
         'employee_id' => 'employee_id',
-        'created_at' => 'created_at'
+        'year' => 'year',
+        'month' => 'month',
+        'day' => 'day',
+        'value' => 'value'
     ];
 
 
@@ -80,9 +86,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'note' => 'setNote',
+        'kpi_identifier' => 'setKpiIdentifier',
         'employee_id' => 'setEmployeeId',
-        'created_at' => 'setCreatedAt'
+        'year' => 'setYear',
+        'month' => 'setMonth',
+        'day' => 'setDay',
+        'value' => 'setValue'
     ];
 
 
@@ -91,9 +100,12 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'note' => 'getNote',
+        'kpi_identifier' => 'getKpiIdentifier',
         'employee_id' => 'getEmployeeId',
-        'created_at' => 'getCreatedAt'
+        'year' => 'getYear',
+        'month' => 'getMonth',
+        'day' => 'getDay',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -127,9 +139,12 @@ class LeadNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
+        $this->container['kpi_identifier'] = isset($data['kpi_identifier']) ? $data['kpi_identifier'] : null;
         $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['year'] = isset($data['year']) ? $data['year'] : null;
+        $this->container['month'] = isset($data['month']) ? $data['month'] : null;
+        $this->container['day'] = isset($data['day']) ? $data['day'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -158,22 +173,22 @@ class LeadNoteResource implements ArrayAccess
 
 
     /**
-     * Gets note
+     * Gets kpi_identifier
      * @return string
      */
-    public function getNote()
+    public function getKpiIdentifier()
     {
-        return $this->container['note'];
+        return $this->container['kpi_identifier'];
     }
 
     /**
-     * Sets note
-     * @param string $note Note
+     * Sets kpi_identifier
+     * @param string $kpi_identifier @var string
      * @return $this
      */
-    public function setNote($note)
+    public function setKpiIdentifier($kpi_identifier)
     {
-        $this->container['note'] = $note;
+        $this->container['kpi_identifier'] = $kpi_identifier;
 
         return $this;
     }
@@ -189,7 +204,7 @@ class LeadNoteResource implements ArrayAccess
 
     /**
      * Sets employee_id
-     * @param int $employee_id Employee creator id
+     * @param int $employee_id @var int
      * @return $this
      */
     public function setEmployeeId($employee_id)
@@ -200,22 +215,85 @@ class LeadNoteResource implements ArrayAccess
     }
 
     /**
-     * Gets created_at
-     * @return string
+     * Gets year
+     * @return int
      */
-    public function getCreatedAt()
+    public function getYear()
     {
-        return $this->container['created_at'];
+        return $this->container['year'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at Date
+     * Sets year
+     * @param int $year @var int
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setYear($year)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['year'] = $year;
+
+        return $this;
+    }
+
+    /**
+     * Gets month
+     * @return int
+     */
+    public function getMonth()
+    {
+        return $this->container['month'];
+    }
+
+    /**
+     * Sets month
+     * @param int $month @var int
+     * @return $this
+     */
+    public function setMonth($month)
+    {
+        $this->container['month'] = $month;
+
+        return $this;
+    }
+
+    /**
+     * Gets day
+     * @return int
+     */
+    public function getDay()
+    {
+        return $this->container['day'];
+    }
+
+    /**
+     * Sets day
+     * @param int $day @var int
+     * @return $this
+     */
+    public function setDay($day)
+    {
+        $this->container['day'] = $day;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     * @return float
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     * @param float $value @var float
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

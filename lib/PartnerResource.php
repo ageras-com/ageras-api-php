@@ -89,7 +89,8 @@ class PartnerResource implements ArrayAccess
         'subscription' => '\Ageras\Api\PartnerSubscriptionResource[]',
         'preferred_payment_solution' => '\Ageras\Api\PaymentSolutionResource',
         'payment_schedule' => 'string',
-        'attributes' => '\Ageras\Api\PartnerAttributeResource[]'
+        'attributes' => '\Ageras\Api\PartnerAttributeResource[]',
+        'desired_revenue_range' => '\Ageras\Api\PartnerRevenueRangeResource'
     ];
 
     public static function swaggerTypes()
@@ -137,7 +138,8 @@ class PartnerResource implements ArrayAccess
         'subscription' => 'subscription',
         'preferred_payment_solution' => 'preferred_payment_solution',
         'payment_schedule' => 'payment_schedule',
-        'attributes' => 'attributes'
+        'attributes' => 'attributes',
+        'desired_revenue_range' => 'desired_revenue_range'
     ];
 
 
@@ -181,7 +183,8 @@ class PartnerResource implements ArrayAccess
         'subscription' => 'setSubscription',
         'preferred_payment_solution' => 'setPreferredPaymentSolution',
         'payment_schedule' => 'setPaymentSchedule',
-        'attributes' => 'setAttributes'
+        'attributes' => 'setAttributes',
+        'desired_revenue_range' => 'setDesiredRevenueRange'
     ];
 
 
@@ -225,7 +228,8 @@ class PartnerResource implements ArrayAccess
         'subscription' => 'getSubscription',
         'preferred_payment_solution' => 'getPreferredPaymentSolution',
         'payment_schedule' => 'getPaymentSchedule',
-        'attributes' => 'getAttributes'
+        'attributes' => 'getAttributes',
+        'desired_revenue_range' => 'getDesiredRevenueRange'
     ];
 
     public static function attributeMap()
@@ -335,6 +339,7 @@ class PartnerResource implements ArrayAccess
         $this->container['preferred_payment_solution'] = isset($data['preferred_payment_solution']) ? $data['preferred_payment_solution'] : null;
         $this->container['payment_schedule'] = isset($data['payment_schedule']) ? $data['payment_schedule'] : 'immediate';
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
+        $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
     }
 
     /**
@@ -1140,6 +1145,27 @@ class PartnerResource implements ArrayAccess
     public function setAttributes($attributes)
     {
         $this->container['attributes'] = $attributes;
+
+        return $this;
+    }
+
+    /**
+     * Gets desired_revenue_range
+     * @return \Ageras\Api\PartnerRevenueRangeResource
+     */
+    public function getDesiredRevenueRange()
+    {
+        return $this->container['desired_revenue_range'];
+    }
+
+    /**
+     * Sets desired_revenue_range
+     * @param \Ageras\Api\PartnerRevenueRangeResource $desired_revenue_range
+     * @return $this
+     */
+    public function setDesiredRevenueRange($desired_revenue_range)
+    {
+        $this->container['desired_revenue_range'] = $desired_revenue_range;
 
         return $this;
     }

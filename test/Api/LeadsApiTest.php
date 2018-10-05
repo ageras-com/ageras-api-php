@@ -143,6 +143,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsCertificationsUpdate
+     *
+     * Replace a lead's certifications..
+     *
+     */
+    public function testLeadsCertificationsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
      * Create a new Lead..

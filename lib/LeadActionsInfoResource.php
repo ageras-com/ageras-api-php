@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadNoteResource
+ * LeadActionsInfoResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadNoteResource Class Doc Comment
+ * LeadActionsInfoResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadNoteResource implements ArrayAccess
+class LeadActionsInfoResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,15 @@ class LeadNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadNoteResource';
+    protected static $swaggerModelName = 'LeadActionsInfoResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'note' => 'string',
-        'employee_id' => 'int',
-        'created_at' => 'string'
+        'latest_created_at' => 'string',
+        'latest_called_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +68,8 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'note' => 'note',
-        'employee_id' => 'employee_id',
-        'created_at' => 'created_at'
+        'latest_created_at' => 'latest_created_at',
+        'latest_called_at' => 'latest_called_at'
     ];
 
 
@@ -80,9 +78,8 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'note' => 'setNote',
-        'employee_id' => 'setEmployeeId',
-        'created_at' => 'setCreatedAt'
+        'latest_created_at' => 'setLatestCreatedAt',
+        'latest_called_at' => 'setLatestCalledAt'
     ];
 
 
@@ -91,9 +88,8 @@ class LeadNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'note' => 'getNote',
-        'employee_id' => 'getEmployeeId',
-        'created_at' => 'getCreatedAt'
+        'latest_created_at' => 'getLatestCreatedAt',
+        'latest_called_at' => 'getLatestCalledAt'
     ];
 
     public static function attributeMap()
@@ -127,9 +123,8 @@ class LeadNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['latest_created_at'] = isset($data['latest_created_at']) ? $data['latest_created_at'] : null;
+        $this->container['latest_called_at'] = isset($data['latest_called_at']) ? $data['latest_called_at'] : null;
     }
 
     /**
@@ -158,64 +153,43 @@ class LeadNoteResource implements ArrayAccess
 
 
     /**
-     * Gets note
+     * Gets latest_created_at
      * @return string
      */
-    public function getNote()
+    public function getLatestCreatedAt()
     {
-        return $this->container['note'];
+        return $this->container['latest_created_at'];
     }
 
     /**
-     * Sets note
-     * @param string $note Note
+     * Sets latest_created_at
+     * @param string $latest_created_at Date
      * @return $this
      */
-    public function setNote($note)
+    public function setLatestCreatedAt($latest_created_at)
     {
-        $this->container['note'] = $note;
+        $this->container['latest_created_at'] = $latest_created_at;
 
         return $this;
     }
 
     /**
-     * Gets employee_id
-     * @return int
-     */
-    public function getEmployeeId()
-    {
-        return $this->container['employee_id'];
-    }
-
-    /**
-     * Sets employee_id
-     * @param int $employee_id Employee creator id
-     * @return $this
-     */
-    public function setEmployeeId($employee_id)
-    {
-        $this->container['employee_id'] = $employee_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
+     * Gets latest_called_at
      * @return string
      */
-    public function getCreatedAt()
+    public function getLatestCalledAt()
     {
-        return $this->container['created_at'];
+        return $this->container['latest_called_at'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at Date
+     * Sets latest_called_at
+     * @param string $latest_called_at Date
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setLatestCalledAt($latest_called_at)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['latest_called_at'] = $latest_called_at;
 
         return $this;
     }

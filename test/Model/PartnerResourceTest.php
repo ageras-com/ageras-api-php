@@ -370,4 +370,12 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "desired_revenue_range"
+     */
+    public function testPropertyDesiredRevenueRange()
+    {
+
+    }
+
 }

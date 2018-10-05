@@ -378,4 +378,12 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "actions_info"
+     */
+    public function testPropertyActionsInfo()
+    {
+
+    }
+
 }

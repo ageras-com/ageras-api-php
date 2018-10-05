@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **preferred_payment_solution** | [**\Ageras\Api\PaymentSolutionResource**](PaymentSolutionResource.md) |  | [optional] 
 **payment_schedule** | **string** | Partner payment schedule | [optional] [default to 'immediate']
 **attributes** | [**\Ageras\Api\PartnerAttributeResource[]**](PartnerAttributeResource.md) | Attributes for the partner. | [optional] 
+**desired_revenue_range** | [**\Ageras\Api\PartnerRevenueRangeResource**](PartnerRevenueRangeResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
