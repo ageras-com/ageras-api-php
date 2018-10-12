@@ -3,17 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Id for the given kpi target | [optional] 
-**identifier** | **string** | Identifier for the given kpi target | [optional] 
-**created_at** | **string** | When the kpi was created | [optional] 
-**updated_at** | **string** | When the kpi was updated | [optional] 
-**geo_code** | **string** | Geo Location Geo | [optional] 
-**year** | **int** | Given year for the kpi&#39;s | [optional] 
-**month** | **int** | Given month for the kpi&#39;s | [optional] 
-**day** | **int** | Given day for the kpi&#39;s | [optional] 
-**employee_id** | **int** | employee involved in the kpi | [optional] 
-**industry_id** | **int** | industry involved in the kpi | [optional] 
-**value** | **float** | kpi&#39;s value | [optional] 
+**id** | **int** | ID of the target. | [optional] 
+**kpi_identifier** | **string** | Identifyier of the target, e.g. &#39;match_ratio&#39; | [optional] [default to 'unknown']
+**employee_id** | **int** | Employee ID the target is for. | [optional] 
+**year** | **int** | Year the target is for. | [optional] 
+**month** | **int** | Month the target is for. | [optional] 
+**day** | **int** | Day the target is for. | [optional] 
+**value** | **float** | Value of the target. | [optional] 
+**industry_id** | **int** | Industry the KPI belongs to. | [optional] 
+**geo_code** | **string** | Geo code the KPI belongs to. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

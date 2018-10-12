@@ -91,33 +91,17 @@ class KpiTargetResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "identifier"
+     * Test attribute "kpi_identifier"
      */
-    public function testPropertyIdentifier()
+    public function testPropertyKpiIdentifier()
     {
 
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "employee_id"
      */
-    public function testPropertyCreatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "geo_code"
-     */
-    public function testPropertyGeoCode()
+    public function testPropertyEmployeeId()
     {
 
     }
@@ -147,9 +131,9 @@ class KpiTargetResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "value"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyValue()
     {
 
     }
@@ -163,9 +147,9 @@ class KpiTargetResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "geo_code"
      */
-    public function testPropertyValue()
+    public function testPropertyGeoCode()
     {
 
     }

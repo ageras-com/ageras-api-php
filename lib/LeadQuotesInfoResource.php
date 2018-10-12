@@ -61,7 +61,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'open_for_reservations' => 'bool',
         'accepted_quote' => '\Ageras\Api\LeadQuoteInfoEntryResource',
         'quotes' => '\Ageras\Api\LeadQuoteInfoEntryResource[]',
-        'client_decision_postponed_to' => 'string'
+        'client_decision_postponed_to' => 'string',
+        'client_decision_postponed_reason' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +82,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'open_for_reservations' => 'open_for_reservations',
         'accepted_quote' => 'accepted_quote',
         'quotes' => 'quotes',
-        'client_decision_postponed_to' => 'client_decision_postponed_to'
+        'client_decision_postponed_to' => 'client_decision_postponed_to',
+        'client_decision_postponed_reason' => 'client_decision_postponed_reason'
     ];
 
 
@@ -97,7 +99,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'open_for_reservations' => 'setOpenForReservations',
         'accepted_quote' => 'setAcceptedQuote',
         'quotes' => 'setQuotes',
-        'client_decision_postponed_to' => 'setClientDecisionPostponedTo'
+        'client_decision_postponed_to' => 'setClientDecisionPostponedTo',
+        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason'
     ];
 
 
@@ -113,7 +116,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         'open_for_reservations' => 'getOpenForReservations',
         'accepted_quote' => 'getAcceptedQuote',
         'quotes' => 'getQuotes',
-        'client_decision_postponed_to' => 'getClientDecisionPostponedTo'
+        'client_decision_postponed_to' => 'getClientDecisionPostponedTo',
+        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason'
     ];
 
     public static function attributeMap()
@@ -155,6 +159,7 @@ class LeadQuotesInfoResource implements ArrayAccess
         $this->container['accepted_quote'] = isset($data['accepted_quote']) ? $data['accepted_quote'] : null;
         $this->container['quotes'] = isset($data['quotes']) ? $data['quotes'] : null;
         $this->container['client_decision_postponed_to'] = isset($data['client_decision_postponed_to']) ? $data['client_decision_postponed_to'] : null;
+        $this->container['client_decision_postponed_reason'] = isset($data['client_decision_postponed_reason']) ? $data['client_decision_postponed_reason'] : null;
     }
 
     /**
@@ -346,6 +351,27 @@ class LeadQuotesInfoResource implements ArrayAccess
     public function setClientDecisionPostponedTo($client_decision_postponed_to)
     {
         $this->container['client_decision_postponed_to'] = $client_decision_postponed_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_decision_postponed_reason
+     * @return string
+     */
+    public function getClientDecisionPostponedReason()
+    {
+        return $this->container['client_decision_postponed_reason'];
+    }
+
+    /**
+     * Sets client_decision_postponed_reason
+     * @param string $client_decision_postponed_reason Reason the client postponed the decision.
+     * @return $this
+     */
+    public function setClientDecisionPostponedReason($client_decision_postponed_reason)
+    {
+        $this->container['client_decision_postponed_reason'] = $client_decision_postponed_reason;
 
         return $this;
     }

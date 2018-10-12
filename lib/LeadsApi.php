@@ -216,6 +216,7 @@ class LeadsApi
      *    'lead_category' => string,
      *    'validator_id' => string,
      *    'is_given_up' => bool,
+     *    'industry_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -264,6 +265,7 @@ class LeadsApi
      *    'lead_category' => string,
      *    'validator_id' => string,
      *    'is_given_up' => bool,
+     *    'industry_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -400,6 +402,10 @@ class LeadsApi
         // query params
         if (isset($criteria['is_given_up'])) {
             $queryParams['is_given_up'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_given_up']);
+        }
+        // query params
+        if (isset($criteria['industry_id'])) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1552,6 +1558,7 @@ class LeadsApi
      *    'lead_category' => string,
      *    'validator_id' => string,
      *    'is_given_up' => bool,
+     *    'industry_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1600,6 +1607,7 @@ class LeadsApi
      *    'lead_category' => string,
      *    'validator_id' => string,
      *    'is_given_up' => bool,
+     *    'industry_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1736,6 +1744,10 @@ class LeadsApi
         // query params
         if (isset($criteria['is_given_up'])) {
             $queryParams['is_given_up'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_given_up']);
+        }
+        // query params
+        if (isset($criteria['industry_id'])) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry_id']);
         }
         // query params
         if (isset($criteria['limit'])) {

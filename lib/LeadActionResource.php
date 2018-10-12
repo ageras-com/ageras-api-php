@@ -61,7 +61,8 @@ class LeadActionResource implements ArrayAccess
         'reason' => 'string',
         'reason_completed' => 'string',
         'discard_status' => 'string',
-        'discard_status_note' => 'string'
+        'discard_status_note' => 'string',
+        'client_decision_postponed_reason' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +82,8 @@ class LeadActionResource implements ArrayAccess
         'reason' => 'reason',
         'reason_completed' => 'reason_completed',
         'discard_status' => 'discard_status',
-        'discard_status_note' => 'discard_status_note'
+        'discard_status_note' => 'discard_status_note',
+        'client_decision_postponed_reason' => 'client_decision_postponed_reason'
     ];
 
 
@@ -97,7 +99,8 @@ class LeadActionResource implements ArrayAccess
         'reason' => 'setReason',
         'reason_completed' => 'setReasonCompleted',
         'discard_status' => 'setDiscardStatus',
-        'discard_status_note' => 'setDiscardStatusNote'
+        'discard_status_note' => 'setDiscardStatusNote',
+        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason'
     ];
 
 
@@ -113,7 +116,8 @@ class LeadActionResource implements ArrayAccess
         'reason' => 'getReason',
         'reason_completed' => 'getReasonCompleted',
         'discard_status' => 'getDiscardStatus',
-        'discard_status_note' => 'getDiscardStatusNote'
+        'discard_status_note' => 'getDiscardStatusNote',
+        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason'
     ];
 
     public static function attributeMap()
@@ -271,6 +275,7 @@ class LeadActionResource implements ArrayAccess
         $this->container['reason_completed'] = isset($data['reason_completed']) ? $data['reason_completed'] : 'unknown';
         $this->container['discard_status'] = isset($data['discard_status']) ? $data['discard_status'] : 'unknown';
         $this->container['discard_status_note'] = isset($data['discard_status_note']) ? $data['discard_status_note'] : null;
+        $this->container['client_decision_postponed_reason'] = isset($data['client_decision_postponed_reason']) ? $data['client_decision_postponed_reason'] : null;
     }
 
     /**
@@ -514,6 +519,27 @@ class LeadActionResource implements ArrayAccess
     public function setDiscardStatusNote($discard_status_note)
     {
         $this->container['discard_status_note'] = $discard_status_note;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_decision_postponed_reason
+     * @return string
+     */
+    public function getClientDecisionPostponedReason()
+    {
+        return $this->container['client_decision_postponed_reason'];
+    }
+
+    /**
+     * Sets client_decision_postponed_reason
+     * @param string $client_decision_postponed_reason Reason for the postponement.
+     * @return $this
+     */
+    public function setClientDecisionPostponedReason($client_decision_postponed_reason)
+    {
+        $this->container['client_decision_postponed_reason'] = $client_decision_postponed_reason;
 
         return $this;
     }

@@ -145,6 +145,7 @@ $criteria = [
         'lead_category' => "basic"; // string | Lead's category
         'validator_id' => "validator_id_example"; // string | Lead's validator
         'is_given_up' => false; // bool | Is the lead given up on?
+        'industry_id' => "industry_id_example"; // string | Filter the leads by their industry ids
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -192,6 +193,7 @@ Name | Type | Description  | Notes
  **lead_category** | **string**| Lead&#39;s category | [optional] [default to basic]
  **validator_id** | **string**| Lead&#39;s validator | [optional]
  **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
+ **industry_id** | **string**| Filter the leads by their industry ids | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -858,6 +860,7 @@ $criteria = [
         'lead_category' => "basic"; // string | Lead's category
         'validator_id' => "validator_id_example"; // string | Lead's validator
         'is_given_up' => false; // bool | Is the lead given up on?
+        'industry_id' => "industry_id_example"; // string | Filter the leads by their industry ids
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -905,6 +908,7 @@ Name | Type | Description  | Notes
  **lead_category** | **string**| Lead&#39;s category | [optional] [default to basic]
  **validator_id** | **string**| Lead&#39;s validator | [optional]
  **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
+ **industry_id** | **string**| Filter the leads by their industry ids | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

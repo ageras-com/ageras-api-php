@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **reason_completed** | **string** | @var The reason to complete lead | [optional] [default to 'unknown']
 **discard_status** | **string** | Mark a lead with a status. | [optional] [default to 'unknown']
 **discard_status_note** | **string** | Reason the status was set to what it is. | [optional] 
+**client_decision_postponed_reason** | **string** | Reason for the postponement. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

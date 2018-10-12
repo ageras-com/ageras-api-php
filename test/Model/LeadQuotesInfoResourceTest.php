@@ -146,4 +146,12 @@ class LeadQuotesInfoResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "client_decision_postponed_reason"
+     */
+    public function testPropertyClientDecisionPostponedReason()
+    {
+
+    }
+
 }

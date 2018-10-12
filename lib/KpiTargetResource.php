@@ -54,17 +54,15 @@ class KpiTargetResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'identifier' => 'string',
-        'created_at' => 'string',
-        'updated_at' => 'string',
-        'geo_code' => 'string',
+        'id' => 'int',
+        'kpi_identifier' => 'string',
+        'employee_id' => 'int',
         'year' => 'int',
         'month' => 'int',
         'day' => 'int',
-        'employee_id' => 'int',
+        'value' => 'float',
         'industry_id' => 'int',
-        'value' => 'float'
+        'geo_code' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -78,16 +76,14 @@ class KpiTargetResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'identifier' => 'identifier',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
-        'geo_code' => 'geo_code',
+        'kpi_identifier' => 'kpi_identifier',
+        'employee_id' => 'employee_id',
         'year' => 'year',
         'month' => 'month',
         'day' => 'day',
-        'employee_id' => 'employee_id',
+        'value' => 'value',
         'industry_id' => 'industry_id',
-        'value' => 'value'
+        'geo_code' => 'geo_code'
     ];
 
 
@@ -97,16 +93,14 @@ class KpiTargetResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'identifier' => 'setIdentifier',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
-        'geo_code' => 'setGeoCode',
+        'kpi_identifier' => 'setKpiIdentifier',
+        'employee_id' => 'setEmployeeId',
         'year' => 'setYear',
         'month' => 'setMonth',
         'day' => 'setDay',
-        'employee_id' => 'setEmployeeId',
+        'value' => 'setValue',
         'industry_id' => 'setIndustryId',
-        'value' => 'setValue'
+        'geo_code' => 'setGeoCode'
     ];
 
 
@@ -116,16 +110,14 @@ class KpiTargetResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'identifier' => 'getIdentifier',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
-        'geo_code' => 'getGeoCode',
+        'kpi_identifier' => 'getKpiIdentifier',
+        'employee_id' => 'getEmployeeId',
         'year' => 'getYear',
         'month' => 'getMonth',
         'day' => 'getDay',
-        'employee_id' => 'getEmployeeId',
+        'value' => 'getValue',
         'industry_id' => 'getIndustryId',
-        'value' => 'getValue'
+        'geo_code' => 'getGeoCode'
     ];
 
     public static function attributeMap()
@@ -143,8 +135,46 @@ class KpiTargetResource implements ArrayAccess
         return self::$getters;
     }
 
+    const KPI_IDENTIFIER_UNKNOWN = 'unknown';
+    const KPI_IDENTIFIER_VALIDATION_EFFICIENCY = 'validation_efficiency';
+    const KPI_IDENTIFIER_MATCH_RATIO = 'match_ratio';
+    const KPI_IDENTIFIER_COMPLETION_RATIO = 'completion_ratio';
+    const KPI_IDENTIFIER_COMPLETIONS = 'completions';
+    const KPI_IDENTIFIER_COMPLETIONS_FORECAST = 'completions_forecast';
+    const KPI_IDENTIFIER_EXCLUSIVE_FEE = 'exclusive_fee';
+    const KPI_IDENTIFIER_EXCLUSIVE_FEE_FORECAST = 'exclusive_fee_forecast';
+    const KPI_IDENTIFIER_EXCLUSIVE_LEADS = 'exclusive_leads';
+    const KPI_IDENTIFIER_EXCLUSIVE_MATCH_RATIO = 'exclusive_match_ratio';
+    const KPI_IDENTIFIER_MATCHES = 'matches';
+    const KPI_IDENTIFIER_MATCHES_FORECAST = 'matches_forecast';
+    const KPI_IDENTIFIER_VALIDATIONS = 'validations';
+    const KPI_IDENTIFIER_VALIDATIONS_FORECAST = 'validations_forecast';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getKpiIdentifierAllowableValues()
+    {
+        return [
+            self::KPI_IDENTIFIER_UNKNOWN,
+            self::KPI_IDENTIFIER_VALIDATION_EFFICIENCY,
+            self::KPI_IDENTIFIER_MATCH_RATIO,
+            self::KPI_IDENTIFIER_COMPLETION_RATIO,
+            self::KPI_IDENTIFIER_COMPLETIONS,
+            self::KPI_IDENTIFIER_COMPLETIONS_FORECAST,
+            self::KPI_IDENTIFIER_EXCLUSIVE_FEE,
+            self::KPI_IDENTIFIER_EXCLUSIVE_FEE_FORECAST,
+            self::KPI_IDENTIFIER_EXCLUSIVE_LEADS,
+            self::KPI_IDENTIFIER_EXCLUSIVE_MATCH_RATIO,
+            self::KPI_IDENTIFIER_MATCHES,
+            self::KPI_IDENTIFIER_MATCHES_FORECAST,
+            self::KPI_IDENTIFIER_VALIDATIONS,
+            self::KPI_IDENTIFIER_VALIDATIONS_FORECAST,
+        ];
+    }
     
 
     /**
@@ -160,16 +190,14 @@ class KpiTargetResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['kpi_identifier'] = isset($data['kpi_identifier']) ? $data['kpi_identifier'] : 'unknown';
+        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
         $this->container['year'] = isset($data['year']) ? $data['year'] : null;
         $this->container['month'] = isset($data['month']) ? $data['month'] : null;
         $this->container['day'] = isset($data['day']) ? $data['day'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['industry_id'] = isset($data['industry_id']) ? $data['industry_id'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['industry_id'] = isset($data['industry_id']) ? $data['industry_id'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
     }
 
     /**
@@ -180,6 +208,11 @@ class KpiTargetResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast"];
+        if (!in_array($this->container['kpi_identifier'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast'.";
+        }
 
         return $invalid_properties;
     }
@@ -193,13 +226,17 @@ class KpiTargetResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast"];
+        if (!in_array($this->container['kpi_identifier'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
      * Gets id
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -208,7 +245,7 @@ class KpiTargetResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id Id for the given kpi target
+     * @param int $id ID of the target.
      * @return $this
      */
     public function setId($id)
@@ -219,85 +256,47 @@ class KpiTargetResource implements ArrayAccess
     }
 
     /**
-     * Gets identifier
+     * Gets kpi_identifier
      * @return string
      */
-    public function getIdentifier()
+    public function getKpiIdentifier()
     {
-        return $this->container['identifier'];
+        return $this->container['kpi_identifier'];
     }
 
     /**
-     * Sets identifier
-     * @param string $identifier Identifier for the given kpi target
+     * Sets kpi_identifier
+     * @param string $kpi_identifier Identifyier of the target, e.g. 'match_ratio'
      * @return $this
      */
-    public function setIdentifier($identifier)
+    public function setKpiIdentifier($kpi_identifier)
     {
-        $this->container['identifier'] = $identifier;
+        $allowed_values = array('unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast');
+        if (!is_null($kpi_identifier) && (!in_array($kpi_identifier, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast'");
+        }
+        $this->container['kpi_identifier'] = $kpi_identifier;
 
         return $this;
     }
 
     /**
-     * Gets created_at
-     * @return string
+     * Gets employee_id
+     * @return int
      */
-    public function getCreatedAt()
+    public function getEmployeeId()
     {
-        return $this->container['created_at'];
+        return $this->container['employee_id'];
     }
 
     /**
-     * Sets created_at
-     * @param string $created_at When the kpi was created
+     * Sets employee_id
+     * @param int $employee_id Employee ID the target is for.
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setEmployeeId($employee_id)
     {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return string
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param string $updated_at When the kpi was updated
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets geo_code
-     * @return string
-     */
-    public function getGeoCode()
-    {
-        return $this->container['geo_code'];
-    }
-
-    /**
-     * Sets geo_code
-     * @param string $geo_code Geo Location Geo
-     * @return $this
-     */
-    public function setGeoCode($geo_code)
-    {
-        $this->container['geo_code'] = $geo_code;
+        $this->container['employee_id'] = $employee_id;
 
         return $this;
     }
@@ -313,7 +312,7 @@ class KpiTargetResource implements ArrayAccess
 
     /**
      * Sets year
-     * @param int $year Given year for the kpi's
+     * @param int $year Year the target is for.
      * @return $this
      */
     public function setYear($year)
@@ -334,7 +333,7 @@ class KpiTargetResource implements ArrayAccess
 
     /**
      * Sets month
-     * @param int $month Given month for the kpi's
+     * @param int $month Month the target is for.
      * @return $this
      */
     public function setMonth($month)
@@ -355,54 +354,12 @@ class KpiTargetResource implements ArrayAccess
 
     /**
      * Sets day
-     * @param int $day Given day for the kpi's
+     * @param int $day Day the target is for.
      * @return $this
      */
     public function setDay($day)
     {
         $this->container['day'] = $day;
-
-        return $this;
-    }
-
-    /**
-     * Gets employee_id
-     * @return int
-     */
-    public function getEmployeeId()
-    {
-        return $this->container['employee_id'];
-    }
-
-    /**
-     * Sets employee_id
-     * @param int $employee_id employee involved in the kpi
-     * @return $this
-     */
-    public function setEmployeeId($employee_id)
-    {
-        $this->container['employee_id'] = $employee_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets industry_id
-     * @return int
-     */
-    public function getIndustryId()
-    {
-        return $this->container['industry_id'];
-    }
-
-    /**
-     * Sets industry_id
-     * @param int $industry_id industry involved in the kpi
-     * @return $this
-     */
-    public function setIndustryId($industry_id)
-    {
-        $this->container['industry_id'] = $industry_id;
 
         return $this;
     }
@@ -418,12 +375,54 @@ class KpiTargetResource implements ArrayAccess
 
     /**
      * Sets value
-     * @param float $value kpi's value
+     * @param float $value Value of the target.
      * @return $this
      */
     public function setValue($value)
     {
         $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets industry_id
+     * @return int
+     */
+    public function getIndustryId()
+    {
+        return $this->container['industry_id'];
+    }
+
+    /**
+     * Sets industry_id
+     * @param int $industry_id Industry the KPI belongs to.
+     * @return $this
+     */
+    public function setIndustryId($industry_id)
+    {
+        $this->container['industry_id'] = $industry_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo_code
+     * @return string
+     */
+    public function getGeoCode()
+    {
+        return $this->container['geo_code'];
+    }
+
+    /**
+     * Sets geo_code
+     * @param string $geo_code Geo code the KPI belongs to.
+     * @return $this
+     */
+    public function setGeoCode($geo_code)
+    {
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }

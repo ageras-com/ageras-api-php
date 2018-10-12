@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**kpiIndex**](KpiApi.md#kpiIndex) | **GET** /kpi | List the different KPI&#39;s
 [**kpiTargetsCreate**](KpiApi.md#kpiTargetsCreate) | **POST** /kpi/targets | Create kpi target
-[**kpiValuesIndex**](KpiApi.md#kpiValuesIndex) | **GET** /kpi/values | Get employee performance KPIs.
+[**kpiTargetsIndex**](KpiApi.md#kpiTargetsIndex) | **GET** /kpi/targets | Get KPI target values.
+[**kpiValuesIndex**](KpiApi.md#kpiValuesIndex) | **GET** /kpi/values | Get KPI values.
 
 
 # **kpiIndex**
@@ -129,10 +130,73 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **kpiTargetsIndex**
+> \Ageras\Api\KpiTargetResult kpiTargetsIndex($criteria)
+
+Get KPI target values.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\KpiApi();
+$criteria = [
+        'kpi_identifier' => "kpi_identifier_example"; // string | Identifier for KPI.
+        'employee_id' => "employee_id_example"; // string | Employee ID to get KPI values for.
+        'temporal_scope' => "temporal_scope_example"; // string | Which scopes of time to retrieve KPI values for.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->kpiTargetsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling KpiApi->kpiTargetsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kpi_identifier** | **string**| Identifier for KPI. | [optional]
+ **employee_id** | **string**| Employee ID to get KPI values for. | [optional]
+ **temporal_scope** | **string**| Which scopes of time to retrieve KPI values for. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\KpiTargetResult**](../Model/KpiTargetResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **kpiValuesIndex**
 > \Ageras\Api\KpiValueResult kpiValuesIndex($criteria)
 
-Get employee performance KPIs.
+Get KPI values.
 
 ### Example
 ```php
