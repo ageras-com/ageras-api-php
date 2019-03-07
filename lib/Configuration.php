@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://api-test.ageras.com/v2';
+    protected $host = 'https://api.ageras.com/v2';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout
