@@ -796,4 +796,202 @@ class OrganisationApi
             throw $e;
         }
     }
+
+    /**
+     * Operation organisationEmployeesLeadpredictionsCreate
+     *
+     * Create an employee lead prediction.
+     *
+     * @param string $employee_id 
+     * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\EmployeeLeadPredictionResource
+     */
+    public function organisationEmployeesLeadpredictionsCreate($employee_id , $employee_lead_prediction_resource)
+    {
+        list($response) = $this->organisationEmployeesLeadpredictionsCreateWithHttpInfo($employee_id, $employee_lead_prediction_resource);
+        return $response;
+    }
+
+    /**
+     * Operation organisationEmployeesLeadpredictionsCreateWithHttpInfo
+     *
+     * Create an employee lead prediction.
+     *
+     * @param string $employee_id 
+     * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\EmployeeLeadPredictionResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function organisationEmployeesLeadpredictionsCreateWithHttpInfo($employee_id , $employee_lead_prediction_resource)
+    {
+        // parse inputs
+        $resourcePath = "/organisation/employees/{employee_id}/leadpredictions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($employee_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "employee_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($employee_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($employee_lead_prediction_resource)) {
+            $_tempBody = $employee_lead_prediction_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\EmployeeLeadPredictionResource',
+                '/organisation/employees/{employee_id}/leadpredictions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\EmployeeLeadPredictionResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\EmployeeLeadPredictionResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation organisationEmployeesLeadpredictionsCreate2
+     *
+     * Create an employee lead prediction.
+     *
+     * @param string $organisation_id 
+     * @param string $employee_id 
+     * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\EmployeeLeadPredictionResource
+     */
+    public function organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+    {
+        list($response) = $this->organisationEmployeesLeadpredictionsCreate2WithHttpInfo($organisation_id, $employee_id, $employee_lead_prediction_resource);
+        return $response;
+    }
+
+    /**
+     * Operation organisationEmployeesLeadpredictionsCreate2WithHttpInfo
+     *
+     * Create an employee lead prediction.
+     *
+     * @param string $organisation_id 
+     * @param string $employee_id 
+     * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\EmployeeLeadPredictionResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function organisationEmployeesLeadpredictionsCreate2WithHttpInfo($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+    {
+        // parse inputs
+        $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}/leadpredictions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($organisation_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "organisation_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($organisation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($employee_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "employee_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($employee_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($employee_lead_prediction_resource)) {
+            $_tempBody = $employee_lead_prediction_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\EmployeeLeadPredictionResource',
+                '/organisation/{organisation_id}/employees/{employee_id}/leadpredictions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\EmployeeLeadPredictionResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\EmployeeLeadPredictionResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

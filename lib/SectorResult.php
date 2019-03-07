@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchExplanationResource
+ * SectorResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchExplanationResource Class Doc Comment
+ * SectorResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchExplanationResource implements ArrayAccess
+class SectorResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,22 +47,19 @@ class MatchExplanationResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchExplanationResource';
+    protected static $swaggerModelName = 'SectorResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'code' => 'string',
-        'name' => 'string',
-        'feature_name' => 'string',
-        'result' => 'float',
-        'weight' => 'float',
-        'score' => 'float',
-        'attributes' => 'string',
-        'details' => '\Ageras\Api\MatchExplanationResource[]'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\SectorResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -75,15 +72,12 @@ class MatchExplanationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'name' => 'name',
-        'feature_name' => 'feature_name',
-        'result' => 'result',
-        'weight' => 'weight',
-        'score' => 'score',
-        'attributes' => 'attributes',
-        'details' => 'details'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -92,15 +86,12 @@ class MatchExplanationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'name' => 'setName',
-        'feature_name' => 'setFeatureName',
-        'result' => 'setResult',
-        'weight' => 'setWeight',
-        'score' => 'setScore',
-        'attributes' => 'setAttributes',
-        'details' => 'setDetails'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -109,15 +100,12 @@ class MatchExplanationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'name' => 'getName',
-        'feature_name' => 'getFeatureName',
-        'result' => 'getResult',
-        'weight' => 'getWeight',
-        'score' => 'getScore',
-        'attributes' => 'getAttributes',
-        'details' => 'getDetails'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -151,15 +139,12 @@ class MatchExplanationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['feature_name'] = isset($data['feature_name']) ? $data['feature_name'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -188,190 +173,127 @@ class MatchExplanationResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets page
      * @return int
      */
-    public function getId()
+    public function getPage()
     {
-        return $this->container['id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setId($id)
+    public function setPage($page)
     {
-        $this->container['id'] = $id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets limit
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param int $limit Number of results per page.
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\SectorResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\SectorResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
      * @return string
      */
-    public function getCode()
+    public function getDidYouMean()
     {
-        return $this->container['code'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets code
-     * @param string $code
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setCode($code)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets feature_name
-     * @return string
-     */
-    public function getFeatureName()
-    {
-        return $this->container['feature_name'];
-    }
-
-    /**
-     * Sets feature_name
-     * @param string $feature_name
-     * @return $this
-     */
-    public function setFeatureName($feature_name)
-    {
-        $this->container['feature_name'] = $feature_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets result
-     * @return float
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     * @param float $result
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
-
-    /**
-     * Gets weight
-     * @return float
-     */
-    public function getWeight()
-    {
-        return $this->container['weight'];
-    }
-
-    /**
-     * Sets weight
-     * @param float $weight
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        $this->container['weight'] = $weight;
-
-        return $this;
-    }
-
-    /**
-     * Gets score
-     * @return float
-     */
-    public function getScore()
-    {
-        return $this->container['score'];
-    }
-
-    /**
-     * Sets score
-     * @param float $score
-     * @return $this
-     */
-    public function setScore($score)
-    {
-        $this->container['score'] = $score;
-
-        return $this;
-    }
-
-    /**
-     * Gets attributes
-     * @return string
-     */
-    public function getAttributes()
-    {
-        return $this->container['attributes'];
-    }
-
-    /**
-     * Sets attributes
-     * @param string $attributes
-     * @return $this
-     */
-    public function setAttributes($attributes)
-    {
-        $this->container['attributes'] = $attributes;
-
-        return $this;
-    }
-
-    /**
-     * Gets details
-     * @return \Ageras\Api\MatchExplanationResource[]
-     */
-    public function getDetails()
-    {
-        return $this->container['details'];
-    }
-
-    /**
-     * Sets details
-     * @param \Ageras\Api\MatchExplanationResource[] $details
-     * @return $this
-     */
-    public function setDetails($details)
-    {
-        $this->container['details'] = $details;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

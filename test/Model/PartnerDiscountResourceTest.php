@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchExplanationResourceTest
+ * PartnerDiscountResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MatchExplanationResourceTest Class Doc Comment
+ * PartnerDiscountResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description MatchExplanationResource
+// * @description PartnerDiscountResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchExplanationResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerDiscountResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class MatchExplanationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MatchExplanationResource"
+     * Test "PartnerDiscountResource"
      */
-    public function testMatchExplanationResource()
+    public function testPartnerDiscountResource()
     {
 
     }
@@ -91,65 +91,65 @@ class MatchExplanationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "partner_id"
      */
-    public function testPropertyCode()
+    public function testPropertyPartnerId()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "employee_id"
      */
-    public function testPropertyName()
+    public function testPropertyEmployeeId()
     {
 
     }
 
     /**
-     * Test attribute "feature_name"
+     * Test attribute "partner_package_type_id"
      */
-    public function testPropertyFeatureName()
+    public function testPropertyPartnerPackageTypeId()
     {
 
     }
 
     /**
-     * Test attribute "result"
+     * Test attribute "discount"
      */
-    public function testPropertyResult()
+    public function testPropertyDiscount()
     {
 
     }
 
     /**
-     * Test attribute "weight"
+     * Test attribute "starts_at"
      */
-    public function testPropertyWeight()
+    public function testPropertyStartsAt()
     {
 
     }
 
     /**
-     * Test attribute "score"
+     * Test attribute "ends_at"
      */
-    public function testPropertyScore()
+    public function testPropertyEndsAt()
     {
 
     }
 
     /**
-     * Test attribute "attributes"
+     * Test attribute "created_at"
      */
-    public function testPropertyAttributes()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "details"
+     * Test attribute "updated_at"
      */
-    public function testPropertyDetails()
+    public function testPropertyUpdatedAt()
     {
 
     }

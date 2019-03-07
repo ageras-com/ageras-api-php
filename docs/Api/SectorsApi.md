@@ -1,16 +1,16 @@
-# Ageras\Api\MlApi
+# Ageras\Api\SectorsApi
 
 All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mlMatchingIndex**](MlApi.md#mlMatchingIndex) | **GET** /ml/matching | Match making
+[**sectorsIndex**](SectorsApi.md#sectorsIndex) | **GET** /sectors | List sectors.
 
 
-# **mlMatchingIndex**
-> \Ageras\Api\MatchResult mlMatchingIndex($criteria)
+# **sectorsIndex**
+> \Ageras\Api\SectorResult sectorsIndex($criteria)
 
-Match making
+List sectors.
 
 ### Example
 ```php
@@ -25,20 +25,19 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_AP
 Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Ageras\Api\Api\MlApi();
+$api_instance = new Ageras\Api\Api\SectorsApi();
 $criteria = [
-        'partner_id' => "partner_id_example"; // string | Partner ID. @var int
-        'lead_id' => "lead_id_example"; // string | Lead ID. @var int
+        'geo_code' => "geo_code_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
     ];
 
 try {
-    $result = $api_instance->mlMatchingIndex($criteria);
+    $result = $api_instance->sectorsIndex($criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MlApi->mlMatchingIndex: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SectorsApi->sectorsIndex: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -47,15 +46,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_id** | **string**| Partner ID. @var int | [optional]
- **lead_id** | **string**| Lead ID. @var int | [optional]
+ **geo_code** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 
 ### Return type
 
-[**\Ageras\Api\MatchResult**](../Model/MatchResult.md)
+[**\Ageras\Api\SectorResult**](../Model/SectorResult.md)
 
 ### Authorization
 

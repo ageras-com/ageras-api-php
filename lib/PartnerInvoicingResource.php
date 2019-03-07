@@ -60,7 +60,8 @@ class PartnerInvoicingResource implements ArrayAccess
         'zip_code' => 'string',
         'city_name' => 'string',
         'email' => 'string',
-        'attention' => 'string'
+        'attention' => 'string',
+        'days_grace' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class PartnerInvoicingResource implements ArrayAccess
         'zip_code' => 'zip_code',
         'city_name' => 'city_name',
         'email' => 'email',
-        'attention' => 'attention'
+        'attention' => 'attention',
+        'days_grace' => 'days_grace'
     ];
 
 
@@ -94,7 +96,8 @@ class PartnerInvoicingResource implements ArrayAccess
         'zip_code' => 'setZipCode',
         'city_name' => 'setCityName',
         'email' => 'setEmail',
-        'attention' => 'setAttention'
+        'attention' => 'setAttention',
+        'days_grace' => 'setDaysGrace'
     ];
 
 
@@ -109,7 +112,8 @@ class PartnerInvoicingResource implements ArrayAccess
         'zip_code' => 'getZipCode',
         'city_name' => 'getCityName',
         'email' => 'getEmail',
-        'attention' => 'getAttention'
+        'attention' => 'getAttention',
+        'days_grace' => 'getDaysGrace'
     ];
 
     public static function attributeMap()
@@ -150,6 +154,7 @@ class PartnerInvoicingResource implements ArrayAccess
         $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['attention'] = isset($data['attention']) ? $data['attention'] : null;
+        $this->container['days_grace'] = isset($data['days_grace']) ? $data['days_grace'] : null;
     }
 
     /**
@@ -320,6 +325,27 @@ class PartnerInvoicingResource implements ArrayAccess
     public function setAttention($attention)
     {
         $this->container['attention'] = $attention;
+
+        return $this;
+    }
+
+    /**
+     * Gets days_grace
+     * @return int
+     */
+    public function getDaysGrace()
+    {
+        return $this->container['days_grace'];
+    }
+
+    /**
+     * Sets days_grace
+     * @param int $days_grace Number of days bewteen invoice issue date and due date.
+     * @return $this
+     */
+    public function setDaysGrace($days_grace)
+    {
+        $this->container['days_grace'] = $days_grace;
 
         return $this;
     }

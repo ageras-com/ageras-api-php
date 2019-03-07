@@ -149,6 +149,9 @@ class KpiTargetResource implements ArrayAccess
     const KPI_IDENTIFIER_MATCHES_FORECAST = 'matches_forecast';
     const KPI_IDENTIFIER_VALIDATIONS = 'validations';
     const KPI_IDENTIFIER_VALIDATIONS_FORECAST = 'validations_forecast';
+    const KPI_IDENTIFIER_AVERAGE_FEE = 'average_fee';
+    const KPI_IDENTIFIER_TOTAL_FEE = 'total_fee';
+    const KPI_IDENTIFIER_TOTAL_FEE_FORECAST = 'total_fee_forecast';
     
 
     
@@ -173,6 +176,9 @@ class KpiTargetResource implements ArrayAccess
             self::KPI_IDENTIFIER_MATCHES_FORECAST,
             self::KPI_IDENTIFIER_VALIDATIONS,
             self::KPI_IDENTIFIER_VALIDATIONS_FORECAST,
+            self::KPI_IDENTIFIER_AVERAGE_FEE,
+            self::KPI_IDENTIFIER_TOTAL_FEE,
+            self::KPI_IDENTIFIER_TOTAL_FEE_FORECAST,
         ];
     }
     
@@ -209,9 +215,9 @@ class KpiTargetResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast"];
+        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast", "average_fee", "total_fee", "total_fee_forecast"];
         if (!in_array($this->container['kpi_identifier'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast'.";
+            $invalid_properties[] = "invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast', 'average_fee', 'total_fee', 'total_fee_forecast'.";
         }
 
         return $invalid_properties;
@@ -226,7 +232,7 @@ class KpiTargetResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast"];
+        $allowed_values = ["unknown", "validation_efficiency", "match_ratio", "completion_ratio", "completions", "completions_forecast", "exclusive_fee", "exclusive_fee_forecast", "exclusive_leads", "exclusive_match_ratio", "matches", "matches_forecast", "validations", "validations_forecast", "average_fee", "total_fee", "total_fee_forecast"];
         if (!in_array($this->container['kpi_identifier'], $allowed_values)) {
             return false;
         }
@@ -271,9 +277,9 @@ class KpiTargetResource implements ArrayAccess
      */
     public function setKpiIdentifier($kpi_identifier)
     {
-        $allowed_values = array('unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast');
+        $allowed_values = array('unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast', 'average_fee', 'total_fee', 'total_fee_forecast');
         if (!is_null($kpi_identifier) && (!in_array($kpi_identifier, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast'");
+            throw new \InvalidArgumentException("Invalid value for 'kpi_identifier', must be one of 'unknown', 'validation_efficiency', 'match_ratio', 'completion_ratio', 'completions', 'completions_forecast', 'exclusive_fee', 'exclusive_fee_forecast', 'exclusive_leads', 'exclusive_match_ratio', 'matches', 'matches_forecast', 'validations', 'validations_forecast', 'average_fee', 'total_fee', 'total_fee_forecast'");
         }
         $this->container['kpi_identifier'] = $kpi_identifier;
 

@@ -54,9 +54,8 @@ class LanguageResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'iso_code' => 'string',
         'name' => 'string',
-        'language_iso_code' => 'string'
+        'identifier' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +68,8 @@ class LanguageResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'iso_code' => 'iso_code',
         'name' => 'name',
-        'language_iso_code' => 'language_iso_code'
+        'identifier' => 'identifier'
     ];
 
 
@@ -80,9 +78,8 @@ class LanguageResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'iso_code' => 'setIsoCode',
         'name' => 'setName',
-        'language_iso_code' => 'setLanguageIsoCode'
+        'identifier' => 'setIdentifier'
     ];
 
 
@@ -91,9 +88,8 @@ class LanguageResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'iso_code' => 'getIsoCode',
         'name' => 'getName',
-        'language_iso_code' => 'getLanguageIsoCode'
+        'identifier' => 'getIdentifier'
     ];
 
     public static function attributeMap()
@@ -127,9 +123,8 @@ class LanguageResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['iso_code'] = isset($data['iso_code']) ? $data['iso_code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['language_iso_code'] = isset($data['language_iso_code']) ? $data['language_iso_code'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
     }
 
     /**
@@ -158,27 +153,6 @@ class LanguageResource implements ArrayAccess
 
 
     /**
-     * Gets iso_code
-     * @return string
-     */
-    public function getIsoCode()
-    {
-        return $this->container['iso_code'];
-    }
-
-    /**
-     * Sets iso_code
-     * @param string $iso_code Language ISO code.
-     * @return $this
-     */
-    public function setIsoCode($iso_code)
-    {
-        $this->container['iso_code'] = $iso_code;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      * @return string
      */
@@ -189,7 +163,7 @@ class LanguageResource implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Language name in given locale.
+     * @param string $name Name of the language, e.g. English.
      * @return $this
      */
     public function setName($name)
@@ -200,22 +174,22 @@ class LanguageResource implements ArrayAccess
     }
 
     /**
-     * Gets language_iso_code
+     * Gets identifier
      * @return string
      */
-    public function getLanguageIsoCode()
+    public function getIdentifier()
     {
-        return $this->container['language_iso_code'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets language_iso_code
-     * @param string $language_iso_code Language locale.
+     * Sets identifier
+     * @param string $identifier Identifying key of the language, typically the two-letter ISO 639-1 code or the region-specific language code from the combination of ISO 639-1 and ISO 3166-1, e.g. 'en-US'.
      * @return $this
      */
-    public function setLanguageIsoCode($language_iso_code)
+    public function setIdentifier($identifier)
     {
-        $this->container['language_iso_code'] = $language_iso_code;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }

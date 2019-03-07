@@ -62,7 +62,9 @@ class LeadQuotesInfoResource implements ArrayAccess
         'accepted_quote' => '\Ageras\Api\LeadQuoteInfoEntryResource',
         'quotes' => '\Ageras\Api\LeadQuoteInfoEntryResource[]',
         'client_decision_postponed_to' => 'string',
-        'client_decision_postponed_reason' => 'string'
+        'client_decision_postponed_reason' => 'string',
+        'employee_lead_prediction' => '\Ageras\Api\EmployeeLeadPredictionResource',
+        'quote_fee' => '\Ageras\Api\LeadQuoteFeeResource'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,9 @@ class LeadQuotesInfoResource implements ArrayAccess
         'accepted_quote' => 'accepted_quote',
         'quotes' => 'quotes',
         'client_decision_postponed_to' => 'client_decision_postponed_to',
-        'client_decision_postponed_reason' => 'client_decision_postponed_reason'
+        'client_decision_postponed_reason' => 'client_decision_postponed_reason',
+        'employee_lead_prediction' => 'employee_lead_prediction',
+        'quote_fee' => 'quote_fee'
     ];
 
 
@@ -100,7 +104,9 @@ class LeadQuotesInfoResource implements ArrayAccess
         'accepted_quote' => 'setAcceptedQuote',
         'quotes' => 'setQuotes',
         'client_decision_postponed_to' => 'setClientDecisionPostponedTo',
-        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason'
+        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason',
+        'employee_lead_prediction' => 'setEmployeeLeadPrediction',
+        'quote_fee' => 'setQuoteFee'
     ];
 
 
@@ -117,7 +123,9 @@ class LeadQuotesInfoResource implements ArrayAccess
         'accepted_quote' => 'getAcceptedQuote',
         'quotes' => 'getQuotes',
         'client_decision_postponed_to' => 'getClientDecisionPostponedTo',
-        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason'
+        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason',
+        'employee_lead_prediction' => 'getEmployeeLeadPrediction',
+        'quote_fee' => 'getQuoteFee'
     ];
 
     public static function attributeMap()
@@ -160,6 +168,8 @@ class LeadQuotesInfoResource implements ArrayAccess
         $this->container['quotes'] = isset($data['quotes']) ? $data['quotes'] : null;
         $this->container['client_decision_postponed_to'] = isset($data['client_decision_postponed_to']) ? $data['client_decision_postponed_to'] : null;
         $this->container['client_decision_postponed_reason'] = isset($data['client_decision_postponed_reason']) ? $data['client_decision_postponed_reason'] : null;
+        $this->container['employee_lead_prediction'] = isset($data['employee_lead_prediction']) ? $data['employee_lead_prediction'] : null;
+        $this->container['quote_fee'] = isset($data['quote_fee']) ? $data['quote_fee'] : null;
     }
 
     /**
@@ -372,6 +382,48 @@ class LeadQuotesInfoResource implements ArrayAccess
     public function setClientDecisionPostponedReason($client_decision_postponed_reason)
     {
         $this->container['client_decision_postponed_reason'] = $client_decision_postponed_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee_lead_prediction
+     * @return \Ageras\Api\EmployeeLeadPredictionResource
+     */
+    public function getEmployeeLeadPrediction()
+    {
+        return $this->container['employee_lead_prediction'];
+    }
+
+    /**
+     * Sets employee_lead_prediction
+     * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction
+     * @return $this
+     */
+    public function setEmployeeLeadPrediction($employee_lead_prediction)
+    {
+        $this->container['employee_lead_prediction'] = $employee_lead_prediction;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote_fee
+     * @return \Ageras\Api\LeadQuoteFeeResource
+     */
+    public function getQuoteFee()
+    {
+        return $this->container['quote_fee'];
+    }
+
+    /**
+     * Sets quote_fee
+     * @param \Ageras\Api\LeadQuoteFeeResource $quote_fee
+     * @return $this
+     */
+    public function setQuoteFee($quote_fee)
+    {
+        $this->container['quote_fee'] = $quote_fee;
 
         return $this;
     }

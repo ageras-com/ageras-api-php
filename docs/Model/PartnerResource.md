@@ -40,6 +40,11 @@ Name | Type | Description | Notes
 **payment_schedule** | **string** | Partner payment schedule | [optional] [default to 'immediate']
 **attributes** | [**\Ageras\Api\PartnerAttributeResource[]**](PartnerAttributeResource.md) | Attributes for the partner. | [optional] 
 **desired_revenue_range** | [**\Ageras\Api\PartnerRevenueRangeResource**](PartnerRevenueRangeResource.md) |  | [optional] 
+**is_pay_to_match** | **bool** | Flag whether partner pays for matches | [optional] [default to false]
+**is_pay_to_quote** | **bool** | Flag whether partner pays for quotes | [optional] [default to false]
+**has_marketing_package** | **bool** | True, if this partner has a marketing package. | [optional] [default to false]
+**geo_range** | **int** | Number of kilometres a partner is willing to travel for leads. | [optional] 
+**badges** | [**\Ageras\Api\PartnerBadgeResource[]**](PartnerBadgeResource.md) | Badges for the partner. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

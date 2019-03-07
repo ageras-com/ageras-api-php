@@ -62,7 +62,8 @@ class LeadActionResource implements ArrayAccess
         'reason_completed' => 'string',
         'discard_status' => 'string',
         'discard_status_note' => 'string',
-        'client_decision_postponed_reason' => 'string'
+        'client_decision_postponed_reason' => 'string',
+        'partner_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class LeadActionResource implements ArrayAccess
         'reason_completed' => 'reason_completed',
         'discard_status' => 'discard_status',
         'discard_status_note' => 'discard_status_note',
-        'client_decision_postponed_reason' => 'client_decision_postponed_reason'
+        'client_decision_postponed_reason' => 'client_decision_postponed_reason',
+        'partner_id' => 'partner_id'
     ];
 
 
@@ -100,7 +102,8 @@ class LeadActionResource implements ArrayAccess
         'reason_completed' => 'setReasonCompleted',
         'discard_status' => 'setDiscardStatus',
         'discard_status_note' => 'setDiscardStatusNote',
-        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason'
+        'client_decision_postponed_reason' => 'setClientDecisionPostponedReason',
+        'partner_id' => 'setPartnerId'
     ];
 
 
@@ -117,7 +120,8 @@ class LeadActionResource implements ArrayAccess
         'reason_completed' => 'getReasonCompleted',
         'discard_status' => 'getDiscardStatus',
         'discard_status_note' => 'getDiscardStatusNote',
-        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason'
+        'client_decision_postponed_reason' => 'getClientDecisionPostponedReason',
+        'partner_id' => 'getPartnerId'
     ];
 
     public static function attributeMap()
@@ -151,6 +155,8 @@ class LeadActionResource implements ArrayAccess
     const ACTION_INVOKE_RIGHT_TO_BE_FORGOTTEN = 'invoke_right_to_be_forgotten';
     const ACTION_GIVEN_UP = 'given_up';
     const ACTION_NOTE = 'note';
+    const ACTION_POSTPONE_VALIDATION = 'postpone_validation';
+    const ACTION_SEND_TO_PARTNER = 'send_to_partner';
     const REASON_UNKNOWN = 'unknown';
     const REASON_DUPLICATE = 'duplicate';
     const REASON_TEST = 'test';
@@ -199,6 +205,8 @@ class LeadActionResource implements ArrayAccess
             self::ACTION_INVOKE_RIGHT_TO_BE_FORGOTTEN,
             self::ACTION_GIVEN_UP,
             self::ACTION_NOTE,
+            self::ACTION_POSTPONE_VALIDATION,
+            self::ACTION_SEND_TO_PARTNER,
         ];
     }
     
@@ -276,6 +284,7 @@ class LeadActionResource implements ArrayAccess
         $this->container['discard_status'] = isset($data['discard_status']) ? $data['discard_status'] : 'unknown';
         $this->container['discard_status_note'] = isset($data['discard_status_note']) ? $data['discard_status_note'] : null;
         $this->container['client_decision_postponed_reason'] = isset($data['client_decision_postponed_reason']) ? $data['client_decision_postponed_reason'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
     }
 
     /**
@@ -287,9 +296,9 @@ class LeadActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner'.";
         }
 
         $allowed_values = ["unknown", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated", "untreated"];
@@ -319,7 +328,7 @@ class LeadActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -355,9 +364,9 @@ class LeadActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note');
+        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner'");
         }
         $this->container['action'] = $action;
 
@@ -540,6 +549,27 @@ class LeadActionResource implements ArrayAccess
     public function setClientDecisionPostponedReason($client_decision_postponed_reason)
     {
         $this->container['client_decision_postponed_reason'] = $client_decision_postponed_reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     * @return int
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     * @param int $partner_id
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }

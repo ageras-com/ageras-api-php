@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **status** | **string** | Quote status | [optional] [default to 'new']
 **progress** | **string** | Description of progress from partner&#39;s perspective. | [optional] [default to 'unknown']
 **created_at** | **string** | Created time | [optional] 
+**updated_at** | **string** | When the quote was updated | [optional] 
 **accepted_at** | **string** | Quote accepted at | [optional] 
 **rejected_at** | **string** | Quote rejected at | [optional] 
 **paid_at** | **string** | Created time | [optional] 
@@ -32,6 +33,7 @@ Name | Type | Description | Notes
 **is_below_minimum_amount** | **bool** | If the total quote amount is below the minimum quote amount specified on the lead | [optional] [default to false]
 **accepted_by_actioner** | [**\Ageras\Api\ActionerResource**](ActionerResource.md) |  | [optional] 
 **lead_products** | [**\Ageras\Api\LeadProductResource[]**](LeadProductResource.md) | List of lead products. | [optional] 
+**quote_fee_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

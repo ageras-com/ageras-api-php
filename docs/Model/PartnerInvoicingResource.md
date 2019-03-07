@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **city_name** | **string** | City Name. | [optional] 
 **email** | **string** | Email to the contact. | [optional] 
 **attention** | **string** | Attention to a given employee in the partner company. | [optional] 
+**days_grace** | **int** | Number of days bewteen invoice issue date and due date. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

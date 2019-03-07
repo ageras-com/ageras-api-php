@@ -154,4 +154,20 @@ class LeadQuotesInfoResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "employee_lead_prediction"
+     */
+    public function testPropertyEmployeeLeadPrediction()
+    {
+
+    }
+
+    /**
+     * Test attribute "quote_fee"
+     */
+    public function testPropertyQuoteFee()
+    {
+
+    }
+
 }

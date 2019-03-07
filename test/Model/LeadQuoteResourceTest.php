@@ -115,6 +115,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "accepted_at"
      */
     public function testPropertyAcceptedAt()
@@ -310,6 +318,14 @@ class LeadQuoteResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "lead_products"
      */
     public function testPropertyLeadProducts()
+    {
+
+    }
+
+    /**
+     * Test attribute "quote_fee_amount_excl_vat"
+     */
+    public function testPropertyQuoteFeeAmountExclVat()
     {
 
     }

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**leadsActionsCreate**](LeadsApi.md#leadsActionsCreate) | **POST** /leads/{lead_id}/actions | Coupon action
 [**leadsAggregationsIndex**](LeadsApi.md#leadsAggregationsIndex) | **GET** /leads/aggregations | List facets and aggregations for the Lead Search.
+[**leadsAllocationsCreate**](LeadsApi.md#leadsAllocationsCreate) | **POST** /leads/{lead_id}/allocations | Allocate partners to a lead.
 [**leadsCategoriesIndex**](LeadsApi.md#leadsCategoriesIndex) | **GET** /leads/categories | Index lead categories .
 [**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | Add a certification to a lead.
 [**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | Delete a certification from a lead.
@@ -24,6 +25,7 @@ Method | HTTP request | Description
 [**leadsOffersGet2**](LeadsApi.md#leadsOffersGet2) | **GET** /leads/{lead_id}/offers/{lead_offer_id} | Get an offer by id.
 [**leadsOffersIndex**](LeadsApi.md#leadsOffersIndex) | **GET** /leads/offers | List the offers connected to a given Lead.
 [**leadsOffersIndex2**](LeadsApi.md#leadsOffersIndex2) | **GET** /leads/{lead_id}/offers | List the offers connected to a given Lead.
+[**leadsQuotefeesCreate**](LeadsApi.md#leadsQuotefeesCreate) | **POST** /leads/{lead_id}/quotefees | Create lead quote_fee.
 [**leadsQuotesActionsCreate**](LeadsApi.md#leadsQuotesActionsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/actions | Publish a given quote, accept it and other actions.
 [**leadsQuotesCreate**](LeadsApi.md#leadsQuotesCreate) | **POST** /leads/{lead_id}/quotes | Create a new quote for a given Lead.
 [**leadsQuotesDelete**](LeadsApi.md#leadsQuotesDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | Delete a quote for a given Lead.
@@ -146,6 +148,11 @@ $criteria = [
         'validator_id' => "validator_id_example"; // string | Lead's validator
         'is_given_up' => false; // bool | Is the lead given up on?
         'industry_id' => "industry_id_example"; // string | Filter the leads by their industry ids
+        'call_count_before_validation_lt' => 56; // int | Lead must have less than this many calls before validation occurred.
+        'is_validation_postponed' => false; // bool | Is the lead's validation postponed?
+        'created_at_lte' => "created_at_lte_example"; // string | Get leads created before this date (inclusive).
+        'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
+        'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -194,6 +201,11 @@ Name | Type | Description  | Notes
  **validator_id** | **string**| Lead&#39;s validator | [optional]
  **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
  **industry_id** | **string**| Filter the leads by their industry ids | [optional]
+ **call_count_before_validation_lt** | **int**| Lead must have less than this many calls before validation occurred. | [optional]
+ **is_validation_postponed** | **bool**| Is the lead&#39;s validation postponed? | [optional] [default to false]
+ **created_at_lte** | **string**| Get leads created before this date (inclusive). | [optional]
+ **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
+ **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -201,6 +213,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsAllocationsCreate**
+> \Ageras\Api\LeadAllocationResource leadsAllocationsCreate($lead_id , $lead_allocation_resource)
+
+Allocate partners to a lead.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_allocation_resource = new \Ageras\Api\LeadAllocationResource(); // \Ageras\Api\LeadAllocationResource | 
+
+try {
+    $result = $api_instance->leadsAllocationsCreate($lead_id , $lead_allocation_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsAllocationsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_allocation_resource** | [**\Ageras\Api\LeadAllocationResource**](../Model/\Ageras\Api\LeadAllocationResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadAllocationResource**](../Model/LeadAllocationResource.md)
 
 ### Authorization
 
@@ -861,6 +926,11 @@ $criteria = [
         'validator_id' => "validator_id_example"; // string | Lead's validator
         'is_given_up' => false; // bool | Is the lead given up on?
         'industry_id' => "industry_id_example"; // string | Filter the leads by their industry ids
+        'call_count_before_validation_lt' => 56; // int | Lead must have less than this many calls before validation occurred.
+        'is_validation_postponed' => false; // bool | Is the lead's validation postponed?
+        'created_at_lte' => "created_at_lte_example"; // string | Get leads created before this date (inclusive).
+        'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
+        'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -909,6 +979,11 @@ Name | Type | Description  | Notes
  **validator_id** | **string**| Lead&#39;s validator | [optional]
  **is_given_up** | **bool**| Is the lead given up on? | [optional] [default to false]
  **industry_id** | **string**| Filter the leads by their industry ids | [optional]
+ **call_count_before_validation_lt** | **int**| Lead must have less than this many calls before validation occurred. | [optional]
+ **is_validation_postponed** | **bool**| Is the lead&#39;s validation postponed? | [optional] [default to false]
+ **created_at_lte** | **string**| Get leads created before this date (inclusive). | [optional]
+ **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
+ **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1268,6 +1343,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **leadsQuotefeesCreate**
+> \Ageras\Api\LeadQuoteFeeResource leadsQuotefeesCreate($lead_id , $lead_quote_fee_resource)
+
+Create lead quote_fee.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_fee_resource = new \Ageras\Api\LeadQuoteFeeResource(); // \Ageras\Api\LeadQuoteFeeResource | 
+
+try {
+    $result = $api_instance->leadsQuotefeesCreate($lead_id , $lead_quote_fee_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotefeesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_fee_resource** | [**\Ageras\Api\LeadQuoteFeeResource**](../Model/\Ageras\Api\LeadQuoteFeeResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteFeeResource**](../Model/LeadQuoteFeeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **leadsQuotesActionsCreate**
 > \Ageras\Api\LeadQuoteResource leadsQuotesActionsCreate($lead_id,  $lead_quote_id , $lead_quote_action_resource)
 
@@ -1561,6 +1689,7 @@ $criteria = [
         'is_published' => false; // bool | Quote is published.
         'is_rejected' => false; // bool | Quote is rejected.
         'sort' => "created_at"; // string | Sort options.
+        'lead_category_type' => "basic"; // string | Filter by lead category type.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1588,6 +1717,7 @@ Name | Type | Description  | Notes
  **is_published** | **bool**| Quote is published. | [optional] [default to false]
  **is_rejected** | **bool**| Quote is rejected. | [optional] [default to false]
  **sort** | **string**| Sort options. | [optional] [default to created_at]
+ **lead_category_type** | **string**| Filter by lead category type. | [optional] [default to basic]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1636,6 +1766,7 @@ $criteria = [
         'is_published' => false; // bool | Quote is published.
         'is_rejected' => false; // bool | Quote is rejected.
         'sort' => "created_at"; // string | Sort options.
+        'lead_category_type' => "basic"; // string | Filter by lead category type.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1663,6 +1794,7 @@ Name | Type | Description  | Notes
  **is_published** | **bool**| Quote is published. | [optional] [default to false]
  **is_rejected** | **bool**| Quote is rejected. | [optional] [default to false]
  **sort** | **string**| Sort options. | [optional] [default to created_at]
+ **lead_category_type** | **string**| Filter by lead category type. | [optional] [default to basic]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

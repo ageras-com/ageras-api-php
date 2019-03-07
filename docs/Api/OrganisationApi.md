@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**organisationEmployeesKpiIndex**](OrganisationApi.md#organisationEmployeesKpiIndex) | **GET** /organisation/employees/kpi | List employee KPIs.
 [**organisationEmployeesKpiIndex2**](OrganisationApi.md#organisationEmployeesKpiIndex2) | **GET** /organisation/organisation/employees/kpi | List employee KPIs.
 [**organisationEmployeesKpiIndex4**](OrganisationApi.md#organisationEmployeesKpiIndex4) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
+[**organisationEmployeesLeadpredictionsCreate**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate) | **POST** /organisation/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
+[**organisationEmployeesLeadpredictionsCreate2**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate2) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
 
 
 # **organisationEmployeesGet**
@@ -374,6 +376,114 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\EmployeeKpiResult**](../Model/EmployeeKpiResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **organisationEmployeesLeadpredictionsCreate**
+> \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate($employee_id , $employee_lead_prediction_resource)
+
+Create an employee lead prediction.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$employee_id = "employee_id_example"; // string | 
+$employee_lead_prediction_resource = new \Ageras\Api\EmployeeLeadPredictionResource(); // \Ageras\Api\EmployeeLeadPredictionResource | 
+
+try {
+    $result = $api_instance->organisationEmployeesLeadpredictionsCreate($employee_id , $employee_lead_prediction_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesLeadpredictionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **employee_id** | **string**|  |
+ **employee_lead_prediction_resource** | [**\Ageras\Api\EmployeeLeadPredictionResource**](../Model/\Ageras\Api\EmployeeLeadPredictionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\EmployeeLeadPredictionResource**](../Model/EmployeeLeadPredictionResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **organisationEmployeesLeadpredictionsCreate2**
+> \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+
+Create an employee lead prediction.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$organisation_id = "organisation_id_example"; // string | 
+$employee_id = "employee_id_example"; // string | 
+$employee_lead_prediction_resource = new \Ageras\Api\EmployeeLeadPredictionResource(); // \Ageras\Api\EmployeeLeadPredictionResource | 
+
+try {
+    $result = $api_instance->organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesLeadpredictionsCreate2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_id** | **string**|  |
+ **employee_id** | **string**|  |
+ **employee_lead_prediction_resource** | [**\Ageras\Api\EmployeeLeadPredictionResource**](../Model/\Ageras\Api\EmployeeLeadPredictionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\EmployeeLeadPredictionResource**](../Model/EmployeeLeadPredictionResource.md)
 
 ### Authorization
 

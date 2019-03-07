@@ -142,4 +142,26 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for organisationEmployeesLeadpredictionsCreate
+     *
+     * Create an employee lead prediction..
+     *
+     */
+    public function testOrganisationEmployeesLeadpredictionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesLeadpredictionsCreate2
+     *
+     * Create an employee lead prediction..
+     *
+     */
+    public function testOrganisationEmployeesLeadpredictionsCreate2()
+    {
+
+    }
+
 }

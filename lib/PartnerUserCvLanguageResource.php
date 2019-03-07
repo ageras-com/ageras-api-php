@@ -55,10 +55,9 @@ class PartnerUserCvLanguageResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'language_id' => 'int',
-        'language_name' => 'string',
+        'identifier' => 'string',
         'proficiency' => 'string',
-        'iso_code' => 'string'
+        'name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -72,10 +71,9 @@ class PartnerUserCvLanguageResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'language_id' => 'language_id',
-        'language_name' => 'language_name',
+        'identifier' => 'identifier',
         'proficiency' => 'proficiency',
-        'iso_code' => 'iso_code'
+        'name' => 'name'
     ];
 
 
@@ -85,10 +83,9 @@ class PartnerUserCvLanguageResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'language_id' => 'setLanguageId',
-        'language_name' => 'setLanguageName',
+        'identifier' => 'setIdentifier',
         'proficiency' => 'setProficiency',
-        'iso_code' => 'setIsoCode'
+        'name' => 'setName'
     ];
 
 
@@ -98,10 +95,9 @@ class PartnerUserCvLanguageResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'language_id' => 'getLanguageId',
-        'language_name' => 'getLanguageName',
+        'identifier' => 'getIdentifier',
         'proficiency' => 'getProficiency',
-        'iso_code' => 'getIsoCode'
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -136,10 +132,9 @@ class PartnerUserCvLanguageResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
-        $this->container['language_name'] = isset($data['language_name']) ? $data['language_name'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['proficiency'] = isset($data['proficiency']) ? $data['proficiency'] : null;
-        $this->container['iso_code'] = isset($data['iso_code']) ? $data['iso_code'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -189,43 +184,22 @@ class PartnerUserCvLanguageResource implements ArrayAccess
     }
 
     /**
-     * Gets language_id
-     * @return int
-     */
-    public function getLanguageId()
-    {
-        return $this->container['language_id'];
-    }
-
-    /**
-     * Sets language_id
-     * @param int $language_id Language ID.
-     * @return $this
-     */
-    public function setLanguageId($language_id)
-    {
-        $this->container['language_id'] = $language_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets language_name
+     * Gets identifier
      * @return string
      */
-    public function getLanguageName()
+    public function getIdentifier()
     {
-        return $this->container['language_name'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets language_name
-     * @param string $language_name Language name.
+     * Sets identifier
+     * @param string $identifier Language identifier.
      * @return $this
      */
-    public function setLanguageName($language_name)
+    public function setIdentifier($identifier)
     {
-        $this->container['language_name'] = $language_name;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }
@@ -252,22 +226,22 @@ class PartnerUserCvLanguageResource implements ArrayAccess
     }
 
     /**
-     * Gets iso_code
+     * Gets name
      * @return string
      */
-    public function getIsoCode()
+    public function getName()
     {
-        return $this->container['iso_code'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets iso_code
-     * @param string $iso_code Language ISO code.
+     * Sets name
+     * @param string $name Name of the lagnuage, e.g. 'Australian English'.
      * @return $this
      */
-    public function setIsoCode($iso_code)
+    public function setName($name)
     {
-        $this->container['iso_code'] = $iso_code;
+        $this->container['name'] = $name;
 
         return $this;
     }
