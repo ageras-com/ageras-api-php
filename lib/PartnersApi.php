@@ -205,6 +205,8 @@ class PartnersApi
      *    'is_public' => bool,
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
+     *    'badge_id' => string,
+     *    'digital_leads' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -242,6 +244,8 @@ class PartnersApi
      *    'is_public' => bool,
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
+     *    'badge_id' => string,
+     *    'digital_leads' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -334,6 +338,14 @@ class PartnersApi
         // query params
         if (isset($criteria['segmented_for_lead_id'])) {
             $queryParams['segmented_for_lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_id']);
+        }
+        // query params
+        if (isset($criteria['badge_id'])) {
+            $queryParams['badge_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['badge_id']);
+        }
+        // query params
+        if (isset($criteria['digital_leads'])) {
+            $queryParams['digital_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['digital_leads']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -583,6 +595,1278 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBankaccountResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsCreate
+     *
+     * Create partner business unit.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitResource
+     */
+    public function partnersBusinessunitsCreate($partner_id , $partner_business_unit_resource)
+    {
+        list($response) = $this->partnersBusinessunitsCreateWithHttpInfo($partner_id, $partner_business_unit_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsCreateWithHttpInfo
+     *
+     * Create partner business unit.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsCreateWithHttpInfo($partner_id , $partner_business_unit_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_business_unit_resource)) {
+            $_tempBody = $partner_business_unit_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitResource',
+                '/partners/{partner_id}/businessunits'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsDelete
+     *
+     * Delete a partner business unit
+     *
+     * @param string $partner_id 
+     * @param string $partner_businessunit_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersBusinessunitsDelete($partner_id,  $partner_businessunit_id )
+    {
+        list($response) = $this->partnersBusinessunitsDeleteWithHttpInfo($partner_id, $partner_businessunit_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsDeleteWithHttpInfo
+     *
+     * Delete a partner business unit
+     *
+     * @param string $partner_id 
+     * @param string $partner_businessunit_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsDeleteWithHttpInfo($partner_id,  $partner_businessunit_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_businessunit_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_businessunit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_businessunit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_businessunit_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/businessunits/{partner_businessunit_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsGet
+     *
+     * Get a single partner business unit.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitResource
+     */
+    public function partnersBusinessunitsGet($partner_id,  $partner_business_unit_id )
+    {
+        list($response) = $this->partnersBusinessunitsGetWithHttpInfo($partner_id, $partner_business_unit_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsGetWithHttpInfo
+     *
+     * Get a single partner business unit.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsGetWithHttpInfo($partner_id,  $partner_business_unit_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndex
+     *
+     * List partner business units.
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitResult
+     */
+    public function partnersBusinessunitsIndex($criteria = [])
+    {
+        list($response) = $this->partnersBusinessunitsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndexWithHttpInfo
+     *
+     * List partner business units.
+     *
+     * @param $criteria = [
+     *    'id' => string,
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/businessunits";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['id'])) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['id']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitResult',
+                '/partners/businessunits'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndustriesIndex
+     *
+     * List business unit industries.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitIndustryResult
+     */
+    public function partnersBusinessunitsIndustriesIndex($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        list($response) = $this->partnersBusinessunitsIndustriesIndexWithHttpInfo($partner_id, $partner_business_unit_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndustriesIndexWithHttpInfo
+     *
+     * List business unit industries.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitIndustryResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsIndustriesIndexWithHttpInfo($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/industries";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitIndustryResult',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/industries'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitIndustryResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitIndustryResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndustriesUpdate
+     *
+     * Update business unit industries.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitIndustriesResource $partner_business_unit_industries_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitIndustriesResource
+     */
+    public function partnersBusinessunitsIndustriesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_industries_resource)
+    {
+        list($response) = $this->partnersBusinessunitsIndustriesUpdateWithHttpInfo($partner_id, $partner_business_unit_id, $partner_business_unit_industries_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsIndustriesUpdateWithHttpInfo
+     *
+     * Update business unit industries.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitIndustriesResource $partner_business_unit_industries_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitIndustriesResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsIndustriesUpdateWithHttpInfo($partner_id,  $partner_business_unit_id , $partner_business_unit_industries_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/industries";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_business_unit_industries_resource)) {
+            $_tempBody = $partner_business_unit_industries_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitIndustriesResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/industries'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitIndustriesResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitIndustriesResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsRevenuerangesCreate
+     *
+     * Create a business unit revenue range.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitRevenueRangeResource $partner_business_unit_revenue_range_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitRevenueRangeResource
+     */
+    public function partnersBusinessunitsRevenuerangesCreate($partner_id,  $partner_business_unit_id , $partner_business_unit_revenue_range_resource)
+    {
+        list($response) = $this->partnersBusinessunitsRevenuerangesCreateWithHttpInfo($partner_id, $partner_business_unit_id, $partner_business_unit_revenue_range_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsRevenuerangesCreateWithHttpInfo
+     *
+     * Create a business unit revenue range.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitRevenueRangeResource $partner_business_unit_revenue_range_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitRevenueRangeResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsRevenuerangesCreateWithHttpInfo($partner_id,  $partner_business_unit_id , $partner_business_unit_revenue_range_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/revenueranges";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_business_unit_revenue_range_resource)) {
+            $_tempBody = $partner_business_unit_revenue_range_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/revenueranges'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsSectorsIndex
+     *
+     * List business unit sectors.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\SectorResult
+     */
+    public function partnersBusinessunitsSectorsIndex($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        list($response) = $this->partnersBusinessunitsSectorsIndexWithHttpInfo($partner_id, $partner_business_unit_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsSectorsIndexWithHttpInfo
+     *
+     * List business unit sectors.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\SectorResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsSectorsIndexWithHttpInfo($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\SectorResult',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\SectorResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SectorResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsSectorsUpdate
+     *
+     * Update partner business unit sectors.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerSectorsResource
+     */
+    public function partnersBusinessunitsSectorsUpdate($partner_id,  $partner_business_unit_id , $partner_sectors_resource)
+    {
+        list($response) = $this->partnersBusinessunitsSectorsUpdateWithHttpInfo($partner_id, $partner_business_unit_id, $partner_sectors_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsSectorsUpdateWithHttpInfo
+     *
+     * Update partner business unit sectors.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerSectorsResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsSectorsUpdateWithHttpInfo($partner_id,  $partner_business_unit_id , $partner_sectors_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_sectors_resource)) {
+            $_tempBody = $partner_sectors_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerSectorsResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerSectorsResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSectorsResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsTypesIndex
+     *
+     * List business unit types.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitTypeResult
+     */
+    public function partnersBusinessunitsTypesIndex($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        list($response) = $this->partnersBusinessunitsTypesIndexWithHttpInfo($partner_id, $partner_business_unit_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsTypesIndexWithHttpInfo
+     *
+     * List business unit types.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitTypeResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsTypesIndexWithHttpInfo($partner_id,  $partner_business_unit_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/types";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitTypeResult',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/types'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitTypeResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitTypeResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsTypesUpdate
+     *
+     * Update partner business unit types.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitTypesResource $partner_business_unit_types_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitTypesResource
+     */
+    public function partnersBusinessunitsTypesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_types_resource)
+    {
+        list($response) = $this->partnersBusinessunitsTypesUpdateWithHttpInfo($partner_id, $partner_business_unit_id, $partner_business_unit_types_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsTypesUpdateWithHttpInfo
+     *
+     * Update partner business unit types.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitTypesResource $partner_business_unit_types_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitTypesResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsTypesUpdateWithHttpInfo($partner_id,  $partner_business_unit_id , $partner_business_unit_types_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/types";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_business_unit_types_resource)) {
+            $_tempBody = $partner_business_unit_types_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitTypesResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/types'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitTypesResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitTypesResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersBusinessunitsUpdate
+     *
+     * Update partner business unit.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerBusinessUnitResource
+     */
+    public function partnersBusinessunitsUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_resource)
+    {
+        list($response) = $this->partnersBusinessunitsUpdateWithHttpInfo($partner_id, $partner_business_unit_id, $partner_business_unit_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersBusinessunitsUpdateWithHttpInfo
+     *
+     * Update partner business unit.
+     *
+     * @param string $partner_id 
+     * @param string $partner_business_unit_id 
+     * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerBusinessUnitResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersBusinessunitsUpdateWithHttpInfo($partner_id,  $partner_business_unit_id , $partner_business_unit_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_business_unit_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_business_unit_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_business_unit_resource)) {
+            $_tempBody = $partner_business_unit_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerBusinessUnitResource',
+                '/partners/{partner_id}/businessunits/{partner_business_unit_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerBusinessUnitResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerBusinessUnitResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -3779,6 +5063,308 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersDiscountsCreate
+     *
+     * Discount for a partner.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerDiscountResource $partner_discount_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDiscountResource
+     */
+    public function partnersDiscountsCreate($partner_id , $partner_discount_resource)
+    {
+        list($response) = $this->partnersDiscountsCreateWithHttpInfo($partner_id, $partner_discount_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDiscountsCreateWithHttpInfo
+     *
+     * Discount for a partner.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerDiscountResource $partner_discount_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDiscountResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDiscountsCreateWithHttpInfo($partner_id , $partner_discount_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/discounts";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_discount_resource)) {
+            $_tempBody = $partner_discount_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDiscountResource',
+                '/partners/{partner_id}/discounts'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDiscountResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDiscountResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDiscountsDelete
+     *
+     * Delete a partner discount
+     *
+     * @param string $partner_id 
+     * @param string $partner_package_type_discount_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersDiscountsDelete($partner_id,  $partner_package_type_discount_id )
+    {
+        list($response) = $this->partnersDiscountsDeleteWithHttpInfo($partner_id, $partner_package_type_discount_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDiscountsDeleteWithHttpInfo
+     *
+     * Delete a partner discount
+     *
+     * @param string $partner_id 
+     * @param string $partner_package_type_discount_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDiscountsDeleteWithHttpInfo($partner_id,  $partner_package_type_discount_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/discounts/{partner_package_type_discount_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_package_type_discount_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_package_type_discount_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_package_type_discount_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/discounts/{partner_package_type_discount_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersDiscountsIndex
+     *
+     * Get partner's discounts.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'is_active' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerDiscountResult
+     */
+    public function partnersDiscountsIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersDiscountsIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersDiscountsIndexWithHttpInfo
+     *
+     * Get partner's discounts.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'is_active' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerDiscountResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersDiscountsIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/discounts";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['is_active'])) {
+            $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerDiscountResult',
+                '/partners/{partner_id}/discounts'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerDiscountResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerDiscountResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersFeesCreate
      *
      * Create partner fee
@@ -4193,6 +5779,8 @@ class PartnersApi
      *    'is_public' => bool,
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
+     *    'badge_id' => string,
+     *    'digital_leads' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -4230,6 +5818,8 @@ class PartnersApi
      *    'is_public' => bool,
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
+     *    'badge_id' => string,
+     *    'digital_leads' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -4322,6 +5912,14 @@ class PartnersApi
         // query params
         if (isset($criteria['segmented_for_lead_id'])) {
             $queryParams['segmented_for_lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_id']);
+        }
+        // query params
+        if (isset($criteria['badge_id'])) {
+            $queryParams['badge_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['badge_id']);
+        }
+        // query params
+        if (isset($criteria['digital_leads'])) {
+            $queryParams['digital_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['digital_leads']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -5980,6 +7578,209 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersSectorsIndex
+     *
+     * Get partner sectors.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\SectorResult
+     */
+    public function partnersSectorsIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersSectorsIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSectorsIndexWithHttpInfo
+     *
+     * Get partner sectors.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\SectorResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSectorsIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sectors";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\SectorResult',
+                '/partners/{partner_id}/sectors'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\SectorResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SectorResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSectorsUpdate
+     *
+     * Update partner sectors.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerSectorsResource
+     */
+    public function partnersSectorsUpdate($partner_id , $partner_sectors_resource)
+    {
+        list($response) = $this->partnersSectorsUpdateWithHttpInfo($partner_id, $partner_sectors_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSectorsUpdateWithHttpInfo
+     *
+     * Update partner sectors.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerSectorsResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSectorsUpdateWithHttpInfo($partner_id , $partner_sectors_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sectors";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_sectors_resource)) {
+            $_tempBody = $partner_sectors_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerSectorsResource',
+                '/partners/{partner_id}/sectors'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerSectorsResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSectorsResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersSubscriptionsActionsCreate
      *
      * Cancel subscription.
@@ -6284,6 +8085,332 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSubscriptionResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesCreate
+     *
+     * Create a new subscription price effective at a specific date
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param \Ageras\Api\PartnerSubscriptionPriceResource $partner_subscription_price_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerSubscriptionPriceResource
+     */
+    public function partnersSubscriptionsPricesCreate($partner_id,  $subscription_id , $partner_subscription_price_resource)
+    {
+        list($response) = $this->partnersSubscriptionsPricesCreateWithHttpInfo($partner_id, $subscription_id, $partner_subscription_price_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesCreateWithHttpInfo
+     *
+     * Create a new subscription price effective at a specific date
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param \Ageras\Api\PartnerSubscriptionPriceResource $partner_subscription_price_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerSubscriptionPriceResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSubscriptionsPricesCreateWithHttpInfo($partner_id,  $subscription_id , $partner_subscription_price_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/subscriptions/{subscription_id}/prices";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($subscription_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "subscription_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($subscription_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_subscription_price_resource)) {
+            $_tempBody = $partner_subscription_price_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerSubscriptionPriceResource',
+                '/partners/{partner_id}/subscriptions/{subscription_id}/prices'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerSubscriptionPriceResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSubscriptionPriceResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesDelete
+     *
+     * Delete a future subscription price
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param string $subscription_price_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersSubscriptionsPricesDelete($partner_id,  $subscription_id,  $subscription_price_id )
+    {
+        list($response) = $this->partnersSubscriptionsPricesDeleteWithHttpInfo($partner_id, $subscription_id, $subscription_price_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesDeleteWithHttpInfo
+     *
+     * Delete a future subscription price
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param string $subscription_price_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSubscriptionsPricesDeleteWithHttpInfo($partner_id,  $subscription_id,  $subscription_price_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/subscriptions/{subscription_id}/prices/{subscription_price_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($subscription_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "subscription_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($subscription_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($subscription_price_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "subscription_price_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($subscription_price_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/subscriptions/{subscription_id}/prices/{subscription_price_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesIndex
+     *
+     * List the subscription's prices.
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerSubscriptionPriceResult
+     */
+    public function partnersSubscriptionsPricesIndex($partner_id,  $subscription_id , $criteria = [])
+    {
+        list($response) = $this->partnersSubscriptionsPricesIndexWithHttpInfo($partner_id, $subscription_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSubscriptionsPricesIndexWithHttpInfo
+     *
+     * List the subscription's prices.
+     *
+     * @param string $partner_id 
+     * @param string $subscription_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerSubscriptionPriceResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSubscriptionsPricesIndexWithHttpInfo($partner_id,  $subscription_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/subscriptions/{subscription_id}/prices";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($subscription_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "subscription_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($subscription_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerSubscriptionPriceResult',
+                '/partners/{partner_id}/subscriptions/{subscription_id}/prices'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerSubscriptionPriceResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSubscriptionPriceResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

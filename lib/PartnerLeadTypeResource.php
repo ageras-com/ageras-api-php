@@ -55,7 +55,7 @@ class PartnerLeadTypeResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'name' => 'string'
+        'title' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +69,7 @@ class PartnerLeadTypeResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name'
+        'title' => 'title'
     ];
 
 
@@ -79,7 +79,7 @@ class PartnerLeadTypeResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName'
+        'title' => 'setTitle'
     ];
 
 
@@ -89,7 +89,7 @@ class PartnerLeadTypeResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName'
+        'title' => 'getTitle'
     ];
 
     public static function attributeMap()
@@ -124,7 +124,7 @@ class PartnerLeadTypeResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
     }
 
     /**
@@ -174,22 +174,22 @@ class PartnerLeadTypeResource implements ArrayAccess
     }
 
     /**
-     * Gets name
+     * Gets title
      * @return string
      */
-    public function getName()
+    public function getTitle()
     {
-        return $this->container['name'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets name
-     * @param string $name
+     * Sets title
+     * @param string $title
      * @return $this
      */
-    public function setName($name)
+    public function setTitle($title)
     {
-        $this->container['name'] = $name;
+        $this->container['title'] = $title;
 
         return $this;
     }

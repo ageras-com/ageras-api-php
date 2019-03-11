@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchResource
+ * PartnerBusinessUnitTypeResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchResource Class Doc Comment
+ * PartnerBusinessUnitTypeResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchResource implements ArrayAccess
+class PartnerBusinessUnitTypeResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,16 @@ class MatchResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchResource';
+    protected static $swaggerModelName = 'PartnerBusinessUnitTypeResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'partner' => '\Ageras\Api\PartnerSuggestResource',
-        'lead' => '\Ageras\Api\LeadSuggestResource',
-        'score' => 'float',
-        'explanation' => '\Ageras\Api\MatchExplanationResource[]'
+        'id' => 'int',
+        'title' => 'string',
+        'geo_code' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -72,10 +70,8 @@ class MatchResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'partner' => 'partner',
-        'lead' => 'lead',
-        'score' => 'score',
-        'explanation' => 'explanation'
+        'title' => 'title',
+        'geo_code' => 'geo_code'
     ];
 
 
@@ -85,10 +81,8 @@ class MatchResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'partner' => 'setPartner',
-        'lead' => 'setLead',
-        'score' => 'setScore',
-        'explanation' => 'setExplanation'
+        'title' => 'setTitle',
+        'geo_code' => 'setGeoCode'
     ];
 
 
@@ -98,10 +92,8 @@ class MatchResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'partner' => 'getPartner',
-        'lead' => 'getLead',
-        'score' => 'getScore',
-        'explanation' => 'getExplanation'
+        'title' => 'getTitle',
+        'geo_code' => 'getGeoCode'
     ];
 
     public static function attributeMap()
@@ -136,10 +128,8 @@ class MatchResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
-        $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['explanation'] = isset($data['explanation']) ? $data['explanation'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
     }
 
     /**
@@ -169,7 +159,7 @@ class MatchResource implements ArrayAccess
 
     /**
      * Gets id
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -178,7 +168,7 @@ class MatchResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id Match ID (hash).
+     * @param int $id Type ID.
      * @return $this
      */
     public function setId($id)
@@ -189,85 +179,43 @@ class MatchResource implements ArrayAccess
     }
 
     /**
-     * Gets partner
-     * @return \Ageras\Api\PartnerSuggestResource
+     * Gets title
+     * @return string
      */
-    public function getPartner()
+    public function getTitle()
     {
-        return $this->container['partner'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets partner
-     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * Sets title
+     * @param string $title Type title.
      * @return $this
      */
-    public function setPartner($partner)
+    public function setTitle($title)
     {
-        $this->container['partner'] = $partner;
+        $this->container['title'] = $title;
 
         return $this;
     }
 
     /**
-     * Gets lead
-     * @return \Ageras\Api\LeadSuggestResource
+     * Gets geo_code
+     * @return string
      */
-    public function getLead()
+    public function getGeoCode()
     {
-        return $this->container['lead'];
+        return $this->container['geo_code'];
     }
 
     /**
-     * Sets lead
-     * @param \Ageras\Api\LeadSuggestResource $lead
+     * Sets geo_code
+     * @param string $geo_code Type geo_code.
      * @return $this
      */
-    public function setLead($lead)
+    public function setGeoCode($geo_code)
     {
-        $this->container['lead'] = $lead;
-
-        return $this;
-    }
-
-    /**
-     * Gets score
-     * @return float
-     */
-    public function getScore()
-    {
-        return $this->container['score'];
-    }
-
-    /**
-     * Sets score
-     * @param float $score score for the given match
-     * @return $this
-     */
-    public function setScore($score)
-    {
-        $this->container['score'] = $score;
-
-        return $this;
-    }
-
-    /**
-     * Gets explanation
-     * @return \Ageras\Api\MatchExplanationResource[]
-     */
-    public function getExplanation()
-    {
-        return $this->container['explanation'];
-    }
-
-    /**
-     * Sets explanation
-     * @param \Ageras\Api\MatchExplanationResource[] $explanation Explanation of the score calculation
-     * @return $this
-     */
-    public function setExplanation($explanation)
-    {
-        $this->container['explanation'] = $explanation;
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }

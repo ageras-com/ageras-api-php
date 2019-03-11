@@ -83,14 +83,6 @@ class LanguageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "iso_code"
-     */
-    public function testPropertyIsoCode()
-    {
-
-    }
-
-    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -99,9 +91,9 @@ class LanguageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "language_iso_code"
+     * Test attribute "identifier"
      */
-    public function testPropertyLanguageIsoCode()
+    public function testPropertyIdentifier()
     {
 
     }

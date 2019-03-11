@@ -190,6 +190,7 @@ class ContactarchivesApi
      *    'receiver_partner_id' => int,
      *    'receiver_lead_id' => int,
      *    'contact_archive_id' => int,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -212,6 +213,7 @@ class ContactarchivesApi
      *    'receiver_partner_id' => int,
      *    'receiver_lead_id' => int,
      *    'contact_archive_id' => int,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -244,6 +246,10 @@ class ContactarchivesApi
         // query params
         if (isset($criteria['contact_archive_id'])) {
             $queryParams['contact_archive_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['contact_archive_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {

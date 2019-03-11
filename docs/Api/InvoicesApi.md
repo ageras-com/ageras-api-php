@@ -93,6 +93,7 @@ $criteria = [
         'sort' => "created_at"; // string | Desired sorting.
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'invoice_number' => "invoice_number_example"; // string | Invoice Number.
+        'has_subscription_line_item' => false; // bool | Filter invoices by whether they are related to subscription or not.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -119,6 +120,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Desired sorting. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **invoice_number** | **string**| Invoice Number. | [optional]
+ **has_subscription_line_item** | **bool**| Filter invoices by whether they are related to subscription or not. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -376,6 +378,7 @@ $criteria = [
         'sort' => "created_at"; // string | Desired sorting.
         'status' => "status_example"; // string | Voucher refund request status.
         'geo_code' => "geo_code_example"; // string | Partner geo code.
+        'assigned_employee_id' => "assigned_employee_id_example"; // string | Filter by assigned employee ID.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -400,6 +403,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Desired sorting. | [optional] [default to created_at]
  **status** | **string**| Voucher refund request status. | [optional]
  **geo_code** | **string**| Partner geo code. | [optional]
+ **assigned_employee_id** | **string**| Filter by assigned employee ID. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -445,6 +449,7 @@ $criteria = [
         'sort' => "created_at"; // string | Desired sorting.
         'status' => "status_example"; // string | Voucher refund request status.
         'geo_code' => "geo_code_example"; // string | Partner geo code.
+        'assigned_employee_id' => "assigned_employee_id_example"; // string | Filter by assigned employee ID.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -469,6 +474,7 @@ Name | Type | Description  | Notes
  **sort** | **string**| Desired sorting. | [optional] [default to created_at]
  **status** | **string**| Voucher refund request status. | [optional]
  **geo_code** | **string**| Partner geo code. | [optional]
+ **assigned_employee_id** | **string**| Filter by assigned employee ID. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

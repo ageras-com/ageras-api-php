@@ -378,4 +378,44 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "is_pay_to_match"
+     */
+    public function testPropertyIsPayToMatch()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_pay_to_quote"
+     */
+    public function testPropertyIsPayToQuote()
+    {
+
+    }
+
+    /**
+     * Test attribute "has_marketing_package"
+     */
+    public function testPropertyHasMarketingPackage()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo_range"
+     */
+    public function testPropertyGeoRange()
+    {
+
+    }
+
+    /**
+     * Test attribute "badges"
+     */
+    public function testPropertyBadges()
+    {
+
+    }
+
 }

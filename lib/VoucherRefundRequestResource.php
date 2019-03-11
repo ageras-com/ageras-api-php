@@ -67,7 +67,8 @@ class VoucherRefundRequestResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'documentation' => 'string',
-        'documentation_url' => 'string'
+        'documentation_url' => 'string',
+        'assigned_employee_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -93,7 +94,8 @@ class VoucherRefundRequestResource implements ArrayAccess
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'documentation' => 'documentation',
-        'documentation_url' => 'documentation_url'
+        'documentation_url' => 'documentation_url',
+        'assigned_employee_id' => 'assigned_employee_id'
     ];
 
 
@@ -115,7 +117,8 @@ class VoucherRefundRequestResource implements ArrayAccess
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'documentation' => 'setDocumentation',
-        'documentation_url' => 'setDocumentationUrl'
+        'documentation_url' => 'setDocumentationUrl',
+        'assigned_employee_id' => 'setAssignedEmployeeId'
     ];
 
 
@@ -137,7 +140,8 @@ class VoucherRefundRequestResource implements ArrayAccess
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'documentation' => 'getDocumentation',
-        'documentation_url' => 'getDocumentationUrl'
+        'documentation_url' => 'getDocumentationUrl',
+        'assigned_employee_id' => 'getAssignedEmployeeId'
     ];
 
     public static function attributeMap()
@@ -201,6 +205,7 @@ class VoucherRefundRequestResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['documentation'] = isset($data['documentation']) ? $data['documentation'] : null;
         $this->container['documentation_url'] = isset($data['documentation_url']) ? $data['documentation_url'] : null;
+        $this->container['assigned_employee_id'] = isset($data['assigned_employee_id']) ? $data['assigned_employee_id'] : null;
     }
 
     /**
@@ -531,6 +536,27 @@ class VoucherRefundRequestResource implements ArrayAccess
     public function setDocumentationUrl($documentation_url)
     {
         $this->container['documentation_url'] = $documentation_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets assigned_employee_id
+     * @return int
+     */
+    public function getAssignedEmployeeId()
+    {
+        return $this->container['assigned_employee_id'];
+    }
+
+    /**
+     * Sets assigned_employee_id
+     * @param int $assigned_employee_id Employee ID of employee taking care of this refund.
+     * @return $this
+     */
+    public function setAssignedEmployeeId($assigned_employee_id)
+    {
+        $this->container['assigned_employee_id'] = $assigned_employee_id;
 
         return $this;
     }

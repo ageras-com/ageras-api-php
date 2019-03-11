@@ -1,6 +1,6 @@
 <?php
 /**
- * MlApi
+ * SectorsApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Ageras\Api\Configuration;
 use \Ageras\Api\ObjectSerializer;
 
 /**
- * MlApi Class Doc Comment
+ * SectorsApi Class Doc Comment
  *
  * @category Class
  * @package  Ageras\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MlApi
+class SectorsApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class MlApi
      *
      * @param \Ageras\Api\ApiClient $apiClient set the API client
      *
-     * @return MlApi
+     * @return SectorsApi
      */
     public function setApiClient(\Ageras\Api\ApiClient $apiClient)
     {
@@ -88,45 +88,43 @@ class MlApi
     }
 
     /**
-     * Operation mlMatchingIndex
+     * Operation sectorsIndex
      *
-     * Match making
+     * List sectors.
      *
      * @param $criteria = [
-     *    'partner_id' => string,
-     *    'lead_id' => string,
+     *    'geo_code' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
      * ]
      * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\MatchResult
+     * @return \Ageras\Api\SectorResult
      */
-    public function mlMatchingIndex($criteria = [])
+    public function sectorsIndex($criteria = [])
     {
-        list($response) = $this->mlMatchingIndexWithHttpInfo($criteria);
+        list($response) = $this->sectorsIndexWithHttpInfo($criteria);
         return $response;
     }
 
     /**
-     * Operation mlMatchingIndexWithHttpInfo
+     * Operation sectorsIndexWithHttpInfo
      *
-     * Match making
+     * List sectors.
      *
      * @param $criteria = [
-     *    'partner_id' => string,
-     *    'lead_id' => string,
+     *    'geo_code' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
      * ]
      * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\MatchResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ageras\Api\SectorResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function mlMatchingIndexWithHttpInfo($criteria = [])
+    public function sectorsIndexWithHttpInfo($criteria = [])
     {
         // parse inputs
-        $resourcePath = "/ml/matching";
+        $resourcePath = "/sectors";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -138,12 +136,8 @@ class MlApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // query params
-        if (isset($criteria['partner_id'])) {
-            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
-        }
-        // query params
-        if (isset($criteria['lead_id'])) {
-            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -181,15 +175,15 @@ class MlApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Ageras\Api\MatchResult',
-                '/ml/matching'
+                '\Ageras\Api\SectorResult',
+                '/sectors'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\MatchResult', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\SectorResult', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\MatchResult', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SectorResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

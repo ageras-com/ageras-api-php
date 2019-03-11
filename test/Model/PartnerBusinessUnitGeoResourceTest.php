@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchResultTest
+ * PartnerBusinessUnitGeoResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MatchResultTest Class Doc Comment
+ * PartnerBusinessUnitGeoResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description MatchResult
+// * @description PartnerBusinessUnitGeoResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchResultTest extends \PHPUnit_Framework_TestCase
+class PartnerBusinessUnitGeoResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,57 +75,49 @@ class MatchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MatchResult"
+     * Test "PartnerBusinessUnitGeoResource"
      */
-    public function testMatchResult()
+    public function testPartnerBusinessUnitGeoResource()
     {
 
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "code"
      */
-    public function testPropertyPage()
+    public function testPropertyCode()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "address"
      */
-    public function testPropertyLimit()
+    public function testPropertyAddress()
     {
 
     }
 
     /**
-     * Test attribute "pages"
+     * Test attribute "zip_code"
      */
-    public function testPropertyPages()
+    public function testPropertyZipCode()
     {
 
     }
 
     /**
-     * Test attribute "total"
+     * Test attribute "city_name"
      */
-    public function testPropertyTotal()
+    public function testPropertyCityName()
     {
 
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "point"
      */
-    public function testPropertyData()
-    {
-
-    }
-
-    /**
-     * Test attribute "did_you_mean"
-     */
-    public function testPropertyDidYouMean()
+    public function testPropertyPoint()
     {
 
     }

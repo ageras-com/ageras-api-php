@@ -41,6 +41,8 @@ Name | Type | Description | Notes
 **is_digital** | **bool** | Digital communication? | [optional] [default to false]
 **email_optin** | **bool** | Does the lead optin for email communication with Ageras? | [optional] [default to false]
 **actions_info** | [**\Ageras\Api\LeadActionsInfoResource**](LeadActionsInfoResource.md) |  | [optional] 
+**geo_range** | **int** | Range the lead is happy to travel to reach a partner. | [optional] 
+**primary_sector** | [**\Ageras\Api\SectorResource**](SectorResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

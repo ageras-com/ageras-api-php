@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **updated_at** | **string** | Last update. | [optional] 
 **documentation** | **string** | Base64-encoded supporting documentation. | [optional] 
 **documentation_url** | **string** | URL to stored documentation file. | [optional] 
+**assigned_employee_id** | **int** | Employee ID of employee taking care of this refund. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

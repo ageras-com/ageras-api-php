@@ -8,6 +8,18 @@ Method | HTTP request | Description
 [**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
 [**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
 [**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
+[**partnersBusinessunitsCreate**](PartnersApi.md#partnersBusinessunitsCreate) | **POST** /partners/{partner_id}/businessunits | Create partner business unit.
+[**partnersBusinessunitsDelete**](PartnersApi.md#partnersBusinessunitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_businessunit_id} | Delete a partner business unit
+[**partnersBusinessunitsGet**](PartnersApi.md#partnersBusinessunitsGet) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id} | Get a single partner business unit.
+[**partnersBusinessunitsIndex**](PartnersApi.md#partnersBusinessunitsIndex) | **GET** /partners/businessunits | List partner business units.
+[**partnersBusinessunitsIndustriesIndex**](PartnersApi.md#partnersBusinessunitsIndustriesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | List business unit industries.
+[**partnersBusinessunitsIndustriesUpdate**](PartnersApi.md#partnersBusinessunitsIndustriesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | Update business unit industries.
+[**partnersBusinessunitsRevenuerangesCreate**](PartnersApi.md#partnersBusinessunitsRevenuerangesCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/revenueranges | Create a business unit revenue range.
+[**partnersBusinessunitsSectorsIndex**](PartnersApi.md#partnersBusinessunitsSectorsIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | List business unit sectors.
+[**partnersBusinessunitsSectorsUpdate**](PartnersApi.md#partnersBusinessunitsSectorsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | Update partner business unit sectors.
+[**partnersBusinessunitsTypesIndex**](PartnersApi.md#partnersBusinessunitsTypesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | List business unit types.
+[**partnersBusinessunitsTypesUpdate**](PartnersApi.md#partnersBusinessunitsTypesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | Update partner business unit types.
+[**partnersBusinessunitsUpdate**](PartnersApi.md#partnersBusinessunitsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id} | Update partner business unit.
 [**partnersCertificationsCreate**](PartnersApi.md#partnersCertificationsCreate) | **POST** /partners/{partner_id}/certifications | Attach certification to partner.
 [**partnersCertificationsDelete**](PartnersApi.md#partnersCertificationsDelete) | **DELETE** /partners/{partner_id}/certifications/{certification_id} | Detach certification from partner.
 [**partnersCertificationsGet**](PartnersApi.md#partnersCertificationsGet) | **GET** /partners/{partner_id}/certifications/{certification_id} | Get Partner certification.
@@ -39,6 +51,9 @@ Method | HTTP request | Description
 [**partnersDeliverablesLinesUpdate2**](PartnersApi.md#partnersDeliverablesLinesUpdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
 [**partnersDeliverablesUpdate**](PartnersApi.md#partnersDeliverablesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
 [**partnersDeliverablesUpdate2**](PartnersApi.md#partnersDeliverablesUpdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
+[**partnersDiscountsCreate**](PartnersApi.md#partnersDiscountsCreate) | **POST** /partners/{partner_id}/discounts | Discount for a partner.
+[**partnersDiscountsDelete**](PartnersApi.md#partnersDiscountsDelete) | **DELETE** /partners/{partner_id}/discounts/{partner_package_type_discount_id} | Delete a partner discount
+[**partnersDiscountsIndex**](PartnersApi.md#partnersDiscountsIndex) | **GET** /partners/{partner_id}/discounts | Get partner&#39;s discounts.
 [**partnersFeesCreate**](PartnersApi.md#partnersFeesCreate) | **POST** /partners/{partner_id}/fees | Create partner fee
 [**partnersFeesDelete**](PartnersApi.md#partnersFeesDelete) | **DELETE** /partners/{partner_id}/fees/{id} | Delete a partner fee
 [**partnersFeesIndex**](PartnersApi.md#partnersFeesIndex) | **GET** /partners/fees | Get all partner fees.
@@ -60,9 +75,14 @@ Method | HTTP request | Description
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
 [**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
 [**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
+[**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | Get partner sectors.
+[**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | Update partner sectors.
 [**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
 [**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
 [**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
+[**partnersSubscriptionsPricesCreate**](PartnersApi.md#partnersSubscriptionsPricesCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/prices | Create a new subscription price effective at a specific date
+[**partnersSubscriptionsPricesDelete**](PartnersApi.md#partnersSubscriptionsPricesDelete) | **DELETE** /partners/{partner_id}/subscriptions/{subscription_id}/prices/{subscription_price_id} | Delete a future subscription price
+[**partnersSubscriptionsPricesIndex**](PartnersApi.md#partnersSubscriptionsPricesIndex) | **GET** /partners/{partner_id}/subscriptions/{subscription_id}/prices | List the subscription&#39;s prices.
 [**partnersSubscriptionsUpdate**](PartnersApi.md#partnersSubscriptionsUpdate) | **PUT** /partners/{partner_id}/subscriptions | Update partner subscription.
 [**partnersSuggestIndex**](PartnersApi.md#partnersSuggestIndex) | **GET** /partners/suggest | Suggest Partners to search for.
 [**partnersTitlesIndex**](PartnersApi.md#partnersTitlesIndex) | **GET** /partners/titles | Get all partner titles.
@@ -179,6 +199,8 @@ $criteria = [
         'is_public' => false; // bool | Only show partners that are visible to the public
         'package_type' => "package_type_example"; // string | Partner subscription package type
         'segmented_for_lead_id' => 56; // int | Get partners segmented for this lead ID
+        'badge_id' => "badge_id_example"; // string | 
+        'digital_leads' => "digital_leads_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -215,6 +237,8 @@ Name | Type | Description  | Notes
  **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
  **package_type** | **string**| Partner subscription package type | [optional]
  **segmented_for_lead_id** | **int**| Get partners segmented for this lead ID | [optional]
+ **badge_id** | **string**|  | [optional]
+ **digital_leads** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -334,6 +358,683 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerBankaccountResult**](../Model/PartnerBankaccountResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsCreate**
+> \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsCreate($partner_id , $partner_business_unit_resource)
+
+Create partner business unit.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_resource = new \Ageras\Api\PartnerBusinessUnitResource(); // \Ageras\Api\PartnerBusinessUnitResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsCreate($partner_id , $partner_business_unit_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_resource** | [**\Ageras\Api\PartnerBusinessUnitResource**](../Model/\Ageras\Api\PartnerBusinessUnitResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitResource**](../Model/PartnerBusinessUnitResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsDelete**
+> partnersBusinessunitsDelete($partner_id,  $partner_businessunit_id )
+
+Delete a partner business unit
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_businessunit_id = "partner_businessunit_id_example"; // string | 
+
+try {
+    $api_instance->partnersBusinessunitsDelete($partner_id,  $partner_businessunit_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_businessunit_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsGet**
+> \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsGet($partner_id,  $partner_business_unit_id )
+
+Get a single partner business unit.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsGet($partner_id,  $partner_business_unit_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitResource**](../Model/PartnerBusinessUnitResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsIndex**
+> \Ageras\Api\PartnerBusinessUnitResult partnersBusinessunitsIndex($criteria)
+
+List partner business units.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$criteria = [
+        'id' => "id_example"; // string | Primary ID.
+        'partner_id' => "partner_id_example"; // string | Partner ID.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersBusinessunitsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Primary ID. | [optional]
+ **partner_id** | **string**| Partner ID. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitResult**](../Model/PartnerBusinessUnitResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsIndustriesIndex**
+> \Ageras\Api\PartnerBusinessUnitIndustryResult partnersBusinessunitsIndustriesIndex($partner_id,  $partner_business_unit_id , $criteria)
+
+List business unit industries.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersBusinessunitsIndustriesIndex($partner_id,  $partner_business_unit_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsIndustriesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitIndustryResult**](../Model/PartnerBusinessUnitIndustryResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsIndustriesUpdate**
+> \Ageras\Api\PartnerBusinessUnitIndustriesResource partnersBusinessunitsIndustriesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_industries_resource)
+
+Update business unit industries.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$partner_business_unit_industries_resource = new \Ageras\Api\PartnerBusinessUnitIndustriesResource(); // \Ageras\Api\PartnerBusinessUnitIndustriesResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsIndustriesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_industries_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsIndustriesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **partner_business_unit_industries_resource** | [**\Ageras\Api\PartnerBusinessUnitIndustriesResource**](../Model/\Ageras\Api\PartnerBusinessUnitIndustriesResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitIndustriesResource**](../Model/PartnerBusinessUnitIndustriesResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsRevenuerangesCreate**
+> \Ageras\Api\PartnerBusinessUnitRevenueRangeResource partnersBusinessunitsRevenuerangesCreate($partner_id,  $partner_business_unit_id , $partner_business_unit_revenue_range_resource)
+
+Create a business unit revenue range.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$partner_business_unit_revenue_range_resource = new \Ageras\Api\PartnerBusinessUnitRevenueRangeResource(); // \Ageras\Api\PartnerBusinessUnitRevenueRangeResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsRevenuerangesCreate($partner_id,  $partner_business_unit_id , $partner_business_unit_revenue_range_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsRevenuerangesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **partner_business_unit_revenue_range_resource** | [**\Ageras\Api\PartnerBusinessUnitRevenueRangeResource**](../Model/\Ageras\Api\PartnerBusinessUnitRevenueRangeResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitRevenueRangeResource**](../Model/PartnerBusinessUnitRevenueRangeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsSectorsIndex**
+> \Ageras\Api\SectorResult partnersBusinessunitsSectorsIndex($partner_id,  $partner_business_unit_id , $criteria)
+
+List business unit sectors.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersBusinessunitsSectorsIndex($partner_id,  $partner_business_unit_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsSectorsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\SectorResult**](../Model/SectorResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsSectorsUpdate**
+> \Ageras\Api\PartnerSectorsResource partnersBusinessunitsSectorsUpdate($partner_id,  $partner_business_unit_id , $partner_sectors_resource)
+
+Update partner business unit sectors.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$partner_sectors_resource = new \Ageras\Api\PartnerSectorsResource(); // \Ageras\Api\PartnerSectorsResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsSectorsUpdate($partner_id,  $partner_business_unit_id , $partner_sectors_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsSectorsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **partner_sectors_resource** | [**\Ageras\Api\PartnerSectorsResource**](../Model/\Ageras\Api\PartnerSectorsResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerSectorsResource**](../Model/PartnerSectorsResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsTypesIndex**
+> \Ageras\Api\PartnerBusinessUnitTypeResult partnersBusinessunitsTypesIndex($partner_id,  $partner_business_unit_id , $criteria)
+
+List business unit types.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersBusinessunitsTypesIndex($partner_id,  $partner_business_unit_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsTypesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitTypeResult**](../Model/PartnerBusinessUnitTypeResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsTypesUpdate**
+> \Ageras\Api\PartnerBusinessUnitTypesResource partnersBusinessunitsTypesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_types_resource)
+
+Update partner business unit types.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$partner_business_unit_types_resource = new \Ageras\Api\PartnerBusinessUnitTypesResource(); // \Ageras\Api\PartnerBusinessUnitTypesResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsTypesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_types_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsTypesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **partner_business_unit_types_resource** | [**\Ageras\Api\PartnerBusinessUnitTypesResource**](../Model/\Ageras\Api\PartnerBusinessUnitTypesResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitTypesResource**](../Model/PartnerBusinessUnitTypesResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBusinessunitsUpdate**
+> \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_resource)
+
+Update partner business unit.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
+$partner_business_unit_resource = new \Ageras\Api\PartnerBusinessUnitResource(); // \Ageras\Api\PartnerBusinessUnitResource | 
+
+try {
+    $result = $api_instance->partnersBusinessunitsUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBusinessunitsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_business_unit_id** | **string**|  |
+ **partner_business_unit_resource** | [**\Ageras\Api\PartnerBusinessUnitResource**](../Model/\Ageras\Api\PartnerBusinessUnitResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerBusinessUnitResource**](../Model/PartnerBusinessUnitResource.md)
 
 ### Authorization
 
@@ -2070,6 +2771,172 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersDiscountsCreate**
+> \Ageras\Api\PartnerDiscountResource partnersDiscountsCreate($partner_id , $partner_discount_resource)
+
+Discount for a partner.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_discount_resource = new \Ageras\Api\PartnerDiscountResource(); // \Ageras\Api\PartnerDiscountResource | 
+
+try {
+    $result = $api_instance->partnersDiscountsCreate($partner_id , $partner_discount_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersDiscountsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_discount_resource** | [**\Ageras\Api\PartnerDiscountResource**](../Model/\Ageras\Api\PartnerDiscountResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerDiscountResource**](../Model/PartnerDiscountResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersDiscountsDelete**
+> partnersDiscountsDelete($partner_id,  $partner_package_type_discount_id )
+
+Delete a partner discount
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_package_type_discount_id = "partner_package_type_discount_id_example"; // string | 
+
+try {
+    $api_instance->partnersDiscountsDelete($partner_id,  $partner_package_type_discount_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersDiscountsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_package_type_discount_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersDiscountsIndex**
+> \Ageras\Api\PartnerDiscountResult partnersDiscountsIndex($partner_id , $criteria)
+
+Get partner's discounts.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'is_active' => "is_active_example"; // string | Only include active discounts.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersDiscountsIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersDiscountsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **is_active** | **string**| Only include active discounts. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerDiscountResult**](../Model/PartnerDiscountResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersFeesCreate**
 > \Ageras\Api\PartnerFeeResource partnersFeesCreate($partner_id , $partner_fee_resource)
 
@@ -2327,6 +3194,8 @@ $criteria = [
         'is_public' => false; // bool | Only show partners that are visible to the public
         'package_type' => "package_type_example"; // string | Partner subscription package type
         'segmented_for_lead_id' => 56; // int | Get partners segmented for this lead ID
+        'badge_id' => "badge_id_example"; // string | 
+        'digital_leads' => "digital_leads_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -2363,6 +3232,8 @@ Name | Type | Description  | Notes
  **is_public** | **bool**| Only show partners that are visible to the public | [optional] [default to false]
  **package_type** | **string**| Partner subscription package type | [optional]
  **segmented_for_lead_id** | **int**| Get partners segmented for this lead ID | [optional]
+ **badge_id** | **string**|  | [optional]
+ **digital_leads** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -3268,6 +4139,118 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersSectorsIndex**
+> \Ageras\Api\SectorResult partnersSectorsIndex($partner_id , $criteria)
+
+Get partner sectors.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersSectorsIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSectorsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\SectorResult**](../Model/SectorResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersSectorsUpdate**
+> \Ageras\Api\PartnerSectorsResource partnersSectorsUpdate($partner_id , $partner_sectors_resource)
+
+Update partner sectors.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_sectors_resource = new \Ageras\Api\PartnerSectorsResource(); // \Ageras\Api\PartnerSectorsResource | 
+
+try {
+    $result = $api_instance->partnersSectorsUpdate($partner_id , $partner_sectors_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSectorsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_sectors_resource** | [**\Ageras\Api\PartnerSectorsResource**](../Model/\Ageras\Api\PartnerSectorsResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerSectorsResource**](../Model/PartnerSectorsResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersSubscriptionsActionsCreate**
 > \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
 
@@ -3425,6 +4408,176 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerSubscriptionResult**](../Model/PartnerSubscriptionResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersSubscriptionsPricesCreate**
+> \Ageras\Api\PartnerSubscriptionPriceResource partnersSubscriptionsPricesCreate($partner_id,  $subscription_id , $partner_subscription_price_resource)
+
+Create a new subscription price effective at a specific date
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$subscription_id = "subscription_id_example"; // string | 
+$partner_subscription_price_resource = new \Ageras\Api\PartnerSubscriptionPriceResource(); // \Ageras\Api\PartnerSubscriptionPriceResource | 
+
+try {
+    $result = $api_instance->partnersSubscriptionsPricesCreate($partner_id,  $subscription_id , $partner_subscription_price_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSubscriptionsPricesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **subscription_id** | **string**|  |
+ **partner_subscription_price_resource** | [**\Ageras\Api\PartnerSubscriptionPriceResource**](../Model/\Ageras\Api\PartnerSubscriptionPriceResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerSubscriptionPriceResource**](../Model/PartnerSubscriptionPriceResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersSubscriptionsPricesDelete**
+> partnersSubscriptionsPricesDelete($partner_id,  $subscription_id,  $subscription_price_id )
+
+Delete a future subscription price
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$subscription_id = "subscription_id_example"; // string | 
+$subscription_price_id = "subscription_price_id_example"; // string | 
+
+try {
+    $api_instance->partnersSubscriptionsPricesDelete($partner_id,  $subscription_id,  $subscription_price_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSubscriptionsPricesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **subscription_id** | **string**|  |
+ **subscription_price_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersSubscriptionsPricesIndex**
+> \Ageras\Api\PartnerSubscriptionPriceResult partnersSubscriptionsPricesIndex($partner_id,  $subscription_id , $criteria)
+
+List the subscription's prices.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$subscription_id = "subscription_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersSubscriptionsPricesIndex($partner_id,  $subscription_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersSubscriptionsPricesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **subscription_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerSubscriptionPriceResult**](../Model/PartnerSubscriptionPriceResult.md)
 
 ### Authorization
 

@@ -91,7 +91,9 @@ class LeadResource implements ArrayAccess
         'wants_local_partner' => 'bool',
         'is_digital' => 'bool',
         'email_optin' => 'bool',
-        'actions_info' => '\Ageras\Api\LeadActionsInfoResource'
+        'actions_info' => '\Ageras\Api\LeadActionsInfoResource',
+        'geo_range' => 'int',
+        'primary_sector' => '\Ageras\Api\SectorResource'
     ];
 
     public static function swaggerTypes()
@@ -141,7 +143,9 @@ class LeadResource implements ArrayAccess
         'wants_local_partner' => 'wants_local_partner',
         'is_digital' => 'is_digital',
         'email_optin' => 'email_optin',
-        'actions_info' => 'actions_info'
+        'actions_info' => 'actions_info',
+        'geo_range' => 'geo_range',
+        'primary_sector' => 'primary_sector'
     ];
 
 
@@ -187,7 +191,9 @@ class LeadResource implements ArrayAccess
         'wants_local_partner' => 'setWantsLocalPartner',
         'is_digital' => 'setIsDigital',
         'email_optin' => 'setEmailOptin',
-        'actions_info' => 'setActionsInfo'
+        'actions_info' => 'setActionsInfo',
+        'geo_range' => 'setGeoRange',
+        'primary_sector' => 'setPrimarySector'
     ];
 
 
@@ -233,7 +239,9 @@ class LeadResource implements ArrayAccess
         'wants_local_partner' => 'getWantsLocalPartner',
         'is_digital' => 'getIsDigital',
         'email_optin' => 'getEmailOptin',
-        'actions_info' => 'getActionsInfo'
+        'actions_info' => 'getActionsInfo',
+        'geo_range' => 'getGeoRange',
+        'primary_sector' => 'getPrimarySector'
     ];
 
     public static function attributeMap()
@@ -331,6 +339,8 @@ class LeadResource implements ArrayAccess
         $this->container['is_digital'] = isset($data['is_digital']) ? $data['is_digital'] : false;
         $this->container['email_optin'] = isset($data['email_optin']) ? $data['email_optin'] : false;
         $this->container['actions_info'] = isset($data['actions_info']) ? $data['actions_info'] : null;
+        $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
+        $this->container['primary_sector'] = isset($data['primary_sector']) ? $data['primary_sector'] : null;
     }
 
     /**
@@ -1165,6 +1175,48 @@ class LeadResource implements ArrayAccess
     public function setActionsInfo($actions_info)
     {
         $this->container['actions_info'] = $actions_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo_range
+     * @return int
+     */
+    public function getGeoRange()
+    {
+        return $this->container['geo_range'];
+    }
+
+    /**
+     * Sets geo_range
+     * @param int $geo_range Range the lead is happy to travel to reach a partner.
+     * @return $this
+     */
+    public function setGeoRange($geo_range)
+    {
+        $this->container['geo_range'] = $geo_range;
+
+        return $this;
+    }
+
+    /**
+     * Gets primary_sector
+     * @return \Ageras\Api\SectorResource
+     */
+    public function getPrimarySector()
+    {
+        return $this->container['primary_sector'];
+    }
+
+    /**
+     * Sets primary_sector
+     * @param \Ageras\Api\SectorResource $primary_sector
+     * @return $this
+     */
+    public function setPrimarySector($primary_sector)
+    {
+        $this->container['primary_sector'] = $primary_sector;
 
         return $this;
     }

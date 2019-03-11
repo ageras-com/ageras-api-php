@@ -121,6 +121,138 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBusinessunitsCreate
+     *
+     * Create partner business unit..
+     *
+     */
+    public function testPartnersBusinessunitsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsDelete
+     *
+     * Delete a partner business unit.
+     *
+     */
+    public function testPartnersBusinessunitsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsGet
+     *
+     * Get a single partner business unit..
+     *
+     */
+    public function testPartnersBusinessunitsGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsIndex
+     *
+     * List partner business units..
+     *
+     */
+    public function testPartnersBusinessunitsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsIndustriesIndex
+     *
+     * List business unit industries..
+     *
+     */
+    public function testPartnersBusinessunitsIndustriesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsIndustriesUpdate
+     *
+     * Update business unit industries..
+     *
+     */
+    public function testPartnersBusinessunitsIndustriesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsRevenuerangesCreate
+     *
+     * Create a business unit revenue range..
+     *
+     */
+    public function testPartnersBusinessunitsRevenuerangesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsSectorsIndex
+     *
+     * List business unit sectors..
+     *
+     */
+    public function testPartnersBusinessunitsSectorsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsSectorsUpdate
+     *
+     * Update partner business unit sectors..
+     *
+     */
+    public function testPartnersBusinessunitsSectorsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsTypesIndex
+     *
+     * List business unit types..
+     *
+     */
+    public function testPartnersBusinessunitsTypesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsTypesUpdate
+     *
+     * Update partner business unit types..
+     *
+     */
+    public function testPartnersBusinessunitsTypesUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsUpdate
+     *
+     * Update partner business unit..
+     *
+     */
+    public function testPartnersBusinessunitsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersCertificationsCreate
      *
      * Attach certification to partner..
@@ -462,6 +594,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersDiscountsCreate
+     *
+     * Discount for a partner..
+     *
+     */
+    public function testPartnersDiscountsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDiscountsDelete
+     *
+     * Delete a partner discount.
+     *
+     */
+    public function testPartnersDiscountsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersDiscountsIndex
+     *
+     * Get partner's discounts..
+     *
+     */
+    public function testPartnersDiscountsIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersFeesCreate
      *
      * Create partner fee.
@@ -693,6 +858,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersSectorsIndex
+     *
+     * Get partner sectors..
+     *
+     */
+    public function testPartnersSectorsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSectorsUpdate
+     *
+     * Update partner sectors..
+     *
+     */
+    public function testPartnersSectorsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersSubscriptionsActionsCreate
      *
      * Cancel subscription..
@@ -721,6 +908,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersSubscriptionsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPricesCreate
+     *
+     * Create a new subscription price effective at a specific date.
+     *
+     */
+    public function testPartnersSubscriptionsPricesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPricesDelete
+     *
+     * Delete a future subscription price.
+     *
+     */
+    public function testPartnersSubscriptionsPricesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPricesIndex
+     *
+     * List the subscription's prices..
+     *
+     */
+    public function testPartnersSubscriptionsPricesIndex()
     {
 
     }

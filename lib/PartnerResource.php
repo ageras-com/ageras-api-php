@@ -90,7 +90,12 @@ class PartnerResource implements ArrayAccess
         'preferred_payment_solution' => '\Ageras\Api\PaymentSolutionResource',
         'payment_schedule' => 'string',
         'attributes' => '\Ageras\Api\PartnerAttributeResource[]',
-        'desired_revenue_range' => '\Ageras\Api\PartnerRevenueRangeResource'
+        'desired_revenue_range' => '\Ageras\Api\PartnerRevenueRangeResource',
+        'is_pay_to_match' => 'bool',
+        'is_pay_to_quote' => 'bool',
+        'has_marketing_package' => 'bool',
+        'geo_range' => 'int',
+        'badges' => '\Ageras\Api\PartnerBadgeResource[]'
     ];
 
     public static function swaggerTypes()
@@ -139,7 +144,12 @@ class PartnerResource implements ArrayAccess
         'preferred_payment_solution' => 'preferred_payment_solution',
         'payment_schedule' => 'payment_schedule',
         'attributes' => 'attributes',
-        'desired_revenue_range' => 'desired_revenue_range'
+        'desired_revenue_range' => 'desired_revenue_range',
+        'is_pay_to_match' => 'is_pay_to_match',
+        'is_pay_to_quote' => 'is_pay_to_quote',
+        'has_marketing_package' => 'has_marketing_package',
+        'geo_range' => 'geo_range',
+        'badges' => 'badges'
     ];
 
 
@@ -184,7 +194,12 @@ class PartnerResource implements ArrayAccess
         'preferred_payment_solution' => 'setPreferredPaymentSolution',
         'payment_schedule' => 'setPaymentSchedule',
         'attributes' => 'setAttributes',
-        'desired_revenue_range' => 'setDesiredRevenueRange'
+        'desired_revenue_range' => 'setDesiredRevenueRange',
+        'is_pay_to_match' => 'setIsPayToMatch',
+        'is_pay_to_quote' => 'setIsPayToQuote',
+        'has_marketing_package' => 'setHasMarketingPackage',
+        'geo_range' => 'setGeoRange',
+        'badges' => 'setBadges'
     ];
 
 
@@ -229,7 +244,12 @@ class PartnerResource implements ArrayAccess
         'preferred_payment_solution' => 'getPreferredPaymentSolution',
         'payment_schedule' => 'getPaymentSchedule',
         'attributes' => 'getAttributes',
-        'desired_revenue_range' => 'getDesiredRevenueRange'
+        'desired_revenue_range' => 'getDesiredRevenueRange',
+        'is_pay_to_match' => 'getIsPayToMatch',
+        'is_pay_to_quote' => 'getIsPayToQuote',
+        'has_marketing_package' => 'getHasMarketingPackage',
+        'geo_range' => 'getGeoRange',
+        'badges' => 'getBadges'
     ];
 
     public static function attributeMap()
@@ -340,6 +360,11 @@ class PartnerResource implements ArrayAccess
         $this->container['payment_schedule'] = isset($data['payment_schedule']) ? $data['payment_schedule'] : 'immediate';
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
         $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
+        $this->container['is_pay_to_match'] = isset($data['is_pay_to_match']) ? $data['is_pay_to_match'] : false;
+        $this->container['is_pay_to_quote'] = isset($data['is_pay_to_quote']) ? $data['is_pay_to_quote'] : false;
+        $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
+        $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
+        $this->container['badges'] = isset($data['badges']) ? $data['badges'] : null;
     }
 
     /**
@@ -1166,6 +1191,111 @@ class PartnerResource implements ArrayAccess
     public function setDesiredRevenueRange($desired_revenue_range)
     {
         $this->container['desired_revenue_range'] = $desired_revenue_range;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_pay_to_match
+     * @return bool
+     */
+    public function getIsPayToMatch()
+    {
+        return $this->container['is_pay_to_match'];
+    }
+
+    /**
+     * Sets is_pay_to_match
+     * @param bool $is_pay_to_match Flag whether partner pays for matches
+     * @return $this
+     */
+    public function setIsPayToMatch($is_pay_to_match)
+    {
+        $this->container['is_pay_to_match'] = $is_pay_to_match;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_pay_to_quote
+     * @return bool
+     */
+    public function getIsPayToQuote()
+    {
+        return $this->container['is_pay_to_quote'];
+    }
+
+    /**
+     * Sets is_pay_to_quote
+     * @param bool $is_pay_to_quote Flag whether partner pays for quotes
+     * @return $this
+     */
+    public function setIsPayToQuote($is_pay_to_quote)
+    {
+        $this->container['is_pay_to_quote'] = $is_pay_to_quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_marketing_package
+     * @return bool
+     */
+    public function getHasMarketingPackage()
+    {
+        return $this->container['has_marketing_package'];
+    }
+
+    /**
+     * Sets has_marketing_package
+     * @param bool $has_marketing_package True, if this partner has a marketing package.
+     * @return $this
+     */
+    public function setHasMarketingPackage($has_marketing_package)
+    {
+        $this->container['has_marketing_package'] = $has_marketing_package;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo_range
+     * @return int
+     */
+    public function getGeoRange()
+    {
+        return $this->container['geo_range'];
+    }
+
+    /**
+     * Sets geo_range
+     * @param int $geo_range Number of kilometres a partner is willing to travel for leads.
+     * @return $this
+     */
+    public function setGeoRange($geo_range)
+    {
+        $this->container['geo_range'] = $geo_range;
+
+        return $this;
+    }
+
+    /**
+     * Gets badges
+     * @return \Ageras\Api\PartnerBadgeResource[]
+     */
+    public function getBadges()
+    {
+        return $this->container['badges'];
+    }
+
+    /**
+     * Sets badges
+     * @param \Ageras\Api\PartnerBadgeResource[] $badges Badges for the partner.
+     * @return $this
+     */
+    public function setBadges($badges)
+    {
+        $this->container['badges'] = $badges;
 
         return $this;
     }

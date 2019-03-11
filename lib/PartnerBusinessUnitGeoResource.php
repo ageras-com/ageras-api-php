@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchResult
+ * PartnerBusinessUnitGeoResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchResult Class Doc Comment
+ * PartnerBusinessUnitGeoResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchResult implements ArrayAccess
+class PartnerBusinessUnitGeoResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,19 +47,18 @@ class MatchResult implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchResult';
+    protected static $swaggerModelName = 'PartnerBusinessUnitGeoResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'limit' => 'int',
-        'pages' => 'int',
-        'total' => 'int',
-        'data' => '\Ageras\Api\MatchResource[]',
-        'did_you_mean' => 'string'
+        'code' => 'string',
+        'address' => 'string',
+        'zip_code' => 'string',
+        'city_name' => 'string',
+        'point' => '\Ageras\Api\LocationGeoPointResource'
     ];
 
     public static function swaggerTypes()
@@ -72,12 +71,11 @@ class MatchResult implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'limit' => 'limit',
-        'pages' => 'pages',
-        'total' => 'total',
-        'data' => 'data',
-        'did_you_mean' => 'didYouMean'
+        'code' => 'code',
+        'address' => 'address',
+        'zip_code' => 'zip_code',
+        'city_name' => 'city_name',
+        'point' => 'point'
     ];
 
 
@@ -86,12 +84,11 @@ class MatchResult implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'limit' => 'setLimit',
-        'pages' => 'setPages',
-        'total' => 'setTotal',
-        'data' => 'setData',
-        'did_you_mean' => 'setDidYouMean'
+        'code' => 'setCode',
+        'address' => 'setAddress',
+        'zip_code' => 'setZipCode',
+        'city_name' => 'setCityName',
+        'point' => 'setPoint'
     ];
 
 
@@ -100,12 +97,11 @@ class MatchResult implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'limit' => 'getLimit',
-        'pages' => 'getPages',
-        'total' => 'getTotal',
-        'data' => 'getData',
-        'did_you_mean' => 'getDidYouMean'
+        'code' => 'getCode',
+        'address' => 'getAddress',
+        'zip_code' => 'getZipCode',
+        'city_name' => 'getCityName',
+        'point' => 'getPoint'
     ];
 
     public static function attributeMap()
@@ -139,12 +135,11 @@ class MatchResult implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
+        $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
+        $this->container['point'] = isset($data['point']) ? $data['point'] : null;
     }
 
     /**
@@ -173,127 +168,106 @@ class MatchResult implements ArrayAccess
 
 
     /**
-     * Gets page
-     * @return int
-     */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-     * Sets page
-     * @param int $page Current Page.
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
-     * @return int
-     */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-     * Sets limit
-     * @param int $limit Number of results per page.
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets pages
-     * @return int
-     */
-    public function getPages()
-    {
-        return $this->container['pages'];
-    }
-
-    /**
-     * Sets pages
-     * @param int $pages Number of pages.
-     * @return $this
-     */
-    public function setPages($pages)
-    {
-        $this->container['pages'] = $pages;
-
-        return $this;
-    }
-
-    /**
-     * Gets total
-     * @return int
-     */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-     * Sets total
-     * @param int $total Total number of results.
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     * @return \Ageras\Api\MatchResource[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \Ageras\Api\MatchResource[] $data The result.
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets did_you_mean
+     * Gets code
      * @return string
      */
-    public function getDidYouMean()
+    public function getCode()
     {
-        return $this->container['did_you_mean'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets did_you_mean
-     * @param string $did_you_mean Options for related or alternative searches.
+     * Sets code
+     * @param string $code Geo code.
      * @return $this
      */
-    public function setDidYouMean($did_you_mean)
+    public function setCode($code)
     {
-        $this->container['did_you_mean'] = $did_you_mean;
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     * @param string $address Street address.
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets zip_code
+     * @return string
+     */
+    public function getZipCode()
+    {
+        return $this->container['zip_code'];
+    }
+
+    /**
+     * Sets zip_code
+     * @param string $zip_code Zip Code.
+     * @return $this
+     */
+    public function setZipCode($zip_code)
+    {
+        $this->container['zip_code'] = $zip_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets city_name
+     * @return string
+     */
+    public function getCityName()
+    {
+        return $this->container['city_name'];
+    }
+
+    /**
+     * Sets city_name
+     * @param string $city_name Name of the city.
+     * @return $this
+     */
+    public function setCityName($city_name)
+    {
+        $this->container['city_name'] = $city_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets point
+     * @return \Ageras\Api\LocationGeoPointResource
+     */
+    public function getPoint()
+    {
+        return $this->container['point'];
+    }
+
+    /**
+     * Sets point
+     * @param \Ageras\Api\LocationGeoPointResource $point
+     * @return $this
+     */
+    public function setPoint($point)
+    {
+        $this->container['point'] = $point;
 
         return $this;
     }

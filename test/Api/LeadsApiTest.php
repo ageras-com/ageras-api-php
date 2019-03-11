@@ -99,6 +99,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsAllocationsCreate
+     *
+     * Allocate partners to a lead..
+     *
+     */
+    public function testLeadsAllocationsCreate()
+    {
+
+    }
+
+    /**
      * Test case for leadsCategoriesIndex
      *
      * Index lead categories ..
@@ -292,6 +303,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLeadsOffersIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotefeesCreate
+     *
+     * Create lead quote_fee..
+     *
+     */
+    public function testLeadsQuotefeesCreate()
     {
 
     }

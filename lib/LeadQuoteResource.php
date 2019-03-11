@@ -58,6 +58,7 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'string',
         'progress' => 'string',
         'created_at' => 'string',
+        'updated_at' => 'string',
         'accepted_at' => 'string',
         'rejected_at' => 'string',
         'paid_at' => 'string',
@@ -82,7 +83,8 @@ class LeadQuoteResource implements ArrayAccess
         'revenue_share_subsequent_years_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'is_below_minimum_amount' => 'bool',
         'accepted_by_actioner' => '\Ageras\Api\ActionerResource',
-        'lead_products' => '\Ageras\Api\LeadProductResource[]'
+        'lead_products' => '\Ageras\Api\LeadProductResource[]',
+        'quote_fee_amount_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -99,6 +101,7 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'status',
         'progress' => 'progress',
         'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
         'accepted_at' => 'accepted_at',
         'rejected_at' => 'rejected_at',
         'paid_at' => 'paid_at',
@@ -123,7 +126,8 @@ class LeadQuoteResource implements ArrayAccess
         'revenue_share_subsequent_years_amount_excl_vat' => 'revenue_share_subsequent_years_amount_excl_vat',
         'is_below_minimum_amount' => 'is_below_minimum_amount',
         'accepted_by_actioner' => 'accepted_by_actioner',
-        'lead_products' => 'lead_products'
+        'lead_products' => 'lead_products',
+        'quote_fee_amount_excl_vat' => 'quote_fee_amount_excl_vat'
     ];
 
 
@@ -136,6 +140,7 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'setStatus',
         'progress' => 'setProgress',
         'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
         'accepted_at' => 'setAcceptedAt',
         'rejected_at' => 'setRejectedAt',
         'paid_at' => 'setPaidAt',
@@ -160,7 +165,8 @@ class LeadQuoteResource implements ArrayAccess
         'revenue_share_subsequent_years_amount_excl_vat' => 'setRevenueShareSubsequentYearsAmountExclVat',
         'is_below_minimum_amount' => 'setIsBelowMinimumAmount',
         'accepted_by_actioner' => 'setAcceptedByActioner',
-        'lead_products' => 'setLeadProducts'
+        'lead_products' => 'setLeadProducts',
+        'quote_fee_amount_excl_vat' => 'setQuoteFeeAmountExclVat'
     ];
 
 
@@ -173,6 +179,7 @@ class LeadQuoteResource implements ArrayAccess
         'status' => 'getStatus',
         'progress' => 'getProgress',
         'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
         'accepted_at' => 'getAcceptedAt',
         'rejected_at' => 'getRejectedAt',
         'paid_at' => 'getPaidAt',
@@ -197,7 +204,8 @@ class LeadQuoteResource implements ArrayAccess
         'revenue_share_subsequent_years_amount_excl_vat' => 'getRevenueShareSubsequentYearsAmountExclVat',
         'is_below_minimum_amount' => 'getIsBelowMinimumAmount',
         'accepted_by_actioner' => 'getAcceptedByActioner',
-        'lead_products' => 'getLeadProducts'
+        'lead_products' => 'getLeadProducts',
+        'quote_fee_amount_excl_vat' => 'getQuoteFeeAmountExclVat'
     ];
 
     public static function attributeMap()
@@ -277,6 +285,7 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : 'new';
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : 'unknown';
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
         $this->container['rejected_at'] = isset($data['rejected_at']) ? $data['rejected_at'] : null;
         $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
@@ -302,6 +311,7 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['is_below_minimum_amount'] = isset($data['is_below_minimum_amount']) ? $data['is_below_minimum_amount'] : false;
         $this->container['accepted_by_actioner'] = isset($data['accepted_by_actioner']) ? $data['accepted_by_actioner'] : null;
         $this->container['lead_products'] = isset($data['lead_products']) ? $data['lead_products'] : null;
+        $this->container['quote_fee_amount_excl_vat'] = isset($data['quote_fee_amount_excl_vat']) ? $data['quote_fee_amount_excl_vat'] : null;
     }
 
     /**
@@ -435,6 +445,27 @@ class LeadQuoteResource implements ArrayAccess
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at When the quote was updated
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
@@ -960,6 +991,27 @@ class LeadQuoteResource implements ArrayAccess
     public function setLeadProducts($lead_products)
     {
         $this->container['lead_products'] = $lead_products;
+
+        return $this;
+    }
+
+    /**
+     * Gets quote_fee_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getQuoteFeeAmountExclVat()
+    {
+        return $this->container['quote_fee_amount_excl_vat'];
+    }
+
+    /**
+     * Sets quote_fee_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $quote_fee_amount_excl_vat
+     * @return $this
+     */
+    public function setQuoteFeeAmountExclVat($quote_fee_amount_excl_vat)
+    {
+        $this->container['quote_fee_amount_excl_vat'] = $quote_fee_amount_excl_vat;
 
         return $this;
     }

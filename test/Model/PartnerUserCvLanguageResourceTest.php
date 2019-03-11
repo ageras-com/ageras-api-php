@@ -91,17 +91,9 @@ class PartnerUserCvLanguageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "language_id"
+     * Test attribute "identifier"
      */
-    public function testPropertyLanguageId()
-    {
-
-    }
-
-    /**
-     * Test attribute "language_name"
-     */
-    public function testPropertyLanguageName()
+    public function testPropertyIdentifier()
     {
 
     }
@@ -115,9 +107,9 @@ class PartnerUserCvLanguageResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "iso_code"
+     * Test attribute "name"
      */
-    public function testPropertyIsoCode()
+    public function testPropertyName()
     {
 
     }

@@ -188,6 +188,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'geo_code' => string,
      *    'invoice_number' => string,
+     *    'has_subscription_line_item' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -215,6 +216,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'geo_code' => string,
      *    'invoice_number' => string,
+     *    'has_subscription_line_item' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -267,6 +269,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['invoice_number'])) {
             $queryParams['invoice_number'] = $this->apiClient->getSerializer()->toQueryValue($criteria['invoice_number']);
+        }
+        // query params
+        if (isset($criteria['has_subscription_line_item'])) {
+            $queryParams['has_subscription_line_item'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_subscription_line_item']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -715,6 +721,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'status' => string,
      *    'geo_code' => string,
+     *    'assigned_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -740,6 +747,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'status' => string,
      *    'geo_code' => string,
+     *    'assigned_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -784,6 +792,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['assigned_employee_id'])) {
+            $queryParams['assigned_employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['assigned_employee_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -850,6 +862,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'status' => string,
      *    'geo_code' => string,
+     *    'assigned_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -875,6 +888,7 @@ class InvoicesApi
      *    'sort' => string,
      *    'status' => string,
      *    'geo_code' => string,
+     *    'assigned_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -915,6 +929,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['assigned_employee_id'])) {
+            $queryParams['assigned_employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['assigned_employee_id']);
         }
         // query params
         if (isset($criteria['limit'])) {

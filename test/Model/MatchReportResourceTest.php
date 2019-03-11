@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchResourceTest
+ * MatchReportResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MatchResourceTest Class Doc Comment
+ * MatchReportResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description MatchResource
+// * @description MatchReportResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchResourceTest extends \PHPUnit_Framework_TestCase
+class MatchReportResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,49 +75,41 @@ class MatchResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MatchResource"
+     * Test "MatchReportResource"
      */
-    public function testMatchResource()
+    public function testMatchReportResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "lead_id"
      */
-    public function testPropertyId()
+    public function testPropertyLeadId()
     {
 
     }
 
     /**
-     * Test attribute "partner"
+     * Test attribute "partner_id"
      */
-    public function testPropertyPartner()
+    public function testPropertyPartnerId()
     {
 
     }
 
     /**
-     * Test attribute "lead"
+     * Test attribute "partner_business_unit_id"
      */
-    public function testPropertyLead()
+    public function testPropertyPartnerBusinessUnitId()
     {
 
     }
 
     /**
-     * Test attribute "score"
+     * Test attribute "criterion_reports"
      */
-    public function testPropertyScore()
-    {
-
-    }
-
-    /**
-     * Test attribute "explanation"
-     */
-    public function testPropertyExplanation()
+    public function testPropertyCriterionReports()
     {
 
     }

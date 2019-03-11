@@ -154,4 +154,12 @@ class LeadActionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "partner_id"
+     */
+    public function testPropertyPartnerId()
+    {
+
+    }
+
 }

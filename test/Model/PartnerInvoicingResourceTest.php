@@ -138,4 +138,12 @@ class PartnerInvoicingResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "days_grace"
+     */
+    public function testPropertyDaysGrace()
+    {
+
+    }
+
 }

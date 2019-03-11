@@ -84,6 +84,7 @@ $criteria = [
         'receiver_partner_id' => 56; // int | Id of partner in correspondence.
         'receiver_lead_id' => 56; // int | Id of lead in correspondence
         'contact_archive_id' => 56; // int | Id of contact archive item
+        'sort' => "sent_at"; // string | Sort by.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -105,6 +106,7 @@ Name | Type | Description  | Notes
  **receiver_partner_id** | **int**| Id of partner in correspondence. | [optional]
  **receiver_lead_id** | **int**| Id of lead in correspondence | [optional]
  **contact_archive_id** | **int**| Id of contact archive item | [optional]
+ **sort** | **string**| Sort by. | [optional] [default to sent_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
