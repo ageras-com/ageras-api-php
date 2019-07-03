@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **package_id** | **int** | The package subscribed to. | [optional] 
 **payment_solution** | [**\Ageras\Api\PaymentSolutionResource**](PaymentSolutionResource.md) |  | [optional] 
 **monthly_price** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**starts_at** | **string** | When the package should start. | [optional] 
 **expires_at** | **string** |  | [optional] 
 **canceled_at** | **string** |  | [optional] 
 **created_at** | **string** | Package created at time stamp. | [optional] 

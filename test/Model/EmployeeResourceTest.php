@@ -131,6 +131,14 @@ class EmployeeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "wanted_geo_code"
+     */
+    public function testPropertyWantedGeoCode()
+    {
+
+    }
+
+    /**
      * Test attribute "image"
      */
     public function testPropertyImage()
@@ -190,6 +198,14 @@ class EmployeeResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "is_active"
      */
     public function testPropertyIsActive()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_call_activity"
+     */
+    public function testPropertyCurrentCallActivity()
     {
 
     }

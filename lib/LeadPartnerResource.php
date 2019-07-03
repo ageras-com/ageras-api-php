@@ -67,7 +67,8 @@ class LeadPartnerResource implements ArrayAccess
         'partner_state' => 'string',
         'rating' => '\Ageras\Api\PartnerRatingResource',
         'logo' => 'string',
-        'partner_user' => '\Ageras\Api\LeadPartnerUserResource'
+        'partner_user' => '\Ageras\Api\LeadPartnerUserResource',
+        'subscription_type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -93,7 +94,8 @@ class LeadPartnerResource implements ArrayAccess
         'partner_state' => 'partner_state',
         'rating' => 'rating',
         'logo' => 'logo',
-        'partner_user' => 'partner_user'
+        'partner_user' => 'partner_user',
+        'subscription_type' => 'subscription_type'
     ];
 
 
@@ -115,7 +117,8 @@ class LeadPartnerResource implements ArrayAccess
         'partner_state' => 'setPartnerState',
         'rating' => 'setRating',
         'logo' => 'setLogo',
-        'partner_user' => 'setPartnerUser'
+        'partner_user' => 'setPartnerUser',
+        'subscription_type' => 'setSubscriptionType'
     ];
 
 
@@ -137,7 +140,8 @@ class LeadPartnerResource implements ArrayAccess
         'partner_state' => 'getPartnerState',
         'rating' => 'getRating',
         'logo' => 'getLogo',
-        'partner_user' => 'getPartnerUser'
+        'partner_user' => 'getPartnerUser',
+        'subscription_type' => 'getSubscriptionType'
     ];
 
     public static function attributeMap()
@@ -211,6 +215,7 @@ class LeadPartnerResource implements ArrayAccess
         $this->container['rating'] = isset($data['rating']) ? $data['rating'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['subscription_type'] = isset($data['subscription_type']) ? $data['subscription_type'] : null;
     }
 
     /**
@@ -541,6 +546,27 @@ class LeadPartnerResource implements ArrayAccess
     public function setPartnerUser($partner_user)
     {
         $this->container['partner_user'] = $partner_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_type
+     * @return string
+     */
+    public function getSubscriptionType()
+    {
+        return $this->container['subscription_type'];
+    }
+
+    /**
+     * Sets subscription_type
+     * @param string $subscription_type Partner subscription type
+     * @return $this
+     */
+    public function setSubscriptionType($subscription_type)
+    {
+        $this->container['subscription_type'] = $subscription_type;
 
         return $this;
     }

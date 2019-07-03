@@ -77,6 +77,28 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for organisationEmployeesActionsCreate
+     *
+     * Perform an employee action..
+     *
+     */
+    public function testOrganisationEmployeesActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesActionsCreate2
+     *
+     * Perform an employee action..
+     *
+     */
+    public function testOrganisationEmployeesActionsCreate2()
+    {
+
+    }
+
+    /**
      * Test case for organisationEmployeesGet
      *
      * Get an employee by a given employee id..
@@ -160,6 +182,28 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testOrganisationEmployeesLeadpredictionsCreate2()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesNotificationsIndex
+     *
+     * List employee notifications..
+     *
+     */
+    public function testOrganisationEmployeesNotificationsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for organisationEmployeesNotificationsIndex2
+     *
+     * List employee notifications..
+     *
+     */
+    public function testOrganisationEmployeesNotificationsIndex2()
     {
 
     }

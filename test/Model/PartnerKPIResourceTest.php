@@ -163,9 +163,25 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "accepted_quotes_count_month"
+     */
+    public function testPropertyAcceptedQuotesCountMonth()
+    {
+
+    }
+
+    /**
      * Test attribute "published_quotes_count"
      */
     public function testPropertyPublishedQuotesCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "published_quotes_count_month"
+     */
+    public function testPropertyPublishedQuotesCountMonth()
     {
 
     }
@@ -190,6 +206,38 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "win_ratio"
      */
     public function testPropertyWinRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "allocated_quotes_count"
+     */
+    public function testPropertyAllocatedQuotesCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "allocated_quotes_count_month"
+     */
+    public function testPropertyAllocatedQuotesCountMonth()
+    {
+
+    }
+
+    /**
+     * Test attribute "accepted_quote_amount_excl_vat"
+     */
+    public function testPropertyAcceptedQuoteAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "accepted_quote_amount_excl_vat_month"
+     */
+    public function testPropertyAcceptedQuoteAmountExclVatMonth()
     {
 
     }

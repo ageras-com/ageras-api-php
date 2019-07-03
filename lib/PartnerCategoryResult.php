@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadOfferResult
+ * PartnerCategoryResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * LeadOfferResult Class Doc Comment
+ * PartnerCategoryResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadOfferResult implements ArrayAccess
+class PartnerCategoryResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class LeadOfferResult implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'LeadOfferResult';
+    protected static $swaggerModelName = 'PartnerCategoryResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class LeadOfferResult implements ArrayAccess
         'limit' => 'int',
         'pages' => 'int',
         'total' => 'int',
-        'data' => '\Ageras\Api\LeadOfferResource[]',
+        'data' => '\Ageras\Api\PartnerCategoryResource[]',
         'did_you_mean' => 'string'
     ];
 
@@ -258,7 +258,7 @@ class LeadOfferResult implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Ageras\Api\LeadOfferResource[]
+     * @return \Ageras\Api\PartnerCategoryResource[]
      */
     public function getData()
     {
@@ -267,7 +267,7 @@ class LeadOfferResult implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Ageras\Api\LeadOfferResource[] $data The result.
+     * @param \Ageras\Api\PartnerCategoryResource[] $data The result.
      * @return $this
      */
     public function setData($data)

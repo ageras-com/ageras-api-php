@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **discard_status_note** | **string** | Reason the status was set to what it is. | [optional] 
 **client_decision_postponed_reason** | **string** | Reason for the postponement. | [optional] 
 **partner_id** | **int** |  | [optional] 
+**custom_fee** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

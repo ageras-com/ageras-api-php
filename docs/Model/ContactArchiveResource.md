@@ -10,6 +10,9 @@ Name | Type | Description | Notes
 **geo_code** | **string** | Short geo code. | [optional] 
 **channels** | [**\Ageras\Api\ContactArchiveChannelResource[]**](ContactArchiveChannelResource.md) | Contacting channels | [optional] 
 **lang** | **string** | Language code. | [optional] 
+**employee** | [**\Ageras\Api\ContactArchiveParticipantResource**](ContactArchiveParticipantResource.md) |  | [optional] 
+**lead** | [**\Ageras\Api\ContactArchiveParticipantResource**](ContactArchiveParticipantResource.md) |  | [optional] 
+**partner_user** | [**\Ageras\Api\ContactArchiveParticipantResource**](ContactArchiveParticipantResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

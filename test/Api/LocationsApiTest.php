@@ -98,4 +98,15 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for locationsSegmentationgeoregionsIndex
+     *
+     * List the segmentation geo regions.
+     *
+     */
+    public function testLocationsSegmentationgeoregionsIndex()
+    {
+
+    }
+
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadOfferResourceTest
+ * PartnerAssociationResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadOfferResourceTest Class Doc Comment
+ * PartnerAssociationResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadOfferResource
+// * @description PartnerAssociationResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadOfferResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerAssociationResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class LeadOfferResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadOfferResource"
+     * Test "PartnerAssociationResource"
      */
-    public function testLeadOfferResource()
+    public function testPartnerAssociationResource()
     {
 
     }
@@ -91,73 +91,17 @@ class LeadOfferResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "won"
+     * Test attribute "title"
      */
-    public function testPropertyWon()
+    public function testPropertyTitle()
     {
 
     }
 
     /**
-     * Test attribute "partner_id"
+     * Test attribute "image_logo"
      */
-    public function testPropertyPartnerId()
-    {
-
-    }
-
-    /**
-     * Test attribute "punch_price"
-     */
-    public function testPropertyPunchPrice()
-    {
-
-    }
-
-    /**
-     * Test attribute "method"
-     */
-    public function testPropertyMethod()
-    {
-
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "meeting"
-     */
-    public function testPropertyMeeting()
-    {
-
-    }
-
-    /**
-     * Test attribute "lead_id"
-     */
-    public function testPropertyLeadId()
-    {
-
-    }
-
-    /**
-     * Test attribute "punch_revenue"
-     */
-    public function testPropertyPunchRevenue()
+    public function testPropertyImageLogo()
     {
 
     }

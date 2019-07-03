@@ -253,61 +253,6 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for leadsOffersCreate
-     *
-     * Create a new offer for a given Lead..
-     *
-     */
-    public function testLeadsOffersCreate()
-    {
-
-    }
-
-    /**
-     * Test case for leadsOffersGet
-     *
-     * Get an offer by id..
-     *
-     */
-    public function testLeadsOffersGet()
-    {
-
-    }
-
-    /**
-     * Test case for leadsOffersGet2
-     *
-     * Get an offer by id..
-     *
-     */
-    public function testLeadsOffersGet2()
-    {
-
-    }
-
-    /**
-     * Test case for leadsOffersIndex
-     *
-     * List the offers connected to a given Lead..
-     *
-     */
-    public function testLeadsOffersIndex()
-    {
-
-    }
-
-    /**
-     * Test case for leadsOffersIndex2
-     *
-     * List the offers connected to a given Lead..
-     *
-     */
-    public function testLeadsOffersIndex2()
-    {
-
-    }
-
-    /**
      * Test case for leadsQuotefeesCreate
      *
      * Create lead quote_fee..

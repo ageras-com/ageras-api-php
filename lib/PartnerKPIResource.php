@@ -64,10 +64,16 @@ class PartnerKPIResource implements ArrayAccess
         'revenue_6months' => '\Ageras\Api\AmountResource',
         'revenue_total' => '\Ageras\Api\AmountResource',
         'accepted_quotes_count' => 'int',
+        'accepted_quotes_count_month' => 'int',
         'published_quotes_count' => 'int',
+        'published_quotes_count_month' => 'int',
         'unmatched_count' => 'int',
         'unmatched_percent' => 'float',
-        'win_ratio' => 'float'
+        'win_ratio' => 'float',
+        'allocated_quotes_count' => 'int',
+        'allocated_quotes_count_month' => 'int',
+        'accepted_quote_amount_excl_vat' => 'int',
+        'accepted_quote_amount_excl_vat_month' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -90,10 +96,16 @@ class PartnerKPIResource implements ArrayAccess
         'revenue_6months' => 'revenue_6months',
         'revenue_total' => 'revenue_total',
         'accepted_quotes_count' => 'accepted_quotes_count',
+        'accepted_quotes_count_month' => 'accepted_quotes_count_month',
         'published_quotes_count' => 'published_quotes_count',
+        'published_quotes_count_month' => 'published_quotes_count_month',
         'unmatched_count' => 'unmatched_count',
         'unmatched_percent' => 'unmatched_percent',
-        'win_ratio' => 'win_ratio'
+        'win_ratio' => 'win_ratio',
+        'allocated_quotes_count' => 'allocated_quotes_count',
+        'allocated_quotes_count_month' => 'allocated_quotes_count_month',
+        'accepted_quote_amount_excl_vat' => 'accepted_quote_amount_excl_vat',
+        'accepted_quote_amount_excl_vat_month' => 'accepted_quote_amount_excl_vat_month'
     ];
 
 
@@ -112,10 +124,16 @@ class PartnerKPIResource implements ArrayAccess
         'revenue_6months' => 'setRevenue6months',
         'revenue_total' => 'setRevenueTotal',
         'accepted_quotes_count' => 'setAcceptedQuotesCount',
+        'accepted_quotes_count_month' => 'setAcceptedQuotesCountMonth',
         'published_quotes_count' => 'setPublishedQuotesCount',
+        'published_quotes_count_month' => 'setPublishedQuotesCountMonth',
         'unmatched_count' => 'setUnmatchedCount',
         'unmatched_percent' => 'setUnmatchedPercent',
-        'win_ratio' => 'setWinRatio'
+        'win_ratio' => 'setWinRatio',
+        'allocated_quotes_count' => 'setAllocatedQuotesCount',
+        'allocated_quotes_count_month' => 'setAllocatedQuotesCountMonth',
+        'accepted_quote_amount_excl_vat' => 'setAcceptedQuoteAmountExclVat',
+        'accepted_quote_amount_excl_vat_month' => 'setAcceptedQuoteAmountExclVatMonth'
     ];
 
 
@@ -134,10 +152,16 @@ class PartnerKPIResource implements ArrayAccess
         'revenue_6months' => 'getRevenue6months',
         'revenue_total' => 'getRevenueTotal',
         'accepted_quotes_count' => 'getAcceptedQuotesCount',
+        'accepted_quotes_count_month' => 'getAcceptedQuotesCountMonth',
         'published_quotes_count' => 'getPublishedQuotesCount',
+        'published_quotes_count_month' => 'getPublishedQuotesCountMonth',
         'unmatched_count' => 'getUnmatchedCount',
         'unmatched_percent' => 'getUnmatchedPercent',
-        'win_ratio' => 'getWinRatio'
+        'win_ratio' => 'getWinRatio',
+        'allocated_quotes_count' => 'getAllocatedQuotesCount',
+        'allocated_quotes_count_month' => 'getAllocatedQuotesCountMonth',
+        'accepted_quote_amount_excl_vat' => 'getAcceptedQuoteAmountExclVat',
+        'accepted_quote_amount_excl_vat_month' => 'getAcceptedQuoteAmountExclVatMonth'
     ];
 
     public static function attributeMap()
@@ -181,10 +205,16 @@ class PartnerKPIResource implements ArrayAccess
         $this->container['revenue_6months'] = isset($data['revenue_6months']) ? $data['revenue_6months'] : null;
         $this->container['revenue_total'] = isset($data['revenue_total']) ? $data['revenue_total'] : null;
         $this->container['accepted_quotes_count'] = isset($data['accepted_quotes_count']) ? $data['accepted_quotes_count'] : null;
+        $this->container['accepted_quotes_count_month'] = isset($data['accepted_quotes_count_month']) ? $data['accepted_quotes_count_month'] : null;
         $this->container['published_quotes_count'] = isset($data['published_quotes_count']) ? $data['published_quotes_count'] : null;
+        $this->container['published_quotes_count_month'] = isset($data['published_quotes_count_month']) ? $data['published_quotes_count_month'] : null;
         $this->container['unmatched_count'] = isset($data['unmatched_count']) ? $data['unmatched_count'] : null;
         $this->container['unmatched_percent'] = isset($data['unmatched_percent']) ? $data['unmatched_percent'] : null;
         $this->container['win_ratio'] = isset($data['win_ratio']) ? $data['win_ratio'] : null;
+        $this->container['allocated_quotes_count'] = isset($data['allocated_quotes_count']) ? $data['allocated_quotes_count'] : null;
+        $this->container['allocated_quotes_count_month'] = isset($data['allocated_quotes_count_month']) ? $data['allocated_quotes_count_month'] : null;
+        $this->container['accepted_quote_amount_excl_vat'] = isset($data['accepted_quote_amount_excl_vat']) ? $data['accepted_quote_amount_excl_vat'] : null;
+        $this->container['accepted_quote_amount_excl_vat_month'] = isset($data['accepted_quote_amount_excl_vat_month']) ? $data['accepted_quote_amount_excl_vat_month'] : null;
     }
 
     /**
@@ -423,6 +453,27 @@ class PartnerKPIResource implements ArrayAccess
     }
 
     /**
+     * Gets accepted_quotes_count_month
+     * @return int
+     */
+    public function getAcceptedQuotesCountMonth()
+    {
+        return $this->container['accepted_quotes_count_month'];
+    }
+
+    /**
+     * Sets accepted_quotes_count_month
+     * @param int $accepted_quotes_count_month
+     * @return $this
+     */
+    public function setAcceptedQuotesCountMonth($accepted_quotes_count_month)
+    {
+        $this->container['accepted_quotes_count_month'] = $accepted_quotes_count_month;
+
+        return $this;
+    }
+
+    /**
      * Gets published_quotes_count
      * @return int
      */
@@ -439,6 +490,27 @@ class PartnerKPIResource implements ArrayAccess
     public function setPublishedQuotesCount($published_quotes_count)
     {
         $this->container['published_quotes_count'] = $published_quotes_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets published_quotes_count_month
+     * @return int
+     */
+    public function getPublishedQuotesCountMonth()
+    {
+        return $this->container['published_quotes_count_month'];
+    }
+
+    /**
+     * Sets published_quotes_count_month
+     * @param int $published_quotes_count_month
+     * @return $this
+     */
+    public function setPublishedQuotesCountMonth($published_quotes_count_month)
+    {
+        $this->container['published_quotes_count_month'] = $published_quotes_count_month;
 
         return $this;
     }
@@ -502,6 +574,90 @@ class PartnerKPIResource implements ArrayAccess
     public function setWinRatio($win_ratio)
     {
         $this->container['win_ratio'] = $win_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocated_quotes_count
+     * @return int
+     */
+    public function getAllocatedQuotesCount()
+    {
+        return $this->container['allocated_quotes_count'];
+    }
+
+    /**
+     * Sets allocated_quotes_count
+     * @param int $allocated_quotes_count
+     * @return $this
+     */
+    public function setAllocatedQuotesCount($allocated_quotes_count)
+    {
+        $this->container['allocated_quotes_count'] = $allocated_quotes_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocated_quotes_count_month
+     * @return int
+     */
+    public function getAllocatedQuotesCountMonth()
+    {
+        return $this->container['allocated_quotes_count_month'];
+    }
+
+    /**
+     * Sets allocated_quotes_count_month
+     * @param int $allocated_quotes_count_month
+     * @return $this
+     */
+    public function setAllocatedQuotesCountMonth($allocated_quotes_count_month)
+    {
+        $this->container['allocated_quotes_count_month'] = $allocated_quotes_count_month;
+
+        return $this;
+    }
+
+    /**
+     * Gets accepted_quote_amount_excl_vat
+     * @return int
+     */
+    public function getAcceptedQuoteAmountExclVat()
+    {
+        return $this->container['accepted_quote_amount_excl_vat'];
+    }
+
+    /**
+     * Sets accepted_quote_amount_excl_vat
+     * @param int $accepted_quote_amount_excl_vat
+     * @return $this
+     */
+    public function setAcceptedQuoteAmountExclVat($accepted_quote_amount_excl_vat)
+    {
+        $this->container['accepted_quote_amount_excl_vat'] = $accepted_quote_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets accepted_quote_amount_excl_vat_month
+     * @return int
+     */
+    public function getAcceptedQuoteAmountExclVatMonth()
+    {
+        return $this->container['accepted_quote_amount_excl_vat_month'];
+    }
+
+    /**
+     * Sets accepted_quote_amount_excl_vat_month
+     * @param int $accepted_quote_amount_excl_vat_month
+     * @return $this
+     */
+    public function setAcceptedQuoteAmountExclVatMonth($accepted_quote_amount_excl_vat_month)
+    {
+        $this->container['accepted_quote_amount_excl_vat_month'] = $accepted_quote_amount_excl_vat_month;
 
         return $this;
     }

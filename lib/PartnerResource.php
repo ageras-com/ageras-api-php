@@ -91,11 +91,15 @@ class PartnerResource implements ArrayAccess
         'payment_schedule' => 'string',
         'attributes' => '\Ageras\Api\PartnerAttributeResource[]',
         'desired_revenue_range' => '\Ageras\Api\PartnerRevenueRangeResource',
+        'impressum' => '\Ageras\Api\PartnerImpressumResource',
         'is_pay_to_match' => 'bool',
         'is_pay_to_quote' => 'bool',
         'has_marketing_package' => 'bool',
         'geo_range' => 'int',
-        'badges' => '\Ageras\Api\PartnerBadgeResource[]'
+        'badges' => '\Ageras\Api\PartnerBadgeResource[]',
+        'category' => '\Ageras\Api\PartnerCategoryResource',
+        'features' => 'string',
+        'association' => '\Ageras\Api\PartnerAssociationResource'
     ];
 
     public static function swaggerTypes()
@@ -145,11 +149,15 @@ class PartnerResource implements ArrayAccess
         'payment_schedule' => 'payment_schedule',
         'attributes' => 'attributes',
         'desired_revenue_range' => 'desired_revenue_range',
+        'impressum' => 'impressum',
         'is_pay_to_match' => 'is_pay_to_match',
         'is_pay_to_quote' => 'is_pay_to_quote',
         'has_marketing_package' => 'has_marketing_package',
         'geo_range' => 'geo_range',
-        'badges' => 'badges'
+        'badges' => 'badges',
+        'category' => 'category',
+        'features' => 'features',
+        'association' => 'association'
     ];
 
 
@@ -195,11 +203,15 @@ class PartnerResource implements ArrayAccess
         'payment_schedule' => 'setPaymentSchedule',
         'attributes' => 'setAttributes',
         'desired_revenue_range' => 'setDesiredRevenueRange',
+        'impressum' => 'setImpressum',
         'is_pay_to_match' => 'setIsPayToMatch',
         'is_pay_to_quote' => 'setIsPayToQuote',
         'has_marketing_package' => 'setHasMarketingPackage',
         'geo_range' => 'setGeoRange',
-        'badges' => 'setBadges'
+        'badges' => 'setBadges',
+        'category' => 'setCategory',
+        'features' => 'setFeatures',
+        'association' => 'setAssociation'
     ];
 
 
@@ -245,11 +257,15 @@ class PartnerResource implements ArrayAccess
         'payment_schedule' => 'getPaymentSchedule',
         'attributes' => 'getAttributes',
         'desired_revenue_range' => 'getDesiredRevenueRange',
+        'impressum' => 'getImpressum',
         'is_pay_to_match' => 'getIsPayToMatch',
         'is_pay_to_quote' => 'getIsPayToQuote',
         'has_marketing_package' => 'getHasMarketingPackage',
         'geo_range' => 'getGeoRange',
-        'badges' => 'getBadges'
+        'badges' => 'getBadges',
+        'category' => 'getCategory',
+        'features' => 'getFeatures',
+        'association' => 'getAssociation'
     ];
 
     public static function attributeMap()
@@ -360,11 +376,15 @@ class PartnerResource implements ArrayAccess
         $this->container['payment_schedule'] = isset($data['payment_schedule']) ? $data['payment_schedule'] : 'immediate';
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
         $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
+        $this->container['impressum'] = isset($data['impressum']) ? $data['impressum'] : null;
         $this->container['is_pay_to_match'] = isset($data['is_pay_to_match']) ? $data['is_pay_to_match'] : false;
         $this->container['is_pay_to_quote'] = isset($data['is_pay_to_quote']) ? $data['is_pay_to_quote'] : false;
         $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
         $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
         $this->container['badges'] = isset($data['badges']) ? $data['badges'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
+        $this->container['association'] = isset($data['association']) ? $data['association'] : null;
     }
 
     /**
@@ -1196,6 +1216,27 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets impressum
+     * @return \Ageras\Api\PartnerImpressumResource
+     */
+    public function getImpressum()
+    {
+        return $this->container['impressum'];
+    }
+
+    /**
+     * Sets impressum
+     * @param \Ageras\Api\PartnerImpressumResource $impressum
+     * @return $this
+     */
+    public function setImpressum($impressum)
+    {
+        $this->container['impressum'] = $impressum;
+
+        return $this;
+    }
+
+    /**
      * Gets is_pay_to_match
      * @return bool
      */
@@ -1296,6 +1337,69 @@ class PartnerResource implements ArrayAccess
     public function setBadges($badges)
     {
         $this->container['badges'] = $badges;
+
+        return $this;
+    }
+
+    /**
+     * Gets category
+     * @return \Ageras\Api\PartnerCategoryResource
+     */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+     * Sets category
+     * @param \Ageras\Api\PartnerCategoryResource $category
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Gets features
+     * @return string
+     */
+    public function getFeatures()
+    {
+        return $this->container['features'];
+    }
+
+    /**
+     * Sets features
+     * @param string $features Partner Category Features.
+     * @return $this
+     */
+    public function setFeatures($features)
+    {
+        $this->container['features'] = $features;
+
+        return $this;
+    }
+
+    /**
+     * Gets association
+     * @return \Ageras\Api\PartnerAssociationResource
+     */
+    public function getAssociation()
+    {
+        return $this->container['association'];
+    }
+
+    /**
+     * Sets association
+     * @param \Ageras\Api\PartnerAssociationResource $association
+     * @return $this
+     */
+    public function setAssociation($association)
+    {
+        $this->container['association'] = $association;
 
         return $this;
     }

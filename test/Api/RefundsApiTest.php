@@ -77,28 +77,6 @@ class RefundsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for refundsCreate
-     *
-     * Post refund request..
-     *
-     */
-    public function testRefundsCreate()
-    {
-
-    }
-
-    /**
-     * Test case for refundsCreate2
-     *
-     * Post refund request..
-     *
-     */
-    public function testRefundsCreate2()
-    {
-
-    }
-
-    /**
      * Test case for refundsGet
      *
      * Get a single refund request..

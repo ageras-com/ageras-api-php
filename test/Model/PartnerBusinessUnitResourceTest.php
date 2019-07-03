@@ -91,6 +91,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_id"
+     */
+    public function testPropertyPartnerId()
+    {
+
+    }
+
+    /**
      * Test attribute "partner_user_id"
      */
     public function testPropertyPartnerUserId()
@@ -131,9 +139,65 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "current_allocation"
+     */
+    public function testPropertyCurrentAllocation()
+    {
+
+    }
+
+    /**
+     * Test attribute "accumulated_allocation"
+     */
+    public function testPropertyAccumulatedAllocation()
+    {
+
+    }
+
+    /**
      * Test attribute "desired_revenue_range"
      */
     public function testPropertyDesiredRevenueRange()
+    {
+
+    }
+
+    /**
+     * Test attribute "desired_sectors"
+     */
+    public function testPropertyDesiredSectors()
+    {
+
+    }
+
+    /**
+     * Test attribute "desired_types"
+     */
+    public function testPropertyDesiredTypes()
+    {
+
+    }
+
+    /**
+     * Test attribute "desired_industries"
+     */
+    public function testPropertyDesiredIndustries()
+    {
+
+    }
+
+    /**
+     * Test attribute "employee"
+     */
+    public function testPropertyEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner"
+     */
+    public function testPropertyPartner()
     {
 
     }

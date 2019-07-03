@@ -59,6 +59,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'int',
         'payment_solution' => '\Ageras\Api\PaymentSolutionResource',
         'monthly_price' => '\Ageras\Api\AmountResource',
+        'starts_at' => 'string',
         'expires_at' => 'string',
         'canceled_at' => 'string',
         'created_at' => 'string',
@@ -81,6 +82,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'package_id',
         'payment_solution' => 'payment_solution',
         'monthly_price' => 'monthly_price',
+        'starts_at' => 'starts_at',
         'expires_at' => 'expires_at',
         'canceled_at' => 'canceled_at',
         'created_at' => 'created_at',
@@ -99,6 +101,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'setPackageId',
         'payment_solution' => 'setPaymentSolution',
         'monthly_price' => 'setMonthlyPrice',
+        'starts_at' => 'setStartsAt',
         'expires_at' => 'setExpiresAt',
         'canceled_at' => 'setCanceledAt',
         'created_at' => 'setCreatedAt',
@@ -117,6 +120,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'getPackageId',
         'payment_solution' => 'getPaymentSolution',
         'monthly_price' => 'getMonthlyPrice',
+        'starts_at' => 'getStartsAt',
         'expires_at' => 'getExpiresAt',
         'canceled_at' => 'getCanceledAt',
         'created_at' => 'getCreatedAt',
@@ -160,6 +164,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         $this->container['package_id'] = isset($data['package_id']) ? $data['package_id'] : null;
         $this->container['payment_solution'] = isset($data['payment_solution']) ? $data['payment_solution'] : null;
         $this->container['monthly_price'] = isset($data['monthly_price']) ? $data['monthly_price'] : null;
+        $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['canceled_at'] = isset($data['canceled_at']) ? $data['canceled_at'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
@@ -293,6 +298,27 @@ class PartnerSubscriptionResource implements ArrayAccess
     public function setMonthlyPrice($monthly_price)
     {
         $this->container['monthly_price'] = $monthly_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets starts_at
+     * @return string
+     */
+    public function getStartsAt()
+    {
+        return $this->container['starts_at'];
+    }
+
+    /**
+     * Sets starts_at
+     * @param string $starts_at When the package should start.
+     * @return $this
+     */
+    public function setStartsAt($starts_at)
+    {
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }

@@ -56,8 +56,8 @@ class LeadRequirementsResource implements ArrayAccess
     protected static $swaggerTypes = [
         'local_partner' => 'string',
         'contact_available_at' => 'string',
-        'contact_by_phone' => 'string',
-        'contact_by_email' => 'string'
+        'contact_by_phone' => 'bool',
+        'contact_by_email' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -133,8 +133,8 @@ class LeadRequirementsResource implements ArrayAccess
     {
         $this->container['local_partner'] = isset($data['local_partner']) ? $data['local_partner'] : null;
         $this->container['contact_available_at'] = isset($data['contact_available_at']) ? $data['contact_available_at'] : null;
-        $this->container['contact_by_phone'] = isset($data['contact_by_phone']) ? $data['contact_by_phone'] : null;
-        $this->container['contact_by_email'] = isset($data['contact_by_email']) ? $data['contact_by_email'] : null;
+        $this->container['contact_by_phone'] = isset($data['contact_by_phone']) ? $data['contact_by_phone'] : false;
+        $this->container['contact_by_email'] = isset($data['contact_by_email']) ? $data['contact_by_email'] : false;
     }
 
     /**
@@ -206,7 +206,7 @@ class LeadRequirementsResource implements ArrayAccess
 
     /**
      * Gets contact_by_phone
-     * @return string
+     * @return bool
      */
     public function getContactByPhone()
     {
@@ -215,7 +215,7 @@ class LeadRequirementsResource implements ArrayAccess
 
     /**
      * Sets contact_by_phone
-     * @param string $contact_by_phone Should the lead be contacted by phone?
+     * @param bool $contact_by_phone Should the lead be contacted by phone?
      * @return $this
      */
     public function setContactByPhone($contact_by_phone)
@@ -227,7 +227,7 @@ class LeadRequirementsResource implements ArrayAccess
 
     /**
      * Gets contact_by_email
-     * @return string
+     * @return bool
      */
     public function getContactByEmail()
     {
@@ -236,7 +236,7 @@ class LeadRequirementsResource implements ArrayAccess
 
     /**
      * Sets contact_by_email
-     * @param string $contact_by_email Should the lead the contacted by email?
+     * @param bool $contact_by_email Should the lead the contacted by email?
      * @return $this
      */
     public function setContactByEmail($contact_by_email)

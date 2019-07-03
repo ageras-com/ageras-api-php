@@ -379,6 +379,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "impressum"
+     */
+    public function testPropertyImpressum()
+    {
+
+    }
+
+    /**
      * Test attribute "is_pay_to_match"
      */
     public function testPropertyIsPayToMatch()
@@ -414,6 +422,30 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "badges"
      */
     public function testPropertyBadges()
+    {
+
+    }
+
+    /**
+     * Test attribute "category"
+     */
+    public function testPropertyCategory()
+    {
+
+    }
+
+    /**
+     * Test attribute "features"
+     */
+    public function testPropertyFeatures()
+    {
+
+    }
+
+    /**
+     * Test attribute "association"
+     */
+    public function testPropertyAssociation()
     {
 
     }

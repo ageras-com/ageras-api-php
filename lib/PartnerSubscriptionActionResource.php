@@ -108,6 +108,7 @@ class PartnerSubscriptionActionResource implements ArrayAccess
     }
 
     const ACTION_CANCEL = 'cancel';
+    const ACTION_CANCEL_WITH_CANCELLATION_PERIOD = 'cancel_with_cancellation_period';
     
 
     
@@ -119,6 +120,7 @@ class PartnerSubscriptionActionResource implements ArrayAccess
     {
         return [
             self::ACTION_CANCEL,
+            self::ACTION_CANCEL_WITH_CANCELLATION_PERIOD,
         ];
     }
     
@@ -148,9 +150,9 @@ class PartnerSubscriptionActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["cancel"];
+        $allowed_values = ["cancel", "cancel_with_cancellation_period"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'cancel'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'cancel', 'cancel_with_cancellation_period'.";
         }
 
         return $invalid_properties;
@@ -165,7 +167,7 @@ class PartnerSubscriptionActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["cancel"];
+        $allowed_values = ["cancel", "cancel_with_cancellation_period"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -210,9 +212,9 @@ class PartnerSubscriptionActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('cancel');
+        $allowed_values = array('cancel', 'cancel_with_cancellation_period');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'cancel'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'cancel', 'cancel_with_cancellation_period'");
         }
         $this->container['action'] = $action;
 

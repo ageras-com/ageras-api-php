@@ -56,7 +56,10 @@ class ContactArchiveChannelResource implements ArrayAccess
     protected static $swaggerTypes = [
         'type' => 'string',
         'status' => 'string',
-        'title' => 'string'
+        'status_updated_at' => 'string',
+        'title' => 'string',
+        'receiver_email_address' => 'string',
+        'receiver_phone_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +74,10 @@ class ContactArchiveChannelResource implements ArrayAccess
     protected static $attributeMap = [
         'type' => 'type',
         'status' => 'status',
-        'title' => 'title'
+        'status_updated_at' => 'status_updated_at',
+        'title' => 'title',
+        'receiver_email_address' => 'receiver_email_address',
+        'receiver_phone_number' => 'receiver_phone_number'
     ];
 
 
@@ -82,7 +88,10 @@ class ContactArchiveChannelResource implements ArrayAccess
     protected static $setters = [
         'type' => 'setType',
         'status' => 'setStatus',
-        'title' => 'setTitle'
+        'status_updated_at' => 'setStatusUpdatedAt',
+        'title' => 'setTitle',
+        'receiver_email_address' => 'setReceiverEmailAddress',
+        'receiver_phone_number' => 'setReceiverPhoneNumber'
     ];
 
 
@@ -93,7 +102,10 @@ class ContactArchiveChannelResource implements ArrayAccess
     protected static $getters = [
         'type' => 'getType',
         'status' => 'getStatus',
-        'title' => 'getTitle'
+        'status_updated_at' => 'getStatusUpdatedAt',
+        'title' => 'getTitle',
+        'receiver_email_address' => 'getReceiverEmailAddress',
+        'receiver_phone_number' => 'getReceiverPhoneNumber'
     ];
 
     public static function attributeMap()
@@ -145,7 +157,10 @@ class ContactArchiveChannelResource implements ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['status_updated_at'] = isset($data['status_updated_at']) ? $data['status_updated_at'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['receiver_email_address'] = isset($data['receiver_email_address']) ? $data['receiver_email_address'] : null;
+        $this->container['receiver_phone_number'] = isset($data['receiver_phone_number']) ? $data['receiver_phone_number'] : null;
     }
 
     /**
@@ -229,6 +244,27 @@ class ContactArchiveChannelResource implements ArrayAccess
     }
 
     /**
+     * Gets status_updated_at
+     * @return string
+     */
+    public function getStatusUpdatedAt()
+    {
+        return $this->container['status_updated_at'];
+    }
+
+    /**
+     * Sets status_updated_at
+     * @param string $status_updated_at When the status was updated.
+     * @return $this
+     */
+    public function setStatusUpdatedAt($status_updated_at)
+    {
+        $this->container['status_updated_at'] = $status_updated_at;
+
+        return $this;
+    }
+
+    /**
      * Gets title
      * @return string
      */
@@ -245,6 +281,48 @@ class ContactArchiveChannelResource implements ArrayAccess
     public function setTitle($title)
     {
         $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets receiver_email_address
+     * @return string
+     */
+    public function getReceiverEmailAddress()
+    {
+        return $this->container['receiver_email_address'];
+    }
+
+    /**
+     * Sets receiver_email_address
+     * @param string $receiver_email_address Email address of the receiver.
+     * @return $this
+     */
+    public function setReceiverEmailAddress($receiver_email_address)
+    {
+        $this->container['receiver_email_address'] = $receiver_email_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets receiver_phone_number
+     * @return string
+     */
+    public function getReceiverPhoneNumber()
+    {
+        return $this->container['receiver_phone_number'];
+    }
+
+    /**
+     * Sets receiver_phone_number
+     * @param string $receiver_phone_number Email address of the receiver.
+     * @return $this
+     */
+    public function setReceiverPhoneNumber($receiver_phone_number)
+    {
+        $this->container['receiver_phone_number'] = $receiver_phone_number;
 
         return $this;
     }

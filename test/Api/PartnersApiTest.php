@@ -121,6 +121,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBusinessunitsAllocationquotasCreate
+     *
+     * Create a lead allocation quota for a business unit..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationquotasCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationquotasDelete
+     *
+     * Delete a lead allocation quota..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationquotasDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationquotasIndex
+     *
+     * List lead allocation quotas..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationquotasIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersBusinessunitsCreate
      *
      * Create partner business unit..
@@ -220,6 +253,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBusinessunitsSegmentationgeoregionsIndex
+     *
+     * List a business unit's segmentation geo regions..
+     *
+     */
+    public function testPartnersBusinessunitsSegmentationgeoregionsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsSegmentationgeoregionsUpdate
+     *
+     * Replace a business unit's segmentation geo regions..
+     *
+     */
+    public function testPartnersBusinessunitsSegmentationgeoregionsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersBusinessunitsTypesIndex
      *
      * List business unit types..
@@ -248,6 +303,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersBusinessunitsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersCategoriesIndex
+     *
+     * List of partner categories..
+     *
+     */
+    public function testPartnersCategoriesIndex()
     {
 
     }
@@ -671,6 +737,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersImpressumsCreate
+     *
+     * Create a partner impressum..
+     *
+     */
+    public function testPartnersImpressumsCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersIndex
      *
      * List Partners..
@@ -721,6 +798,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersIndustriesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersIndustriesUpdate
+     *
+     * Replace partner's industries..
+     *
+     */
+    public function testPartnersIndustriesUpdate()
     {
 
     }
@@ -787,6 +875,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersLeadtypesIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersLeadtypesUpdate
+     *
+     * Replace a partner's lead types..
+     *
+     */
+    public function testPartnersLeadtypesUpdate()
     {
 
     }
@@ -880,6 +979,50 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersSubscriptionagreementsActionsCreate
+     *
+     * Execute an action on a subscription agreement..
+     *
+     */
+    public function testPartnersSubscriptionagreementsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionagreementsCreate
+     *
+     * Create a subscription agreement..
+     *
+     */
+    public function testPartnersSubscriptionagreementsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionagreementsIndex
+     *
+     * List partner subscription agreements..
+     *
+     */
+    public function testPartnersSubscriptionagreementsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionagreementsUpdate
+     *
+     * Update a subscription agreement..
+     *
+     */
+    public function testPartnersSubscriptionagreementsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersSubscriptionsActionsCreate
      *
      * Cancel subscription..
@@ -908,6 +1051,39 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersSubscriptionsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPausesCreate
+     *
+     * Create a subscription pause..
+     *
+     */
+    public function testPartnersSubscriptionsPausesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPausesDelete
+     *
+     * Delete a subscription pause..
+     *
+     */
+    public function testPartnersSubscriptionsPausesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptionsPausesIndex
+     *
+     * List subscription pauses..
+     *
+     */
+    public function testPartnersSubscriptionsPausesIndex()
     {
 
     }

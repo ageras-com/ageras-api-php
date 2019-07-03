@@ -123,6 +123,14 @@ class PartnerSubscriptionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "starts_at"
+     */
+    public function testPropertyStartsAt()
+    {
+
+    }
+
+    /**
      * Test attribute "expires_at"
      */
     public function testPropertyExpiresAt()

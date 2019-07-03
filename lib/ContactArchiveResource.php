@@ -60,7 +60,10 @@ class ContactArchiveResource implements ArrayAccess
         'sent_at' => 'string',
         'geo_code' => 'string',
         'channels' => '\Ageras\Api\ContactArchiveChannelResource[]',
-        'lang' => 'string'
+        'lang' => 'string',
+        'employee' => '\Ageras\Api\ContactArchiveParticipantResource',
+        'lead' => '\Ageras\Api\ContactArchiveParticipantResource',
+        'partner_user' => '\Ageras\Api\ContactArchiveParticipantResource'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +82,10 @@ class ContactArchiveResource implements ArrayAccess
         'sent_at' => 'sent_at',
         'geo_code' => 'geo_code',
         'channels' => 'channels',
-        'lang' => 'lang'
+        'lang' => 'lang',
+        'employee' => 'employee',
+        'lead' => 'lead',
+        'partner_user' => 'partner_user'
     ];
 
 
@@ -94,7 +100,10 @@ class ContactArchiveResource implements ArrayAccess
         'sent_at' => 'setSentAt',
         'geo_code' => 'setGeoCode',
         'channels' => 'setChannels',
-        'lang' => 'setLang'
+        'lang' => 'setLang',
+        'employee' => 'setEmployee',
+        'lead' => 'setLead',
+        'partner_user' => 'setPartnerUser'
     ];
 
 
@@ -109,7 +118,10 @@ class ContactArchiveResource implements ArrayAccess
         'sent_at' => 'getSentAt',
         'geo_code' => 'getGeoCode',
         'channels' => 'getChannels',
-        'lang' => 'getLang'
+        'lang' => 'getLang',
+        'employee' => 'getEmployee',
+        'lead' => 'getLead',
+        'partner_user' => 'getPartnerUser'
     ];
 
     public static function attributeMap()
@@ -150,6 +162,9 @@ class ContactArchiveResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['channels'] = isset($data['channels']) ? $data['channels'] : null;
         $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
+        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
     }
 
     /**
@@ -320,6 +335,69 @@ class ContactArchiveResource implements ArrayAccess
     public function setLang($lang)
     {
         $this->container['lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee
+     * @return \Ageras\Api\ContactArchiveParticipantResource
+     */
+    public function getEmployee()
+    {
+        return $this->container['employee'];
+    }
+
+    /**
+     * Sets employee
+     * @param \Ageras\Api\ContactArchiveParticipantResource $employee
+     * @return $this
+     */
+    public function setEmployee($employee)
+    {
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead
+     * @return \Ageras\Api\ContactArchiveParticipantResource
+     */
+    public function getLead()
+    {
+        return $this->container['lead'];
+    }
+
+    /**
+     * Sets lead
+     * @param \Ageras\Api\ContactArchiveParticipantResource $lead
+     * @return $this
+     */
+    public function setLead($lead)
+    {
+        $this->container['lead'] = $lead;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_user
+     * @return \Ageras\Api\ContactArchiveParticipantResource
+     */
+    public function getPartnerUser()
+    {
+        return $this->container['partner_user'];
+    }
+
+    /**
+     * Sets partner_user
+     * @param \Ageras\Api\ContactArchiveParticipantResource $partner_user
+     * @return $this
+     */
+    public function setPartnerUser($partner_user)
+    {
+        $this->container['partner_user'] = $partner_user;
 
         return $this;
     }

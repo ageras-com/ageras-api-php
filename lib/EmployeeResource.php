@@ -60,6 +60,7 @@ class EmployeeResource implements ArrayAccess
         'title' => 'string',
         'external_job_title' => 'string',
         'geo_code' => 'string',
+        'wanted_geo_code' => 'string',
         'image' => 'string',
         'email' => 'string',
         'phone_work' => 'string',
@@ -67,7 +68,8 @@ class EmployeeResource implements ArrayAccess
         'signature' => '\Ageras\Api\EmployeeSignatureResource',
         'roles' => '\Ageras\Api\EmployeeRoleResource[]',
         'initials' => 'string',
-        'is_active' => 'bool'
+        'is_active' => 'bool',
+        'current_call_activity' => '\Ageras\Api\EmployeeCurrentCallActivityResource'
     ];
 
     public static function swaggerTypes()
@@ -86,6 +88,7 @@ class EmployeeResource implements ArrayAccess
         'title' => 'title',
         'external_job_title' => 'external_job_title',
         'geo_code' => 'geo_code',
+        'wanted_geo_code' => 'wanted_geo_code',
         'image' => 'image',
         'email' => 'email',
         'phone_work' => 'phone_work',
@@ -93,7 +96,8 @@ class EmployeeResource implements ArrayAccess
         'signature' => 'signature',
         'roles' => 'roles',
         'initials' => 'initials',
-        'is_active' => 'is_active'
+        'is_active' => 'is_active',
+        'current_call_activity' => 'current_call_activity'
     ];
 
 
@@ -108,6 +112,7 @@ class EmployeeResource implements ArrayAccess
         'title' => 'setTitle',
         'external_job_title' => 'setExternalJobTitle',
         'geo_code' => 'setGeoCode',
+        'wanted_geo_code' => 'setWantedGeoCode',
         'image' => 'setImage',
         'email' => 'setEmail',
         'phone_work' => 'setPhoneWork',
@@ -115,7 +120,8 @@ class EmployeeResource implements ArrayAccess
         'signature' => 'setSignature',
         'roles' => 'setRoles',
         'initials' => 'setInitials',
-        'is_active' => 'setIsActive'
+        'is_active' => 'setIsActive',
+        'current_call_activity' => 'setCurrentCallActivity'
     ];
 
 
@@ -130,6 +136,7 @@ class EmployeeResource implements ArrayAccess
         'title' => 'getTitle',
         'external_job_title' => 'getExternalJobTitle',
         'geo_code' => 'getGeoCode',
+        'wanted_geo_code' => 'getWantedGeoCode',
         'image' => 'getImage',
         'email' => 'getEmail',
         'phone_work' => 'getPhoneWork',
@@ -137,7 +144,8 @@ class EmployeeResource implements ArrayAccess
         'signature' => 'getSignature',
         'roles' => 'getRoles',
         'initials' => 'getInitials',
-        'is_active' => 'getIsActive'
+        'is_active' => 'getIsActive',
+        'current_call_activity' => 'getCurrentCallActivity'
     ];
 
     public static function attributeMap()
@@ -177,6 +185,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['external_job_title'] = isset($data['external_job_title']) ? $data['external_job_title'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['wanted_geo_code'] = isset($data['wanted_geo_code']) ? $data['wanted_geo_code'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phone_work'] = isset($data['phone_work']) ? $data['phone_work'] : null;
@@ -185,6 +194,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
+        $this->container['current_call_activity'] = isset($data['current_call_activity']) ? $data['current_call_activity'] : null;
     }
 
     /**
@@ -334,6 +344,27 @@ class EmployeeResource implements ArrayAccess
     public function setGeoCode($geo_code)
     {
         $this->container['geo_code'] = $geo_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets wanted_geo_code
+     * @return string
+     */
+    public function getWantedGeoCode()
+    {
+        return $this->container['wanted_geo_code'];
+    }
+
+    /**
+     * Sets wanted_geo_code
+     * @param string $wanted_geo_code Wanted geo code.
+     * @return $this
+     */
+    public function setWantedGeoCode($wanted_geo_code)
+    {
+        $this->container['wanted_geo_code'] = $wanted_geo_code;
 
         return $this;
     }
@@ -502,6 +533,27 @@ class EmployeeResource implements ArrayAccess
     public function setIsActive($is_active)
     {
         $this->container['is_active'] = $is_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_call_activity
+     * @return \Ageras\Api\EmployeeCurrentCallActivityResource
+     */
+    public function getCurrentCallActivity()
+    {
+        return $this->container['current_call_activity'];
+    }
+
+    /**
+     * Sets current_call_activity
+     * @param \Ageras\Api\EmployeeCurrentCallActivityResource $current_call_activity
+     * @return $this
+     */
+    public function setCurrentCallActivity($current_call_activity)
+    {
+        $this->container['current_call_activity'] = $current_call_activity;
 
         return $this;
     }

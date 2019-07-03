@@ -99,9 +99,33 @@ class ContactArchiveChannelResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status_updated_at"
+     */
+    public function testPropertyStatusUpdatedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()
+    {
+
+    }
+
+    /**
+     * Test attribute "receiver_email_address"
+     */
+    public function testPropertyReceiverEmailAddress()
+    {
+
+    }
+
+    /**
+     * Test attribute "receiver_phone_number"
+     */
+    public function testPropertyReceiverPhoneNumber()
     {
 
     }

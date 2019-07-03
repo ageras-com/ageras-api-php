@@ -222,6 +222,8 @@ class LeadsApi
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
      *    'latest_called_at_before' => string,
+     *    'segmentation_criteria' => string,
+     *    'segmented_for_partner_business_unit_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -276,6 +278,8 @@ class LeadsApi
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
      *    'latest_called_at_before' => string,
+     *    'segmentation_criteria' => string,
+     *    'segmented_for_partner_business_unit_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -436,6 +440,14 @@ class LeadsApi
         // query params
         if (isset($criteria['latest_called_at_before'])) {
             $queryParams['latest_called_at_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['latest_called_at_before']);
+        }
+        // query params
+        if (isset($criteria['segmentation_criteria'])) {
+            $queryParams['segmentation_criteria'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmentation_criteria']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_partner_business_unit_id'])) {
+            $queryParams['segmented_for_partner_business_unit_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_business_unit_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1688,6 +1700,8 @@ class LeadsApi
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
      *    'latest_called_at_before' => string,
+     *    'segmentation_criteria' => string,
+     *    'segmented_for_partner_business_unit_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1742,6 +1756,8 @@ class LeadsApi
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
      *    'latest_called_at_before' => string,
+     *    'segmentation_criteria' => string,
+     *    'segmented_for_partner_business_unit_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1904,6 +1920,14 @@ class LeadsApi
             $queryParams['latest_called_at_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['latest_called_at_before']);
         }
         // query params
+        if (isset($criteria['segmentation_criteria'])) {
+            $queryParams['segmentation_criteria'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmentation_criteria']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_partner_business_unit_id'])) {
+            $queryParams['segmented_for_partner_business_unit_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_business_unit_id']);
+        }
+        // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
         }
@@ -2042,534 +2066,6 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation leadsOffersCreate
-     *
-     * Create a new offer for a given Lead.
-     *
-     * @param string $lead_id 
-     * @param \Ageras\Api\LeadOfferResource $lead_offer_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadOfferResource
-     */
-    public function leadsOffersCreate($lead_id , $lead_offer_resource)
-    {
-        list($response) = $this->leadsOffersCreateWithHttpInfo($lead_id, $lead_offer_resource);
-        return $response;
-    }
-
-    /**
-     * Operation leadsOffersCreateWithHttpInfo
-     *
-     * Create a new offer for a given Lead.
-     *
-     * @param string $lead_id 
-     * @param \Ageras\Api\LeadOfferResource $lead_offer_resource 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadOfferResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function leadsOffersCreateWithHttpInfo($lead_id , $lead_offer_resource)
-    {
-        // parse inputs
-        $resourcePath = "/leads/{lead_id}/offers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($lead_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "lead_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lead_id),
-                $resourcePath
-            );
-        }
-        // body params
-        $_tempBody = null;
-        if (isset($lead_offer_resource)) {
-            $_tempBody = $lead_offer_resource;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\LeadOfferResource',
-                '/leads/{lead_id}/offers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadOfferResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadOfferResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation leadsOffersGet
-     *
-     * Get an offer by id.
-     *
-     * @param string $lead_offer_id 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadOfferResource
-     */
-    public function leadsOffersGet($lead_offer_id )
-    {
-        list($response) = $this->leadsOffersGetWithHttpInfo($lead_offer_id);
-        return $response;
-    }
-
-    /**
-     * Operation leadsOffersGetWithHttpInfo
-     *
-     * Get an offer by id.
-     *
-     * @param string $lead_offer_id 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadOfferResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function leadsOffersGetWithHttpInfo($lead_offer_id )
-    {
-        // parse inputs
-        $resourcePath = "/leads/offers/{lead_offer_id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($lead_offer_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "lead_offer_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lead_offer_id),
-                $resourcePath
-            );
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\LeadOfferResource',
-                '/leads/offers/{lead_offer_id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadOfferResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadOfferResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation leadsOffersGet2
-     *
-     * Get an offer by id.
-     *
-     * @param string $lead_id 
-     * @param string $lead_offer_id 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadOfferResource
-     */
-    public function leadsOffersGet2($lead_id,  $lead_offer_id )
-    {
-        list($response) = $this->leadsOffersGet2WithHttpInfo($lead_id, $lead_offer_id);
-        return $response;
-    }
-
-    /**
-     * Operation leadsOffersGet2WithHttpInfo
-     *
-     * Get an offer by id.
-     *
-     * @param string $lead_id 
-     * @param string $lead_offer_id 
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadOfferResource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function leadsOffersGet2WithHttpInfo($lead_id,  $lead_offer_id )
-    {
-        // parse inputs
-        $resourcePath = "/leads/{lead_id}/offers/{lead_offer_id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($lead_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "lead_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lead_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($lead_offer_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "lead_offer_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lead_offer_id),
-                $resourcePath
-            );
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\LeadOfferResource',
-                '/leads/{lead_id}/offers/{lead_offer_id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadOfferResource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadOfferResource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation leadsOffersIndex
-     *
-     * List the offers connected to a given Lead.
-     *
-     * @param $criteria = [
-     *    'client_id' => string,
-     *    'lead_id' => string,
-     *    'lead_offer_id' => string,
-     *    'partner_id' => string,
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadOfferResult
-     */
-    public function leadsOffersIndex($criteria = [])
-    {
-        list($response) = $this->leadsOffersIndexWithHttpInfo($criteria);
-        return $response;
-    }
-
-    /**
-     * Operation leadsOffersIndexWithHttpInfo
-     *
-     * List the offers connected to a given Lead.
-     *
-     * @param $criteria = [
-     *    'client_id' => string,
-     *    'lead_id' => string,
-     *    'lead_offer_id' => string,
-     *    'partner_id' => string,
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadOfferResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function leadsOffersIndexWithHttpInfo($criteria = [])
-    {
-        // parse inputs
-        $resourcePath = "/leads/offers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // query params
-        if (isset($criteria['client_id'])) {
-            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
-        }
-        // query params
-        if (isset($criteria['lead_id'])) {
-            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
-        }
-        // query params
-        if (isset($criteria['lead_offer_id'])) {
-            $queryParams['lead_offer_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_offer_id']);
-        }
-        // query params
-        if (isset($criteria['partner_id'])) {
-            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
-        }
-        // query params
-        if (isset($criteria['limit'])) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
-        }
-        // query params
-        if (isset($criteria['page'])) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
-        }
-        // query params
-        if (isset($criteria['query'])) {
-            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\LeadOfferResult',
-                '/leads/offers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadOfferResult', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadOfferResult', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation leadsOffersIndex2
-     *
-     * List the offers connected to a given Lead.
-     *
-     * @param string $lead_id 
-     * @param $criteria = [
-     *    'client_id' => string,
-     *    'lead_offer_id' => string,
-     *    'partner_id' => string,
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadOfferResult
-     */
-    public function leadsOffersIndex2($lead_id , $criteria = [])
-    {
-        list($response) = $this->leadsOffersIndex2WithHttpInfo($lead_id, $criteria);
-        return $response;
-    }
-
-    /**
-     * Operation leadsOffersIndex2WithHttpInfo
-     *
-     * List the offers connected to a given Lead.
-     *
-     * @param string $lead_id 
-     * @param $criteria = [
-     *    'client_id' => string,
-     *    'lead_offer_id' => string,
-     *    'partner_id' => string,
-     *    'limit' => int,
-     *    'page' => int,
-     *    'query' => string,
-     * ]
-     * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadOfferResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function leadsOffersIndex2WithHttpInfo($lead_id , $criteria = [])
-    {
-        // parse inputs
-        $resourcePath = "/leads/{lead_id}/offers";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // query params
-        if (isset($criteria['client_id'])) {
-            $queryParams['client_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['client_id']);
-        }
-        // query params
-        if (isset($criteria['lead_offer_id'])) {
-            $queryParams['lead_offer_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_offer_id']);
-        }
-        // query params
-        if (isset($criteria['partner_id'])) {
-            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
-        }
-        // query params
-        if (isset($criteria['limit'])) {
-            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
-        }
-        // query params
-        if (isset($criteria['page'])) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
-        }
-        // query params
-        if (isset($criteria['query'])) {
-            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
-        }
-        // path params
-        if ($lead_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "lead_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($lead_id),
-                $resourcePath
-            );
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
-        if (strlen($apiKey) !== 0) {
-            $queryParams['token'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
-            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Ageras\Api\LeadOfferResult',
-                '/leads/{lead_id}/offers'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadOfferResult', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadOfferResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

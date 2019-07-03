@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadOfferResultTest
+ * LeadAllocationQuotaResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * LeadOfferResultTest Class Doc Comment
+ * LeadAllocationQuotaResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description LeadOfferResult
+// * @description LeadAllocationQuotaResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadOfferResultTest extends \PHPUnit_Framework_TestCase
+class LeadAllocationQuotaResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,57 +75,49 @@ class LeadOfferResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LeadOfferResult"
+     * Test "LeadAllocationQuotaResource"
      */
-    public function testLeadOfferResult()
+    public function testLeadAllocationQuotaResource()
     {
 
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "id"
      */
-    public function testPropertyPage()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "partner_business_unit_id"
      */
-    public function testPropertyLimit()
+    public function testPropertyPartnerBusinessUnitId()
     {
 
     }
 
     /**
-     * Test attribute "pages"
+     * Test attribute "effective_at"
      */
-    public function testPropertyPages()
+    public function testPropertyEffectiveAt()
     {
 
     }
 
     /**
-     * Test attribute "total"
+     * Test attribute "created_by_employee_id"
      */
-    public function testPropertyTotal()
+    public function testPropertyCreatedByEmployeeId()
     {
 
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "allocation_quota_per_refill"
      */
-    public function testPropertyData()
-    {
-
-    }
-
-    /**
-     * Test attribute "did_you_mean"
-     */
-    public function testPropertyDidYouMean()
+    public function testPropertyAllocationQuotaPerRefill()
     {
 
     }

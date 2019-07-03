@@ -194,4 +194,12 @@ class LeadPartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "subscription_type"
+     */
+    public function testPropertySubscriptionType()
+    {
+
+    }
+
 }

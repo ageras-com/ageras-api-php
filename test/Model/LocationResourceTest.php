@@ -154,4 +154,20 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "region_name"
+     */
+    public function testPropertyRegionName()
+    {
+
+    }
+
+    /**
+     * Test attribute "region_abbreviation"
+     */
+    public function testPropertyRegionAbbreviation()
+    {
+
+    }
+
 }

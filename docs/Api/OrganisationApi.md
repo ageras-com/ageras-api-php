@@ -4,6 +4,8 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**organisationEmployeesActionsCreate**](OrganisationApi.md#organisationEmployeesActionsCreate) | **POST** /organisation/employees/{employee_id}/actions | Perform an employee action.
+[**organisationEmployeesActionsCreate2**](OrganisationApi.md#organisationEmployeesActionsCreate2) | **POST** /organisation/{organisation_id}/employees/{employee_id}/actions | Perform an employee action.
 [**organisationEmployeesGet**](OrganisationApi.md#organisationEmployeesGet) | **GET** /organisation/employees/{employee_id} | Get an employee by a given employee id.
 [**organisationEmployeesGet2**](OrganisationApi.md#organisationEmployeesGet2) | **GET** /organisation/{organisation_id}/employees/{employee_id} | Get an employee by a given employee id.
 [**organisationEmployeesIndex**](OrganisationApi.md#organisationEmployeesIndex) | **GET** /organisation/employees | List and Search for employees working at Ageras.
@@ -12,7 +14,117 @@ Method | HTTP request | Description
 [**organisationEmployeesKpiIndex4**](OrganisationApi.md#organisationEmployeesKpiIndex4) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
 [**organisationEmployeesLeadpredictionsCreate**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate) | **POST** /organisation/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
 [**organisationEmployeesLeadpredictionsCreate2**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate2) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
+[**organisationEmployeesNotificationsIndex**](OrganisationApi.md#organisationEmployeesNotificationsIndex) | **GET** /organisation/employees/{employee_id}/notifications | List employee notifications.
+[**organisationEmployeesNotificationsIndex2**](OrganisationApi.md#organisationEmployeesNotificationsIndex2) | **GET** /organisation/{organisation_id}/employees/{employee_id}/notifications | List employee notifications.
 
+
+# **organisationEmployeesActionsCreate**
+> \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate($employee_id , $employee_action_resource)
+
+Perform an employee action.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$employee_id = "employee_id_example"; // string | 
+$employee_action_resource = new \Ageras\Api\EmployeeActionResource(); // \Ageras\Api\EmployeeActionResource | 
+
+try {
+    $result = $api_instance->organisationEmployeesActionsCreate($employee_id , $employee_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **employee_id** | **string**|  |
+ **employee_action_resource** | [**\Ageras\Api\EmployeeActionResource**](../Model/\Ageras\Api\EmployeeActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **organisationEmployeesActionsCreate2**
+> \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate2($organisation_id,  $employee_id , $employee_action_resource)
+
+Perform an employee action.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$organisation_id = "organisation_id_example"; // string | 
+$employee_id = "employee_id_example"; // string | 
+$employee_action_resource = new \Ageras\Api\EmployeeActionResource(); // \Ageras\Api\EmployeeActionResource | 
+
+try {
+    $result = $api_instance->organisationEmployeesActionsCreate2($organisation_id,  $employee_id , $employee_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesActionsCreate2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_id** | **string**|  |
+ **employee_id** | **string**|  |
+ **employee_action_resource** | [**\Ageras\Api\EmployeeActionResource**](../Model/\Ageras\Api\EmployeeActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\EmployeeResource**](../Model/EmployeeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **organisationEmployeesGet**
 > \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id )
@@ -484,6 +596,130 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\EmployeeLeadPredictionResource**](../Model/EmployeeLeadPredictionResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **organisationEmployeesNotificationsIndex**
+> \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex($employee_id , $criteria)
+
+List employee notifications.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$employee_id = "employee_id_example"; // string | 
+$criteria = [
+        'is_seen' => false; // bool | Filter by whether or not a notification has been seen.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->organisationEmployeesNotificationsIndex($employee_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesNotificationsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **employee_id** | **string**|  |
+ **is_seen** | **bool**| Filter by whether or not a notification has been seen. | [optional] [default to false]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\EmployeeNotificationResult**](../Model/EmployeeNotificationResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **organisationEmployeesNotificationsIndex2**
+> \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex2($organisation_id,  $employee_id , $criteria)
+
+List employee notifications.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\OrganisationApi();
+$organisation_id = "organisation_id_example"; // string | 
+$employee_id = "employee_id_example"; // string | 
+$criteria = [
+        'is_seen' => false; // bool | Filter by whether or not a notification has been seen.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->organisationEmployeesNotificationsIndex2($organisation_id,  $employee_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrganisationApi->organisationEmployeesNotificationsIndex2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_id** | **string**|  |
+ **employee_id** | **string**|  |
+ **is_seen** | **bool**| Filter by whether or not a notification has been seen. | [optional] [default to false]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\EmployeeNotificationResult**](../Model/EmployeeNotificationResult.md)
 
 ### Authorization
 

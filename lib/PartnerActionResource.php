@@ -114,6 +114,7 @@ class PartnerActionResource implements ArrayAccess
     const ACTION_UNKNOWN = 'unknown';
     const ACTION_MAKE_PARTNER = 'make-partner';
     const ACTION_MAKE_DEMO = 'make-demo';
+    const ACTION_MAKE_CANVAS = 'make-canvas';
     const ACTION_CONTINUE_DEMO = 'continue-demo';
     const ACTION_NOT_INTERESTED = 'not-interested';
     const ACTION_STRIPE_SYNC = 'stripe-sync';
@@ -137,6 +138,7 @@ class PartnerActionResource implements ArrayAccess
             self::ACTION_UNKNOWN,
             self::ACTION_MAKE_PARTNER,
             self::ACTION_MAKE_DEMO,
+            self::ACTION_MAKE_CANVAS,
             self::ACTION_CONTINUE_DEMO,
             self::ACTION_NOT_INTERESTED,
             self::ACTION_STRIPE_SYNC,
@@ -177,9 +179,9 @@ class PartnerActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten'.";
         }
 
         return $invalid_properties;
@@ -194,7 +196,7 @@ class PartnerActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -218,9 +220,9 @@ class PartnerActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten');
+        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten'");
         }
         $this->container['action'] = $action;
 

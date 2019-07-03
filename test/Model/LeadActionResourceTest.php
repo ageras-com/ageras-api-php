@@ -162,4 +162,12 @@ class LeadActionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "custom_fee"
+     */
+    public function testPropertyCustomFee()
+    {
+
+    }
+
 }

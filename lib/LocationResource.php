@@ -62,7 +62,9 @@ class LocationResource implements ArrayAccess
         'city_name' => 'string',
         'city_district' => 'string',
         'address' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'point' => '\Ageras\Api\LocationGeoPointResource',
+        'region_name' => 'string',
+        'region_abbreviation' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,9 @@ class LocationResource implements ArrayAccess
         'city_name' => 'city_name',
         'city_district' => 'city_district',
         'address' => 'address',
-        'point' => 'point'
+        'point' => 'point',
+        'region_name' => 'region_name',
+        'region_abbreviation' => 'region_abbreviation'
     ];
 
 
@@ -100,7 +104,9 @@ class LocationResource implements ArrayAccess
         'city_name' => 'setCityName',
         'city_district' => 'setCityDistrict',
         'address' => 'setAddress',
-        'point' => 'setPoint'
+        'point' => 'setPoint',
+        'region_name' => 'setRegionName',
+        'region_abbreviation' => 'setRegionAbbreviation'
     ];
 
 
@@ -117,7 +123,9 @@ class LocationResource implements ArrayAccess
         'city_name' => 'getCityName',
         'city_district' => 'getCityDistrict',
         'address' => 'getAddress',
-        'point' => 'getPoint'
+        'point' => 'getPoint',
+        'region_name' => 'getRegionName',
+        'region_abbreviation' => 'getRegionAbbreviation'
     ];
 
     public static function attributeMap()
@@ -160,6 +168,8 @@ class LocationResource implements ArrayAccess
         $this->container['city_district'] = isset($data['city_district']) ? $data['city_district'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['region_name'] = isset($data['region_name']) ? $data['region_name'] : null;
+        $this->container['region_abbreviation'] = isset($data['region_abbreviation']) ? $data['region_abbreviation'] : null;
     }
 
     /**
@@ -372,6 +382,48 @@ class LocationResource implements ArrayAccess
     public function setPoint($point)
     {
         $this->container['point'] = $point;
+
+        return $this;
+    }
+
+    /**
+     * Gets region_name
+     * @return string
+     */
+    public function getRegionName()
+    {
+        return $this->container['region_name'];
+    }
+
+    /**
+     * Sets region_name
+     * @param string $region_name Name of the region
+     * @return $this
+     */
+    public function setRegionName($region_name)
+    {
+        $this->container['region_name'] = $region_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets region_abbreviation
+     * @return string
+     */
+    public function getRegionAbbreviation()
+    {
+        return $this->container['region_abbreviation'];
+    }
+
+    /**
+     * Sets region_abbreviation
+     * @param string $region_abbreviation Region abbreviation
+     * @return $this
+     */
+    public function setRegionAbbreviation($region_abbreviation)
+    {
+        $this->container['region_abbreviation'] = $region_abbreviation;
 
         return $this;
     }

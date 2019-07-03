@@ -55,12 +55,20 @@ class PartnerBusinessUnitResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'partner_id' => 'int',
         'partner_user_id' => 'int',
         'geo' => '\Ageras\Api\PartnerBusinessUnitGeoResource',
         'disable_digital_leads' => 'bool',
         'display_name' => 'string',
         'geo_range' => 'int',
-        'desired_revenue_range' => '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource'
+        'current_allocation' => '\Ageras\Api\PartnerBusinessUnitAllocationResource',
+        'accumulated_allocation' => '\Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource',
+        'desired_revenue_range' => '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource',
+        'desired_sectors' => '\Ageras\Api\SectorResource[]',
+        'desired_types' => '\Ageras\Api\LeadTypeResource[]',
+        'desired_industries' => '\Ageras\Api\IndustryResource[]',
+        'employee' => '\Ageras\Api\PartnerEmployeeResource',
+        'partner' => '\Ageras\Api\PartnerBusinessUnitPartnerResource'
     ];
 
     public static function swaggerTypes()
@@ -74,12 +82,20 @@ class PartnerBusinessUnitResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'partner_id' => 'partner_id',
         'partner_user_id' => 'partner_user_id',
         'geo' => 'geo',
         'disable_digital_leads' => 'disable_digital_leads',
         'display_name' => 'display_name',
         'geo_range' => 'geo_range',
-        'desired_revenue_range' => 'desired_revenue_range'
+        'current_allocation' => 'current_allocation',
+        'accumulated_allocation' => 'accumulated_allocation',
+        'desired_revenue_range' => 'desired_revenue_range',
+        'desired_sectors' => 'desired_sectors',
+        'desired_types' => 'desired_types',
+        'desired_industries' => 'desired_industries',
+        'employee' => 'employee',
+        'partner' => 'partner'
     ];
 
 
@@ -89,12 +105,20 @@ class PartnerBusinessUnitResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'partner_id' => 'setPartnerId',
         'partner_user_id' => 'setPartnerUserId',
         'geo' => 'setGeo',
         'disable_digital_leads' => 'setDisableDigitalLeads',
         'display_name' => 'setDisplayName',
         'geo_range' => 'setGeoRange',
-        'desired_revenue_range' => 'setDesiredRevenueRange'
+        'current_allocation' => 'setCurrentAllocation',
+        'accumulated_allocation' => 'setAccumulatedAllocation',
+        'desired_revenue_range' => 'setDesiredRevenueRange',
+        'desired_sectors' => 'setDesiredSectors',
+        'desired_types' => 'setDesiredTypes',
+        'desired_industries' => 'setDesiredIndustries',
+        'employee' => 'setEmployee',
+        'partner' => 'setPartner'
     ];
 
 
@@ -104,12 +128,20 @@ class PartnerBusinessUnitResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'partner_id' => 'getPartnerId',
         'partner_user_id' => 'getPartnerUserId',
         'geo' => 'getGeo',
         'disable_digital_leads' => 'getDisableDigitalLeads',
         'display_name' => 'getDisplayName',
         'geo_range' => 'getGeoRange',
-        'desired_revenue_range' => 'getDesiredRevenueRange'
+        'current_allocation' => 'getCurrentAllocation',
+        'accumulated_allocation' => 'getAccumulatedAllocation',
+        'desired_revenue_range' => 'getDesiredRevenueRange',
+        'desired_sectors' => 'getDesiredSectors',
+        'desired_types' => 'getDesiredTypes',
+        'desired_industries' => 'getDesiredIndustries',
+        'employee' => 'getEmployee',
+        'partner' => 'getPartner'
     ];
 
     public static function attributeMap()
@@ -144,12 +176,20 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['disable_digital_leads'] = isset($data['disable_digital_leads']) ? $data['disable_digital_leads'] : false;
         $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
         $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
+        $this->container['current_allocation'] = isset($data['current_allocation']) ? $data['current_allocation'] : null;
+        $this->container['accumulated_allocation'] = isset($data['accumulated_allocation']) ? $data['accumulated_allocation'] : null;
         $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
+        $this->container['desired_sectors'] = isset($data['desired_sectors']) ? $data['desired_sectors'] : null;
+        $this->container['desired_types'] = isset($data['desired_types']) ? $data['desired_types'] : null;
+        $this->container['desired_industries'] = isset($data['desired_industries']) ? $data['desired_industries'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
     }
 
     /**
@@ -194,6 +234,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     * @return int
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     * @param int $partner_id Primary ID.
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }
@@ -304,6 +365,48 @@ class PartnerBusinessUnitResource implements ArrayAccess
     }
 
     /**
+     * Gets current_allocation
+     * @return \Ageras\Api\PartnerBusinessUnitAllocationResource
+     */
+    public function getCurrentAllocation()
+    {
+        return $this->container['current_allocation'];
+    }
+
+    /**
+     * Sets current_allocation
+     * @param \Ageras\Api\PartnerBusinessUnitAllocationResource $current_allocation
+     * @return $this
+     */
+    public function setCurrentAllocation($current_allocation)
+    {
+        $this->container['current_allocation'] = $current_allocation;
+
+        return $this;
+    }
+
+    /**
+     * Gets accumulated_allocation
+     * @return \Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource
+     */
+    public function getAccumulatedAllocation()
+    {
+        return $this->container['accumulated_allocation'];
+    }
+
+    /**
+     * Sets accumulated_allocation
+     * @param \Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource $accumulated_allocation
+     * @return $this
+     */
+    public function setAccumulatedAllocation($accumulated_allocation)
+    {
+        $this->container['accumulated_allocation'] = $accumulated_allocation;
+
+        return $this;
+    }
+
+    /**
      * Gets desired_revenue_range
      * @return \Ageras\Api\PartnerBusinessUnitRevenueRangeResource
      */
@@ -320,6 +423,111 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setDesiredRevenueRange($desired_revenue_range)
     {
         $this->container['desired_revenue_range'] = $desired_revenue_range;
+
+        return $this;
+    }
+
+    /**
+     * Gets desired_sectors
+     * @return \Ageras\Api\SectorResource[]
+     */
+    public function getDesiredSectors()
+    {
+        return $this->container['desired_sectors'];
+    }
+
+    /**
+     * Sets desired_sectors
+     * @param \Ageras\Api\SectorResource[] $desired_sectors Desired sectors.
+     * @return $this
+     */
+    public function setDesiredSectors($desired_sectors)
+    {
+        $this->container['desired_sectors'] = $desired_sectors;
+
+        return $this;
+    }
+
+    /**
+     * Gets desired_types
+     * @return \Ageras\Api\LeadTypeResource[]
+     */
+    public function getDesiredTypes()
+    {
+        return $this->container['desired_types'];
+    }
+
+    /**
+     * Sets desired_types
+     * @param \Ageras\Api\LeadTypeResource[] $desired_types Desired lead types.
+     * @return $this
+     */
+    public function setDesiredTypes($desired_types)
+    {
+        $this->container['desired_types'] = $desired_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets desired_industries
+     * @return \Ageras\Api\IndustryResource[]
+     */
+    public function getDesiredIndustries()
+    {
+        return $this->container['desired_industries'];
+    }
+
+    /**
+     * Sets desired_industries
+     * @param \Ageras\Api\IndustryResource[] $desired_industries Desired industries.
+     * @return $this
+     */
+    public function setDesiredIndustries($desired_industries)
+    {
+        $this->container['desired_industries'] = $desired_industries;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee
+     * @return \Ageras\Api\PartnerEmployeeResource
+     */
+    public function getEmployee()
+    {
+        return $this->container['employee'];
+    }
+
+    /**
+     * Sets employee
+     * @param \Ageras\Api\PartnerEmployeeResource $employee
+     * @return $this
+     */
+    public function setEmployee($employee)
+    {
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner
+     * @return \Ageras\Api\PartnerBusinessUnitPartnerResource
+     */
+    public function getPartner()
+    {
+        return $this->container['partner'];
+    }
+
+    /**
+     * Sets partner
+     * @param \Ageras\Api\PartnerBusinessUnitPartnerResource $partner
+     * @return $this
+     */
+    public function setPartner($partner)
+    {
+        $this->container['partner'] = $partner;
 
         return $this;
     }
