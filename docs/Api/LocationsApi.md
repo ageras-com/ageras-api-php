@@ -87,6 +87,8 @@ $criteria = [
         'sort' => "name"; // string | Sort types for Locations
         'is_primary' => false; // bool | Only Primary Locations
         'min_partner_count' => 56; // int | Filtering based on minimum partner count
+        'region_name' => "region_name_example"; // string | Filtering based on region name
+        'region_abbreviation' => "region_abbreviation_example"; // string | Filtering based on region abbreviation
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -112,6 +114,8 @@ Name | Type | Description  | Notes
  **sort** | **string**| Sort types for Locations | [optional] [default to name]
  **is_primary** | **bool**| Only Primary Locations | [optional] [default to false]
  **min_partner_count** | **int**| Filtering based on minimum partner count | [optional]
+ **region_name** | **string**| Filtering based on region name | [optional]
+ **region_abbreviation** | **string**| Filtering based on region abbreviation | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

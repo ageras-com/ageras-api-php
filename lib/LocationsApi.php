@@ -187,6 +187,8 @@ class LocationsApi
      *    'sort' => string,
      *    'is_primary' => bool,
      *    'min_partner_count' => int,
+     *    'region_name' => string,
+     *    'region_abbreviation' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -213,6 +215,8 @@ class LocationsApi
      *    'sort' => string,
      *    'is_primary' => bool,
      *    'min_partner_count' => int,
+     *    'region_name' => string,
+     *    'region_abbreviation' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -261,6 +265,14 @@ class LocationsApi
         // query params
         if (isset($criteria['min_partner_count'])) {
             $queryParams['min_partner_count'] = $this->apiClient->getSerializer()->toQueryValue($criteria['min_partner_count']);
+        }
+        // query params
+        if (isset($criteria['region_name'])) {
+            $queryParams['region_name'] = $this->apiClient->getSerializer()->toQueryValue($criteria['region_name']);
+        }
+        // query params
+        if (isset($criteria['region_abbreviation'])) {
+            $queryParams['region_abbreviation'] = $this->apiClient->getSerializer()->toQueryValue($criteria['region_abbreviation']);
         }
         // query params
         if (isset($criteria['limit'])) {
