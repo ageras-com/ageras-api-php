@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerResourceTest
+ * LeadPartnerAllocationResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerResourceTest Class Doc Comment
+ * LeadPartnerAllocationResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerResource
+// * @description LeadPartnerAllocationResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
+class LeadPartnerAllocationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,41 +75,57 @@ class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerResource"
+     * Test "LeadPartnerAllocationResult"
      */
-    public function testPartnerBusinessUnitPartnerResource()
+    public function testLeadPartnerAllocationResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "limit"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "has_marketing_package"
+     * Test attribute "pages"
      */
-    public function testPropertyHasMarketingPackage()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "is_subscription_paused"
+     * Test attribute "total"
      */
-    public function testPropertyIsSubscriptionPaused()
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerResourceTest
+ * LeadPartnerAllocationQuoteResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerResourceTest Class Doc Comment
+ * LeadPartnerAllocationQuoteResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerResource
+// * @description LeadPartnerAllocationQuoteResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
+class LeadPartnerAllocationQuoteResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerResource"
+     * Test "LeadPartnerAllocationQuoteResource"
      */
-    public function testPartnerBusinessUnitPartnerResource()
+    public function testLeadPartnerAllocationQuoteResource()
     {
 
     }
@@ -91,25 +91,25 @@ class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "created_at"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "has_marketing_package"
+     * Test attribute "accepted_at"
      */
-    public function testPropertyHasMarketingPackage()
+    public function testPropertyAcceptedAt()
     {
 
     }
 
     /**
-     * Test attribute "is_subscription_paused"
+     * Test attribute "published_at"
      */
-    public function testPropertyIsSubscriptionPaused()
+    public function testPropertyPublishedAt()
     {
 
     }

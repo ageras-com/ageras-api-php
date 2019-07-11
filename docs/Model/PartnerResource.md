@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 **geo_range** | **int** | Number of kilometres a partner is willing to travel for leads. | [optional] 
 **badges** | [**\Ageras\Api\PartnerBadgeResource[]**](PartnerBadgeResource.md) | Badges for the partner. | [optional] 
 **category** | [**\Ageras\Api\PartnerCategoryResource**](PartnerCategoryResource.md) |  | [optional] 
-**features** | **string** | Partner Category Features. | [optional] 
+**features** | **string[]** | Partner Category Features. | [optional] 
 **association** | [**\Ageras\Api\PartnerAssociationResource**](PartnerAssociationResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

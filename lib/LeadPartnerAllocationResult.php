@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerResource
+ * LeadPartnerAllocationResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerBusinessUnitPartnerResource Class Doc Comment
+ * LeadPartnerAllocationResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerResource implements ArrayAccess
+class LeadPartnerAllocationResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,19 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerBusinessUnitPartnerResource';
+    protected static $swaggerModelName = 'LeadPartnerAllocationResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'company_name' => 'string',
-        'has_marketing_package' => 'bool',
-        'is_subscription_paused' => 'bool'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\LeadPartnerAllocationResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +72,12 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'company_name' => 'company_name',
-        'has_marketing_package' => 'has_marketing_package',
-        'is_subscription_paused' => 'is_subscription_paused'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -82,10 +86,12 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'company_name' => 'setCompanyName',
-        'has_marketing_package' => 'setHasMarketingPackage',
-        'is_subscription_paused' => 'setIsSubscriptionPaused'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -94,10 +100,12 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'company_name' => 'getCompanyName',
-        'has_marketing_package' => 'getHasMarketingPackage',
-        'is_subscription_paused' => 'getIsSubscriptionPaused'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -131,10 +139,12 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
-        $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
-        $this->container['is_subscription_paused'] = isset($data['is_subscription_paused']) ? $data['is_subscription_paused'] : false;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -163,85 +173,127 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets page
      * @return int
      */
-    public function getId()
+    public function getPage()
     {
-        return $this->container['id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets id
-     * @param int $id Primary ID.
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setId($id)
+    public function setPage($page)
     {
-        $this->container['id'] = $id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets company_name
+     * Gets limit
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param int $limit Number of results per page.
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\LeadPartnerAllocationResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\LeadPartnerAllocationResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
      * @return string
      */
-    public function getCompanyName()
+    public function getDidYouMean()
     {
-        return $this->container['company_name'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets company_name
-     * @param string $company_name Partner company name.
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setCompanyName($company_name)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['company_name'] = $company_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_marketing_package
-     * @return bool
-     */
-    public function getHasMarketingPackage()
-    {
-        return $this->container['has_marketing_package'];
-    }
-
-    /**
-     * Sets has_marketing_package
-     * @param bool $has_marketing_package Does the partner have a marketing package?
-     * @return $this
-     */
-    public function setHasMarketingPackage($has_marketing_package)
-    {
-        $this->container['has_marketing_package'] = $has_marketing_package;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_subscription_paused
-     * @return bool
-     */
-    public function getIsSubscriptionPaused()
-    {
-        return $this->container['is_subscription_paused'];
-    }
-
-    /**
-     * Sets is_subscription_paused
-     * @param bool $is_subscription_paused Is the partner's subscription paused?
-     * @return $this
-     */
-    public function setIsSubscriptionPaused($is_subscription_paused)
-    {
-        $this->container['is_subscription_paused'] = $is_subscription_paused;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

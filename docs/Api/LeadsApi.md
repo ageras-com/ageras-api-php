@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**leadsActionsCreate**](LeadsApi.md#leadsActionsCreate) | **POST** /leads/{lead_id}/actions | Coupon action
 [**leadsAggregationsIndex**](LeadsApi.md#leadsAggregationsIndex) | **GET** /leads/aggregations | List facets and aggregations for the Lead Search.
 [**leadsAllocationsCreate**](LeadsApi.md#leadsAllocationsCreate) | **POST** /leads/{lead_id}/allocations | Allocate partners to a lead.
+[**leadsAllocationsIndex**](LeadsApi.md#leadsAllocationsIndex) | **GET** /leads/allocations | List a lead&#39;s allocation.
 [**leadsCategoriesIndex**](LeadsApi.md#leadsCategoriesIndex) | **GET** /leads/categories | Index lead categories .
 [**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | Add a certification to a lead.
 [**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | Delete a certification from a lead.
@@ -265,6 +266,75 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadAllocationResource**](../Model/LeadAllocationResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsAllocationsIndex**
+> \Ageras\Api\LeadPartnerAllocationResult leadsAllocationsIndex($criteria)
+
+List a lead's allocation.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$criteria = [
+        'lead_id' => 56; // int | Lead ID.
+        'partner_id' => 56; // int | Partner ID.
+        'partner_business_unit_id' => 56; // int | Business Unit ID.
+        'starts_at' => "starts_at_example"; // string | 
+        'ends_at' => "ends_at_example"; // string | 
+        'sort' => "created_at"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->leadsAllocationsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsAllocationsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **int**| Lead ID. | [optional]
+ **partner_id** | **int**| Partner ID. | [optional]
+ **partner_business_unit_id** | **int**| Business Unit ID. | [optional]
+ **starts_at** | **string**|  | [optional]
+ **ends_at** | **string**|  | [optional]
+ **sort** | **string**|  | [optional] [default to created_at]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\LeadPartnerAllocationResult**](../Model/LeadPartnerAllocationResult.md)
 
 ### Authorization
 

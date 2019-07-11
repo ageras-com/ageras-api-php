@@ -110,6 +110,17 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsAllocationsIndex
+     *
+     * List a lead's allocation..
+     *
+     */
+    public function testLeadsAllocationsIndex()
+    {
+
+    }
+
+    /**
      * Test case for leadsCategoriesIndex
      *
      * Index lead categories ..

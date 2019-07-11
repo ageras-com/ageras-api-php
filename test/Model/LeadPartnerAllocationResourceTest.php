@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerResourceTest
+ * LeadPartnerAllocationResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerResourceTest Class Doc Comment
+ * LeadPartnerAllocationResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerResource
+// * @description LeadPartnerAllocationResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
+class LeadPartnerAllocationResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerResource"
+     * Test "LeadPartnerAllocationResource"
      */
-    public function testPartnerBusinessUnitPartnerResource()
+    public function testLeadPartnerAllocationResource()
     {
 
     }
@@ -91,25 +91,57 @@ class PartnerBusinessUnitPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company_name"
+     * Test attribute "lead_id"
      */
-    public function testPropertyCompanyName()
+    public function testPropertyLeadId()
     {
 
     }
 
     /**
-     * Test attribute "has_marketing_package"
+     * Test attribute "partner_id"
      */
-    public function testPropertyHasMarketingPackage()
+    public function testPropertyPartnerId()
     {
 
     }
 
     /**
-     * Test attribute "is_subscription_paused"
+     * Test attribute "partner_business_unit_id"
      */
-    public function testPropertyIsSubscriptionPaused()
+    public function testPropertyPartnerBusinessUnitId()
+    {
+
+    }
+
+    /**
+     * Test attribute "processed_at"
+     */
+    public function testPropertyProcessedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "allocated_by_employee_id"
+     */
+    public function testPropertyAllocatedByEmployeeId()
+    {
+
+    }
+
+    /**
+     * Test attribute "quote"
+     */
+    public function testPropertyQuote()
     {
 
     }

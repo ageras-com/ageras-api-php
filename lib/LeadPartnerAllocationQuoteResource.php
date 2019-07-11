@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerResource
+ * LeadPartnerAllocationQuoteResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerBusinessUnitPartnerResource Class Doc Comment
+ * LeadPartnerAllocationQuoteResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerResource implements ArrayAccess
+class LeadPartnerAllocationQuoteResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerBusinessUnitPartnerResource';
+    protected static $swaggerModelName = 'LeadPartnerAllocationQuoteResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,9 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'company_name' => 'string',
-        'has_marketing_package' => 'bool',
-        'is_subscription_paused' => 'bool'
+        'created_at' => 'string',
+        'accepted_at' => 'string',
+        'published_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,9 +71,9 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'company_name' => 'company_name',
-        'has_marketing_package' => 'has_marketing_package',
-        'is_subscription_paused' => 'is_subscription_paused'
+        'created_at' => 'created_at',
+        'accepted_at' => 'accepted_at',
+        'published_at' => 'published_at'
     ];
 
 
@@ -83,9 +83,9 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'company_name' => 'setCompanyName',
-        'has_marketing_package' => 'setHasMarketingPackage',
-        'is_subscription_paused' => 'setIsSubscriptionPaused'
+        'created_at' => 'setCreatedAt',
+        'accepted_at' => 'setAcceptedAt',
+        'published_at' => 'setPublishedAt'
     ];
 
 
@@ -95,9 +95,9 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'company_name' => 'getCompanyName',
-        'has_marketing_package' => 'getHasMarketingPackage',
-        'is_subscription_paused' => 'getIsSubscriptionPaused'
+        'created_at' => 'getCreatedAt',
+        'accepted_at' => 'getAcceptedAt',
+        'published_at' => 'getPublishedAt'
     ];
 
     public static function attributeMap()
@@ -132,9 +132,9 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
-        $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
-        $this->container['is_subscription_paused'] = isset($data['is_subscription_paused']) ? $data['is_subscription_paused'] : false;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
+        $this->container['published_at'] = isset($data['published_at']) ? $data['published_at'] : null;
     }
 
     /**
@@ -173,7 +173,7 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Primary ID.
+     * @param int $id The quote's id.
      * @return $this
      */
     public function setId($id)
@@ -184,64 +184,64 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     }
 
     /**
-     * Gets company_name
+     * Gets created_at
      * @return string
      */
-    public function getCompanyName()
+    public function getCreatedAt()
     {
-        return $this->container['company_name'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets company_name
-     * @param string $company_name Partner company name.
+     * Sets created_at
+     * @param string $created_at Created time
      * @return $this
      */
-    public function setCompanyName($company_name)
+    public function setCreatedAt($created_at)
     {
-        $this->container['company_name'] = $company_name;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets has_marketing_package
-     * @return bool
+     * Gets accepted_at
+     * @return string
      */
-    public function getHasMarketingPackage()
+    public function getAcceptedAt()
     {
-        return $this->container['has_marketing_package'];
+        return $this->container['accepted_at'];
     }
 
     /**
-     * Sets has_marketing_package
-     * @param bool $has_marketing_package Does the partner have a marketing package?
+     * Sets accepted_at
+     * @param string $accepted_at Quote accepted at
      * @return $this
      */
-    public function setHasMarketingPackage($has_marketing_package)
+    public function setAcceptedAt($accepted_at)
     {
-        $this->container['has_marketing_package'] = $has_marketing_package;
+        $this->container['accepted_at'] = $accepted_at;
 
         return $this;
     }
 
     /**
-     * Gets is_subscription_paused
-     * @return bool
+     * Gets published_at
+     * @return string
      */
-    public function getIsSubscriptionPaused()
+    public function getPublishedAt()
     {
-        return $this->container['is_subscription_paused'];
+        return $this->container['published_at'];
     }
 
     /**
-     * Sets is_subscription_paused
-     * @param bool $is_subscription_paused Is the partner's subscription paused?
+     * Sets published_at
+     * @param string $published_at Created time
      * @return $this
      */
-    public function setIsSubscriptionPaused($is_subscription_paused)
+    public function setPublishedAt($published_at)
     {
-        $this->container['is_subscription_paused'] = $is_subscription_paused;
+        $this->container['published_at'] = $published_at;
 
         return $this;
     }

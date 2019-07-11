@@ -98,7 +98,7 @@ class PartnerResource implements ArrayAccess
         'geo_range' => 'int',
         'badges' => '\Ageras\Api\PartnerBadgeResource[]',
         'category' => '\Ageras\Api\PartnerCategoryResource',
-        'features' => 'string',
+        'features' => 'string[]',
         'association' => '\Ageras\Api\PartnerAssociationResource'
     ];
 
@@ -1364,7 +1364,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Gets features
-     * @return string
+     * @return string[]
      */
     public function getFeatures()
     {
@@ -1373,7 +1373,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Sets features
-     * @param string $features Partner Category Features.
+     * @param string[] $features Partner Category Features.
      * @return $this
      */
     public function setFeatures($features)
