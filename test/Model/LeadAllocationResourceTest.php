@@ -83,14 +83,6 @@ class LeadAllocationResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "partner_id"
-     */
-    public function testPropertyPartnerId()
-    {
-
-    }
-
-    /**
      * Test attribute "partner_business_unit_id"
      */
     public function testPropertyPartnerBusinessUnitId()

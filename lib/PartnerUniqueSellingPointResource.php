@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentationGeoRegionResource
+ * PartnerUniqueSellingPointResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * SegmentationGeoRegionResource Class Doc Comment
+ * PartnerUniqueSellingPointResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SegmentationGeoRegionResource implements ArrayAccess
+class PartnerUniqueSellingPointResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class SegmentationGeoRegionResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SegmentationGeoRegionResource';
+    protected static $swaggerModelName = 'PartnerUniqueSellingPointResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,9 @@ class SegmentationGeoRegionResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'geo_code' => 'string',
-        'region_name' => 'string',
-        'points' => '\Ageras\Api\LocationGeoPointResource[]'
+        'partner_id' => 'int',
+        'created_at' => 'string',
+        'text' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,9 +71,9 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'geo_code' => 'geo_code',
-        'region_name' => 'region_name',
-        'points' => 'points'
+        'partner_id' => 'partner_id',
+        'created_at' => 'created_at',
+        'text' => 'text'
     ];
 
 
@@ -83,9 +83,9 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'geo_code' => 'setGeoCode',
-        'region_name' => 'setRegionName',
-        'points' => 'setPoints'
+        'partner_id' => 'setPartnerId',
+        'created_at' => 'setCreatedAt',
+        'text' => 'setText'
     ];
 
 
@@ -95,9 +95,9 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'geo_code' => 'getGeoCode',
-        'region_name' => 'getRegionName',
-        'points' => 'getPoints'
+        'partner_id' => 'getPartnerId',
+        'created_at' => 'getCreatedAt',
+        'text' => 'getText'
     ];
 
     public static function attributeMap()
@@ -132,9 +132,9 @@ class SegmentationGeoRegionResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['region_name'] = isset($data['region_name']) ? $data['region_name'] : null;
-        $this->container['points'] = isset($data['points']) ? $data['points'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
     }
 
     /**
@@ -173,7 +173,7 @@ class SegmentationGeoRegionResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Sector ID.
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -184,64 +184,64 @@ class SegmentationGeoRegionResource implements ArrayAccess
     }
 
     /**
-     * Gets geo_code
-     * @return string
+     * Gets partner_id
+     * @return int
      */
-    public function getGeoCode()
+    public function getPartnerId()
     {
-        return $this->container['geo_code'];
+        return $this->container['partner_id'];
     }
 
     /**
-     * Sets geo_code
-     * @param string $geo_code Geo code.
+     * Sets partner_id
+     * @param int $partner_id
      * @return $this
      */
-    public function setGeoCode($geo_code)
+    public function setPartnerId($partner_id)
     {
-        $this->container['geo_code'] = $geo_code;
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }
 
     /**
-     * Gets region_name
+     * Gets created_at
      * @return string
      */
-    public function getRegionName()
+    public function getCreatedAt()
     {
-        return $this->container['region_name'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets region_name
-     * @param string $region_name Human-readable name.
+     * Sets created_at
+     * @param string $created_at
      * @return $this
      */
-    public function setRegionName($region_name)
+    public function setCreatedAt($created_at)
     {
-        $this->container['region_name'] = $region_name;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets points
-     * @return \Ageras\Api\LocationGeoPointResource[]
+     * Gets text
+     * @return string
      */
-    public function getPoints()
+    public function getText()
     {
-        return $this->container['points'];
+        return $this->container['text'];
     }
 
     /**
-     * Sets points
-     * @param \Ageras\Api\LocationGeoPointResource[] $points List of points that define this region.
+     * Sets text
+     * @param string $text
      * @return $this
      */
-    public function setPoints($points)
+    public function setText($text)
     {
-        $this->container['points'] = $points;
+        $this->container['text'] = $text;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentationGeoRegionResourceTest
+ * PartnerUniqueSellingPointResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * SegmentationGeoRegionResourceTest Class Doc Comment
+ * PartnerUniqueSellingPointResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description SegmentationGeoRegionResource
+// * @description PartnerUniqueSellingPointResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SegmentationGeoRegionResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerUniqueSellingPointResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class SegmentationGeoRegionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SegmentationGeoRegionResource"
+     * Test "PartnerUniqueSellingPointResource"
      */
-    public function testSegmentationGeoRegionResource()
+    public function testPartnerUniqueSellingPointResource()
     {
 
     }
@@ -91,25 +91,25 @@ class SegmentationGeoRegionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "geo_code"
+     * Test attribute "partner_id"
      */
-    public function testPropertyGeoCode()
+    public function testPropertyPartnerId()
     {
 
     }
 
     /**
-     * Test attribute "region_name"
+     * Test attribute "created_at"
      */
-    public function testPropertyRegionName()
+    public function testPropertyCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "points"
+     * Test attribute "text"
      */
-    public function testPropertyPoints()
+    public function testPropertyText()
     {
 
     }

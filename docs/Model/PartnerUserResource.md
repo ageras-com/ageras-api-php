@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **wants_daily_email** | **bool** | Partner User is interested in daily emails. | [optional] [default to false]
 **is_visible** | **bool** | Partner User is visible. | [optional] [default to false]
 **is_active** | **bool** | Partner User is Active. | [optional] [default to false]
-**access_type** | **string** | The Type of Access the Partner User has. | [optional] 
+**access_type** | **string** | The Type of Access the Partner User has. | [optional] [default to 'standard']
 **has_refund_permission** | **bool** | partner User has access to refunds. | [optional] [default to false]
 **updated_at** | **string** | Last time the given partner user was updated. | [optional] 
 **created_at** | **string** | The date the partner user was created. | [optional] 

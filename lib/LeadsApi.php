@@ -608,6 +608,7 @@ class LeadsApi
      *    'starts_at' => string,
      *    'ends_at' => string,
      *    'sort' => string,
+     *    'is_used' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -633,6 +634,7 @@ class LeadsApi
      *    'starts_at' => string,
      *    'ends_at' => string,
      *    'sort' => string,
+     *    'is_used' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -677,6 +679,10 @@ class LeadsApi
         // query params
         if (isset($criteria['sort'])) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['is_used'])) {
+            $queryParams['is_used'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_used']);
         }
         // query params
         if (isset($criteria['limit'])) {

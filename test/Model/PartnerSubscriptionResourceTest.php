@@ -170,4 +170,12 @@ class PartnerSubscriptionResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "churned_at"
+     */
+    public function testPropertyChurnedAt()
+    {
+
+    }
+
 }

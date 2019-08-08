@@ -61,7 +61,9 @@ class LeadPartnerAllocationResource implements ArrayAccess
         'processed_at' => 'string',
         'created_at' => 'string',
         'allocated_by_employee_id' => 'int',
-        'quote' => '\Ageras\Api\LeadPartnerAllocationQuoteResource'
+        'quote' => '\Ageras\Api\LeadPartnerAllocationQuoteResource',
+        'deallocated_at' => 'string',
+        'deallocated_by_employee_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +83,9 @@ class LeadPartnerAllocationResource implements ArrayAccess
         'processed_at' => 'processed_at',
         'created_at' => 'created_at',
         'allocated_by_employee_id' => 'allocated_by_employee_id',
-        'quote' => 'quote'
+        'quote' => 'quote',
+        'deallocated_at' => 'deallocated_at',
+        'deallocated_by_employee_id' => 'deallocated_by_employee_id'
     ];
 
 
@@ -97,7 +101,9 @@ class LeadPartnerAllocationResource implements ArrayAccess
         'processed_at' => 'setProcessedAt',
         'created_at' => 'setCreatedAt',
         'allocated_by_employee_id' => 'setAllocatedByEmployeeId',
-        'quote' => 'setQuote'
+        'quote' => 'setQuote',
+        'deallocated_at' => 'setDeallocatedAt',
+        'deallocated_by_employee_id' => 'setDeallocatedByEmployeeId'
     ];
 
 
@@ -113,7 +119,9 @@ class LeadPartnerAllocationResource implements ArrayAccess
         'processed_at' => 'getProcessedAt',
         'created_at' => 'getCreatedAt',
         'allocated_by_employee_id' => 'getAllocatedByEmployeeId',
-        'quote' => 'getQuote'
+        'quote' => 'getQuote',
+        'deallocated_at' => 'getDeallocatedAt',
+        'deallocated_by_employee_id' => 'getDeallocatedByEmployeeId'
     ];
 
     public static function attributeMap()
@@ -155,6 +163,8 @@ class LeadPartnerAllocationResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['allocated_by_employee_id'] = isset($data['allocated_by_employee_id']) ? $data['allocated_by_employee_id'] : null;
         $this->container['quote'] = isset($data['quote']) ? $data['quote'] : null;
+        $this->container['deallocated_at'] = isset($data['deallocated_at']) ? $data['deallocated_at'] : null;
+        $this->container['deallocated_by_employee_id'] = isset($data['deallocated_by_employee_id']) ? $data['deallocated_by_employee_id'] : null;
     }
 
     /**
@@ -346,6 +356,48 @@ class LeadPartnerAllocationResource implements ArrayAccess
     public function setQuote($quote)
     {
         $this->container['quote'] = $quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets deallocated_at
+     * @return string
+     */
+    public function getDeallocatedAt()
+    {
+        return $this->container['deallocated_at'];
+    }
+
+    /**
+     * Sets deallocated_at
+     * @param string $deallocated_at When the lead eas deallocated.
+     * @return $this
+     */
+    public function setDeallocatedAt($deallocated_at)
+    {
+        $this->container['deallocated_at'] = $deallocated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets deallocated_by_employee_id
+     * @return int
+     */
+    public function getDeallocatedByEmployeeId()
+    {
+        return $this->container['deallocated_by_employee_id'];
+    }
+
+    /**
+     * Sets deallocated_by_employee_id
+     * @param int $deallocated_by_employee_id Who deallocated the allocation.
+     * @return $this
+     */
+    public function setDeallocatedByEmployeeId($deallocated_by_employee_id)
+    {
+        $this->container['deallocated_by_employee_id'] = $deallocated_by_employee_id;
 
         return $this;
     }

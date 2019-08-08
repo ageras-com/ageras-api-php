@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentationGeoRegionResourceTest
+ * SegmentationSubGeoRegionResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * SegmentationGeoRegionResourceTest Class Doc Comment
+ * SegmentationSubGeoRegionResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description SegmentationGeoRegionResource
+// * @description SegmentationSubGeoRegionResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SegmentationGeoRegionResourceTest extends \PHPUnit_Framework_TestCase
+class SegmentationSubGeoRegionResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,41 +75,57 @@ class SegmentationGeoRegionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SegmentationGeoRegionResource"
+     * Test "SegmentationSubGeoRegionResult"
      */
-    public function testSegmentationGeoRegionResource()
+    public function testSegmentationSubGeoRegionResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "geo_code"
+     * Test attribute "limit"
      */
-    public function testPropertyGeoCode()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "region_name"
+     * Test attribute "pages"
      */
-    public function testPropertyRegionName()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "points"
+     * Test attribute "total"
      */
-    public function testPropertyPoints()
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

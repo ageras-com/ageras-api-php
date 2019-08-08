@@ -54,7 +54,6 @@ class LeadAllocationResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'partner_id' => 'int[]',
         'partner_business_unit_id' => 'int[]'
     ];
 
@@ -68,7 +67,6 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partner_id' => 'partner_id',
         'partner_business_unit_id' => 'partner_business_unit_id'
     ];
 
@@ -78,7 +76,6 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partner_id' => 'setPartnerId',
         'partner_business_unit_id' => 'setPartnerBusinessUnitId'
     ];
 
@@ -88,7 +85,6 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partner_id' => 'getPartnerId',
         'partner_business_unit_id' => 'getPartnerBusinessUnitId'
     ];
 
@@ -123,7 +119,6 @@ class LeadAllocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['partner_business_unit_id'] = isset($data['partner_business_unit_id']) ? $data['partner_business_unit_id'] : null;
     }
 
@@ -151,27 +146,6 @@ class LeadAllocationResource implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets partner_id
-     * @return int[]
-     */
-    public function getPartnerId()
-    {
-        return $this->container['partner_id'];
-    }
-
-    /**
-     * Sets partner_id
-     * @param int[] $partner_id Partner to allocate.
-     * @return $this
-     */
-    public function setPartnerId($partner_id)
-    {
-        $this->container['partner_id'] = $partner_id;
-
-        return $this;
-    }
 
     /**
      * Gets partner_business_unit_id

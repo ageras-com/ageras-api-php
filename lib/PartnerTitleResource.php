@@ -54,8 +54,12 @@ class PartnerTitleResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'identifier' => 'string'
+        'id' => 'int',
+        'identifier' => 'string',
+        'name' => 'string',
+        'industry' => '\Ageras\Api\PartnerIndustryResource',
+        'created_at' => 'string',
+        'updated_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +73,11 @@ class PartnerTitleResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'identifier' => 'identifier'
+        'identifier' => 'identifier',
+        'name' => 'name',
+        'industry' => 'industry',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -79,7 +87,11 @@ class PartnerTitleResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'identifier' => 'setIdentifier'
+        'identifier' => 'setIdentifier',
+        'name' => 'setName',
+        'industry' => 'setIndustry',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -89,7 +101,11 @@ class PartnerTitleResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'identifier' => 'getIdentifier'
+        'identifier' => 'getIdentifier',
+        'name' => 'getName',
+        'industry' => 'getIndustry',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -125,6 +141,10 @@ class PartnerTitleResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -154,7 +174,7 @@ class PartnerTitleResource implements ArrayAccess
 
     /**
      * Gets id
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -163,7 +183,7 @@ class PartnerTitleResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id Title ID.
+     * @param int $id Title ID.
      * @return $this
      */
     public function setId($id)
@@ -190,6 +210,90 @@ class PartnerTitleResource implements ArrayAccess
     public function setIdentifier($identifier)
     {
         $this->container['identifier'] = $identifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name Title name.
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets industry
+     * @return \Ageras\Api\PartnerIndustryResource
+     */
+    public function getIndustry()
+    {
+        return $this->container['industry'];
+    }
+
+    /**
+     * Sets industry
+     * @param \Ageras\Api\PartnerIndustryResource $industry
+     * @return $this
+     */
+    public function setIndustry($industry)
+    {
+        $this->container['industry'] = $industry;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param string $created_at
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param string $updated_at
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

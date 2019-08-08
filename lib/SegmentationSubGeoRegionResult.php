@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentationGeoRegionResource
+ * SegmentationSubGeoRegionResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * SegmentationGeoRegionResource Class Doc Comment
+ * SegmentationSubGeoRegionResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SegmentationGeoRegionResource implements ArrayAccess
+class SegmentationSubGeoRegionResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,19 @@ class SegmentationGeoRegionResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SegmentationGeoRegionResource';
+    protected static $swaggerModelName = 'SegmentationSubGeoRegionResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'geo_code' => 'string',
-        'region_name' => 'string',
-        'points' => '\Ageras\Api\LocationGeoPointResource[]'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\SegmentationSubGeoRegionResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +72,12 @@ class SegmentationGeoRegionResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'geo_code' => 'geo_code',
-        'region_name' => 'region_name',
-        'points' => 'points'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -82,10 +86,12 @@ class SegmentationGeoRegionResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'geo_code' => 'setGeoCode',
-        'region_name' => 'setRegionName',
-        'points' => 'setPoints'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -94,10 +100,12 @@ class SegmentationGeoRegionResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'geo_code' => 'getGeoCode',
-        'region_name' => 'getRegionName',
-        'points' => 'getPoints'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -131,10 +139,12 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['region_name'] = isset($data['region_name']) ? $data['region_name'] : null;
-        $this->container['points'] = isset($data['points']) ? $data['points'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -163,85 +173,127 @@ class SegmentationGeoRegionResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets page
      * @return int
      */
-    public function getId()
+    public function getPage()
     {
-        return $this->container['id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets id
-     * @param int $id Sector ID.
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setId($id)
+    public function setPage($page)
     {
-        $this->container['id'] = $id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets geo_code
+     * Gets limit
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param int $limit Number of results per page.
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\SegmentationSubGeoRegionResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\SegmentationSubGeoRegionResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
      * @return string
      */
-    public function getGeoCode()
+    public function getDidYouMean()
     {
-        return $this->container['geo_code'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets geo_code
-     * @param string $geo_code Geo code.
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setGeoCode($geo_code)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['geo_code'] = $geo_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets region_name
-     * @return string
-     */
-    public function getRegionName()
-    {
-        return $this->container['region_name'];
-    }
-
-    /**
-     * Sets region_name
-     * @param string $region_name Human-readable name.
-     * @return $this
-     */
-    public function setRegionName($region_name)
-    {
-        $this->container['region_name'] = $region_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets points
-     * @return \Ageras\Api\LocationGeoPointResource[]
-     */
-    public function getPoints()
-    {
-        return $this->container['points'];
-    }
-
-    /**
-     * Sets points
-     * @param \Ageras\Api\LocationGeoPointResource[] $points List of points that define this region.
-     * @return $this
-     */
-    public function setPoints($points)
-    {
-        $this->container['points'] = $points;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

@@ -1,9 +1,12 @@
-# LeadAllocationResource
+# PartnerUniqueSellingPointResource
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**partner_business_unit_id** | **int[]** | Partner business units to allocate. | [optional] 
+**id** | **int** |  | [optional] 
+**partner_id** | **int** |  | [optional] 
+**created_at** | **string** |  | [optional] 
+**text** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

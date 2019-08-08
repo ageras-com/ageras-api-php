@@ -98,4 +98,36 @@ class PartnerTitleResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "industry"
+     */
+    public function testPropertyIndustry()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
 }

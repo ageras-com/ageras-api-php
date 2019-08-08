@@ -163,6 +163,7 @@ class LeadActionResource implements ArrayAccess
     const ACTION_SEND_TO_PARTNER = 'send_to_partner';
     const ACTION_GENERATE_MATCH_REPORTS = 'generate_match_reports';
     const ACTION_RESERVE_QUOTE = 'reserve_quote';
+    const ACTION_QUEUE_FEEDBACK_EMAIL = 'queue_feedback_email';
     const REASON_UNKNOWN = 'unknown';
     const REASON_DUPLICATE = 'duplicate';
     const REASON_TEST = 'test';
@@ -215,6 +216,7 @@ class LeadActionResource implements ArrayAccess
             self::ACTION_SEND_TO_PARTNER,
             self::ACTION_GENERATE_MATCH_REPORTS,
             self::ACTION_RESERVE_QUOTE,
+            self::ACTION_QUEUE_FEEDBACK_EMAIL,
         ];
     }
     
@@ -305,9 +307,9 @@ class LeadActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "generate_match_reports", "reserve_quote"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "generate_match_reports", "reserve_quote", "queue_feedback_email"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote', 'queue_feedback_email'.";
         }
 
         $allowed_values = ["unknown", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated", "untreated"];
@@ -337,7 +339,7 @@ class LeadActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "generate_match_reports", "reserve_quote"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "generate_match_reports", "reserve_quote", "queue_feedback_email"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -373,9 +375,9 @@ class LeadActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote');
+        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote', 'queue_feedback_email');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'generate_match_reports', 'reserve_quote', 'queue_feedback_email'");
         }
         $this->container['action'] = $action;
 

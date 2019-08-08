@@ -187,8 +187,22 @@ class PartnerUserResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ACCESS_TYPE_STANDARD = 'standard';
+    const ACCESS_TYPE_MASTER = 'master';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getAccessTypeAllowableValues()
+    {
+        return [
+            self::ACCESS_TYPE_STANDARD,
+            self::ACCESS_TYPE_MASTER,
+        ];
+    }
     
 
     /**
@@ -220,7 +234,7 @@ class PartnerUserResource implements ArrayAccess
         $this->container['wants_daily_email'] = isset($data['wants_daily_email']) ? $data['wants_daily_email'] : false;
         $this->container['is_visible'] = isset($data['is_visible']) ? $data['is_visible'] : false;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
-        $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : null;
+        $this->container['access_type'] = isset($data['access_type']) ? $data['access_type'] : 'standard';
         $this->container['has_refund_permission'] = isset($data['has_refund_permission']) ? $data['has_refund_permission'] : false;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
@@ -236,6 +250,11 @@ class PartnerUserResource implements ArrayAccess
     {
         $invalid_properties = [];
 
+        $allowed_values = ["standard", "master"];
+        if (!in_array($this->container['access_type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'access_type', must be one of 'standard', 'master'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -248,6 +267,10 @@ class PartnerUserResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["standard", "master"];
+        if (!in_array($this->container['access_type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -625,6 +648,10 @@ class PartnerUserResource implements ArrayAccess
      */
     public function setAccessType($access_type)
     {
+        $allowed_values = array('standard', 'master');
+        if (!is_null($access_type) && (!in_array($access_type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'access_type', must be one of 'standard', 'master'");
+        }
         $this->container['access_type'] = $access_type;
 
         return $this;

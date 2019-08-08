@@ -206,7 +206,7 @@ class PartnersApi
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
      *    'badge_id' => string,
-     *    'digital_leads' => string,
+     *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -246,7 +246,7 @@ class PartnersApi
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
      *    'badge_id' => string,
-     *    'digital_leads' => string,
+     *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -824,6 +824,8 @@ class PartnersApi
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
      * @param $criteria = [
+     *    'effective_at_gte' => string,
+     *    'effective_at_lte' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -845,6 +847,8 @@ class PartnersApi
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
      * @param $criteria = [
+     *    'effective_at_gte' => string,
+     *    'effective_at_lte' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -866,6 +870,14 @@ class PartnersApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if (isset($criteria['effective_at_gte'])) {
+            $queryParams['effective_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['effective_at_gte']);
+        }
+        // query params
+        if (isset($criteria['effective_at_lte'])) {
+            $queryParams['effective_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['effective_at_lte']);
+        }
         // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
@@ -6636,7 +6648,7 @@ class PartnersApi
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
      *    'badge_id' => string,
-     *    'digital_leads' => string,
+     *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -6676,7 +6688,7 @@ class PartnersApi
      *    'package_type' => string,
      *    'segmented_for_lead_id' => int,
      *    'badge_id' => string,
-     *    'digital_leads' => string,
+     *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -8828,6 +8840,412 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSectorsResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSellingpointsCreate
+     *
+     * Create partner selling point.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerUniqueSellingPointResource
+     */
+    public function partnersSellingpointsCreate($partner_id , $partner_unique_selling_point_resource)
+    {
+        list($response) = $this->partnersSellingpointsCreateWithHttpInfo($partner_id, $partner_unique_selling_point_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSellingpointsCreateWithHttpInfo
+     *
+     * Create partner selling point.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerUniqueSellingPointResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSellingpointsCreateWithHttpInfo($partner_id , $partner_unique_selling_point_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sellingpoints";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_unique_selling_point_resource)) {
+            $_tempBody = $partner_unique_selling_point_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerUniqueSellingPointResource',
+                '/partners/{partner_id}/sellingpoints'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerUniqueSellingPointResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerUniqueSellingPointResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSellingpointsDelete
+     *
+     * Delete partner selling point.
+     *
+     * @param string $partner_id 
+     * @param string $selling_point_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersSellingpointsDelete($partner_id,  $selling_point_id )
+    {
+        list($response) = $this->partnersSellingpointsDeleteWithHttpInfo($partner_id, $selling_point_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSellingpointsDeleteWithHttpInfo
+     *
+     * Delete partner selling point.
+     *
+     * @param string $partner_id 
+     * @param string $selling_point_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSellingpointsDeleteWithHttpInfo($partner_id,  $selling_point_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sellingpoints/{selling_point_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($selling_point_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "selling_point_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($selling_point_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/sellingpoints/{selling_point_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSellingpointsIndex
+     *
+     * List of partner selling points.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'id' => int,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerUniqueSellingPointResult
+     */
+    public function partnersSellingpointsIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersSellingpointsIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSellingpointsIndexWithHttpInfo
+     *
+     * List of partner selling points.
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'id' => int,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerUniqueSellingPointResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSellingpointsIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sellingpoints";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['id'])) {
+            $queryParams['id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerUniqueSellingPointResult',
+                '/partners/{partner_id}/sellingpoints'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerUniqueSellingPointResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerUniqueSellingPointResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersSellingpointsUpdate
+     *
+     * Update partner selling point.
+     *
+     * @param string $partner_id 
+     * @param string $selling_point_id 
+     * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerUniqueSellingPointResource
+     */
+    public function partnersSellingpointsUpdate($partner_id,  $selling_point_id , $partner_unique_selling_point_resource)
+    {
+        list($response) = $this->partnersSellingpointsUpdateWithHttpInfo($partner_id, $selling_point_id, $partner_unique_selling_point_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersSellingpointsUpdateWithHttpInfo
+     *
+     * Update partner selling point.
+     *
+     * @param string $partner_id 
+     * @param string $selling_point_id 
+     * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerUniqueSellingPointResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersSellingpointsUpdateWithHttpInfo($partner_id,  $selling_point_id , $partner_unique_selling_point_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/sellingpoints/{selling_point_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($selling_point_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "selling_point_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($selling_point_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_unique_selling_point_resource)) {
+            $_tempBody = $partner_unique_selling_point_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerUniqueSellingPointResource',
+                '/partners/{partner_id}/sellingpoints/{selling_point_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerUniqueSellingPointResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerUniqueSellingPointResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

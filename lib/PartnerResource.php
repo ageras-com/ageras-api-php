@@ -59,7 +59,7 @@ class PartnerResource implements ArrayAccess
         'updated_at' => 'string',
         'reserved_at' => 'string',
         'company_name' => 'string',
-        'title' => 'string',
+        'title' => '\Ageras\Api\PartnerTitleResource',
         'slug' => 'string',
         'is_enabled' => 'bool',
         'is_public' => 'bool',
@@ -537,7 +537,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Gets title
-     * @return string
+     * @return \Ageras\Api\PartnerTitleResource
      */
     public function getTitle()
     {
@@ -546,7 +546,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Sets title
-     * @param string $title Partner's title based on industry
+     * @param \Ageras\Api\PartnerTitleResource $title
      * @return $this
      */
     public function setTitle($title)

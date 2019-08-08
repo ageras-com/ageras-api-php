@@ -64,7 +64,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'canceled_at' => 'string',
         'created_at' => 'string',
         'updated_at' => 'string',
-        'package_type' => 'string'
+        'package_type' => 'string',
+        'churned_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'canceled_at' => 'canceled_at',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'package_type' => 'package_type'
+        'package_type' => 'package_type',
+        'churned_at' => 'churned_at'
     ];
 
 
@@ -106,7 +108,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'canceled_at' => 'setCanceledAt',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'package_type' => 'setPackageType'
+        'package_type' => 'setPackageType',
+        'churned_at' => 'setChurnedAt'
     ];
 
 
@@ -125,7 +128,8 @@ class PartnerSubscriptionResource implements ArrayAccess
         'canceled_at' => 'getCanceledAt',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'package_type' => 'getPackageType'
+        'package_type' => 'getPackageType',
+        'churned_at' => 'getChurnedAt'
     ];
 
     public static function attributeMap()
@@ -170,6 +174,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['package_type'] = isset($data['package_type']) ? $data['package_type'] : null;
+        $this->container['churned_at'] = isset($data['churned_at']) ? $data['churned_at'] : null;
     }
 
     /**
@@ -424,6 +429,27 @@ class PartnerSubscriptionResource implements ArrayAccess
     public function setPackageType($package_type)
     {
         $this->container['package_type'] = $package_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets churned_at
+     * @return string
+     */
+    public function getChurnedAt()
+    {
+        return $this->container['churned_at'];
+    }
+
+    /**
+     * Sets churned_at
+     * @param string $churned_at When the package churned.
+     * @return $this
+     */
+    public function setChurnedAt($churned_at)
+    {
+        $this->container['churned_at'] = $churned_at;
 
         return $this;
     }

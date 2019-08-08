@@ -979,6 +979,50 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersSellingpointsCreate
+     *
+     * Create partner selling point..
+     *
+     */
+    public function testPartnersSellingpointsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSellingpointsDelete
+     *
+     * Delete partner selling point..
+     *
+     */
+    public function testPartnersSellingpointsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSellingpointsIndex
+     *
+     * List of partner selling points..
+     *
+     */
+    public function testPartnersSellingpointsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSellingpointsUpdate
+     *
+     * Update partner selling point..
+     *
+     */
+    public function testPartnersSellingpointsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersSubscriptionagreementsActionsCreate
      *
      * Execute an action on a subscription agreement..

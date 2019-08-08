@@ -146,4 +146,20 @@ class LeadPartnerAllocationResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "deallocated_at"
+     */
+    public function testPropertyDeallocatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "deallocated_by_employee_id"
+     */
+    public function testPropertyDeallocatedByEmployeeId()
+    {
+
+    }
+
 }

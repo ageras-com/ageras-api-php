@@ -1,6 +1,6 @@
 <?php
 /**
- * SegmentationGeoRegionResource
+ * SegmentationSubGeoRegionResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * SegmentationGeoRegionResource Class Doc Comment
+ * SegmentationSubGeoRegionResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SegmentationGeoRegionResource implements ArrayAccess
+class SegmentationSubGeoRegionResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class SegmentationGeoRegionResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SegmentationGeoRegionResource';
+    protected static $swaggerModelName = 'SegmentationSubGeoRegionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,8 +55,8 @@ class SegmentationGeoRegionResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'geo_code' => 'string',
-        'region_name' => 'string',
+        'segmentation_geo_region_id' => 'int',
+        'sub_region_name' => 'string',
         'points' => '\Ageras\Api\LocationGeoPointResource[]'
     ];
 
@@ -71,8 +71,8 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'geo_code' => 'geo_code',
-        'region_name' => 'region_name',
+        'segmentation_geo_region_id' => 'segmentation_geo_region_id',
+        'sub_region_name' => 'sub_region_name',
         'points' => 'points'
     ];
 
@@ -83,8 +83,8 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'geo_code' => 'setGeoCode',
-        'region_name' => 'setRegionName',
+        'segmentation_geo_region_id' => 'setSegmentationGeoRegionId',
+        'sub_region_name' => 'setSubRegionName',
         'points' => 'setPoints'
     ];
 
@@ -95,8 +95,8 @@ class SegmentationGeoRegionResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'geo_code' => 'getGeoCode',
-        'region_name' => 'getRegionName',
+        'segmentation_geo_region_id' => 'getSegmentationGeoRegionId',
+        'sub_region_name' => 'getSubRegionName',
         'points' => 'getPoints'
     ];
 
@@ -132,8 +132,8 @@ class SegmentationGeoRegionResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['region_name'] = isset($data['region_name']) ? $data['region_name'] : null;
+        $this->container['segmentation_geo_region_id'] = isset($data['segmentation_geo_region_id']) ? $data['segmentation_geo_region_id'] : null;
+        $this->container['sub_region_name'] = isset($data['sub_region_name']) ? $data['sub_region_name'] : null;
         $this->container['points'] = isset($data['points']) ? $data['points'] : null;
     }
 
@@ -173,7 +173,7 @@ class SegmentationGeoRegionResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Sector ID.
+     * @param int $id Primary ID.
      * @return $this
      */
     public function setId($id)
@@ -184,43 +184,43 @@ class SegmentationGeoRegionResource implements ArrayAccess
     }
 
     /**
-     * Gets geo_code
-     * @return string
+     * Gets segmentation_geo_region_id
+     * @return int
      */
-    public function getGeoCode()
+    public function getSegmentationGeoRegionId()
     {
-        return $this->container['geo_code'];
+        return $this->container['segmentation_geo_region_id'];
     }
 
     /**
-     * Sets geo_code
-     * @param string $geo_code Geo code.
+     * Sets segmentation_geo_region_id
+     * @param int $segmentation_geo_region_id Parent region ID.
      * @return $this
      */
-    public function setGeoCode($geo_code)
+    public function setSegmentationGeoRegionId($segmentation_geo_region_id)
     {
-        $this->container['geo_code'] = $geo_code;
+        $this->container['segmentation_geo_region_id'] = $segmentation_geo_region_id;
 
         return $this;
     }
 
     /**
-     * Gets region_name
+     * Gets sub_region_name
      * @return string
      */
-    public function getRegionName()
+    public function getSubRegionName()
     {
-        return $this->container['region_name'];
+        return $this->container['sub_region_name'];
     }
 
     /**
-     * Sets region_name
-     * @param string $region_name Human-readable name.
+     * Sets sub_region_name
+     * @param string $sub_region_name Human-readable name.
      * @return $this
      */
-    public function setRegionName($region_name)
+    public function setSubRegionName($sub_region_name)
     {
-        $this->container['region_name'] = $region_name;
+        $this->container['sub_region_name'] = $sub_region_name;
 
         return $this;
     }

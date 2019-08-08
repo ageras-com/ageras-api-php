@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **created_at** | **string** | When this allocation was created. | [optional] 
 **allocated_by_employee_id** | **int** | Who created this allocation. | [optional] 
 **quote** | [**\Ageras\Api\LeadPartnerAllocationQuoteResource**](LeadPartnerAllocationQuoteResource.md) |  | [optional] 
+**deallocated_at** | **string** | When the lead eas deallocated. | [optional] 
+**deallocated_by_employee_id** | **int** | Who deallocated the allocation. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

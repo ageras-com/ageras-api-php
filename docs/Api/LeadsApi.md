@@ -304,6 +304,7 @@ $criteria = [
         'starts_at' => "starts_at_example"; // string | 
         'ends_at' => "ends_at_example"; // string | 
         'sort' => "created_at"; // string | 
+        'is_used' => false; // bool | Filter by the allocation being used or unused.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -328,6 +329,7 @@ Name | Type | Description  | Notes
  **starts_at** | **string**|  | [optional]
  **ends_at** | **string**|  | [optional]
  **sort** | **string**|  | [optional] [default to created_at]
+ **is_used** | **bool**| Filter by the allocation being used or unused. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
