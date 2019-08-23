@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResource
+ * PartnerRatingTypesResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerRatingResource Class Doc Comment
+ * PartnerRatingTypesResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResource implements ArrayAccess
+class PartnerRatingTypesResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,18 @@ class PartnerRatingResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerRatingResource';
+    protected static $swaggerModelName = 'PartnerRatingTypesResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'score' => 'float',
-        'stars' => 'int',
-        'count' => 'int',
-        'types' => '\Ageras\Api\PartnerRatingTypesResource',
-        'spread' => 'int[]'
+        'rating_quality' => 'float',
+        'rating_contact' => 'float',
+        'rating_expertise' => 'float',
+        'rating_schedule' => 'float',
+        'rating_budget' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -71,11 +71,11 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'score' => 'score',
-        'stars' => 'stars',
-        'count' => 'count',
-        'types' => 'types',
-        'spread' => 'spread'
+        'rating_quality' => 'rating_quality',
+        'rating_contact' => 'rating_contact',
+        'rating_expertise' => 'rating_expertise',
+        'rating_schedule' => 'rating_schedule',
+        'rating_budget' => 'rating_budget'
     ];
 
 
@@ -84,11 +84,11 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'score' => 'setScore',
-        'stars' => 'setStars',
-        'count' => 'setCount',
-        'types' => 'setTypes',
-        'spread' => 'setSpread'
+        'rating_quality' => 'setRatingQuality',
+        'rating_contact' => 'setRatingContact',
+        'rating_expertise' => 'setRatingExpertise',
+        'rating_schedule' => 'setRatingSchedule',
+        'rating_budget' => 'setRatingBudget'
     ];
 
 
@@ -97,11 +97,11 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'score' => 'getScore',
-        'stars' => 'getStars',
-        'count' => 'getCount',
-        'types' => 'getTypes',
-        'spread' => 'getSpread'
+        'rating_quality' => 'getRatingQuality',
+        'rating_contact' => 'getRatingContact',
+        'rating_expertise' => 'getRatingExpertise',
+        'rating_schedule' => 'getRatingSchedule',
+        'rating_budget' => 'getRatingBudget'
     ];
 
     public static function attributeMap()
@@ -135,11 +135,11 @@ class PartnerRatingResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['types'] = isset($data['types']) ? $data['types'] : null;
-        $this->container['spread'] = isset($data['spread']) ? $data['spread'] : null;
+        $this->container['rating_quality'] = isset($data['rating_quality']) ? $data['rating_quality'] : null;
+        $this->container['rating_contact'] = isset($data['rating_contact']) ? $data['rating_contact'] : null;
+        $this->container['rating_expertise'] = isset($data['rating_expertise']) ? $data['rating_expertise'] : null;
+        $this->container['rating_schedule'] = isset($data['rating_schedule']) ? $data['rating_schedule'] : null;
+        $this->container['rating_budget'] = isset($data['rating_budget']) ? $data['rating_budget'] : null;
     }
 
     /**
@@ -168,106 +168,106 @@ class PartnerRatingResource implements ArrayAccess
 
 
     /**
-     * Gets score
+     * Gets rating_quality
      * @return float
      */
-    public function getScore()
+    public function getRatingQuality()
     {
-        return $this->container['score'];
+        return $this->container['rating_quality'];
     }
 
     /**
-     * Sets score
-     * @param float $score Average Score for the partner.
+     * Sets rating_quality
+     * @param float $rating_quality Rating on quality
      * @return $this
      */
-    public function setScore($score)
+    public function setRatingQuality($rating_quality)
     {
-        $this->container['score'] = $score;
+        $this->container['rating_quality'] = $rating_quality;
 
         return $this;
     }
 
     /**
-     * Gets stars
-     * @return int
+     * Gets rating_contact
+     * @return float
      */
-    public function getStars()
+    public function getRatingContact()
     {
-        return $this->container['stars'];
+        return $this->container['rating_contact'];
     }
 
     /**
-     * Sets stars
-     * @param int $stars Based on the ratings, the amount of stars it represents
+     * Sets rating_contact
+     * @param float $rating_contact Rating on contact
      * @return $this
      */
-    public function setStars($stars)
+    public function setRatingContact($rating_contact)
     {
-        $this->container['stars'] = $stars;
+        $this->container['rating_contact'] = $rating_contact;
 
         return $this;
     }
 
     /**
-     * Gets count
-     * @return int
+     * Gets rating_expertise
+     * @return float
      */
-    public function getCount()
+    public function getRatingExpertise()
     {
-        return $this->container['count'];
+        return $this->container['rating_expertise'];
     }
 
     /**
-     * Sets count
-     * @param int $count Number of ratings given.
+     * Sets rating_expertise
+     * @param float $rating_expertise Rating on expertise
      * @return $this
      */
-    public function setCount($count)
+    public function setRatingExpertise($rating_expertise)
     {
-        $this->container['count'] = $count;
+        $this->container['rating_expertise'] = $rating_expertise;
 
         return $this;
     }
 
     /**
-     * Gets types
-     * @return \Ageras\Api\PartnerRatingTypesResource
+     * Gets rating_schedule
+     * @return float
      */
-    public function getTypes()
+    public function getRatingSchedule()
     {
-        return $this->container['types'];
+        return $this->container['rating_schedule'];
     }
 
     /**
-     * Sets types
-     * @param \Ageras\Api\PartnerRatingTypesResource $types
+     * Sets rating_schedule
+     * @param float $rating_schedule Rating on schedule
      * @return $this
      */
-    public function setTypes($types)
+    public function setRatingSchedule($rating_schedule)
     {
-        $this->container['types'] = $types;
+        $this->container['rating_schedule'] = $rating_schedule;
 
         return $this;
     }
 
     /**
-     * Gets spread
-     * @return int[]
+     * Gets rating_budget
+     * @return float
      */
-    public function getSpread()
+    public function getRatingBudget()
     {
-        return $this->container['spread'];
+        return $this->container['rating_budget'];
     }
 
     /**
-     * Sets spread
-     * @param int[] $spread The spread of ratings
+     * Sets rating_budget
+     * @param float $rating_budget Rating on budget
      * @return $this
      */
-    public function setSpread($spread)
+    public function setRatingBudget($rating_budget)
     {
-        $this->container['spread'] = $spread;
+        $this->container['rating_budget'] = $rating_budget;
 
         return $this;
     }

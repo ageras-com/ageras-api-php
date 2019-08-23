@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResource
+ * MatchResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerRatingResource Class Doc Comment
+ * MatchResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResource implements ArrayAccess
+class MatchResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,19 @@ class PartnerRatingResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerRatingResource';
+    protected static $swaggerModelName = 'MatchResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'score' => 'float',
-        'stars' => 'int',
-        'count' => 'int',
-        'types' => '\Ageras\Api\PartnerRatingTypesResource',
-        'spread' => 'int[]'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\MatchResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,11 +72,12 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'score' => 'score',
-        'stars' => 'stars',
-        'count' => 'count',
-        'types' => 'types',
-        'spread' => 'spread'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -84,11 +86,12 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'score' => 'setScore',
-        'stars' => 'setStars',
-        'count' => 'setCount',
-        'types' => 'setTypes',
-        'spread' => 'setSpread'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -97,11 +100,12 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'score' => 'getScore',
-        'stars' => 'getStars',
-        'count' => 'getCount',
-        'types' => 'getTypes',
-        'spread' => 'getSpread'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -135,11 +139,12 @@ class PartnerRatingResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['types'] = isset($data['types']) ? $data['types'] : null;
-        $this->container['spread'] = isset($data['spread']) ? $data['spread'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -168,106 +173,127 @@ class PartnerRatingResource implements ArrayAccess
 
 
     /**
-     * Gets score
-     * @return float
-     */
-    public function getScore()
-    {
-        return $this->container['score'];
-    }
-
-    /**
-     * Sets score
-     * @param float $score Average Score for the partner.
-     * @return $this
-     */
-    public function setScore($score)
-    {
-        $this->container['score'] = $score;
-
-        return $this;
-    }
-
-    /**
-     * Gets stars
+     * Gets page
      * @return int
      */
-    public function getStars()
+    public function getPage()
     {
-        return $this->container['stars'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets stars
-     * @param int $stars Based on the ratings, the amount of stars it represents
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setStars($stars)
+    public function setPage($page)
     {
-        $this->container['stars'] = $stars;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets count
+     * Gets limit
      * @return int
      */
-    public function getCount()
+    public function getLimit()
     {
-        return $this->container['count'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets count
-     * @param int $count Number of ratings given.
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setCount($count)
+    public function setLimit($limit)
     {
-        $this->container['count'] = $count;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets types
-     * @return \Ageras\Api\PartnerRatingTypesResource
+     * Gets pages
+     * @return int
      */
-    public function getTypes()
+    public function getPages()
     {
-        return $this->container['types'];
+        return $this->container['pages'];
     }
 
     /**
-     * Sets types
-     * @param \Ageras\Api\PartnerRatingTypesResource $types
+     * Sets pages
+     * @param int $pages Number of pages.
      * @return $this
      */
-    public function setTypes($types)
+    public function setPages($pages)
     {
-        $this->container['types'] = $types;
+        $this->container['pages'] = $pages;
 
         return $this;
     }
 
     /**
-     * Gets spread
-     * @return int[]
+     * Gets total
+     * @return int
      */
-    public function getSpread()
+    public function getTotal()
     {
-        return $this->container['spread'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets spread
-     * @param int[] $spread The spread of ratings
+     * Sets total
+     * @param int $total Total number of results.
      * @return $this
      */
-    public function setSpread($spread)
+    public function setTotal($total)
     {
-        $this->container['spread'] = $spread;
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\MatchResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\MatchResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
+     * @return string
+     */
+    public function getDidYouMean()
+    {
+        return $this->container['did_you_mean'];
+    }
+
+    /**
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
+     * @return $this
+     */
+    public function setDidYouMean($did_you_mean)
+    {
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

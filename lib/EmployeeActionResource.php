@@ -122,6 +122,7 @@ class EmployeeActionResource implements ArrayAccess
     const WANTED_GEO_CODE_UK = 'uk';
     const WANTED_GEO_CODE_NL = 'nl';
     const WANTED_GEO_CODE_US = 'us';
+    const WANTED_GEO_CODE_COM = 'com';
     const WANTED_GEO_CODE_ASCENDING = 'ascending';
     const WANTED_GEO_CODE_DESCENDING = 'descending';
     
@@ -155,6 +156,7 @@ class EmployeeActionResource implements ArrayAccess
             self::WANTED_GEO_CODE_UK,
             self::WANTED_GEO_CODE_NL,
             self::WANTED_GEO_CODE_US,
+            self::WANTED_GEO_CODE_COM,
             self::WANTED_GEO_CODE_ASCENDING,
             self::WANTED_GEO_CODE_DESCENDING,
         ];
@@ -192,9 +194,9 @@ class EmployeeActionResource implements ArrayAccess
             $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'change_wanted_geo_code', 'mark_notifications_as_read'.";
         }
 
-        $allowed_values = ["", "dk", "no", "de", "se", "uk", "nl", "us", "ascending", "descending"];
+        $allowed_values = ["", "dk", "no", "de", "se", "uk", "nl", "us", "com", "ascending", "descending"];
         if (!in_array($this->container['wanted_geo_code'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'wanted_geo_code', must be one of '', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'ascending', 'descending'.";
+            $invalid_properties[] = "invalid value for 'wanted_geo_code', must be one of '', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'com', 'ascending', 'descending'.";
         }
 
         return $invalid_properties;
@@ -213,7 +215,7 @@ class EmployeeActionResource implements ArrayAccess
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["", "dk", "no", "de", "se", "uk", "nl", "us", "ascending", "descending"];
+        $allowed_values = ["", "dk", "no", "de", "se", "uk", "nl", "us", "com", "ascending", "descending"];
         if (!in_array($this->container['wanted_geo_code'], $allowed_values)) {
             return false;
         }
@@ -262,9 +264,9 @@ class EmployeeActionResource implements ArrayAccess
      */
     public function setWantedGeoCode($wanted_geo_code)
     {
-        $allowed_values = array('', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'ascending', 'descending');
+        $allowed_values = array('', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'com', 'ascending', 'descending');
         if (!is_null($wanted_geo_code) && (!in_array($wanted_geo_code, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'wanted_geo_code', must be one of '', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'ascending', 'descending'");
+            throw new \InvalidArgumentException("Invalid value for 'wanted_geo_code', must be one of '', 'dk', 'no', 'de', 'se', 'uk', 'nl', 'us', 'com', 'ascending', 'descending'");
         }
         $this->container['wanted_geo_code'] = $wanted_geo_code;
 

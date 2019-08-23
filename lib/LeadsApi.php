@@ -604,9 +604,10 @@ class LeadsApi
      * @param $criteria = [
      *    'lead_id' => int,
      *    'partner_id' => int,
-     *    'partner_business_unit_id' => int,
+     *    'partner_business_unit_id' => string,
      *    'starts_at' => string,
      *    'ends_at' => string,
+     *    'has_business_unit' => bool,
      *    'sort' => string,
      *    'is_used' => bool,
      *    'limit' => int,
@@ -630,9 +631,10 @@ class LeadsApi
      * @param $criteria = [
      *    'lead_id' => int,
      *    'partner_id' => int,
-     *    'partner_business_unit_id' => int,
+     *    'partner_business_unit_id' => string,
      *    'starts_at' => string,
      *    'ends_at' => string,
+     *    'has_business_unit' => bool,
      *    'sort' => string,
      *    'is_used' => bool,
      *    'limit' => int,
@@ -675,6 +677,10 @@ class LeadsApi
         // query params
         if (isset($criteria['ends_at'])) {
             $queryParams['ends_at'] = $this->apiClient->getSerializer()->toQueryValue($criteria['ends_at']);
+        }
+        // query params
+        if (isset($criteria['has_business_unit'])) {
+            $queryParams['has_business_unit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_business_unit']);
         }
         // query params
         if (isset($criteria['sort'])) {

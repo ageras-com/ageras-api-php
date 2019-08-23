@@ -119,7 +119,7 @@ $criteria = [
         'partner_id' => 56; // int | Provide a given partner id to filter by. Requires \"filter\" to be \"bought_by_partner\" or \"segmented_for_partner\".
         'geo_code' => ""; // string | Geographic Location Code.
         'sort' => "created_at"; // string | Sort Leads by a given attribute.
-        'status' => "unknown"; // string | Status for the given lead.
+        'status' => "status_example"; // string | Status for the given lead.
         'client_id' => 56; // int | Lead's client
         'employee_id' => "employee_id_example"; // string | Lead's client's assigned employee ID
         'client_decision_postponed' => false; // bool | Client decision to choose a quote match is postponed or not.
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
  **partner_id** | **int**| Provide a given partner id to filter by. Requires \&quot;filter\&quot; to be \&quot;bought_by_partner\&quot; or \&quot;segmented_for_partner\&quot;. | [optional]
  **geo_code** | **string**| Geographic Location Code. | [optional] [default to ]
  **sort** | **string**| Sort Leads by a given attribute. | [optional] [default to created_at]
- **status** | **string**| Status for the given lead. | [optional] [default to unknown]
+ **status** | **string**| Status for the given lead. | [optional]
  **client_id** | **int**| Lead&#39;s client | [optional]
  **employee_id** | **string**| Lead&#39;s client&#39;s assigned employee ID | [optional]
  **client_decision_postponed** | **bool**| Client decision to choose a quote match is postponed or not. | [optional] [default to false]
@@ -300,9 +300,10 @@ $api_instance = new Ageras\Api\Api\LeadsApi();
 $criteria = [
         'lead_id' => 56; // int | Lead ID.
         'partner_id' => 56; // int | Partner ID.
-        'partner_business_unit_id' => 56; // int | Business Unit ID.
+        'partner_business_unit_id' => "partner_business_unit_id_example"; // string | Business Unit ID.
         'starts_at' => "starts_at_example"; // string | 
         'ends_at' => "ends_at_example"; // string | 
+        'has_business_unit' => false; // bool | 
         'sort' => "created_at"; // string | 
         'is_used' => false; // bool | Filter by the allocation being used or unused.
         'limit' => 56; // int | The number of resources to be returned.
@@ -325,9 +326,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **int**| Lead ID. | [optional]
  **partner_id** | **int**| Partner ID. | [optional]
- **partner_business_unit_id** | **int**| Business Unit ID. | [optional]
+ **partner_business_unit_id** | **string**| Business Unit ID. | [optional]
  **starts_at** | **string**|  | [optional]
  **ends_at** | **string**|  | [optional]
+ **has_business_unit** | **bool**|  | [optional] [default to false]
  **sort** | **string**|  | [optional] [default to created_at]
  **is_used** | **bool**| Filter by the allocation being used or unused. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
@@ -972,7 +974,7 @@ $criteria = [
         'partner_id' => 56; // int | Provide a given partner id to filter by. Requires \"filter\" to be \"bought_by_partner\" or \"segmented_for_partner\".
         'geo_code' => ""; // string | Geographic Location Code.
         'sort' => "created_at"; // string | Sort Leads by a given attribute.
-        'status' => "unknown"; // string | Status for the given lead.
+        'status' => "status_example"; // string | Status for the given lead.
         'client_id' => 56; // int | Lead's client
         'employee_id' => "employee_id_example"; // string | Lead's client's assigned employee ID
         'client_decision_postponed' => false; // bool | Client decision to choose a quote match is postponed or not.
@@ -1027,7 +1029,7 @@ Name | Type | Description  | Notes
  **partner_id** | **int**| Provide a given partner id to filter by. Requires \&quot;filter\&quot; to be \&quot;bought_by_partner\&quot; or \&quot;segmented_for_partner\&quot;. | [optional]
  **geo_code** | **string**| Geographic Location Code. | [optional] [default to ]
  **sort** | **string**| Sort Leads by a given attribute. | [optional] [default to created_at]
- **status** | **string**| Status for the given lead. | [optional] [default to unknown]
+ **status** | **string**| Status for the given lead. | [optional]
  **client_id** | **int**| Lead&#39;s client | [optional]
  **employee_id** | **string**| Lead&#39;s client&#39;s assigned employee ID | [optional]
  **client_decision_postponed** | **bool**| Client decision to choose a quote match is postponed or not. | [optional] [default to false]

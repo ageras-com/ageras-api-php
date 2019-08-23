@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResource
+ * MatchResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerRatingResource Class Doc Comment
+ * MatchResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResource implements ArrayAccess
+class MatchResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,20 @@ class PartnerRatingResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerRatingResource';
+    protected static $swaggerModelName = 'MatchResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'score' => 'float',
-        'stars' => 'int',
-        'count' => 'int',
-        'types' => '\Ageras\Api\PartnerRatingTypesResource',
-        'spread' => 'int[]'
+        'geo_code' => 'string',
+        'match_channel' => 'string',
+        'partner_id' => 'int',
+        'lead_id' => 'int',
+        'validator_id' => 'int',
+        'accepted_at' => 'string',
+        'unaccepted_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,11 +73,13 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'score' => 'score',
-        'stars' => 'stars',
-        'count' => 'count',
-        'types' => 'types',
-        'spread' => 'spread'
+        'geo_code' => 'geo_code',
+        'match_channel' => 'match_channel',
+        'partner_id' => 'partner_id',
+        'lead_id' => 'lead_id',
+        'validator_id' => 'validator_id',
+        'accepted_at' => 'accepted_at',
+        'unaccepted_at' => 'unaccepted_at'
     ];
 
 
@@ -84,11 +88,13 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'score' => 'setScore',
-        'stars' => 'setStars',
-        'count' => 'setCount',
-        'types' => 'setTypes',
-        'spread' => 'setSpread'
+        'geo_code' => 'setGeoCode',
+        'match_channel' => 'setMatchChannel',
+        'partner_id' => 'setPartnerId',
+        'lead_id' => 'setLeadId',
+        'validator_id' => 'setValidatorId',
+        'accepted_at' => 'setAcceptedAt',
+        'unaccepted_at' => 'setUnacceptedAt'
     ];
 
 
@@ -97,11 +103,13 @@ class PartnerRatingResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'score' => 'getScore',
-        'stars' => 'getStars',
-        'count' => 'getCount',
-        'types' => 'getTypes',
-        'spread' => 'getSpread'
+        'geo_code' => 'getGeoCode',
+        'match_channel' => 'getMatchChannel',
+        'partner_id' => 'getPartnerId',
+        'lead_id' => 'getLeadId',
+        'validator_id' => 'getValidatorId',
+        'accepted_at' => 'getAcceptedAt',
+        'unaccepted_at' => 'getUnacceptedAt'
     ];
 
     public static function attributeMap()
@@ -135,11 +143,13 @@ class PartnerRatingResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
-        $this->container['stars'] = isset($data['stars']) ? $data['stars'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['types'] = isset($data['types']) ? $data['types'] : null;
-        $this->container['spread'] = isset($data['spread']) ? $data['spread'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['match_channel'] = isset($data['match_channel']) ? $data['match_channel'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
+        $this->container['validator_id'] = isset($data['validator_id']) ? $data['validator_id'] : null;
+        $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
+        $this->container['unaccepted_at'] = isset($data['unaccepted_at']) ? $data['unaccepted_at'] : null;
     }
 
     /**
@@ -168,106 +178,148 @@ class PartnerRatingResource implements ArrayAccess
 
 
     /**
-     * Gets score
-     * @return float
+     * Gets geo_code
+     * @return string
      */
-    public function getScore()
+    public function getGeoCode()
     {
-        return $this->container['score'];
+        return $this->container['geo_code'];
     }
 
     /**
-     * Sets score
-     * @param float $score Average Score for the partner.
+     * Sets geo_code
+     * @param string $geo_code Geo Location Geo
      * @return $this
      */
-    public function setScore($score)
+    public function setGeoCode($geo_code)
     {
-        $this->container['score'] = $score;
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }
 
     /**
-     * Gets stars
+     * Gets match_channel
+     * @return string
+     */
+    public function getMatchChannel()
+    {
+        return $this->container['match_channel'];
+    }
+
+    /**
+     * Sets match_channel
+     * @param string $match_channel Channel
+     * @return $this
+     */
+    public function setMatchChannel($match_channel)
+    {
+        $this->container['match_channel'] = $match_channel;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
      * @return int
      */
-    public function getStars()
+    public function getPartnerId()
     {
-        return $this->container['stars'];
+        return $this->container['partner_id'];
     }
 
     /**
-     * Sets stars
-     * @param int $stars Based on the ratings, the amount of stars it represents
+     * Sets partner_id
+     * @param int $partner_id partner involved in the match
      * @return $this
      */
-    public function setStars($stars)
+    public function setPartnerId($partner_id)
     {
-        $this->container['stars'] = $stars;
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }
 
     /**
-     * Gets count
+     * Gets lead_id
      * @return int
      */
-    public function getCount()
+    public function getLeadId()
     {
-        return $this->container['count'];
+        return $this->container['lead_id'];
     }
 
     /**
-     * Sets count
-     * @param int $count Number of ratings given.
+     * Sets lead_id
+     * @param int $lead_id lead involved in the match
      * @return $this
      */
-    public function setCount($count)
+    public function setLeadId($lead_id)
     {
-        $this->container['count'] = $count;
+        $this->container['lead_id'] = $lead_id;
 
         return $this;
     }
 
     /**
-     * Gets types
-     * @return \Ageras\Api\PartnerRatingTypesResource
+     * Gets validator_id
+     * @return int
      */
-    public function getTypes()
+    public function getValidatorId()
     {
-        return $this->container['types'];
+        return $this->container['validator_id'];
     }
 
     /**
-     * Sets types
-     * @param \Ageras\Api\PartnerRatingTypesResource $types
+     * Sets validator_id
+     * @param int $validator_id Validator involved in the match
      * @return $this
      */
-    public function setTypes($types)
+    public function setValidatorId($validator_id)
     {
-        $this->container['types'] = $types;
+        $this->container['validator_id'] = $validator_id;
 
         return $this;
     }
 
     /**
-     * Gets spread
-     * @return int[]
+     * Gets accepted_at
+     * @return string
      */
-    public function getSpread()
+    public function getAcceptedAt()
     {
-        return $this->container['spread'];
+        return $this->container['accepted_at'];
     }
 
     /**
-     * Sets spread
-     * @param int[] $spread The spread of ratings
+     * Sets accepted_at
+     * @param string $accepted_at Date of match
      * @return $this
      */
-    public function setSpread($spread)
+    public function setAcceptedAt($accepted_at)
     {
-        $this->container['spread'] = $spread;
+        $this->container['accepted_at'] = $accepted_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets unaccepted_at
+     * @return string
+     */
+    public function getUnacceptedAt()
+    {
+        return $this->container['unaccepted_at'];
+    }
+
+    /**
+     * Sets unaccepted_at
+     * @param string $unaccepted_at Date of unmatch
+     * @return $this
+     */
+    public function setUnacceptedAt($unaccepted_at)
+    {
+        $this->container['unaccepted_at'] = $unaccepted_at;
 
         return $this;
     }

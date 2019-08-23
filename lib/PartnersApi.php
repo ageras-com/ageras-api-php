@@ -822,10 +822,10 @@ class PartnersApi
      * List lead allocation quotas.
      *
      * @param string $partner_id 
-     * @param string $partner_business_unit_id 
      * @param $criteria = [
      *    'effective_at_gte' => string,
      *    'effective_at_lte' => string,
+     *    'partner_business_unit_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -833,9 +833,9 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadAllocationQuotaResult
      */
-    public function partnersBusinessunitsAllocationquotasIndex($partner_id,  $partner_business_unit_id , $criteria = [])
+    public function partnersBusinessunitsAllocationquotasIndex($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersBusinessunitsAllocationquotasIndexWithHttpInfo($partner_id, $partner_business_unit_id, $criteria);
+        list($response) = $this->partnersBusinessunitsAllocationquotasIndexWithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
@@ -845,10 +845,10 @@ class PartnersApi
      * List lead allocation quotas.
      *
      * @param string $partner_id 
-     * @param string $partner_business_unit_id 
      * @param $criteria = [
      *    'effective_at_gte' => string,
      *    'effective_at_lte' => string,
+     *    'partner_business_unit_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -856,10 +856,10 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadAllocationQuotaResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersBusinessunitsAllocationquotasIndexWithHttpInfo($partner_id,  $partner_business_unit_id , $criteria = [])
+    public function partnersBusinessunitsAllocationquotasIndexWithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
-        $resourcePath = "/partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas";
+        $resourcePath = "/partners/{partner_id}/businessunits/allocationquotas";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -879,6 +879,10 @@ class PartnersApi
             $queryParams['effective_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['effective_at_lte']);
         }
         // query params
+        if (isset($criteria['partner_business_unit_id'])) {
+            $queryParams['partner_business_unit_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_business_unit_id']);
+        }
+        // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
         }
@@ -895,14 +899,6 @@ class PartnersApi
             $resourcePath = str_replace(
                 "{" . "partner_id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($partner_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($partner_business_unit_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "partner_business_unit_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($partner_business_unit_id),
                 $resourcePath
             );
         }
@@ -931,7 +927,7 @@ class PartnersApi
                 $httpBody,
                 $headerParams,
                 '\Ageras\Api\LeadAllocationQuotaResult',
-                '/partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas'
+                '/partners/{partner_id}/businessunits/allocationquotas'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadAllocationQuotaResult', $httpHeader), $statusCode, $httpHeader];

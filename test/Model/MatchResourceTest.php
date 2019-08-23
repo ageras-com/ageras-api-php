@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResourceTest
+ * MatchResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerRatingResourceTest Class Doc Comment
+ * MatchResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerRatingResource
+// * @description MatchResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
+class MatchResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,49 +75,65 @@ class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerRatingResource"
+     * Test "MatchResource"
      */
-    public function testPartnerRatingResource()
+    public function testMatchResource()
     {
 
     }
 
     /**
-     * Test attribute "score"
+     * Test attribute "geo_code"
      */
-    public function testPropertyScore()
+    public function testPropertyGeoCode()
     {
 
     }
 
     /**
-     * Test attribute "stars"
+     * Test attribute "match_channel"
      */
-    public function testPropertyStars()
+    public function testPropertyMatchChannel()
     {
 
     }
 
     /**
-     * Test attribute "count"
+     * Test attribute "partner_id"
      */
-    public function testPropertyCount()
+    public function testPropertyPartnerId()
     {
 
     }
 
     /**
-     * Test attribute "types"
+     * Test attribute "lead_id"
      */
-    public function testPropertyTypes()
+    public function testPropertyLeadId()
     {
 
     }
 
     /**
-     * Test attribute "spread"
+     * Test attribute "validator_id"
      */
-    public function testPropertySpread()
+    public function testPropertyValidatorId()
+    {
+
+    }
+
+    /**
+     * Test attribute "accepted_at"
+     */
+    public function testPropertyAcceptedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "unaccepted_at"
+     */
+    public function testPropertyUnacceptedAt()
     {
 
     }

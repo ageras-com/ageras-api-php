@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
 [**partnersBusinessunitsAllocationquotasCreate**](PartnersApi.md#partnersBusinessunitsAllocationquotasCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas | Create a lead allocation quota for a business unit.
 [**partnersBusinessunitsAllocationquotasDelete**](PartnersApi.md#partnersBusinessunitsAllocationquotasDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas/{quota_id} | Delete a lead allocation quota.
-[**partnersBusinessunitsAllocationquotasIndex**](PartnersApi.md#partnersBusinessunitsAllocationquotasIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas | List lead allocation quotas.
+[**partnersBusinessunitsAllocationquotasIndex**](PartnersApi.md#partnersBusinessunitsAllocationquotasIndex) | **GET** /partners/{partner_id}/businessunits/allocationquotas | List lead allocation quotas.
 [**partnersBusinessunitsCreate**](PartnersApi.md#partnersBusinessunitsCreate) | **POST** /partners/{partner_id}/businessunits | Create partner business unit.
 [**partnersBusinessunitsDelete**](PartnersApi.md#partnersBusinessunitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_businessunit_id} | Delete a partner business unit
 [**partnersBusinessunitsGet**](PartnersApi.md#partnersBusinessunitsGet) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id} | Get a single partner business unit.
@@ -502,7 +502,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersBusinessunitsAllocationquotasIndex**
-> \Ageras\Api\LeadAllocationQuotaResult partnersBusinessunitsAllocationquotasIndex($partner_id,  $partner_business_unit_id , $criteria)
+> \Ageras\Api\LeadAllocationQuotaResult partnersBusinessunitsAllocationquotasIndex($partner_id , $criteria)
 
 List lead allocation quotas.
 
@@ -521,17 +521,17 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_business_unit_id = "partner_business_unit_id_example"; // string | 
 $criteria = [
         'effective_at_gte' => "effective_at_gte_example"; // string | 
         'effective_at_lte' => "effective_at_lte_example"; // string | 
+        'partner_business_unit_id' => "partner_business_unit_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
     ];
 
 try {
-    $result = $api_instance->partnersBusinessunitsAllocationquotasIndex($partner_id,  $partner_business_unit_id , $criteria);
+    $result = $api_instance->partnersBusinessunitsAllocationquotasIndex($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartnersApi->partnersBusinessunitsAllocationquotasIndex: ', $e->getMessage(), PHP_EOL;
@@ -544,9 +544,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_business_unit_id** | **string**|  |
  **effective_at_gte** | **string**|  | [optional]
  **effective_at_lte** | **string**|  | [optional]
+ **partner_business_unit_id** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

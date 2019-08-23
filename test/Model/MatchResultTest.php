@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResourceTest
+ * MatchResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerRatingResourceTest Class Doc Comment
+ * MatchResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerRatingResource
+// * @description MatchResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
+class MatchResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,49 +75,57 @@ class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerRatingResource"
+     * Test "MatchResult"
      */
-    public function testPartnerRatingResource()
+    public function testMatchResult()
     {
 
     }
 
     /**
-     * Test attribute "score"
+     * Test attribute "page"
      */
-    public function testPropertyScore()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "stars"
+     * Test attribute "limit"
      */
-    public function testPropertyStars()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "count"
+     * Test attribute "pages"
      */
-    public function testPropertyCount()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "types"
+     * Test attribute "total"
      */
-    public function testPropertyTypes()
+    public function testPropertyTotal()
     {
 
     }
 
     /**
-     * Test attribute "spread"
+     * Test attribute "data"
      */
-    public function testPropertySpread()
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

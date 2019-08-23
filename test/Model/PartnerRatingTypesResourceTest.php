@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerRatingResourceTest
+ * PartnerRatingTypesResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerRatingResourceTest Class Doc Comment
+ * PartnerRatingTypesResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerRatingResource
+// * @description PartnerRatingTypesResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerRatingTypesResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,49 +75,49 @@ class PartnerRatingResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerRatingResource"
+     * Test "PartnerRatingTypesResource"
      */
-    public function testPartnerRatingResource()
+    public function testPartnerRatingTypesResource()
     {
 
     }
 
     /**
-     * Test attribute "score"
+     * Test attribute "rating_quality"
      */
-    public function testPropertyScore()
+    public function testPropertyRatingQuality()
     {
 
     }
 
     /**
-     * Test attribute "stars"
+     * Test attribute "rating_contact"
      */
-    public function testPropertyStars()
+    public function testPropertyRatingContact()
     {
 
     }
 
     /**
-     * Test attribute "count"
+     * Test attribute "rating_expertise"
      */
-    public function testPropertyCount()
+    public function testPropertyRatingExpertise()
     {
 
     }
 
     /**
-     * Test attribute "types"
+     * Test attribute "rating_schedule"
      */
-    public function testPropertyTypes()
+    public function testPropertyRatingSchedule()
     {
 
     }
 
     /**
-     * Test attribute "spread"
+     * Test attribute "rating_budget"
      */
-    public function testPropertySpread()
+    public function testPropertyRatingBudget()
     {
 
     }
