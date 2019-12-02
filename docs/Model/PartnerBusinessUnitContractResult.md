@@ -1,4 +1,4 @@
-# MatchReportResult
+# PartnerBusinessUnitContractResult
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **limit** | **int** | Number of results per page. | [optional] 
 **pages** | **int** | Number of pages. | [optional] 
 **total** | **int** | Total number of results. | [optional] 
-**data** | [**\Ageras\Api\MatchReportResource[]**](MatchReportResource.md) | The result. | [optional] 
+**data** | [**\Ageras\Api\PartnerBusinessUnitContractResource[]**](PartnerBusinessUnitContractResource.md) | The result. | [optional] 
 **did_you_mean** | **string** | Options for related or alternative searches. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -139,6 +139,14 @@ class LeadActionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "discard_status_reason"
+     */
+    public function testPropertyDiscardStatusReason()
+    {
+
+    }
+
+    /**
      * Test attribute "discard_status_note"
      */
     public function testPropertyDiscardStatusNote()

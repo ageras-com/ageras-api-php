@@ -123,6 +123,14 @@ class PartnerSubscriptionResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "current_monthly_price"
+     */
+    public function testPropertyCurrentMonthlyPrice()
+    {
+
+    }
+
+    /**
      * Test attribute "starts_at"
      */
     public function testPropertyStartsAt()
@@ -174,6 +182,14 @@ class PartnerSubscriptionResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "churned_at"
      */
     public function testPropertyChurnedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "extension_period_months"
+     */
+    public function testPropertyExtensionPeriodMonths()
     {
 
     }

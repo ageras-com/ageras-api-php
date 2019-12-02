@@ -58,7 +58,8 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
         'address' => 'string',
         'zip_code' => 'string',
         'city_name' => 'string',
-        'point' => '\Ageras\Api\LocationGeoPointResource'
+        'point' => '\Ageras\Api\LocationGeoPointResource',
+        'home_sub_geo_region' => '\Ageras\Api\SegmentationSubGeoRegionResource'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
         'address' => 'address',
         'zip_code' => 'zip_code',
         'city_name' => 'city_name',
-        'point' => 'point'
+        'point' => 'point',
+        'home_sub_geo_region' => 'home_sub_geo_region'
     ];
 
 
@@ -88,7 +90,8 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
         'address' => 'setAddress',
         'zip_code' => 'setZipCode',
         'city_name' => 'setCityName',
-        'point' => 'setPoint'
+        'point' => 'setPoint',
+        'home_sub_geo_region' => 'setHomeSubGeoRegion'
     ];
 
 
@@ -101,7 +104,8 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
         'address' => 'getAddress',
         'zip_code' => 'getZipCode',
         'city_name' => 'getCityName',
-        'point' => 'getPoint'
+        'point' => 'getPoint',
+        'home_sub_geo_region' => 'getHomeSubGeoRegion'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city_name'] = isset($data['city_name']) ? $data['city_name'] : null;
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
+        $this->container['home_sub_geo_region'] = isset($data['home_sub_geo_region']) ? $data['home_sub_geo_region'] : null;
     }
 
     /**
@@ -268,6 +273,27 @@ class PartnerBusinessUnitGeoResource implements ArrayAccess
     public function setPoint($point)
     {
         $this->container['point'] = $point;
+
+        return $this;
+    }
+
+    /**
+     * Gets home_sub_geo_region
+     * @return \Ageras\Api\SegmentationSubGeoRegionResource
+     */
+    public function getHomeSubGeoRegion()
+    {
+        return $this->container['home_sub_geo_region'];
+    }
+
+    /**
+     * Sets home_sub_geo_region
+     * @param \Ageras\Api\SegmentationSubGeoRegionResource $home_sub_geo_region
+     * @return $this
+     */
+    public function setHomeSubGeoRegion($home_sub_geo_region)
+    {
+        $this->container['home_sub_geo_region'] = $home_sub_geo_region;
 
         return $this;
     }

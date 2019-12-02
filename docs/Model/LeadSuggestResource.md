@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **city** | **string** | City for the suggested lead. | [optional] 
 **geo_code** | **string** | Location for the suggested Lead. | [optional] 
 **text** | **string** | Extra text for suggested lead. @var string | [optional] 
+**full_name** | **string** | Lead&#39;s full name. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

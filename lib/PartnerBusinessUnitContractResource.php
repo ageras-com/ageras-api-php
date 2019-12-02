@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportCriterionReportResource
+ * PartnerBusinessUnitContractResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchReportCriterionReportResource Class Doc Comment
+ * PartnerBusinessUnitContractResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportCriterionReportResource implements ArrayAccess
+class PartnerBusinessUnitContractResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,17 @@ class MatchReportCriterionReportResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchReportCriterionReportResource';
+    protected static $swaggerModelName = 'PartnerBusinessUnitContractResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'criterion_identifier' => 'string',
-        'sub_criterion_reports' => '\Ageras\Api\MatchReportSubCriterionReportResource[]'
+        'id' => 'int',
+        'partner_id' => 'int',
+        'retired_at' => 'string',
+        'partner_business_units' => '\Ageras\Api\ContractPartnerBusinessUnitResource[]'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,10 @@ class MatchReportCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'criterion_identifier' => 'criterion_identifier',
-        'sub_criterion_reports' => 'sub_criterion_reports'
+        'id' => 'id',
+        'partner_id' => 'partner_id',
+        'retired_at' => 'retired_at',
+        'partner_business_units' => 'partner_business_units'
     ];
 
 
@@ -78,8 +82,10 @@ class MatchReportCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'criterion_identifier' => 'setCriterionIdentifier',
-        'sub_criterion_reports' => 'setSubCriterionReports'
+        'id' => 'setId',
+        'partner_id' => 'setPartnerId',
+        'retired_at' => 'setRetiredAt',
+        'partner_business_units' => 'setPartnerBusinessUnits'
     ];
 
 
@@ -88,8 +94,10 @@ class MatchReportCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'criterion_identifier' => 'getCriterionIdentifier',
-        'sub_criterion_reports' => 'getSubCriterionReports'
+        'id' => 'getId',
+        'partner_id' => 'getPartnerId',
+        'retired_at' => 'getRetiredAt',
+        'partner_business_units' => 'getPartnerBusinessUnits'
     ];
 
     public static function attributeMap()
@@ -123,8 +131,10 @@ class MatchReportCriterionReportResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['criterion_identifier'] = isset($data['criterion_identifier']) ? $data['criterion_identifier'] : null;
-        $this->container['sub_criterion_reports'] = isset($data['sub_criterion_reports']) ? $data['sub_criterion_reports'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
+        $this->container['retired_at'] = isset($data['retired_at']) ? $data['retired_at'] : null;
+        $this->container['partner_business_units'] = isset($data['partner_business_units']) ? $data['partner_business_units'] : null;
     }
 
     /**
@@ -153,43 +163,85 @@ class MatchReportCriterionReportResource implements ArrayAccess
 
 
     /**
-     * Gets criterion_identifier
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getCriterionIdentifier()
+    public function getId()
     {
-        return $this->container['criterion_identifier'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets criterion_identifier
-     * @param string $criterion_identifier Criterion identifier.
+     * Sets id
+     * @param int $id ID of the contract.
      * @return $this
      */
-    public function setCriterionIdentifier($criterion_identifier)
+    public function setId($id)
     {
-        $this->container['criterion_identifier'] = $criterion_identifier;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets sub_criterion_reports
-     * @return \Ageras\Api\MatchReportSubCriterionReportResource[]
+     * Gets partner_id
+     * @return int
      */
-    public function getSubCriterionReports()
+    public function getPartnerId()
     {
-        return $this->container['sub_criterion_reports'];
+        return $this->container['partner_id'];
     }
 
     /**
-     * Sets sub_criterion_reports
-     * @param \Ageras\Api\MatchReportSubCriterionReportResource[] $sub_criterion_reports Sub-criterion reports.
+     * Sets partner_id
+     * @param int $partner_id Partner that owns the contract.
      * @return $this
      */
-    public function setSubCriterionReports($sub_criterion_reports)
+    public function setPartnerId($partner_id)
     {
-        $this->container['sub_criterion_reports'] = $sub_criterion_reports;
+        $this->container['partner_id'] = $partner_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets retired_at
+     * @return string
+     */
+    public function getRetiredAt()
+    {
+        return $this->container['retired_at'];
+    }
+
+    /**
+     * Sets retired_at
+     * @param string $retired_at When was this contract effective to.
+     * @return $this
+     */
+    public function setRetiredAt($retired_at)
+    {
+        $this->container['retired_at'] = $retired_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_business_units
+     * @return \Ageras\Api\ContractPartnerBusinessUnitResource[]
+     */
+    public function getPartnerBusinessUnits()
+    {
+        return $this->container['partner_business_units'];
+    }
+
+    /**
+     * Sets partner_business_units
+     * @param \Ageras\Api\ContractPartnerBusinessUnitResource[] $partner_business_units The linked business units
+     * @return $this
+     */
+    public function setPartnerBusinessUnits($partner_business_units)
+    {
+        $this->container['partner_business_units'] = $partner_business_units;
 
         return $this;
     }

@@ -60,7 +60,8 @@ class LeadSuggestResource implements ArrayAccess
         'zip_code' => 'string',
         'city' => 'string',
         'geo_code' => 'string',
-        'text' => 'string'
+        'text' => 'string',
+        'full_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class LeadSuggestResource implements ArrayAccess
         'zip_code' => 'zip_code',
         'city' => 'city',
         'geo_code' => 'geo_code',
-        'text' => 'text'
+        'text' => 'text',
+        'full_name' => 'full_name'
     ];
 
 
@@ -94,7 +96,8 @@ class LeadSuggestResource implements ArrayAccess
         'zip_code' => 'setZipCode',
         'city' => 'setCity',
         'geo_code' => 'setGeoCode',
-        'text' => 'setText'
+        'text' => 'setText',
+        'full_name' => 'setFullName'
     ];
 
 
@@ -109,7 +112,8 @@ class LeadSuggestResource implements ArrayAccess
         'zip_code' => 'getZipCode',
         'city' => 'getCity',
         'geo_code' => 'getGeoCode',
-        'text' => 'getText'
+        'text' => 'getText',
+        'full_name' => 'getFullName'
     ];
 
     public static function attributeMap()
@@ -176,6 +180,7 @@ class LeadSuggestResource implements ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
     }
 
     /**
@@ -359,6 +364,27 @@ class LeadSuggestResource implements ArrayAccess
     public function setText($text)
     {
         $this->container['text'] = $text;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name Lead's full name.
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }

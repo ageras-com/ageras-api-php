@@ -202,4 +202,12 @@ class LeadQuoteInfoEntryResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "reservation_expires_at"
+     */
+    public function testPropertyReservationExpiresAt()
+    {
+
+    }
+
 }

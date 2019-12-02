@@ -91,9 +91,9 @@ class PartnerUserCvBadgeResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "title"
      */
-    public function testPropertyName()
+    public function testPropertyTitle()
     {
 
     }

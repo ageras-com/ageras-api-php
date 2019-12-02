@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportCriterionReportResourceTest
+ * LeadAllocationsResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MatchReportCriterionReportResourceTest Class Doc Comment
+ * LeadAllocationsResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description MatchReportCriterionReportResource
+// * @description LeadAllocationsResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportCriterionReportResourceTest extends \PHPUnit_Framework_TestCase
+class LeadAllocationsResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,17 @@ class MatchReportCriterionReportResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MatchReportCriterionReportResource"
+     * Test "LeadAllocationsResource"
      */
-    public function testMatchReportCriterionReportResource()
+    public function testLeadAllocationsResource()
     {
 
     }
 
     /**
-     * Test attribute "criterion_identifier"
+     * Test attribute "lead_allocations"
      */
-    public function testPropertyCriterionIdentifier()
-    {
-
-    }
-
-    /**
-     * Test attribute "sub_criterion_reports"
-     */
-    public function testPropertySubCriterionReports()
+    public function testPropertyLeadAllocations()
     {
 
     }

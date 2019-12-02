@@ -54,7 +54,8 @@ class LeadAllocationResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'partner_business_unit_id' => 'int[]'
+        'partner_business_unit_id' => 'int',
+        'allocation_type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partner_business_unit_id' => 'partner_business_unit_id'
+        'partner_business_unit_id' => 'partner_business_unit_id',
+        'allocation_type' => 'allocation_type'
     ];
 
 
@@ -76,7 +78,8 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partner_business_unit_id' => 'setPartnerBusinessUnitId'
+        'partner_business_unit_id' => 'setPartnerBusinessUnitId',
+        'allocation_type' => 'setAllocationType'
     ];
 
 
@@ -85,7 +88,8 @@ class LeadAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partner_business_unit_id' => 'getPartnerBusinessUnitId'
+        'partner_business_unit_id' => 'getPartnerBusinessUnitId',
+        'allocation_type' => 'getAllocationType'
     ];
 
     public static function attributeMap()
@@ -103,8 +107,22 @@ class LeadAllocationResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ALLOCATION_TYPE_ANY = 'any';
+    const ALLOCATION_TYPE_OVERDELIVERY = 'overdelivery';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getAllocationTypeAllowableValues()
+    {
+        return [
+            self::ALLOCATION_TYPE_ANY,
+            self::ALLOCATION_TYPE_OVERDELIVERY,
+        ];
+    }
     
 
     /**
@@ -120,6 +138,7 @@ class LeadAllocationResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['partner_business_unit_id'] = isset($data['partner_business_unit_id']) ? $data['partner_business_unit_id'] : null;
+        $this->container['allocation_type'] = isset($data['allocation_type']) ? $data['allocation_type'] : 'any';
     }
 
     /**
@@ -130,6 +149,11 @@ class LeadAllocationResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["any", "overdelivery"];
+        if (!in_array($this->container['allocation_type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'allocation_type', must be one of 'any', 'overdelivery'.";
+        }
 
         return $invalid_properties;
     }
@@ -143,13 +167,17 @@ class LeadAllocationResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["any", "overdelivery"];
+        if (!in_array($this->container['allocation_type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
      * Gets partner_business_unit_id
-     * @return int[]
+     * @return int
      */
     public function getPartnerBusinessUnitId()
     {
@@ -158,12 +186,37 @@ class LeadAllocationResource implements ArrayAccess
 
     /**
      * Sets partner_business_unit_id
-     * @param int[] $partner_business_unit_id Partner business units to allocate.
+     * @param int $partner_business_unit_id Partner business unit to allocate.
      * @return $this
      */
     public function setPartnerBusinessUnitId($partner_business_unit_id)
     {
         $this->container['partner_business_unit_id'] = $partner_business_unit_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_type
+     * @return string
+     */
+    public function getAllocationType()
+    {
+        return $this->container['allocation_type'];
+    }
+
+    /**
+     * Sets allocation_type
+     * @param string $allocation_type The type of allocation that should be used. E.g. 'overdelivery'
+     * @return $this
+     */
+    public function setAllocationType($allocation_type)
+    {
+        $allowed_values = array('any', 'overdelivery');
+        if (!is_null($allocation_type) && (!in_array($allocation_type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'allocation_type', must be one of 'any', 'overdelivery'");
+        }
+        $this->container['allocation_type'] = $allocation_type;
 
         return $this;
     }

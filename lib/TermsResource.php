@@ -58,8 +58,7 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'string',
         'identifier' => 'string',
         'headline' => 'string',
-        'body' => 'string',
-        'body_html' => 'string'
+        'body' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -76,8 +75,7 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'geo_code',
         'identifier' => 'identifier',
         'headline' => 'headline',
-        'body' => 'body',
-        'body_html' => 'body_html'
+        'body' => 'body'
     ];
 
 
@@ -90,8 +88,7 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'setGeoCode',
         'identifier' => 'setIdentifier',
         'headline' => 'setHeadline',
-        'body' => 'setBody',
-        'body_html' => 'setBodyHtml'
+        'body' => 'setBody'
     ];
 
 
@@ -104,8 +101,7 @@ class TermsResource implements ArrayAccess
         'geo_code' => 'getGeoCode',
         'identifier' => 'getIdentifier',
         'headline' => 'getHeadline',
-        'body' => 'getBody',
-        'body_html' => 'getBodyHtml'
+        'body' => 'getBody'
     ];
 
     public static function attributeMap()
@@ -144,7 +140,6 @@ class TermsResource implements ArrayAccess
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['headline'] = isset($data['headline']) ? $data['headline'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
-        $this->container['body_html'] = isset($data['body_html']) ? $data['body_html'] : null;
     }
 
     /**
@@ -273,27 +268,6 @@ class TermsResource implements ArrayAccess
     public function setBody($body)
     {
         $this->container['body'] = $body;
-
-        return $this;
-    }
-
-    /**
-     * Gets body_html
-     * @return string
-     */
-    public function getBodyHtml()
-    {
-        return $this->container['body_html'];
-    }
-
-    /**
-     * Sets body_html
-     * @param string $body_html Terms body formatted.
-     * @return $this
-     */
-    public function setBodyHtml($body_html)
-    {
-        $this->container['body_html'] = $body_html;
 
         return $this;
     }

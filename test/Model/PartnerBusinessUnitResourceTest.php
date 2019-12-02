@@ -107,6 +107,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_business_unit_grouping_id"
+     */
+    public function testPropertyPartnerBusinessUnitGroupingId()
+    {
+
+    }
+
+    /**
      * Test attribute "geo"
      */
     public function testPropertyGeo()
@@ -198,6 +206,22 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "partner"
      */
     public function testPropertyPartner()
+    {
+
+    }
+
+    /**
+     * Test attribute "business_models"
+     */
+    public function testPropertyBusinessModels()
+    {
+
+    }
+
+    /**
+     * Test attribute "retired_at"
+     */
+    public function testPropertyRetiredAt()
     {
 
     }

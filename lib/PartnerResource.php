@@ -67,7 +67,6 @@ class PartnerResource implements ArrayAccess
         'state' => 'string',
         'access' => 'string',
         'company_information' => 'string',
-        'company_information_html' => 'string',
         'vat_number' => 'string',
         'website' => 'string',
         'logo' => 'string',
@@ -125,7 +124,6 @@ class PartnerResource implements ArrayAccess
         'state' => 'state',
         'access' => 'access',
         'company_information' => 'company_information',
-        'company_information_html' => 'company_information_html',
         'vat_number' => 'vat_number',
         'website' => 'website',
         'logo' => 'logo',
@@ -179,7 +177,6 @@ class PartnerResource implements ArrayAccess
         'state' => 'setState',
         'access' => 'setAccess',
         'company_information' => 'setCompanyInformation',
-        'company_information_html' => 'setCompanyInformationHtml',
         'vat_number' => 'setVatNumber',
         'website' => 'setWebsite',
         'logo' => 'setLogo',
@@ -233,7 +230,6 @@ class PartnerResource implements ArrayAccess
         'state' => 'getState',
         'access' => 'getAccess',
         'company_information' => 'getCompanyInformation',
-        'company_information_html' => 'getCompanyInformationHtml',
         'vat_number' => 'getVatNumber',
         'website' => 'getWebsite',
         'logo' => 'getLogo',
@@ -352,7 +348,6 @@ class PartnerResource implements ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
-        $this->container['company_information_html'] = isset($data['company_information_html']) ? $data['company_information_html'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
         $this->container['website'] = isset($data['website']) ? $data['website'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
@@ -703,27 +698,6 @@ class PartnerResource implements ArrayAccess
     public function setCompanyInformation($company_information)
     {
         $this->container['company_information'] = $company_information;
-
-        return $this;
-    }
-
-    /**
-     * Gets company_information_html
-     * @return string
-     */
-    public function getCompanyInformationHtml()
-    {
-        return $this->container['company_information_html'];
-    }
-
-    /**
-     * Sets company_information_html
-     * @param string $company_information_html Formatted Company Information.
-     * @return $this
-     */
-    public function setCompanyInformationHtml($company_information_html)
-    {
-        $this->container['company_information_html'] = $company_information_html;
 
         return $this;
     }

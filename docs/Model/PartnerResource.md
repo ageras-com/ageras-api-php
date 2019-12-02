@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **state** | **string** | What is the current state of the partner. | [optional] [default to 'unknown']
 **access** | **string** | Access information regarding the partner. | [optional] 
 **company_information** | **string** | Information regarding the partner company. | [optional] 
-**company_information_html** | **string** | Formatted Company Information. | [optional] 
 **vat_number** | **string** | Vat information about he company. | [optional] 
 **website** | **string** | Website for the partner. | [optional] 
 **logo** | **string** | Logo for the partner. | [optional] 

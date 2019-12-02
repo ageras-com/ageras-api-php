@@ -122,4 +122,12 @@ class LeadAllocationQuotaResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "quota_price"
+     */
+    public function testPropertyQuotaPrice()
+    {
+
+    }
+
 }

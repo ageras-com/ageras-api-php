@@ -314,7 +314,7 @@ class IndustryResource implements ArrayAccess
 
     /**
      * Sets identifier
-     * @param string $identifier
+     * @param string $identifier industry identifier
      * @return $this
      */
     public function setIdentifier($identifier)

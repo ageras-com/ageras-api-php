@@ -57,7 +57,8 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
         'id' => 'int',
         'company_name' => 'string',
         'has_marketing_package' => 'bool',
-        'is_subscription_paused' => 'bool'
+        'is_subscription_paused' => 'bool',
+        'features' => 'string[]'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
         'id' => 'id',
         'company_name' => 'company_name',
         'has_marketing_package' => 'has_marketing_package',
-        'is_subscription_paused' => 'is_subscription_paused'
+        'is_subscription_paused' => 'is_subscription_paused',
+        'features' => 'features'
     ];
 
 
@@ -85,7 +87,8 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
         'id' => 'setId',
         'company_name' => 'setCompanyName',
         'has_marketing_package' => 'setHasMarketingPackage',
-        'is_subscription_paused' => 'setIsSubscriptionPaused'
+        'is_subscription_paused' => 'setIsSubscriptionPaused',
+        'features' => 'setFeatures'
     ];
 
 
@@ -97,7 +100,8 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
         'id' => 'getId',
         'company_name' => 'getCompanyName',
         'has_marketing_package' => 'getHasMarketingPackage',
-        'is_subscription_paused' => 'getIsSubscriptionPaused'
+        'is_subscription_paused' => 'getIsSubscriptionPaused',
+        'features' => 'getFeatures'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
         $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
         $this->container['is_subscription_paused'] = isset($data['is_subscription_paused']) ? $data['is_subscription_paused'] : false;
+        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
     }
 
     /**
@@ -242,6 +247,27 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     public function setIsSubscriptionPaused($is_subscription_paused)
     {
         $this->container['is_subscription_paused'] = $is_subscription_paused;
+
+        return $this;
+    }
+
+    /**
+     * Gets features
+     * @return string[]
+     */
+    public function getFeatures()
+    {
+        return $this->container['features'];
+    }
+
+    /**
+     * Sets features
+     * @param string[] $features An array of the partner's features
+     * @return $this
+     */
+    public function setFeatures($features)
+    {
+        $this->container['features'] = $features;
 
         return $this;
     }

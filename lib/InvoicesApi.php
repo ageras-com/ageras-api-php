@@ -189,9 +189,9 @@ class InvoicesApi
      *    'geo_code' => string,
      *    'invoice_number' => string,
      *    'has_subscription_line_item' => bool,
+     *    'query' => string,
      *    'limit' => int,
      *    'page' => int,
-     *    'query' => string,
      * ]
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\InvoiceResult
@@ -217,9 +217,9 @@ class InvoicesApi
      *    'geo_code' => string,
      *    'invoice_number' => string,
      *    'has_subscription_line_item' => bool,
+     *    'query' => string,
      *    'limit' => int,
      *    'page' => int,
-     *    'query' => string,
      * ]
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\InvoiceResult, HTTP status code, HTTP response headers (array of strings)
@@ -275,16 +275,16 @@ class InvoicesApi
             $queryParams['has_subscription_line_item'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_subscription_line_item']);
         }
         // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
         }
         // query params
         if (isset($criteria['page'])) {
             $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
-        }
-        // query params
-        if (isset($criteria['query'])) {
-            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
         }
         
         // for model (json/xml)

@@ -58,7 +58,8 @@ class LeadAllocationQuotaResource implements ArrayAccess
         'partner_business_unit_id' => 'int',
         'effective_at' => 'string',
         'created_by_employee_id' => 'int',
-        'allocation_quota_per_refill' => 'int'
+        'allocation_quota_per_refill' => 'int',
+        'quota_price' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class LeadAllocationQuotaResource implements ArrayAccess
         'partner_business_unit_id' => 'partner_business_unit_id',
         'effective_at' => 'effective_at',
         'created_by_employee_id' => 'created_by_employee_id',
-        'allocation_quota_per_refill' => 'allocation_quota_per_refill'
+        'allocation_quota_per_refill' => 'allocation_quota_per_refill',
+        'quota_price' => 'quota_price'
     ];
 
 
@@ -88,7 +90,8 @@ class LeadAllocationQuotaResource implements ArrayAccess
         'partner_business_unit_id' => 'setPartnerBusinessUnitId',
         'effective_at' => 'setEffectiveAt',
         'created_by_employee_id' => 'setCreatedByEmployeeId',
-        'allocation_quota_per_refill' => 'setAllocationQuotaPerRefill'
+        'allocation_quota_per_refill' => 'setAllocationQuotaPerRefill',
+        'quota_price' => 'setQuotaPrice'
     ];
 
 
@@ -101,7 +104,8 @@ class LeadAllocationQuotaResource implements ArrayAccess
         'partner_business_unit_id' => 'getPartnerBusinessUnitId',
         'effective_at' => 'getEffectiveAt',
         'created_by_employee_id' => 'getCreatedByEmployeeId',
-        'allocation_quota_per_refill' => 'getAllocationQuotaPerRefill'
+        'allocation_quota_per_refill' => 'getAllocationQuotaPerRefill',
+        'quota_price' => 'getQuotaPrice'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class LeadAllocationQuotaResource implements ArrayAccess
         $this->container['effective_at'] = isset($data['effective_at']) ? $data['effective_at'] : null;
         $this->container['created_by_employee_id'] = isset($data['created_by_employee_id']) ? $data['created_by_employee_id'] : null;
         $this->container['allocation_quota_per_refill'] = isset($data['allocation_quota_per_refill']) ? $data['allocation_quota_per_refill'] : null;
+        $this->container['quota_price'] = isset($data['quota_price']) ? $data['quota_price'] : null;
     }
 
     /**
@@ -268,6 +273,27 @@ class LeadAllocationQuotaResource implements ArrayAccess
     public function setAllocationQuotaPerRefill($allocation_quota_per_refill)
     {
         $this->container['allocation_quota_per_refill'] = $allocation_quota_per_refill;
+
+        return $this;
+    }
+
+    /**
+     * Gets quota_price
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getQuotaPrice()
+    {
+        return $this->container['quota_price'];
+    }
+
+    /**
+     * Sets quota_price
+     * @param \Ageras\Api\AmountResource $quota_price
+     * @return $this
+     */
+    public function setQuotaPrice($quota_price)
+    {
+        $this->container['quota_price'] = $quota_price;
 
         return $this;
     }

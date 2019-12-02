@@ -83,6 +83,46 @@ class PartnerBusinessUnitAccumulatedAllocationResourceTest extends \PHPUnit_Fram
     }
 
     /**
+     * Test attribute "normal_quota_allocation_count"
+     */
+    public function testPropertyNormalQuotaAllocationCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "normal_allocation_quota"
+     */
+    public function testPropertyNormalAllocationQuota()
+    {
+
+    }
+
+    /**
+     * Test attribute "pay_per_spot_allocation_count"
+     */
+    public function testPropertyPayPerSpotAllocationCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "pay_per_spot_allocation_limit"
+     */
+    public function testPropertyPayPerSpotAllocationLimit()
+    {
+
+    }
+
+    /**
+     * Test attribute "just_in_time_allocation_count"
+     */
+    public function testPropertyJustInTimeAllocationCount()
+    {
+
+    }
+
+    /**
      * Test attribute "allocation_count"
      */
     public function testPropertyAllocationCount()
@@ -94,6 +134,14 @@ class PartnerBusinessUnitAccumulatedAllocationResourceTest extends \PHPUnit_Fram
      * Test attribute "allocation_quota"
      */
     public function testPropertyAllocationQuota()
+    {
+
+    }
+
+    /**
+     * Test attribute "overdelivery_allocation_count"
+     */
+    public function testPropertyOverdeliveryAllocationCount()
     {
 
     }

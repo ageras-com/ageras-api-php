@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportResource
+ * SegmentationSubGeoRegionsResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchReportResource Class Doc Comment
+ * SegmentationSubGeoRegionsResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportResource implements ArrayAccess
+class SegmentationSubGeoRegionsResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class MatchReportResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchReportResource';
+    protected static $swaggerModelName = 'SegmentationSubGeoRegionsResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'lead_id' => 'int',
-        'partner_id' => 'int',
-        'partner_business_unit_id' => 'int',
-        'criterion_reports' => '\Ageras\Api\MatchReportCriterionReportResource[]'
+        'segmentation_sub_geo_region_id' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +67,7 @@ class MatchReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'lead_id' => 'lead_id',
-        'partner_id' => 'partner_id',
-        'partner_business_unit_id' => 'partner_business_unit_id',
-        'criterion_reports' => 'criterion_reports'
+        'segmentation_sub_geo_region_id' => 'segmentation_sub_geo_region_id'
     ];
 
 
@@ -82,10 +76,7 @@ class MatchReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'lead_id' => 'setLeadId',
-        'partner_id' => 'setPartnerId',
-        'partner_business_unit_id' => 'setPartnerBusinessUnitId',
-        'criterion_reports' => 'setCriterionReports'
+        'segmentation_sub_geo_region_id' => 'setSegmentationSubGeoRegionId'
     ];
 
 
@@ -94,10 +85,7 @@ class MatchReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'lead_id' => 'getLeadId',
-        'partner_id' => 'getPartnerId',
-        'partner_business_unit_id' => 'getPartnerBusinessUnitId',
-        'criterion_reports' => 'getCriterionReports'
+        'segmentation_sub_geo_region_id' => 'getSegmentationSubGeoRegionId'
     ];
 
     public static function attributeMap()
@@ -131,10 +119,7 @@ class MatchReportResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
-        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
-        $this->container['partner_business_unit_id'] = isset($data['partner_business_unit_id']) ? $data['partner_business_unit_id'] : null;
-        $this->container['criterion_reports'] = isset($data['criterion_reports']) ? $data['criterion_reports'] : null;
+        $this->container['segmentation_sub_geo_region_id'] = isset($data['segmentation_sub_geo_region_id']) ? $data['segmentation_sub_geo_region_id'] : null;
     }
 
     /**
@@ -163,85 +148,22 @@ class MatchReportResource implements ArrayAccess
 
 
     /**
-     * Gets lead_id
-     * @return int
+     * Gets segmentation_sub_geo_region_id
+     * @return int[]
      */
-    public function getLeadId()
+    public function getSegmentationSubGeoRegionId()
     {
-        return $this->container['lead_id'];
+        return $this->container['segmentation_sub_geo_region_id'];
     }
 
     /**
-     * Sets lead_id
-     * @param int $lead_id Lead ID.
+     * Sets segmentation_sub_geo_region_id
+     * @param int[] $segmentation_sub_geo_region_id Segmentation sub geo region IDs.
      * @return $this
      */
-    public function setLeadId($lead_id)
+    public function setSegmentationSubGeoRegionId($segmentation_sub_geo_region_id)
     {
-        $this->container['lead_id'] = $lead_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner_id
-     * @return int
-     */
-    public function getPartnerId()
-    {
-        return $this->container['partner_id'];
-    }
-
-    /**
-     * Sets partner_id
-     * @param int $partner_id Partner ID.
-     * @return $this
-     */
-    public function setPartnerId($partner_id)
-    {
-        $this->container['partner_id'] = $partner_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner_business_unit_id
-     * @return int
-     */
-    public function getPartnerBusinessUnitId()
-    {
-        return $this->container['partner_business_unit_id'];
-    }
-
-    /**
-     * Sets partner_business_unit_id
-     * @param int $partner_business_unit_id Partner business unit ID.
-     * @return $this
-     */
-    public function setPartnerBusinessUnitId($partner_business_unit_id)
-    {
-        $this->container['partner_business_unit_id'] = $partner_business_unit_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets criterion_reports
-     * @return \Ageras\Api\MatchReportCriterionReportResource[]
-     */
-    public function getCriterionReports()
-    {
-        return $this->container['criterion_reports'];
-    }
-
-    /**
-     * Sets criterion_reports
-     * @param \Ageras\Api\MatchReportCriterionReportResource[] $criterion_reports List of criteiron reports.
-     * @return $this
-     */
-    public function setCriterionReports($criterion_reports)
-    {
-        $this->container['criterion_reports'] = $criterion_reports;
+        $this->container['segmentation_sub_geo_region_id'] = $segmentation_sub_geo_region_id;
 
         return $this;
     }

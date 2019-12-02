@@ -440,6 +440,28 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsSegmentationsubgeoregionsIndex
+     *
+     * List a lead's sub geo regions..
+     *
+     */
+    public function testLeadsSegmentationsubgeoregionsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsSegmentationsubgeoregionsUpdate
+     *
+     * Update a lead's sub geo regions..
+     *
+     */
+    public function testLeadsSegmentationsubgeoregionsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for leadsTypesIndex
      *
      * Index lead types..

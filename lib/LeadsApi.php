@@ -203,8 +203,6 @@ class LeadsApi
      *    'has_max_quotes' => bool,
      *    'has_accepted_quote' => bool,
      *    'has_rejected_quote' => bool,
-     *    'segmented_for_partner_id' => int,
-     *    'relevant_for_partner_id' => int,
      *    'no_quote_for_partner_id' => int,
      *    'is_match_priority' => bool,
      *    'is_completed_call_priority' => bool,
@@ -259,8 +257,6 @@ class LeadsApi
      *    'has_max_quotes' => bool,
      *    'has_accepted_quote' => bool,
      *    'has_rejected_quote' => bool,
-     *    'segmented_for_partner_id' => int,
-     *    'relevant_for_partner_id' => int,
      *    'no_quote_for_partner_id' => int,
      *    'is_match_priority' => bool,
      *    'is_completed_call_priority' => bool,
@@ -364,14 +360,6 @@ class LeadsApi
         // query params
         if (isset($criteria['has_rejected_quote'])) {
             $queryParams['has_rejected_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_rejected_quote']);
-        }
-        // query params
-        if (isset($criteria['segmented_for_partner_id'])) {
-            $queryParams['segmented_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_id']);
-        }
-        // query params
-        if (isset($criteria['relevant_for_partner_id'])) {
-            $queryParams['relevant_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['relevant_for_partner_id']);
         }
         // query params
         if (isset($criteria['no_quote_for_partner_id'])) {
@@ -508,13 +496,13 @@ class LeadsApi
      * Allocate partners to a lead.
      *
      * @param string $lead_id 
-     * @param \Ageras\Api\LeadAllocationResource $lead_allocation_resource 
+     * @param \Ageras\Api\LeadAllocationsResource $lead_allocations_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return \Ageras\Api\LeadAllocationResource
+     * @return \Ageras\Api\LeadAllocationsResource
      */
-    public function leadsAllocationsCreate($lead_id , $lead_allocation_resource)
+    public function leadsAllocationsCreate($lead_id , $lead_allocations_resource)
     {
-        list($response) = $this->leadsAllocationsCreateWithHttpInfo($lead_id, $lead_allocation_resource);
+        list($response) = $this->leadsAllocationsCreateWithHttpInfo($lead_id, $lead_allocations_resource);
         return $response;
     }
 
@@ -524,11 +512,11 @@ class LeadsApi
      * Allocate partners to a lead.
      *
      * @param string $lead_id 
-     * @param \Ageras\Api\LeadAllocationResource $lead_allocation_resource 
+     * @param \Ageras\Api\LeadAllocationsResource $lead_allocations_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
-     * @return array of \Ageras\Api\LeadAllocationResource, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Ageras\Api\LeadAllocationsResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function leadsAllocationsCreateWithHttpInfo($lead_id , $lead_allocation_resource)
+    public function leadsAllocationsCreateWithHttpInfo($lead_id , $lead_allocations_resource)
     {
         // parse inputs
         $resourcePath = "/leads/{lead_id}/allocations";
@@ -552,8 +540,8 @@ class LeadsApi
         }
         // body params
         $_tempBody = null;
-        if (isset($lead_allocation_resource)) {
-            $_tempBody = $lead_allocation_resource;
+        if (isset($lead_allocations_resource)) {
+            $_tempBody = $lead_allocations_resource;
         }
 
         // for model (json/xml)
@@ -579,15 +567,15 @@ class LeadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Ageras\Api\LeadAllocationResource',
+                '\Ageras\Api\LeadAllocationsResource',
                 '/leads/{lead_id}/allocations'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadAllocationResource', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadAllocationsResource', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadAllocationResource', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadAllocationsResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -610,6 +598,7 @@ class LeadsApi
      *    'has_business_unit' => bool,
      *    'sort' => string,
      *    'is_used' => bool,
+     *    'is_processed' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -637,6 +626,7 @@ class LeadsApi
      *    'has_business_unit' => bool,
      *    'sort' => string,
      *    'is_used' => bool,
+     *    'is_processed' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -689,6 +679,10 @@ class LeadsApi
         // query params
         if (isset($criteria['is_used'])) {
             $queryParams['is_used'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_used']);
+        }
+        // query params
+        if (isset($criteria['is_processed'])) {
+            $queryParams['is_processed'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_processed']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1828,8 +1822,6 @@ class LeadsApi
      *    'has_max_quotes' => bool,
      *    'has_accepted_quote' => bool,
      *    'has_rejected_quote' => bool,
-     *    'segmented_for_partner_id' => int,
-     *    'relevant_for_partner_id' => int,
      *    'no_quote_for_partner_id' => int,
      *    'is_match_priority' => bool,
      *    'is_completed_call_priority' => bool,
@@ -1884,8 +1876,6 @@ class LeadsApi
      *    'has_max_quotes' => bool,
      *    'has_accepted_quote' => bool,
      *    'has_rejected_quote' => bool,
-     *    'segmented_for_partner_id' => int,
-     *    'relevant_for_partner_id' => int,
      *    'no_quote_for_partner_id' => int,
      *    'is_match_priority' => bool,
      *    'is_completed_call_priority' => bool,
@@ -1989,14 +1979,6 @@ class LeadsApi
         // query params
         if (isset($criteria['has_rejected_quote'])) {
             $queryParams['has_rejected_quote'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_rejected_quote']);
-        }
-        // query params
-        if (isset($criteria['segmented_for_partner_id'])) {
-            $queryParams['segmented_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_id']);
-        }
-        // query params
-        if (isset($criteria['relevant_for_partner_id'])) {
-            $queryParams['relevant_for_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['relevant_for_partner_id']);
         }
         // query params
         if (isset($criteria['no_quote_for_partner_id'])) {
@@ -3954,6 +3936,209 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsSegmentationsubgeoregionsIndex
+     *
+     * List a lead's sub geo regions.
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\SegmentationSubGeoRegionResult
+     */
+    public function leadsSegmentationsubgeoregionsIndex($lead_id , $criteria = [])
+    {
+        list($response) = $this->leadsSegmentationsubgeoregionsIndexWithHttpInfo($lead_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsSegmentationsubgeoregionsIndexWithHttpInfo
+     *
+     * List a lead's sub geo regions.
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\SegmentationSubGeoRegionResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsSegmentationsubgeoregionsIndexWithHttpInfo($lead_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/segmentationsubgeoregions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\SegmentationSubGeoRegionResult',
+                '/leads/{lead_id}/segmentationsubgeoregions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\SegmentationSubGeoRegionResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SegmentationSubGeoRegionResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsSegmentationsubgeoregionsUpdate
+     *
+     * Update a lead's sub geo regions.
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\SegmentationSubGeoRegionsResource $segmentation_sub_geo_regions_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\SegmentationSubGeoRegionsResource
+     */
+    public function leadsSegmentationsubgeoregionsUpdate($lead_id , $segmentation_sub_geo_regions_resource)
+    {
+        list($response) = $this->leadsSegmentationsubgeoregionsUpdateWithHttpInfo($lead_id, $segmentation_sub_geo_regions_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsSegmentationsubgeoregionsUpdateWithHttpInfo
+     *
+     * Update a lead's sub geo regions.
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\SegmentationSubGeoRegionsResource $segmentation_sub_geo_regions_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\SegmentationSubGeoRegionsResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsSegmentationsubgeoregionsUpdateWithHttpInfo($lead_id , $segmentation_sub_geo_regions_resource)
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/segmentationsubgeoregions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($segmentation_sub_geo_regions_resource)) {
+            $_tempBody = $segmentation_sub_geo_regions_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\SegmentationSubGeoRegionsResource',
+                '/leads/{lead_id}/segmentationsubgeoregions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\SegmentationSubGeoRegionsResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SegmentationSubGeoRegionsResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

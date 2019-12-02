@@ -55,7 +55,7 @@ class PartnerUserCvBadgeResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'name' => 'string',
+        'title' => 'string',
         'description' => 'string'
     ];
 
@@ -70,7 +70,7 @@ class PartnerUserCvBadgeResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name',
+        'title' => 'title',
         'description' => 'description'
     ];
 
@@ -81,7 +81,7 @@ class PartnerUserCvBadgeResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName',
+        'title' => 'setTitle',
         'description' => 'setDescription'
     ];
 
@@ -92,7 +92,7 @@ class PartnerUserCvBadgeResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName',
+        'title' => 'getTitle',
         'description' => 'getDescription'
     ];
 
@@ -128,7 +128,7 @@ class PartnerUserCvBadgeResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -179,22 +179,22 @@ class PartnerUserCvBadgeResource implements ArrayAccess
     }
 
     /**
-     * Gets name
+     * Gets title
      * @return string
      */
-    public function getName()
+    public function getTitle()
     {
-        return $this->container['name'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets name
-     * @param string $name Certification name.
+     * Sets title
+     * @param string $title Certification name
      * @return $this
      */
-    public function setName($name)
+    public function setTitle($title)
     {
-        $this->container['name'] = $name;
+        $this->container['title'] = $title;
 
         return $this;
     }

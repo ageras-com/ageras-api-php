@@ -99,6 +99,7 @@ class MatchesApi
      *    'validator_id' => string,
      *    'is_accepted' => bool,
      *    'is_unaccepted' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -124,6 +125,7 @@ class MatchesApi
      *    'validator_id' => string,
      *    'is_accepted' => bool,
      *    'is_unaccepted' => bool,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -168,6 +170,10 @@ class MatchesApi
         // query params
         if (isset($criteria['is_unaccepted'])) {
             $queryParams['is_unaccepted'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_unaccepted']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {

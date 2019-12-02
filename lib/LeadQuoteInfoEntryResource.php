@@ -68,7 +68,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'payment' => '\Ageras\Api\LeadQuotePaymentResource',
         'total_vat_amount' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'reservation_expires_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +96,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'payment' => 'payment',
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
-        'total_amount_incl_vat' => 'total_amount_incl_vat'
+        'total_amount_incl_vat' => 'total_amount_incl_vat',
+        'reservation_expires_at' => 'reservation_expires_at'
     ];
 
 
@@ -118,7 +120,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'payment' => 'setPayment',
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
-        'total_amount_incl_vat' => 'setTotalAmountInclVat'
+        'total_amount_incl_vat' => 'setTotalAmountInclVat',
+        'reservation_expires_at' => 'setReservationExpiresAt'
     ];
 
 
@@ -141,7 +144,8 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         'payment' => 'getPayment',
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
-        'total_amount_incl_vat' => 'getTotalAmountInclVat'
+        'total_amount_incl_vat' => 'getTotalAmountInclVat',
+        'reservation_expires_at' => 'getReservationExpiresAt'
     ];
 
     public static function attributeMap()
@@ -208,6 +212,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
         $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
+        $this->container['reservation_expires_at'] = isset($data['reservation_expires_at']) ? $data['reservation_expires_at'] : null;
     }
 
     /**
@@ -559,6 +564,27 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     public function setTotalAmountInclVat($total_amount_incl_vat)
     {
         $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets reservation_expires_at
+     * @return string
+     */
+    public function getReservationExpiresAt()
+    {
+        return $this->container['reservation_expires_at'];
+    }
+
+    /**
+     * Sets reservation_expires_at
+     * @param string $reservation_expires_at
+     * @return $this
+     */
+    public function setReservationExpiresAt($reservation_expires_at)
+    {
+        $this->container['reservation_expires_at'] = $reservation_expires_at;
 
         return $this;
     }

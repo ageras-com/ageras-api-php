@@ -54,8 +54,14 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'normal_quota_allocation_count' => 'int',
+        'normal_allocation_quota' => 'int',
+        'pay_per_spot_allocation_count' => 'int',
+        'pay_per_spot_allocation_limit' => 'int',
+        'just_in_time_allocation_count' => 'int',
         'allocation_count' => 'int',
-        'allocation_quota' => 'int'
+        'allocation_quota' => 'int',
+        'overdelivery_allocation_count' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +74,14 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'normal_quota_allocation_count' => 'normal_quota_allocation_count',
+        'normal_allocation_quota' => 'normal_allocation_quota',
+        'pay_per_spot_allocation_count' => 'pay_per_spot_allocation_count',
+        'pay_per_spot_allocation_limit' => 'pay_per_spot_allocation_limit',
+        'just_in_time_allocation_count' => 'just_in_time_allocation_count',
         'allocation_count' => 'allocation_count',
-        'allocation_quota' => 'allocation_quota'
+        'allocation_quota' => 'allocation_quota',
+        'overdelivery_allocation_count' => 'overdelivery_allocation_count'
     ];
 
 
@@ -78,8 +90,14 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'normal_quota_allocation_count' => 'setNormalQuotaAllocationCount',
+        'normal_allocation_quota' => 'setNormalAllocationQuota',
+        'pay_per_spot_allocation_count' => 'setPayPerSpotAllocationCount',
+        'pay_per_spot_allocation_limit' => 'setPayPerSpotAllocationLimit',
+        'just_in_time_allocation_count' => 'setJustInTimeAllocationCount',
         'allocation_count' => 'setAllocationCount',
-        'allocation_quota' => 'setAllocationQuota'
+        'allocation_quota' => 'setAllocationQuota',
+        'overdelivery_allocation_count' => 'setOverdeliveryAllocationCount'
     ];
 
 
@@ -88,8 +106,14 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'normal_quota_allocation_count' => 'getNormalQuotaAllocationCount',
+        'normal_allocation_quota' => 'getNormalAllocationQuota',
+        'pay_per_spot_allocation_count' => 'getPayPerSpotAllocationCount',
+        'pay_per_spot_allocation_limit' => 'getPayPerSpotAllocationLimit',
+        'just_in_time_allocation_count' => 'getJustInTimeAllocationCount',
         'allocation_count' => 'getAllocationCount',
-        'allocation_quota' => 'getAllocationQuota'
+        'allocation_quota' => 'getAllocationQuota',
+        'overdelivery_allocation_count' => 'getOverdeliveryAllocationCount'
     ];
 
     public static function attributeMap()
@@ -123,8 +147,14 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['normal_quota_allocation_count'] = isset($data['normal_quota_allocation_count']) ? $data['normal_quota_allocation_count'] : null;
+        $this->container['normal_allocation_quota'] = isset($data['normal_allocation_quota']) ? $data['normal_allocation_quota'] : null;
+        $this->container['pay_per_spot_allocation_count'] = isset($data['pay_per_spot_allocation_count']) ? $data['pay_per_spot_allocation_count'] : null;
+        $this->container['pay_per_spot_allocation_limit'] = isset($data['pay_per_spot_allocation_limit']) ? $data['pay_per_spot_allocation_limit'] : null;
+        $this->container['just_in_time_allocation_count'] = isset($data['just_in_time_allocation_count']) ? $data['just_in_time_allocation_count'] : null;
         $this->container['allocation_count'] = isset($data['allocation_count']) ? $data['allocation_count'] : null;
         $this->container['allocation_quota'] = isset($data['allocation_quota']) ? $data['allocation_quota'] : null;
+        $this->container['overdelivery_allocation_count'] = isset($data['overdelivery_allocation_count']) ? $data['overdelivery_allocation_count'] : null;
     }
 
     /**
@@ -153,6 +183,111 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
 
 
     /**
+     * Gets normal_quota_allocation_count
+     * @return int
+     */
+    public function getNormalQuotaAllocationCount()
+    {
+        return $this->container['normal_quota_allocation_count'];
+    }
+
+    /**
+     * Sets normal_quota_allocation_count
+     * @param int $normal_quota_allocation_count Number of allocations fulfilled by the normal quota of allocations.
+     * @return $this
+     */
+    public function setNormalQuotaAllocationCount($normal_quota_allocation_count)
+    {
+        $this->container['normal_quota_allocation_count'] = $normal_quota_allocation_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets normal_allocation_quota
+     * @return int
+     */
+    public function getNormalAllocationQuota()
+    {
+        return $this->container['normal_allocation_quota'];
+    }
+
+    /**
+     * Sets normal_allocation_quota
+     * @param int $normal_allocation_quota Count of allocations accumulated from the normal allocation quota.
+     * @return $this
+     */
+    public function setNormalAllocationQuota($normal_allocation_quota)
+    {
+        $this->container['normal_allocation_quota'] = $normal_allocation_quota;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_per_spot_allocation_count
+     * @return int
+     */
+    public function getPayPerSpotAllocationCount()
+    {
+        return $this->container['pay_per_spot_allocation_count'];
+    }
+
+    /**
+     * Sets pay_per_spot_allocation_count
+     * @param int $pay_per_spot_allocation_count Number of allocations fulfilled by the pay per spot limit.
+     * @return $this
+     */
+    public function setPayPerSpotAllocationCount($pay_per_spot_allocation_count)
+    {
+        $this->container['pay_per_spot_allocation_count'] = $pay_per_spot_allocation_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_per_spot_allocation_limit
+     * @return int
+     */
+    public function getPayPerSpotAllocationLimit()
+    {
+        return $this->container['pay_per_spot_allocation_limit'];
+    }
+
+    /**
+     * Sets pay_per_spot_allocation_limit
+     * @param int $pay_per_spot_allocation_limit Count of allocations added each refill period from the pay per spot limit.
+     * @return $this
+     */
+    public function setPayPerSpotAllocationLimit($pay_per_spot_allocation_limit)
+    {
+        $this->container['pay_per_spot_allocation_limit'] = $pay_per_spot_allocation_limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets just_in_time_allocation_count
+     * @return int
+     */
+    public function getJustInTimeAllocationCount()
+    {
+        return $this->container['just_in_time_allocation_count'];
+    }
+
+    /**
+     * Sets just_in_time_allocation_count
+     * @param int $just_in_time_allocation_count Number of allocations fulfilled by just in time fulfillment.
+     * @return $this
+     */
+    public function setJustInTimeAllocationCount($just_in_time_allocation_count)
+    {
+        $this->container['just_in_time_allocation_count'] = $just_in_time_allocation_count;
+
+        return $this;
+    }
+
+    /**
      * Gets allocation_count
      * @return int
      */
@@ -163,7 +298,7 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
 
     /**
      * Sets allocation_count
-     * @param int $allocation_count Number of allocations.
+     * @param int $allocation_count Total including normal quota and just in time allocations.
      * @return $this
      */
     public function setAllocationCount($allocation_count)
@@ -184,12 +319,33 @@ class PartnerBusinessUnitAccumulatedAllocationResource implements ArrayAccess
 
     /**
      * Sets allocation_quota
-     * @param int $allocation_quota Number of leads available for allocation per refill.
+     * @param int $allocation_quota Synonym for normal quota.
      * @return $this
      */
     public function setAllocationQuota($allocation_quota)
     {
         $this->container['allocation_quota'] = $allocation_quota;
+
+        return $this;
+    }
+
+    /**
+     * Gets overdelivery_allocation_count
+     * @return int
+     */
+    public function getOverdeliveryAllocationCount()
+    {
+        return $this->container['overdelivery_allocation_count'];
+    }
+
+    /**
+     * Sets overdelivery_allocation_count
+     * @param int $overdelivery_allocation_count Count of allocations that were overdelivered, i.e. above the applicable quota
+     * @return $this
+     */
+    public function setOverdeliveryAllocationCount($overdelivery_allocation_count)
+    {
+        $this->container['overdelivery_allocation_count'] = $overdelivery_allocation_count;
 
         return $this;
     }

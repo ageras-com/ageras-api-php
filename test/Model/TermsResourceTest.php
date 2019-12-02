@@ -122,12 +122,4 @@ class TermsResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "body_html"
-     */
-    public function testPropertyBodyHtml()
-    {
-
-    }
-
 }

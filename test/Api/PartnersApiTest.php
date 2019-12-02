@@ -121,6 +121,83 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBusinessunitcontractsCreate
+     *
+     * Create a business unit contract..
+     *
+     */
+    public function testPartnersBusinessunitcontractsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitcontractsGet
+     *
+     * Get a business unit agreement..
+     *
+     */
+    public function testPartnersBusinessunitcontractsGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitcontractsIndex
+     *
+     * List business unit contracts..
+     *
+     */
+    public function testPartnersBusinessunitcontractsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationlimitsCreate
+     *
+     * Create a lead allocation limit for a business unit..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationlimitsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationlimitsDelete
+     *
+     * Delete a lead allocation limit..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationlimitsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationlimitsIndex
+     *
+     * List lead allocation limits..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationlimitsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersBusinessunitsAllocationlimitsUpdate
+     *
+     * Update a lead allocation limit..
+     *
+     */
+    public function testPartnersBusinessunitsAllocationlimitsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersBusinessunitsAllocationquotasCreate
      *
      * Create a lead allocation quota for a business unit..
@@ -688,6 +765,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersDiscountsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersFeaturesCreate
+     *
+     * Attach feature to partner..
+     *
+     */
+    public function testPartnersFeaturesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersFeaturesDelete
+     *
+     * Detach a single feature from a partner.
+     *
+     */
+    public function testPartnersFeaturesDelete()
     {
 
     }

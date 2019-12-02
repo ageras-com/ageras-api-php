@@ -94,9 +94,9 @@ $criteria = [
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'invoice_number' => "invoice_number_example"; // string | Invoice Number.
         'has_subscription_line_item' => false; // bool | Filter invoices by whether they are related to subscription or not.
+        'query' => "query_example"; // string | General query string for searching vouchers.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
-        'query' => "query_example"; // string | The search wildcard.
     ];
 
 try {
@@ -121,9 +121,9 @@ Name | Type | Description  | Notes
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **invoice_number** | **string**| Invoice Number. | [optional]
  **has_subscription_line_item** | **bool**| Filter invoices by whether they are related to subscription or not. | [optional] [default to false]
+ **query** | **string**| General query string for searching vouchers. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
- **query** | **string**| The search wildcard. | [optional]
 
 ### Return type
 

@@ -37,6 +37,8 @@ Method | HTTP request | Description
 [**leadsQuotesProgressstepsIndex**](LeadsApi.md#leadsQuotesProgressstepsIndex) | **GET** /leads/quotes/progresssteps | Get quote progress statuses.
 [**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | Update a quote.
 [**leadsQuotesUpdate2**](LeadsApi.md#leadsQuotesUpdate2) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
+[**leadsSegmentationsubgeoregionsIndex**](LeadsApi.md#leadsSegmentationsubgeoregionsIndex) | **GET** /leads/{lead_id}/segmentationsubgeoregions | List a lead&#39;s sub geo regions.
+[**leadsSegmentationsubgeoregionsUpdate**](LeadsApi.md#leadsSegmentationsubgeoregionsUpdate) | **PUT** /leads/{lead_id}/segmentationsubgeoregions | Update a lead&#39;s sub geo regions.
 [**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | Index lead types.
 [**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | Update Properties on a given Lead.
 
@@ -130,8 +132,6 @@ $criteria = [
         'has_max_quotes' => false; // bool | Has maximum number of quotes. @var bool
         'has_accepted_quote' => false; // bool | Has an accepted quote. @var bool
         'has_rejected_quote' => false; // bool | Has a rejected quote. @var bool
-        'segmented_for_partner_id' => 56; // int | Get leads that are segmented for this partner ID. @var int
-        'relevant_for_partner_id' => 56; // int | Get leads that are relevant for this partner ID. @var int
         'no_quote_for_partner_id' => 56; // int | Get leads that do not have a quote for this partner ID. @var int
         'is_match_priority' => false; // bool | Is the lead prioritised for being matched? @var bool
         'is_completed_call_priority' => false; // bool | Is the lead prioritised for a completion call? @var bool
@@ -185,8 +185,6 @@ Name | Type | Description  | Notes
  **has_max_quotes** | **bool**| Has maximum number of quotes. @var bool | [optional] [default to false]
  **has_accepted_quote** | **bool**| Has an accepted quote. @var bool | [optional] [default to false]
  **has_rejected_quote** | **bool**| Has a rejected quote. @var bool | [optional] [default to false]
- **segmented_for_partner_id** | **int**| Get leads that are segmented for this partner ID. @var int | [optional]
- **relevant_for_partner_id** | **int**| Get leads that are relevant for this partner ID. @var int | [optional]
  **no_quote_for_partner_id** | **int**| Get leads that do not have a quote for this partner ID. @var int | [optional]
  **is_match_priority** | **bool**| Is the lead prioritised for being matched? @var bool | [optional] [default to false]
  **is_completed_call_priority** | **bool**| Is the lead prioritised for a completion call? @var bool | [optional] [default to false]
@@ -226,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **leadsAllocationsCreate**
-> \Ageras\Api\LeadAllocationResource leadsAllocationsCreate($lead_id , $lead_allocation_resource)
+> \Ageras\Api\LeadAllocationsResource leadsAllocationsCreate($lead_id , $lead_allocations_resource)
 
 Allocate partners to a lead.
 
@@ -245,10 +243,10 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
 $lead_id = "lead_id_example"; // string | 
-$lead_allocation_resource = new \Ageras\Api\LeadAllocationResource(); // \Ageras\Api\LeadAllocationResource | 
+$lead_allocations_resource = new \Ageras\Api\LeadAllocationsResource(); // \Ageras\Api\LeadAllocationsResource | 
 
 try {
-    $result = $api_instance->leadsAllocationsCreate($lead_id , $lead_allocation_resource);
+    $result = $api_instance->leadsAllocationsCreate($lead_id , $lead_allocations_resource);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LeadsApi->leadsAllocationsCreate: ', $e->getMessage(), PHP_EOL;
@@ -261,11 +259,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_id** | **string**|  |
- **lead_allocation_resource** | [**\Ageras\Api\LeadAllocationResource**](../Model/\Ageras\Api\LeadAllocationResource.md)|  |
+ **lead_allocations_resource** | [**\Ageras\Api\LeadAllocationsResource**](../Model/\Ageras\Api\LeadAllocationsResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\LeadAllocationResource**](../Model/LeadAllocationResource.md)
+[**\Ageras\Api\LeadAllocationsResource**](../Model/LeadAllocationsResource.md)
 
 ### Authorization
 
@@ -306,6 +304,7 @@ $criteria = [
         'has_business_unit' => false; // bool | 
         'sort' => "created_at"; // string | 
         'is_used' => false; // bool | Filter by the allocation being used or unused.
+        'is_processed' => false; // bool | Filter by the allocation being used or unused.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -332,6 +331,7 @@ Name | Type | Description  | Notes
  **has_business_unit** | **bool**|  | [optional] [default to false]
  **sort** | **string**|  | [optional] [default to created_at]
  **is_used** | **bool**| Filter by the allocation being used or unused. | [optional] [default to false]
+ **is_processed** | **bool**| Filter by the allocation being used or unused. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -985,8 +985,6 @@ $criteria = [
         'has_max_quotes' => false; // bool | Has maximum number of quotes. @var bool
         'has_accepted_quote' => false; // bool | Has an accepted quote. @var bool
         'has_rejected_quote' => false; // bool | Has a rejected quote. @var bool
-        'segmented_for_partner_id' => 56; // int | Get leads that are segmented for this partner ID. @var int
-        'relevant_for_partner_id' => 56; // int | Get leads that are relevant for this partner ID. @var int
         'no_quote_for_partner_id' => 56; // int | Get leads that do not have a quote for this partner ID. @var int
         'is_match_priority' => false; // bool | Is the lead prioritised for being matched? @var bool
         'is_completed_call_priority' => false; // bool | Is the lead prioritised for a completion call? @var bool
@@ -1040,8 +1038,6 @@ Name | Type | Description  | Notes
  **has_max_quotes** | **bool**| Has maximum number of quotes. @var bool | [optional] [default to false]
  **has_accepted_quote** | **bool**| Has an accepted quote. @var bool | [optional] [default to false]
  **has_rejected_quote** | **bool**| Has a rejected quote. @var bool | [optional] [default to false]
- **segmented_for_partner_id** | **int**| Get leads that are segmented for this partner ID. @var int | [optional]
- **relevant_for_partner_id** | **int**| Get leads that are relevant for this partner ID. @var int | [optional]
  **no_quote_for_partner_id** | **int**| Get leads that do not have a quote for this partner ID. @var int | [optional]
  **is_match_priority** | **bool**| Is the lead prioritised for being matched? @var bool | [optional] [default to false]
  **is_completed_call_priority** | **bool**| Is the lead prioritised for a completion call? @var bool | [optional] [default to false]
@@ -2041,6 +2037,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadQuoteResource**](../Model/LeadQuoteResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsSegmentationsubgeoregionsIndex**
+> \Ageras\Api\SegmentationSubGeoRegionResult leadsSegmentationsubgeoregionsIndex($lead_id , $criteria)
+
+List a lead's sub geo regions.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->leadsSegmentationsubgeoregionsIndex($lead_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsSegmentationsubgeoregionsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\SegmentationSubGeoRegionResult**](../Model/SegmentationSubGeoRegionResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsSegmentationsubgeoregionsUpdate**
+> \Ageras\Api\SegmentationSubGeoRegionsResource leadsSegmentationsubgeoregionsUpdate($lead_id , $segmentation_sub_geo_regions_resource)
+
+Update a lead's sub geo regions.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$segmentation_sub_geo_regions_resource = new \Ageras\Api\SegmentationSubGeoRegionsResource(); // \Ageras\Api\SegmentationSubGeoRegionsResource | 
+
+try {
+    $result = $api_instance->leadsSegmentationsubgeoregionsUpdate($lead_id , $segmentation_sub_geo_regions_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsSegmentationsubgeoregionsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **segmentation_sub_geo_regions_resource** | [**\Ageras\Api\SegmentationSubGeoRegionsResource**](../Model/\Ageras\Api\SegmentationSubGeoRegionsResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\SegmentationSubGeoRegionsResource**](../Model/SegmentationSubGeoRegionsResource.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportSubCriterionReportResource
+ * PartnerFeatureResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchReportSubCriterionReportResource Class Doc Comment
+ * PartnerFeatureResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportSubCriterionReportResource implements ArrayAccess
+class PartnerFeatureResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchReportSubCriterionReportResource';
+    protected static $swaggerModelName = 'PartnerFeatureResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sub_criterion_identifier' => 'string',
-        'is_satisfied' => 'bool'
+        'id' => 'int',
+        'identifier' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'sub_criterion_identifier' => 'sub_criterion_identifier',
-        'is_satisfied' => 'is_satisfied'
+        'id' => 'id',
+        'identifier' => 'identifier'
     ];
 
 
@@ -78,8 +78,8 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'sub_criterion_identifier' => 'setSubCriterionIdentifier',
-        'is_satisfied' => 'setIsSatisfied'
+        'id' => 'setId',
+        'identifier' => 'setIdentifier'
     ];
 
 
@@ -88,8 +88,8 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'sub_criterion_identifier' => 'getSubCriterionIdentifier',
-        'is_satisfied' => 'getIsSatisfied'
+        'id' => 'getId',
+        'identifier' => 'getIdentifier'
     ];
 
     public static function attributeMap()
@@ -123,8 +123,8 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['sub_criterion_identifier'] = isset($data['sub_criterion_identifier']) ? $data['sub_criterion_identifier'] : null;
-        $this->container['is_satisfied'] = isset($data['is_satisfied']) ? $data['is_satisfied'] : false;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
     }
 
     /**
@@ -153,43 +153,43 @@ class MatchReportSubCriterionReportResource implements ArrayAccess
 
 
     /**
-     * Gets sub_criterion_identifier
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getSubCriterionIdentifier()
+    public function getId()
     {
-        return $this->container['sub_criterion_identifier'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets sub_criterion_identifier
-     * @param string $sub_criterion_identifier Sub-criterion identifier.
+     * Sets id
+     * @param int $id Id.
      * @return $this
      */
-    public function setSubCriterionIdentifier($sub_criterion_identifier)
+    public function setId($id)
     {
-        $this->container['sub_criterion_identifier'] = $sub_criterion_identifier;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets is_satisfied
-     * @return bool
+     * Gets identifier
+     * @return string
      */
-    public function getIsSatisfied()
+    public function getIdentifier()
     {
-        return $this->container['is_satisfied'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets is_satisfied
-     * @param bool $is_satisfied Is the sub-criterion satisfied?
+     * Sets identifier
+     * @param string $identifier Identifier
      * @return $this
      */
-    public function setIsSatisfied($is_satisfied)
+    public function setIdentifier($identifier)
     {
-        $this->container['is_satisfied'] = $is_satisfied;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }

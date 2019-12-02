@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **identifier** | **string** | Terms identifier. | [optional] 
 **headline** | **string** | Terms localized headline. | [optional] 
 **body** | **string** | Terms body. | [optional] 
-**body_html** | **string** | Terms body formatted. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

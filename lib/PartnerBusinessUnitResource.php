@@ -57,6 +57,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'id' => 'int',
         'partner_id' => 'int',
         'partner_user_id' => 'int',
+        'partner_business_unit_grouping_id' => 'int',
         'geo' => '\Ageras\Api\PartnerBusinessUnitGeoResource',
         'disable_digital_leads' => 'bool',
         'display_name' => 'string',
@@ -68,7 +69,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'desired_types' => '\Ageras\Api\LeadTypeResource[]',
         'desired_industries' => '\Ageras\Api\IndustryResource[]',
         'employee' => '\Ageras\Api\PartnerEmployeeResource',
-        'partner' => '\Ageras\Api\PartnerBusinessUnitPartnerResource'
+        'partner' => '\Ageras\Api\PartnerBusinessUnitPartnerResource',
+        'business_models' => '\Ageras\Api\PartnerBusinessUnitBusinessModelResource[]',
+        'retired_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -84,6 +87,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'id' => 'id',
         'partner_id' => 'partner_id',
         'partner_user_id' => 'partner_user_id',
+        'partner_business_unit_grouping_id' => 'partner_business_unit_grouping_id',
         'geo' => 'geo',
         'disable_digital_leads' => 'disable_digital_leads',
         'display_name' => 'display_name',
@@ -95,7 +99,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'desired_types' => 'desired_types',
         'desired_industries' => 'desired_industries',
         'employee' => 'employee',
-        'partner' => 'partner'
+        'partner' => 'partner',
+        'business_models' => 'business_models',
+        'retired_at' => 'retired_at'
     ];
 
 
@@ -107,6 +113,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'id' => 'setId',
         'partner_id' => 'setPartnerId',
         'partner_user_id' => 'setPartnerUserId',
+        'partner_business_unit_grouping_id' => 'setPartnerBusinessUnitGroupingId',
         'geo' => 'setGeo',
         'disable_digital_leads' => 'setDisableDigitalLeads',
         'display_name' => 'setDisplayName',
@@ -118,7 +125,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'desired_types' => 'setDesiredTypes',
         'desired_industries' => 'setDesiredIndustries',
         'employee' => 'setEmployee',
-        'partner' => 'setPartner'
+        'partner' => 'setPartner',
+        'business_models' => 'setBusinessModels',
+        'retired_at' => 'setRetiredAt'
     ];
 
 
@@ -130,6 +139,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'id' => 'getId',
         'partner_id' => 'getPartnerId',
         'partner_user_id' => 'getPartnerUserId',
+        'partner_business_unit_grouping_id' => 'getPartnerBusinessUnitGroupingId',
         'geo' => 'getGeo',
         'disable_digital_leads' => 'getDisableDigitalLeads',
         'display_name' => 'getDisplayName',
@@ -141,7 +151,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'desired_types' => 'getDesiredTypes',
         'desired_industries' => 'getDesiredIndustries',
         'employee' => 'getEmployee',
-        'partner' => 'getPartner'
+        'partner' => 'getPartner',
+        'business_models' => 'getBusinessModels',
+        'retired_at' => 'getRetiredAt'
     ];
 
     public static function attributeMap()
@@ -178,6 +190,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
+        $this->container['partner_business_unit_grouping_id'] = isset($data['partner_business_unit_grouping_id']) ? $data['partner_business_unit_grouping_id'] : null;
         $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
         $this->container['disable_digital_leads'] = isset($data['disable_digital_leads']) ? $data['disable_digital_leads'] : false;
         $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
@@ -190,6 +203,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['desired_industries'] = isset($data['desired_industries']) ? $data['desired_industries'] : null;
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['business_models'] = isset($data['business_models']) ? $data['business_models'] : null;
+        $this->container['retired_at'] = isset($data['retired_at']) ? $data['retired_at'] : null;
     }
 
     /**
@@ -249,7 +264,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
 
     /**
      * Sets partner_id
-     * @param int $partner_id Primary ID.
+     * @param int $partner_id Partner ID.
      * @return $this
      */
     public function setPartnerId($partner_id)
@@ -276,6 +291,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setPartnerUserId($partner_user_id)
     {
         $this->container['partner_user_id'] = $partner_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_business_unit_grouping_id
+     * @return int
+     */
+    public function getPartnerBusinessUnitGroupingId()
+    {
+        return $this->container['partner_business_unit_grouping_id'];
+    }
+
+    /**
+     * Sets partner_business_unit_grouping_id
+     * @param int $partner_business_unit_grouping_id Grouping ID.
+     * @return $this
+     */
+    public function setPartnerBusinessUnitGroupingId($partner_business_unit_grouping_id)
+    {
+        $this->container['partner_business_unit_grouping_id'] = $partner_business_unit_grouping_id;
 
         return $this;
     }
@@ -528,6 +564,48 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setPartner($partner)
     {
         $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets business_models
+     * @return \Ageras\Api\PartnerBusinessUnitBusinessModelResource[]
+     */
+    public function getBusinessModels()
+    {
+        return $this->container['business_models'];
+    }
+
+    /**
+     * Sets business_models
+     * @param \Ageras\Api\PartnerBusinessUnitBusinessModelResource[] $business_models Business models of the business units.
+     * @return $this
+     */
+    public function setBusinessModels($business_models)
+    {
+        $this->container['business_models'] = $business_models;
+
+        return $this;
+    }
+
+    /**
+     * Gets retired_at
+     * @return string
+     */
+    public function getRetiredAt()
+    {
+        return $this->container['retired_at'];
+    }
+
+    /**
+     * Sets retired_at
+     * @param string $retired_at When the business unit is considered retired
+     * @return $this
+     */
+    public function setRetiredAt($retired_at)
+    {
+        $this->container['retired_at'] = $retired_at;
 
         return $this;
     }

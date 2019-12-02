@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportSubCriterionReportResourceTest
+ * LeadPartnerAllocationLimitResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * MatchReportSubCriterionReportResourceTest Class Doc Comment
+ * LeadPartnerAllocationLimitResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description MatchReportSubCriterionReportResource
+// * @description LeadPartnerAllocationLimitResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportSubCriterionReportResourceTest extends \PHPUnit_Framework_TestCase
+class LeadPartnerAllocationLimitResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,57 @@ class MatchReportSubCriterionReportResourceTest extends \PHPUnit_Framework_TestC
     }
 
     /**
-     * Test "MatchReportSubCriterionReportResource"
+     * Test "LeadPartnerAllocationLimitResult"
      */
-    public function testMatchReportSubCriterionReportResource()
+    public function testLeadPartnerAllocationLimitResult()
     {
 
     }
 
     /**
-     * Test attribute "sub_criterion_identifier"
+     * Test attribute "page"
      */
-    public function testPropertySubCriterionIdentifier()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "is_satisfied"
+     * Test attribute "limit"
      */
-    public function testPropertyIsSatisfied()
+    public function testPropertyLimit()
+    {
+
+    }
+
+    /**
+     * Test attribute "pages"
+     */
+    public function testPropertyPages()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

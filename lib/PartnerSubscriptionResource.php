@@ -59,13 +59,15 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'int',
         'payment_solution' => '\Ageras\Api\PaymentSolutionResource',
         'monthly_price' => '\Ageras\Api\AmountResource',
+        'current_monthly_price' => '\Ageras\Api\AmountResource',
         'starts_at' => 'string',
         'expires_at' => 'string',
         'canceled_at' => 'string',
         'created_at' => 'string',
         'updated_at' => 'string',
         'package_type' => 'string',
-        'churned_at' => 'string'
+        'churned_at' => 'string',
+        'extension_period_months' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -83,13 +85,15 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'package_id',
         'payment_solution' => 'payment_solution',
         'monthly_price' => 'monthly_price',
+        'current_monthly_price' => 'current_monthly_price',
         'starts_at' => 'starts_at',
         'expires_at' => 'expires_at',
         'canceled_at' => 'canceled_at',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'package_type' => 'package_type',
-        'churned_at' => 'churned_at'
+        'churned_at' => 'churned_at',
+        'extension_period_months' => 'extension_period_months'
     ];
 
 
@@ -103,13 +107,15 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'setPackageId',
         'payment_solution' => 'setPaymentSolution',
         'monthly_price' => 'setMonthlyPrice',
+        'current_monthly_price' => 'setCurrentMonthlyPrice',
         'starts_at' => 'setStartsAt',
         'expires_at' => 'setExpiresAt',
         'canceled_at' => 'setCanceledAt',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'package_type' => 'setPackageType',
-        'churned_at' => 'setChurnedAt'
+        'churned_at' => 'setChurnedAt',
+        'extension_period_months' => 'setExtensionPeriodMonths'
     ];
 
 
@@ -123,13 +129,15 @@ class PartnerSubscriptionResource implements ArrayAccess
         'package_id' => 'getPackageId',
         'payment_solution' => 'getPaymentSolution',
         'monthly_price' => 'getMonthlyPrice',
+        'current_monthly_price' => 'getCurrentMonthlyPrice',
         'starts_at' => 'getStartsAt',
         'expires_at' => 'getExpiresAt',
         'canceled_at' => 'getCanceledAt',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'package_type' => 'getPackageType',
-        'churned_at' => 'getChurnedAt'
+        'churned_at' => 'getChurnedAt',
+        'extension_period_months' => 'getExtensionPeriodMonths'
     ];
 
     public static function attributeMap()
@@ -168,6 +176,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         $this->container['package_id'] = isset($data['package_id']) ? $data['package_id'] : null;
         $this->container['payment_solution'] = isset($data['payment_solution']) ? $data['payment_solution'] : null;
         $this->container['monthly_price'] = isset($data['monthly_price']) ? $data['monthly_price'] : null;
+        $this->container['current_monthly_price'] = isset($data['current_monthly_price']) ? $data['current_monthly_price'] : null;
         $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['canceled_at'] = isset($data['canceled_at']) ? $data['canceled_at'] : null;
@@ -175,6 +184,7 @@ class PartnerSubscriptionResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['package_type'] = isset($data['package_type']) ? $data['package_type'] : null;
         $this->container['churned_at'] = isset($data['churned_at']) ? $data['churned_at'] : null;
+        $this->container['extension_period_months'] = isset($data['extension_period_months']) ? $data['extension_period_months'] : null;
     }
 
     /**
@@ -303,6 +313,27 @@ class PartnerSubscriptionResource implements ArrayAccess
     public function setMonthlyPrice($monthly_price)
     {
         $this->container['monthly_price'] = $monthly_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_monthly_price
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getCurrentMonthlyPrice()
+    {
+        return $this->container['current_monthly_price'];
+    }
+
+    /**
+     * Sets current_monthly_price
+     * @param \Ageras\Api\AmountResource $current_monthly_price
+     * @return $this
+     */
+    public function setCurrentMonthlyPrice($current_monthly_price)
+    {
+        $this->container['current_monthly_price'] = $current_monthly_price;
 
         return $this;
     }
@@ -450,6 +481,27 @@ class PartnerSubscriptionResource implements ArrayAccess
     public function setChurnedAt($churned_at)
     {
         $this->container['churned_at'] = $churned_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets extension_period_months
+     * @return int
+     */
+    public function getExtensionPeriodMonths()
+    {
+        return $this->container['extension_period_months'];
+    }
+
+    /**
+     * Sets extension_period_months
+     * @param int $extension_period_months Length of each extension when this package is extended.
+     * @return $this
+     */
+    public function setExtensionPeriodMonths($extension_period_months)
+    {
+        $this->container['extension_period_months'] = $extension_period_months;
 
         return $this;
     }

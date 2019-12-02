@@ -1,6 +1,6 @@
 <?php
 /**
- * MatchReportResult
+ * ContractComponentResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * MatchReportResult Class Doc Comment
+ * ContractComponentResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MatchReportResult implements ArrayAccess
+class ContractComponentResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,19 +47,15 @@ class MatchReportResult implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MatchReportResult';
+    protected static $swaggerModelName = 'ContractComponentResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'limit' => 'int',
-        'pages' => 'int',
-        'total' => 'int',
-        'data' => '\Ageras\Api\MatchReportResource[]',
-        'did_you_mean' => 'string'
+        'id' => 'int',
+        'name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -72,12 +68,8 @@ class MatchReportResult implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'limit' => 'limit',
-        'pages' => 'pages',
-        'total' => 'total',
-        'data' => 'data',
-        'did_you_mean' => 'didYouMean'
+        'id' => 'id',
+        'name' => 'name'
     ];
 
 
@@ -86,12 +78,8 @@ class MatchReportResult implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'limit' => 'setLimit',
-        'pages' => 'setPages',
-        'total' => 'setTotal',
-        'data' => 'setData',
-        'did_you_mean' => 'setDidYouMean'
+        'id' => 'setId',
+        'name' => 'setName'
     ];
 
 
@@ -100,12 +88,8 @@ class MatchReportResult implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'limit' => 'getLimit',
-        'pages' => 'getPages',
-        'total' => 'getTotal',
-        'data' => 'getData',
-        'did_you_mean' => 'getDidYouMean'
+        'id' => 'getId',
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -139,12 +123,8 @@ class MatchReportResult implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -173,127 +153,43 @@ class MatchReportResult implements ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets id
      * @return int
      */
-    public function getPage()
+    public function getId()
     {
-        return $this->container['page'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets page
-     * @param int $page Current Page.
+     * Sets id
+     * @param int $id ID of the component.
      * @return $this
      */
-    public function setPage($page)
+    public function setId($id)
     {
-        $this->container['page'] = $page;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets limit
-     * @return int
-     */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-     * Sets limit
-     * @param int $limit Number of results per page.
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets pages
-     * @return int
-     */
-    public function getPages()
-    {
-        return $this->container['pages'];
-    }
-
-    /**
-     * Sets pages
-     * @param int $pages Number of pages.
-     * @return $this
-     */
-    public function setPages($pages)
-    {
-        $this->container['pages'] = $pages;
-
-        return $this;
-    }
-
-    /**
-     * Gets total
-     * @return int
-     */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-     * Sets total
-     * @param int $total Total number of results.
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     * @return \Ageras\Api\MatchReportResource[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \Ageras\Api\MatchReportResource[] $data The result.
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets did_you_mean
+     * Gets name
      * @return string
      */
-    public function getDidYouMean()
+    public function getName()
     {
-        return $this->container['did_you_mean'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets did_you_mean
-     * @param string $did_you_mean Options for related or alternative searches.
+     * Sets name
+     * @param string $name Display name of the compnent.
      * @return $this
      */
-    public function setDidYouMean($did_you_mean)
+    public function setName($name)
     {
-        $this->container['did_you_mean'] = $did_you_mean;
+        $this->container['name'] = $name;
 
         return $this;
     }

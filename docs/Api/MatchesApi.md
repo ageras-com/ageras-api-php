@@ -33,6 +33,7 @@ $criteria = [
         'validator_id' => "validator_id_example"; // string | Validator Id
         'is_accepted' => false; // bool | Accepted
         'is_unaccepted' => false; // bool | Unaccepted
+        'sort' => "accepted_at"; // string | Sort resource by.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -57,6 +58,7 @@ Name | Type | Description  | Notes
  **validator_id** | **string**| Validator Id | [optional]
  **is_accepted** | **bool**| Accepted | [optional] [default to false]
  **is_unaccepted** | **bool**| Unaccepted | [optional] [default to false]
+ **sort** | **string**| Sort resource by. | [optional] [default to accepted_at]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

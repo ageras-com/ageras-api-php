@@ -187,14 +187,6 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company_information_html"
-     */
-    public function testPropertyCompanyInformationHtml()
-    {
-
-    }
-
-    /**
      * Test attribute "vat_number"
      */
     public function testPropertyVatNumber()

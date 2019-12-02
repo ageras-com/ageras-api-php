@@ -90,4 +90,12 @@ class LeadAllocationResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "allocation_type"
+     */
+    public function testPropertyAllocationType()
+    {
+
+    }
+
 }
