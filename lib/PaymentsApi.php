@@ -653,4 +653,202 @@ class PaymentsApi
             throw $e;
         }
     }
+
+    /**
+     * Operation paymentsMethodsActionsCreate
+     *
+     * Execute an action on a payment method.
+     *
+     * @param string $payment_method_id 
+     * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PaymentMethodResource
+     */
+    public function paymentsMethodsActionsCreate($payment_method_id , $payment_method_action_resource)
+    {
+        list($response) = $this->paymentsMethodsActionsCreateWithHttpInfo($payment_method_id, $payment_method_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation paymentsMethodsActionsCreateWithHttpInfo
+     *
+     * Execute an action on a payment method.
+     *
+     * @param string $payment_method_id 
+     * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PaymentMethodResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentsMethodsActionsCreateWithHttpInfo($payment_method_id , $payment_method_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/payments/methods/{payment_method_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($payment_method_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "payment_method_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($payment_method_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($payment_method_action_resource)) {
+            $_tempBody = $payment_method_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PaymentMethodResource',
+                '/payments/methods/{payment_method_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PaymentMethodResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentMethodResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation paymentsMethodsActionsCreate2
+     *
+     * Execute an action on a payment method.
+     *
+     * @param string $payment_id 
+     * @param string $payment_method_id 
+     * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PaymentMethodResource
+     */
+    public function paymentsMethodsActionsCreate2($payment_id,  $payment_method_id , $payment_method_action_resource)
+    {
+        list($response) = $this->paymentsMethodsActionsCreate2WithHttpInfo($payment_id, $payment_method_id, $payment_method_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation paymentsMethodsActionsCreate2WithHttpInfo
+     *
+     * Execute an action on a payment method.
+     *
+     * @param string $payment_id 
+     * @param string $payment_method_id 
+     * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PaymentMethodResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentsMethodsActionsCreate2WithHttpInfo($payment_id,  $payment_method_id , $payment_method_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/payments/{payment_id}/methods/{payment_method_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($payment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "payment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($payment_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($payment_method_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "payment_method_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($payment_method_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($payment_method_action_resource)) {
+            $_tempBody = $payment_method_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PaymentMethodResource',
+                '/payments/{payment_id}/methods/{payment_method_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PaymentMethodResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PaymentMethodResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **point** | [**\Ageras\Api\LocationGeoPointResource**](LocationGeoPointResource.md) |  | [optional] 
 **region_name** | **string** | Name of the region | [optional] 
 **region_abbreviation** | **string** | Region abbreviation | [optional] 
+**sub_region_name** | **string** | Name of the sub region | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

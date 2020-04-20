@@ -147,6 +147,22 @@ class PaymentCardResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_preferred"
+     */
+    public function testPropertyIsPreferred()
+    {
+
+    }
+
+    /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+
+    }
+
+    /**
      * Test attribute "data"
      */
     public function testPropertyData()

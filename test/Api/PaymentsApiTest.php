@@ -142,4 +142,26 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for paymentsMethodsActionsCreate
+     *
+     * Execute an action on a payment method..
+     *
+     */
+    public function testPaymentsMethodsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for paymentsMethodsActionsCreate2
+     *
+     * Execute an action on a payment method..
+     *
+     */
+    public function testPaymentsMethodsActionsCreate2()
+    {
+
+    }
+
 }

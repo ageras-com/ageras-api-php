@@ -198,6 +198,28 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsDemopartnersIndex
+     *
+     * List leads a demo partner could expect to see if they sign up..
+     *
+     */
+    public function testLeadsDemopartnersIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsDemopartnersIndex2
+     *
+     * List leads a demo partner could expect to see if they sign up..
+     *
+     */
+    public function testLeadsDemopartnersIndex2()
+    {
+
+    }
+
+    /**
      * Test case for leadsExcludedpartnersCreate
      *
      * Add partner to lead's excluded partner list.

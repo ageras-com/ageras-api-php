@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **actions_info** | [**\Ageras\Api\LeadActionsInfoResource**](LeadActionsInfoResource.md) |  | [optional] 
 **geo_range** | **int** | Range the lead is happy to travel to reach a partner. | [optional] 
 **primary_sector** | [**\Ageras\Api\SectorResource**](SectorResource.md) |  | [optional] 
+**revenue_segment** | [**\Ageras\Api\RevenueSegmentResource**](RevenueSegmentResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -189,6 +189,7 @@ class LocationsApi
      *    'min_partner_count' => int,
      *    'region_name' => string,
      *    'region_abbreviation' => string,
+     *    'zip_code' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -217,6 +218,7 @@ class LocationsApi
      *    'min_partner_count' => int,
      *    'region_name' => string,
      *    'region_abbreviation' => string,
+     *    'zip_code' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -273,6 +275,10 @@ class LocationsApi
         // query params
         if (isset($criteria['region_abbreviation'])) {
             $queryParams['region_abbreviation'] = $this->apiClient->getSerializer()->toQueryValue($criteria['region_abbreviation']);
+        }
+        // query params
+        if (isset($criteria['zip_code'])) {
+            $queryParams['zip_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['zip_code']);
         }
         // query params
         if (isset($criteria['limit'])) {

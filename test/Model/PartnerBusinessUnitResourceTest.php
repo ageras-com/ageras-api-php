@@ -179,6 +179,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "revenue_segment"
+     */
+    public function testPropertyRevenueSegment()
+    {
+
+    }
+
+    /**
      * Test attribute "desired_types"
      */
     public function testPropertyDesiredTypes()

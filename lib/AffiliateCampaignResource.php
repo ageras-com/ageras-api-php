@@ -54,6 +54,7 @@ class AffiliateCampaignResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'key' => 'string',
         'utm_campaign' => 'string',
         'name' => 'string',
@@ -70,6 +71,7 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'key' => 'key',
         'utm_campaign' => 'utm_campaign',
         'name' => 'name',
@@ -82,6 +84,7 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'key' => 'setKey',
         'utm_campaign' => 'setUtmCampaign',
         'name' => 'setName',
@@ -94,6 +97,7 @@ class AffiliateCampaignResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'key' => 'getKey',
         'utm_campaign' => 'getUtmCampaign',
         'name' => 'getName',
@@ -131,6 +135,7 @@ class AffiliateCampaignResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['utm_campaign'] = isset($data['utm_campaign']) ? $data['utm_campaign'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -161,6 +166,27 @@ class AffiliateCampaignResource implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id Campaign id. @var int
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets key

@@ -64,7 +64,8 @@ class LocationResource implements ArrayAccess
         'address' => 'string',
         'point' => '\Ageras\Api\LocationGeoPointResource',
         'region_name' => 'string',
-        'region_abbreviation' => 'string'
+        'region_abbreviation' => 'string',
+        'sub_region_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class LocationResource implements ArrayAccess
         'address' => 'address',
         'point' => 'point',
         'region_name' => 'region_name',
-        'region_abbreviation' => 'region_abbreviation'
+        'region_abbreviation' => 'region_abbreviation',
+        'sub_region_name' => 'sub_region_name'
     ];
 
 
@@ -106,7 +108,8 @@ class LocationResource implements ArrayAccess
         'address' => 'setAddress',
         'point' => 'setPoint',
         'region_name' => 'setRegionName',
-        'region_abbreviation' => 'setRegionAbbreviation'
+        'region_abbreviation' => 'setRegionAbbreviation',
+        'sub_region_name' => 'setSubRegionName'
     ];
 
 
@@ -125,7 +128,8 @@ class LocationResource implements ArrayAccess
         'address' => 'getAddress',
         'point' => 'getPoint',
         'region_name' => 'getRegionName',
-        'region_abbreviation' => 'getRegionAbbreviation'
+        'region_abbreviation' => 'getRegionAbbreviation',
+        'sub_region_name' => 'getSubRegionName'
     ];
 
     public static function attributeMap()
@@ -170,6 +174,7 @@ class LocationResource implements ArrayAccess
         $this->container['point'] = isset($data['point']) ? $data['point'] : null;
         $this->container['region_name'] = isset($data['region_name']) ? $data['region_name'] : null;
         $this->container['region_abbreviation'] = isset($data['region_abbreviation']) ? $data['region_abbreviation'] : null;
+        $this->container['sub_region_name'] = isset($data['sub_region_name']) ? $data['sub_region_name'] : null;
     }
 
     /**
@@ -424,6 +429,27 @@ class LocationResource implements ArrayAccess
     public function setRegionAbbreviation($region_abbreviation)
     {
         $this->container['region_abbreviation'] = $region_abbreviation;
+
+        return $this;
+    }
+
+    /**
+     * Gets sub_region_name
+     * @return string
+     */
+    public function getSubRegionName()
+    {
+        return $this->container['sub_region_name'];
+    }
+
+    /**
+     * Sets sub_region_name
+     * @param string $sub_region_name Name of the sub region
+     * @return $this
+     */
+    public function setSubRegionName($sub_region_name)
+    {
+        $this->container['sub_region_name'] = $sub_region_name;
 
         return $this;
     }

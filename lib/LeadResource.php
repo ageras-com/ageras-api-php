@@ -93,7 +93,8 @@ class LeadResource implements ArrayAccess
         'email_optin' => 'bool',
         'actions_info' => '\Ageras\Api\LeadActionsInfoResource',
         'geo_range' => 'int',
-        'primary_sector' => '\Ageras\Api\SectorResource'
+        'primary_sector' => '\Ageras\Api\SectorResource',
+        'revenue_segment' => '\Ageras\Api\RevenueSegmentResource'
     ];
 
     public static function swaggerTypes()
@@ -145,7 +146,8 @@ class LeadResource implements ArrayAccess
         'email_optin' => 'email_optin',
         'actions_info' => 'actions_info',
         'geo_range' => 'geo_range',
-        'primary_sector' => 'primary_sector'
+        'primary_sector' => 'primary_sector',
+        'revenue_segment' => 'revenue_segment'
     ];
 
 
@@ -193,7 +195,8 @@ class LeadResource implements ArrayAccess
         'email_optin' => 'setEmailOptin',
         'actions_info' => 'setActionsInfo',
         'geo_range' => 'setGeoRange',
-        'primary_sector' => 'setPrimarySector'
+        'primary_sector' => 'setPrimarySector',
+        'revenue_segment' => 'setRevenueSegment'
     ];
 
 
@@ -241,7 +244,8 @@ class LeadResource implements ArrayAccess
         'email_optin' => 'getEmailOptin',
         'actions_info' => 'getActionsInfo',
         'geo_range' => 'getGeoRange',
-        'primary_sector' => 'getPrimarySector'
+        'primary_sector' => 'getPrimarySector',
+        'revenue_segment' => 'getRevenueSegment'
     ];
 
     public static function attributeMap()
@@ -341,6 +345,7 @@ class LeadResource implements ArrayAccess
         $this->container['actions_info'] = isset($data['actions_info']) ? $data['actions_info'] : null;
         $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
         $this->container['primary_sector'] = isset($data['primary_sector']) ? $data['primary_sector'] : null;
+        $this->container['revenue_segment'] = isset($data['revenue_segment']) ? $data['revenue_segment'] : null;
     }
 
     /**
@@ -1217,6 +1222,27 @@ class LeadResource implements ArrayAccess
     public function setPrimarySector($primary_sector)
     {
         $this->container['primary_sector'] = $primary_sector;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_segment
+     * @return \Ageras\Api\RevenueSegmentResource
+     */
+    public function getRevenueSegment()
+    {
+        return $this->container['revenue_segment'];
+    }
+
+    /**
+     * Sets revenue_segment
+     * @param \Ageras\Api\RevenueSegmentResource $revenue_segment
+     * @return $this
+     */
+    public function setRevenueSegment($revenue_segment)
+    {
+        $this->container['revenue_segment'] = $revenue_segment;
 
         return $this;
     }

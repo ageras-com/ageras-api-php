@@ -1,0 +1,22 @@
+# PartnerContractResource
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** | The contract ID. | [optional] 
+**partner** | [**\Ageras\Api\PartnerContractPartnerResource**](PartnerContractPartnerResource.md) |  | [optional] 
+**created_at** | **string** | When the contract was created. | [optional] 
+**binding_period_months** | **int** | Number of months contract is bound for, i.e. how often is the contract renewed. | [optional] 
+**billing_frequency_months** | **int** | How often is the contract billed. | [optional] 
+**allocation_frequency_months** | **int** | How often are the allocations populated. | [optional] 
+**cancellation_period_months** | **int** | How many months before contract end can partner cancel. | [optional] 
+**accepted_at** | **string** | When the contract was accepted start. | [optional] 
+**canceled_at** | **string** | When the contract was canceled. | [optional] 
+**starts_at** | **string** | When the contract should start. | [optional] 
+**business_units** | [**\Ageras\Api\PartnerContractBusinessUnitResource[]**](PartnerContractBusinessUnitResource.md) | Business units on this contract. | [optional] 
+**current_partner_contract_period** | [**\Ageras\Api\PartnerContractPeriodResource**](PartnerContractPeriodResource.md) |  | [optional] 
+**parent_partner_contract_id** | **int** | ID of the contract being replaced by this contract. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

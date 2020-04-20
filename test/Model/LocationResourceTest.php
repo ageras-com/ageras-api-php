@@ -170,4 +170,12 @@ class LocationResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "sub_region_name"
+     */
+    public function testPropertySubRegionName()
+    {
+
+    }
+
 }

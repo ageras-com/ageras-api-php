@@ -41,6 +41,14 @@ Method | HTTP request | Description
 [**partnersContentsDelete**](PartnersApi.md#partnersContentsDelete) | **DELETE** /partners/{partner_id}/contents/{content_key} | Delete content for a given partner.
 [**partnersContentsGet**](PartnersApi.md#partnersContentsGet) | **GET** /partners/{partner_id}/contents/{content_key} | Get the content of a given partner.
 [**partnersContentsUpdate**](PartnersApi.md#partnersContentsUpdate) | **PUT** /partners/{partner_id}/contents/{content_key} | Update content for a given partner.
+[**partnersContractoffergroupsCreate**](PartnersApi.md#partnersContractoffergroupsCreate) | **POST** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
+[**partnersContractoffergroupsIndex**](PartnersApi.md#partnersContractoffergroupsIndex) | **GET** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
+[**partnersContractsActionsCreate**](PartnersApi.md#partnersContractsActionsCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/actions | Perform an action on a partner contract.
+[**partnersContractsCreate**](PartnersApi.md#partnersContractsCreate) | **POST** /partners/{partner_id}/contracts | Create a partner contract.
+[**partnersContractsDelete**](PartnersApi.md#partnersContractsDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id} | Delete a partner contract.
+[**partnersContractsGet**](PartnersApi.md#partnersContractsGet) | **GET** /partners/{partner_id}/contracts/{contract_id} | Get a partner contract.
+[**partnersContractsIndex**](PartnersApi.md#partnersContractsIndex) | **GET** /partners/{partner_id}/contracts | List partner contracts.
+[**partnersContractsUpdate**](PartnersApi.md#partnersContractsUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id} | Update a partner contract.
 [**partnersCouponsActionsCreate**](PartnersApi.md#partnersCouponsActionsCreate) | **POST** /partners/{partner_id}/coupons/{coupon_id}/actions | Coupon action
 [**partnersCouponsCreate**](PartnersApi.md#partnersCouponsCreate) | **POST** /partners/{partner_id}/coupons | Create a new partner coupon.
 [**partnersCouponsIndex**](PartnersApi.md#partnersCouponsIndex) | **GET** /partners/{partner_id}/coupons | List Partner Coupons.
@@ -230,6 +238,7 @@ $criteria = [
         'badge_id' => "badge_id_example"; // string | 
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
+        'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -268,6 +277,7 @@ Name | Type | Description  | Notes
  **badge_id** | **string**|  | [optional]
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
+ **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1164,6 +1174,8 @@ $criteria = [
         'has_marketing_package' => false; // bool | Filter business units based on whether or not they have a marketing package.
         'has_business_model' => false; // bool | Filter business units based on whether or not they have any business model.
         'sub_geo_region_id' => "sub_geo_region_id_example"; // string | Filter business units by sub geo region IDs.
+        'is_eligible_for_allocation' => false; // bool | Filter business units based on whether they are eligible for allocation.
+        'primary_industry_id' => "primary_industry_id_example"; // string | The business unit's primary industry, e.g. law or accounting.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1199,6 +1211,8 @@ Name | Type | Description  | Notes
  **has_marketing_package** | **bool**| Filter business units based on whether or not they have a marketing package. | [optional] [default to false]
  **has_business_model** | **bool**| Filter business units based on whether or not they have any business model. | [optional] [default to false]
  **sub_geo_region_id** | **string**| Filter business units by sub geo region IDs. | [optional]
+ **is_eligible_for_allocation** | **bool**| Filter business units based on whether they are eligible for allocation. | [optional] [default to false]
+ **primary_industry_id** | **string**| The business unit&#39;s primary industry, e.g. law or accounting. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -2281,6 +2295,449 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerContentResource**](../Model/PartnerContentResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractoffergroupsCreate**
+> \Ageras\Api\PartnerContractOfferGroupResource partnersContractoffergroupsCreate($partner_id , $partner_contract_offer_group_resource)
+
+List partner contract offer groups.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_offer_group_resource = new \Ageras\Api\PartnerContractOfferGroupResource(); // \Ageras\Api\PartnerContractOfferGroupResource | 
+
+try {
+    $result = $api_instance->partnersContractoffergroupsCreate($partner_id , $partner_contract_offer_group_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractoffergroupsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_offer_group_resource** | [**\Ageras\Api\PartnerContractOfferGroupResource**](../Model/\Ageras\Api\PartnerContractOfferGroupResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractOfferGroupResource**](../Model/PartnerContractOfferGroupResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractoffergroupsIndex**
+> \Ageras\Api\PartnerContractOfferGroupResult partnersContractoffergroupsIndex($partner_id , $criteria)
+
+List partner contract offer groups.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'is_archived' => false; // bool | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersContractoffergroupsIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractoffergroupsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **is_archived** | **bool**|  | [optional] [default to false]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerContractOfferGroupResult**](../Model/PartnerContractOfferGroupResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsActionsCreate**
+> \Ageras\Api\PartnerContractResource partnersContractsActionsCreate($partner_id,  $contract_id , $partner_contract_action_resource)
+
+Perform an action on a partner contract.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+$partner_contract_action_resource = new \Ageras\Api\PartnerContractActionResource(); // \Ageras\Api\PartnerContractActionResource | 
+
+try {
+    $result = $api_instance->partnersContractsActionsCreate($partner_id,  $contract_id , $partner_contract_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+ **partner_contract_action_resource** | [**\Ageras\Api\PartnerContractActionResource**](../Model/\Ageras\Api\PartnerContractActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsCreate**
+> \Ageras\Api\PartnerContractResource partnersContractsCreate($partner_id , $partner_contract_resource)
+
+Create a partner contract.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_resource = new \Ageras\Api\PartnerContractResource(); // \Ageras\Api\PartnerContractResource | 
+
+try {
+    $result = $api_instance->partnersContractsCreate($partner_id , $partner_contract_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_resource** | [**\Ageras\Api\PartnerContractResource**](../Model/\Ageras\Api\PartnerContractResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsDelete**
+> partnersContractsDelete($partner_id,  $partner_contract_id )
+
+Delete a partner contract.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_id = "partner_contract_id_example"; // string | 
+
+try {
+    $api_instance->partnersContractsDelete($partner_id,  $partner_contract_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsGet**
+> \Ageras\Api\PartnerContractResource partnersContractsGet($partner_id,  $contract_id )
+
+Get a partner contract.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+
+try {
+    $result = $api_instance->partnersContractsGet($partner_id,  $contract_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsIndex**
+> \Ageras\Api\PartnerContractResult partnersContractsIndex($partner_id , $criteria)
+
+List partner contracts.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'is_accepted' => false; // bool | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersContractsIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **is_accepted** | **bool**|  | [optional] [default to false]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResult**](../Model/PartnerContractResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsUpdate**
+> \Ageras\Api\PartnerContractResource partnersContractsUpdate($partner_id,  $partner_contract_id , $partner_contract_resource)
+
+Update a partner contract.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_id = "partner_contract_id_example"; // string | 
+$partner_contract_resource = new \Ageras\Api\PartnerContractResource(); // \Ageras\Api\PartnerContractResource | 
+
+try {
+    $result = $api_instance->partnersContractsUpdate($partner_id,  $partner_contract_id , $partner_contract_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_id** | **string**|  |
+ **partner_contract_resource** | [**\Ageras\Api\PartnerContractResource**](../Model/\Ageras\Api\PartnerContractResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
 
 ### Authorization
 
@@ -4166,6 +4623,7 @@ $criteria = [
         'badge_id' => "badge_id_example"; // string | 
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
+        'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -4204,6 +4662,7 @@ Name | Type | Description  | Notes
  **badge_id** | **string**|  | [optional]
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
+ **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

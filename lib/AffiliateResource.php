@@ -54,7 +54,7 @@ class AffiliateResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
+        'id' => 'int',
         'company_name' => 'string'
     ];
 
@@ -154,7 +154,7 @@ class AffiliateResource implements ArrayAccess
 
     /**
      * Gets id
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -163,7 +163,7 @@ class AffiliateResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id Id for the affiliate.
+     * @param int $id Id for the affiliate.
      * @return $this
      */
     public function setId($id)

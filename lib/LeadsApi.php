@@ -1418,6 +1418,190 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsDemopartnersIndex
+     *
+     * List leads a demo partner could expect to see if they sign up.
+     *
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadResult
+     */
+    public function leadsDemopartnersIndex($partner_id )
+    {
+        list($response) = $this->leadsDemopartnersIndexWithHttpInfo($partner_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsDemopartnersIndexWithHttpInfo
+     *
+     * List leads a demo partner could expect to see if they sign up.
+     *
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsDemopartnersIndexWithHttpInfo($partner_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/demopartners/{partner_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadResult',
+                '/leads/demopartners/{partner_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsDemopartnersIndex2
+     *
+     * List leads a demo partner could expect to see if they sign up.
+     *
+     * @param string $lead_id 
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadResult
+     */
+    public function leadsDemopartnersIndex2($lead_id,  $partner_id )
+    {
+        list($response) = $this->leadsDemopartnersIndex2WithHttpInfo($lead_id, $partner_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsDemopartnersIndex2WithHttpInfo
+     *
+     * List leads a demo partner could expect to see if they sign up.
+     *
+     * @param string $lead_id 
+     * @param string $partner_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsDemopartnersIndex2WithHttpInfo($lead_id,  $partner_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/demopartners/{partner_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadResult',
+                '/leads/{lead_id}/demopartners/{partner_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsExcludedpartnersCreate
      *
      * Add partner to lead's excluded partner list
@@ -2788,6 +2972,7 @@ class LeadsApi
      *    'is_rejected' => bool,
      *    'sort' => string,
      *    'lead_category_type' => string,
+     *    'reservation_is_expired' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2817,6 +3002,7 @@ class LeadsApi
      *    'is_rejected' => bool,
      *    'sort' => string,
      *    'lead_category_type' => string,
+     *    'reservation_is_expired' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2877,6 +3063,10 @@ class LeadsApi
         // query params
         if (isset($criteria['lead_category_type'])) {
             $queryParams['lead_category_type'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_category_type']);
+        }
+        // query params
+        if (isset($criteria['reservation_is_expired'])) {
+            $queryParams['reservation_is_expired'] = $this->apiClient->getSerializer()->toQueryValue($criteria['reservation_is_expired']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2947,6 +3137,7 @@ class LeadsApi
      *    'is_rejected' => bool,
      *    'sort' => string,
      *    'lead_category_type' => string,
+     *    'reservation_is_expired' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2976,6 +3167,7 @@ class LeadsApi
      *    'is_rejected' => bool,
      *    'sort' => string,
      *    'lead_category_type' => string,
+     *    'reservation_is_expired' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -3032,6 +3224,10 @@ class LeadsApi
         // query params
         if (isset($criteria['lead_category_type'])) {
             $queryParams['lead_category_type'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_category_type']);
+        }
+        // query params
+        if (isset($criteria['reservation_is_expired'])) {
+            $queryParams['reservation_is_expired'] = $this->apiClient->getSerializer()->toQueryValue($criteria['reservation_is_expired']);
         }
         // query params
         if (isset($criteria['limit'])) {

@@ -62,6 +62,8 @@ class PaymentCardResource implements ArrayAccess
         'card_mask' => 'string',
         'expiration' => '\Ageras\Api\PaymentCardExpirationResource',
         'is_being_used' => 'bool',
+        'is_preferred' => 'bool',
+        'payment_method' => '\Ageras\Api\NestedPaymentMethodResource',
         'data' => '\Ageras\Api\PaymentCardDataResource'
     ];
 
@@ -83,6 +85,8 @@ class PaymentCardResource implements ArrayAccess
         'card_mask' => 'card_mask',
         'expiration' => 'expiration',
         'is_being_used' => 'is_being_used',
+        'is_preferred' => 'is_preferred',
+        'payment_method' => 'payment_method',
         'data' => 'data'
     ];
 
@@ -100,6 +104,8 @@ class PaymentCardResource implements ArrayAccess
         'card_mask' => 'setCardMask',
         'expiration' => 'setExpiration',
         'is_being_used' => 'setIsBeingUsed',
+        'is_preferred' => 'setIsPreferred',
+        'payment_method' => 'setPaymentMethod',
         'data' => 'setData'
     ];
 
@@ -117,6 +123,8 @@ class PaymentCardResource implements ArrayAccess
         'card_mask' => 'getCardMask',
         'expiration' => 'getExpiration',
         'is_being_used' => 'getIsBeingUsed',
+        'is_preferred' => 'getIsPreferred',
+        'payment_method' => 'getPaymentMethod',
         'data' => 'getData'
     ];
 
@@ -159,6 +167,8 @@ class PaymentCardResource implements ArrayAccess
         $this->container['card_mask'] = isset($data['card_mask']) ? $data['card_mask'] : null;
         $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['is_being_used'] = isset($data['is_being_used']) ? $data['is_being_used'] : false;
+        $this->container['is_preferred'] = isset($data['is_preferred']) ? $data['is_preferred'] : false;
+        $this->container['payment_method'] = isset($data['payment_method']) ? $data['payment_method'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -351,6 +361,48 @@ class PaymentCardResource implements ArrayAccess
     public function setIsBeingUsed($is_being_used)
     {
         $this->container['is_being_used'] = $is_being_used;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_preferred
+     * @return bool
+     */
+    public function getIsPreferred()
+    {
+        return $this->container['is_preferred'];
+    }
+
+    /**
+     * Sets is_preferred
+     * @param bool $is_preferred If this payment card is the preferred payment method.
+     * @return $this
+     */
+    public function setIsPreferred($is_preferred)
+    {
+        $this->container['is_preferred'] = $is_preferred;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     * @return \Ageras\Api\NestedPaymentMethodResource
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     * @param \Ageras\Api\NestedPaymentMethodResource $payment_method
+     * @return $this
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        $this->container['payment_method'] = $payment_method;
 
         return $this;
     }

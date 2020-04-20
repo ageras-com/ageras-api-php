@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **accumulated_allocation** | [**\Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource**](PartnerBusinessUnitAccumulatedAllocationResource.md) |  | [optional] 
 **desired_revenue_range** | [**\Ageras\Api\PartnerBusinessUnitRevenueRangeResource**](PartnerBusinessUnitRevenueRangeResource.md) |  | [optional] 
 **desired_sectors** | [**\Ageras\Api\SectorResource[]**](SectorResource.md) | Desired sectors. | [optional] 
+**revenue_segment** | [**\Ageras\Api\RevenueSegmentResource**](RevenueSegmentResource.md) |  | [optional] 
 **desired_types** | [**\Ageras\Api\LeadTypeResource[]**](LeadTypeResource.md) | Desired lead types. | [optional] 
 **desired_industries** | [**\Ageras\Api\IndustryResource[]**](IndustryResource.md) | Desired industries. | [optional] 
 **employee** | [**\Ageras\Api\PartnerEmployeeResource**](PartnerEmployeeResource.md) |  | [optional] 

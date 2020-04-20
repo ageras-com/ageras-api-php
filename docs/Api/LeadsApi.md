@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**leadsCertificationsUpdate**](LeadsApi.md#leadsCertificationsUpdate) | **PUT** /leads/{lead_id}/certifications | Replace a lead&#39;s certifications.
 [**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | Create a new Lead.
 [**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
+[**leadsDemopartnersIndex**](LeadsApi.md#leadsDemopartnersIndex) | **GET** /leads/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
+[**leadsDemopartnersIndex2**](LeadsApi.md#leadsDemopartnersIndex2) | **GET** /leads/{lead_id}/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
 [**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | Add partner to lead&#39;s excluded partner list
 [**leadsExcludedpartnersDelete**](LeadsApi.md#leadsExcludedpartnersDelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | Remove partner from the lead&#39;s excluded partner list
 [**leadsExcludedpartnersIndex**](LeadsApi.md#leadsExcludedpartnersIndex) | **GET** /leads/{lead_id}/excludedpartners | Show all excluded partners for a specific lead.
@@ -150,7 +152,7 @@ $criteria = [
         'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
-        'segmented_for_partner_business_unit_id' => 56; // int | List business units that are segmented for this business unit.
+        'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -203,7 +205,7 @@ Name | Type | Description  | Notes
  **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
- **segmented_for_partner_business_unit_id** | **int**| List business units that are segmented for this business unit. | [optional]
+ **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -734,6 +736,110 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **leadsDemopartnersIndex**
+> \Ageras\Api\LeadResult leadsDemopartnersIndex($partner_id )
+
+List leads a demo partner could expect to see if they sign up.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$partner_id = "partner_id_example"; // string | 
+
+try {
+    $result = $api_instance->leadsDemopartnersIndex($partner_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsDemopartnersIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\LeadResult**](../Model/LeadResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsDemopartnersIndex2**
+> \Ageras\Api\LeadResult leadsDemopartnersIndex2($lead_id,  $partner_id )
+
+List leads a demo partner could expect to see if they sign up.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$partner_id = "partner_id_example"; // string | 
+
+try {
+    $result = $api_instance->leadsDemopartnersIndex2($lead_id,  $partner_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsDemopartnersIndex2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **partner_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\LeadResult**](../Model/LeadResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **leadsExcludedpartnersCreate**
 > \Ageras\Api\LeadResource leadsExcludedpartnersCreate($lead_id , $partner_suggest_resource)
 
@@ -1003,7 +1109,7 @@ $criteria = [
         'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
-        'segmented_for_partner_business_unit_id' => 56; // int | List business units that are segmented for this business unit.
+        'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1056,7 +1162,7 @@ Name | Type | Description  | Notes
  **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
- **segmented_for_partner_business_unit_id** | **int**| List business units that are segmented for this business unit. | [optional]
+ **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1476,6 +1582,7 @@ $criteria = [
         'is_rejected' => false; // bool | Quote is rejected.
         'sort' => "created_at"; // string | Sort options.
         'lead_category_type' => "lead_category_type_example"; // string | Filter by lead category type.
+        'reservation_is_expired' => false; // bool | Quote's reservation is expired.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1504,6 +1611,7 @@ Name | Type | Description  | Notes
  **is_rejected** | **bool**| Quote is rejected. | [optional] [default to false]
  **sort** | **string**| Sort options. | [optional] [default to created_at]
  **lead_category_type** | **string**| Filter by lead category type. | [optional]
+ **reservation_is_expired** | **bool**| Quote&#39;s reservation is expired. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1553,6 +1661,7 @@ $criteria = [
         'is_rejected' => false; // bool | Quote is rejected.
         'sort' => "created_at"; // string | Sort options.
         'lead_category_type' => "lead_category_type_example"; // string | Filter by lead category type.
+        'reservation_is_expired' => false; // bool | Quote's reservation is expired.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1581,6 +1690,7 @@ Name | Type | Description  | Notes
  **is_rejected** | **bool**| Quote is rejected. | [optional] [default to false]
  **sort** | **string**| Sort options. | [optional] [default to created_at]
  **lead_category_type** | **string**| Filter by lead category type. | [optional]
+ **reservation_is_expired** | **bool**| Quote&#39;s reservation is expired. | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

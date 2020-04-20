@@ -66,6 +66,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'accumulated_allocation' => '\Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource',
         'desired_revenue_range' => '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource',
         'desired_sectors' => '\Ageras\Api\SectorResource[]',
+        'revenue_segment' => '\Ageras\Api\RevenueSegmentResource',
         'desired_types' => '\Ageras\Api\LeadTypeResource[]',
         'desired_industries' => '\Ageras\Api\IndustryResource[]',
         'employee' => '\Ageras\Api\PartnerEmployeeResource',
@@ -96,6 +97,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'accumulated_allocation' => 'accumulated_allocation',
         'desired_revenue_range' => 'desired_revenue_range',
         'desired_sectors' => 'desired_sectors',
+        'revenue_segment' => 'revenue_segment',
         'desired_types' => 'desired_types',
         'desired_industries' => 'desired_industries',
         'employee' => 'employee',
@@ -122,6 +124,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'accumulated_allocation' => 'setAccumulatedAllocation',
         'desired_revenue_range' => 'setDesiredRevenueRange',
         'desired_sectors' => 'setDesiredSectors',
+        'revenue_segment' => 'setRevenueSegment',
         'desired_types' => 'setDesiredTypes',
         'desired_industries' => 'setDesiredIndustries',
         'employee' => 'setEmployee',
@@ -148,6 +151,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'accumulated_allocation' => 'getAccumulatedAllocation',
         'desired_revenue_range' => 'getDesiredRevenueRange',
         'desired_sectors' => 'getDesiredSectors',
+        'revenue_segment' => 'getRevenueSegment',
         'desired_types' => 'getDesiredTypes',
         'desired_industries' => 'getDesiredIndustries',
         'employee' => 'getEmployee',
@@ -199,6 +203,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['accumulated_allocation'] = isset($data['accumulated_allocation']) ? $data['accumulated_allocation'] : null;
         $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
         $this->container['desired_sectors'] = isset($data['desired_sectors']) ? $data['desired_sectors'] : null;
+        $this->container['revenue_segment'] = isset($data['revenue_segment']) ? $data['revenue_segment'] : null;
         $this->container['desired_types'] = isset($data['desired_types']) ? $data['desired_types'] : null;
         $this->container['desired_industries'] = isset($data['desired_industries']) ? $data['desired_industries'] : null;
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
@@ -480,6 +485,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setDesiredSectors($desired_sectors)
     {
         $this->container['desired_sectors'] = $desired_sectors;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_segment
+     * @return \Ageras\Api\RevenueSegmentResource
+     */
+    public function getRevenueSegment()
+    {
+        return $this->container['revenue_segment'];
+    }
+
+    /**
+     * Sets revenue_segment
+     * @param \Ageras\Api\RevenueSegmentResource $revenue_segment
+     * @return $this
+     */
+    public function setRevenueSegment($revenue_segment)
+    {
+        $this->container['revenue_segment'] = $revenue_segment;
 
         return $this;
     }

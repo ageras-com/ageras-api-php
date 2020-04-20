@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** | Campaign id. @var int | [optional] 
 **key** | **string** | Campaign key. @var string | [optional] 
 **utm_campaign** | **string** | Campaign ID. @var string | [optional] 
 **name** | **string** | Campaign name @var string | [optional] 

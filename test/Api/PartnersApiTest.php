@@ -484,6 +484,94 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersContractoffergroupsCreate
+     *
+     * List partner contract offer groups..
+     *
+     */
+    public function testPartnersContractoffergroupsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractoffergroupsIndex
+     *
+     * List partner contract offer groups..
+     *
+     */
+    public function testPartnersContractoffergroupsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsActionsCreate
+     *
+     * Perform an action on a partner contract..
+     *
+     */
+    public function testPartnersContractsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsCreate
+     *
+     * Create a partner contract..
+     *
+     */
+    public function testPartnersContractsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsDelete
+     *
+     * Delete a partner contract..
+     *
+     */
+    public function testPartnersContractsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsGet
+     *
+     * Get a partner contract..
+     *
+     */
+    public function testPartnersContractsGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsIndex
+     *
+     * List partner contracts..
+     *
+     */
+    public function testPartnersContractsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsUpdate
+     *
+     * Update a partner contract..
+     *
+     */
+    public function testPartnersContractsUpdate()
+    {
+
+    }
+
+    /**
      * Test case for partnersCouponsActionsCreate
      *
      * Coupon action.

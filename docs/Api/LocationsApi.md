@@ -90,6 +90,7 @@ $criteria = [
         'min_partner_count' => 56; // int | Filtering based on minimum partner count
         'region_name' => "region_name_example"; // string | Filtering based on region name
         'region_abbreviation' => "region_abbreviation_example"; // string | Filtering based on region abbreviation
+        'zip_code' => "zip_code_example"; // string | Filtering based on zip code
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -117,6 +118,7 @@ Name | Type | Description  | Notes
  **min_partner_count** | **int**| Filtering based on minimum partner count | [optional]
  **region_name** | **string**| Filtering based on region name | [optional]
  **region_abbreviation** | **string**| Filtering based on region abbreviation | [optional]
+ **zip_code** | **string**| Filtering based on zip code | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
