@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerContractOfferResource
+ * PartnerAllocationDeliveryAdjustmentResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerContractOfferResource Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerContractOfferResource implements ArrayAccess
+class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,16 @@ class PartnerContractOfferResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerContractOfferResource';
+    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'offer_group' => '\Ageras\Api\NestedPartnerContractOfferGroupResource',
-        'offer_items' => '\Ageras\Api\PartnerContractOfferItemResource[]',
-        'price_excl_vat' => '\Ageras\Api\AmountResource',
-        'sort' => 'int'
+        'start_at' => 'string',
+        'end_at' => 'string',
+        'partner_contracts' => '\Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[]'
     ];
 
     public static function swaggerTypes()
@@ -71,11 +69,9 @@ class PartnerContractOfferResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'offer_group' => 'offer_group',
-        'offer_items' => 'offer_items',
-        'price_excl_vat' => 'price_excl_vat',
-        'sort' => 'sort'
+        'start_at' => 'start_at',
+        'end_at' => 'end_at',
+        'partner_contracts' => 'partner_contracts'
     ];
 
 
@@ -84,11 +80,9 @@ class PartnerContractOfferResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'offer_group' => 'setOfferGroup',
-        'offer_items' => 'setOfferItems',
-        'price_excl_vat' => 'setPriceExclVat',
-        'sort' => 'setSort'
+        'start_at' => 'setStartAt',
+        'end_at' => 'setEndAt',
+        'partner_contracts' => 'setPartnerContracts'
     ];
 
 
@@ -97,11 +91,9 @@ class PartnerContractOfferResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'offer_group' => 'getOfferGroup',
-        'offer_items' => 'getOfferItems',
-        'price_excl_vat' => 'getPriceExclVat',
-        'sort' => 'getSort'
+        'start_at' => 'getStartAt',
+        'end_at' => 'getEndAt',
+        'partner_contracts' => 'getPartnerContracts'
     ];
 
     public static function attributeMap()
@@ -135,11 +127,9 @@ class PartnerContractOfferResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['offer_group'] = isset($data['offer_group']) ? $data['offer_group'] : null;
-        $this->container['offer_items'] = isset($data['offer_items']) ? $data['offer_items'] : null;
-        $this->container['price_excl_vat'] = isset($data['price_excl_vat']) ? $data['price_excl_vat'] : null;
-        $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['start_at'] = isset($data['start_at']) ? $data['start_at'] : null;
+        $this->container['end_at'] = isset($data['end_at']) ? $data['end_at'] : null;
+        $this->container['partner_contracts'] = isset($data['partner_contracts']) ? $data['partner_contracts'] : null;
     }
 
     /**
@@ -168,106 +158,64 @@ class PartnerContractOfferResource implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets start_at
+     * @return string
      */
-    public function getId()
+    public function getStartAt()
     {
-        return $this->container['id'];
+        return $this->container['start_at'];
     }
 
     /**
-     * Sets id
-     * @param int $id The offer id.
+     * Sets start_at
+     * @param string $start_at When should the adjustment start taking effect.
      * @return $this
      */
-    public function setId($id)
+    public function setStartAt($start_at)
     {
-        $this->container['id'] = $id;
+        $this->container['start_at'] = $start_at;
 
         return $this;
     }
 
     /**
-     * Gets offer_group
-     * @return \Ageras\Api\NestedPartnerContractOfferGroupResource
+     * Gets end_at
+     * @return string
      */
-    public function getOfferGroup()
+    public function getEndAt()
     {
-        return $this->container['offer_group'];
+        return $this->container['end_at'];
     }
 
     /**
-     * Sets offer_group
-     * @param \Ageras\Api\NestedPartnerContractOfferGroupResource $offer_group
+     * Sets end_at
+     * @param string $end_at When should the adjustment stop having an effect.
      * @return $this
      */
-    public function setOfferGroup($offer_group)
+    public function setEndAt($end_at)
     {
-        $this->container['offer_group'] = $offer_group;
+        $this->container['end_at'] = $end_at;
 
         return $this;
     }
 
     /**
-     * Gets offer_items
-     * @return \Ageras\Api\PartnerContractOfferItemResource[]
+     * Gets partner_contracts
+     * @return \Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[]
      */
-    public function getOfferItems()
+    public function getPartnerContracts()
     {
-        return $this->container['offer_items'];
+        return $this->container['partner_contracts'];
     }
 
     /**
-     * Sets offer_items
-     * @param \Ageras\Api\PartnerContractOfferItemResource[] $offer_items List of offer items that are connected to this offer.
+     * Sets partner_contracts
+     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[] $partner_contracts Contracts affected by this adjustment.
      * @return $this
      */
-    public function setOfferItems($offer_items)
+    public function setPartnerContracts($partner_contracts)
     {
-        $this->container['offer_items'] = $offer_items;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_excl_vat
-     * @return \Ageras\Api\AmountResource
-     */
-    public function getPriceExclVat()
-    {
-        return $this->container['price_excl_vat'];
-    }
-
-    /**
-     * Sets price_excl_vat
-     * @param \Ageras\Api\AmountResource $price_excl_vat
-     * @return $this
-     */
-    public function setPriceExclVat($price_excl_vat)
-    {
-        $this->container['price_excl_vat'] = $price_excl_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets sort
-     * @return int
-     */
-    public function getSort()
-    {
-        return $this->container['sort'];
-    }
-
-    /**
-     * Sets sort
-     * @param int $sort List of offer items that are connected to this offer.
-     * @return $this
-     */
-    public function setSort($sort)
-    {
-        $this->container['sort'] = $sort;
+        $this->container['partner_contracts'] = $partner_contracts;
 
         return $this;
     }

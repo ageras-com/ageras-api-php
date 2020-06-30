@@ -57,6 +57,8 @@ class RevenueSegmentResource implements ArrayAccess
         'id' => 'int',
         'geo_code' => 'string',
         'display_name' => 'string',
+        'minimum_revenue' => '\Ageras\Api\AmountResource',
+        'maximum_revenue' => '\Ageras\Api\AmountResource',
         'lb_price_excl_vat' => '\Ageras\Api\AmountResource',
         'pps_price_excl_vat' => '\Ageras\Api\AmountResource'
     ];
@@ -74,6 +76,8 @@ class RevenueSegmentResource implements ArrayAccess
         'id' => 'id',
         'geo_code' => 'geo_code',
         'display_name' => 'display_name',
+        'minimum_revenue' => 'minimum_revenue',
+        'maximum_revenue' => 'maximum_revenue',
         'lb_price_excl_vat' => 'lb_price_excl_vat',
         'pps_price_excl_vat' => 'pps_price_excl_vat'
     ];
@@ -87,6 +91,8 @@ class RevenueSegmentResource implements ArrayAccess
         'id' => 'setId',
         'geo_code' => 'setGeoCode',
         'display_name' => 'setDisplayName',
+        'minimum_revenue' => 'setMinimumRevenue',
+        'maximum_revenue' => 'setMaximumRevenue',
         'lb_price_excl_vat' => 'setLbPriceExclVat',
         'pps_price_excl_vat' => 'setPpsPriceExclVat'
     ];
@@ -100,6 +106,8 @@ class RevenueSegmentResource implements ArrayAccess
         'id' => 'getId',
         'geo_code' => 'getGeoCode',
         'display_name' => 'getDisplayName',
+        'minimum_revenue' => 'getMinimumRevenue',
+        'maximum_revenue' => 'getMaximumRevenue',
         'lb_price_excl_vat' => 'getLbPriceExclVat',
         'pps_price_excl_vat' => 'getPpsPriceExclVat'
     ];
@@ -138,6 +146,8 @@ class RevenueSegmentResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
+        $this->container['minimum_revenue'] = isset($data['minimum_revenue']) ? $data['minimum_revenue'] : null;
+        $this->container['maximum_revenue'] = isset($data['maximum_revenue']) ? $data['maximum_revenue'] : null;
         $this->container['lb_price_excl_vat'] = isset($data['lb_price_excl_vat']) ? $data['lb_price_excl_vat'] : null;
         $this->container['pps_price_excl_vat'] = isset($data['pps_price_excl_vat']) ? $data['pps_price_excl_vat'] : null;
     }
@@ -226,6 +236,48 @@ class RevenueSegmentResource implements ArrayAccess
     public function setDisplayName($display_name)
     {
         $this->container['display_name'] = $display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets minimum_revenue
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getMinimumRevenue()
+    {
+        return $this->container['minimum_revenue'];
+    }
+
+    /**
+     * Sets minimum_revenue
+     * @param \Ageras\Api\AmountResource $minimum_revenue
+     * @return $this
+     */
+    public function setMinimumRevenue($minimum_revenue)
+    {
+        $this->container['minimum_revenue'] = $minimum_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets maximum_revenue
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getMaximumRevenue()
+    {
+        return $this->container['maximum_revenue'];
+    }
+
+    /**
+     * Sets maximum_revenue
+     * @param \Ageras\Api\AmountResource $maximum_revenue
+     * @return $this
+     */
+    public function setMaximumRevenue($maximum_revenue)
+    {
+        $this->container['maximum_revenue'] = $maximum_revenue;
 
         return $this;
     }

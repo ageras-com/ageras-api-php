@@ -62,6 +62,7 @@ class ActivityResource implements ArrayAccess
         'employee' => '\Ageras\Api\ActivityEmployeeResource',
         'lead' => '\Ageras\Api\ActivityLeadResource',
         'partner' => '\Ageras\Api\ActivityPartnerResource',
+        'partner_contract' => '\Ageras\Api\ActivityPartnerResource',
         'partneruser' => '\Ageras\Api\ActivityPartnerUserResource',
         'call' => '\Ageras\Api\ActivityCallResource',
         'note' => '\Ageras\Api\ActivityNoteResource',
@@ -92,6 +93,7 @@ class ActivityResource implements ArrayAccess
         'employee' => 'employee',
         'lead' => 'lead',
         'partner' => 'partner',
+        'partner_contract' => 'partner_contract',
         'partneruser' => 'partneruser',
         'call' => 'call',
         'note' => 'note',
@@ -118,6 +120,7 @@ class ActivityResource implements ArrayAccess
         'employee' => 'setEmployee',
         'lead' => 'setLead',
         'partner' => 'setPartner',
+        'partner_contract' => 'setPartnerContract',
         'partneruser' => 'setPartneruser',
         'call' => 'setCall',
         'note' => 'setNote',
@@ -144,6 +147,7 @@ class ActivityResource implements ArrayAccess
         'employee' => 'getEmployee',
         'lead' => 'getLead',
         'partner' => 'getPartner',
+        'partner_contract' => 'getPartnerContract',
         'partneruser' => 'getPartneruser',
         'call' => 'getCall',
         'note' => 'getNote',
@@ -229,6 +233,12 @@ class ActivityResource implements ArrayAccess
     const TYPE_LEAD_SENT_AS_MAIL = 'lead_sent_as_mail';
     const TYPE_PARTNER_REFILL_PREFERENCE_CREATED = 'partner_refill_preference_created';
     const TYPE_PARTNER_LEAD_QUOTE_ACCEPTED = 'partner_lead_quote_accepted';
+    const TYPE_PARTNER_CONTRACT_CREATE = 'partner_contract_create';
+    const TYPE_PARTNER_CONTRACT_ACCEPT = 'partner_contract_accept';
+    const TYPE_PARTNER_CONTRACT_CANCEL_NORMALLY = 'partner_contract_cancel_normally';
+    const TYPE_PARTNER_CONTRACT_CANCEL_IMMEDIATELY = 'partner_contract_cancel_immediately';
+    const TYPE_PARTNER_CONTRACT_UNCANCEL_NORMAL_CANCELLATION = 'partner_contract_uncancel_normal_cancellation';
+    const TYPE_PARTNER_CONTRACT_DELETE = 'partner_contract_delete';
     
 
     
@@ -297,6 +307,12 @@ class ActivityResource implements ArrayAccess
             self::TYPE_LEAD_SENT_AS_MAIL,
             self::TYPE_PARTNER_REFILL_PREFERENCE_CREATED,
             self::TYPE_PARTNER_LEAD_QUOTE_ACCEPTED,
+            self::TYPE_PARTNER_CONTRACT_CREATE,
+            self::TYPE_PARTNER_CONTRACT_ACCEPT,
+            self::TYPE_PARTNER_CONTRACT_CANCEL_NORMALLY,
+            self::TYPE_PARTNER_CONTRACT_CANCEL_IMMEDIATELY,
+            self::TYPE_PARTNER_CONTRACT_UNCANCEL_NORMAL_CANCELLATION,
+            self::TYPE_PARTNER_CONTRACT_DELETE,
         ];
     }
     
@@ -321,6 +337,7 @@ class ActivityResource implements ArrayAccess
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
         $this->container['lead'] = isset($data['lead']) ? $data['lead'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['partner_contract'] = isset($data['partner_contract']) ? $data['partner_contract'] : null;
         $this->container['partneruser'] = isset($data['partneruser']) ? $data['partneruser'] : null;
         $this->container['call'] = isset($data['call']) ? $data['call'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
@@ -342,9 +359,9 @@ class ActivityResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious", "lead_reject_all_quotes", "lead_marked_completed", "lead_no_answer", "lead_postponed", "lead_marked_untreated", "lead_info_updated", "lead_call", "lead_given_up", "lead_sent_as_mail", "partner_refill_preference_created", "partner_lead_quote_accepted"];
+        $allowed_values = ["unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious", "lead_reject_all_quotes", "lead_marked_completed", "lead_no_answer", "lead_postponed", "lead_marked_untreated", "lead_info_updated", "lead_call", "lead_given_up", "lead_sent_as_mail", "partner_refill_preference_created", "partner_lead_quote_accepted", "partner_contract_create", "partner_contract_accept", "partner_contract_cancel_normally", "partner_contract_cancel_immediately", "partner_contract_uncancel_normal_cancellation", "partner_contract_delete"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted', 'partner_contract_create', 'partner_contract_accept', 'partner_contract_cancel_normally', 'partner_contract_cancel_immediately', 'partner_contract_uncancel_normal_cancellation', 'partner_contract_delete'.";
         }
 
         return $invalid_properties;
@@ -359,7 +376,7 @@ class ActivityResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious", "lead_reject_all_quotes", "lead_marked_completed", "lead_no_answer", "lead_postponed", "lead_marked_untreated", "lead_info_updated", "lead_call", "lead_given_up", "lead_sent_as_mail", "partner_refill_preference_created", "partner_lead_quote_accepted"];
+        $allowed_values = ["unknown", "frontend_fields_create", "organisation_jobs_create", "locations_create", "coupons_transactions_create", "frontend_pages_create", "frontend_redirects_create", "frontend_resources_create", "frontend_routing_create", "frontend_settings_create", "frontend_fields_delete", "organisation_jobs_delete", "locations_delete", "frontend_pages_delete", "partners_ratings_deleted", "frontend_redirects_delete", "frontend_resources_delete", "frontend_routing_delete", "frontend_fields_update", "organisation_jobs_update", "locations_update", "frontend_pages_update", "partners_update", "partners_ratings_update", "frontend_redirects_update", "frontend_resources_update", "frontend_routing_update", "frontend_settings_update", "frontend_snippets_update", "invoices_create", "partners_notes_create", "phonecalls_create", "partners_ratings_create", "partners_lead_offers_create", "task_create", "task_assign", "task_update", "task_complete", "lead_won", "lead_sent_out", "lead_validated", "lead_note_created", "lead_marked_test", "lead_marked_duplicate", "lead_marked_sent_to_advisor", "lead_marked_spam", "lead_marked_not_serious", "lead_reject_all_quotes", "lead_marked_completed", "lead_no_answer", "lead_postponed", "lead_marked_untreated", "lead_info_updated", "lead_call", "lead_given_up", "lead_sent_as_mail", "partner_refill_preference_created", "partner_lead_quote_accepted", "partner_contract_create", "partner_contract_accept", "partner_contract_cancel_normally", "partner_contract_cancel_immediately", "partner_contract_uncancel_normal_cancellation", "partner_contract_delete"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -446,9 +463,9 @@ class ActivityResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted');
+        $allowed_values = array('unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted', 'partner_contract_create', 'partner_contract_accept', 'partner_contract_cancel_normally', 'partner_contract_cancel_immediately', 'partner_contract_uncancel_normal_cancellation', 'partner_contract_delete');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'frontend_fields_create', 'organisation_jobs_create', 'locations_create', 'coupons_transactions_create', 'frontend_pages_create', 'frontend_redirects_create', 'frontend_resources_create', 'frontend_routing_create', 'frontend_settings_create', 'frontend_fields_delete', 'organisation_jobs_delete', 'locations_delete', 'frontend_pages_delete', 'partners_ratings_deleted', 'frontend_redirects_delete', 'frontend_resources_delete', 'frontend_routing_delete', 'frontend_fields_update', 'organisation_jobs_update', 'locations_update', 'frontend_pages_update', 'partners_update', 'partners_ratings_update', 'frontend_redirects_update', 'frontend_resources_update', 'frontend_routing_update', 'frontend_settings_update', 'frontend_snippets_update', 'invoices_create', 'partners_notes_create', 'phonecalls_create', 'partners_ratings_create', 'partners_lead_offers_create', 'task_create', 'task_assign', 'task_update', 'task_complete', 'lead_won', 'lead_sent_out', 'lead_validated', 'lead_note_created', 'lead_marked_test', 'lead_marked_duplicate', 'lead_marked_sent_to_advisor', 'lead_marked_spam', 'lead_marked_not_serious', 'lead_reject_all_quotes', 'lead_marked_completed', 'lead_no_answer', 'lead_postponed', 'lead_marked_untreated', 'lead_info_updated', 'lead_call', 'lead_given_up', 'lead_sent_as_mail', 'partner_refill_preference_created', 'partner_lead_quote_accepted', 'partner_contract_create', 'partner_contract_accept', 'partner_contract_cancel_normally', 'partner_contract_cancel_immediately', 'partner_contract_uncancel_normal_cancellation', 'partner_contract_delete'");
         }
         $this->container['type'] = $type;
 
@@ -535,6 +552,27 @@ class ActivityResource implements ArrayAccess
     public function setPartner($partner)
     {
         $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_contract
+     * @return \Ageras\Api\ActivityPartnerResource
+     */
+    public function getPartnerContract()
+    {
+        return $this->container['partner_contract'];
+    }
+
+    /**
+     * Sets partner_contract
+     * @param \Ageras\Api\ActivityPartnerResource $partner_contract
+     * @return $this
+     */
+    public function setPartnerContract($partner_contract)
+    {
+        $this->container['partner_contract'] = $partner_contract;
 
         return $this;
     }

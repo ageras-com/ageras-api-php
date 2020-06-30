@@ -222,6 +222,7 @@ class LeadsApi
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
+     *    'sub_geo_region_name' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -276,6 +277,7 @@ class LeadsApi
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
+     *    'sub_geo_region_name' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -436,6 +438,10 @@ class LeadsApi
         // query params
         if (isset($criteria['segmented_for_partner_business_unit_id'])) {
             $queryParams['segmented_for_partner_business_unit_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_business_unit_id']);
+        }
+        // query params
+        if (isset($criteria['sub_geo_region_name'])) {
+            $queryParams['sub_geo_region_name'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sub_geo_region_name']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2025,6 +2031,7 @@ class LeadsApi
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
+     *    'sub_geo_region_name' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2079,6 +2086,7 @@ class LeadsApi
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
+     *    'sub_geo_region_name' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2239,6 +2247,10 @@ class LeadsApi
         // query params
         if (isset($criteria['segmented_for_partner_business_unit_id'])) {
             $queryParams['segmented_for_partner_business_unit_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_partner_business_unit_id']);
+        }
+        // query params
+        if (isset($criteria['sub_geo_region_name'])) {
+            $queryParams['sub_geo_region_name'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sub_geo_region_name']);
         }
         // query params
         if (isset($criteria['limit'])) {

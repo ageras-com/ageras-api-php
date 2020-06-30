@@ -94,6 +94,7 @@ class RevenuesegmentsApi
      *
      * @param $criteria = [
      *    'geo_code' => string,
+     *    'primary_industry_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -114,6 +115,7 @@ class RevenuesegmentsApi
      *
      * @param $criteria = [
      *    'geo_code' => string,
+     *    'primary_industry_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -138,6 +140,10 @@ class RevenuesegmentsApi
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['primary_industry_id'])) {
+            $queryParams['primary_industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['primary_industry_id']);
         }
         // query params
         if (isset($criteria['limit'])) {

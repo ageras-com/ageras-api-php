@@ -153,6 +153,7 @@ $criteria = [
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
         'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
+        'sub_geo_region_name' => "sub_geo_region_name_example"; // string | List leads in any of these sub geo regions. E.g. 'Aarhus', 'Copenhagen'.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -206,6 +207,7 @@ Name | Type | Description  | Notes
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
  **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
+ **sub_geo_region_name** | **string**| List leads in any of these sub geo regions. E.g. &#39;Aarhus&#39;, &#39;Copenhagen&#39;. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1110,6 +1112,7 @@ $criteria = [
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
         'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
+        'sub_geo_region_name' => "sub_geo_region_name_example"; // string | List leads in any of these sub geo regions. E.g. 'Aarhus', 'Copenhagen'.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1163,6 +1166,7 @@ Name | Type | Description  | Notes
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
  **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
+ **sub_geo_region_name** | **string**| List leads in any of these sub geo regions. E.g. &#39;Aarhus&#39;, &#39;Copenhagen&#39;. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

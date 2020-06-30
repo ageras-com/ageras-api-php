@@ -1,6 +1,6 @@
 <?php
 /**
- * NestedPartnerResource
+ * PartnerAllocationDeliveryAdjustmentBusinessUnitResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * NestedPartnerResource Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentBusinessUnitResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NestedPartnerResource implements ArrayAccess
+class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,15 @@ class NestedPartnerResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'NestedPartnerResource';
+    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentBusinessUnitResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'id' => 'int',
+        'allocation_quota_per_refill' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class NestedPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'allocation_quota_per_refill' => 'allocation_quota_per_refill'
     ];
 
 
@@ -76,7 +78,8 @@ class NestedPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'allocation_quota_per_refill' => 'setAllocationQuotaPerRefill'
     ];
 
 
@@ -85,7 +88,8 @@ class NestedPartnerResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'allocation_quota_per_refill' => 'getAllocationQuotaPerRefill'
     ];
 
     public static function attributeMap()
@@ -120,6 +124,7 @@ class NestedPartnerResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['allocation_quota_per_refill'] = isset($data['allocation_quota_per_refill']) ? $data['allocation_quota_per_refill'] : null;
     }
 
     /**
@@ -158,12 +163,33 @@ class NestedPartnerResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id The partner id.
+     * @param int $id Business unit ID.
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_quota_per_refill
+     * @return int
+     */
+    public function getAllocationQuotaPerRefill()
+    {
+        return $this->container['allocation_quota_per_refill'];
+    }
+
+    /**
+     * Sets allocation_quota_per_refill
+     * @param int $allocation_quota_per_refill The allocation quota per refill.
+     * @return $this
+     */
+    public function setAllocationQuotaPerRefill($allocation_quota_per_refill)
+    {
+        $this->container['allocation_quota_per_refill'] = $allocation_quota_per_refill;
 
         return $this;
     }

@@ -407,6 +407,100 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersAllocationdeliveryadjustmentCreate
+     *
+     * Create a allocation delivery adjustment for the partner.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource $partner_allocation_delivery_adjustment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource
+     */
+    public function partnersAllocationdeliveryadjustmentCreate($partner_id , $partner_allocation_delivery_adjustment_resource)
+    {
+        list($response) = $this->partnersAllocationdeliveryadjustmentCreateWithHttpInfo($partner_id, $partner_allocation_delivery_adjustment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAllocationdeliveryadjustmentCreateWithHttpInfo
+     *
+     * Create a allocation delivery adjustment for the partner.
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource $partner_allocation_delivery_adjustment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAllocationdeliveryadjustmentCreateWithHttpInfo($partner_id , $partner_allocation_delivery_adjustment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/allocationdeliveryadjustment";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_allocation_delivery_adjustment_resource)) {
+            $_tempBody = $partner_allocation_delivery_adjustment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource',
+                '/partners/{partner_id}/allocationdeliveryadjustment'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersBankaccountsCreate
      *
      * Subscribe a partner.

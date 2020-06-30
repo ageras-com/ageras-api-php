@@ -1,6 +1,6 @@
 <?php
 /**
- * RevenueSegmentResourceTest
+ * PartnerAllocationDeliveryAdjustmentResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * RevenueSegmentResourceTest Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description RevenueSegmentResource
+// * @description PartnerAllocationDeliveryAdjustmentResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerAllocationDeliveryAdjustmentResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,65 +75,33 @@ class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RevenueSegmentResource"
+     * Test "PartnerAllocationDeliveryAdjustmentResource"
      */
-    public function testRevenueSegmentResource()
+    public function testPartnerAllocationDeliveryAdjustmentResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "start_at"
      */
-    public function testPropertyId()
+    public function testPropertyStartAt()
     {
 
     }
 
     /**
-     * Test attribute "geo_code"
+     * Test attribute "end_at"
      */
-    public function testPropertyGeoCode()
+    public function testPropertyEndAt()
     {
 
     }
 
     /**
-     * Test attribute "display_name"
+     * Test attribute "partner_contracts"
      */
-    public function testPropertyDisplayName()
-    {
-
-    }
-
-    /**
-     * Test attribute "minimum_revenue"
-     */
-    public function testPropertyMinimumRevenue()
-    {
-
-    }
-
-    /**
-     * Test attribute "maximum_revenue"
-     */
-    public function testPropertyMaximumRevenue()
-    {
-
-    }
-
-    /**
-     * Test attribute "lb_price_excl_vat"
-     */
-    public function testPropertyLbPriceExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "pps_price_excl_vat"
-     */
-    public function testPropertyPpsPriceExclVat()
+    public function testPropertyPartnerContracts()
     {
 
     }

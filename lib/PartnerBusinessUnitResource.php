@@ -72,6 +72,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'employee' => '\Ageras\Api\PartnerEmployeeResource',
         'partner' => '\Ageras\Api\PartnerBusinessUnitPartnerResource',
         'business_models' => '\Ageras\Api\PartnerBusinessUnitBusinessModelResource[]',
+        'is_active' => 'bool',
         'retired_at' => 'string'
     ];
 
@@ -103,6 +104,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'employee' => 'employee',
         'partner' => 'partner',
         'business_models' => 'business_models',
+        'is_active' => 'is_active',
         'retired_at' => 'retired_at'
     ];
 
@@ -130,6 +132,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'employee' => 'setEmployee',
         'partner' => 'setPartner',
         'business_models' => 'setBusinessModels',
+        'is_active' => 'setIsActive',
         'retired_at' => 'setRetiredAt'
     ];
 
@@ -157,6 +160,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'employee' => 'getEmployee',
         'partner' => 'getPartner',
         'business_models' => 'getBusinessModels',
+        'is_active' => 'getIsActive',
         'retired_at' => 'getRetiredAt'
     ];
 
@@ -209,6 +213,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['business_models'] = isset($data['business_models']) ? $data['business_models'] : null;
+        $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['retired_at'] = isset($data['retired_at']) ? $data['retired_at'] : null;
     }
 
@@ -611,6 +616,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setBusinessModels($business_models)
     {
         $this->container['business_models'] = $business_models;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_active
+     * @return bool
+     */
+    public function getIsActive()
+    {
+        return $this->container['is_active'];
+    }
+
+    /**
+     * Sets is_active
+     * @param bool $is_active If the business unit is active
+     * @return $this
+     */
+    public function setIsActive($is_active)
+    {
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }

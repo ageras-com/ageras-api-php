@@ -64,6 +64,7 @@ class PartnerResource implements ArrayAccess
         'is_enabled' => 'bool',
         'is_public' => 'bool',
         'has_subscription' => 'bool',
+        'has_active_contract' => 'bool',
         'state' => 'string',
         'access' => 'string',
         'company_information' => 'string',
@@ -80,6 +81,7 @@ class PartnerResource implements ArrayAccess
         'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource',
         'alerts' => '\Ageras\Api\PartnerAlertResource[]',
         'kpi' => '\Ageras\Api\PartnerKPIResource',
+        'new_kpi' => 'string[]',
         'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
         'preferences' => '\Ageras\Api\PartnerPreferencesResource',
         'demo' => '\Ageras\Api\PartnerDemoResource',
@@ -121,6 +123,7 @@ class PartnerResource implements ArrayAccess
         'is_enabled' => 'is_enabled',
         'is_public' => 'is_public',
         'has_subscription' => 'has_subscription',
+        'has_active_contract' => 'has_active_contract',
         'state' => 'state',
         'access' => 'access',
         'company_information' => 'company_information',
@@ -137,6 +140,7 @@ class PartnerResource implements ArrayAccess
         'satisfaction' => 'satisfaction',
         'alerts' => 'alerts',
         'kpi' => 'kpi',
+        'new_kpi' => 'new_kpi',
         'invoicing' => 'invoicing',
         'preferences' => 'preferences',
         'demo' => 'demo',
@@ -174,6 +178,7 @@ class PartnerResource implements ArrayAccess
         'is_enabled' => 'setIsEnabled',
         'is_public' => 'setIsPublic',
         'has_subscription' => 'setHasSubscription',
+        'has_active_contract' => 'setHasActiveContract',
         'state' => 'setState',
         'access' => 'setAccess',
         'company_information' => 'setCompanyInformation',
@@ -190,6 +195,7 @@ class PartnerResource implements ArrayAccess
         'satisfaction' => 'setSatisfaction',
         'alerts' => 'setAlerts',
         'kpi' => 'setKpi',
+        'new_kpi' => 'setNewKpi',
         'invoicing' => 'setInvoicing',
         'preferences' => 'setPreferences',
         'demo' => 'setDemo',
@@ -227,6 +233,7 @@ class PartnerResource implements ArrayAccess
         'is_enabled' => 'getIsEnabled',
         'is_public' => 'getIsPublic',
         'has_subscription' => 'getHasSubscription',
+        'has_active_contract' => 'getHasActiveContract',
         'state' => 'getState',
         'access' => 'getAccess',
         'company_information' => 'getCompanyInformation',
@@ -243,6 +250,7 @@ class PartnerResource implements ArrayAccess
         'satisfaction' => 'getSatisfaction',
         'alerts' => 'getAlerts',
         'kpi' => 'getKpi',
+        'new_kpi' => 'getNewKpi',
         'invoicing' => 'getInvoicing',
         'preferences' => 'getPreferences',
         'demo' => 'getDemo',
@@ -283,7 +291,6 @@ class PartnerResource implements ArrayAccess
     const STATE_CANVAS = 'canvas';
     const STATE_DEMO = 'demo';
     const STATE_INACTIVE = 'inactive';
-    const STATE_PENDING = 'pending';
     const STATE_EX_PARTNER = 'ex_partner';
     const STATE_ACTIVE = 'active';
     const STATE_CLOSED = 'closed';
@@ -304,7 +311,6 @@ class PartnerResource implements ArrayAccess
             self::STATE_CANVAS,
             self::STATE_DEMO,
             self::STATE_INACTIVE,
-            self::STATE_PENDING,
             self::STATE_EX_PARTNER,
             self::STATE_ACTIVE,
             self::STATE_CLOSED,
@@ -347,6 +353,7 @@ class PartnerResource implements ArrayAccess
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : false;
         $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
         $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
+        $this->container['has_active_contract'] = isset($data['has_active_contract']) ? $data['has_active_contract'] : false;
         $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
@@ -363,6 +370,7 @@ class PartnerResource implements ArrayAccess
         $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
         $this->container['alerts'] = isset($data['alerts']) ? $data['alerts'] : null;
         $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
+        $this->container['new_kpi'] = isset($data['new_kpi']) ? $data['new_kpi'] : null;
         $this->container['invoicing'] = isset($data['invoicing']) ? $data['invoicing'] : null;
         $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
         $this->container['demo'] = isset($data['demo']) ? $data['demo'] : null;
@@ -393,9 +401,9 @@ class PartnerResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "canvas", "demo", "inactive", "pending", "ex_partner", "active", "closed", "business_partner"];
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "closed", "business_partner"];
         if (!in_array($this->container['state'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'pending', 'ex_partner', 'active', 'closed', 'business_partner'.";
+            $invalid_properties[] = "invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner'.";
         }
 
         $allowed_values = ["with_subscription_period", "immediate"];
@@ -415,7 +423,7 @@ class PartnerResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "canvas", "demo", "inactive", "pending", "ex_partner", "active", "closed", "business_partner"];
+        $allowed_values = ["unknown", "canvas", "demo", "inactive", "ex_partner", "active", "closed", "business_partner"];
         if (!in_array($this->container['state'], $allowed_values)) {
             return false;
         }
@@ -638,6 +646,27 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets has_active_contract
+     * @return bool
+     */
+    public function getHasActiveContract()
+    {
+        return $this->container['has_active_contract'];
+    }
+
+    /**
+     * Sets has_active_contract
+     * @param bool $has_active_contract Has the partner got an active contract.
+     * @return $this
+     */
+    public function setHasActiveContract($has_active_contract)
+    {
+        $this->container['has_active_contract'] = $has_active_contract;
+
+        return $this;
+    }
+
+    /**
      * Gets state
      * @return string
      */
@@ -653,9 +682,9 @@ class PartnerResource implements ArrayAccess
      */
     public function setState($state)
     {
-        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'pending', 'ex_partner', 'active', 'closed', 'business_partner');
+        $allowed_values = array('unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner');
         if (!is_null($state) && (!in_array($state, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'pending', 'ex_partner', 'active', 'closed', 'business_partner'");
+            throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'unknown', 'canvas', 'demo', 'inactive', 'ex_partner', 'active', 'closed', 'business_partner'");
         }
         $this->container['state'] = $state;
 
@@ -973,6 +1002,27 @@ class PartnerResource implements ArrayAccess
     public function setKpi($kpi)
     {
         $this->container['kpi'] = $kpi;
+
+        return $this;
+    }
+
+    /**
+     * Gets new_kpi
+     * @return string[]
+     */
+    public function getNewKpi()
+    {
+        return $this->container['new_kpi'];
+    }
+
+    /**
+     * Sets new_kpi
+     * @param string[] $new_kpi New partner KPI's.
+     * @return $this
+     */
+    public function setNewKpi($new_kpi)
+    {
+        $this->container['new_kpi'] = $new_kpi;
 
         return $this;
     }

@@ -179,9 +179,25 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "parent_partner_contract_id"
+     * Test attribute "intending_to_replace_partner_contract_id"
      */
-    public function testPropertyParentPartnerContractId()
+    public function testPropertyIntendingToReplacePartnerContractId()
+    {
+
+    }
+
+    /**
+     * Test attribute "replaces_partner_contract_id"
+     */
+    public function testPropertyReplacesPartnerContractId()
+    {
+
+    }
+
+    /**
+     * Test attribute "category"
+     */
+    public function testPropertyCategory()
     {
 
     }

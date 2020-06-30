@@ -28,6 +28,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\RevenuesegmentsApi();
 $criteria = [
         'geo_code' => "geo_code_example"; // string | Filter by geo code.
+        'primary_industry_id' => 56; // int | Filter by primary industry. @var int
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -47,6 +48,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**| Filter by geo code. | [optional]
+ **primary_industry_id** | **int**| Filter by primary industry. @var int | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

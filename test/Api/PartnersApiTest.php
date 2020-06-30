@@ -99,6 +99,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersAllocationdeliveryadjustmentCreate
+     *
+     * Create a allocation delivery adjustment for the partner..
+     *
+     */
+    public function testPartnersAllocationdeliveryadjustmentCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersBankaccountsCreate
      *
      * Subscribe a partner..

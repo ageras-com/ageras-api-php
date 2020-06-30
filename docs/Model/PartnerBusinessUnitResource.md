@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **employee** | [**\Ageras\Api\PartnerEmployeeResource**](PartnerEmployeeResource.md) |  | [optional] 
 **partner** | [**\Ageras\Api\PartnerBusinessUnitPartnerResource**](PartnerBusinessUnitPartnerResource.md) |  | [optional] 
 **business_models** | [**\Ageras\Api\PartnerBusinessUnitBusinessModelResource[]**](PartnerBusinessUnitBusinessModelResource.md) | Business models of the business units. | [optional] 
+**is_active** | **bool** | If the business unit is active | [optional] [default to false]
 **retired_at** | **string** | When the business unit is considered retired | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

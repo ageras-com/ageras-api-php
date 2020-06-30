@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **employee** | [**\Ageras\Api\ActivityEmployeeResource**](ActivityEmployeeResource.md) |  | [optional] 
 **lead** | [**\Ageras\Api\ActivityLeadResource**](ActivityLeadResource.md) |  | [optional] 
 **partner** | [**\Ageras\Api\ActivityPartnerResource**](ActivityPartnerResource.md) |  | [optional] 
+**partner_contract** | [**\Ageras\Api\ActivityPartnerResource**](ActivityPartnerResource.md) |  | [optional] 
 **partneruser** | [**\Ageras\Api\ActivityPartnerUserResource**](ActivityPartnerUserResource.md) |  | [optional] 
 **call** | [**\Ageras\Api\ActivityCallResource**](ActivityCallResource.md) |  | [optional] 
 **note** | [**\Ageras\Api\ActivityNoteResource**](ActivityNoteResource.md) |  | [optional] 

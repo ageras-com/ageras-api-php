@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerContractOfferResource
+ * PartnerAllocationDeliveryAdjustmentPartnerContractResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerContractOfferResource Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentPartnerContractResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerContractOfferResource implements ArrayAccess
+class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PartnerContractOfferResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerContractOfferResource';
+    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentPartnerContractResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,10 +55,7 @@ class PartnerContractOfferResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'offer_group' => '\Ageras\Api\NestedPartnerContractOfferGroupResource',
-        'offer_items' => '\Ageras\Api\PartnerContractOfferItemResource[]',
-        'price_excl_vat' => '\Ageras\Api\AmountResource',
-        'sort' => 'int'
+        'business_units' => '\Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[]'
     ];
 
     public static function swaggerTypes()
@@ -72,10 +69,7 @@ class PartnerContractOfferResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'offer_group' => 'offer_group',
-        'offer_items' => 'offer_items',
-        'price_excl_vat' => 'price_excl_vat',
-        'sort' => 'sort'
+        'business_units' => 'business_units'
     ];
 
 
@@ -85,10 +79,7 @@ class PartnerContractOfferResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'offer_group' => 'setOfferGroup',
-        'offer_items' => 'setOfferItems',
-        'price_excl_vat' => 'setPriceExclVat',
-        'sort' => 'setSort'
+        'business_units' => 'setBusinessUnits'
     ];
 
 
@@ -98,10 +89,7 @@ class PartnerContractOfferResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'offer_group' => 'getOfferGroup',
-        'offer_items' => 'getOfferItems',
-        'price_excl_vat' => 'getPriceExclVat',
-        'sort' => 'getSort'
+        'business_units' => 'getBusinessUnits'
     ];
 
     public static function attributeMap()
@@ -136,10 +124,7 @@ class PartnerContractOfferResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['offer_group'] = isset($data['offer_group']) ? $data['offer_group'] : null;
-        $this->container['offer_items'] = isset($data['offer_items']) ? $data['offer_items'] : null;
-        $this->container['price_excl_vat'] = isset($data['price_excl_vat']) ? $data['price_excl_vat'] : null;
-        $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
     }
 
     /**
@@ -178,7 +163,7 @@ class PartnerContractOfferResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id The offer id.
+     * @param int $id Contract ID.
      * @return $this
      */
     public function setId($id)
@@ -189,85 +174,22 @@ class PartnerContractOfferResource implements ArrayAccess
     }
 
     /**
-     * Gets offer_group
-     * @return \Ageras\Api\NestedPartnerContractOfferGroupResource
+     * Gets business_units
+     * @return \Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[]
      */
-    public function getOfferGroup()
+    public function getBusinessUnits()
     {
-        return $this->container['offer_group'];
+        return $this->container['business_units'];
     }
 
     /**
-     * Sets offer_group
-     * @param \Ageras\Api\NestedPartnerContractOfferGroupResource $offer_group
+     * Sets business_units
+     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[] $business_units Business units affected by this adjustment.
      * @return $this
      */
-    public function setOfferGroup($offer_group)
+    public function setBusinessUnits($business_units)
     {
-        $this->container['offer_group'] = $offer_group;
-
-        return $this;
-    }
-
-    /**
-     * Gets offer_items
-     * @return \Ageras\Api\PartnerContractOfferItemResource[]
-     */
-    public function getOfferItems()
-    {
-        return $this->container['offer_items'];
-    }
-
-    /**
-     * Sets offer_items
-     * @param \Ageras\Api\PartnerContractOfferItemResource[] $offer_items List of offer items that are connected to this offer.
-     * @return $this
-     */
-    public function setOfferItems($offer_items)
-    {
-        $this->container['offer_items'] = $offer_items;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_excl_vat
-     * @return \Ageras\Api\AmountResource
-     */
-    public function getPriceExclVat()
-    {
-        return $this->container['price_excl_vat'];
-    }
-
-    /**
-     * Sets price_excl_vat
-     * @param \Ageras\Api\AmountResource $price_excl_vat
-     * @return $this
-     */
-    public function setPriceExclVat($price_excl_vat)
-    {
-        $this->container['price_excl_vat'] = $price_excl_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets sort
-     * @return int
-     */
-    public function getSort()
-    {
-        return $this->container['sort'];
-    }
-
-    /**
-     * Sets sort
-     * @param int $sort List of offer items that are connected to this offer.
-     * @return $this
-     */
-    public function setSort($sort)
-    {
-        $this->container['sort'] = $sort;
+        $this->container['business_units'] = $business_units;
 
         return $this;
     }

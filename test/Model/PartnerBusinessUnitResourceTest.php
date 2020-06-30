@@ -227,6 +227,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_active"
+     */
+    public function testPropertyIsActive()
+    {
+
+    }
+
+    /**
      * Test attribute "retired_at"
      */
     public function testPropertyRetiredAt()

@@ -107,6 +107,7 @@ class PartnerContractActionResource implements ArrayAccess
     const ACTION_CANCEL_NORMALLY = 'cancel_normally';
     const ACTION_CANCEL_IMMEDIATELY = 'cancel_immediately';
     const ACTION_ACCEPT = 'accept';
+    const ACTION_ACCEPT_FOR_PARTNER = 'accept_for_partner';
     const ACTION_UNCANCEL_NORMAL_CANCELLATION = 'uncancel_normal_cancellation';
     
 
@@ -122,6 +123,7 @@ class PartnerContractActionResource implements ArrayAccess
             self::ACTION_CANCEL_NORMALLY,
             self::ACTION_CANCEL_IMMEDIATELY,
             self::ACTION_ACCEPT,
+            self::ACTION_ACCEPT_FOR_PARTNER,
             self::ACTION_UNCANCEL_NORMAL_CANCELLATION,
         ];
     }
@@ -151,9 +153,9 @@ class PartnerContractActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "cancel_normally", "cancel_immediately", "accept", "uncancel_normal_cancellation"];
+        $allowed_values = ["unknown", "cancel_normally", "cancel_immediately", "accept", "accept_for_partner", "uncancel_normal_cancellation"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'uncancel_normal_cancellation'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'accept_for_partner', 'uncancel_normal_cancellation'.";
         }
 
         return $invalid_properties;
@@ -168,7 +170,7 @@ class PartnerContractActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "cancel_normally", "cancel_immediately", "accept", "uncancel_normal_cancellation"];
+        $allowed_values = ["unknown", "cancel_normally", "cancel_immediately", "accept", "accept_for_partner", "uncancel_normal_cancellation"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -192,9 +194,9 @@ class PartnerContractActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'uncancel_normal_cancellation');
+        $allowed_values = array('unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'accept_for_partner', 'uncancel_normal_cancellation');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'uncancel_normal_cancellation'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'accept_for_partner', 'uncancel_normal_cancellation'");
         }
         $this->container['action'] = $action;
 

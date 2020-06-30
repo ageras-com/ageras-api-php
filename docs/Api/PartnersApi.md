@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | Partner actions.
 [**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
+[**partnersAllocationdeliveryadjustmentCreate**](PartnersApi.md#partnersAllocationdeliveryadjustmentCreate) | **POST** /partners/{partner_id}/allocationdeliveryadjustment | Create a allocation delivery adjustment for the partner.
 [**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
 [**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
 [**partnersBusinessunitcontractsCreate**](PartnersApi.md#partnersBusinessunitcontractsCreate) | **POST** /partners/{partner_id}/businessunitcontracts | Create a business unit contract.
@@ -285,6 +286,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\AggregationResult**](../Model/AggregationResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersAllocationdeliveryadjustmentCreate**
+> \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource partnersAllocationdeliveryadjustmentCreate($partner_id , $partner_allocation_delivery_adjustment_resource)
+
+Create a allocation delivery adjustment for the partner.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_allocation_delivery_adjustment_resource = new \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource(); // \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource | 
+
+try {
+    $result = $api_instance->partnersAllocationdeliveryadjustmentCreate($partner_id , $partner_allocation_delivery_adjustment_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAllocationdeliveryadjustmentCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_allocation_delivery_adjustment_resource** | [**\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource**](../Model/\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource**](../Model/PartnerAllocationDeliveryAdjustmentResource.md)
 
 ### Authorization
 

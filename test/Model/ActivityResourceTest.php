@@ -147,6 +147,14 @@ class ActivityResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "partner_contract"
+     */
+    public function testPropertyPartnerContract()
+    {
+
+    }
+
+    /**
      * Test attribute "partneruser"
      */
     public function testPropertyPartneruser()

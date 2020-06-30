@@ -1,6 +1,6 @@
 <?php
 /**
- * NestedPartnerResourceTest
+ * PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * NestedPartnerResourceTest Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description NestedPartnerResource
+// * @description PartnerAllocationDeliveryAdjustmentPartnerContractResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NestedPartnerResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class NestedPartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NestedPartnerResource"
+     * Test "PartnerAllocationDeliveryAdjustmentPartnerContractResource"
      */
-    public function testNestedPartnerResource()
+    public function testPartnerAllocationDeliveryAdjustmentPartnerContractResource()
     {
 
     }
@@ -86,6 +86,14 @@ class NestedPartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "business_units"
+     */
+    public function testPropertyBusinessUnits()
     {
 
     }

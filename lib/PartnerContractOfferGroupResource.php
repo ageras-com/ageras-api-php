@@ -55,8 +55,9 @@ class PartnerContractOfferGroupResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'partner' => '\Ageras\Api\NestedPartnerResource',
-        'offers' => '\Ageras\Api\PartnerContractOfferResource[]'
+        'partner' => '\Ageras\Api\NestedPartnerContractOfferGroupResource',
+        'offers' => '\Ageras\Api\PartnerContractOfferResource[]',
+        'segmentation_geo_regions' => '\Ageras\Api\SegmentationGeoRegionResource[]'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +72,8 @@ class PartnerContractOfferGroupResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'partner' => 'partner',
-        'offers' => 'offers'
+        'offers' => 'offers',
+        'segmentation_geo_regions' => 'segmentation_geo_regions'
     ];
 
 
@@ -82,7 +84,8 @@ class PartnerContractOfferGroupResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'partner' => 'setPartner',
-        'offers' => 'setOffers'
+        'offers' => 'setOffers',
+        'segmentation_geo_regions' => 'setSegmentationGeoRegions'
     ];
 
 
@@ -93,7 +96,8 @@ class PartnerContractOfferGroupResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'partner' => 'getPartner',
-        'offers' => 'getOffers'
+        'offers' => 'getOffers',
+        'segmentation_geo_regions' => 'getSegmentationGeoRegions'
     ];
 
     public static function attributeMap()
@@ -130,6 +134,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['offers'] = isset($data['offers']) ? $data['offers'] : null;
+        $this->container['segmentation_geo_regions'] = isset($data['segmentation_geo_regions']) ? $data['segmentation_geo_regions'] : null;
     }
 
     /**
@@ -180,7 +185,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\NestedPartnerResource
+     * @return \Ageras\Api\NestedPartnerContractOfferGroupResource
      */
     public function getPartner()
     {
@@ -189,7 +194,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\NestedPartnerResource $partner
+     * @param \Ageras\Api\NestedPartnerContractOfferGroupResource $partner
      * @return $this
      */
     public function setPartner($partner)
@@ -216,6 +221,27 @@ class PartnerContractOfferGroupResource implements ArrayAccess
     public function setOffers($offers)
     {
         $this->container['offers'] = $offers;
+
+        return $this;
+    }
+
+    /**
+     * Gets segmentation_geo_regions
+     * @return \Ageras\Api\SegmentationGeoRegionResource[]
+     */
+    public function getSegmentationGeoRegions()
+    {
+        return $this->container['segmentation_geo_regions'];
+    }
+
+    /**
+     * Sets segmentation_geo_regions
+     * @param \Ageras\Api\SegmentationGeoRegionResource[] $segmentation_geo_regions List of indicative regions the partner is interested in.
+     * @return $this
+     */
+    public function setSegmentationGeoRegions($segmentation_geo_regions)
+    {
+        $this->container['segmentation_geo_regions'] = $segmentation_geo_regions;
 
         return $this;
     }

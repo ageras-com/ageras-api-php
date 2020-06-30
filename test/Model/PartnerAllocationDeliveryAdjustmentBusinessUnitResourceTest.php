@@ -1,6 +1,6 @@
 <?php
 /**
- * RevenueSegmentResourceTest
+ * PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * RevenueSegmentResourceTest Class Doc Comment
+ * PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description RevenueSegmentResource
+// * @description PartnerAllocationDeliveryAdjustmentBusinessUnitResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RevenueSegmentResource"
+     * Test "PartnerAllocationDeliveryAdjustmentBusinessUnitResource"
      */
-    public function testRevenueSegmentResource()
+    public function testPartnerAllocationDeliveryAdjustmentBusinessUnitResource()
     {
 
     }
@@ -91,49 +91,9 @@ class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "geo_code"
+     * Test attribute "allocation_quota_per_refill"
      */
-    public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "display_name"
-     */
-    public function testPropertyDisplayName()
-    {
-
-    }
-
-    /**
-     * Test attribute "minimum_revenue"
-     */
-    public function testPropertyMinimumRevenue()
-    {
-
-    }
-
-    /**
-     * Test attribute "maximum_revenue"
-     */
-    public function testPropertyMaximumRevenue()
-    {
-
-    }
-
-    /**
-     * Test attribute "lb_price_excl_vat"
-     */
-    public function testPropertyLbPriceExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "pps_price_excl_vat"
-     */
-    public function testPropertyPpsPriceExclVat()
+    public function testPropertyAllocationQuotaPerRefill()
     {
 
     }

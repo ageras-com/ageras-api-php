@@ -66,7 +66,9 @@ class PartnerContractResource implements ArrayAccess
         'starts_at' => 'string',
         'business_units' => '\Ageras\Api\PartnerContractBusinessUnitResource[]',
         'current_partner_contract_period' => '\Ageras\Api\PartnerContractPeriodResource',
-        'parent_partner_contract_id' => 'int'
+        'intending_to_replace_partner_contract_id' => 'int',
+        'replaces_partner_contract_id' => 'int',
+        'category' => '\Ageras\Api\PartnerCategoryResource'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +93,9 @@ class PartnerContractResource implements ArrayAccess
         'starts_at' => 'starts_at',
         'business_units' => 'business_units',
         'current_partner_contract_period' => 'current_partner_contract_period',
-        'parent_partner_contract_id' => 'parent_partner_contract_id'
+        'intending_to_replace_partner_contract_id' => 'intending_to_replace_partner_contract_id',
+        'replaces_partner_contract_id' => 'replaces_partner_contract_id',
+        'category' => 'category'
     ];
 
 
@@ -112,7 +116,9 @@ class PartnerContractResource implements ArrayAccess
         'starts_at' => 'setStartsAt',
         'business_units' => 'setBusinessUnits',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
-        'parent_partner_contract_id' => 'setParentPartnerContractId'
+        'intending_to_replace_partner_contract_id' => 'setIntendingToReplacePartnerContractId',
+        'replaces_partner_contract_id' => 'setReplacesPartnerContractId',
+        'category' => 'setCategory'
     ];
 
 
@@ -133,7 +139,9 @@ class PartnerContractResource implements ArrayAccess
         'starts_at' => 'getStartsAt',
         'business_units' => 'getBusinessUnits',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
-        'parent_partner_contract_id' => 'getParentPartnerContractId'
+        'intending_to_replace_partner_contract_id' => 'getIntendingToReplacePartnerContractId',
+        'replaces_partner_contract_id' => 'getReplacesPartnerContractId',
+        'category' => 'getCategory'
     ];
 
     public static function attributeMap()
@@ -179,7 +187,9 @@ class PartnerContractResource implements ArrayAccess
         $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
         $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
-        $this->container['parent_partner_contract_id'] = isset($data['parent_partner_contract_id']) ? $data['parent_partner_contract_id'] : null;
+        $this->container['intending_to_replace_partner_contract_id'] = isset($data['intending_to_replace_partner_contract_id']) ? $data['intending_to_replace_partner_contract_id'] : null;
+        $this->container['replaces_partner_contract_id'] = isset($data['replaces_partner_contract_id']) ? $data['replaces_partner_contract_id'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -460,22 +470,64 @@ class PartnerContractResource implements ArrayAccess
     }
 
     /**
-     * Gets parent_partner_contract_id
+     * Gets intending_to_replace_partner_contract_id
      * @return int
      */
-    public function getParentPartnerContractId()
+    public function getIntendingToReplacePartnerContractId()
     {
-        return $this->container['parent_partner_contract_id'];
+        return $this->container['intending_to_replace_partner_contract_id'];
     }
 
     /**
-     * Sets parent_partner_contract_id
-     * @param int $parent_partner_contract_id ID of the contract being replaced by this contract.
+     * Sets intending_to_replace_partner_contract_id
+     * @param int $intending_to_replace_partner_contract_id ID of the contract that this contract intends to replace.
      * @return $this
      */
-    public function setParentPartnerContractId($parent_partner_contract_id)
+    public function setIntendingToReplacePartnerContractId($intending_to_replace_partner_contract_id)
     {
-        $this->container['parent_partner_contract_id'] = $parent_partner_contract_id;
+        $this->container['intending_to_replace_partner_contract_id'] = $intending_to_replace_partner_contract_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets replaces_partner_contract_id
+     * @return int
+     */
+    public function getReplacesPartnerContractId()
+    {
+        return $this->container['replaces_partner_contract_id'];
+    }
+
+    /**
+     * Sets replaces_partner_contract_id
+     * @param int $replaces_partner_contract_id ID of the contract being replaced by this contract.
+     * @return $this
+     */
+    public function setReplacesPartnerContractId($replaces_partner_contract_id)
+    {
+        $this->container['replaces_partner_contract_id'] = $replaces_partner_contract_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets category
+     * @return \Ageras\Api\PartnerCategoryResource
+     */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+     * Sets category
+     * @param \Ageras\Api\PartnerCategoryResource $category
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
 
         return $this;
     }

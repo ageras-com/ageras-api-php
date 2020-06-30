@@ -163,6 +163,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "has_active_contract"
+     */
+    public function testPropertyHasActiveContract()
+    {
+
+    }
+
+    /**
      * Test attribute "state"
      */
     public function testPropertyState()
@@ -286,6 +294,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "kpi"
      */
     public function testPropertyKpi()
+    {
+
+    }
+
+    /**
+     * Test attribute "new_kpi"
+     */
+    public function testPropertyNewKpi()
     {
 
     }

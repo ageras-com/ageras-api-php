@@ -15,7 +15,9 @@ Name | Type | Description | Notes
 **starts_at** | **string** | When the contract should start. | [optional] 
 **business_units** | [**\Ageras\Api\PartnerContractBusinessUnitResource[]**](PartnerContractBusinessUnitResource.md) | Business units on this contract. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerContractPeriodResource**](PartnerContractPeriodResource.md) |  | [optional] 
-**parent_partner_contract_id** | **int** | ID of the contract being replaced by this contract. | [optional] 
+**intending_to_replace_partner_contract_id** | **int** | ID of the contract that this contract intends to replace. | [optional] 
+**replaces_partner_contract_id** | **int** | ID of the contract being replaced by this contract. | [optional] 
+**category** | [**\Ageras\Api\PartnerCategoryResource**](PartnerCategoryResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
