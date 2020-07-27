@@ -242,4 +242,12 @@ class PartnerKPIResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "overdue_invoice_amount_excl_vat"
+     */
+    public function testPropertyOverdueInvoiceAmountExclVat()
+    {
+
+    }
+
 }

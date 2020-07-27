@@ -63,6 +63,7 @@ class PartnerContractResource implements ArrayAccess
         'cancellation_period_months' => 'int',
         'accepted_at' => 'string',
         'canceled_at' => 'string',
+        'has_been_replaced' => 'bool',
         'starts_at' => 'string',
         'business_units' => '\Ageras\Api\PartnerContractBusinessUnitResource[]',
         'current_partner_contract_period' => '\Ageras\Api\PartnerContractPeriodResource',
@@ -90,6 +91,7 @@ class PartnerContractResource implements ArrayAccess
         'cancellation_period_months' => 'cancellation_period_months',
         'accepted_at' => 'accepted_at',
         'canceled_at' => 'canceled_at',
+        'has_been_replaced' => 'has_been_replaced',
         'starts_at' => 'starts_at',
         'business_units' => 'business_units',
         'current_partner_contract_period' => 'current_partner_contract_period',
@@ -113,6 +115,7 @@ class PartnerContractResource implements ArrayAccess
         'cancellation_period_months' => 'setCancellationPeriodMonths',
         'accepted_at' => 'setAcceptedAt',
         'canceled_at' => 'setCanceledAt',
+        'has_been_replaced' => 'setHasBeenReplaced',
         'starts_at' => 'setStartsAt',
         'business_units' => 'setBusinessUnits',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
@@ -136,6 +139,7 @@ class PartnerContractResource implements ArrayAccess
         'cancellation_period_months' => 'getCancellationPeriodMonths',
         'accepted_at' => 'getAcceptedAt',
         'canceled_at' => 'getCanceledAt',
+        'has_been_replaced' => 'getHasBeenReplaced',
         'starts_at' => 'getStartsAt',
         'business_units' => 'getBusinessUnits',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
@@ -184,6 +188,7 @@ class PartnerContractResource implements ArrayAccess
         $this->container['cancellation_period_months'] = isset($data['cancellation_period_months']) ? $data['cancellation_period_months'] : null;
         $this->container['accepted_at'] = isset($data['accepted_at']) ? $data['accepted_at'] : null;
         $this->container['canceled_at'] = isset($data['canceled_at']) ? $data['canceled_at'] : null;
+        $this->container['has_been_replaced'] = isset($data['has_been_replaced']) ? $data['has_been_replaced'] : false;
         $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
         $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
@@ -402,6 +407,27 @@ class PartnerContractResource implements ArrayAccess
     public function setCanceledAt($canceled_at)
     {
         $this->container['canceled_at'] = $canceled_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_been_replaced
+     * @return bool
+     */
+    public function getHasBeenReplaced()
+    {
+        return $this->container['has_been_replaced'];
+    }
+
+    /**
+     * Sets has_been_replaced
+     * @param bool $has_been_replaced If the contract has been replaced by another contract.
+     * @return $this
+     */
+    public function setHasBeenReplaced($has_been_replaced)
+    {
+        $this->container['has_been_replaced'] = $has_been_replaced;
 
         return $this;
     }

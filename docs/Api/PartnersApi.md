@@ -239,6 +239,7 @@ $criteria = [
         'badge_id' => "badge_id_example"; // string | 
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
+        'has_active_contract' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -278,6 +279,7 @@ Name | Type | Description  | Notes
  **badge_id** | **string**|  | [optional]
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
+ **has_active_contract** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -4677,6 +4679,7 @@ $criteria = [
         'badge_id' => "badge_id_example"; // string | 
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
+        'has_active_contract' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -4716,6 +4719,7 @@ Name | Type | Description  | Notes
  **badge_id** | **string**|  | [optional]
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
+ **has_active_contract** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerContractResourceTest
+ * PartnerBusinessUnitPartnerContractResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerContractResourceTest Class Doc Comment
+ * PartnerBusinessUnitPartnerContractResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerContractResource
+// * @description PartnerBusinessUnitPartnerContractResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerContractResource"
+     * Test "PartnerBusinessUnitPartnerContractResource"
      */
-    public function testPartnerContractResource()
+    public function testPartnerBusinessUnitPartnerContractResource()
     {
 
     }
@@ -91,49 +91,9 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "partner"
+     * Test attribute "start_at"
      */
-    public function testPropertyPartner()
-    {
-
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "binding_period_months"
-     */
-    public function testPropertyBindingPeriodMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "billing_frequency_months"
-     */
-    public function testPropertyBillingFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "allocation_frequency_months"
-     */
-    public function testPropertyAllocationFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "cancellation_period_months"
-     */
-    public function testPropertyCancellationPeriodMonths()
+    public function testPropertyStartAt()
     {
 
     }
@@ -155,25 +115,25 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "has_been_replaced"
+     * Test attribute "churn_at"
      */
-    public function testPropertyHasBeenReplaced()
+    public function testPropertyChurnAt()
     {
 
     }
 
     /**
-     * Test attribute "starts_at"
+     * Test attribute "binding_period_months"
      */
-    public function testPropertyStartsAt()
+    public function testPropertyBindingPeriodMonths()
     {
 
     }
 
     /**
-     * Test attribute "business_units"
+     * Test attribute "billing_frequency_months"
      */
-    public function testPropertyBusinessUnits()
+    public function testPropertyBillingFrequencyMonths()
     {
 
     }
@@ -182,30 +142,6 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "current_partner_contract_period"
      */
     public function testPropertyCurrentPartnerContractPeriod()
-    {
-
-    }
-
-    /**
-     * Test attribute "intending_to_replace_partner_contract_id"
-     */
-    public function testPropertyIntendingToReplacePartnerContractId()
-    {
-
-    }
-
-    /**
-     * Test attribute "replaces_partner_contract_id"
-     */
-    public function testPropertyReplacesPartnerContractId()
-    {
-
-    }
-
-    /**
-     * Test attribute "category"
-     */
-    public function testPropertyCategory()
     {
 
     }

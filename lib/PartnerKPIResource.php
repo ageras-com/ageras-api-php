@@ -73,7 +73,8 @@ class PartnerKPIResource implements ArrayAccess
         'allocated_quotes_count' => 'int',
         'allocated_quotes_count_month' => 'int',
         'accepted_quote_amount_excl_vat' => 'int',
-        'accepted_quote_amount_excl_vat_month' => 'int'
+        'accepted_quote_amount_excl_vat_month' => 'int',
+        'overdue_invoice_amount_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -105,7 +106,8 @@ class PartnerKPIResource implements ArrayAccess
         'allocated_quotes_count' => 'allocated_quotes_count',
         'allocated_quotes_count_month' => 'allocated_quotes_count_month',
         'accepted_quote_amount_excl_vat' => 'accepted_quote_amount_excl_vat',
-        'accepted_quote_amount_excl_vat_month' => 'accepted_quote_amount_excl_vat_month'
+        'accepted_quote_amount_excl_vat_month' => 'accepted_quote_amount_excl_vat_month',
+        'overdue_invoice_amount_excl_vat' => 'overdue_invoice_amount_excl_vat'
     ];
 
 
@@ -133,7 +135,8 @@ class PartnerKPIResource implements ArrayAccess
         'allocated_quotes_count' => 'setAllocatedQuotesCount',
         'allocated_quotes_count_month' => 'setAllocatedQuotesCountMonth',
         'accepted_quote_amount_excl_vat' => 'setAcceptedQuoteAmountExclVat',
-        'accepted_quote_amount_excl_vat_month' => 'setAcceptedQuoteAmountExclVatMonth'
+        'accepted_quote_amount_excl_vat_month' => 'setAcceptedQuoteAmountExclVatMonth',
+        'overdue_invoice_amount_excl_vat' => 'setOverdueInvoiceAmountExclVat'
     ];
 
 
@@ -161,7 +164,8 @@ class PartnerKPIResource implements ArrayAccess
         'allocated_quotes_count' => 'getAllocatedQuotesCount',
         'allocated_quotes_count_month' => 'getAllocatedQuotesCountMonth',
         'accepted_quote_amount_excl_vat' => 'getAcceptedQuoteAmountExclVat',
-        'accepted_quote_amount_excl_vat_month' => 'getAcceptedQuoteAmountExclVatMonth'
+        'accepted_quote_amount_excl_vat_month' => 'getAcceptedQuoteAmountExclVatMonth',
+        'overdue_invoice_amount_excl_vat' => 'getOverdueInvoiceAmountExclVat'
     ];
 
     public static function attributeMap()
@@ -215,6 +219,7 @@ class PartnerKPIResource implements ArrayAccess
         $this->container['allocated_quotes_count_month'] = isset($data['allocated_quotes_count_month']) ? $data['allocated_quotes_count_month'] : null;
         $this->container['accepted_quote_amount_excl_vat'] = isset($data['accepted_quote_amount_excl_vat']) ? $data['accepted_quote_amount_excl_vat'] : null;
         $this->container['accepted_quote_amount_excl_vat_month'] = isset($data['accepted_quote_amount_excl_vat_month']) ? $data['accepted_quote_amount_excl_vat_month'] : null;
+        $this->container['overdue_invoice_amount_excl_vat'] = isset($data['overdue_invoice_amount_excl_vat']) ? $data['overdue_invoice_amount_excl_vat'] : null;
     }
 
     /**
@@ -658,6 +663,27 @@ class PartnerKPIResource implements ArrayAccess
     public function setAcceptedQuoteAmountExclVatMonth($accepted_quote_amount_excl_vat_month)
     {
         $this->container['accepted_quote_amount_excl_vat_month'] = $accepted_quote_amount_excl_vat_month;
+
+        return $this;
+    }
+
+    /**
+     * Gets overdue_invoice_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getOverdueInvoiceAmountExclVat()
+    {
+        return $this->container['overdue_invoice_amount_excl_vat'];
+    }
+
+    /**
+     * Sets overdue_invoice_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $overdue_invoice_amount_excl_vat
+     * @return $this
+     */
+    public function setOverdueInvoiceAmountExclVat($overdue_invoice_amount_excl_vat)
+    {
+        $this->container['overdue_invoice_amount_excl_vat'] = $overdue_invoice_amount_excl_vat;
 
         return $this;
     }

@@ -73,7 +73,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'partner' => '\Ageras\Api\PartnerBusinessUnitPartnerResource',
         'business_models' => '\Ageras\Api\PartnerBusinessUnitBusinessModelResource[]',
         'is_active' => 'bool',
-        'retired_at' => 'string'
+        'retired_at' => 'string',
+        'partner_contract' => '\Ageras\Api\PartnerBusinessUnitPartnerContractResource',
+        'wants_exclusive_leads' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -105,7 +107,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'partner' => 'partner',
         'business_models' => 'business_models',
         'is_active' => 'is_active',
-        'retired_at' => 'retired_at'
+        'retired_at' => 'retired_at',
+        'partner_contract' => 'partner_contract',
+        'wants_exclusive_leads' => 'wants_exclusive_leads'
     ];
 
 
@@ -133,7 +137,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'partner' => 'setPartner',
         'business_models' => 'setBusinessModels',
         'is_active' => 'setIsActive',
-        'retired_at' => 'setRetiredAt'
+        'retired_at' => 'setRetiredAt',
+        'partner_contract' => 'setPartnerContract',
+        'wants_exclusive_leads' => 'setWantsExclusiveLeads'
     ];
 
 
@@ -161,7 +167,9 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'partner' => 'getPartner',
         'business_models' => 'getBusinessModels',
         'is_active' => 'getIsActive',
-        'retired_at' => 'getRetiredAt'
+        'retired_at' => 'getRetiredAt',
+        'partner_contract' => 'getPartnerContract',
+        'wants_exclusive_leads' => 'getWantsExclusiveLeads'
     ];
 
     public static function attributeMap()
@@ -215,6 +223,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['business_models'] = isset($data['business_models']) ? $data['business_models'] : null;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['retired_at'] = isset($data['retired_at']) ? $data['retired_at'] : null;
+        $this->container['partner_contract'] = isset($data['partner_contract']) ? $data['partner_contract'] : null;
+        $this->container['wants_exclusive_leads'] = isset($data['wants_exclusive_leads']) ? $data['wants_exclusive_leads'] : false;
     }
 
     /**
@@ -658,6 +668,48 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setRetiredAt($retired_at)
     {
         $this->container['retired_at'] = $retired_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_contract
+     * @return \Ageras\Api\PartnerBusinessUnitPartnerContractResource
+     */
+    public function getPartnerContract()
+    {
+        return $this->container['partner_contract'];
+    }
+
+    /**
+     * Sets partner_contract
+     * @param \Ageras\Api\PartnerBusinessUnitPartnerContractResource $partner_contract
+     * @return $this
+     */
+    public function setPartnerContract($partner_contract)
+    {
+        $this->container['partner_contract'] = $partner_contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets wants_exclusive_leads
+     * @return bool
+     */
+    public function getWantsExclusiveLeads()
+    {
+        return $this->container['wants_exclusive_leads'];
+    }
+
+    /**
+     * Sets wants_exclusive_leads
+     * @param bool $wants_exclusive_leads Does the business unit want exclusive leads?
+     * @return $this
+     */
+    public function setWantsExclusiveLeads($wants_exclusive_leads)
+    {
+        $this->container['wants_exclusive_leads'] = $wants_exclusive_leads;
 
         return $this;
     }

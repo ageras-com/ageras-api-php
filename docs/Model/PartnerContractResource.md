@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **cancellation_period_months** | **int** | How many months before contract end can partner cancel. | [optional] 
 **accepted_at** | **string** | When the contract was accepted start. | [optional] 
 **canceled_at** | **string** | When the contract was canceled. | [optional] 
+**has_been_replaced** | **bool** | If the contract has been replaced by another contract. | [optional] [default to false]
 **starts_at** | **string** | When the contract should start. | [optional] 
 **business_units** | [**\Ageras\Api\PartnerContractBusinessUnitResource[]**](PartnerContractBusinessUnitResource.md) | Business units on this contract. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerContractPeriodResource**](PartnerContractPeriodResource.md) |  | [optional] 

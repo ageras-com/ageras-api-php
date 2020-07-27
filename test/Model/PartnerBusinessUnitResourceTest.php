@@ -242,4 +242,20 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "partner_contract"
+     */
+    public function testPropertyPartnerContract()
+    {
+
+    }
+
+    /**
+     * Test attribute "wants_exclusive_leads"
+     */
+    public function testPropertyWantsExclusiveLeads()
+    {
+
+    }
+
 }

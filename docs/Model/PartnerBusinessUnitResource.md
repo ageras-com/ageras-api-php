@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **business_models** | [**\Ageras\Api\PartnerBusinessUnitBusinessModelResource[]**](PartnerBusinessUnitBusinessModelResource.md) | Business models of the business units. | [optional] 
 **is_active** | **bool** | If the business unit is active | [optional] [default to false]
 **retired_at** | **string** | When the business unit is considered retired | [optional] 
+**partner_contract** | [**\Ageras\Api\PartnerBusinessUnitPartnerContractResource**](PartnerBusinessUnitPartnerContractResource.md) |  | [optional] 
+**wants_exclusive_leads** | **bool** | Does the business unit want exclusive leads? | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

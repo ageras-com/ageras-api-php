@@ -207,6 +207,7 @@ class PartnersApi
      *    'badge_id' => string,
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
+     *    'has_active_contract' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -247,6 +248,7 @@ class PartnersApi
      *    'badge_id' => string,
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
+     *    'has_active_contract' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -348,6 +350,10 @@ class PartnersApi
         // query params
         if (isset($criteria['has_marketing_package'])) {
             $queryParams['has_marketing_package'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_marketing_package']);
+        }
+        // query params
+        if (isset($criteria['has_active_contract'])) {
+            $queryParams['has_active_contract'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_active_contract']);
         }
         // query params
         if (isset($criteria['wants_exclusive_leads'])) {
@@ -8514,6 +8520,7 @@ class PartnersApi
      *    'badge_id' => string,
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
+     *    'has_active_contract' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -8554,6 +8561,7 @@ class PartnersApi
      *    'badge_id' => string,
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
+     *    'has_active_contract' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -8655,6 +8663,10 @@ class PartnersApi
         // query params
         if (isset($criteria['has_marketing_package'])) {
             $queryParams['has_marketing_package'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_marketing_package']);
+        }
+        // query params
+        if (isset($criteria['has_active_contract'])) {
+            $queryParams['has_active_contract'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_active_contract']);
         }
         // query params
         if (isset($criteria['wants_exclusive_leads'])) {
