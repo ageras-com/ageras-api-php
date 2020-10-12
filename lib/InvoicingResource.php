@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentPartnerContractResource
+ * InvoicingResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerAllocationDeliveryAdjustmentPartnerContractResource Class Doc Comment
+ * InvoicingResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements ArrayAccess
+class InvoicingResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,19 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentPartnerContractResource';
+    protected static $swaggerModelName = 'InvoicingResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'business_units' => '\Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[]'
+        'process_at' => 'string',
+        'processed_at' => 'string',
+        'source' => '\Ageras\Api\InvoicingSourceResource',
+        'voucher' => '\Ageras\Api\InvoicingVoucherResource',
+        'amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'partner' => '\Ageras\Api\InvoicingPartnerResource'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +72,12 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'business_units' => 'business_units'
+        'process_at' => 'process_at',
+        'processed_at' => 'processed_at',
+        'source' => 'source',
+        'voucher' => 'voucher',
+        'amount_excl_vat' => 'amount_excl_vat',
+        'partner' => 'partner'
     ];
 
 
@@ -78,8 +86,12 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'business_units' => 'setBusinessUnits'
+        'process_at' => 'setProcessAt',
+        'processed_at' => 'setProcessedAt',
+        'source' => 'setSource',
+        'voucher' => 'setVoucher',
+        'amount_excl_vat' => 'setAmountExclVat',
+        'partner' => 'setPartner'
     ];
 
 
@@ -88,8 +100,12 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'business_units' => 'getBusinessUnits'
+        'process_at' => 'getProcessAt',
+        'processed_at' => 'getProcessedAt',
+        'source' => 'getSource',
+        'voucher' => 'getVoucher',
+        'amount_excl_vat' => 'getAmountExclVat',
+        'partner' => 'getPartner'
     ];
 
     public static function attributeMap()
@@ -123,8 +139,12 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
+        $this->container['process_at'] = isset($data['process_at']) ? $data['process_at'] : null;
+        $this->container['processed_at'] = isset($data['processed_at']) ? $data['processed_at'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['voucher'] = isset($data['voucher']) ? $data['voucher'] : null;
+        $this->container['amount_excl_vat'] = isset($data['amount_excl_vat']) ? $data['amount_excl_vat'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
     }
 
     /**
@@ -153,43 +173,127 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResource implements Arra
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets process_at
+     * @return string
      */
-    public function getId()
+    public function getProcessAt()
     {
-        return $this->container['id'];
+        return $this->container['process_at'];
     }
 
     /**
-     * Sets id
-     * @param int $id Contract ID.
+     * Sets process_at
+     * @param string $process_at When the invoicing is processed into an invoice.
      * @return $this
      */
-    public function setId($id)
+    public function setProcessAt($process_at)
     {
-        $this->container['id'] = $id;
+        $this->container['process_at'] = $process_at;
 
         return $this;
     }
 
     /**
-     * Gets business_units
-     * @return \Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[]
+     * Gets processed_at
+     * @return string
      */
-    public function getBusinessUnits()
+    public function getProcessedAt()
     {
-        return $this->container['business_units'];
+        return $this->container['processed_at'];
     }
 
     /**
-     * Sets business_units
-     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentBusinessUnitResource[] $business_units Business units affected by this adjustment.
+     * Sets processed_at
+     * @param string $processed_at When the invoicing was processed into an invoice.
      * @return $this
      */
-    public function setBusinessUnits($business_units)
+    public function setProcessedAt($processed_at)
     {
-        $this->container['business_units'] = $business_units;
+        $this->container['processed_at'] = $processed_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets source
+     * @return \Ageras\Api\InvoicingSourceResource
+     */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+     * Sets source
+     * @param \Ageras\Api\InvoicingSourceResource $source
+     * @return $this
+     */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+
+        return $this;
+    }
+
+    /**
+     * Gets voucher
+     * @return \Ageras\Api\InvoicingVoucherResource
+     */
+    public function getVoucher()
+    {
+        return $this->container['voucher'];
+    }
+
+    /**
+     * Sets voucher
+     * @param \Ageras\Api\InvoicingVoucherResource $voucher
+     * @return $this
+     */
+    public function setVoucher($voucher)
+    {
+        $this->container['voucher'] = $voucher;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getAmountExclVat()
+    {
+        return $this->container['amount_excl_vat'];
+    }
+
+    /**
+     * Sets amount_excl_vat
+     * @param \Ageras\Api\AmountResource $amount_excl_vat
+     * @return $this
+     */
+    public function setAmountExclVat($amount_excl_vat)
+    {
+        $this->container['amount_excl_vat'] = $amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner
+     * @return \Ageras\Api\InvoicingPartnerResource
+     */
+    public function getPartner()
+    {
+        return $this->container['partner'];
+    }
+
+    /**
+     * Sets partner
+     * @param \Ageras\Api\InvoicingPartnerResource $partner
+     * @return $this
+     */
+    public function setPartner($partner)
+    {
+        $this->container['partner'] = $partner;
 
         return $this;
     }

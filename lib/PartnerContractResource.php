@@ -69,7 +69,9 @@ class PartnerContractResource implements ArrayAccess
         'current_partner_contract_period' => '\Ageras\Api\PartnerContractPeriodResource',
         'intending_to_replace_partner_contract_id' => 'int',
         'replaces_partner_contract_id' => 'int',
-        'category' => '\Ageras\Api\PartnerCategoryResource'
+        'category' => '\Ageras\Api\PartnerCategoryResource',
+        'allocation_pauses' => '\Ageras\Api\PartnerContractAllocationPauseResource[]',
+        'binding_period_amount_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -97,7 +99,9 @@ class PartnerContractResource implements ArrayAccess
         'current_partner_contract_period' => 'current_partner_contract_period',
         'intending_to_replace_partner_contract_id' => 'intending_to_replace_partner_contract_id',
         'replaces_partner_contract_id' => 'replaces_partner_contract_id',
-        'category' => 'category'
+        'category' => 'category',
+        'allocation_pauses' => 'allocation_pauses',
+        'binding_period_amount_excl_vat' => 'binding_period_amount_excl_vat'
     ];
 
 
@@ -121,7 +125,9 @@ class PartnerContractResource implements ArrayAccess
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
         'intending_to_replace_partner_contract_id' => 'setIntendingToReplacePartnerContractId',
         'replaces_partner_contract_id' => 'setReplacesPartnerContractId',
-        'category' => 'setCategory'
+        'category' => 'setCategory',
+        'allocation_pauses' => 'setAllocationPauses',
+        'binding_period_amount_excl_vat' => 'setBindingPeriodAmountExclVat'
     ];
 
 
@@ -145,7 +151,9 @@ class PartnerContractResource implements ArrayAccess
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
         'intending_to_replace_partner_contract_id' => 'getIntendingToReplacePartnerContractId',
         'replaces_partner_contract_id' => 'getReplacesPartnerContractId',
-        'category' => 'getCategory'
+        'category' => 'getCategory',
+        'allocation_pauses' => 'getAllocationPauses',
+        'binding_period_amount_excl_vat' => 'getBindingPeriodAmountExclVat'
     ];
 
     public static function attributeMap()
@@ -195,6 +203,8 @@ class PartnerContractResource implements ArrayAccess
         $this->container['intending_to_replace_partner_contract_id'] = isset($data['intending_to_replace_partner_contract_id']) ? $data['intending_to_replace_partner_contract_id'] : null;
         $this->container['replaces_partner_contract_id'] = isset($data['replaces_partner_contract_id']) ? $data['replaces_partner_contract_id'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['allocation_pauses'] = isset($data['allocation_pauses']) ? $data['allocation_pauses'] : null;
+        $this->container['binding_period_amount_excl_vat'] = isset($data['binding_period_amount_excl_vat']) ? $data['binding_period_amount_excl_vat'] : null;
     }
 
     /**
@@ -554,6 +564,48 @@ class PartnerContractResource implements ArrayAccess
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_pauses
+     * @return \Ageras\Api\PartnerContractAllocationPauseResource[]
+     */
+    public function getAllocationPauses()
+    {
+        return $this->container['allocation_pauses'];
+    }
+
+    /**
+     * Sets allocation_pauses
+     * @param \Ageras\Api\PartnerContractAllocationPauseResource[] $allocation_pauses List of allocation pauses.
+     * @return $this
+     */
+    public function setAllocationPauses($allocation_pauses)
+    {
+        $this->container['allocation_pauses'] = $allocation_pauses;
+
+        return $this;
+    }
+
+    /**
+     * Gets binding_period_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getBindingPeriodAmountExclVat()
+    {
+        return $this->container['binding_period_amount_excl_vat'];
+    }
+
+    /**
+     * Sets binding_period_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $binding_period_amount_excl_vat
+     * @return $this
+     */
+    public function setBindingPeriodAmountExclVat($binding_period_amount_excl_vat)
+    {
+        $this->container['binding_period_amount_excl_vat'] = $binding_period_amount_excl_vat;
 
         return $this;
     }

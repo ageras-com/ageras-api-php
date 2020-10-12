@@ -99,12 +99,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersAllocationdeliveryadjustmentCreate
+     * Test case for partnersAllocationpausesCreate
      *
-     * Create a allocation delivery adjustment for the partner..
+     * Create an allocation pause..
      *
      */
-    public function testPartnersAllocationdeliveryadjustmentCreate()
+    public function testPartnersAllocationpausesCreate()
     {
 
     }
@@ -523,6 +523,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersContractsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsAllocationpausesDelete
+     *
+     * Delete an allocation pause..
+     *
+     */
+    public function testPartnersContractsAllocationpausesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsAllocationpausesUpdate
+     *
+     * Update an allocation pause..
+     *
+     */
+    public function testPartnersContractsAllocationpausesUpdate()
     {
 
     }
@@ -1012,6 +1034,28 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersInvoicingsIndex
+     *
+     * List partner invoicings..
+     *
+     */
+    public function testPartnersInvoicingsIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersInvoicingsIndex2
+     *
+     * List partner invoicings..
+     *
+     */
+    public function testPartnersInvoicingsIndex2()
+    {
+
+    }
+
+    /**
      * Test case for partnersLeadtypesCreate
      *
      * Attach type to partner..
@@ -1139,6 +1183,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersNotesIndex2()
+    {
+
+    }
+
+    /**
+     * Test case for partnersNotesUpdate
+     *
+     * Update a partner note..
+     *
+     */
+    public function testPartnersNotesUpdate()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentResource
+ * PartnerContractAllocationPauseResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerAllocationDeliveryAdjustmentResource Class Doc Comment
+ * PartnerContractAllocationPauseResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
+class PartnerContractAllocationPauseResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,16 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentResource';
+    protected static $swaggerModelName = 'PartnerContractAllocationPauseResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'start_at' => 'string',
-        'end_at' => 'string',
-        'partner_contracts' => '\Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[]'
+        'id' => 'int',
+        'starts_at' => 'string',
+        'ends_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +69,9 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'start_at' => 'start_at',
-        'end_at' => 'end_at',
-        'partner_contracts' => 'partner_contracts'
+        'id' => 'id',
+        'starts_at' => 'starts_at',
+        'ends_at' => 'ends_at'
     ];
 
 
@@ -80,9 +80,9 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'start_at' => 'setStartAt',
-        'end_at' => 'setEndAt',
-        'partner_contracts' => 'setPartnerContracts'
+        'id' => 'setId',
+        'starts_at' => 'setStartsAt',
+        'ends_at' => 'setEndsAt'
     ];
 
 
@@ -91,9 +91,9 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'start_at' => 'getStartAt',
-        'end_at' => 'getEndAt',
-        'partner_contracts' => 'getPartnerContracts'
+        'id' => 'getId',
+        'starts_at' => 'getStartsAt',
+        'ends_at' => 'getEndsAt'
     ];
 
     public static function attributeMap()
@@ -127,9 +127,9 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['start_at'] = isset($data['start_at']) ? $data['start_at'] : null;
-        $this->container['end_at'] = isset($data['end_at']) ? $data['end_at'] : null;
-        $this->container['partner_contracts'] = isset($data['partner_contracts']) ? $data['partner_contracts'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
+        $this->container['ends_at'] = isset($data['ends_at']) ? $data['ends_at'] : null;
     }
 
     /**
@@ -158,64 +158,64 @@ class PartnerAllocationDeliveryAdjustmentResource implements ArrayAccess
 
 
     /**
-     * Gets start_at
-     * @return string
+     * Gets id
+     * @return int
      */
-    public function getStartAt()
+    public function getId()
     {
-        return $this->container['start_at'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets start_at
-     * @param string $start_at When should the adjustment start taking effect.
+     * Sets id
+     * @param int $id The contract ID.
      * @return $this
      */
-    public function setStartAt($start_at)
+    public function setId($id)
     {
-        $this->container['start_at'] = $start_at;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets end_at
+     * Gets starts_at
      * @return string
      */
-    public function getEndAt()
+    public function getStartsAt()
     {
-        return $this->container['end_at'];
+        return $this->container['starts_at'];
     }
 
     /**
-     * Sets end_at
-     * @param string $end_at When should the adjustment stop having an effect.
+     * Sets starts_at
+     * @param string $starts_at When the pause starts.
      * @return $this
      */
-    public function setEndAt($end_at)
+    public function setStartsAt($starts_at)
     {
-        $this->container['end_at'] = $end_at;
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }
 
     /**
-     * Gets partner_contracts
-     * @return \Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[]
+     * Gets ends_at
+     * @return string
      */
-    public function getPartnerContracts()
+    public function getEndsAt()
     {
-        return $this->container['partner_contracts'];
+        return $this->container['ends_at'];
     }
 
     /**
-     * Sets partner_contracts
-     * @param \Ageras\Api\PartnerAllocationDeliveryAdjustmentPartnerContractResource[] $partner_contracts Contracts affected by this adjustment.
+     * Sets ends_at
+     * @param string $ends_at When the pause ends.
      * @return $this
      */
-    public function setPartnerContracts($partner_contracts)
+    public function setEndsAt($ends_at)
     {
-        $this->container['partner_contracts'] = $partner_contracts;
+        $this->container['ends_at'] = $ends_at;
 
         return $this;
     }

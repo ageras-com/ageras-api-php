@@ -72,7 +72,8 @@ class ActivityResource implements ArrayAccess
         'on_behalf_of' => '\Ageras\Api\ActivityBehalfResource',
         'partner_lead_offer' => '\Ageras\Api\ActivityPartnerLeadOfferResource',
         'task' => '\Ageras\Api\ActivityTaskResource',
-        'client' => '\Ageras\Api\ActivityClientResource'
+        'client' => '\Ageras\Api\ActivityClientResource',
+        'is_pinned' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -103,7 +104,8 @@ class ActivityResource implements ArrayAccess
         'on_behalf_of' => 'on_behalf_of',
         'partner_lead_offer' => 'partner_lead_offer',
         'task' => 'task',
-        'client' => 'client'
+        'client' => 'client',
+        'is_pinned' => 'is_pinned'
     ];
 
 
@@ -130,7 +132,8 @@ class ActivityResource implements ArrayAccess
         'on_behalf_of' => 'setOnBehalfOf',
         'partner_lead_offer' => 'setPartnerLeadOffer',
         'task' => 'setTask',
-        'client' => 'setClient'
+        'client' => 'setClient',
+        'is_pinned' => 'setIsPinned'
     ];
 
 
@@ -157,7 +160,8 @@ class ActivityResource implements ArrayAccess
         'on_behalf_of' => 'getOnBehalfOf',
         'partner_lead_offer' => 'getPartnerLeadOffer',
         'task' => 'getTask',
-        'client' => 'getClient'
+        'client' => 'getClient',
+        'is_pinned' => 'getIsPinned'
     ];
 
     public static function attributeMap()
@@ -348,6 +352,7 @@ class ActivityResource implements ArrayAccess
         $this->container['partner_lead_offer'] = isset($data['partner_lead_offer']) ? $data['partner_lead_offer'] : null;
         $this->container['task'] = isset($data['task']) ? $data['task'] : null;
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['is_pinned'] = isset($data['is_pinned']) ? $data['is_pinned'] : false;
     }
 
     /**
@@ -783,6 +788,27 @@ class ActivityResource implements ArrayAccess
     public function setClient($client)
     {
         $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_pinned
+     * @return bool
+     */
+    public function getIsPinned()
+    {
+        return $this->container['is_pinned'];
+    }
+
+    /**
+     * Sets is_pinned
+     * @param bool $is_pinned Is this activity pinned to mark its importance.
+     * @return $this
+     */
+    public function setIsPinned($is_pinned)
+    {
+        $this->container['is_pinned'] = $is_pinned;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentResourceTest
+ * InvoicingPartnerResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerAllocationDeliveryAdjustmentResourceTest Class Doc Comment
+ * InvoicingPartnerResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerAllocationDeliveryAdjustmentResource
+// * @description InvoicingPartnerResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentResourceTest extends \PHPUnit_Framework_TestCase
+class InvoicingPartnerResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,33 +75,25 @@ class PartnerAllocationDeliveryAdjustmentResourceTest extends \PHPUnit_Framework
     }
 
     /**
-     * Test "PartnerAllocationDeliveryAdjustmentResource"
+     * Test "InvoicingPartnerResource"
      */
-    public function testPartnerAllocationDeliveryAdjustmentResource()
+    public function testInvoicingPartnerResource()
     {
 
     }
 
     /**
-     * Test attribute "start_at"
+     * Test attribute "id"
      */
-    public function testPropertyStartAt()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "end_at"
+     * Test attribute "company_name"
      */
-    public function testPropertyEndAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_contracts"
-     */
-    public function testPropertyPartnerContracts()
+    public function testPropertyCompanyName()
     {
 
     }

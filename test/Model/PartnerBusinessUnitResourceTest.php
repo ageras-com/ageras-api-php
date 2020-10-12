@@ -258,4 +258,12 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "highlighted_notes"
+     */
+    public function testPropertyHighlightedNotes()
+    {
+
+    }
+
 }

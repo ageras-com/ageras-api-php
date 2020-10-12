@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **binding_period_months** | **int** | How long the contract last for each contract period. | [optional] 
 **billing_frequency_months** | **int** | How many months the partner pays for at a time. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerBusinessUnitPartnerContractPeriodResource**](PartnerBusinessUnitPartnerContractPeriodResource.md) |  | [optional] 
+**allocation_pauses** | [**\Ageras\Api\DateSpanResource[]**](DateSpanResource.md) | List of allocation pauses. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

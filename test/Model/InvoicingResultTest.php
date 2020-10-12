@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest
+ * InvoicingResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest Class Doc Comment
+ * InvoicingResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerAllocationDeliveryAdjustmentPartnerContractResource
+// * @description InvoicingResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class InvoicingResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,57 @@ class PartnerAllocationDeliveryAdjustmentPartnerContractResourceTest extends \PH
     }
 
     /**
-     * Test "PartnerAllocationDeliveryAdjustmentPartnerContractResource"
+     * Test "InvoicingResult"
      */
-    public function testPartnerAllocationDeliveryAdjustmentPartnerContractResource()
+    public function testInvoicingResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "business_units"
+     * Test attribute "limit"
      */
-    public function testPropertyBusinessUnits()
+    public function testPropertyLimit()
+    {
+
+    }
+
+    /**
+     * Test attribute "pages"
+     */
+    public function testPropertyPages()
+    {
+
+    }
+
+    /**
+     * Test attribute "total"
+     */
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }

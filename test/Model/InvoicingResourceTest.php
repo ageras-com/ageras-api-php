@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerContractResourceTest
+ * InvoicingResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerContractResourceTest Class Doc Comment
+ * InvoicingResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerContractResource
+// * @description InvoicingResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class InvoicingResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,57 @@ class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerContractResource"
+     * Test "InvoicingResource"
      */
-    public function testPartnerBusinessUnitPartnerContractResource()
+    public function testInvoicingResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "process_at"
      */
-    public function testPropertyId()
+    public function testPropertyProcessAt()
     {
 
     }
 
     /**
-     * Test attribute "start_at"
+     * Test attribute "processed_at"
      */
-    public function testPropertyStartAt()
+    public function testPropertyProcessedAt()
     {
 
     }
 
     /**
-     * Test attribute "accepted_at"
+     * Test attribute "source"
      */
-    public function testPropertyAcceptedAt()
+    public function testPropertySource()
     {
 
     }
 
     /**
-     * Test attribute "canceled_at"
+     * Test attribute "voucher"
      */
-    public function testPropertyCanceledAt()
+    public function testPropertyVoucher()
     {
 
     }
 
     /**
-     * Test attribute "churn_at"
+     * Test attribute "amount_excl_vat"
      */
-    public function testPropertyChurnAt()
+    public function testPropertyAmountExclVat()
     {
 
     }
 
     /**
-     * Test attribute "binding_period_months"
+     * Test attribute "partner"
      */
-    public function testPropertyBindingPeriodMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "billing_frequency_months"
-     */
-    public function testPropertyBillingFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "current_partner_contract_period"
-     */
-    public function testPropertyCurrentPartnerContractPeriod()
-    {
-
-    }
-
-    /**
-     * Test attribute "allocation_pauses"
-     */
-    public function testPropertyAllocationPauses()
+    public function testPropertyPartner()
     {
 
     }

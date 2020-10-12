@@ -59,7 +59,8 @@ class PartnerNoteResource implements ArrayAccess
         'partner_user_id' => 'int',
         'creator_type' => 'string',
         'note' => 'string',
-        'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource'
+        'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource',
+        'is_pinned' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -77,7 +78,8 @@ class PartnerNoteResource implements ArrayAccess
         'partner_user_id' => 'partner_user_id',
         'creator_type' => 'creator_type',
         'note' => 'note',
-        'satisfaction' => 'satisfaction'
+        'satisfaction' => 'satisfaction',
+        'is_pinned' => 'is_pinned'
     ];
 
 
@@ -91,7 +93,8 @@ class PartnerNoteResource implements ArrayAccess
         'partner_user_id' => 'setPartnerUserId',
         'creator_type' => 'setCreatorType',
         'note' => 'setNote',
-        'satisfaction' => 'setSatisfaction'
+        'satisfaction' => 'setSatisfaction',
+        'is_pinned' => 'setIsPinned'
     ];
 
 
@@ -105,7 +108,8 @@ class PartnerNoteResource implements ArrayAccess
         'partner_user_id' => 'getPartnerUserId',
         'creator_type' => 'getCreatorType',
         'note' => 'getNote',
-        'satisfaction' => 'getSatisfaction'
+        'satisfaction' => 'getSatisfaction',
+        'is_pinned' => 'getIsPinned'
     ];
 
     public static function attributeMap()
@@ -161,6 +165,7 @@ class PartnerNoteResource implements ArrayAccess
         $this->container['creator_type'] = isset($data['creator_type']) ? $data['creator_type'] : 'unknown';
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
+        $this->container['is_pinned'] = isset($data['is_pinned']) ? $data['is_pinned'] : false;
     }
 
     /**
@@ -323,6 +328,27 @@ class PartnerNoteResource implements ArrayAccess
     public function setSatisfaction($satisfaction)
     {
         $this->container['satisfaction'] = $satisfaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_pinned
+     * @return bool
+     */
+    public function getIsPinned()
+    {
+        return $this->container['is_pinned'];
+    }
+
+    /**
+     * Sets is_pinned
+     * @param bool $is_pinned Is the note pinned?
+     * @return $this
+     */
+    public function setIsPinned($is_pinned)
+    {
+        $this->container['is_pinned'] = $is_pinned;
 
         return $this;
     }

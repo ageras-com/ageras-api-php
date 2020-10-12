@@ -75,7 +75,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'is_active' => 'bool',
         'retired_at' => 'string',
         'partner_contract' => '\Ageras\Api\PartnerBusinessUnitPartnerContractResource',
-        'wants_exclusive_leads' => 'bool'
+        'wants_exclusive_leads' => 'bool',
+        'highlighted_notes' => 'string[]'
     ];
 
     public static function swaggerTypes()
@@ -109,7 +110,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'is_active' => 'is_active',
         'retired_at' => 'retired_at',
         'partner_contract' => 'partner_contract',
-        'wants_exclusive_leads' => 'wants_exclusive_leads'
+        'wants_exclusive_leads' => 'wants_exclusive_leads',
+        'highlighted_notes' => 'highlighted_notes'
     ];
 
 
@@ -139,7 +141,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'is_active' => 'setIsActive',
         'retired_at' => 'setRetiredAt',
         'partner_contract' => 'setPartnerContract',
-        'wants_exclusive_leads' => 'setWantsExclusiveLeads'
+        'wants_exclusive_leads' => 'setWantsExclusiveLeads',
+        'highlighted_notes' => 'setHighlightedNotes'
     ];
 
 
@@ -169,7 +172,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'is_active' => 'getIsActive',
         'retired_at' => 'getRetiredAt',
         'partner_contract' => 'getPartnerContract',
-        'wants_exclusive_leads' => 'getWantsExclusiveLeads'
+        'wants_exclusive_leads' => 'getWantsExclusiveLeads',
+        'highlighted_notes' => 'getHighlightedNotes'
     ];
 
     public static function attributeMap()
@@ -225,6 +229,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['retired_at'] = isset($data['retired_at']) ? $data['retired_at'] : null;
         $this->container['partner_contract'] = isset($data['partner_contract']) ? $data['partner_contract'] : null;
         $this->container['wants_exclusive_leads'] = isset($data['wants_exclusive_leads']) ? $data['wants_exclusive_leads'] : false;
+        $this->container['highlighted_notes'] = isset($data['highlighted_notes']) ? $data['highlighted_notes'] : null;
     }
 
     /**
@@ -710,6 +715,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setWantsExclusiveLeads($wants_exclusive_leads)
     {
         $this->container['wants_exclusive_leads'] = $wants_exclusive_leads;
+
+        return $this;
+    }
+
+    /**
+     * Gets highlighted_notes
+     * @return string[]
+     */
+    public function getHighlightedNotes()
+    {
+        return $this->container['highlighted_notes'];
+    }
+
+    /**
+     * Sets highlighted_notes
+     * @param string[] $highlighted_notes Important notes about this business unit.
+     * @return $this
+     */
+    public function setHighlightedNotes($highlighted_notes)
+    {
+        $this->container['highlighted_notes'] = $highlighted_notes;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentBusinessUnitResource
+ * PartnerAllocationPauseResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerAllocationDeliveryAdjustmentBusinessUnitResource Class Doc Comment
+ * PartnerAllocationPauseResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAccess
+class PartnerAllocationPauseResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,16 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerAllocationDeliveryAdjustmentBusinessUnitResource';
+    protected static $swaggerModelName = 'PartnerAllocationPauseResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'allocation_quota_per_refill' => 'int'
+        'starts_at' => 'string',
+        'ends_at' => 'string',
+        'partner_contract_id' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +69,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'allocation_quota_per_refill' => 'allocation_quota_per_refill'
+        'starts_at' => 'starts_at',
+        'ends_at' => 'ends_at',
+        'partner_contract_id' => 'partner_contract_id'
     ];
 
 
@@ -78,8 +80,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'allocation_quota_per_refill' => 'setAllocationQuotaPerRefill'
+        'starts_at' => 'setStartsAt',
+        'ends_at' => 'setEndsAt',
+        'partner_contract_id' => 'setPartnerContractId'
     ];
 
 
@@ -88,8 +91,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'allocation_quota_per_refill' => 'getAllocationQuotaPerRefill'
+        'starts_at' => 'getStartsAt',
+        'ends_at' => 'getEndsAt',
+        'partner_contract_id' => 'getPartnerContractId'
     ];
 
     public static function attributeMap()
@@ -123,8 +127,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['allocation_quota_per_refill'] = isset($data['allocation_quota_per_refill']) ? $data['allocation_quota_per_refill'] : null;
+        $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
+        $this->container['ends_at'] = isset($data['ends_at']) ? $data['ends_at'] : null;
+        $this->container['partner_contract_id'] = isset($data['partner_contract_id']) ? $data['partner_contract_id'] : null;
     }
 
     /**
@@ -153,43 +158,64 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResource implements ArrayAc
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets starts_at
+     * @return string
      */
-    public function getId()
+    public function getStartsAt()
     {
-        return $this->container['id'];
+        return $this->container['starts_at'];
     }
 
     /**
-     * Sets id
-     * @param int $id Business unit ID.
+     * Sets starts_at
+     * @param string $starts_at When should the adjustment start taking effect.
      * @return $this
      */
-    public function setId($id)
+    public function setStartsAt($starts_at)
     {
-        $this->container['id'] = $id;
+        $this->container['starts_at'] = $starts_at;
 
         return $this;
     }
 
     /**
-     * Gets allocation_quota_per_refill
-     * @return int
+     * Gets ends_at
+     * @return string
      */
-    public function getAllocationQuotaPerRefill()
+    public function getEndsAt()
     {
-        return $this->container['allocation_quota_per_refill'];
+        return $this->container['ends_at'];
     }
 
     /**
-     * Sets allocation_quota_per_refill
-     * @param int $allocation_quota_per_refill The allocation quota per refill.
+     * Sets ends_at
+     * @param string $ends_at When should the adjustment stop having an effect.
      * @return $this
      */
-    public function setAllocationQuotaPerRefill($allocation_quota_per_refill)
+    public function setEndsAt($ends_at)
     {
-        $this->container['allocation_quota_per_refill'] = $allocation_quota_per_refill;
+        $this->container['ends_at'] = $ends_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_contract_id
+     * @return int[]
+     */
+    public function getPartnerContractId()
+    {
+        return $this->container['partner_contract_id'];
+    }
+
+    /**
+     * Sets partner_contract_id
+     * @param int[] $partner_contract_id Contracts affected by this adjustment.
+     * @return $this
+     */
+    public function setPartnerContractId($partner_contract_id)
+    {
+        $this->container['partner_contract_id'] = $partner_contract_id;
 
         return $this;
     }

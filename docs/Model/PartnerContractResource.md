@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **intending_to_replace_partner_contract_id** | **int** | ID of the contract that this contract intends to replace. | [optional] 
 **replaces_partner_contract_id** | **int** | ID of the contract being replaced by this contract. | [optional] 
 **category** | [**\Ageras\Api\PartnerCategoryResource**](PartnerCategoryResource.md) |  | [optional] 
+**allocation_pauses** | [**\Ageras\Api\PartnerContractAllocationPauseResource[]**](PartnerContractAllocationPauseResource.md) | List of allocation pauses. | [optional] 
+**binding_period_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

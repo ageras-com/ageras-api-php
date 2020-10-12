@@ -458,4 +458,12 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "has_portal_access"
+     */
+    public function testPropertyHasPortalAccess()
+    {
+
+    }
+
 }

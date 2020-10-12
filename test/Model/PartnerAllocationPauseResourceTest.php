@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerNoteResourceTest
+ * PartnerAllocationPauseResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerNoteResourceTest Class Doc Comment
+ * PartnerAllocationPauseResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerNoteResource
+// * @description PartnerAllocationPauseResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerNoteResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerAllocationPauseResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,65 +75,33 @@ class PartnerNoteResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerNoteResource"
+     * Test "PartnerAllocationPauseResource"
      */
-    public function testPartnerNoteResource()
+    public function testPartnerAllocationPauseResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "starts_at"
      */
-    public function testPropertyId()
+    public function testPropertyStartsAt()
     {
 
     }
 
     /**
-     * Test attribute "employee_id"
+     * Test attribute "ends_at"
      */
-    public function testPropertyEmployeeId()
+    public function testPropertyEndsAt()
     {
 
     }
 
     /**
-     * Test attribute "partner_user_id"
+     * Test attribute "partner_contract_id"
      */
-    public function testPropertyPartnerUserId()
-    {
-
-    }
-
-    /**
-     * Test attribute "creator_type"
-     */
-    public function testPropertyCreatorType()
-    {
-
-    }
-
-    /**
-     * Test attribute "note"
-     */
-    public function testPropertyNote()
-    {
-
-    }
-
-    /**
-     * Test attribute "satisfaction"
-     */
-    public function testPropertySatisfaction()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_pinned"
-     */
-    public function testPropertyIsPinned()
+    public function testPropertyPartnerContractId()
     {
 
     }

@@ -210,4 +210,20 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "allocation_pauses"
+     */
+    public function testPropertyAllocationPauses()
+    {
+
+    }
+
+    /**
+     * Test attribute "binding_period_amount_excl_vat"
+     */
+    public function testPropertyBindingPeriodAmountExclVat()
+    {
+
+    }
+
 }

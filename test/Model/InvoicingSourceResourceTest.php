@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest
+ * InvoicingSourceResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest Class Doc Comment
+ * InvoicingSourceResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerAllocationDeliveryAdjustmentBusinessUnitResource
+// * @description InvoicingSourceResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
+class InvoicingSourceResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest extends \PHPUn
     }
 
     /**
-     * Test "PartnerAllocationDeliveryAdjustmentBusinessUnitResource"
+     * Test "InvoicingSourceResource"
      */
-    public function testPartnerAllocationDeliveryAdjustmentBusinessUnitResource()
+    public function testInvoicingSourceResource()
     {
 
     }
@@ -91,9 +91,9 @@ class PartnerAllocationDeliveryAdjustmentBusinessUnitResourceTest extends \PHPUn
     }
 
     /**
-     * Test attribute "allocation_quota_per_refill"
+     * Test attribute "type"
      */
-    public function testPropertyAllocationQuotaPerRefill()
+    public function testPropertyType()
     {
 
     }

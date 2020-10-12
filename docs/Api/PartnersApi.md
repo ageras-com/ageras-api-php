@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | Partner actions.
 [**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
-[**partnersAllocationdeliveryadjustmentCreate**](PartnersApi.md#partnersAllocationdeliveryadjustmentCreate) | **POST** /partners/{partner_id}/allocationdeliveryadjustment | Create a allocation delivery adjustment for the partner.
+[**partnersAllocationpausesCreate**](PartnersApi.md#partnersAllocationpausesCreate) | **POST** /partners/{partner_id}/allocationpauses | Create an allocation pause.
 [**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
 [**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
 [**partnersBusinessunitcontractsCreate**](PartnersApi.md#partnersBusinessunitcontractsCreate) | **POST** /partners/{partner_id}/businessunitcontracts | Create a business unit contract.
@@ -45,6 +45,8 @@ Method | HTTP request | Description
 [**partnersContractoffergroupsCreate**](PartnersApi.md#partnersContractoffergroupsCreate) | **POST** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
 [**partnersContractoffergroupsIndex**](PartnersApi.md#partnersContractoffergroupsIndex) | **GET** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
 [**partnersContractsActionsCreate**](PartnersApi.md#partnersContractsActionsCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/actions | Perform an action on a partner contract.
+[**partnersContractsAllocationpausesDelete**](PartnersApi.md#partnersContractsAllocationpausesDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | Delete an allocation pause.
+[**partnersContractsAllocationpausesUpdate**](PartnersApi.md#partnersContractsAllocationpausesUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | Update an allocation pause.
 [**partnersContractsCreate**](PartnersApi.md#partnersContractsCreate) | **POST** /partners/{partner_id}/contracts | Create a partner contract.
 [**partnersContractsDelete**](PartnersApi.md#partnersContractsDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id} | Delete a partner contract.
 [**partnersContractsGet**](PartnersApi.md#partnersContractsGet) | **GET** /partners/{partner_id}/contracts/{contract_id} | Get a partner contract.
@@ -89,6 +91,8 @@ Method | HTTP request | Description
 [**partnersIndustriesGet**](PartnersApi.md#partnersIndustriesGet) | **GET** /partners/{partner_id}/industries/{industry_id} | Get a given industry for partner.
 [**partnersIndustriesIndex**](PartnersApi.md#partnersIndustriesIndex) | **GET** /partners/{partner_id}/industries | Get partner industries.
 [**partnersIndustriesUpdate**](PartnersApi.md#partnersIndustriesUpdate) | **PUT** /partners/{partner_id}/industries | Replace partner&#39;s industries.
+[**partnersInvoicingsIndex**](PartnersApi.md#partnersInvoicingsIndex) | **GET** /partners/invoicings | List partner invoicings.
+[**partnersInvoicingsIndex2**](PartnersApi.md#partnersInvoicingsIndex2) | **GET** /partners/{partner_id}/invoicings | List partner invoicings.
 [**partnersLeadtypesCreate**](PartnersApi.md#partnersLeadtypesCreate) | **POST** /partners/{partner_id}/lead_types | Attach type to partner.
 [**partnersLeadtypesDelete**](PartnersApi.md#partnersLeadtypesDelete) | **DELETE** /partners/{partner_id}/lead_types/{lead_type_id} | Detach type from partner.
 [**partnersLeadtypesGet**](PartnersApi.md#partnersLeadtypesGet) | **GET** /partners/lead_types/{lead_type_id} | Retrieve a given lead type.
@@ -101,6 +105,7 @@ Method | HTTP request | Description
 [**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
 [**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
+[**partnersNotesUpdate**](PartnersApi.md#partnersNotesUpdate) | **PUT** /partners/{partner_id}/notes/{note_id} | Update a partner note.
 [**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
 [**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | Get partner sectors.
 [**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | Update partner sectors.
@@ -300,10 +305,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersAllocationdeliveryadjustmentCreate**
-> \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource partnersAllocationdeliveryadjustmentCreate($partner_id , $partner_allocation_delivery_adjustment_resource)
+# **partnersAllocationpausesCreate**
+> \Ageras\Api\PartnerAllocationPauseResource partnersAllocationpausesCreate($partner_id , $partner_allocation_pause_resource)
 
-Create a allocation delivery adjustment for the partner.
+Create an allocation pause.
 
 ### Example
 ```php
@@ -320,13 +325,13 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
-$partner_allocation_delivery_adjustment_resource = new \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource(); // \Ageras\Api\PartnerAllocationDeliveryAdjustmentResource | 
+$partner_allocation_pause_resource = new \Ageras\Api\PartnerAllocationPauseResource(); // \Ageras\Api\PartnerAllocationPauseResource | 
 
 try {
-    $result = $api_instance->partnersAllocationdeliveryadjustmentCreate($partner_id , $partner_allocation_delivery_adjustment_resource);
+    $result = $api_instance->partnersAllocationpausesCreate($partner_id , $partner_allocation_pause_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersAllocationdeliveryadjustmentCreate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersAllocationpausesCreate: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -336,11 +341,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
- **partner_allocation_delivery_adjustment_resource** | [**\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource**](../Model/\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource.md)|  |
+ **partner_allocation_pause_resource** | [**\Ageras\Api\PartnerAllocationPauseResource**](../Model/\Ageras\Api\PartnerAllocationPauseResource.md)|  |
 
 ### Return type
 
-[**\Ageras\Api\PartnerAllocationDeliveryAdjustmentResource**](../Model/PartnerAllocationDeliveryAdjustmentResource.md)
+[**\Ageras\Api\PartnerAllocationPauseResource**](../Model/PartnerAllocationPauseResource.md)
 
 ### Authorization
 
@@ -2520,6 +2525,117 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsAllocationpausesDelete**
+> partnersContractsAllocationpausesDelete($partner_id,  $partner_contract_id,  $pause_id )
+
+Delete an allocation pause.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_id = "partner_contract_id_example"; // string | 
+$pause_id = "pause_id_example"; // string | 
+
+try {
+    $api_instance->partnersContractsAllocationpausesDelete($partner_id,  $partner_contract_id,  $pause_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsAllocationpausesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_id** | **string**|  |
+ **pause_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsAllocationpausesUpdate**
+> \Ageras\Api\DateSpanResource partnersContractsAllocationpausesUpdate($partner_id,  $partner_contract_id,  $pause_id , $date_span_resource)
+
+Update an allocation pause.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_contract_id = "partner_contract_id_example"; // string | 
+$pause_id = "pause_id_example"; // string | 
+$date_span_resource = new \Ageras\Api\DateSpanResource(); // \Ageras\Api\DateSpanResource | 
+
+try {
+    $result = $api_instance->partnersContractsAllocationpausesUpdate($partner_id,  $partner_contract_id,  $pause_id , $date_span_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsAllocationpausesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_contract_id** | **string**|  |
+ **pause_id** | **string**|  |
+ **date_span_resource** | [**\Ageras\Api\DateSpanResource**](../Model/\Ageras\Api\DateSpanResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\DateSpanResource**](../Model/DateSpanResource.md)
 
 ### Authorization
 
@@ -5014,6 +5130,148 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersInvoicingsIndex**
+> \Ageras\Api\InvoicingResult partnersInvoicingsIndex($criteria)
+
+List partner invoicings.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$criteria = [
+        'process_at_gte' => "process_at_gte_example"; // string | Get invoicings processed at after a date.
+        'process_at_lte' => "process_at_lte_example"; // string | Get invoicings processed at after a date.
+        'partner_id' => "partner_id_example"; // string | Filter by zero or more partner IDs.
+        'business_model' => "lead_budget"; // string | Lead budget or pay-per-spot.
+        'sort' => "process_at"; // string | Sort the invoicings.
+        'geo_code' => "geo_code_example"; // string | Filter by geo codes.
+        'employee_id' => "employee_id_example"; // string | Filter by partner's employee.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersInvoicingsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersInvoicingsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **process_at_gte** | **string**| Get invoicings processed at after a date. | [optional]
+ **process_at_lte** | **string**| Get invoicings processed at after a date. | [optional]
+ **partner_id** | **string**| Filter by zero or more partner IDs. | [optional]
+ **business_model** | **string**| Lead budget or pay-per-spot. | [optional] [default to lead_budget]
+ **sort** | **string**| Sort the invoicings. | [optional] [default to process_at]
+ **geo_code** | **string**| Filter by geo codes. | [optional]
+ **employee_id** | **string**| Filter by partner&#39;s employee. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\InvoicingResult**](../Model/InvoicingResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersInvoicingsIndex2**
+> \Ageras\Api\InvoicingResult partnersInvoicingsIndex2($partner_id , $criteria)
+
+List partner invoicings.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'process_at_gte' => "process_at_gte_example"; // string | Get invoicings processed at after a date.
+        'process_at_lte' => "process_at_lte_example"; // string | Get invoicings processed at after a date.
+        'business_model' => "lead_budget"; // string | Lead budget or pay-per-spot.
+        'sort' => "process_at"; // string | Sort the invoicings.
+        'geo_code' => "geo_code_example"; // string | Filter by geo codes.
+        'employee_id' => "employee_id_example"; // string | Filter by partner's employee.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersInvoicingsIndex2($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersInvoicingsIndex2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **process_at_gte** | **string**| Get invoicings processed at after a date. | [optional]
+ **process_at_lte** | **string**| Get invoicings processed at after a date. | [optional]
+ **business_model** | **string**| Lead budget or pay-per-spot. | [optional] [default to lead_budget]
+ **sort** | **string**| Sort the invoicings. | [optional] [default to process_at]
+ **geo_code** | **string**| Filter by geo codes. | [optional]
+ **employee_id** | **string**| Filter by partner&#39;s employee. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\InvoicingResult**](../Model/InvoicingResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersLeadtypesCreate**
 > \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
 
@@ -5669,6 +5927,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersNotesUpdate**
+> \Ageras\Api\PartnerNoteResource partnersNotesUpdate($partner_id,  $note_id , $partner_note_resource)
+
+Update a partner note.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$note_id = "note_id_example"; // string | 
+$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
+
+try {
+    $result = $api_instance->partnersNotesUpdate($partner_id,  $note_id , $partner_note_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersNotesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **note_id** | **string**|  |
+ **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerContractResourceTest
+ * PartnerContractAllocationPauseResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerContractResourceTest Class Doc Comment
+ * PartnerContractAllocationPauseResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerContractResource
+// * @description PartnerContractAllocationPauseResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerContractAllocationPauseResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerContractResource"
+     * Test "PartnerContractAllocationPauseResource"
      */
-    public function testPartnerBusinessUnitPartnerContractResource()
+    public function testPartnerContractAllocationPauseResource()
     {
 
     }
@@ -91,65 +91,17 @@ class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test attribute "start_at"
+     * Test attribute "starts_at"
      */
-    public function testPropertyStartAt()
+    public function testPropertyStartsAt()
     {
 
     }
 
     /**
-     * Test attribute "accepted_at"
+     * Test attribute "ends_at"
      */
-    public function testPropertyAcceptedAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "canceled_at"
-     */
-    public function testPropertyCanceledAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "churn_at"
-     */
-    public function testPropertyChurnAt()
-    {
-
-    }
-
-    /**
-     * Test attribute "binding_period_months"
-     */
-    public function testPropertyBindingPeriodMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "billing_frequency_months"
-     */
-    public function testPropertyBillingFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "current_partner_contract_period"
-     */
-    public function testPropertyCurrentPartnerContractPeriod()
-    {
-
-    }
-
-    /**
-     * Test attribute "allocation_pauses"
-     */
-    public function testPropertyAllocationPauses()
+    public function testPropertyEndsAt()
     {
 
     }

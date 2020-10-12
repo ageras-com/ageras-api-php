@@ -100,7 +100,8 @@ class PartnerResource implements ArrayAccess
         'badges' => '\Ageras\Api\PartnerBadgeResource[]',
         'category' => '\Ageras\Api\PartnerCategoryResource',
         'features' => 'string[]',
-        'association' => '\Ageras\Api\PartnerAssociationResource'
+        'association' => '\Ageras\Api\PartnerAssociationResource',
+        'has_portal_access' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -159,7 +160,8 @@ class PartnerResource implements ArrayAccess
         'badges' => 'badges',
         'category' => 'category',
         'features' => 'features',
-        'association' => 'association'
+        'association' => 'association',
+        'has_portal_access' => 'has_portal_access'
     ];
 
 
@@ -214,7 +216,8 @@ class PartnerResource implements ArrayAccess
         'badges' => 'setBadges',
         'category' => 'setCategory',
         'features' => 'setFeatures',
-        'association' => 'setAssociation'
+        'association' => 'setAssociation',
+        'has_portal_access' => 'setHasPortalAccess'
     ];
 
 
@@ -269,7 +272,8 @@ class PartnerResource implements ArrayAccess
         'badges' => 'getBadges',
         'category' => 'getCategory',
         'features' => 'getFeatures',
-        'association' => 'getAssociation'
+        'association' => 'getAssociation',
+        'has_portal_access' => 'getHasPortalAccess'
     ];
 
     public static function attributeMap()
@@ -390,6 +394,7 @@ class PartnerResource implements ArrayAccess
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['features'] = isset($data['features']) ? $data['features'] : null;
         $this->container['association'] = isset($data['association']) ? $data['association'] : null;
+        $this->container['has_portal_access'] = isset($data['has_portal_access']) ? $data['has_portal_access'] : false;
     }
 
     /**
@@ -1426,6 +1431,27 @@ class PartnerResource implements ArrayAccess
     public function setAssociation($association)
     {
         $this->container['association'] = $association;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_portal_access
+     * @return bool
+     */
+    public function getHasPortalAccess()
+    {
+        return $this->container['has_portal_access'];
+    }
+
+    /**
+     * Sets has_portal_access
+     * @param bool $has_portal_access True if partner has access to the Partner portal.
+     * @return $this
+     */
+    public function setHasPortalAccess($has_portal_access)
+    {
+        $this->container['has_portal_access'] = $has_portal_access;
 
         return $this;
     }
