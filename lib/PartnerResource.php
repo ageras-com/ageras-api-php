@@ -81,7 +81,7 @@ class PartnerResource implements ArrayAccess
         'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource',
         'alerts' => '\Ageras\Api\PartnerAlertResource[]',
         'kpi' => '\Ageras\Api\PartnerKPIResource',
-        'new_kpi' => 'string[]',
+        'new_kpi' => '\Ageras\Api\PartnerNewKpiResource',
         'invoicing' => '\Ageras\Api\PartnerInvoicingResource',
         'preferences' => '\Ageras\Api\PartnerPreferencesResource',
         'demo' => '\Ageras\Api\PartnerDemoResource',
@@ -1013,7 +1013,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Gets new_kpi
-     * @return string[]
+     * @return \Ageras\Api\PartnerNewKpiResource
      */
     public function getNewKpi()
     {
@@ -1022,7 +1022,7 @@ class PartnerResource implements ArrayAccess
 
     /**
      * Sets new_kpi
-     * @param string[] $new_kpi New partner KPI's.
+     * @param \Ageras\Api\PartnerNewKpiResource $new_kpi
      * @return $this
      */
     public function setNewKpi($new_kpi)

@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **satisfaction** | [**\Ageras\Api\PartnerSatisfactionResource**](PartnerSatisfactionResource.md) |  | [optional] 
 **alerts** | [**\Ageras\Api\PartnerAlertResource[]**](PartnerAlertResource.md) | Partner Alerts. | [optional] 
 **kpi** | [**\Ageras\Api\PartnerKPIResource**](PartnerKPIResource.md) |  | [optional] 
-**new_kpi** | **string[]** | New partner KPI&#39;s. | [optional] 
+**new_kpi** | [**\Ageras\Api\PartnerNewKpiResource**](PartnerNewKpiResource.md) |  | [optional] 
 **invoicing** | [**\Ageras\Api\PartnerInvoicingResource**](PartnerInvoicingResource.md) |  | [optional] 
 **preferences** | [**\Ageras\Api\PartnerPreferencesResource**](PartnerPreferencesResource.md) |  | [optional] 
 **demo** | [**\Ageras\Api\PartnerDemoResource**](PartnerDemoResource.md) |  | [optional] 

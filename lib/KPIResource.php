@@ -1,6 +1,6 @@
 <?php
 /**
- * KpiResource
+ * KPIResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * KpiResource Class Doc Comment
+ * KPIResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KpiResource implements ArrayAccess
+class KPIResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,26 @@ class KpiResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'KpiResource';
+    protected static $swaggerModelName = 'KPIResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'calls_made' => 'int',
-        'actions_taken' => 'int',
-        'validation_efficiency_long_term' => 'float',
-        'validation_efficiency_short_term' => 'float',
-        'validated_leads' => 'int'
+        'id' => 'string',
+        'created_at' => 'string',
+        'geo_code' => 'string',
+        'industry' => '\Ageras\Api\IndustryResource',
+        'employee' => '\Ageras\Api\EmployeeResource',
+        'partner' => '\Ageras\Api\PartnerSuggestResource',
+        'leads' => '\Ageras\Api\KPILeadsResource',
+        'credits' => '\Ageras\Api\KPICreditsResource',
+        'matches' => '\Ageras\Api\KPIMatchesResource',
+        'partners' => '\Ageras\Api\KPIPartnersResource',
+        'refills' => '\Ageras\Api\KPIRefillsResource',
+        'new_sales' => '\Ageras\Api\KPINewSalesResource',
+        'sales' => '\Ageras\Api\KPISalesResource'
     ];
 
     public static function swaggerTypes()
@@ -71,11 +79,19 @@ class KpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'calls_made' => 'calls_made',
-        'actions_taken' => 'actions_taken',
-        'validation_efficiency_long_term' => 'validation_efficiency_long_term',
-        'validation_efficiency_short_term' => 'validation_efficiency_short_term',
-        'validated_leads' => 'validated_leads'
+        'id' => 'id',
+        'created_at' => 'created_at',
+        'geo_code' => 'geo_code',
+        'industry' => 'industry',
+        'employee' => 'employee',
+        'partner' => 'partner',
+        'leads' => 'leads',
+        'credits' => 'credits',
+        'matches' => 'matches',
+        'partners' => 'partners',
+        'refills' => 'refills',
+        'new_sales' => 'new_sales',
+        'sales' => 'sales'
     ];
 
 
@@ -84,11 +100,19 @@ class KpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'calls_made' => 'setCallsMade',
-        'actions_taken' => 'setActionsTaken',
-        'validation_efficiency_long_term' => 'setValidationEfficiencyLongTerm',
-        'validation_efficiency_short_term' => 'setValidationEfficiencyShortTerm',
-        'validated_leads' => 'setValidatedLeads'
+        'id' => 'setId',
+        'created_at' => 'setCreatedAt',
+        'geo_code' => 'setGeoCode',
+        'industry' => 'setIndustry',
+        'employee' => 'setEmployee',
+        'partner' => 'setPartner',
+        'leads' => 'setLeads',
+        'credits' => 'setCredits',
+        'matches' => 'setMatches',
+        'partners' => 'setPartners',
+        'refills' => 'setRefills',
+        'new_sales' => 'setNewSales',
+        'sales' => 'setSales'
     ];
 
 
@@ -97,11 +121,19 @@ class KpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'calls_made' => 'getCallsMade',
-        'actions_taken' => 'getActionsTaken',
-        'validation_efficiency_long_term' => 'getValidationEfficiencyLongTerm',
-        'validation_efficiency_short_term' => 'getValidationEfficiencyShortTerm',
-        'validated_leads' => 'getValidatedLeads'
+        'id' => 'getId',
+        'created_at' => 'getCreatedAt',
+        'geo_code' => 'getGeoCode',
+        'industry' => 'getIndustry',
+        'employee' => 'getEmployee',
+        'partner' => 'getPartner',
+        'leads' => 'getLeads',
+        'credits' => 'getCredits',
+        'matches' => 'getMatches',
+        'partners' => 'getPartners',
+        'refills' => 'getRefills',
+        'new_sales' => 'getNewSales',
+        'sales' => 'getSales'
     ];
 
     public static function attributeMap()
@@ -135,11 +167,19 @@ class KpiResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['calls_made'] = isset($data['calls_made']) ? $data['calls_made'] : null;
-        $this->container['actions_taken'] = isset($data['actions_taken']) ? $data['actions_taken'] : null;
-        $this->container['validation_efficiency_long_term'] = isset($data['validation_efficiency_long_term']) ? $data['validation_efficiency_long_term'] : null;
-        $this->container['validation_efficiency_short_term'] = isset($data['validation_efficiency_short_term']) ? $data['validation_efficiency_short_term'] : null;
-        $this->container['validated_leads'] = isset($data['validated_leads']) ? $data['validated_leads'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
+        $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
+        $this->container['leads'] = isset($data['leads']) ? $data['leads'] : null;
+        $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
+        $this->container['matches'] = isset($data['matches']) ? $data['matches'] : null;
+        $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
+        $this->container['refills'] = isset($data['refills']) ? $data['refills'] : null;
+        $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
+        $this->container['sales'] = isset($data['sales']) ? $data['sales'] : null;
     }
 
     /**
@@ -168,106 +208,274 @@ class KpiResource implements ArrayAccess
 
 
     /**
-     * Gets calls_made
-     * @return int
+     * Gets id
+     * @return string
      */
-    public function getCallsMade()
+    public function getId()
     {
-        return $this->container['calls_made'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets calls_made
-     * @param int $calls_made Number of calls made.
+     * Sets id
+     * @param string $id Id for the given kpi
      * @return $this
      */
-    public function setCallsMade($calls_made)
+    public function setId($id)
     {
-        $this->container['calls_made'] = $calls_made;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets actions_taken
-     * @return int
+     * Gets created_at
+     * @return string
      */
-    public function getActionsTaken()
+    public function getCreatedAt()
     {
-        return $this->container['actions_taken'];
+        return $this->container['created_at'];
     }
 
     /**
-     * Sets actions_taken
-     * @param int $actions_taken Number of actions taken by the employee.
+     * Sets created_at
+     * @param string $created_at When the kpi was calculated
      * @return $this
      */
-    public function setActionsTaken($actions_taken)
+    public function setCreatedAt($created_at)
     {
-        $this->container['actions_taken'] = $actions_taken;
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
 
     /**
-     * Gets validation_efficiency_long_term
-     * @return float
+     * Gets geo_code
+     * @return string
      */
-    public function getValidationEfficiencyLongTerm()
+    public function getGeoCode()
     {
-        return $this->container['validation_efficiency_long_term'];
+        return $this->container['geo_code'];
     }
 
     /**
-     * Sets validation_efficiency_long_term
-     * @param float $validation_efficiency_long_term Emplyee-level validation ratio for long term, e.g. last 60 days.
+     * Sets geo_code
+     * @param string $geo_code Geo Location Geo
      * @return $this
      */
-    public function setValidationEfficiencyLongTerm($validation_efficiency_long_term)
+    public function setGeoCode($geo_code)
     {
-        $this->container['validation_efficiency_long_term'] = $validation_efficiency_long_term;
+        $this->container['geo_code'] = $geo_code;
 
         return $this;
     }
 
     /**
-     * Gets validation_efficiency_short_term
-     * @return float
+     * Gets industry
+     * @return \Ageras\Api\IndustryResource
      */
-    public function getValidationEfficiencyShortTerm()
+    public function getIndustry()
     {
-        return $this->container['validation_efficiency_short_term'];
+        return $this->container['industry'];
     }
 
     /**
-     * Sets validation_efficiency_short_term
-     * @param float $validation_efficiency_short_term Emplyee-level validation ratio for short term, e.g. last 10 days.
+     * Sets industry
+     * @param \Ageras\Api\IndustryResource $industry
      * @return $this
      */
-    public function setValidationEfficiencyShortTerm($validation_efficiency_short_term)
+    public function setIndustry($industry)
     {
-        $this->container['validation_efficiency_short_term'] = $validation_efficiency_short_term;
+        $this->container['industry'] = $industry;
 
         return $this;
     }
 
     /**
-     * Gets validated_leads
-     * @return int
+     * Gets employee
+     * @return \Ageras\Api\EmployeeResource
      */
-    public function getValidatedLeads()
+    public function getEmployee()
     {
-        return $this->container['validated_leads'];
+        return $this->container['employee'];
     }
 
     /**
-     * Sets validated_leads
-     * @param int $validated_leads Number of validated leads this month.
+     * Sets employee
+     * @param \Ageras\Api\EmployeeResource $employee
      * @return $this
      */
-    public function setValidatedLeads($validated_leads)
+    public function setEmployee($employee)
     {
-        $this->container['validated_leads'] = $validated_leads;
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner
+     * @return \Ageras\Api\PartnerSuggestResource
+     */
+    public function getPartner()
+    {
+        return $this->container['partner'];
+    }
+
+    /**
+     * Sets partner
+     * @param \Ageras\Api\PartnerSuggestResource $partner
+     * @return $this
+     */
+    public function setPartner($partner)
+    {
+        $this->container['partner'] = $partner;
+
+        return $this;
+    }
+
+    /**
+     * Gets leads
+     * @return \Ageras\Api\KPILeadsResource
+     */
+    public function getLeads()
+    {
+        return $this->container['leads'];
+    }
+
+    /**
+     * Sets leads
+     * @param \Ageras\Api\KPILeadsResource $leads
+     * @return $this
+     */
+    public function setLeads($leads)
+    {
+        $this->container['leads'] = $leads;
+
+        return $this;
+    }
+
+    /**
+     * Gets credits
+     * @return \Ageras\Api\KPICreditsResource
+     */
+    public function getCredits()
+    {
+        return $this->container['credits'];
+    }
+
+    /**
+     * Sets credits
+     * @param \Ageras\Api\KPICreditsResource $credits
+     * @return $this
+     */
+    public function setCredits($credits)
+    {
+        $this->container['credits'] = $credits;
+
+        return $this;
+    }
+
+    /**
+     * Gets matches
+     * @return \Ageras\Api\KPIMatchesResource
+     */
+    public function getMatches()
+    {
+        return $this->container['matches'];
+    }
+
+    /**
+     * Sets matches
+     * @param \Ageras\Api\KPIMatchesResource $matches
+     * @return $this
+     */
+    public function setMatches($matches)
+    {
+        $this->container['matches'] = $matches;
+
+        return $this;
+    }
+
+    /**
+     * Gets partners
+     * @return \Ageras\Api\KPIPartnersResource
+     */
+    public function getPartners()
+    {
+        return $this->container['partners'];
+    }
+
+    /**
+     * Sets partners
+     * @param \Ageras\Api\KPIPartnersResource $partners
+     * @return $this
+     */
+    public function setPartners($partners)
+    {
+        $this->container['partners'] = $partners;
+
+        return $this;
+    }
+
+    /**
+     * Gets refills
+     * @return \Ageras\Api\KPIRefillsResource
+     */
+    public function getRefills()
+    {
+        return $this->container['refills'];
+    }
+
+    /**
+     * Sets refills
+     * @param \Ageras\Api\KPIRefillsResource $refills
+     * @return $this
+     */
+    public function setRefills($refills)
+    {
+        $this->container['refills'] = $refills;
+
+        return $this;
+    }
+
+    /**
+     * Gets new_sales
+     * @return \Ageras\Api\KPINewSalesResource
+     */
+    public function getNewSales()
+    {
+        return $this->container['new_sales'];
+    }
+
+    /**
+     * Sets new_sales
+     * @param \Ageras\Api\KPINewSalesResource $new_sales
+     * @return $this
+     */
+    public function setNewSales($new_sales)
+    {
+        $this->container['new_sales'] = $new_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales
+     * @return \Ageras\Api\KPISalesResource
+     */
+    public function getSales()
+    {
+        return $this->container['sales'];
+    }
+
+    /**
+     * Sets sales
+     * @param \Ageras\Api\KPISalesResource $sales
+     * @return $this
+     */
+    public function setSales($sales)
+    {
+        $this->container['sales'] = $sales;
 
         return $this;
     }
