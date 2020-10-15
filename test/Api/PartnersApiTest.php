@@ -594,6 +594,50 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersContractsPdfGet
+     *
+     * Get a PDF download link.
+     *
+     */
+    public function testPartnersContractsPdfGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsSignedpdfCreate
+     *
+     * Upload signed contract.
+     *
+     */
+    public function testPartnersContractsSignedpdfCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsSignedpdfGet
+     *
+     * Get a PDF download link for signed pdf.
+     *
+     */
+    public function testPartnersContractsSignedpdfGet()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsSigningurlGet
+     *
+     * Get a signing url.
+     *
+     */
+    public function testPartnersContractsSigningurlGet()
+    {
+
+    }
+
+    /**
      * Test case for partnersContractsUpdate
      *
      * Update a partner contract..

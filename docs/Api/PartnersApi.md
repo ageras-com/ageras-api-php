@@ -51,6 +51,10 @@ Method | HTTP request | Description
 [**partnersContractsDelete**](PartnersApi.md#partnersContractsDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id} | Delete a partner contract.
 [**partnersContractsGet**](PartnersApi.md#partnersContractsGet) | **GET** /partners/{partner_id}/contracts/{contract_id} | Get a partner contract.
 [**partnersContractsIndex**](PartnersApi.md#partnersContractsIndex) | **GET** /partners/{partner_id}/contracts | List partner contracts.
+[**partnersContractsPdfGet**](PartnersApi.md#partnersContractsPdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/pdf | Get a PDF download link
+[**partnersContractsSignedpdfCreate**](PartnersApi.md#partnersContractsSignedpdfCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/signedpdf | Upload signed contract
+[**partnersContractsSignedpdfGet**](PartnersApi.md#partnersContractsSignedpdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signedpdf | Get a PDF download link for signed pdf
+[**partnersContractsSigningurlGet**](PartnersApi.md#partnersContractsSigningurlGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signingurl | Get a signing url
 [**partnersContractsUpdate**](PartnersApi.md#partnersContractsUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id} | Update a partner contract.
 [**partnersCouponsActionsCreate**](PartnersApi.md#partnersCouponsActionsCreate) | **POST** /partners/{partner_id}/coupons/{coupon_id}/actions | Coupon action
 [**partnersCouponsCreate**](PartnersApi.md#partnersCouponsCreate) | **POST** /partners/{partner_id}/coupons | Create a new partner coupon.
@@ -2855,6 +2859,220 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerContractResult**](../Model/PartnerContractResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsPdfGet**
+> \Ageras\Api\PartnerContractPdfResource partnersContractsPdfGet($partner_id,  $contract_id )
+
+Get a PDF download link
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+
+try {
+    $result = $api_instance->partnersContractsPdfGet($partner_id,  $contract_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsPdfGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractPdfResource**](../Model/PartnerContractPdfResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsSignedpdfCreate**
+> \Ageras\Api\PartnerContractSignedPdfFileResource partnersContractsSignedpdfCreate($partner_id,  $contract_id , $partner_contract_signed_pdf_file_resource)
+
+Upload signed contract
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+$partner_contract_signed_pdf_file_resource = new \Ageras\Api\PartnerContractSignedPdfFileResource(); // \Ageras\Api\PartnerContractSignedPdfFileResource | 
+
+try {
+    $result = $api_instance->partnersContractsSignedpdfCreate($partner_id,  $contract_id , $partner_contract_signed_pdf_file_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsSignedpdfCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+ **partner_contract_signed_pdf_file_resource** | [**\Ageras\Api\PartnerContractSignedPdfFileResource**](../Model/\Ageras\Api\PartnerContractSignedPdfFileResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractSignedPdfFileResource**](../Model/PartnerContractSignedPdfFileResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsSignedpdfGet**
+> \Ageras\Api\PartnerContractPdfResource partnersContractsSignedpdfGet($partner_id,  $contract_id )
+
+Get a PDF download link for signed pdf
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+
+try {
+    $result = $api_instance->partnersContractsSignedpdfGet($partner_id,  $contract_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsSignedpdfGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractPdfResource**](../Model/PartnerContractPdfResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersContractsSigningurlGet**
+> \Ageras\Api\PartnerContractResource partnersContractsSigningurlGet($partner_id,  $contract_id )
+
+Get a signing url
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$contract_id = "contract_id_example"; // string | 
+
+try {
+    $result = $api_instance->partnersContractsSigningurlGet($partner_id,  $contract_id );
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersContractsSigningurlGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **contract_id** | **string**|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerContractResource**](../Model/PartnerContractResource.md)
 
 ### Authorization
 

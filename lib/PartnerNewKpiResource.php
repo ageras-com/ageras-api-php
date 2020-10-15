@@ -59,7 +59,8 @@ class PartnerNewKpiResource implements ArrayAccess
         'deallocations' => 'int',
         'active_contracts_count' => 'float',
         'active_allocation_pauses_count' => 'int',
-        'overdue_invoice_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'overdue_invoice_amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'active_contracts_amount_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -77,7 +78,8 @@ class PartnerNewKpiResource implements ArrayAccess
         'deallocations' => 'deallocations',
         'active_contracts_count' => 'active_contracts_count',
         'active_allocation_pauses_count' => 'active_allocation_pauses_count',
-        'overdue_invoice_amount_incl_vat' => 'overdue_invoice_amount_incl_vat'
+        'overdue_invoice_amount_incl_vat' => 'overdue_invoice_amount_incl_vat',
+        'active_contracts_amount_excl_vat' => 'active_contracts_amount_excl_vat'
     ];
 
 
@@ -91,7 +93,8 @@ class PartnerNewKpiResource implements ArrayAccess
         'deallocations' => 'setDeallocations',
         'active_contracts_count' => 'setActiveContractsCount',
         'active_allocation_pauses_count' => 'setActiveAllocationPausesCount',
-        'overdue_invoice_amount_incl_vat' => 'setOverdueInvoiceAmountInclVat'
+        'overdue_invoice_amount_incl_vat' => 'setOverdueInvoiceAmountInclVat',
+        'active_contracts_amount_excl_vat' => 'setActiveContractsAmountExclVat'
     ];
 
 
@@ -105,7 +108,8 @@ class PartnerNewKpiResource implements ArrayAccess
         'deallocations' => 'getDeallocations',
         'active_contracts_count' => 'getActiveContractsCount',
         'active_allocation_pauses_count' => 'getActiveAllocationPausesCount',
-        'overdue_invoice_amount_incl_vat' => 'getOverdueInvoiceAmountInclVat'
+        'overdue_invoice_amount_incl_vat' => 'getOverdueInvoiceAmountInclVat',
+        'active_contracts_amount_excl_vat' => 'getActiveContractsAmountExclVat'
     ];
 
     public static function attributeMap()
@@ -145,6 +149,7 @@ class PartnerNewKpiResource implements ArrayAccess
         $this->container['active_contracts_count'] = isset($data['active_contracts_count']) ? $data['active_contracts_count'] : null;
         $this->container['active_allocation_pauses_count'] = isset($data['active_allocation_pauses_count']) ? $data['active_allocation_pauses_count'] : null;
         $this->container['overdue_invoice_amount_incl_vat'] = isset($data['overdue_invoice_amount_incl_vat']) ? $data['overdue_invoice_amount_incl_vat'] : null;
+        $this->container['active_contracts_amount_excl_vat'] = isset($data['active_contracts_amount_excl_vat']) ? $data['active_contracts_amount_excl_vat'] : null;
     }
 
     /**
@@ -294,6 +299,27 @@ class PartnerNewKpiResource implements ArrayAccess
     public function setOverdueInvoiceAmountInclVat($overdue_invoice_amount_incl_vat)
     {
         $this->container['overdue_invoice_amount_incl_vat'] = $overdue_invoice_amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets active_contracts_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getActiveContractsAmountExclVat()
+    {
+        return $this->container['active_contracts_amount_excl_vat'];
+    }
+
+    /**
+     * Sets active_contracts_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $active_contracts_amount_excl_vat
+     * @return $this
+     */
+    public function setActiveContractsAmountExclVat($active_contracts_amount_excl_vat)
+    {
+        $this->container['active_contracts_amount_excl_vat'] = $active_contracts_amount_excl_vat;
 
         return $this;
     }

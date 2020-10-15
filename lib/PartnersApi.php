@@ -5240,6 +5240,401 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersContractsPdfGet
+     *
+     * Get a PDF download link
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerContractPdfResource
+     */
+    public function partnersContractsPdfGet($partner_id,  $contract_id )
+    {
+        list($response) = $this->partnersContractsPdfGetWithHttpInfo($partner_id, $contract_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsPdfGetWithHttpInfo
+     *
+     * Get a PDF download link
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerContractPdfResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsPdfGetWithHttpInfo($partner_id,  $contract_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{contract_id}/pdf";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($contract_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerContractPdfResource',
+                '/partners/{partner_id}/contracts/{contract_id}/pdf'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerContractPdfResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerContractPdfResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersContractsSignedpdfCreate
+     *
+     * Upload signed contract
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @param \Ageras\Api\PartnerContractSignedPdfFileResource $partner_contract_signed_pdf_file_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerContractSignedPdfFileResource
+     */
+    public function partnersContractsSignedpdfCreate($partner_id,  $contract_id , $partner_contract_signed_pdf_file_resource)
+    {
+        list($response) = $this->partnersContractsSignedpdfCreateWithHttpInfo($partner_id, $contract_id, $partner_contract_signed_pdf_file_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsSignedpdfCreateWithHttpInfo
+     *
+     * Upload signed contract
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @param \Ageras\Api\PartnerContractSignedPdfFileResource $partner_contract_signed_pdf_file_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerContractSignedPdfFileResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsSignedpdfCreateWithHttpInfo($partner_id,  $contract_id , $partner_contract_signed_pdf_file_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{contract_id}/signedpdf";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($contract_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_contract_signed_pdf_file_resource)) {
+            $_tempBody = $partner_contract_signed_pdf_file_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerContractSignedPdfFileResource',
+                '/partners/{partner_id}/contracts/{contract_id}/signedpdf'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerContractSignedPdfFileResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerContractSignedPdfFileResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersContractsSignedpdfGet
+     *
+     * Get a PDF download link for signed pdf
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerContractPdfResource
+     */
+    public function partnersContractsSignedpdfGet($partner_id,  $contract_id )
+    {
+        list($response) = $this->partnersContractsSignedpdfGetWithHttpInfo($partner_id, $contract_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsSignedpdfGetWithHttpInfo
+     *
+     * Get a PDF download link for signed pdf
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerContractPdfResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsSignedpdfGetWithHttpInfo($partner_id,  $contract_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{contract_id}/signedpdf";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($contract_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerContractPdfResource',
+                '/partners/{partner_id}/contracts/{contract_id}/signedpdf'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerContractPdfResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerContractPdfResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersContractsSigningurlGet
+     *
+     * Get a signing url
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerContractResource
+     */
+    public function partnersContractsSigningurlGet($partner_id,  $contract_id )
+    {
+        list($response) = $this->partnersContractsSigningurlGetWithHttpInfo($partner_id, $contract_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsSigningurlGetWithHttpInfo
+     *
+     * Get a signing url
+     *
+     * @param string $partner_id 
+     * @param string $contract_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerContractResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsSigningurlGetWithHttpInfo($partner_id,  $contract_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{contract_id}/signingurl";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($contract_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerContractResource',
+                '/partners/{partner_id}/contracts/{contract_id}/signingurl'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerContractResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerContractResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersContractsUpdate
      *
      * Update a partner contract.

@@ -65,6 +65,7 @@ class PartnerContractResource implements ArrayAccess
         'canceled_at' => 'string',
         'has_been_replaced' => 'bool',
         'starts_at' => 'string',
+        'signed_at' => 'string',
         'business_units' => '\Ageras\Api\PartnerContractBusinessUnitResource[]',
         'current_partner_contract_period' => '\Ageras\Api\PartnerContractPeriodResource',
         'intending_to_replace_partner_contract_id' => 'int',
@@ -95,6 +96,7 @@ class PartnerContractResource implements ArrayAccess
         'canceled_at' => 'canceled_at',
         'has_been_replaced' => 'has_been_replaced',
         'starts_at' => 'starts_at',
+        'signed_at' => 'signed_at',
         'business_units' => 'business_units',
         'current_partner_contract_period' => 'current_partner_contract_period',
         'intending_to_replace_partner_contract_id' => 'intending_to_replace_partner_contract_id',
@@ -121,6 +123,7 @@ class PartnerContractResource implements ArrayAccess
         'canceled_at' => 'setCanceledAt',
         'has_been_replaced' => 'setHasBeenReplaced',
         'starts_at' => 'setStartsAt',
+        'signed_at' => 'setSignedAt',
         'business_units' => 'setBusinessUnits',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
         'intending_to_replace_partner_contract_id' => 'setIntendingToReplacePartnerContractId',
@@ -147,6 +150,7 @@ class PartnerContractResource implements ArrayAccess
         'canceled_at' => 'getCanceledAt',
         'has_been_replaced' => 'getHasBeenReplaced',
         'starts_at' => 'getStartsAt',
+        'signed_at' => 'getSignedAt',
         'business_units' => 'getBusinessUnits',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
         'intending_to_replace_partner_contract_id' => 'getIntendingToReplacePartnerContractId',
@@ -198,6 +202,7 @@ class PartnerContractResource implements ArrayAccess
         $this->container['canceled_at'] = isset($data['canceled_at']) ? $data['canceled_at'] : null;
         $this->container['has_been_replaced'] = isset($data['has_been_replaced']) ? $data['has_been_replaced'] : false;
         $this->container['starts_at'] = isset($data['starts_at']) ? $data['starts_at'] : null;
+        $this->container['signed_at'] = isset($data['signed_at']) ? $data['signed_at'] : null;
         $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
         $this->container['intending_to_replace_partner_contract_id'] = isset($data['intending_to_replace_partner_contract_id']) ? $data['intending_to_replace_partner_contract_id'] : null;
@@ -459,6 +464,27 @@ class PartnerContractResource implements ArrayAccess
     public function setStartsAt($starts_at)
     {
         $this->container['starts_at'] = $starts_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets signed_at
+     * @return string
+     */
+    public function getSignedAt()
+    {
+        return $this->container['signed_at'];
+    }
+
+    /**
+     * Sets signed_at
+     * @param string $signed_at When the contract was signed.
+     * @return $this
+     */
+    public function setSignedAt($signed_at)
+    {
+        $this->container['signed_at'] = $signed_at;
 
         return $this;
     }

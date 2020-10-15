@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **canceled_at** | **string** | When the contract was canceled. | [optional] 
 **has_been_replaced** | **bool** | If the contract has been replaced by another contract. | [optional] [default to false]
 **starts_at** | **string** | When the contract should start. | [optional] 
+**signed_at** | **string** | When the contract was signed. | [optional] 
 **business_units** | [**\Ageras\Api\PartnerContractBusinessUnitResource[]**](PartnerContractBusinessUnitResource.md) | Business units on this contract. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerContractPeriodResource**](PartnerContractPeriodResource.md) |  | [optional] 
 **intending_to_replace_partner_contract_id** | **int** | ID of the contract that this contract intends to replace. | [optional] 
