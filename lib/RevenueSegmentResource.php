@@ -60,7 +60,9 @@ class RevenueSegmentResource implements ArrayAccess
         'minimum_revenue' => '\Ageras\Api\AmountResource',
         'maximum_revenue' => '\Ageras\Api\AmountResource',
         'lb_price_excl_vat' => '\Ageras\Api\AmountResource',
-        'pps_price_excl_vat' => '\Ageras\Api\AmountResource'
+        'pps_price_excl_vat' => '\Ageras\Api\AmountResource',
+        'minimum_lb_price_excl_vat' => '\Ageras\Api\AmountResource',
+        'minimum_pps_price_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,9 @@ class RevenueSegmentResource implements ArrayAccess
         'minimum_revenue' => 'minimum_revenue',
         'maximum_revenue' => 'maximum_revenue',
         'lb_price_excl_vat' => 'lb_price_excl_vat',
-        'pps_price_excl_vat' => 'pps_price_excl_vat'
+        'pps_price_excl_vat' => 'pps_price_excl_vat',
+        'minimum_lb_price_excl_vat' => 'minimum_lb_price_excl_vat',
+        'minimum_pps_price_excl_vat' => 'minimum_pps_price_excl_vat'
     ];
 
 
@@ -94,7 +98,9 @@ class RevenueSegmentResource implements ArrayAccess
         'minimum_revenue' => 'setMinimumRevenue',
         'maximum_revenue' => 'setMaximumRevenue',
         'lb_price_excl_vat' => 'setLbPriceExclVat',
-        'pps_price_excl_vat' => 'setPpsPriceExclVat'
+        'pps_price_excl_vat' => 'setPpsPriceExclVat',
+        'minimum_lb_price_excl_vat' => 'setMinimumLbPriceExclVat',
+        'minimum_pps_price_excl_vat' => 'setMinimumPpsPriceExclVat'
     ];
 
 
@@ -109,7 +115,9 @@ class RevenueSegmentResource implements ArrayAccess
         'minimum_revenue' => 'getMinimumRevenue',
         'maximum_revenue' => 'getMaximumRevenue',
         'lb_price_excl_vat' => 'getLbPriceExclVat',
-        'pps_price_excl_vat' => 'getPpsPriceExclVat'
+        'pps_price_excl_vat' => 'getPpsPriceExclVat',
+        'minimum_lb_price_excl_vat' => 'getMinimumLbPriceExclVat',
+        'minimum_pps_price_excl_vat' => 'getMinimumPpsPriceExclVat'
     ];
 
     public static function attributeMap()
@@ -150,6 +158,8 @@ class RevenueSegmentResource implements ArrayAccess
         $this->container['maximum_revenue'] = isset($data['maximum_revenue']) ? $data['maximum_revenue'] : null;
         $this->container['lb_price_excl_vat'] = isset($data['lb_price_excl_vat']) ? $data['lb_price_excl_vat'] : null;
         $this->container['pps_price_excl_vat'] = isset($data['pps_price_excl_vat']) ? $data['pps_price_excl_vat'] : null;
+        $this->container['minimum_lb_price_excl_vat'] = isset($data['minimum_lb_price_excl_vat']) ? $data['minimum_lb_price_excl_vat'] : null;
+        $this->container['minimum_pps_price_excl_vat'] = isset($data['minimum_pps_price_excl_vat']) ? $data['minimum_pps_price_excl_vat'] : null;
     }
 
     /**
@@ -320,6 +330,48 @@ class RevenueSegmentResource implements ArrayAccess
     public function setPpsPriceExclVat($pps_price_excl_vat)
     {
         $this->container['pps_price_excl_vat'] = $pps_price_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets minimum_lb_price_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getMinimumLbPriceExclVat()
+    {
+        return $this->container['minimum_lb_price_excl_vat'];
+    }
+
+    /**
+     * Sets minimum_lb_price_excl_vat
+     * @param \Ageras\Api\AmountResource $minimum_lb_price_excl_vat
+     * @return $this
+     */
+    public function setMinimumLbPriceExclVat($minimum_lb_price_excl_vat)
+    {
+        $this->container['minimum_lb_price_excl_vat'] = $minimum_lb_price_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets minimum_pps_price_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getMinimumPpsPriceExclVat()
+    {
+        return $this->container['minimum_pps_price_excl_vat'];
+    }
+
+    /**
+     * Sets minimum_pps_price_excl_vat
+     * @param \Ageras\Api\AmountResource $minimum_pps_price_excl_vat
+     * @return $this
+     */
+    public function setMinimumPpsPriceExclVat($minimum_pps_price_excl_vat)
+    {
+        $this->container['minimum_pps_price_excl_vat'] = $minimum_pps_price_excl_vat;
 
         return $this;
     }

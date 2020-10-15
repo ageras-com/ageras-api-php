@@ -171,6 +171,14 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "signed_at"
+     */
+    public function testPropertySignedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "business_units"
      */
     public function testPropertyBusinessUnits()

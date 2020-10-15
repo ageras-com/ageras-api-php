@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerNewKpiResourceTest
+ * PartnerContractSignedPdfFileResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerNewKpiResourceTest Class Doc Comment
+ * PartnerContractSignedPdfFileResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerNewKpiResource
+// * @description PartnerContractSignedPdfFileResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerNewKpiResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerContractSignedPdfFileResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,65 +75,17 @@ class PartnerNewKpiResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartnerNewKpiResource"
+     * Test "PartnerContractSignedPdfFileResource"
      */
-    public function testPartnerNewKpiResource()
+    public function testPartnerContractSignedPdfFileResource()
     {
 
     }
 
     /**
-     * Test attribute "success_ratio"
+     * Test attribute "signed_contract"
      */
-    public function testPropertySuccessRatio()
-    {
-
-    }
-
-    /**
-     * Test attribute "publishing_ratio"
-     */
-    public function testPropertyPublishingRatio()
-    {
-
-    }
-
-    /**
-     * Test attribute "deallocations"
-     */
-    public function testPropertyDeallocations()
-    {
-
-    }
-
-    /**
-     * Test attribute "active_contracts_count"
-     */
-    public function testPropertyActiveContractsCount()
-    {
-
-    }
-
-    /**
-     * Test attribute "active_allocation_pauses_count"
-     */
-    public function testPropertyActiveAllocationPausesCount()
-    {
-
-    }
-
-    /**
-     * Test attribute "overdue_invoice_amount_incl_vat"
-     */
-    public function testPropertyOverdueInvoiceAmountInclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "active_contracts_amount_excl_vat"
-     */
-    public function testPropertyActiveContractsAmountExclVat()
+    public function testPropertySignedContract()
     {
 
     }

@@ -138,4 +138,20 @@ class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "minimum_lb_price_excl_vat"
+     */
+    public function testPropertyMinimumLbPriceExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "minimum_pps_price_excl_vat"
+     */
+    public function testPropertyMinimumPpsPriceExclVat()
+    {
+
+    }
+
 }
