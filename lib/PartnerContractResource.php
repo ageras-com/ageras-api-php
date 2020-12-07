@@ -68,6 +68,7 @@ class PartnerContractResource implements ArrayAccess
         'signed_at' => 'string',
         'business_units' => '\Ageras\Api\PartnerContractBusinessUnitResource[]',
         'current_partner_contract_period' => '\Ageras\Api\PartnerContractPeriodResource',
+        'churns_at' => 'string',
         'intending_to_replace_partner_contract_id' => 'int',
         'replaces_partner_contract_id' => 'int',
         'category' => '\Ageras\Api\PartnerCategoryResource',
@@ -99,6 +100,7 @@ class PartnerContractResource implements ArrayAccess
         'signed_at' => 'signed_at',
         'business_units' => 'business_units',
         'current_partner_contract_period' => 'current_partner_contract_period',
+        'churns_at' => 'churns_at',
         'intending_to_replace_partner_contract_id' => 'intending_to_replace_partner_contract_id',
         'replaces_partner_contract_id' => 'replaces_partner_contract_id',
         'category' => 'category',
@@ -126,6 +128,7 @@ class PartnerContractResource implements ArrayAccess
         'signed_at' => 'setSignedAt',
         'business_units' => 'setBusinessUnits',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
+        'churns_at' => 'setChurnsAt',
         'intending_to_replace_partner_contract_id' => 'setIntendingToReplacePartnerContractId',
         'replaces_partner_contract_id' => 'setReplacesPartnerContractId',
         'category' => 'setCategory',
@@ -153,6 +156,7 @@ class PartnerContractResource implements ArrayAccess
         'signed_at' => 'getSignedAt',
         'business_units' => 'getBusinessUnits',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
+        'churns_at' => 'getChurnsAt',
         'intending_to_replace_partner_contract_id' => 'getIntendingToReplacePartnerContractId',
         'replaces_partner_contract_id' => 'getReplacesPartnerContractId',
         'category' => 'getCategory',
@@ -205,6 +209,7 @@ class PartnerContractResource implements ArrayAccess
         $this->container['signed_at'] = isset($data['signed_at']) ? $data['signed_at'] : null;
         $this->container['business_units'] = isset($data['business_units']) ? $data['business_units'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
+        $this->container['churns_at'] = isset($data['churns_at']) ? $data['churns_at'] : null;
         $this->container['intending_to_replace_partner_contract_id'] = isset($data['intending_to_replace_partner_contract_id']) ? $data['intending_to_replace_partner_contract_id'] : null;
         $this->container['replaces_partner_contract_id'] = isset($data['replaces_partner_contract_id']) ? $data['replaces_partner_contract_id'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
@@ -527,6 +532,27 @@ class PartnerContractResource implements ArrayAccess
     public function setCurrentPartnerContractPeriod($current_partner_contract_period)
     {
         $this->container['current_partner_contract_period'] = $current_partner_contract_period;
+
+        return $this;
+    }
+
+    /**
+     * Gets churns_at
+     * @return string
+     */
+    public function getChurnsAt()
+    {
+        return $this->container['churns_at'];
+    }
+
+    /**
+     * Sets churns_at
+     * @param string $churns_at The end date of the last created period on a canceled contract, marking when the contract will truly end.
+     * @return $this
+     */
+    public function setChurnsAt($churns_at)
+    {
+        $this->container['churns_at'] = $churns_at;
 
         return $this;
     }

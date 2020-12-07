@@ -63,6 +63,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'display_name' => 'string',
         'geo_range' => 'int',
         'current_allocation' => '\Ageras\Api\PartnerBusinessUnitAllocationResource',
+        'current_month_allocation' => '\Ageras\Api\PartnerBusinessUnitMonthAllocationResource',
         'accumulated_allocation' => '\Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource',
         'desired_revenue_range' => '\Ageras\Api\PartnerBusinessUnitRevenueRangeResource',
         'desired_sectors' => '\Ageras\Api\SectorResource[]',
@@ -76,7 +77,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'retired_at' => 'string',
         'partner_contract' => '\Ageras\Api\PartnerBusinessUnitPartnerContractResource',
         'wants_exclusive_leads' => 'bool',
-        'highlighted_notes' => 'string[]'
+        'highlighted_notes' => 'string[]',
+        'kpi' => '\Ageras\Api\PartnerBusinessUnitKpiResource'
     ];
 
     public static function swaggerTypes()
@@ -98,6 +100,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'display_name' => 'display_name',
         'geo_range' => 'geo_range',
         'current_allocation' => 'current_allocation',
+        'current_month_allocation' => 'current_month_allocation',
         'accumulated_allocation' => 'accumulated_allocation',
         'desired_revenue_range' => 'desired_revenue_range',
         'desired_sectors' => 'desired_sectors',
@@ -111,7 +114,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'retired_at' => 'retired_at',
         'partner_contract' => 'partner_contract',
         'wants_exclusive_leads' => 'wants_exclusive_leads',
-        'highlighted_notes' => 'highlighted_notes'
+        'highlighted_notes' => 'highlighted_notes',
+        'kpi' => 'kpi'
     ];
 
 
@@ -129,6 +133,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'display_name' => 'setDisplayName',
         'geo_range' => 'setGeoRange',
         'current_allocation' => 'setCurrentAllocation',
+        'current_month_allocation' => 'setCurrentMonthAllocation',
         'accumulated_allocation' => 'setAccumulatedAllocation',
         'desired_revenue_range' => 'setDesiredRevenueRange',
         'desired_sectors' => 'setDesiredSectors',
@@ -142,7 +147,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'retired_at' => 'setRetiredAt',
         'partner_contract' => 'setPartnerContract',
         'wants_exclusive_leads' => 'setWantsExclusiveLeads',
-        'highlighted_notes' => 'setHighlightedNotes'
+        'highlighted_notes' => 'setHighlightedNotes',
+        'kpi' => 'setKpi'
     ];
 
 
@@ -160,6 +166,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'display_name' => 'getDisplayName',
         'geo_range' => 'getGeoRange',
         'current_allocation' => 'getCurrentAllocation',
+        'current_month_allocation' => 'getCurrentMonthAllocation',
         'accumulated_allocation' => 'getAccumulatedAllocation',
         'desired_revenue_range' => 'getDesiredRevenueRange',
         'desired_sectors' => 'getDesiredSectors',
@@ -173,7 +180,8 @@ class PartnerBusinessUnitResource implements ArrayAccess
         'retired_at' => 'getRetiredAt',
         'partner_contract' => 'getPartnerContract',
         'wants_exclusive_leads' => 'getWantsExclusiveLeads',
-        'highlighted_notes' => 'getHighlightedNotes'
+        'highlighted_notes' => 'getHighlightedNotes',
+        'kpi' => 'getKpi'
     ];
 
     public static function attributeMap()
@@ -216,6 +224,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
         $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
         $this->container['current_allocation'] = isset($data['current_allocation']) ? $data['current_allocation'] : null;
+        $this->container['current_month_allocation'] = isset($data['current_month_allocation']) ? $data['current_month_allocation'] : null;
         $this->container['accumulated_allocation'] = isset($data['accumulated_allocation']) ? $data['accumulated_allocation'] : null;
         $this->container['desired_revenue_range'] = isset($data['desired_revenue_range']) ? $data['desired_revenue_range'] : null;
         $this->container['desired_sectors'] = isset($data['desired_sectors']) ? $data['desired_sectors'] : null;
@@ -230,6 +239,7 @@ class PartnerBusinessUnitResource implements ArrayAccess
         $this->container['partner_contract'] = isset($data['partner_contract']) ? $data['partner_contract'] : null;
         $this->container['wants_exclusive_leads'] = isset($data['wants_exclusive_leads']) ? $data['wants_exclusive_leads'] : false;
         $this->container['highlighted_notes'] = isset($data['highlighted_notes']) ? $data['highlighted_notes'] : null;
+        $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
     }
 
     /**
@@ -442,6 +452,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setCurrentAllocation($current_allocation)
     {
         $this->container['current_allocation'] = $current_allocation;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_month_allocation
+     * @return \Ageras\Api\PartnerBusinessUnitMonthAllocationResource
+     */
+    public function getCurrentMonthAllocation()
+    {
+        return $this->container['current_month_allocation'];
+    }
+
+    /**
+     * Sets current_month_allocation
+     * @param \Ageras\Api\PartnerBusinessUnitMonthAllocationResource $current_month_allocation
+     * @return $this
+     */
+    public function setCurrentMonthAllocation($current_month_allocation)
+    {
+        $this->container['current_month_allocation'] = $current_month_allocation;
 
         return $this;
     }
@@ -736,6 +767,27 @@ class PartnerBusinessUnitResource implements ArrayAccess
     public function setHighlightedNotes($highlighted_notes)
     {
         $this->container['highlighted_notes'] = $highlighted_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets kpi
+     * @return \Ageras\Api\PartnerBusinessUnitKpiResource
+     */
+    public function getKpi()
+    {
+        return $this->container['kpi'];
+    }
+
+    /**
+     * Sets kpi
+     * @param \Ageras\Api\PartnerBusinessUnitKpiResource $kpi
+     * @return $this
+     */
+    public function setKpi($kpi)
+    {
+        $this->container['kpi'] = $kpi;
 
         return $this;
     }

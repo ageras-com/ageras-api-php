@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **signed_at** | **string** | When the contract was signed. | [optional] 
 **business_units** | [**\Ageras\Api\PartnerContractBusinessUnitResource[]**](PartnerContractBusinessUnitResource.md) | Business units on this contract. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerContractPeriodResource**](PartnerContractPeriodResource.md) |  | [optional] 
+**churns_at** | **string** | The end date of the last created period on a canceled contract, marking when the contract will truly end. | [optional] 
 **intending_to_replace_partner_contract_id** | **int** | ID of the contract that this contract intends to replace. | [optional] 
 **replaces_partner_contract_id** | **int** | ID of the contract being replaced by this contract. | [optional] 
 **category** | [**\Ageras\Api\PartnerCategoryResource**](PartnerCategoryResource.md) |  | [optional] 

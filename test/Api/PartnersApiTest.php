@@ -132,6 +132,17 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersBrowserpushsubscriptionsCreate
+     *
+     * Create a browser push subscription.
+     *
+     */
+    public function testPartnersBrowserpushsubscriptionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersBusinessunitcontractsCreate
      *
      * Create a business unit contract..
@@ -1227,17 +1238,6 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPartnersNotesIndex2()
-    {
-
-    }
-
-    /**
-     * Test case for partnersNotesUpdate
-     *
-     * Update a partner note..
-     *
-     */
-    public function testPartnersNotesUpdate()
     {
 
     }

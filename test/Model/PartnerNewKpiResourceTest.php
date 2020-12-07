@@ -138,4 +138,36 @@ class PartnerNewKpiResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "next_contract_renewal_at"
+     */
+    public function testPropertyNextContractRenewalAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "active_business_units_amount_excl_vat"
+     */
+    public function testPropertyActiveBusinessUnitsAmountExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "active_business_units_mrr_excl_vat"
+     */
+    public function testPropertyActiveBusinessUnitsMrrExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_period_weighted_delivery_trend"
+     */
+    public function testPropertyCurrentPeriodWeightedDeliveryTrend()
+    {
+
+    }
+
 }

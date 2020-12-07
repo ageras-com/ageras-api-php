@@ -4,9 +4,63 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**clientsBrowserpushsubscriptionsCreate**](ClientsApi.md#clientsBrowserpushsubscriptionsCreate) | **POST** /clients/{client_id}/browserpushsubscriptions | Create a browser push subscription
 [**clientsGet**](ClientsApi.md#clientsGet) | **GET** /clients/{client_id} | Return a Client
 [**clientsUpdate**](ClientsApi.md#clientsUpdate) | **PUT** /clients/{client_id} | Update a client
 
+
+# **clientsBrowserpushsubscriptionsCreate**
+> \Ageras\Api\BrowserPushSubscriptionResource clientsBrowserpushsubscriptionsCreate($client_id , $browser_push_subscription_resource)
+
+Create a browser push subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\ClientsApi();
+$client_id = "client_id_example"; // string | 
+$browser_push_subscription_resource = new \Ageras\Api\BrowserPushSubscriptionResource(); // \Ageras\Api\BrowserPushSubscriptionResource | 
+
+try {
+    $result = $api_instance->clientsBrowserpushsubscriptionsCreate($client_id , $browser_push_subscription_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ClientsApi->clientsBrowserpushsubscriptionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **client_id** | **string**|  |
+ **browser_push_subscription_resource** | [**\Ageras\Api\BrowserPushSubscriptionResource**](../Model/\Ageras\Api\BrowserPushSubscriptionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\BrowserPushSubscriptionResource**](../Model/BrowserPushSubscriptionResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **clientsGet**
 > \Ageras\Api\ClientResource clientsGet($client_id )

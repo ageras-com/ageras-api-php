@@ -60,7 +60,11 @@ class PartnerNewKpiResource implements ArrayAccess
         'active_contracts_count' => 'float',
         'active_allocation_pauses_count' => 'int',
         'overdue_invoice_amount_incl_vat' => '\Ageras\Api\AmountResource',
-        'active_contracts_amount_excl_vat' => '\Ageras\Api\AmountResource'
+        'active_contracts_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'next_contract_renewal_at' => 'string',
+        'active_business_units_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'active_business_units_mrr_excl_vat' => '\Ageras\Api\AmountResource',
+        'current_period_weighted_delivery_trend' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +83,11 @@ class PartnerNewKpiResource implements ArrayAccess
         'active_contracts_count' => 'active_contracts_count',
         'active_allocation_pauses_count' => 'active_allocation_pauses_count',
         'overdue_invoice_amount_incl_vat' => 'overdue_invoice_amount_incl_vat',
-        'active_contracts_amount_excl_vat' => 'active_contracts_amount_excl_vat'
+        'active_contracts_amount_excl_vat' => 'active_contracts_amount_excl_vat',
+        'next_contract_renewal_at' => 'next_contract_renewal_at',
+        'active_business_units_amount_excl_vat' => 'active_business_units_amount_excl_vat',
+        'active_business_units_mrr_excl_vat' => 'active_business_units_mrr_excl_vat',
+        'current_period_weighted_delivery_trend' => 'current_period_weighted_delivery_trend'
     ];
 
 
@@ -94,7 +102,11 @@ class PartnerNewKpiResource implements ArrayAccess
         'active_contracts_count' => 'setActiveContractsCount',
         'active_allocation_pauses_count' => 'setActiveAllocationPausesCount',
         'overdue_invoice_amount_incl_vat' => 'setOverdueInvoiceAmountInclVat',
-        'active_contracts_amount_excl_vat' => 'setActiveContractsAmountExclVat'
+        'active_contracts_amount_excl_vat' => 'setActiveContractsAmountExclVat',
+        'next_contract_renewal_at' => 'setNextContractRenewalAt',
+        'active_business_units_amount_excl_vat' => 'setActiveBusinessUnitsAmountExclVat',
+        'active_business_units_mrr_excl_vat' => 'setActiveBusinessUnitsMrrExclVat',
+        'current_period_weighted_delivery_trend' => 'setCurrentPeriodWeightedDeliveryTrend'
     ];
 
 
@@ -109,7 +121,11 @@ class PartnerNewKpiResource implements ArrayAccess
         'active_contracts_count' => 'getActiveContractsCount',
         'active_allocation_pauses_count' => 'getActiveAllocationPausesCount',
         'overdue_invoice_amount_incl_vat' => 'getOverdueInvoiceAmountInclVat',
-        'active_contracts_amount_excl_vat' => 'getActiveContractsAmountExclVat'
+        'active_contracts_amount_excl_vat' => 'getActiveContractsAmountExclVat',
+        'next_contract_renewal_at' => 'getNextContractRenewalAt',
+        'active_business_units_amount_excl_vat' => 'getActiveBusinessUnitsAmountExclVat',
+        'active_business_units_mrr_excl_vat' => 'getActiveBusinessUnitsMrrExclVat',
+        'current_period_weighted_delivery_trend' => 'getCurrentPeriodWeightedDeliveryTrend'
     ];
 
     public static function attributeMap()
@@ -150,6 +166,10 @@ class PartnerNewKpiResource implements ArrayAccess
         $this->container['active_allocation_pauses_count'] = isset($data['active_allocation_pauses_count']) ? $data['active_allocation_pauses_count'] : null;
         $this->container['overdue_invoice_amount_incl_vat'] = isset($data['overdue_invoice_amount_incl_vat']) ? $data['overdue_invoice_amount_incl_vat'] : null;
         $this->container['active_contracts_amount_excl_vat'] = isset($data['active_contracts_amount_excl_vat']) ? $data['active_contracts_amount_excl_vat'] : null;
+        $this->container['next_contract_renewal_at'] = isset($data['next_contract_renewal_at']) ? $data['next_contract_renewal_at'] : null;
+        $this->container['active_business_units_amount_excl_vat'] = isset($data['active_business_units_amount_excl_vat']) ? $data['active_business_units_amount_excl_vat'] : null;
+        $this->container['active_business_units_mrr_excl_vat'] = isset($data['active_business_units_mrr_excl_vat']) ? $data['active_business_units_mrr_excl_vat'] : null;
+        $this->container['current_period_weighted_delivery_trend'] = isset($data['current_period_weighted_delivery_trend']) ? $data['current_period_weighted_delivery_trend'] : null;
     }
 
     /**
@@ -320,6 +340,90 @@ class PartnerNewKpiResource implements ArrayAccess
     public function setActiveContractsAmountExclVat($active_contracts_amount_excl_vat)
     {
         $this->container['active_contracts_amount_excl_vat'] = $active_contracts_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_contract_renewal_at
+     * @return string
+     */
+    public function getNextContractRenewalAt()
+    {
+        return $this->container['next_contract_renewal_at'];
+    }
+
+    /**
+     * Sets next_contract_renewal_at
+     * @param string $next_contract_renewal_at Next contract renewal date
+     * @return $this
+     */
+    public function setNextContractRenewalAt($next_contract_renewal_at)
+    {
+        $this->container['next_contract_renewal_at'] = $next_contract_renewal_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets active_business_units_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getActiveBusinessUnitsAmountExclVat()
+    {
+        return $this->container['active_business_units_amount_excl_vat'];
+    }
+
+    /**
+     * Sets active_business_units_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $active_business_units_amount_excl_vat
+     * @return $this
+     */
+    public function setActiveBusinessUnitsAmountExclVat($active_business_units_amount_excl_vat)
+    {
+        $this->container['active_business_units_amount_excl_vat'] = $active_business_units_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets active_business_units_mrr_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getActiveBusinessUnitsMrrExclVat()
+    {
+        return $this->container['active_business_units_mrr_excl_vat'];
+    }
+
+    /**
+     * Sets active_business_units_mrr_excl_vat
+     * @param \Ageras\Api\AmountResource $active_business_units_mrr_excl_vat
+     * @return $this
+     */
+    public function setActiveBusinessUnitsMrrExclVat($active_business_units_mrr_excl_vat)
+    {
+        $this->container['active_business_units_mrr_excl_vat'] = $active_business_units_mrr_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_period_weighted_delivery_trend
+     * @return float
+     */
+    public function getCurrentPeriodWeightedDeliveryTrend()
+    {
+        return $this->container['current_period_weighted_delivery_trend'];
+    }
+
+    /**
+     * Sets current_period_weighted_delivery_trend
+     * @param float $current_period_weighted_delivery_trend Ratio between optimal delivery ratio and acutal delivery ratio within current contract period
+     * @return $this
+     */
+    public function setCurrentPeriodWeightedDeliveryTrend($current_period_weighted_delivery_trend)
+    {
+        $this->container['current_period_weighted_delivery_trend'] = $current_period_weighted_delivery_trend;
 
         return $this;
     }

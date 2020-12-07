@@ -62,7 +62,8 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'binding_period_months' => 'int',
         'billing_frequency_months' => 'int',
         'current_partner_contract_period' => '\Ageras\Api\PartnerBusinessUnitPartnerContractPeriodResource',
-        'allocation_pauses' => '\Ageras\Api\DateSpanResource[]'
+        'allocation_pauses' => '\Ageras\Api\DateSpanResource[]',
+        'business_unit_mrr' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'binding_period_months' => 'binding_period_months',
         'billing_frequency_months' => 'billing_frequency_months',
         'current_partner_contract_period' => 'current_partner_contract_period',
-        'allocation_pauses' => 'allocation_pauses'
+        'allocation_pauses' => 'allocation_pauses',
+        'business_unit_mrr' => 'business_unit_mrr'
     ];
 
 
@@ -100,7 +102,8 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'binding_period_months' => 'setBindingPeriodMonths',
         'billing_frequency_months' => 'setBillingFrequencyMonths',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
-        'allocation_pauses' => 'setAllocationPauses'
+        'allocation_pauses' => 'setAllocationPauses',
+        'business_unit_mrr' => 'setBusinessUnitMrr'
     ];
 
 
@@ -117,7 +120,8 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'binding_period_months' => 'getBindingPeriodMonths',
         'billing_frequency_months' => 'getBillingFrequencyMonths',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
-        'allocation_pauses' => 'getAllocationPauses'
+        'allocation_pauses' => 'getAllocationPauses',
+        'business_unit_mrr' => 'getBusinessUnitMrr'
     ];
 
     public static function attributeMap()
@@ -160,6 +164,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         $this->container['billing_frequency_months'] = isset($data['billing_frequency_months']) ? $data['billing_frequency_months'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
         $this->container['allocation_pauses'] = isset($data['allocation_pauses']) ? $data['allocation_pauses'] : null;
+        $this->container['business_unit_mrr'] = isset($data['business_unit_mrr']) ? $data['business_unit_mrr'] : null;
     }
 
     /**
@@ -372,6 +377,27 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
     public function setAllocationPauses($allocation_pauses)
     {
         $this->container['allocation_pauses'] = $allocation_pauses;
+
+        return $this;
+    }
+
+    /**
+     * Gets business_unit_mrr
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getBusinessUnitMrr()
+    {
+        return $this->container['business_unit_mrr'];
+    }
+
+    /**
+     * Sets business_unit_mrr
+     * @param \Ageras\Api\AmountResource $business_unit_mrr
+     * @return $this
+     */
+    public function setBusinessUnitMrr($business_unit_mrr)
+    {
+        $this->container['business_unit_mrr'] = $business_unit_mrr;
 
         return $this;
     }

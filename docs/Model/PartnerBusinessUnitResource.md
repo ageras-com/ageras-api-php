@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **display_name** | **string** | Human-readable name. | [optional] 
 **geo_range** | **int** | Distance this business unit is willing to look for leads. | [optional] 
 **current_allocation** | [**\Ageras\Api\PartnerBusinessUnitAllocationResource**](PartnerBusinessUnitAllocationResource.md) |  | [optional] 
+**current_month_allocation** | [**\Ageras\Api\PartnerBusinessUnitMonthAllocationResource**](PartnerBusinessUnitMonthAllocationResource.md) |  | [optional] 
 **accumulated_allocation** | [**\Ageras\Api\PartnerBusinessUnitAccumulatedAllocationResource**](PartnerBusinessUnitAccumulatedAllocationResource.md) |  | [optional] 
 **desired_revenue_range** | [**\Ageras\Api\PartnerBusinessUnitRevenueRangeResource**](PartnerBusinessUnitRevenueRangeResource.md) |  | [optional] 
 **desired_sectors** | [**\Ageras\Api\SectorResource[]**](SectorResource.md) | Desired sectors. | [optional] 
@@ -26,6 +27,7 @@ Name | Type | Description | Notes
 **partner_contract** | [**\Ageras\Api\PartnerBusinessUnitPartnerContractResource**](PartnerBusinessUnitPartnerContractResource.md) |  | [optional] 
 **wants_exclusive_leads** | **bool** | Does the business unit want exclusive leads? | [optional] [default to false]
 **highlighted_notes** | **string[]** | Important notes about this business unit. | [optional] 
+**kpi** | [**\Ageras\Api\PartnerBusinessUnitKpiResource**](PartnerBusinessUnitKpiResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

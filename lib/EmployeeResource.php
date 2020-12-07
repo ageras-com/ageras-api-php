@@ -69,7 +69,8 @@ class EmployeeResource implements ArrayAccess
         'roles' => '\Ageras\Api\EmployeeRoleResource[]',
         'initials' => 'string',
         'is_active' => 'bool',
-        'current_call_activity' => '\Ageras\Api\EmployeeCurrentCallActivityResource'
+        'current_call_activity' => '\Ageras\Api\EmployeeCurrentCallActivityResource',
+        'social' => '\Ageras\Api\EmployeeSocialResource'
     ];
 
     public static function swaggerTypes()
@@ -97,7 +98,8 @@ class EmployeeResource implements ArrayAccess
         'roles' => 'roles',
         'initials' => 'initials',
         'is_active' => 'is_active',
-        'current_call_activity' => 'current_call_activity'
+        'current_call_activity' => 'current_call_activity',
+        'social' => 'social'
     ];
 
 
@@ -121,7 +123,8 @@ class EmployeeResource implements ArrayAccess
         'roles' => 'setRoles',
         'initials' => 'setInitials',
         'is_active' => 'setIsActive',
-        'current_call_activity' => 'setCurrentCallActivity'
+        'current_call_activity' => 'setCurrentCallActivity',
+        'social' => 'setSocial'
     ];
 
 
@@ -145,7 +148,8 @@ class EmployeeResource implements ArrayAccess
         'roles' => 'getRoles',
         'initials' => 'getInitials',
         'is_active' => 'getIsActive',
-        'current_call_activity' => 'getCurrentCallActivity'
+        'current_call_activity' => 'getCurrentCallActivity',
+        'social' => 'getSocial'
     ];
 
     public static function attributeMap()
@@ -195,6 +199,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['current_call_activity'] = isset($data['current_call_activity']) ? $data['current_call_activity'] : null;
+        $this->container['social'] = isset($data['social']) ? $data['social'] : null;
     }
 
     /**
@@ -554,6 +559,27 @@ class EmployeeResource implements ArrayAccess
     public function setCurrentCallActivity($current_call_activity)
     {
         $this->container['current_call_activity'] = $current_call_activity;
+
+        return $this;
+    }
+
+    /**
+     * Gets social
+     * @return \Ageras\Api\EmployeeSocialResource
+     */
+    public function getSocial()
+    {
+        return $this->container['social'];
+    }
+
+    /**
+     * Sets social
+     * @param \Ageras\Api\EmployeeSocialResource $social
+     * @return $this
+     */
+    public function setSocial($social)
+    {
+        $this->container['social'] = $social;
 
         return $this;
     }

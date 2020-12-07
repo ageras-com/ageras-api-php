@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerNoteResource
+ * BrowserPushSubscriptionResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerNoteResource Class Doc Comment
+ * BrowserPushSubscriptionResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerNoteResource implements ArrayAccess
+class BrowserPushSubscriptionResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PartnerNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerNoteResource';
+    protected static $swaggerModelName = 'BrowserPushSubscriptionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,11 +55,10 @@ class PartnerNoteResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'employee_id' => 'int',
-        'partner_user_id' => 'int',
-        'creator_type' => 'string',
-        'note' => 'string',
-        'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource'
+        'endpoint' => 'string',
+        'auth_token' => 'string',
+        'public_key' => 'string',
+        'expires_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,11 +72,10 @@ class PartnerNoteResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'employee_id' => 'employee_id',
-        'partner_user_id' => 'partner_user_id',
-        'creator_type' => 'creator_type',
-        'note' => 'note',
-        'satisfaction' => 'satisfaction'
+        'endpoint' => 'endpoint',
+        'auth_token' => 'auth_token',
+        'public_key' => 'public_key',
+        'expires_at' => 'expires_at'
     ];
 
 
@@ -87,11 +85,10 @@ class PartnerNoteResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'employee_id' => 'setEmployeeId',
-        'partner_user_id' => 'setPartnerUserId',
-        'creator_type' => 'setCreatorType',
-        'note' => 'setNote',
-        'satisfaction' => 'setSatisfaction'
+        'endpoint' => 'setEndpoint',
+        'auth_token' => 'setAuthToken',
+        'public_key' => 'setPublicKey',
+        'expires_at' => 'setExpiresAt'
     ];
 
 
@@ -101,11 +98,10 @@ class PartnerNoteResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'employee_id' => 'getEmployeeId',
-        'partner_user_id' => 'getPartnerUserId',
-        'creator_type' => 'getCreatorType',
-        'note' => 'getNote',
-        'satisfaction' => 'getSatisfaction'
+        'endpoint' => 'getEndpoint',
+        'auth_token' => 'getAuthToken',
+        'public_key' => 'getPublicKey',
+        'expires_at' => 'getExpiresAt'
     ];
 
     public static function attributeMap()
@@ -123,24 +119,8 @@ class PartnerNoteResource implements ArrayAccess
         return self::$getters;
     }
 
-    const CREATOR_TYPE_UNKNOWN = 'unknown';
-    const CREATOR_TYPE_EMPLOYEE = 'employee';
-    const CREATOR_TYPE_PARTNER_USER = 'partner_user';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCreatorTypeAllowableValues()
-    {
-        return [
-            self::CREATOR_TYPE_UNKNOWN,
-            self::CREATOR_TYPE_EMPLOYEE,
-            self::CREATOR_TYPE_PARTNER_USER,
-        ];
-    }
     
 
     /**
@@ -156,11 +136,10 @@ class PartnerNoteResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
-        $this->container['creator_type'] = isset($data['creator_type']) ? $data['creator_type'] : 'unknown';
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
+        $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
+        $this->container['auth_token'] = isset($data['auth_token']) ? $data['auth_token'] : null;
+        $this->container['public_key'] = isset($data['public_key']) ? $data['public_key'] : null;
+        $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
     }
 
     /**
@@ -171,11 +150,6 @@ class PartnerNoteResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "employee", "partner_user"];
-        if (!in_array($this->container['creator_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'creator_type', must be one of 'unknown', 'employee', 'partner_user'.";
-        }
 
         return $invalid_properties;
     }
@@ -189,10 +163,6 @@ class PartnerNoteResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "employee", "partner_user"];
-        if (!in_array($this->container['creator_type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
@@ -208,7 +178,7 @@ class PartnerNoteResource implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id @var int|null *_/
      * @return $this
      */
     public function setId($id)
@@ -219,110 +189,85 @@ class PartnerNoteResource implements ArrayAccess
     }
 
     /**
-     * Gets employee_id
-     * @return int
-     */
-    public function getEmployeeId()
-    {
-        return $this->container['employee_id'];
-    }
-
-    /**
-     * Sets employee_id
-     * @param int $employee_id
-     * @return $this
-     */
-    public function setEmployeeId($employee_id)
-    {
-        $this->container['employee_id'] = $employee_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets partner_user_id
-     * @return int
-     */
-    public function getPartnerUserId()
-    {
-        return $this->container['partner_user_id'];
-    }
-
-    /**
-     * Sets partner_user_id
-     * @param int $partner_user_id
-     * @return $this
-     */
-    public function setPartnerUserId($partner_user_id)
-    {
-        $this->container['partner_user_id'] = $partner_user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets creator_type
+     * Gets endpoint
      * @return string
      */
-    public function getCreatorType()
+    public function getEndpoint()
     {
-        return $this->container['creator_type'];
+        return $this->container['endpoint'];
     }
 
     /**
-     * Sets creator_type
-     * @param string $creator_type
+     * Sets endpoint
+     * @param string $endpoint @var string *_/
      * @return $this
      */
-    public function setCreatorType($creator_type)
+    public function setEndpoint($endpoint)
     {
-        $allowed_values = array('unknown', 'employee', 'partner_user');
-        if (!is_null($creator_type) && (!in_array($creator_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'creator_type', must be one of 'unknown', 'employee', 'partner_user'");
-        }
-        $this->container['creator_type'] = $creator_type;
+        $this->container['endpoint'] = $endpoint;
 
         return $this;
     }
 
     /**
-     * Gets note
+     * Gets auth_token
      * @return string
      */
-    public function getNote()
+    public function getAuthToken()
     {
-        return $this->container['note'];
+        return $this->container['auth_token'];
     }
 
     /**
-     * Sets note
-     * @param string $note
+     * Sets auth_token
+     * @param string $auth_token @var string *_/
      * @return $this
      */
-    public function setNote($note)
+    public function setAuthToken($auth_token)
     {
-        $this->container['note'] = $note;
+        $this->container['auth_token'] = $auth_token;
 
         return $this;
     }
 
     /**
-     * Gets satisfaction
-     * @return \Ageras\Api\PartnerSatisfactionResource
+     * Gets public_key
+     * @return string
      */
-    public function getSatisfaction()
+    public function getPublicKey()
     {
-        return $this->container['satisfaction'];
+        return $this->container['public_key'];
     }
 
     /**
-     * Sets satisfaction
-     * @param \Ageras\Api\PartnerSatisfactionResource $satisfaction
+     * Sets public_key
+     * @param string $public_key @var string *_/
      * @return $this
      */
-    public function setSatisfaction($satisfaction)
+    public function setPublicKey($public_key)
     {
-        $this->container['satisfaction'] = $satisfaction;
+        $this->container['public_key'] = $public_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets expires_at
+     * @return string
+     */
+    public function getExpiresAt()
+    {
+        return $this->container['expires_at'];
+    }
+
+    /**
+     * Sets expires_at
+     * @param string $expires_at @var Carbon|null *_/
+     * @return $this
+     */
+    public function setExpiresAt($expires_at)
+    {
+        $this->container['expires_at'] = $expires_at;
 
         return $this;
     }

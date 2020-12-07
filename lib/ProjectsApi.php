@@ -1295,6 +1295,7 @@ class ProjectsApi
      *    'status' => string,
      *    'progress' => string,
      *    'sort' => string,
+     *    'is_archived' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1323,6 +1324,7 @@ class ProjectsApi
      *    'status' => string,
      *    'progress' => string,
      *    'sort' => string,
+     *    'is_archived' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1379,6 +1381,10 @@ class ProjectsApi
         // query params
         if (isset($criteria['sort'])) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['is_archived'])) {
+            $queryParams['is_archived'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_archived']);
         }
         // query params
         if (isset($criteria['limit'])) {

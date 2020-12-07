@@ -210,4 +210,12 @@ class EmployeeResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "social"
+     */
+    public function testPropertySocial()
+    {
+
+    }
+
 }

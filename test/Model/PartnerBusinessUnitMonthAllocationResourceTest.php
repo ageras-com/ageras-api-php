@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerContractResourceTest
+ * PartnerBusinessUnitMonthAllocationResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerContractResourceTest Class Doc Comment
+ * PartnerBusinessUnitMonthAllocationResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerContractResource
+// * @description PartnerBusinessUnitMonthAllocationResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerBusinessUnitMonthAllocationResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,89 +75,57 @@ class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerContractResource"
+     * Test "PartnerBusinessUnitMonthAllocationResource"
      */
-    public function testPartnerBusinessUnitPartnerContractResource()
+    public function testPartnerBusinessUnitMonthAllocationResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "current_month_allocation_count"
      */
-    public function testPropertyId()
+    public function testPropertyCurrentMonthAllocationCount()
     {
 
     }
 
     /**
-     * Test attribute "start_at"
+     * Test attribute "suggested_allocation_quota"
      */
-    public function testPropertyStartAt()
+    public function testPropertySuggestedAllocationQuota()
     {
 
     }
 
     /**
-     * Test attribute "accepted_at"
+     * Test attribute "pay_per_spot_allocation_count"
      */
-    public function testPropertyAcceptedAt()
+    public function testPropertyPayPerSpotAllocationCount()
     {
 
     }
 
     /**
-     * Test attribute "canceled_at"
+     * Test attribute "pay_per_spot_allocation_limit"
      */
-    public function testPropertyCanceledAt()
+    public function testPropertyPayPerSpotAllocationLimit()
     {
 
     }
 
     /**
-     * Test attribute "churn_at"
+     * Test attribute "pay_per_spot_allocation_price"
      */
-    public function testPropertyChurnAt()
+    public function testPropertyPayPerSpotAllocationPrice()
     {
 
     }
 
     /**
-     * Test attribute "binding_period_months"
+     * Test attribute "overdelivery_allocation_count"
      */
-    public function testPropertyBindingPeriodMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "billing_frequency_months"
-     */
-    public function testPropertyBillingFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "current_partner_contract_period"
-     */
-    public function testPropertyCurrentPartnerContractPeriod()
-    {
-
-    }
-
-    /**
-     * Test attribute "allocation_pauses"
-     */
-    public function testPropertyAllocationPauses()
-    {
-
-    }
-
-    /**
-     * Test attribute "business_unit_mrr"
-     */
-    public function testPropertyBusinessUnitMrr()
+    public function testPropertyOverdeliveryAllocationCount()
     {
 
     }

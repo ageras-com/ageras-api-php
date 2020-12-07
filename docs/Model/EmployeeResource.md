@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **initials** | **string** | Employee Initials. | [optional] 
 **is_active** | **bool** | Is the Employee active ? | [optional] [default to false]
 **current_call_activity** | [**\Ageras\Api\EmployeeCurrentCallActivityResource**](EmployeeCurrentCallActivityResource.md) |  | [optional] 
+**social** | [**\Ageras\Api\EmployeeSocialResource**](EmployeeSocialResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

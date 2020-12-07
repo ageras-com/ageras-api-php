@@ -130,12 +130,4 @@ class PartnerNoteResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "is_pinned"
-     */
-    public function testPropertyIsPinned()
-    {
-
-    }
-
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerNoteResource
+ * PartnerBusinessUnitKpiResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PartnerNoteResource Class Doc Comment
+ * PartnerBusinessUnitKpiResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerNoteResource implements ArrayAccess
+class PartnerBusinessUnitKpiResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,19 +47,19 @@ class PartnerNoteResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PartnerNoteResource';
+    protected static $swaggerModelName = 'PartnerBusinessUnitKpiResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'employee_id' => 'int',
-        'partner_user_id' => 'int',
-        'creator_type' => 'string',
-        'note' => 'string',
-        'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource'
+        'delivery_trend' => 'float',
+        'mrr_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'is_active' => 'bool',
+        'publishing_ratio' => 'float',
+        'success_ratio' => 'float',
+        'success_revenue_amount_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -72,12 +72,12 @@ class PartnerNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'employee_id' => 'employee_id',
-        'partner_user_id' => 'partner_user_id',
-        'creator_type' => 'creator_type',
-        'note' => 'note',
-        'satisfaction' => 'satisfaction'
+        'delivery_trend' => 'delivery_trend',
+        'mrr_amount_excl_vat' => 'mrr_amount_excl_vat',
+        'is_active' => 'is_active',
+        'publishing_ratio' => 'publishing_ratio',
+        'success_ratio' => 'success_ratio',
+        'success_revenue_amount_excl_vat' => 'success_revenue_amount_excl_vat'
     ];
 
 
@@ -86,12 +86,12 @@ class PartnerNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'employee_id' => 'setEmployeeId',
-        'partner_user_id' => 'setPartnerUserId',
-        'creator_type' => 'setCreatorType',
-        'note' => 'setNote',
-        'satisfaction' => 'setSatisfaction'
+        'delivery_trend' => 'setDeliveryTrend',
+        'mrr_amount_excl_vat' => 'setMrrAmountExclVat',
+        'is_active' => 'setIsActive',
+        'publishing_ratio' => 'setPublishingRatio',
+        'success_ratio' => 'setSuccessRatio',
+        'success_revenue_amount_excl_vat' => 'setSuccessRevenueAmountExclVat'
     ];
 
 
@@ -100,12 +100,12 @@ class PartnerNoteResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'employee_id' => 'getEmployeeId',
-        'partner_user_id' => 'getPartnerUserId',
-        'creator_type' => 'getCreatorType',
-        'note' => 'getNote',
-        'satisfaction' => 'getSatisfaction'
+        'delivery_trend' => 'getDeliveryTrend',
+        'mrr_amount_excl_vat' => 'getMrrAmountExclVat',
+        'is_active' => 'getIsActive',
+        'publishing_ratio' => 'getPublishingRatio',
+        'success_ratio' => 'getSuccessRatio',
+        'success_revenue_amount_excl_vat' => 'getSuccessRevenueAmountExclVat'
     ];
 
     public static function attributeMap()
@@ -123,24 +123,8 @@ class PartnerNoteResource implements ArrayAccess
         return self::$getters;
     }
 
-    const CREATOR_TYPE_UNKNOWN = 'unknown';
-    const CREATOR_TYPE_EMPLOYEE = 'employee';
-    const CREATOR_TYPE_PARTNER_USER = 'partner_user';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getCreatorTypeAllowableValues()
-    {
-        return [
-            self::CREATOR_TYPE_UNKNOWN,
-            self::CREATOR_TYPE_EMPLOYEE,
-            self::CREATOR_TYPE_PARTNER_USER,
-        ];
-    }
     
 
     /**
@@ -155,12 +139,12 @@ class PartnerNoteResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['employee_id'] = isset($data['employee_id']) ? $data['employee_id'] : null;
-        $this->container['partner_user_id'] = isset($data['partner_user_id']) ? $data['partner_user_id'] : null;
-        $this->container['creator_type'] = isset($data['creator_type']) ? $data['creator_type'] : 'unknown';
-        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
-        $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
+        $this->container['delivery_trend'] = isset($data['delivery_trend']) ? $data['delivery_trend'] : null;
+        $this->container['mrr_amount_excl_vat'] = isset($data['mrr_amount_excl_vat']) ? $data['mrr_amount_excl_vat'] : null;
+        $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
+        $this->container['publishing_ratio'] = isset($data['publishing_ratio']) ? $data['publishing_ratio'] : null;
+        $this->container['success_ratio'] = isset($data['success_ratio']) ? $data['success_ratio'] : null;
+        $this->container['success_revenue_amount_excl_vat'] = isset($data['success_revenue_amount_excl_vat']) ? $data['success_revenue_amount_excl_vat'] : null;
     }
 
     /**
@@ -171,11 +155,6 @@ class PartnerNoteResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-
-        $allowed_values = ["unknown", "employee", "partner_user"];
-        if (!in_array($this->container['creator_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'creator_type', must be one of 'unknown', 'employee', 'partner_user'.";
-        }
 
         return $invalid_properties;
     }
@@ -189,140 +168,132 @@ class PartnerNoteResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "employee", "partner_user"];
-        if (!in_array($this->container['creator_type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets delivery_trend
+     * @return float
      */
-    public function getId()
+    public function getDeliveryTrend()
     {
-        return $this->container['id'];
+        return $this->container['delivery_trend'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets delivery_trend
+     * @param float $delivery_trend Ratio between optimal delivery ratio and actual delivery ratio within current contract period
      * @return $this
      */
-    public function setId($id)
+    public function setDeliveryTrend($delivery_trend)
     {
-        $this->container['id'] = $id;
+        $this->container['delivery_trend'] = $delivery_trend;
 
         return $this;
     }
 
     /**
-     * Gets employee_id
-     * @return int
+     * Gets mrr_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
      */
-    public function getEmployeeId()
+    public function getMrrAmountExclVat()
     {
-        return $this->container['employee_id'];
+        return $this->container['mrr_amount_excl_vat'];
     }
 
     /**
-     * Sets employee_id
-     * @param int $employee_id
+     * Sets mrr_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $mrr_amount_excl_vat
      * @return $this
      */
-    public function setEmployeeId($employee_id)
+    public function setMrrAmountExclVat($mrr_amount_excl_vat)
     {
-        $this->container['employee_id'] = $employee_id;
+        $this->container['mrr_amount_excl_vat'] = $mrr_amount_excl_vat;
 
         return $this;
     }
 
     /**
-     * Gets partner_user_id
-     * @return int
+     * Gets is_active
+     * @return bool
      */
-    public function getPartnerUserId()
+    public function getIsActive()
     {
-        return $this->container['partner_user_id'];
+        return $this->container['is_active'];
     }
 
     /**
-     * Sets partner_user_id
-     * @param int $partner_user_id
+     * Sets is_active
+     * @param bool $is_active Active status
      * @return $this
      */
-    public function setPartnerUserId($partner_user_id)
+    public function setIsActive($is_active)
     {
-        $this->container['partner_user_id'] = $partner_user_id;
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }
 
     /**
-     * Gets creator_type
-     * @return string
+     * Gets publishing_ratio
+     * @return float
      */
-    public function getCreatorType()
+    public function getPublishingRatio()
     {
-        return $this->container['creator_type'];
+        return $this->container['publishing_ratio'];
     }
 
     /**
-     * Sets creator_type
-     * @param string $creator_type
+     * Sets publishing_ratio
+     * @param float $publishing_ratio Publishing ratio
      * @return $this
      */
-    public function setCreatorType($creator_type)
+    public function setPublishingRatio($publishing_ratio)
     {
-        $allowed_values = array('unknown', 'employee', 'partner_user');
-        if (!is_null($creator_type) && (!in_array($creator_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'creator_type', must be one of 'unknown', 'employee', 'partner_user'");
-        }
-        $this->container['creator_type'] = $creator_type;
+        $this->container['publishing_ratio'] = $publishing_ratio;
 
         return $this;
     }
 
     /**
-     * Gets note
-     * @return string
+     * Gets success_ratio
+     * @return float
      */
-    public function getNote()
+    public function getSuccessRatio()
     {
-        return $this->container['note'];
+        return $this->container['success_ratio'];
     }
 
     /**
-     * Sets note
-     * @param string $note
+     * Sets success_ratio
+     * @param float $success_ratio Success ratio
      * @return $this
      */
-    public function setNote($note)
+    public function setSuccessRatio($success_ratio)
     {
-        $this->container['note'] = $note;
+        $this->container['success_ratio'] = $success_ratio;
 
         return $this;
     }
 
     /**
-     * Gets satisfaction
-     * @return \Ageras\Api\PartnerSatisfactionResource
+     * Gets success_revenue_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
      */
-    public function getSatisfaction()
+    public function getSuccessRevenueAmountExclVat()
     {
-        return $this->container['satisfaction'];
+        return $this->container['success_revenue_amount_excl_vat'];
     }
 
     /**
-     * Sets satisfaction
-     * @param \Ageras\Api\PartnerSatisfactionResource $satisfaction
+     * Sets success_revenue_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $success_revenue_amount_excl_vat
      * @return $this
      */
-    public function setSatisfaction($satisfaction)
+    public function setSuccessRevenueAmountExclVat($success_revenue_amount_excl_vat)
     {
-        $this->container['satisfaction'] = $satisfaction;
+        $this->container['success_revenue_amount_excl_vat'] = $success_revenue_amount_excl_vat;
 
         return $this;
     }

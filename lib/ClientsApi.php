@@ -88,6 +88,100 @@ class ClientsApi
     }
 
     /**
+     * Operation clientsBrowserpushsubscriptionsCreate
+     *
+     * Create a browser push subscription
+     *
+     * @param string $client_id 
+     * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\BrowserPushSubscriptionResource
+     */
+    public function clientsBrowserpushsubscriptionsCreate($client_id , $browser_push_subscription_resource)
+    {
+        list($response) = $this->clientsBrowserpushsubscriptionsCreateWithHttpInfo($client_id, $browser_push_subscription_resource);
+        return $response;
+    }
+
+    /**
+     * Operation clientsBrowserpushsubscriptionsCreateWithHttpInfo
+     *
+     * Create a browser push subscription
+     *
+     * @param string $client_id 
+     * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\BrowserPushSubscriptionResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function clientsBrowserpushsubscriptionsCreateWithHttpInfo($client_id , $browser_push_subscription_resource)
+    {
+        // parse inputs
+        $resourcePath = "/clients/{client_id}/browserpushsubscriptions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($client_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "client_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($client_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($browser_push_subscription_resource)) {
+            $_tempBody = $browser_push_subscription_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\BrowserPushSubscriptionResource',
+                '/clients/{client_id}/browserpushsubscriptions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\BrowserPushSubscriptionResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\BrowserPushSubscriptionResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation clientsGet
      *
      * Return a Client

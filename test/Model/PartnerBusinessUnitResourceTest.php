@@ -155,6 +155,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "current_month_allocation"
+     */
+    public function testPropertyCurrentMonthAllocation()
+    {
+
+    }
+
+    /**
      * Test attribute "accumulated_allocation"
      */
     public function testPropertyAccumulatedAllocation()
@@ -262,6 +270,14 @@ class PartnerBusinessUnitResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "highlighted_notes"
      */
     public function testPropertyHighlightedNotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "kpi"
+     */
+    public function testPropertyKpi()
     {
 
     }

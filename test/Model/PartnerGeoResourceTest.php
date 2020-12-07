@@ -138,4 +138,12 @@ class PartnerGeoResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "home_sub_geo_region"
+     */
+    public function testPropertyHomeSubGeoRegion()
+    {
+
+    }
+
 }

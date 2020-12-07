@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**partnersAllocationpausesCreate**](PartnersApi.md#partnersAllocationpausesCreate) | **POST** /partners/{partner_id}/allocationpauses | Create an allocation pause.
 [**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
 [**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
+[**partnersBrowserpushsubscriptionsCreate**](PartnersApi.md#partnersBrowserpushsubscriptionsCreate) | **POST** /partners/{partner_id}/browserpushsubscriptions | Create a browser push subscription
 [**partnersBusinessunitcontractsCreate**](PartnersApi.md#partnersBusinessunitcontractsCreate) | **POST** /partners/{partner_id}/businessunitcontracts | Create a business unit contract.
 [**partnersBusinessunitcontractsGet**](PartnersApi.md#partnersBusinessunitcontractsGet) | **GET** /partners/{partner_id}/businessunitcontracts/{contract_id} | Get a business unit agreement.
 [**partnersBusinessunitcontractsIndex**](PartnersApi.md#partnersBusinessunitcontractsIndex) | **GET** /partners/{partner_id}/businessunitcontracts | List business unit contracts.
@@ -109,7 +110,6 @@ Method | HTTP request | Description
 [**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
 [**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
-[**partnersNotesUpdate**](PartnersApi.md#partnersNotesUpdate) | **PUT** /partners/{partner_id}/notes/{note_id} | Update a partner note.
 [**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
 [**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | Get partner sectors.
 [**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | Update partner sectors.
@@ -462,6 +462,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerBankaccountResult**](../Model/PartnerBankaccountResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersBrowserpushsubscriptionsCreate**
+> \Ageras\Api\BrowserPushSubscriptionResource partnersBrowserpushsubscriptionsCreate($partner_id , $browser_push_subscription_resource)
+
+Create a browser push subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$browser_push_subscription_resource = new \Ageras\Api\BrowserPushSubscriptionResource(); // \Ageras\Api\BrowserPushSubscriptionResource | 
+
+try {
+    $result = $api_instance->partnersBrowserpushsubscriptionsCreate($partner_id , $browser_push_subscription_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersBrowserpushsubscriptionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **browser_push_subscription_resource** | [**\Ageras\Api\BrowserPushSubscriptionResource**](../Model/\Ageras\Api\BrowserPushSubscriptionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\BrowserPushSubscriptionResource**](../Model/BrowserPushSubscriptionResource.md)
 
 ### Authorization
 
@@ -6145,61 +6198,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerNoteResult**](../Model/PartnerNoteResult.md)
-
-### Authorization
-
-[jwt](../../README.md#jwt), [login](../../README.md#login)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **partnersNotesUpdate**
-> \Ageras\Api\PartnerNoteResource partnersNotesUpdate($partner_id,  $note_id , $partner_note_resource)
-
-Update a partner note.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: jwt
-Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-// Configure HTTP basic authorization: login
-Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
-Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
-
-$api_instance = new Ageras\Api\Api\PartnersApi();
-$partner_id = "partner_id_example"; // string | 
-$note_id = "note_id_example"; // string | 
-$partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
-
-try {
-    $result = $api_instance->partnersNotesUpdate($partner_id,  $note_id , $partner_note_resource);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersNotesUpdate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **partner_id** | **string**|  |
- **note_id** | **string**|  |
- **partner_note_resource** | [**\Ageras\Api\PartnerNoteResource**](../Model/\Ageras\Api\PartnerNoteResource.md)|  |
-
-### Return type
-
-[**\Ageras\Api\PartnerNoteResource**](../Model/PartnerNoteResource.md)
 
 ### Authorization
 

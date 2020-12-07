@@ -195,6 +195,14 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "churns_at"
+     */
+    public function testPropertyChurnsAt()
+    {
+
+    }
+
+    /**
      * Test attribute "intending_to_replace_partner_contract_id"
      */
     public function testPropertyIntendingToReplacePartnerContractId()

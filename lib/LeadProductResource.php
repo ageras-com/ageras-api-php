@@ -132,6 +132,7 @@ class LeadProductResource implements ArrayAccess
     const TYPE_YEARLY = 'yearly';
     const TYPE_QUARTERLY = 'quarterly';
     const TYPE_MONTHLY = 'monthly';
+    const TYPE_BIANNUALLY = 'biannually';
     
 
     
@@ -147,6 +148,7 @@ class LeadProductResource implements ArrayAccess
             self::TYPE_YEARLY,
             self::TYPE_QUARTERLY,
             self::TYPE_MONTHLY,
+            self::TYPE_BIANNUALLY,
         ];
     }
     
@@ -181,9 +183,9 @@ class LeadProductResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'.";
         }
 
         return $invalid_properties;
@@ -198,7 +200,7 @@ class LeadProductResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -306,9 +308,9 @@ class LeadProductResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly');
+        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'");
         }
         $this->container['type'] = $type;
 

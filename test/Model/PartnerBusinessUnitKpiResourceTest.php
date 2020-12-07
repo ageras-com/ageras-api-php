@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerBusinessUnitPartnerContractResourceTest
+ * PartnerBusinessUnitKpiResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerBusinessUnitPartnerContractResourceTest Class Doc Comment
+ * PartnerBusinessUnitKpiResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerBusinessUnitPartnerContractResource
+// * @description PartnerBusinessUnitKpiResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerBusinessUnitKpiResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,89 +75,57 @@ class PartnerBusinessUnitPartnerContractResourceTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "PartnerBusinessUnitPartnerContractResource"
+     * Test "PartnerBusinessUnitKpiResource"
      */
-    public function testPartnerBusinessUnitPartnerContractResource()
+    public function testPartnerBusinessUnitKpiResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "delivery_trend"
      */
-    public function testPropertyId()
+    public function testPropertyDeliveryTrend()
     {
 
     }
 
     /**
-     * Test attribute "start_at"
+     * Test attribute "mrr_amount_excl_vat"
      */
-    public function testPropertyStartAt()
+    public function testPropertyMrrAmountExclVat()
     {
 
     }
 
     /**
-     * Test attribute "accepted_at"
+     * Test attribute "is_active"
      */
-    public function testPropertyAcceptedAt()
+    public function testPropertyIsActive()
     {
 
     }
 
     /**
-     * Test attribute "canceled_at"
+     * Test attribute "publishing_ratio"
      */
-    public function testPropertyCanceledAt()
+    public function testPropertyPublishingRatio()
     {
 
     }
 
     /**
-     * Test attribute "churn_at"
+     * Test attribute "success_ratio"
      */
-    public function testPropertyChurnAt()
+    public function testPropertySuccessRatio()
     {
 
     }
 
     /**
-     * Test attribute "binding_period_months"
+     * Test attribute "success_revenue_amount_excl_vat"
      */
-    public function testPropertyBindingPeriodMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "billing_frequency_months"
-     */
-    public function testPropertyBillingFrequencyMonths()
-    {
-
-    }
-
-    /**
-     * Test attribute "current_partner_contract_period"
-     */
-    public function testPropertyCurrentPartnerContractPeriod()
-    {
-
-    }
-
-    /**
-     * Test attribute "allocation_pauses"
-     */
-    public function testPropertyAllocationPauses()
-    {
-
-    }
-
-    /**
-     * Test attribute "business_unit_mrr"
-     */
-    public function testPropertyBusinessUnitMrr()
+    public function testPropertySuccessRevenueAmountExclVat()
     {
 
     }
