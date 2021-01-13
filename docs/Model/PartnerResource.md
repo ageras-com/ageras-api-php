@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **features** | **string[]** | Partner Category Features. | [optional] 
 **association** | [**\Ageras\Api\PartnerAssociationResource**](PartnerAssociationResource.md) |  | [optional] 
 **has_portal_access** | **bool** | True if partner has access to the Partner portal. | [optional] [default to false]
+**company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

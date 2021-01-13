@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSignatureResourceTest
+ * VapidResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * EmployeeSignatureResourceTest Class Doc Comment
+ * VapidResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description EmployeeSignatureResource
+// * @description VapidResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmployeeSignatureResourceTest extends \PHPUnit_Framework_TestCase
+class VapidResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,65 +75,17 @@ class EmployeeSignatureResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "EmployeeSignatureResource"
+     * Test "VapidResource"
      */
-    public function testEmployeeSignatureResource()
+    public function testVapidResource()
     {
 
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "public_key"
      */
-    public function testPropertyAddress()
-    {
-
-    }
-
-    /**
-     * Test attribute "zip_code"
-     */
-    public function testPropertyZipCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-
-    }
-
-    /**
-     * Test attribute "phone_number"
-     */
-    public function testPropertyPhoneNumber()
-    {
-
-    }
-
-    /**
-     * Test attribute "cell_phone_number"
-     */
-    public function testPropertyCellPhoneNumber()
-    {
-
-    }
-
-    /**
-     * Test attribute "web_address"
-     */
-    public function testPropertyWebAddress()
-    {
-
-    }
-
-    /**
-     * Test attribute "blog_description"
-     */
-    public function testPropertyBlogDescription()
+    public function testPropertyPublicKey()
     {
 
     }

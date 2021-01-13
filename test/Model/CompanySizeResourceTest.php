@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIResourceTest
+ * CompanySizeResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * KPIResourceTest Class Doc Comment
+ * CompanySizeResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIResource
+// * @description CompanySizeResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIResourceTest extends \PHPUnit_Framework_TestCase
+class CompanySizeResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIResource"
+     * Test "CompanySizeResource"
      */
-    public function testKPIResource()
+    public function testCompanySizeResource()
     {
 
     }
@@ -91,9 +91,9 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "title"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyTitle()
     {
 
     }
@@ -102,86 +102,6 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "geo_code"
      */
     public function testPropertyGeoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "industry"
-     */
-    public function testPropertyIndustry()
-    {
-
-    }
-
-    /**
-     * Test attribute "employee"
-     */
-    public function testPropertyEmployee()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner"
-     */
-    public function testPropertyPartner()
-    {
-
-    }
-
-    /**
-     * Test attribute "leads"
-     */
-    public function testPropertyLeads()
-    {
-
-    }
-
-    /**
-     * Test attribute "credits"
-     */
-    public function testPropertyCredits()
-    {
-
-    }
-
-    /**
-     * Test attribute "matches"
-     */
-    public function testPropertyMatches()
-    {
-
-    }
-
-    /**
-     * Test attribute "partners"
-     */
-    public function testPropertyPartners()
-    {
-
-    }
-
-    /**
-     * Test attribute "refills"
-     */
-    public function testPropertyRefills()
-    {
-
-    }
-
-    /**
-     * Test attribute "new_sales"
-     */
-    public function testPropertyNewSales()
-    {
-
-    }
-
-    /**
-     * Test attribute "sales"
-     */
-    public function testPropertySales()
     {
 
     }

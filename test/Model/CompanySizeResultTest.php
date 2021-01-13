@@ -1,6 +1,6 @@
 <?php
 /**
- * KPIResourceTest
+ * CompanySizeResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * KPIResourceTest Class Doc Comment
+ * CompanySizeResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description KPIResource
+// * @description CompanySizeResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class KPIResourceTest extends \PHPUnit_Framework_TestCase
+class CompanySizeResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,113 +75,57 @@ class KPIResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "KPIResource"
+     * Test "CompanySizeResult"
      */
-    public function testKPIResource()
+    public function testCompanySizeResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "limit"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "geo_code"
+     * Test attribute "pages"
      */
-    public function testPropertyGeoCode()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "industry"
+     * Test attribute "total"
      */
-    public function testPropertyIndustry()
+    public function testPropertyTotal()
     {
 
     }
 
     /**
-     * Test attribute "employee"
+     * Test attribute "data"
      */
-    public function testPropertyEmployee()
+    public function testPropertyData()
     {
 
     }
 
     /**
-     * Test attribute "partner"
+     * Test attribute "did_you_mean"
      */
-    public function testPropertyPartner()
-    {
-
-    }
-
-    /**
-     * Test attribute "leads"
-     */
-    public function testPropertyLeads()
-    {
-
-    }
-
-    /**
-     * Test attribute "credits"
-     */
-    public function testPropertyCredits()
-    {
-
-    }
-
-    /**
-     * Test attribute "matches"
-     */
-    public function testPropertyMatches()
-    {
-
-    }
-
-    /**
-     * Test attribute "partners"
-     */
-    public function testPropertyPartners()
-    {
-
-    }
-
-    /**
-     * Test attribute "refills"
-     */
-    public function testPropertyRefills()
-    {
-
-    }
-
-    /**
-     * Test attribute "new_sales"
-     */
-    public function testPropertyNewSales()
-    {
-
-    }
-
-    /**
-     * Test attribute "sales"
-     */
-    public function testPropertySales()
+    public function testPropertyDidYouMean()
     {
 
     }

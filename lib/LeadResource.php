@@ -94,7 +94,8 @@ class LeadResource implements ArrayAccess
         'actions_info' => '\Ageras\Api\LeadActionsInfoResource',
         'geo_range' => 'int',
         'primary_sector' => '\Ageras\Api\SectorResource',
-        'revenue_segment' => '\Ageras\Api\RevenueSegmentResource'
+        'revenue_segment' => '\Ageras\Api\RevenueSegmentResource',
+        'desired_partner_company_size' => '\Ageras\Api\CompanySizeResource'
     ];
 
     public static function swaggerTypes()
@@ -147,7 +148,8 @@ class LeadResource implements ArrayAccess
         'actions_info' => 'actions_info',
         'geo_range' => 'geo_range',
         'primary_sector' => 'primary_sector',
-        'revenue_segment' => 'revenue_segment'
+        'revenue_segment' => 'revenue_segment',
+        'desired_partner_company_size' => 'desired_partner_company_size'
     ];
 
 
@@ -196,7 +198,8 @@ class LeadResource implements ArrayAccess
         'actions_info' => 'setActionsInfo',
         'geo_range' => 'setGeoRange',
         'primary_sector' => 'setPrimarySector',
-        'revenue_segment' => 'setRevenueSegment'
+        'revenue_segment' => 'setRevenueSegment',
+        'desired_partner_company_size' => 'setDesiredPartnerCompanySize'
     ];
 
 
@@ -245,7 +248,8 @@ class LeadResource implements ArrayAccess
         'actions_info' => 'getActionsInfo',
         'geo_range' => 'getGeoRange',
         'primary_sector' => 'getPrimarySector',
-        'revenue_segment' => 'getRevenueSegment'
+        'revenue_segment' => 'getRevenueSegment',
+        'desired_partner_company_size' => 'getDesiredPartnerCompanySize'
     ];
 
     public static function attributeMap()
@@ -346,6 +350,7 @@ class LeadResource implements ArrayAccess
         $this->container['geo_range'] = isset($data['geo_range']) ? $data['geo_range'] : null;
         $this->container['primary_sector'] = isset($data['primary_sector']) ? $data['primary_sector'] : null;
         $this->container['revenue_segment'] = isset($data['revenue_segment']) ? $data['revenue_segment'] : null;
+        $this->container['desired_partner_company_size'] = isset($data['desired_partner_company_size']) ? $data['desired_partner_company_size'] : null;
     }
 
     /**
@@ -1243,6 +1248,27 @@ class LeadResource implements ArrayAccess
     public function setRevenueSegment($revenue_segment)
     {
         $this->container['revenue_segment'] = $revenue_segment;
+
+        return $this;
+    }
+
+    /**
+     * Gets desired_partner_company_size
+     * @return \Ageras\Api\CompanySizeResource
+     */
+    public function getDesiredPartnerCompanySize()
+    {
+        return $this->container['desired_partner_company_size'];
+    }
+
+    /**
+     * Sets desired_partner_company_size
+     * @param \Ageras\Api\CompanySizeResource $desired_partner_company_size
+     * @return $this
+     */
+    public function setDesiredPartnerCompanySize($desired_partner_company_size)
+    {
+        $this->container['desired_partner_company_size'] = $desired_partner_company_size;
 
         return $this;
     }

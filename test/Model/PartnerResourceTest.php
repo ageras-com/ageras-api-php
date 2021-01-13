@@ -466,4 +466,12 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "company_size"
+     */
+    public function testPropertyCompanySize()
+    {
+
+    }
+
 }

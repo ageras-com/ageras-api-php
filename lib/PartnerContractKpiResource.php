@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSignatureResource
+ * PartnerContractKpiResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * EmployeeSignatureResource Class Doc Comment
+ * PartnerContractKpiResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmployeeSignatureResource implements ArrayAccess
+class PartnerContractKpiResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,18 @@ class EmployeeSignatureResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'EmployeeSignatureResource';
+    protected static $swaggerModelName = 'PartnerContractKpiResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => 'string',
-        'zip_code' => 'string',
-        'city' => 'string',
-        'phone_number' => 'string',
-        'cell_phone_number' => 'string',
-        'web_address' => 'string',
-        'blog_description' => 'string'
+        'deallocations' => 'int',
+        'binding_period_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'is_active' => 'bool',
+        'next_renewal_at' => 'string',
+        'weighted_delivery_trend' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -73,13 +71,11 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address' => 'address',
-        'zip_code' => 'zip_code',
-        'city' => 'city',
-        'phone_number' => 'phone_number',
-        'cell_phone_number' => 'cell_phone_number',
-        'web_address' => 'web_address',
-        'blog_description' => 'blog_description'
+        'deallocations' => 'deallocations',
+        'binding_period_amount_excl_vat' => 'binding_period_amount_excl_vat',
+        'is_active' => 'is_active',
+        'next_renewal_at' => 'next_renewal_at',
+        'weighted_delivery_trend' => 'weighted_delivery_trend'
     ];
 
 
@@ -88,13 +84,11 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address' => 'setAddress',
-        'zip_code' => 'setZipCode',
-        'city' => 'setCity',
-        'phone_number' => 'setPhoneNumber',
-        'cell_phone_number' => 'setCellPhoneNumber',
-        'web_address' => 'setWebAddress',
-        'blog_description' => 'setBlogDescription'
+        'deallocations' => 'setDeallocations',
+        'binding_period_amount_excl_vat' => 'setBindingPeriodAmountExclVat',
+        'is_active' => 'setIsActive',
+        'next_renewal_at' => 'setNextRenewalAt',
+        'weighted_delivery_trend' => 'setWeightedDeliveryTrend'
     ];
 
 
@@ -103,13 +97,11 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address' => 'getAddress',
-        'zip_code' => 'getZipCode',
-        'city' => 'getCity',
-        'phone_number' => 'getPhoneNumber',
-        'cell_phone_number' => 'getCellPhoneNumber',
-        'web_address' => 'getWebAddress',
-        'blog_description' => 'getBlogDescription'
+        'deallocations' => 'getDeallocations',
+        'binding_period_amount_excl_vat' => 'getBindingPeriodAmountExclVat',
+        'is_active' => 'getIsActive',
+        'next_renewal_at' => 'getNextRenewalAt',
+        'weighted_delivery_trend' => 'getWeightedDeliveryTrend'
     ];
 
     public static function attributeMap()
@@ -143,13 +135,11 @@ class EmployeeSignatureResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['cell_phone_number'] = isset($data['cell_phone_number']) ? $data['cell_phone_number'] : null;
-        $this->container['web_address'] = isset($data['web_address']) ? $data['web_address'] : null;
-        $this->container['blog_description'] = isset($data['blog_description']) ? $data['blog_description'] : null;
+        $this->container['deallocations'] = isset($data['deallocations']) ? $data['deallocations'] : null;
+        $this->container['binding_period_amount_excl_vat'] = isset($data['binding_period_amount_excl_vat']) ? $data['binding_period_amount_excl_vat'] : null;
+        $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
+        $this->container['next_renewal_at'] = isset($data['next_renewal_at']) ? $data['next_renewal_at'] : null;
+        $this->container['weighted_delivery_trend'] = isset($data['weighted_delivery_trend']) ? $data['weighted_delivery_trend'] : null;
     }
 
     /**
@@ -178,148 +168,106 @@ class EmployeeSignatureResource implements ArrayAccess
 
 
     /**
-     * Gets address
-     * @return string
+     * Gets deallocations
+     * @return int
      */
-    public function getAddress()
+    public function getDeallocations()
     {
-        return $this->container['address'];
+        return $this->container['deallocations'];
     }
 
     /**
-     * Sets address
-     * @param string $address Address.
+     * Sets deallocations
+     * @param int $deallocations The number of total deallocations.
      * @return $this
      */
-    public function setAddress($address)
+    public function setDeallocations($deallocations)
     {
-        $this->container['address'] = $address;
+        $this->container['deallocations'] = $deallocations;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
-     * @return string
+     * Gets binding_period_amount_excl_vat
+     * @return \Ageras\Api\AmountResource
      */
-    public function getZipCode()
+    public function getBindingPeriodAmountExclVat()
     {
-        return $this->container['zip_code'];
+        return $this->container['binding_period_amount_excl_vat'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip code.
+     * Sets binding_period_amount_excl_vat
+     * @param \Ageras\Api\AmountResource $binding_period_amount_excl_vat
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setBindingPeriodAmountExclVat($binding_period_amount_excl_vat)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['binding_period_amount_excl_vat'] = $binding_period_amount_excl_vat;
 
         return $this;
     }
 
     /**
-     * Gets city
-     * @return string
+     * Gets is_active
+     * @return bool
      */
-    public function getCity()
+    public function getIsActive()
     {
-        return $this->container['city'];
+        return $this->container['is_active'];
     }
 
     /**
-     * Sets city
-     * @param string $city City.
+     * Sets is_active
+     * @param bool $is_active Contract active status
      * @return $this
      */
-    public function setCity($city)
+    public function setIsActive($is_active)
     {
-        $this->container['city'] = $city;
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
+     * Gets next_renewal_at
      * @return string
      */
-    public function getPhoneNumber()
+    public function getNextRenewalAt()
     {
-        return $this->container['phone_number'];
+        return $this->container['next_renewal_at'];
     }
 
     /**
-     * Sets phone_number
-     * @param string $phone_number Phone Number.
+     * Sets next_renewal_at
+     * @param string $next_renewal_at Next renewal date
      * @return $this
      */
-    public function setPhoneNumber($phone_number)
+    public function setNextRenewalAt($next_renewal_at)
     {
-        $this->container['phone_number'] = $phone_number;
+        $this->container['next_renewal_at'] = $next_renewal_at;
 
         return $this;
     }
 
     /**
-     * Gets cell_phone_number
-     * @return string
+     * Gets weighted_delivery_trend
+     * @return float
      */
-    public function getCellPhoneNumber()
+    public function getWeightedDeliveryTrend()
     {
-        return $this->container['cell_phone_number'];
+        return $this->container['weighted_delivery_trend'];
     }
 
     /**
-     * Sets cell_phone_number
-     * @param string $cell_phone_number Cellphone number.
+     * Sets weighted_delivery_trend
+     * @param float $weighted_delivery_trend Weighted delivery trend from all business units in current period
      * @return $this
      */
-    public function setCellPhoneNumber($cell_phone_number)
+    public function setWeightedDeliveryTrend($weighted_delivery_trend)
     {
-        $this->container['cell_phone_number'] = $cell_phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets web_address
-     * @return string
-     */
-    public function getWebAddress()
-    {
-        return $this->container['web_address'];
-    }
-
-    /**
-     * Sets web_address
-     * @param string $web_address Web Address.
-     * @return $this
-     */
-    public function setWebAddress($web_address)
-    {
-        $this->container['web_address'] = $web_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets blog_description
-     * @return string
-     */
-    public function getBlogDescription()
-    {
-        return $this->container['blog_description'];
-    }
-
-    /**
-     * Sets blog_description
-     * @param string $blog_description Blog description.
-     * @return $this
-     */
-    public function setBlogDescription($blog_description)
-    {
-        $this->container['blog_description'] = $blog_description;
+        $this->container['weighted_delivery_trend'] = $weighted_delivery_trend;
 
         return $this;
     }

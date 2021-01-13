@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSignatureResourceTest
+ * PartnerContractKpiResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * EmployeeSignatureResourceTest Class Doc Comment
+ * PartnerContractKpiResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description EmployeeSignatureResource
+// * @description PartnerContractKpiResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmployeeSignatureResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerContractKpiResourceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,65 +75,49 @@ class EmployeeSignatureResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "EmployeeSignatureResource"
+     * Test "PartnerContractKpiResource"
      */
-    public function testEmployeeSignatureResource()
+    public function testPartnerContractKpiResource()
     {
 
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "deallocations"
      */
-    public function testPropertyAddress()
+    public function testPropertyDeallocations()
     {
 
     }
 
     /**
-     * Test attribute "zip_code"
+     * Test attribute "binding_period_amount_excl_vat"
      */
-    public function testPropertyZipCode()
+    public function testPropertyBindingPeriodAmountExclVat()
     {
 
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "is_active"
      */
-    public function testPropertyCity()
+    public function testPropertyIsActive()
     {
 
     }
 
     /**
-     * Test attribute "phone_number"
+     * Test attribute "next_renewal_at"
      */
-    public function testPropertyPhoneNumber()
+    public function testPropertyNextRenewalAt()
     {
 
     }
 
     /**
-     * Test attribute "cell_phone_number"
+     * Test attribute "weighted_delivery_trend"
      */
-    public function testPropertyCellPhoneNumber()
-    {
-
-    }
-
-    /**
-     * Test attribute "web_address"
-     */
-    public function testPropertyWebAddress()
-    {
-
-    }
-
-    /**
-     * Test attribute "blog_description"
-     */
-    public function testPropertyBlogDescription()
+    public function testPropertyWeightedDeliveryTrend()
     {
 
     }

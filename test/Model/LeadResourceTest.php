@@ -410,4 +410,12 @@ class LeadResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "desired_partner_company_size"
+     */
+    public function testPropertyDesiredPartnerCompanySize()
+    {
+
+    }
+
 }

@@ -54,12 +54,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'delivery_trend' => 'float',
+        'current_period_delivery_trend' => 'float',
         'mrr_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'is_active' => 'bool',
-        'publishing_ratio' => 'float',
-        'success_ratio' => 'float',
-        'success_revenue_amount_excl_vat' => '\Ageras\Api\AmountResource'
+        'latest_allocated_at' => 'string',
+        'all_time_publishing_ratio' => 'float',
+        'current_month_publishing_ratio' => 'float',
+        'current_period_publishing_ratio' => 'float',
+        'all_time_success_ratio' => 'float',
+        'current_month_success_ratio' => 'float',
+        'current_period_success_ratio' => 'float',
+        'all_time_revenue_excl_vat' => '\Ageras\Api\AmountResource',
+        'current_month_revenue_excl_vat' => '\Ageras\Api\AmountResource',
+        'current_period_revenue_excl_vat' => '\Ageras\Api\AmountResource',
+        'all_time_value_of_won_cases_excl_vat' => '\Ageras\Api\AmountResource',
+        'current_month_value_of_won_cases_excl_vat' => '\Ageras\Api\AmountResource',
+        'current_period_value_of_won_cases_excl_vat' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -72,12 +82,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_trend' => 'delivery_trend',
+        'current_period_delivery_trend' => 'current_period_delivery_trend',
         'mrr_amount_excl_vat' => 'mrr_amount_excl_vat',
         'is_active' => 'is_active',
-        'publishing_ratio' => 'publishing_ratio',
-        'success_ratio' => 'success_ratio',
-        'success_revenue_amount_excl_vat' => 'success_revenue_amount_excl_vat'
+        'latest_allocated_at' => 'latest_allocated_at',
+        'all_time_publishing_ratio' => 'all_time_publishing_ratio',
+        'current_month_publishing_ratio' => 'current_month_publishing_ratio',
+        'current_period_publishing_ratio' => 'current_period_publishing_ratio',
+        'all_time_success_ratio' => 'all_time_success_ratio',
+        'current_month_success_ratio' => 'current_month_success_ratio',
+        'current_period_success_ratio' => 'current_period_success_ratio',
+        'all_time_revenue_excl_vat' => 'all_time_revenue_excl_vat',
+        'current_month_revenue_excl_vat' => 'current_month_revenue_excl_vat',
+        'current_period_revenue_excl_vat' => 'current_period_revenue_excl_vat',
+        'all_time_value_of_won_cases_excl_vat' => 'all_time_value_of_won_cases_excl_vat',
+        'current_month_value_of_won_cases_excl_vat' => 'current_month_value_of_won_cases_excl_vat',
+        'current_period_value_of_won_cases_excl_vat' => 'current_period_value_of_won_cases_excl_vat'
     ];
 
 
@@ -86,12 +106,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'delivery_trend' => 'setDeliveryTrend',
+        'current_period_delivery_trend' => 'setCurrentPeriodDeliveryTrend',
         'mrr_amount_excl_vat' => 'setMrrAmountExclVat',
         'is_active' => 'setIsActive',
-        'publishing_ratio' => 'setPublishingRatio',
-        'success_ratio' => 'setSuccessRatio',
-        'success_revenue_amount_excl_vat' => 'setSuccessRevenueAmountExclVat'
+        'latest_allocated_at' => 'setLatestAllocatedAt',
+        'all_time_publishing_ratio' => 'setAllTimePublishingRatio',
+        'current_month_publishing_ratio' => 'setCurrentMonthPublishingRatio',
+        'current_period_publishing_ratio' => 'setCurrentPeriodPublishingRatio',
+        'all_time_success_ratio' => 'setAllTimeSuccessRatio',
+        'current_month_success_ratio' => 'setCurrentMonthSuccessRatio',
+        'current_period_success_ratio' => 'setCurrentPeriodSuccessRatio',
+        'all_time_revenue_excl_vat' => 'setAllTimeRevenueExclVat',
+        'current_month_revenue_excl_vat' => 'setCurrentMonthRevenueExclVat',
+        'current_period_revenue_excl_vat' => 'setCurrentPeriodRevenueExclVat',
+        'all_time_value_of_won_cases_excl_vat' => 'setAllTimeValueOfWonCasesExclVat',
+        'current_month_value_of_won_cases_excl_vat' => 'setCurrentMonthValueOfWonCasesExclVat',
+        'current_period_value_of_won_cases_excl_vat' => 'setCurrentPeriodValueOfWonCasesExclVat'
     ];
 
 
@@ -100,12 +130,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'delivery_trend' => 'getDeliveryTrend',
+        'current_period_delivery_trend' => 'getCurrentPeriodDeliveryTrend',
         'mrr_amount_excl_vat' => 'getMrrAmountExclVat',
         'is_active' => 'getIsActive',
-        'publishing_ratio' => 'getPublishingRatio',
-        'success_ratio' => 'getSuccessRatio',
-        'success_revenue_amount_excl_vat' => 'getSuccessRevenueAmountExclVat'
+        'latest_allocated_at' => 'getLatestAllocatedAt',
+        'all_time_publishing_ratio' => 'getAllTimePublishingRatio',
+        'current_month_publishing_ratio' => 'getCurrentMonthPublishingRatio',
+        'current_period_publishing_ratio' => 'getCurrentPeriodPublishingRatio',
+        'all_time_success_ratio' => 'getAllTimeSuccessRatio',
+        'current_month_success_ratio' => 'getCurrentMonthSuccessRatio',
+        'current_period_success_ratio' => 'getCurrentPeriodSuccessRatio',
+        'all_time_revenue_excl_vat' => 'getAllTimeRevenueExclVat',
+        'current_month_revenue_excl_vat' => 'getCurrentMonthRevenueExclVat',
+        'current_period_revenue_excl_vat' => 'getCurrentPeriodRevenueExclVat',
+        'all_time_value_of_won_cases_excl_vat' => 'getAllTimeValueOfWonCasesExclVat',
+        'current_month_value_of_won_cases_excl_vat' => 'getCurrentMonthValueOfWonCasesExclVat',
+        'current_period_value_of_won_cases_excl_vat' => 'getCurrentPeriodValueOfWonCasesExclVat'
     ];
 
     public static function attributeMap()
@@ -139,12 +179,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_trend'] = isset($data['delivery_trend']) ? $data['delivery_trend'] : null;
+        $this->container['current_period_delivery_trend'] = isset($data['current_period_delivery_trend']) ? $data['current_period_delivery_trend'] : null;
         $this->container['mrr_amount_excl_vat'] = isset($data['mrr_amount_excl_vat']) ? $data['mrr_amount_excl_vat'] : null;
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
-        $this->container['publishing_ratio'] = isset($data['publishing_ratio']) ? $data['publishing_ratio'] : null;
-        $this->container['success_ratio'] = isset($data['success_ratio']) ? $data['success_ratio'] : null;
-        $this->container['success_revenue_amount_excl_vat'] = isset($data['success_revenue_amount_excl_vat']) ? $data['success_revenue_amount_excl_vat'] : null;
+        $this->container['latest_allocated_at'] = isset($data['latest_allocated_at']) ? $data['latest_allocated_at'] : null;
+        $this->container['all_time_publishing_ratio'] = isset($data['all_time_publishing_ratio']) ? $data['all_time_publishing_ratio'] : null;
+        $this->container['current_month_publishing_ratio'] = isset($data['current_month_publishing_ratio']) ? $data['current_month_publishing_ratio'] : null;
+        $this->container['current_period_publishing_ratio'] = isset($data['current_period_publishing_ratio']) ? $data['current_period_publishing_ratio'] : null;
+        $this->container['all_time_success_ratio'] = isset($data['all_time_success_ratio']) ? $data['all_time_success_ratio'] : null;
+        $this->container['current_month_success_ratio'] = isset($data['current_month_success_ratio']) ? $data['current_month_success_ratio'] : null;
+        $this->container['current_period_success_ratio'] = isset($data['current_period_success_ratio']) ? $data['current_period_success_ratio'] : null;
+        $this->container['all_time_revenue_excl_vat'] = isset($data['all_time_revenue_excl_vat']) ? $data['all_time_revenue_excl_vat'] : null;
+        $this->container['current_month_revenue_excl_vat'] = isset($data['current_month_revenue_excl_vat']) ? $data['current_month_revenue_excl_vat'] : null;
+        $this->container['current_period_revenue_excl_vat'] = isset($data['current_period_revenue_excl_vat']) ? $data['current_period_revenue_excl_vat'] : null;
+        $this->container['all_time_value_of_won_cases_excl_vat'] = isset($data['all_time_value_of_won_cases_excl_vat']) ? $data['all_time_value_of_won_cases_excl_vat'] : null;
+        $this->container['current_month_value_of_won_cases_excl_vat'] = isset($data['current_month_value_of_won_cases_excl_vat']) ? $data['current_month_value_of_won_cases_excl_vat'] : null;
+        $this->container['current_period_value_of_won_cases_excl_vat'] = isset($data['current_period_value_of_won_cases_excl_vat']) ? $data['current_period_value_of_won_cases_excl_vat'] : null;
     }
 
     /**
@@ -173,22 +223,22 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
 
 
     /**
-     * Gets delivery_trend
+     * Gets current_period_delivery_trend
      * @return float
      */
-    public function getDeliveryTrend()
+    public function getCurrentPeriodDeliveryTrend()
     {
-        return $this->container['delivery_trend'];
+        return $this->container['current_period_delivery_trend'];
     }
 
     /**
-     * Sets delivery_trend
-     * @param float $delivery_trend Ratio between optimal delivery ratio and actual delivery ratio within current contract period
+     * Sets current_period_delivery_trend
+     * @param float $current_period_delivery_trend Ratio between optimal delivery ratio and actual delivery ratio within current contract period
      * @return $this
      */
-    public function setDeliveryTrend($delivery_trend)
+    public function setCurrentPeriodDeliveryTrend($current_period_delivery_trend)
     {
-        $this->container['delivery_trend'] = $delivery_trend;
+        $this->container['current_period_delivery_trend'] = $current_period_delivery_trend;
 
         return $this;
     }
@@ -236,64 +286,274 @@ class PartnerBusinessUnitKpiResource implements ArrayAccess
     }
 
     /**
-     * Gets publishing_ratio
-     * @return float
+     * Gets latest_allocated_at
+     * @return string
      */
-    public function getPublishingRatio()
+    public function getLatestAllocatedAt()
     {
-        return $this->container['publishing_ratio'];
+        return $this->container['latest_allocated_at'];
     }
 
     /**
-     * Sets publishing_ratio
-     * @param float $publishing_ratio Publishing ratio
+     * Sets latest_allocated_at
+     * @param string $latest_allocated_at Allocated at value of latest allocation
      * @return $this
      */
-    public function setPublishingRatio($publishing_ratio)
+    public function setLatestAllocatedAt($latest_allocated_at)
     {
-        $this->container['publishing_ratio'] = $publishing_ratio;
+        $this->container['latest_allocated_at'] = $latest_allocated_at;
 
         return $this;
     }
 
     /**
-     * Gets success_ratio
+     * Gets all_time_publishing_ratio
      * @return float
      */
-    public function getSuccessRatio()
+    public function getAllTimePublishingRatio()
     {
-        return $this->container['success_ratio'];
+        return $this->container['all_time_publishing_ratio'];
     }
 
     /**
-     * Sets success_ratio
-     * @param float $success_ratio Success ratio
+     * Sets all_time_publishing_ratio
+     * @param float $all_time_publishing_ratio Publishing ratio per period
      * @return $this
      */
-    public function setSuccessRatio($success_ratio)
+    public function setAllTimePublishingRatio($all_time_publishing_ratio)
     {
-        $this->container['success_ratio'] = $success_ratio;
+        $this->container['all_time_publishing_ratio'] = $all_time_publishing_ratio;
 
         return $this;
     }
 
     /**
-     * Gets success_revenue_amount_excl_vat
+     * Gets current_month_publishing_ratio
+     * @return float
+     */
+    public function getCurrentMonthPublishingRatio()
+    {
+        return $this->container['current_month_publishing_ratio'];
+    }
+
+    /**
+     * Sets current_month_publishing_ratio
+     * @param float $current_month_publishing_ratio
+     * @return $this
+     */
+    public function setCurrentMonthPublishingRatio($current_month_publishing_ratio)
+    {
+        $this->container['current_month_publishing_ratio'] = $current_month_publishing_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_period_publishing_ratio
+     * @return float
+     */
+    public function getCurrentPeriodPublishingRatio()
+    {
+        return $this->container['current_period_publishing_ratio'];
+    }
+
+    /**
+     * Sets current_period_publishing_ratio
+     * @param float $current_period_publishing_ratio
+     * @return $this
+     */
+    public function setCurrentPeriodPublishingRatio($current_period_publishing_ratio)
+    {
+        $this->container['current_period_publishing_ratio'] = $current_period_publishing_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_time_success_ratio
+     * @return float
+     */
+    public function getAllTimeSuccessRatio()
+    {
+        return $this->container['all_time_success_ratio'];
+    }
+
+    /**
+     * Sets all_time_success_ratio
+     * @param float $all_time_success_ratio Success ratio per period
+     * @return $this
+     */
+    public function setAllTimeSuccessRatio($all_time_success_ratio)
+    {
+        $this->container['all_time_success_ratio'] = $all_time_success_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_month_success_ratio
+     * @return float
+     */
+    public function getCurrentMonthSuccessRatio()
+    {
+        return $this->container['current_month_success_ratio'];
+    }
+
+    /**
+     * Sets current_month_success_ratio
+     * @param float $current_month_success_ratio
+     * @return $this
+     */
+    public function setCurrentMonthSuccessRatio($current_month_success_ratio)
+    {
+        $this->container['current_month_success_ratio'] = $current_month_success_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_period_success_ratio
+     * @return float
+     */
+    public function getCurrentPeriodSuccessRatio()
+    {
+        return $this->container['current_period_success_ratio'];
+    }
+
+    /**
+     * Sets current_period_success_ratio
+     * @param float $current_period_success_ratio
+     * @return $this
+     */
+    public function setCurrentPeriodSuccessRatio($current_period_success_ratio)
+    {
+        $this->container['current_period_success_ratio'] = $current_period_success_ratio;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_time_revenue_excl_vat
      * @return \Ageras\Api\AmountResource
      */
-    public function getSuccessRevenueAmountExclVat()
+    public function getAllTimeRevenueExclVat()
     {
-        return $this->container['success_revenue_amount_excl_vat'];
+        return $this->container['all_time_revenue_excl_vat'];
     }
 
     /**
-     * Sets success_revenue_amount_excl_vat
-     * @param \Ageras\Api\AmountResource $success_revenue_amount_excl_vat
+     * Sets all_time_revenue_excl_vat
+     * @param \Ageras\Api\AmountResource $all_time_revenue_excl_vat
      * @return $this
      */
-    public function setSuccessRevenueAmountExclVat($success_revenue_amount_excl_vat)
+    public function setAllTimeRevenueExclVat($all_time_revenue_excl_vat)
     {
-        $this->container['success_revenue_amount_excl_vat'] = $success_revenue_amount_excl_vat;
+        $this->container['all_time_revenue_excl_vat'] = $all_time_revenue_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_month_revenue_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getCurrentMonthRevenueExclVat()
+    {
+        return $this->container['current_month_revenue_excl_vat'];
+    }
+
+    /**
+     * Sets current_month_revenue_excl_vat
+     * @param \Ageras\Api\AmountResource $current_month_revenue_excl_vat
+     * @return $this
+     */
+    public function setCurrentMonthRevenueExclVat($current_month_revenue_excl_vat)
+    {
+        $this->container['current_month_revenue_excl_vat'] = $current_month_revenue_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_period_revenue_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getCurrentPeriodRevenueExclVat()
+    {
+        return $this->container['current_period_revenue_excl_vat'];
+    }
+
+    /**
+     * Sets current_period_revenue_excl_vat
+     * @param \Ageras\Api\AmountResource $current_period_revenue_excl_vat
+     * @return $this
+     */
+    public function setCurrentPeriodRevenueExclVat($current_period_revenue_excl_vat)
+    {
+        $this->container['current_period_revenue_excl_vat'] = $current_period_revenue_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_time_value_of_won_cases_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getAllTimeValueOfWonCasesExclVat()
+    {
+        return $this->container['all_time_value_of_won_cases_excl_vat'];
+    }
+
+    /**
+     * Sets all_time_value_of_won_cases_excl_vat
+     * @param \Ageras\Api\AmountResource $all_time_value_of_won_cases_excl_vat
+     * @return $this
+     */
+    public function setAllTimeValueOfWonCasesExclVat($all_time_value_of_won_cases_excl_vat)
+    {
+        $this->container['all_time_value_of_won_cases_excl_vat'] = $all_time_value_of_won_cases_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_month_value_of_won_cases_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getCurrentMonthValueOfWonCasesExclVat()
+    {
+        return $this->container['current_month_value_of_won_cases_excl_vat'];
+    }
+
+    /**
+     * Sets current_month_value_of_won_cases_excl_vat
+     * @param \Ageras\Api\AmountResource $current_month_value_of_won_cases_excl_vat
+     * @return $this
+     */
+    public function setCurrentMonthValueOfWonCasesExclVat($current_month_value_of_won_cases_excl_vat)
+    {
+        $this->container['current_month_value_of_won_cases_excl_vat'] = $current_month_value_of_won_cases_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_period_value_of_won_cases_excl_vat
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getCurrentPeriodValueOfWonCasesExclVat()
+    {
+        return $this->container['current_period_value_of_won_cases_excl_vat'];
+    }
+
+    /**
+     * Sets current_period_value_of_won_cases_excl_vat
+     * @param \Ageras\Api\AmountResource $current_period_value_of_won_cases_excl_vat
+     * @return $this
+     */
+    public function setCurrentPeriodValueOfWonCasesExclVat($current_period_value_of_won_cases_excl_vat)
+    {
+        $this->container['current_period_value_of_won_cases_excl_vat'] = $current_period_value_of_won_cases_excl_vat;
 
         return $this;
     }

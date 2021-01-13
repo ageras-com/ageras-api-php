@@ -83,9 +83,9 @@ class PartnerBusinessUnitKpiResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "delivery_trend"
+     * Test attribute "current_period_delivery_trend"
      */
-    public function testPropertyDeliveryTrend()
+    public function testPropertyCurrentPeriodDeliveryTrend()
     {
 
     }
@@ -107,25 +107,105 @@ class PartnerBusinessUnitKpiResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "publishing_ratio"
+     * Test attribute "latest_allocated_at"
      */
-    public function testPropertyPublishingRatio()
+    public function testPropertyLatestAllocatedAt()
     {
 
     }
 
     /**
-     * Test attribute "success_ratio"
+     * Test attribute "all_time_publishing_ratio"
      */
-    public function testPropertySuccessRatio()
+    public function testPropertyAllTimePublishingRatio()
     {
 
     }
 
     /**
-     * Test attribute "success_revenue_amount_excl_vat"
+     * Test attribute "current_month_publishing_ratio"
      */
-    public function testPropertySuccessRevenueAmountExclVat()
+    public function testPropertyCurrentMonthPublishingRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_period_publishing_ratio"
+     */
+    public function testPropertyCurrentPeriodPublishingRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "all_time_success_ratio"
+     */
+    public function testPropertyAllTimeSuccessRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_month_success_ratio"
+     */
+    public function testPropertyCurrentMonthSuccessRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_period_success_ratio"
+     */
+    public function testPropertyCurrentPeriodSuccessRatio()
+    {
+
+    }
+
+    /**
+     * Test attribute "all_time_revenue_excl_vat"
+     */
+    public function testPropertyAllTimeRevenueExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_month_revenue_excl_vat"
+     */
+    public function testPropertyCurrentMonthRevenueExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_period_revenue_excl_vat"
+     */
+    public function testPropertyCurrentPeriodRevenueExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "all_time_value_of_won_cases_excl_vat"
+     */
+    public function testPropertyAllTimeValueOfWonCasesExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_month_value_of_won_cases_excl_vat"
+     */
+    public function testPropertyCurrentMonthValueOfWonCasesExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "current_period_value_of_won_cases_excl_vat"
+     */
+    public function testPropertyCurrentPeriodValueOfWonCasesExclVat()
     {
 
     }

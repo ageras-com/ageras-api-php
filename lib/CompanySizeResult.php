@@ -1,6 +1,6 @@
 <?php
 /**
- * EmployeeSignatureResource
+ * CompanySizeResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * EmployeeSignatureResource Class Doc Comment
+ * CompanySizeResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EmployeeSignatureResource implements ArrayAccess
+class CompanySizeResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,19 @@ class EmployeeSignatureResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'EmployeeSignatureResource';
+    protected static $swaggerModelName = 'CompanySizeResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address' => 'string',
-        'zip_code' => 'string',
-        'city' => 'string',
-        'phone_number' => 'string',
-        'cell_phone_number' => 'string',
-        'web_address' => 'string',
-        'blog_description' => 'string'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\CompanySizeResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,13 +72,12 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address' => 'address',
-        'zip_code' => 'zip_code',
-        'city' => 'city',
-        'phone_number' => 'phone_number',
-        'cell_phone_number' => 'cell_phone_number',
-        'web_address' => 'web_address',
-        'blog_description' => 'blog_description'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -88,13 +86,12 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address' => 'setAddress',
-        'zip_code' => 'setZipCode',
-        'city' => 'setCity',
-        'phone_number' => 'setPhoneNumber',
-        'cell_phone_number' => 'setCellPhoneNumber',
-        'web_address' => 'setWebAddress',
-        'blog_description' => 'setBlogDescription'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -103,13 +100,12 @@ class EmployeeSignatureResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address' => 'getAddress',
-        'zip_code' => 'getZipCode',
-        'city' => 'getCity',
-        'phone_number' => 'getPhoneNumber',
-        'cell_phone_number' => 'getCellPhoneNumber',
-        'web_address' => 'getWebAddress',
-        'blog_description' => 'getBlogDescription'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -143,13 +139,12 @@ class EmployeeSignatureResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['cell_phone_number'] = isset($data['cell_phone_number']) ? $data['cell_phone_number'] : null;
-        $this->container['web_address'] = isset($data['web_address']) ? $data['web_address'] : null;
-        $this->container['blog_description'] = isset($data['blog_description']) ? $data['blog_description'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -178,148 +173,127 @@ class EmployeeSignatureResource implements ArrayAccess
 
 
     /**
-     * Gets address
-     * @return string
+     * Gets page
+     * @return int
      */
-    public function getAddress()
+    public function getPage()
     {
-        return $this->container['address'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets address
-     * @param string $address Address.
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setAddress($address)
+    public function setPage($page)
     {
-        $this->container['address'] = $address;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets zip_code
-     * @return string
+     * Gets limit
+     * @return int
      */
-    public function getZipCode()
+    public function getLimit()
     {
-        return $this->container['zip_code'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets zip_code
-     * @param string $zip_code Zip code.
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setZipCode($zip_code)
+    public function setLimit($limit)
     {
-        $this->container['zip_code'] = $zip_code;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets city
-     * @return string
+     * Gets pages
+     * @return int
      */
-    public function getCity()
+    public function getPages()
     {
-        return $this->container['city'];
+        return $this->container['pages'];
     }
 
     /**
-     * Sets city
-     * @param string $city City.
+     * Sets pages
+     * @param int $pages Number of pages.
      * @return $this
      */
-    public function setCity($city)
+    public function setPages($pages)
     {
-        $this->container['city'] = $city;
+        $this->container['pages'] = $pages;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
-     * @return string
+     * Gets total
+     * @return int
      */
-    public function getPhoneNumber()
+    public function getTotal()
     {
-        return $this->container['phone_number'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets phone_number
-     * @param string $phone_number Phone Number.
+     * Sets total
+     * @param int $total Total number of results.
      * @return $this
      */
-    public function setPhoneNumber($phone_number)
+    public function setTotal($total)
     {
-        $this->container['phone_number'] = $phone_number;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets cell_phone_number
-     * @return string
+     * Gets data
+     * @return \Ageras\Api\CompanySizeResource[]
      */
-    public function getCellPhoneNumber()
+    public function getData()
     {
-        return $this->container['cell_phone_number'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets cell_phone_number
-     * @param string $cell_phone_number Cellphone number.
+     * Sets data
+     * @param \Ageras\Api\CompanySizeResource[] $data The result.
      * @return $this
      */
-    public function setCellPhoneNumber($cell_phone_number)
+    public function setData($data)
     {
-        $this->container['cell_phone_number'] = $cell_phone_number;
+        $this->container['data'] = $data;
 
         return $this;
     }
 
     /**
-     * Gets web_address
+     * Gets did_you_mean
      * @return string
      */
-    public function getWebAddress()
+    public function getDidYouMean()
     {
-        return $this->container['web_address'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets web_address
-     * @param string $web_address Web Address.
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setWebAddress($web_address)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['web_address'] = $web_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets blog_description
-     * @return string
-     */
-    public function getBlogDescription()
-    {
-        return $this->container['blog_description'];
-    }
-
-    /**
-     * Sets blog_description
-     * @param string $blog_description Blog description.
-     * @return $this
-     */
-    public function setBlogDescription($blog_description)
-    {
-        $this->container['blog_description'] = $blog_description;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

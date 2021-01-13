@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **geo_range** | **int** | Range the lead is happy to travel to reach a partner. | [optional] 
 **primary_sector** | [**\Ageras\Api\SectorResource**](SectorResource.md) |  | [optional] 
 **revenue_segment** | [**\Ageras\Api\RevenueSegmentResource**](RevenueSegmentResource.md) |  | [optional] 
+**desired_partner_company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

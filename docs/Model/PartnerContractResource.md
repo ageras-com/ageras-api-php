@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **category** | [**\Ageras\Api\PartnerCategoryResource**](PartnerCategoryResource.md) |  | [optional] 
 **allocation_pauses** | [**\Ageras\Api\PartnerContractAllocationPauseResource[]**](PartnerContractAllocationPauseResource.md) | List of allocation pauses. | [optional] 
 **binding_period_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**kpi** | [**\Ageras\Api\PartnerContractKpiResource**](PartnerContractKpiResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

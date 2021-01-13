@@ -73,7 +73,8 @@ class PartnerContractResource implements ArrayAccess
         'replaces_partner_contract_id' => 'int',
         'category' => '\Ageras\Api\PartnerCategoryResource',
         'allocation_pauses' => '\Ageras\Api\PartnerContractAllocationPauseResource[]',
-        'binding_period_amount_excl_vat' => '\Ageras\Api\AmountResource'
+        'binding_period_amount_excl_vat' => '\Ageras\Api\AmountResource',
+        'kpi' => '\Ageras\Api\PartnerContractKpiResource'
     ];
 
     public static function swaggerTypes()
@@ -105,7 +106,8 @@ class PartnerContractResource implements ArrayAccess
         'replaces_partner_contract_id' => 'replaces_partner_contract_id',
         'category' => 'category',
         'allocation_pauses' => 'allocation_pauses',
-        'binding_period_amount_excl_vat' => 'binding_period_amount_excl_vat'
+        'binding_period_amount_excl_vat' => 'binding_period_amount_excl_vat',
+        'kpi' => 'kpi'
     ];
 
 
@@ -133,7 +135,8 @@ class PartnerContractResource implements ArrayAccess
         'replaces_partner_contract_id' => 'setReplacesPartnerContractId',
         'category' => 'setCategory',
         'allocation_pauses' => 'setAllocationPauses',
-        'binding_period_amount_excl_vat' => 'setBindingPeriodAmountExclVat'
+        'binding_period_amount_excl_vat' => 'setBindingPeriodAmountExclVat',
+        'kpi' => 'setKpi'
     ];
 
 
@@ -161,7 +164,8 @@ class PartnerContractResource implements ArrayAccess
         'replaces_partner_contract_id' => 'getReplacesPartnerContractId',
         'category' => 'getCategory',
         'allocation_pauses' => 'getAllocationPauses',
-        'binding_period_amount_excl_vat' => 'getBindingPeriodAmountExclVat'
+        'binding_period_amount_excl_vat' => 'getBindingPeriodAmountExclVat',
+        'kpi' => 'getKpi'
     ];
 
     public static function attributeMap()
@@ -215,6 +219,7 @@ class PartnerContractResource implements ArrayAccess
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['allocation_pauses'] = isset($data['allocation_pauses']) ? $data['allocation_pauses'] : null;
         $this->container['binding_period_amount_excl_vat'] = isset($data['binding_period_amount_excl_vat']) ? $data['binding_period_amount_excl_vat'] : null;
+        $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
     }
 
     /**
@@ -658,6 +663,27 @@ class PartnerContractResource implements ArrayAccess
     public function setBindingPeriodAmountExclVat($binding_period_amount_excl_vat)
     {
         $this->container['binding_period_amount_excl_vat'] = $binding_period_amount_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets kpi
+     * @return \Ageras\Api\PartnerContractKpiResource
+     */
+    public function getKpi()
+    {
+        return $this->container['kpi'];
+    }
+
+    /**
+     * Sets kpi
+     * @param \Ageras\Api\PartnerContractKpiResource $kpi
+     * @return $this
+     */
+    public function setKpi($kpi)
+    {
+        $this->container['kpi'] = $kpi;
 
         return $this;
     }

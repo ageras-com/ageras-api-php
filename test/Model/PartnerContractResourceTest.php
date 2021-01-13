@@ -242,4 +242,12 @@ class PartnerContractResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "kpi"
+     */
+    public function testPropertyKpi()
+    {
+
+    }
+
 }

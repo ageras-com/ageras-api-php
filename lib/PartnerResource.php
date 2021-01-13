@@ -101,7 +101,8 @@ class PartnerResource implements ArrayAccess
         'category' => '\Ageras\Api\PartnerCategoryResource',
         'features' => 'string[]',
         'association' => '\Ageras\Api\PartnerAssociationResource',
-        'has_portal_access' => 'bool'
+        'has_portal_access' => 'bool',
+        'company_size' => '\Ageras\Api\CompanySizeResource'
     ];
 
     public static function swaggerTypes()
@@ -161,7 +162,8 @@ class PartnerResource implements ArrayAccess
         'category' => 'category',
         'features' => 'features',
         'association' => 'association',
-        'has_portal_access' => 'has_portal_access'
+        'has_portal_access' => 'has_portal_access',
+        'company_size' => 'company_size'
     ];
 
 
@@ -217,7 +219,8 @@ class PartnerResource implements ArrayAccess
         'category' => 'setCategory',
         'features' => 'setFeatures',
         'association' => 'setAssociation',
-        'has_portal_access' => 'setHasPortalAccess'
+        'has_portal_access' => 'setHasPortalAccess',
+        'company_size' => 'setCompanySize'
     ];
 
 
@@ -273,7 +276,8 @@ class PartnerResource implements ArrayAccess
         'category' => 'getCategory',
         'features' => 'getFeatures',
         'association' => 'getAssociation',
-        'has_portal_access' => 'getHasPortalAccess'
+        'has_portal_access' => 'getHasPortalAccess',
+        'company_size' => 'getCompanySize'
     ];
 
     public static function attributeMap()
@@ -395,6 +399,7 @@ class PartnerResource implements ArrayAccess
         $this->container['features'] = isset($data['features']) ? $data['features'] : null;
         $this->container['association'] = isset($data['association']) ? $data['association'] : null;
         $this->container['has_portal_access'] = isset($data['has_portal_access']) ? $data['has_portal_access'] : false;
+        $this->container['company_size'] = isset($data['company_size']) ? $data['company_size'] : null;
     }
 
     /**
@@ -1452,6 +1457,27 @@ class PartnerResource implements ArrayAccess
     public function setHasPortalAccess($has_portal_access)
     {
         $this->container['has_portal_access'] = $has_portal_access;
+
+        return $this;
+    }
+
+    /**
+     * Gets company_size
+     * @return \Ageras\Api\CompanySizeResource
+     */
+    public function getCompanySize()
+    {
+        return $this->container['company_size'];
+    }
+
+    /**
+     * Sets company_size
+     * @param \Ageras\Api\CompanySizeResource $company_size
+     * @return $this
+     */
+    public function setCompanySize($company_size)
+    {
+        $this->container['company_size'] = $company_size;
 
         return $this;
     }
