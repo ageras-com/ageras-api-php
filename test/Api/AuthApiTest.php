@@ -154,6 +154,39 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for authTokenDelete
+     *
+     * Delete a token.
+     *
+     */
+    public function testAuthTokenDelete()
+    {
+
+    }
+
+    /**
+     * Test case for authTokenGet
+     *
+     * Get information about the token.
+     *
+     */
+    public function testAuthTokenGet()
+    {
+
+    }
+
+    /**
+     * Test case for authTokenUpdate
+     *
+     * Renew token.
+     *
+     */
+    public function testAuthTokenUpdate()
+    {
+
+    }
+
+    /**
      * Test case for authUpdate
      *
      * Renew authentication session..

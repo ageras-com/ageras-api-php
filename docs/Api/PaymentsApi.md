@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymentsCardsCreate**](PaymentsApi.md#paymentsCardsCreate) | **POST** /payments/cards | Create a payment card.
 [**paymentsCardsDelete**](PaymentsApi.md#paymentsCardsDelete) | **DELETE** /payments/cards/{card_id} | Delete a card for a given id.
-[**paymentsCardsDelete2**](PaymentsApi.md#paymentsCardsDelete2) | **DELETE** /payments/{payment_id}/cards/{card_id} | Delete a card for a given id.
+[**paymentsCardsDelete_0**](PaymentsApi.md#paymentsCardsDelete_0) | **DELETE** /payments/{payment_id}/cards/{card_id} | Delete a card for a given id.
 [**paymentsCardsGet**](PaymentsApi.md#paymentsCardsGet) | **GET** /payments/cards/{payment_card_id} | Get a Partner from a given partner_id.
-[**paymentsCardsGet2**](PaymentsApi.md#paymentsCardsGet2) | **GET** /payments/{payment_id}/cards/{payment_card_id} | Get a Partner from a given partner_id.
+[**paymentsCardsGet_0**](PaymentsApi.md#paymentsCardsGet_0) | **GET** /payments/{payment_id}/cards/{payment_card_id} | Get a Partner from a given partner_id.
 [**paymentsCardsIndex**](PaymentsApi.md#paymentsCardsIndex) | **GET** /payments/cards | List payment cards.
 [**paymentsMethodsActionsCreate**](PaymentsApi.md#paymentsMethodsActionsCreate) | **POST** /payments/methods/{payment_method_id}/actions | Execute an action on a payment method.
-[**paymentsMethodsActionsCreate2**](PaymentsApi.md#paymentsMethodsActionsCreate2) | **POST** /payments/{payment_id}/methods/{payment_method_id}/actions | Execute an action on a payment method.
+[**paymentsMethodsActionsCreate_0**](PaymentsApi.md#paymentsMethodsActionsCreate_0) | **POST** /payments/{payment_id}/methods/{payment_method_id}/actions | Execute an action on a payment method.
 
 
 # **paymentsCardsCreate**
@@ -115,8 +115,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **paymentsCardsDelete2**
-> paymentsCardsDelete2($payment_id,  $card_id )
+# **paymentsCardsDelete_0**
+> paymentsCardsDelete_0($payment_id,  $card_id )
 
 Delete a card for a given id.
 
@@ -138,9 +138,9 @@ $payment_id = "payment_id_example"; // string |
 $card_id = "card_id_example"; // string | 
 
 try {
-    $api_instance->paymentsCardsDelete2($payment_id,  $card_id );
+    $api_instance->paymentsCardsDelete_0($payment_id,  $card_id );
 } catch (Exception $e) {
-    echo 'Exception when calling PaymentsApi->paymentsCardsDelete2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PaymentsApi->paymentsCardsDelete_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -218,8 +218,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **paymentsCardsGet2**
-> \Ageras\Api\PaymentCardResource paymentsCardsGet2($payment_id,  $payment_card_id )
+# **paymentsCardsGet_0**
+> \Ageras\Api\PaymentCardResource paymentsCardsGet_0($payment_id,  $payment_card_id )
 
 Get a Partner from a given partner_id.
 
@@ -241,10 +241,10 @@ $payment_id = "payment_id_example"; // string |
 $payment_card_id = "payment_card_id_example"; // string | 
 
 try {
-    $result = $api_instance->paymentsCardsGet2($payment_id,  $payment_card_id );
+    $result = $api_instance->paymentsCardsGet_0($payment_id,  $payment_card_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PaymentsApi->paymentsCardsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PaymentsApi->paymentsCardsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -389,8 +389,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **paymentsMethodsActionsCreate2**
-> \Ageras\Api\PaymentMethodResource paymentsMethodsActionsCreate2($payment_id,  $payment_method_id , $payment_method_action_resource)
+# **paymentsMethodsActionsCreate_0**
+> \Ageras\Api\PaymentMethodResource paymentsMethodsActionsCreate_0($payment_id,  $payment_method_id , $payment_method_action_resource)
 
 Execute an action on a payment method.
 
@@ -413,10 +413,10 @@ $payment_method_id = "payment_method_id_example"; // string |
 $payment_method_action_resource = new \Ageras\Api\PaymentMethodActionResource(); // \Ageras\Api\PaymentMethodActionResource | 
 
 try {
-    $result = $api_instance->paymentsMethodsActionsCreate2($payment_id,  $payment_method_id , $payment_method_action_resource);
+    $result = $api_instance->paymentsMethodsActionsCreate_0($payment_id,  $payment_method_id , $payment_method_action_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PaymentsApi->paymentsMethodsActionsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PaymentsApi->paymentsMethodsActionsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

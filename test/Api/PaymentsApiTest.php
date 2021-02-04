@@ -99,12 +99,12 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for paymentsCardsDelete2
+     * Test case for paymentsCardsDelete_0
      *
      * Delete a card for a given id..
      *
      */
-    public function testPaymentsCardsDelete2()
+    public function testPaymentsCardsDelete0()
     {
 
     }
@@ -121,12 +121,12 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for paymentsCardsGet2
+     * Test case for paymentsCardsGet_0
      *
      * Get a Partner from a given partner_id..
      *
      */
-    public function testPaymentsCardsGet2()
+    public function testPaymentsCardsGet0()
     {
 
     }
@@ -154,12 +154,12 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for paymentsMethodsActionsCreate2
+     * Test case for paymentsMethodsActionsCreate_0
      *
      * Execute an action on a payment method..
      *
      */
-    public function testPaymentsMethodsActionsCreate2()
+    public function testPaymentsMethodsActionsCreate0()
     {
 
     }

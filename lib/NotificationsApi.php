@@ -172,7 +172,7 @@ class NotificationsApi
     }
 
     /**
-     * Operation notificationsActionsCreate2
+     * Operation notificationsActionsCreate_0
      *
      * Perform an action on one or more notifications
      *
@@ -181,14 +181,14 @@ class NotificationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\NotificationResource
      */
-    public function notificationsActionsCreate2($notification_id , $notification_action_resource)
+    public function notificationsActionsCreate_0($notification_id , $notification_action_resource)
     {
-        list($response) = $this->notificationsActionsCreate2WithHttpInfo($notification_id, $notification_action_resource);
+        list($response) = $this->notificationsActionsCreate_0WithHttpInfo($notification_id, $notification_action_resource);
         return $response;
     }
 
     /**
-     * Operation notificationsActionsCreate2WithHttpInfo
+     * Operation notificationsActionsCreate_0WithHttpInfo
      *
      * Perform an action on one or more notifications
      *
@@ -197,7 +197,7 @@ class NotificationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\NotificationResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function notificationsActionsCreate2WithHttpInfo($notification_id , $notification_action_resource)
+    public function notificationsActionsCreate_0WithHttpInfo($notification_id , $notification_action_resource)
     {
         // parse inputs
         $resourcePath = "/notifications/{notification_id}/actions";

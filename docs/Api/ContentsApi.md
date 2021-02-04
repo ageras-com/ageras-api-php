@@ -5,9 +5,9 @@ All URIs are relative to *https://api.ageras.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**contentsPagesAggregationsIndex**](ContentsApi.md#contentsPagesAggregationsIndex) | **GET** /contents/pages/aggregations | Aggreate the Pages by the letters
-[**contentsPagesAggregationsIndex2**](ContentsApi.md#contentsPagesAggregationsIndex2) | **GET** /contents/{content_id}/pages/aggregations | Aggreate the Pages by the letters
+[**contentsPagesAggregationsIndex_0**](ContentsApi.md#contentsPagesAggregationsIndex_0) | **GET** /contents/{content_id}/pages/aggregations | Aggreate the Pages by the letters
 [**contentsPagesGet**](ContentsApi.md#contentsPagesGet) | **GET** /contents/pages/{content_page_id} | Return a Page from a given id
-[**contentsPagesGet2**](ContentsApi.md#contentsPagesGet2) | **GET** /contents/{content_id}/pages/{content_page_id} | Return a Page from a given id
+[**contentsPagesGet_0**](ContentsApi.md#contentsPagesGet_0) | **GET** /contents/{content_id}/pages/{content_page_id} | Return a Page from a given id
 [**contentsPagesIndex**](ContentsApi.md#contentsPagesIndex) | **GET** /contents/pages | List Pages
 [**contentsPagesTypesIndex**](ContentsApi.md#contentsPagesTypesIndex) | **GET** /contents/pages/types | List content page types.
 
@@ -79,8 +79,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentsPagesAggregationsIndex2**
-> \Ageras\Api\AggregationResult contentsPagesAggregationsIndex2($content_id , $criteria)
+# **contentsPagesAggregationsIndex_0**
+> \Ageras\Api\AggregationResult contentsPagesAggregationsIndex_0($content_id , $criteria)
 
 Aggreate the Pages by the letters
 
@@ -111,10 +111,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->contentsPagesAggregationsIndex2($content_id , $criteria);
+    $result = $api_instance->contentsPagesAggregationsIndex_0($content_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentsApi->contentsPagesAggregationsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentsApi->contentsPagesAggregationsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -199,8 +199,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentsPagesGet2**
-> \Ageras\Api\ContentPageResource contentsPagesGet2($content_id,  $content_page_id )
+# **contentsPagesGet_0**
+> \Ageras\Api\ContentPageResource contentsPagesGet_0($content_id,  $content_page_id )
 
 Return a Page from a given id
 
@@ -222,10 +222,10 @@ $content_id = "content_id_example"; // string |
 $content_page_id = "content_page_id_example"; // string | 
 
 try {
-    $result = $api_instance->contentsPagesGet2($content_id,  $content_page_id );
+    $result = $api_instance->contentsPagesGet_0($content_id,  $content_page_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentsApi->contentsPagesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentsApi->contentsPagesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

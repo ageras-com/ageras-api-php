@@ -1511,7 +1511,7 @@ class LeadsApi
     }
 
     /**
-     * Operation leadsDemopartnersIndex2
+     * Operation leadsDemopartnersIndex_0
      *
      * List leads a demo partner could expect to see if they sign up.
      *
@@ -1520,14 +1520,14 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadResult
      */
-    public function leadsDemopartnersIndex2($lead_id,  $partner_id )
+    public function leadsDemopartnersIndex_0($lead_id,  $partner_id )
     {
-        list($response) = $this->leadsDemopartnersIndex2WithHttpInfo($lead_id, $partner_id);
+        list($response) = $this->leadsDemopartnersIndex_0WithHttpInfo($lead_id, $partner_id);
         return $response;
     }
 
     /**
-     * Operation leadsDemopartnersIndex2WithHttpInfo
+     * Operation leadsDemopartnersIndex_0WithHttpInfo
      *
      * List leads a demo partner could expect to see if they sign up.
      *
@@ -1536,7 +1536,7 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function leadsDemopartnersIndex2WithHttpInfo($lead_id,  $partner_id )
+    public function leadsDemopartnersIndex_0WithHttpInfo($lead_id,  $partner_id )
     {
         // parse inputs
         $resourcePath = "/leads/{lead_id}/demopartners/{partner_id}";
@@ -2872,7 +2872,7 @@ class LeadsApi
     }
 
     /**
-     * Operation leadsQuotesGet2
+     * Operation leadsQuotesGet_0
      *
      * Get an quote by id.
      *
@@ -2881,14 +2881,14 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadQuoteResource
      */
-    public function leadsQuotesGet2($lead_id,  $lead_quote_id )
+    public function leadsQuotesGet_0($lead_id,  $lead_quote_id )
     {
-        list($response) = $this->leadsQuotesGet2WithHttpInfo($lead_id, $lead_quote_id);
+        list($response) = $this->leadsQuotesGet_0WithHttpInfo($lead_id, $lead_quote_id);
         return $response;
     }
 
     /**
-     * Operation leadsQuotesGet2WithHttpInfo
+     * Operation leadsQuotesGet_0WithHttpInfo
      *
      * Get an quote by id.
      *
@@ -2897,7 +2897,7 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadQuoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function leadsQuotesGet2WithHttpInfo($lead_id,  $lead_quote_id )
+    public function leadsQuotesGet_0WithHttpInfo($lead_id,  $lead_quote_id )
     {
         // parse inputs
         $resourcePath = "/leads/{lead_id}/quotes/{lead_quote_id}";
@@ -3134,7 +3134,7 @@ class LeadsApi
     }
 
     /**
-     * Operation leadsQuotesIndex2
+     * Operation leadsQuotesIndex_0
      *
      * List the quotes connected to a given Lead.
      *
@@ -3157,14 +3157,14 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadQuoteResult
      */
-    public function leadsQuotesIndex2($lead_id , $criteria = [])
+    public function leadsQuotesIndex_0($lead_id , $criteria = [])
     {
-        list($response) = $this->leadsQuotesIndex2WithHttpInfo($lead_id, $criteria);
+        list($response) = $this->leadsQuotesIndex_0WithHttpInfo($lead_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation leadsQuotesIndex2WithHttpInfo
+     * Operation leadsQuotesIndex_0WithHttpInfo
      *
      * List the quotes connected to a given Lead.
      *
@@ -3187,7 +3187,7 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadQuoteResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function leadsQuotesIndex2WithHttpInfo($lead_id , $criteria = [])
+    public function leadsQuotesIndex_0WithHttpInfo($lead_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/leads/{lead_id}/quotes";
@@ -4049,7 +4049,7 @@ class LeadsApi
     }
 
     /**
-     * Operation leadsQuotesUpdate2
+     * Operation leadsQuotesUpdate_0
      *
      * Update a quote.
      *
@@ -4059,14 +4059,14 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadQuoteResource
      */
-    public function leadsQuotesUpdate2($lead_id,  $lead_quote_id , $lead_quote_resource)
+    public function leadsQuotesUpdate_0($lead_id,  $lead_quote_id , $lead_quote_resource)
     {
-        list($response) = $this->leadsQuotesUpdate2WithHttpInfo($lead_id, $lead_quote_id, $lead_quote_resource);
+        list($response) = $this->leadsQuotesUpdate_0WithHttpInfo($lead_id, $lead_quote_id, $lead_quote_resource);
         return $response;
     }
 
     /**
-     * Operation leadsQuotesUpdate2WithHttpInfo
+     * Operation leadsQuotesUpdate_0WithHttpInfo
      *
      * Update a quote.
      *
@@ -4076,7 +4076,7 @@ class LeadsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadQuoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function leadsQuotesUpdate2WithHttpInfo($lead_id,  $lead_quote_id , $lead_quote_resource)
+    public function leadsQuotesUpdate_0WithHttpInfo($lead_id,  $lead_quote_id , $lead_quote_resource)
     {
         // parse inputs
         $resourcePath = "/leads/{lead_id}/quotes/{lead_quote_id}";

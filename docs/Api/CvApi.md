@@ -30,7 +30,7 @@ Method | HTTP request | Description
 [**cvLanguageDelete**](CvApi.md#cvLanguageDelete) | **DELETE** /cv/{partner_user_id}/language/{language_id} | Delete partner user language.
 [**cvLanguageUpdate**](CvApi.md#cvLanguageUpdate) | **PUT** /cv/{partner_user_id}/language | Update partner user language.
 [**cvSocialDelete**](CvApi.md#cvSocialDelete) | **DELETE** /cv/cv/{partner_user_id}/social | Delete partner user social media.
-[**cvSocialDelete2**](CvApi.md#cvSocialDelete2) | **DELETE** /cv/{partner_user_id}/social | Delete partner user social media.
+[**cvSocialDelete_0**](CvApi.md#cvSocialDelete_0) | **DELETE** /cv/{partner_user_id}/social | Delete partner user social media.
 [**cvSocialUpdate**](CvApi.md#cvSocialUpdate) | **PUT** /cv/{partner_user_id}/social | Update partner user social media.
 
 
@@ -1407,8 +1407,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **cvSocialDelete2**
-> cvSocialDelete2($partner_user_id )
+# **cvSocialDelete_0**
+> cvSocialDelete_0($partner_user_id )
 
 Delete partner user social media.
 
@@ -1429,9 +1429,9 @@ $api_instance = new Ageras\Api\Api\CvApi();
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
-    $api_instance->cvSocialDelete2($partner_user_id );
+    $api_instance->cvSocialDelete_0($partner_user_id );
 } catch (Exception $e) {
-    echo 'Exception when calling CvApi->cvSocialDelete2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CvApi->cvSocialDelete_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

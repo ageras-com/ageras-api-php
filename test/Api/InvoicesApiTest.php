@@ -132,12 +132,12 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for invoicesRefundrequestsGet2
+     * Test case for invoicesRefundrequestsGet_0
      *
      * Get a refund request by ID..
      *
      */
-    public function testInvoicesRefundrequestsGet2()
+    public function testInvoicesRefundrequestsGet0()
     {
 
     }
@@ -154,12 +154,12 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for invoicesRefundrequestsIndex2
+     * Test case for invoicesRefundrequestsIndex_0
      *
      * Get refund requests from a given invoice_id..
      *
      */
-    public function testInvoicesRefundrequestsIndex2()
+    public function testInvoicesRefundrequestsIndex0()
     {
 
     }

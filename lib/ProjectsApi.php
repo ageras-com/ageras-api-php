@@ -339,7 +339,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsEventsCreate2
+     * Operation projectsEventsCreate_0
      *
      * Create events for a given project.
      *
@@ -348,14 +348,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsEventsCreate2($project_id , $project_event_resource)
+    public function projectsEventsCreate_0($project_id , $project_event_resource)
     {
-        list($response) = $this->projectsEventsCreate2WithHttpInfo($project_id, $project_event_resource);
+        list($response) = $this->projectsEventsCreate_0WithHttpInfo($project_id, $project_event_resource);
         return $response;
     }
 
     /**
-     * Operation projectsEventsCreate2WithHttpInfo
+     * Operation projectsEventsCreate_0WithHttpInfo
      *
      * Create events for a given project.
      *
@@ -364,7 +364,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsEventsCreate2WithHttpInfo($project_id , $project_event_resource)
+    public function projectsEventsCreate_0WithHttpInfo($project_id , $project_event_resource)
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/events";
@@ -613,7 +613,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsEventsGet2
+     * Operation projectsEventsGet_0
      *
      * Get event for a given project.
      *
@@ -622,14 +622,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsEventsGet2($project_id,  $project_event_id )
+    public function projectsEventsGet_0($project_id,  $project_event_id )
     {
-        list($response) = $this->projectsEventsGet2WithHttpInfo($project_id, $project_event_id);
+        list($response) = $this->projectsEventsGet_0WithHttpInfo($project_id, $project_event_id);
         return $response;
     }
 
     /**
-     * Operation projectsEventsGet2WithHttpInfo
+     * Operation projectsEventsGet_0WithHttpInfo
      *
      * Get event for a given project.
      *
@@ -638,7 +638,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsEventsGet2WithHttpInfo($project_id,  $project_event_id )
+    public function projectsEventsGet_0WithHttpInfo($project_id,  $project_event_id )
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/events/{project_event_id}";
@@ -851,7 +851,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsEventsIndex2
+     * Operation projectsEventsIndex_0
      *
      * List events for a given project.
      *
@@ -870,14 +870,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResult
      */
-    public function projectsEventsIndex2($project_id , $criteria = [])
+    public function projectsEventsIndex_0($project_id , $criteria = [])
     {
-        list($response) = $this->projectsEventsIndex2WithHttpInfo($project_id, $criteria);
+        list($response) = $this->projectsEventsIndex_0WithHttpInfo($project_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation projectsEventsIndex2WithHttpInfo
+     * Operation projectsEventsIndex_0WithHttpInfo
      *
      * List events for a given project.
      *
@@ -896,7 +896,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsEventsIndex2WithHttpInfo($project_id , $criteria = [])
+    public function projectsEventsIndex_0WithHttpInfo($project_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/events";
@@ -1090,7 +1090,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsEventsUpdate2
+     * Operation projectsEventsUpdate_0
      *
      * Update e events for project events.
      *
@@ -1100,14 +1100,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource)
+    public function projectsEventsUpdate_0($project_id,  $project_event_id , $project_event_resource)
     {
-        list($response) = $this->projectsEventsUpdate2WithHttpInfo($project_id, $project_event_id, $project_event_resource);
+        list($response) = $this->projectsEventsUpdate_0WithHttpInfo($project_id, $project_event_id, $project_event_resource);
         return $response;
     }
 
     /**
-     * Operation projectsEventsUpdate2WithHttpInfo
+     * Operation projectsEventsUpdate_0WithHttpInfo
      *
      * Update e events for project events.
      *
@@ -1117,7 +1117,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsEventsUpdate2WithHttpInfo($project_id,  $project_event_id , $project_event_resource)
+    public function projectsEventsUpdate_0WithHttpInfo($project_id,  $project_event_id , $project_event_resource)
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/events/{project_event_id}";
@@ -1524,7 +1524,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsNotesCreate2
+     * Operation projectsNotesCreate_0
      *
      * Create a note for a given project.
      *
@@ -1533,14 +1533,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsNotesCreate2($project_id , $project_note_resource)
+    public function projectsNotesCreate_0($project_id , $project_note_resource)
     {
-        list($response) = $this->projectsNotesCreate2WithHttpInfo($project_id, $project_note_resource);
+        list($response) = $this->projectsNotesCreate_0WithHttpInfo($project_id, $project_note_resource);
         return $response;
     }
 
     /**
-     * Operation projectsNotesCreate2WithHttpInfo
+     * Operation projectsNotesCreate_0WithHttpInfo
      *
      * Create a note for a given project.
      *
@@ -1549,7 +1549,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsNotesCreate2WithHttpInfo($project_id , $project_note_resource)
+    public function projectsNotesCreate_0WithHttpInfo($project_id , $project_note_resource)
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes";
@@ -1798,7 +1798,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsNotesGet2
+     * Operation projectsNotesGet_0
      *
      * Get a note from Project and note id.
      *
@@ -1807,14 +1807,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsNotesGet2($project_id,  $project_note_id )
+    public function projectsNotesGet_0($project_id,  $project_note_id )
     {
-        list($response) = $this->projectsNotesGet2WithHttpInfo($project_id, $project_note_id);
+        list($response) = $this->projectsNotesGet_0WithHttpInfo($project_id, $project_note_id);
         return $response;
     }
 
     /**
-     * Operation projectsNotesGet2WithHttpInfo
+     * Operation projectsNotesGet_0WithHttpInfo
      *
      * Get a note from Project and note id.
      *
@@ -1823,7 +1823,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsNotesGet2WithHttpInfo($project_id,  $project_note_id )
+    public function projectsNotesGet_0WithHttpInfo($project_id,  $project_note_id )
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes/{project_note_id}";
@@ -2048,7 +2048,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsNotesIndex2
+     * Operation projectsNotesIndex_0
      *
      * List notes from a given project.
      *
@@ -2069,14 +2069,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResult
      */
-    public function projectsNotesIndex2($project_id , $criteria = [])
+    public function projectsNotesIndex_0($project_id , $criteria = [])
     {
-        list($response) = $this->projectsNotesIndex2WithHttpInfo($project_id, $criteria);
+        list($response) = $this->projectsNotesIndex_0WithHttpInfo($project_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation projectsNotesIndex2WithHttpInfo
+     * Operation projectsNotesIndex_0WithHttpInfo
      *
      * List notes from a given project.
      *
@@ -2097,7 +2097,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsNotesIndex2WithHttpInfo($project_id , $criteria = [])
+    public function projectsNotesIndex_0WithHttpInfo($project_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes";
@@ -2299,7 +2299,7 @@ class ProjectsApi
     }
 
     /**
-     * Operation projectsNotesUpdate2
+     * Operation projectsNotesUpdate_0
      *
      * Update a given project note.
      *
@@ -2309,14 +2309,14 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ProjectNoteResource
      */
-    public function projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource)
+    public function projectsNotesUpdate_0($project_id,  $project_note_id , $project_note_resource)
     {
-        list($response) = $this->projectsNotesUpdate2WithHttpInfo($project_id, $project_note_id, $project_note_resource);
+        list($response) = $this->projectsNotesUpdate_0WithHttpInfo($project_id, $project_note_id, $project_note_resource);
         return $response;
     }
 
     /**
-     * Operation projectsNotesUpdate2WithHttpInfo
+     * Operation projectsNotesUpdate_0WithHttpInfo
      *
      * Update a given project note.
      *
@@ -2326,7 +2326,7 @@ class ProjectsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ProjectNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function projectsNotesUpdate2WithHttpInfo($project_id,  $project_note_id , $project_note_resource)
+    public function projectsNotesUpdate_0WithHttpInfo($project_id,  $project_note_id , $project_note_resource)
     {
         // parse inputs
         $resourcePath = "/projects/{project_id}/notes/{project_note_id}";

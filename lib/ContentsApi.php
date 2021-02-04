@@ -217,7 +217,7 @@ class ContentsApi
     }
 
     /**
-     * Operation contentsPagesAggregationsIndex2
+     * Operation contentsPagesAggregationsIndex_0
      *
      * Aggreate the Pages by the letters
      *
@@ -235,14 +235,14 @@ class ContentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AggregationResult
      */
-    public function contentsPagesAggregationsIndex2($content_id , $criteria = [])
+    public function contentsPagesAggregationsIndex_0($content_id , $criteria = [])
     {
-        list($response) = $this->contentsPagesAggregationsIndex2WithHttpInfo($content_id, $criteria);
+        list($response) = $this->contentsPagesAggregationsIndex_0WithHttpInfo($content_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation contentsPagesAggregationsIndex2WithHttpInfo
+     * Operation contentsPagesAggregationsIndex_0WithHttpInfo
      *
      * Aggreate the Pages by the letters
      *
@@ -260,7 +260,7 @@ class ContentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AggregationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentsPagesAggregationsIndex2WithHttpInfo($content_id , $criteria = [])
+    public function contentsPagesAggregationsIndex_0WithHttpInfo($content_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/contents/{content_id}/pages/aggregations";
@@ -443,7 +443,7 @@ class ContentsApi
     }
 
     /**
-     * Operation contentsPagesGet2
+     * Operation contentsPagesGet_0
      *
      * Return a Page from a given id
      *
@@ -452,14 +452,14 @@ class ContentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ContentPageResource
      */
-    public function contentsPagesGet2($content_id,  $content_page_id )
+    public function contentsPagesGet_0($content_id,  $content_page_id )
     {
-        list($response) = $this->contentsPagesGet2WithHttpInfo($content_id, $content_page_id);
+        list($response) = $this->contentsPagesGet_0WithHttpInfo($content_id, $content_page_id);
         return $response;
     }
 
     /**
-     * Operation contentsPagesGet2WithHttpInfo
+     * Operation contentsPagesGet_0WithHttpInfo
      *
      * Return a Page from a given id
      *
@@ -468,7 +468,7 @@ class ContentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ContentPageResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentsPagesGet2WithHttpInfo($content_id,  $content_page_id )
+    public function contentsPagesGet_0WithHttpInfo($content_id,  $content_page_id )
     {
         // parse inputs
         $resourcePath = "/contents/{content_id}/pages/{content_page_id}";

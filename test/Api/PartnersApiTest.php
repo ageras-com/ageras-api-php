@@ -726,12 +726,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesCreate2
+     * Test case for partnersDeliverablesCreate_0
      *
      * Create Deliverable for partners.
      *
      */
-    public function testPartnersDeliverablesCreate2()
+    public function testPartnersDeliverablesCreate0()
     {
 
     }
@@ -748,12 +748,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesGet2
+     * Test case for partnersDeliverablesGet_0
      *
      * Retrieve a single deliverable id.
      *
      */
-    public function testPartnersDeliverablesGet2()
+    public function testPartnersDeliverablesGet0()
     {
 
     }
@@ -770,12 +770,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesIndex2
+     * Test case for partnersDeliverablesIndex_0
      *
      * List Partner deliverables.
      *
      */
-    public function testPartnersDeliverablesIndex2()
+    public function testPartnersDeliverablesIndex0()
     {
 
     }
@@ -792,12 +792,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesLinesCreate2
+     * Test case for partnersDeliverablesLinesCreate_0
      *
      * Create item for Partner Deliverable.
      *
      */
-    public function testPartnersDeliverablesLinesCreate2()
+    public function testPartnersDeliverablesLinesCreate0()
     {
 
     }
@@ -814,12 +814,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesLinesDelete2
+     * Test case for partnersDeliverablesLinesDelete_0
      *
      * Delete item from Partner Deliverable.
      *
      */
-    public function testPartnersDeliverablesLinesDelete2()
+    public function testPartnersDeliverablesLinesDelete0()
     {
 
     }
@@ -836,12 +836,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesLinesGet2
+     * Test case for partnersDeliverablesLinesGet_0
      *
      * Get Partner Deliverable Item.
      *
      */
-    public function testPartnersDeliverablesLinesGet2()
+    public function testPartnersDeliverablesLinesGet0()
     {
 
     }
@@ -858,12 +858,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesLinesIndex2
+     * Test case for partnersDeliverablesLinesIndex_0
      *
      * List Partner Deliverable Items.
      *
      */
-    public function testPartnersDeliverablesLinesIndex2()
+    public function testPartnersDeliverablesLinesIndex0()
     {
 
     }
@@ -880,12 +880,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesLinesUpdate2
+     * Test case for partnersDeliverablesLinesUpdate_0
      *
      * Update item for Partner Deliverable.
      *
      */
-    public function testPartnersDeliverablesLinesUpdate2()
+    public function testPartnersDeliverablesLinesUpdate0()
     {
 
     }
@@ -902,12 +902,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersDeliverablesUpdate2
+     * Test case for partnersDeliverablesUpdate_0
      *
      * Update Partner Deliverable.
      *
      */
-    public function testPartnersDeliverablesUpdate2()
+    public function testPartnersDeliverablesUpdate0()
     {
 
     }
@@ -1100,12 +1100,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersInvoicingsIndex2
+     * Test case for partnersInvoicingsIndex_0
      *
      * List partner invoicings..
      *
      */
-    public function testPartnersInvoicingsIndex2()
+    public function testPartnersInvoicingsIndex0()
     {
 
     }
@@ -1144,12 +1144,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersLeadtypesGet2
+     * Test case for partnersLeadtypesGet_0
      *
      * Retrieve a given lead type..
      *
      */
-    public function testPartnersLeadtypesGet2()
+    public function testPartnersLeadtypesGet0()
     {
 
     }
@@ -1166,12 +1166,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersLeadtypesIndex2
+     * Test case for partnersLeadtypesIndex_0
      *
      * Get partner types criteria..
      *
      */
-    public function testPartnersLeadtypesIndex2()
+    public function testPartnersLeadtypesIndex0()
     {
 
     }
@@ -1199,12 +1199,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersNotesCreate2
+     * Test case for partnersNotesCreate_0
      *
      * Create Partner notes..
      *
      */
-    public function testPartnersNotesCreate2()
+    public function testPartnersNotesCreate0()
     {
 
     }
@@ -1232,12 +1232,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersNotesIndex2
+     * Test case for partnersNotesIndex_0
      *
      * Retrieve lists of notes..
      *
      */
-    public function testPartnersNotesIndex2()
+    public function testPartnersNotesIndex0()
     {
 
     }
@@ -1529,12 +1529,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersContentsDelete2
+     * Test case for partnersUsersContentsDelete_0
      *
      * Delete content for a given partner user..
      *
      */
-    public function testPartnersUsersContentsDelete2()
+    public function testPartnersUsersContentsDelete0()
     {
 
     }
@@ -1551,12 +1551,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersContentsGet2
+     * Test case for partnersUsersContentsGet_0
      *
      * Get the content of a given partner user..
      *
      */
-    public function testPartnersUsersContentsGet2()
+    public function testPartnersUsersContentsGet0()
     {
 
     }
@@ -1573,12 +1573,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersContentsUpdate2
+     * Test case for partnersUsersContentsUpdate_0
      *
      * Update content for a given partner user..
      *
      */
-    public function testPartnersUsersContentsUpdate2()
+    public function testPartnersUsersContentsUpdate0()
     {
 
     }
@@ -1595,12 +1595,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersCreate2
+     * Test case for partnersUsersCreate_0
      *
      * Create a partner user..
      *
      */
-    public function testPartnersUsersCreate2()
+    public function testPartnersUsersCreate0()
     {
 
     }
@@ -1628,12 +1628,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersGet2
+     * Test case for partnersUsersGet_0
      *
      * Get a Partner User by a given partner_user_id..
      *
      */
-    public function testPartnersUsersGet2()
+    public function testPartnersUsersGet0()
     {
 
     }
@@ -1650,12 +1650,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersIndex2
+     * Test case for partnersUsersIndex_0
      *
      * List partner users..
      *
      */
-    public function testPartnersUsersIndex2()
+    public function testPartnersUsersIndex0()
     {
 
     }
@@ -1672,12 +1672,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersUsersUpdate2
+     * Test case for partnersUsersUpdate_0
      *
      * Update partner user profile..
      *
      */
-    public function testPartnersUsersUpdate2()
+    public function testPartnersUsersUpdate0()
     {
 
     }
@@ -1694,12 +1694,12 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for partnersVerificationsIndex2
+     * Test case for partnersVerificationsIndex_0
      *
      * Get Partner verifications..
      *
      */
-    public function testPartnersVerificationsIndex2()
+    public function testPartnersVerificationsIndex0()
     {
 
     }

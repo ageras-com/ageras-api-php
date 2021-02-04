@@ -6415,7 +6415,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesCreate2
+     * Operation partnersDeliverablesCreate_0
      *
      * Create Deliverable for partners
      *
@@ -6424,14 +6424,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableResource
      */
-    public function partnersDeliverablesCreate2($partner_id , $partner_deliverable_resource)
+    public function partnersDeliverablesCreate_0($partner_id , $partner_deliverable_resource)
     {
-        list($response) = $this->partnersDeliverablesCreate2WithHttpInfo($partner_id, $partner_deliverable_resource);
+        list($response) = $this->partnersDeliverablesCreate_0WithHttpInfo($partner_id, $partner_deliverable_resource);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesCreate2WithHttpInfo
+     * Operation partnersDeliverablesCreate_0WithHttpInfo
      *
      * Create Deliverable for partners
      *
@@ -6440,7 +6440,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesCreate2WithHttpInfo($partner_id , $partner_deliverable_resource)
+    public function partnersDeliverablesCreate_0WithHttpInfo($partner_id , $partner_deliverable_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables";
@@ -6596,7 +6596,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesGet2
+     * Operation partnersDeliverablesGet_0
      *
      * Retrieve a single deliverable id
      *
@@ -6605,14 +6605,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableResource
      */
-    public function partnersDeliverablesGet2($partner_id,  $partner_deliverable_id )
+    public function partnersDeliverablesGet_0($partner_id,  $partner_deliverable_id )
     {
-        list($response) = $this->partnersDeliverablesGet2WithHttpInfo($partner_id, $partner_deliverable_id);
+        list($response) = $this->partnersDeliverablesGet_0WithHttpInfo($partner_id, $partner_deliverable_id);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesGet2WithHttpInfo
+     * Operation partnersDeliverablesGet_0WithHttpInfo
      *
      * Retrieve a single deliverable id
      *
@@ -6621,7 +6621,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesGet2WithHttpInfo($partner_id,  $partner_deliverable_id )
+    public function partnersDeliverablesGet_0WithHttpInfo($partner_id,  $partner_deliverable_id )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}";
@@ -6822,7 +6822,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesIndex2
+     * Operation partnersDeliverablesIndex_0
      *
      * List Partner deliverables
      *
@@ -6839,14 +6839,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableResult
      */
-    public function partnersDeliverablesIndex2($partner_id , $criteria = [])
+    public function partnersDeliverablesIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersDeliverablesIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersDeliverablesIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesIndex2WithHttpInfo
+     * Operation partnersDeliverablesIndex_0WithHttpInfo
      *
      * List Partner deliverables
      *
@@ -6863,7 +6863,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersDeliverablesIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables";
@@ -7049,7 +7049,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesLinesCreate2
+     * Operation partnersDeliverablesLinesCreate_0
      *
      * Create item for Partner Deliverable
      *
@@ -7059,14 +7059,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableLineResource
      */
-    public function partnersDeliverablesLinesCreate2($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
+    public function partnersDeliverablesLinesCreate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
     {
-        list($response) = $this->partnersDeliverablesLinesCreate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_resource);
+        list($response) = $this->partnersDeliverablesLinesCreate_0WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_resource);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesLinesCreate2WithHttpInfo
+     * Operation partnersDeliverablesLinesCreate_0WithHttpInfo
      *
      * Create item for Partner Deliverable
      *
@@ -7076,7 +7076,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesLinesCreate2WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
+    public function partnersDeliverablesLinesCreate_0WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines";
@@ -7246,7 +7246,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesLinesDelete2
+     * Operation partnersDeliverablesLinesDelete_0
      *
      * Delete item from Partner Deliverable
      *
@@ -7256,14 +7256,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
      */
-    public function partnersDeliverablesLinesDelete2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    public function partnersDeliverablesLinesDelete_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
     {
-        list($response) = $this->partnersDeliverablesLinesDelete2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
+        list($response) = $this->partnersDeliverablesLinesDelete_0WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesLinesDelete2WithHttpInfo
+     * Operation partnersDeliverablesLinesDelete_0WithHttpInfo
      *
      * Delete item from Partner Deliverable
      *
@@ -7273,7 +7273,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesLinesDelete2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    public function partnersDeliverablesLinesDelete_0WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
@@ -7446,7 +7446,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesLinesGet2
+     * Operation partnersDeliverablesLinesGet_0
      *
      * Get Partner Deliverable Item
      *
@@ -7456,14 +7456,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableLineResource
      */
-    public function partnersDeliverablesLinesGet2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    public function partnersDeliverablesLinesGet_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
     {
-        list($response) = $this->partnersDeliverablesLinesGet2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
+        list($response) = $this->partnersDeliverablesLinesGet_0WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesLinesGet2WithHttpInfo
+     * Operation partnersDeliverablesLinesGet_0WithHttpInfo
      *
      * Get Partner Deliverable Item
      *
@@ -7473,7 +7473,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesLinesGet2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+    public function partnersDeliverablesLinesGet_0WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
@@ -7680,7 +7680,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesLinesIndex2
+     * Operation partnersDeliverablesLinesIndex_0
      *
      * List Partner Deliverable Items
      *
@@ -7696,14 +7696,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableLineResult
      */
-    public function partnersDeliverablesLinesIndex2($partner_id,  $partner_deliverable_id , $criteria = [])
+    public function partnersDeliverablesLinesIndex_0($partner_id,  $partner_deliverable_id , $criteria = [])
     {
-        list($response) = $this->partnersDeliverablesLinesIndex2WithHttpInfo($partner_id, $partner_deliverable_id, $criteria);
+        list($response) = $this->partnersDeliverablesLinesIndex_0WithHttpInfo($partner_id, $partner_deliverable_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesLinesIndex2WithHttpInfo
+     * Operation partnersDeliverablesLinesIndex_0WithHttpInfo
      *
      * List Partner Deliverable Items
      *
@@ -7719,7 +7719,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableLineResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesLinesIndex2WithHttpInfo($partner_id,  $partner_deliverable_id , $criteria = [])
+    public function partnersDeliverablesLinesIndex_0WithHttpInfo($partner_id,  $partner_deliverable_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines";
@@ -7915,7 +7915,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesLinesUpdate2
+     * Operation partnersDeliverablesLinesUpdate_0
      *
      * Update item for Partner Deliverable
      *
@@ -7926,14 +7926,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableLineResource
      */
-    public function partnersDeliverablesLinesUpdate2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    public function partnersDeliverablesLinesUpdate_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
     {
-        list($response) = $this->partnersDeliverablesLinesUpdate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id, $partner_deliverable_line_resource);
+        list($response) = $this->partnersDeliverablesLinesUpdate_0WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_line_id, $partner_deliverable_line_resource);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesLinesUpdate2WithHttpInfo
+     * Operation partnersDeliverablesLinesUpdate_0WithHttpInfo
      *
      * Update item for Partner Deliverable
      *
@@ -7944,7 +7944,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableLineResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesLinesUpdate2WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+    public function partnersDeliverablesLinesUpdate_0WithHttpInfo($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id}";
@@ -8123,7 +8123,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersDeliverablesUpdate2
+     * Operation partnersDeliverablesUpdate_0
      *
      * Update Partner Deliverable
      *
@@ -8133,14 +8133,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerDeliverableResource
      */
-    public function partnersDeliverablesUpdate2($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
+    public function partnersDeliverablesUpdate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
     {
-        list($response) = $this->partnersDeliverablesUpdate2WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_resource);
+        list($response) = $this->partnersDeliverablesUpdate_0WithHttpInfo($partner_id, $partner_deliverable_id, $partner_deliverable_resource);
         return $response;
     }
 
     /**
-     * Operation partnersDeliverablesUpdate2WithHttpInfo
+     * Operation partnersDeliverablesUpdate_0WithHttpInfo
      *
      * Update Partner Deliverable
      *
@@ -8150,7 +8150,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerDeliverableResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersDeliverablesUpdate2WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
+    public function partnersDeliverablesUpdate_0WithHttpInfo($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/deliverables/{partnerDeliverable_id}";
@@ -10072,7 +10072,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersInvoicingsIndex2
+     * Operation partnersInvoicingsIndex_0
      *
      * List partner invoicings.
      *
@@ -10091,14 +10091,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\InvoicingResult
      */
-    public function partnersInvoicingsIndex2($partner_id , $criteria = [])
+    public function partnersInvoicingsIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersInvoicingsIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersInvoicingsIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersInvoicingsIndex2WithHttpInfo
+     * Operation partnersInvoicingsIndex_0WithHttpInfo
      *
      * List partner invoicings.
      *
@@ -10117,7 +10117,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\InvoicingResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersInvoicingsIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersInvoicingsIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/invoicings";
@@ -10491,7 +10491,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersLeadtypesGet2
+     * Operation partnersLeadtypesGet_0
      *
      * Retrieve a given lead type.
      *
@@ -10500,14 +10500,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerTypesResource
      */
-    public function partnersLeadtypesGet2($partner_id,  $lead_type_id )
+    public function partnersLeadtypesGet_0($partner_id,  $lead_type_id )
     {
-        list($response) = $this->partnersLeadtypesGet2WithHttpInfo($partner_id, $lead_type_id);
+        list($response) = $this->partnersLeadtypesGet_0WithHttpInfo($partner_id, $lead_type_id);
         return $response;
     }
 
     /**
-     * Operation partnersLeadtypesGet2WithHttpInfo
+     * Operation partnersLeadtypesGet_0WithHttpInfo
      *
      * Retrieve a given lead type.
      *
@@ -10516,7 +10516,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerTypesResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersLeadtypesGet2WithHttpInfo($partner_id,  $lead_type_id )
+    public function partnersLeadtypesGet_0WithHttpInfo($partner_id,  $lead_type_id )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types/{lead_type_id}";
@@ -10705,7 +10705,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersLeadtypesIndex2
+     * Operation partnersLeadtypesIndex_0
      *
      * Get partner types criteria.
      *
@@ -10720,14 +10720,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerTypesResult
      */
-    public function partnersLeadtypesIndex2($partner_id , $criteria = [])
+    public function partnersLeadtypesIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersLeadtypesIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersLeadtypesIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersLeadtypesIndex2WithHttpInfo
+     * Operation partnersLeadtypesIndex_0WithHttpInfo
      *
      * Get partner types criteria.
      *
@@ -10742,7 +10742,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerTypesResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersLeadtypesIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersLeadtypesIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/lead_types";
@@ -11004,7 +11004,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersNotesCreate2
+     * Operation partnersNotesCreate_0
      *
      * Create Partner notes.
      *
@@ -11013,14 +11013,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerNoteResource
      */
-    public function partnersNotesCreate2($partner_id , $partner_note_resource)
+    public function partnersNotesCreate_0($partner_id , $partner_note_resource)
     {
-        list($response) = $this->partnersNotesCreate2WithHttpInfo($partner_id, $partner_note_resource);
+        list($response) = $this->partnersNotesCreate_0WithHttpInfo($partner_id, $partner_note_resource);
         return $response;
     }
 
     /**
-     * Operation partnersNotesCreate2WithHttpInfo
+     * Operation partnersNotesCreate_0WithHttpInfo
      *
      * Create Partner notes.
      *
@@ -11029,7 +11029,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerNoteResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersNotesCreate2WithHttpInfo($partner_id , $partner_note_resource)
+    public function partnersNotesCreate_0WithHttpInfo($partner_id , $partner_note_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/notes";
@@ -11306,7 +11306,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersNotesIndex2
+     * Operation partnersNotesIndex_0
      *
      * Retrieve lists of notes.
      *
@@ -11320,14 +11320,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerNoteResult
      */
-    public function partnersNotesIndex2($partner_id , $criteria = [])
+    public function partnersNotesIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersNotesIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersNotesIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersNotesIndex2WithHttpInfo
+     * Operation partnersNotesIndex_0WithHttpInfo
      *
      * Retrieve lists of notes.
      *
@@ -11341,7 +11341,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerNoteResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersNotesIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersNotesIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/notes";
@@ -14158,7 +14158,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersContentsDelete2
+     * Operation partnersUsersContentsDelete_0
      *
      * Delete content for a given partner user.
      *
@@ -14168,14 +14168,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
      */
-    public function partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key )
+    public function partnersUsersContentsDelete_0($partner_id,  $partner_user_id,  $content_key )
     {
-        list($response) = $this->partnersUsersContentsDelete2WithHttpInfo($partner_id, $partner_user_id, $content_key);
+        list($response) = $this->partnersUsersContentsDelete_0WithHttpInfo($partner_id, $partner_user_id, $content_key);
         return $response;
     }
 
     /**
-     * Operation partnersUsersContentsDelete2WithHttpInfo
+     * Operation partnersUsersContentsDelete_0WithHttpInfo
      *
      * Delete content for a given partner user.
      *
@@ -14185,7 +14185,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersContentsDelete2WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
+    public function partnersUsersContentsDelete_0WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
@@ -14358,7 +14358,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersContentsGet2
+     * Operation partnersUsersContentsGet_0
      *
      * Get the content of a given partner user.
      *
@@ -14368,14 +14368,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerContentResource
      */
-    public function partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
+    public function partnersUsersContentsGet_0($partner_id,  $partner_user_id,  $content_key )
     {
-        list($response) = $this->partnersUsersContentsGet2WithHttpInfo($partner_id, $partner_user_id, $content_key);
+        list($response) = $this->partnersUsersContentsGet_0WithHttpInfo($partner_id, $partner_user_id, $content_key);
         return $response;
     }
 
     /**
-     * Operation partnersUsersContentsGet2WithHttpInfo
+     * Operation partnersUsersContentsGet_0WithHttpInfo
      *
      * Get the content of a given partner user.
      *
@@ -14385,7 +14385,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerContentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersContentsGet2WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
+    public function partnersUsersContentsGet_0WithHttpInfo($partner_id,  $partner_user_id,  $content_key )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
@@ -14569,7 +14569,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersContentsUpdate2
+     * Operation partnersUsersContentsUpdate_0
      *
      * Update content for a given partner user.
      *
@@ -14580,14 +14580,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerContentResource
      */
-    public function partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
+    public function partnersUsersContentsUpdate_0($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
     {
-        list($response) = $this->partnersUsersContentsUpdate2WithHttpInfo($partner_id, $partner_user_id, $content_key, $partner_content_resource);
+        list($response) = $this->partnersUsersContentsUpdate_0WithHttpInfo($partner_id, $partner_user_id, $content_key, $partner_content_resource);
         return $response;
     }
 
     /**
-     * Operation partnersUsersContentsUpdate2WithHttpInfo
+     * Operation partnersUsersContentsUpdate_0WithHttpInfo
      *
      * Update content for a given partner user.
      *
@@ -14598,7 +14598,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerContentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersContentsUpdate2WithHttpInfo($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
+    public function partnersUsersContentsUpdate_0WithHttpInfo($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/contents/{content_key}";
@@ -14767,7 +14767,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersCreate2
+     * Operation partnersUsersCreate_0
      *
      * Create a partner user.
      *
@@ -14776,14 +14776,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerUserResource
      */
-    public function partnersUsersCreate2($partner_id , $partner_user_resource)
+    public function partnersUsersCreate_0($partner_id , $partner_user_resource)
     {
-        list($response) = $this->partnersUsersCreate2WithHttpInfo($partner_id, $partner_user_resource);
+        list($response) = $this->partnersUsersCreate_0WithHttpInfo($partner_id, $partner_user_resource);
         return $response;
     }
 
     /**
-     * Operation partnersUsersCreate2WithHttpInfo
+     * Operation partnersUsersCreate_0WithHttpInfo
      *
      * Create a partner user.
      *
@@ -14792,7 +14792,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerUserResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersCreate2WithHttpInfo($partner_id , $partner_user_resource)
+    public function partnersUsersCreate_0WithHttpInfo($partner_id , $partner_user_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users";
@@ -15041,7 +15041,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersGet2
+     * Operation partnersUsersGet_0
      *
      * Get a Partner User by a given partner_user_id.
      *
@@ -15050,14 +15050,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerUserResource
      */
-    public function partnersUsersGet2($partner_id,  $partner_user_id )
+    public function partnersUsersGet_0($partner_id,  $partner_user_id )
     {
-        list($response) = $this->partnersUsersGet2WithHttpInfo($partner_id, $partner_user_id);
+        list($response) = $this->partnersUsersGet_0WithHttpInfo($partner_id, $partner_user_id);
         return $response;
     }
 
     /**
-     * Operation partnersUsersGet2WithHttpInfo
+     * Operation partnersUsersGet_0WithHttpInfo
      *
      * Get a Partner User by a given partner_user_id.
      *
@@ -15066,7 +15066,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerUserResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersGet2WithHttpInfo($partner_id,  $partner_user_id )
+    public function partnersUsersGet_0WithHttpInfo($partner_id,  $partner_user_id )
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}";
@@ -15255,7 +15255,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersIndex2
+     * Operation partnersUsersIndex_0
      *
      * List partner users.
      *
@@ -15270,14 +15270,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerUserResult
      */
-    public function partnersUsersIndex2($partner_id , $criteria = [])
+    public function partnersUsersIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersUsersIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersUsersIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersUsersIndex2WithHttpInfo
+     * Operation partnersUsersIndex_0WithHttpInfo
      *
      * List partner users.
      *
@@ -15292,7 +15292,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerUserResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersUsersIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users";
@@ -15470,7 +15470,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersUsersUpdate2
+     * Operation partnersUsersUpdate_0
      *
      * Update partner user profile.
      *
@@ -15480,14 +15480,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerUserResource
      */
-    public function partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
+    public function partnersUsersUpdate_0($partner_id,  $partner_user_id , $partner_user_resource)
     {
-        list($response) = $this->partnersUsersUpdate2WithHttpInfo($partner_id, $partner_user_id, $partner_user_resource);
+        list($response) = $this->partnersUsersUpdate_0WithHttpInfo($partner_id, $partner_user_id, $partner_user_resource);
         return $response;
     }
 
     /**
-     * Operation partnersUsersUpdate2WithHttpInfo
+     * Operation partnersUsersUpdate_0WithHttpInfo
      *
      * Update partner user profile.
      *
@@ -15497,7 +15497,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerUserResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersUsersUpdate2WithHttpInfo($partner_id,  $partner_user_id , $partner_user_resource)
+    public function partnersUsersUpdate_0WithHttpInfo($partner_id,  $partner_user_id , $partner_user_resource)
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/users/{partner_user_id}";
@@ -15679,7 +15679,7 @@ class PartnersApi
     }
 
     /**
-     * Operation partnersVerificationsIndex2
+     * Operation partnersVerificationsIndex_0
      *
      * Get Partner verifications.
      *
@@ -15692,14 +15692,14 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PartnerVerificationResult
      */
-    public function partnersVerificationsIndex2($partner_id , $criteria = [])
+    public function partnersVerificationsIndex_0($partner_id , $criteria = [])
     {
-        list($response) = $this->partnersVerificationsIndex2WithHttpInfo($partner_id, $criteria);
+        list($response) = $this->partnersVerificationsIndex_0WithHttpInfo($partner_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation partnersVerificationsIndex2WithHttpInfo
+     * Operation partnersVerificationsIndex_0WithHttpInfo
      *
      * Get Partner verifications.
      *
@@ -15712,7 +15712,7 @@ class PartnersApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PartnerVerificationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function partnersVerificationsIndex2WithHttpInfo($partner_id , $criteria = [])
+    public function partnersVerificationsIndex_0WithHttpInfo($partner_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/partners/{partner_id}/verifications";

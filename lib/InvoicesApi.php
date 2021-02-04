@@ -613,7 +613,7 @@ class InvoicesApi
     }
 
     /**
-     * Operation invoicesRefundrequestsGet2
+     * Operation invoicesRefundrequestsGet_0
      *
      * Get a refund request by ID.
      *
@@ -622,14 +622,14 @@ class InvoicesApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\VoucherRefundRequestResource
      */
-    public function invoicesRefundrequestsGet2($invoice_id,  $voucher_refund_request_id )
+    public function invoicesRefundrequestsGet_0($invoice_id,  $voucher_refund_request_id )
     {
-        list($response) = $this->invoicesRefundrequestsGet2WithHttpInfo($invoice_id, $voucher_refund_request_id);
+        list($response) = $this->invoicesRefundrequestsGet_0WithHttpInfo($invoice_id, $voucher_refund_request_id);
         return $response;
     }
 
     /**
-     * Operation invoicesRefundrequestsGet2WithHttpInfo
+     * Operation invoicesRefundrequestsGet_0WithHttpInfo
      *
      * Get a refund request by ID.
      *
@@ -638,7 +638,7 @@ class InvoicesApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\VoucherRefundRequestResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function invoicesRefundrequestsGet2WithHttpInfo($invoice_id,  $voucher_refund_request_id )
+    public function invoicesRefundrequestsGet_0WithHttpInfo($invoice_id,  $voucher_refund_request_id )
     {
         // parse inputs
         $resourcePath = "/invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}";
@@ -851,7 +851,7 @@ class InvoicesApi
     }
 
     /**
-     * Operation invoicesRefundrequestsIndex2
+     * Operation invoicesRefundrequestsIndex_0
      *
      * Get refund requests from a given invoice_id.
      *
@@ -870,14 +870,14 @@ class InvoicesApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\VoucherRefundRequestResult
      */
-    public function invoicesRefundrequestsIndex2($voucher_id , $criteria = [])
+    public function invoicesRefundrequestsIndex_0($voucher_id , $criteria = [])
     {
-        list($response) = $this->invoicesRefundrequestsIndex2WithHttpInfo($voucher_id, $criteria);
+        list($response) = $this->invoicesRefundrequestsIndex_0WithHttpInfo($voucher_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation invoicesRefundrequestsIndex2WithHttpInfo
+     * Operation invoicesRefundrequestsIndex_0WithHttpInfo
      *
      * Get refund requests from a given invoice_id.
      *
@@ -896,7 +896,7 @@ class InvoicesApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\VoucherRefundRequestResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function invoicesRefundrequestsIndex2WithHttpInfo($voucher_id , $criteria = [])
+    public function invoicesRefundrequestsIndex_0WithHttpInfo($voucher_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/invoices/{voucher_id}/refundrequests";

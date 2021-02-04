@@ -182,7 +182,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesActionsCreate2
+     * Operation organisationEmployeesActionsCreate_0
      *
      * Perform an employee action.
      *
@@ -192,14 +192,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeResource
      */
-    public function organisationEmployeesActionsCreate2($organisation_id,  $employee_id , $employee_action_resource)
+    public function organisationEmployeesActionsCreate_0($organisation_id,  $employee_id , $employee_action_resource)
     {
-        list($response) = $this->organisationEmployeesActionsCreate2WithHttpInfo($organisation_id, $employee_id, $employee_action_resource);
+        list($response) = $this->organisationEmployeesActionsCreate_0WithHttpInfo($organisation_id, $employee_id, $employee_action_resource);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesActionsCreate2WithHttpInfo
+     * Operation organisationEmployeesActionsCreate_0WithHttpInfo
      *
      * Perform an employee action.
      *
@@ -209,7 +209,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesActionsCreate2WithHttpInfo($organisation_id,  $employee_id , $employee_action_resource)
+    public function organisationEmployeesActionsCreate_0WithHttpInfo($organisation_id,  $employee_id , $employee_action_resource)
     {
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}/actions";
@@ -373,7 +373,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesGet2
+     * Operation organisationEmployeesGet_0
      *
      * Get an employee by a given employee id.
      *
@@ -382,14 +382,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeResource
      */
-    public function organisationEmployeesGet2($organisation_id,  $employee_id )
+    public function organisationEmployeesGet_0($organisation_id,  $employee_id )
     {
-        list($response) = $this->organisationEmployeesGet2WithHttpInfo($organisation_id, $employee_id);
+        list($response) = $this->organisationEmployeesGet_0WithHttpInfo($organisation_id, $employee_id);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesGet2WithHttpInfo
+     * Operation organisationEmployeesGet_0WithHttpInfo
      *
      * Get an employee by a given employee id.
      *
@@ -398,7 +398,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesGet2WithHttpInfo($organisation_id,  $employee_id )
+    public function organisationEmployeesGet_0WithHttpInfo($organisation_id,  $employee_id )
     {
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}";
@@ -728,7 +728,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesKpiIndex2
+     * Operation organisationEmployeesKpiIndex_0
      *
      * List employee KPIs.
      *
@@ -745,14 +745,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeKpiResult
      */
-    public function organisationEmployeesKpiIndex2($criteria = [])
+    public function organisationEmployeesKpiIndex_0($criteria = [])
     {
-        list($response) = $this->organisationEmployeesKpiIndex2WithHttpInfo($criteria);
+        list($response) = $this->organisationEmployeesKpiIndex_0WithHttpInfo($criteria);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesKpiIndex2WithHttpInfo
+     * Operation organisationEmployeesKpiIndex_0WithHttpInfo
      *
      * List employee KPIs.
      *
@@ -769,7 +769,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeKpiResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesKpiIndex2WithHttpInfo($criteria = [])
+    public function organisationEmployeesKpiIndex_0WithHttpInfo($criteria = [])
     {
         // parse inputs
         $resourcePath = "/organisation/organisation/employees/kpi";
@@ -857,7 +857,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesKpiIndex4
+     * Operation organisationEmployeesKpiIndex_1
      *
      * List employee KPIs.
      *
@@ -875,14 +875,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeKpiResult
      */
-    public function organisationEmployeesKpiIndex4($organisation_id , $criteria = [])
+    public function organisationEmployeesKpiIndex_1($organisation_id , $criteria = [])
     {
-        list($response) = $this->organisationEmployeesKpiIndex4WithHttpInfo($organisation_id, $criteria);
+        list($response) = $this->organisationEmployeesKpiIndex_1WithHttpInfo($organisation_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesKpiIndex4WithHttpInfo
+     * Operation organisationEmployeesKpiIndex_1WithHttpInfo
      *
      * List employee KPIs.
      *
@@ -900,7 +900,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeKpiResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesKpiIndex4WithHttpInfo($organisation_id , $criteria = [])
+    public function organisationEmployeesKpiIndex_1WithHttpInfo($organisation_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/kpi";
@@ -1090,7 +1090,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesLeadpredictionsCreate2
+     * Operation organisationEmployeesLeadpredictionsCreate_0
      *
      * Create an employee lead prediction.
      *
@@ -1100,14 +1100,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeLeadPredictionResource
      */
-    public function organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+    public function organisationEmployeesLeadpredictionsCreate_0($organisation_id,  $employee_id , $employee_lead_prediction_resource)
     {
-        list($response) = $this->organisationEmployeesLeadpredictionsCreate2WithHttpInfo($organisation_id, $employee_id, $employee_lead_prediction_resource);
+        list($response) = $this->organisationEmployeesLeadpredictionsCreate_0WithHttpInfo($organisation_id, $employee_id, $employee_lead_prediction_resource);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesLeadpredictionsCreate2WithHttpInfo
+     * Operation organisationEmployeesLeadpredictionsCreate_0WithHttpInfo
      *
      * Create an employee lead prediction.
      *
@@ -1117,7 +1117,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeLeadPredictionResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesLeadpredictionsCreate2WithHttpInfo($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+    public function organisationEmployeesLeadpredictionsCreate_0WithHttpInfo($organisation_id,  $employee_id , $employee_lead_prediction_resource)
     {
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}/leadpredictions";
@@ -1309,7 +1309,7 @@ class OrganisationApi
     }
 
     /**
-     * Operation organisationEmployeesNotificationsIndex2
+     * Operation organisationEmployeesNotificationsIndex_0
      *
      * List employee notifications.
      *
@@ -1324,14 +1324,14 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\EmployeeNotificationResult
      */
-    public function organisationEmployeesNotificationsIndex2($organisation_id,  $employee_id , $criteria = [])
+    public function organisationEmployeesNotificationsIndex_0($organisation_id,  $employee_id , $criteria = [])
     {
-        list($response) = $this->organisationEmployeesNotificationsIndex2WithHttpInfo($organisation_id, $employee_id, $criteria);
+        list($response) = $this->organisationEmployeesNotificationsIndex_0WithHttpInfo($organisation_id, $employee_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation organisationEmployeesNotificationsIndex2WithHttpInfo
+     * Operation organisationEmployeesNotificationsIndex_0WithHttpInfo
      *
      * List employee notifications.
      *
@@ -1346,7 +1346,7 @@ class OrganisationApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\EmployeeNotificationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function organisationEmployeesNotificationsIndex2WithHttpInfo($organisation_id,  $employee_id , $criteria = [])
+    public function organisationEmployeesNotificationsIndex_0WithHttpInfo($organisation_id,  $employee_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/organisation/{organisation_id}/employees/{employee_id}/notifications";

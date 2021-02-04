@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | Create a new Lead.
 [**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
 [**leadsDemopartnersIndex**](LeadsApi.md#leadsDemopartnersIndex) | **GET** /leads/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
-[**leadsDemopartnersIndex2**](LeadsApi.md#leadsDemopartnersIndex2) | **GET** /leads/{lead_id}/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
+[**leadsDemopartnersIndex_0**](LeadsApi.md#leadsDemopartnersIndex_0) | **GET** /leads/{lead_id}/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
 [**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | Add partner to lead&#39;s excluded partner list
 [**leadsExcludedpartnersDelete**](LeadsApi.md#leadsExcludedpartnersDelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | Remove partner from the lead&#39;s excluded partner list
 [**leadsExcludedpartnersIndex**](LeadsApi.md#leadsExcludedpartnersIndex) | **GET** /leads/{lead_id}/excludedpartners | Show all excluded partners for a specific lead.
@@ -28,9 +28,9 @@ Method | HTTP request | Description
 [**leadsQuotesCreate**](LeadsApi.md#leadsQuotesCreate) | **POST** /leads/{lead_id}/quotes | Create a new quote for a given Lead.
 [**leadsQuotesDelete**](LeadsApi.md#leadsQuotesDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | Delete a quote for a given Lead.
 [**leadsQuotesGet**](LeadsApi.md#leadsQuotesGet) | **GET** /leads/quotes/{lead_quote_id} | Get an quote by id.
-[**leadsQuotesGet2**](LeadsApi.md#leadsQuotesGet2) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | Get an quote by id.
+[**leadsQuotesGet_0**](LeadsApi.md#leadsQuotesGet_0) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | Get an quote by id.
 [**leadsQuotesIndex**](LeadsApi.md#leadsQuotesIndex) | **GET** /leads/quotes | List the quotes connected to a given Lead.
-[**leadsQuotesIndex2**](LeadsApi.md#leadsQuotesIndex2) | **GET** /leads/{lead_id}/quotes | List the quotes connected to a given Lead.
+[**leadsQuotesIndex_0**](LeadsApi.md#leadsQuotesIndex_0) | **GET** /leads/{lead_id}/quotes | List the quotes connected to a given Lead.
 [**leadsQuotesItemsCreate**](LeadsApi.md#leadsQuotesItemsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/items | Create a new quote item for a given Quote.
 [**leadsQuotesItemsDelete**](LeadsApi.md#leadsQuotesItemsDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Delete a quote item.
 [**leadsQuotesItemsGet**](LeadsApi.md#leadsQuotesItemsGet) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Get a quote item by id.
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 [**leadsQuotesItemsUpdate**](LeadsApi.md#leadsQuotesItemsUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Update a quote item.
 [**leadsQuotesProgressstepsIndex**](LeadsApi.md#leadsQuotesProgressstepsIndex) | **GET** /leads/quotes/progresssteps | Get quote progress statuses.
 [**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | Update a quote.
-[**leadsQuotesUpdate2**](LeadsApi.md#leadsQuotesUpdate2) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
+[**leadsQuotesUpdate_0**](LeadsApi.md#leadsQuotesUpdate_0) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
 [**leadsSegmentationsubgeoregionsIndex**](LeadsApi.md#leadsSegmentationsubgeoregionsIndex) | **GET** /leads/{lead_id}/segmentationsubgeoregions | List a lead&#39;s sub geo regions.
 [**leadsSegmentationsubgeoregionsUpdate**](LeadsApi.md#leadsSegmentationsubgeoregionsUpdate) | **PUT** /leads/{lead_id}/segmentationsubgeoregions | Update a lead&#39;s sub geo regions.
 [**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | Index lead types.
@@ -789,8 +789,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **leadsDemopartnersIndex2**
-> \Ageras\Api\LeadResult leadsDemopartnersIndex2($lead_id,  $partner_id )
+# **leadsDemopartnersIndex_0**
+> \Ageras\Api\LeadResult leadsDemopartnersIndex_0($lead_id,  $partner_id )
 
 List leads a demo partner could expect to see if they sign up.
 
@@ -812,10 +812,10 @@ $lead_id = "lead_id_example"; // string |
 $partner_id = "partner_id_example"; // string | 
 
 try {
-    $result = $api_instance->leadsDemopartnersIndex2($lead_id,  $partner_id );
+    $result = $api_instance->leadsDemopartnersIndex_0($lead_id,  $partner_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadsApi->leadsDemopartnersIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadsApi->leadsDemopartnersIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1503,8 +1503,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **leadsQuotesGet2**
-> \Ageras\Api\LeadQuoteResource leadsQuotesGet2($lead_id,  $lead_quote_id )
+# **leadsQuotesGet_0**
+> \Ageras\Api\LeadQuoteResource leadsQuotesGet_0($lead_id,  $lead_quote_id )
 
 Get an quote by id.
 
@@ -1526,10 +1526,10 @@ $lead_id = "lead_id_example"; // string |
 $lead_quote_id = "lead_quote_id_example"; // string | 
 
 try {
-    $result = $api_instance->leadsQuotesGet2($lead_id,  $lead_quote_id );
+    $result = $api_instance->leadsQuotesGet_0($lead_id,  $lead_quote_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadsApi->leadsQuotesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadsApi->leadsQuotesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1635,8 +1635,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **leadsQuotesIndex2**
-> \Ageras\Api\LeadQuoteResult leadsQuotesIndex2($lead_id , $criteria)
+# **leadsQuotesIndex_0**
+> \Ageras\Api\LeadQuoteResult leadsQuotesIndex_0($lead_id , $criteria)
 
 List the quotes connected to a given Lead.
 
@@ -1672,10 +1672,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->leadsQuotesIndex2($lead_id , $criteria);
+    $result = $api_instance->leadsQuotesIndex_0($lead_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadsApi->leadsQuotesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadsApi->leadsQuotesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2108,8 +2108,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **leadsQuotesUpdate2**
-> \Ageras\Api\LeadQuoteResource leadsQuotesUpdate2($lead_id,  $lead_quote_id , $lead_quote_resource)
+# **leadsQuotesUpdate_0**
+> \Ageras\Api\LeadQuoteResource leadsQuotesUpdate_0($lead_id,  $lead_quote_id , $lead_quote_resource)
 
 Update a quote.
 
@@ -2132,10 +2132,10 @@ $lead_quote_id = "lead_quote_id_example"; // string |
 $lead_quote_resource = new \Ageras\Api\LeadQuoteResource(); // \Ageras\Api\LeadQuoteResource | 
 
 try {
-    $result = $api_instance->leadsQuotesUpdate2($lead_id,  $lead_quote_id , $lead_quote_resource);
+    $result = $api_instance->leadsQuotesUpdate_0($lead_id,  $lead_quote_id , $lead_quote_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LeadsApi->leadsQuotesUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LeadsApi->leadsQuotesUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

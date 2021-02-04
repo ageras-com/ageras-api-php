@@ -88,12 +88,12 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for contentsPagesAggregationsIndex2
+     * Test case for contentsPagesAggregationsIndex_0
      *
      * Aggreate the Pages by the letters.
      *
      */
-    public function testContentsPagesAggregationsIndex2()
+    public function testContentsPagesAggregationsIndex0()
     {
 
     }
@@ -110,12 +110,12 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for contentsPagesGet2
+     * Test case for contentsPagesGet_0
      *
      * Return a Page from a given id.
      *
      */
-    public function testContentsPagesGet2()
+    public function testContentsPagesGet0()
     {
 
     }

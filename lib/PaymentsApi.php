@@ -255,7 +255,7 @@ class PaymentsApi
     }
 
     /**
-     * Operation paymentsCardsDelete2
+     * Operation paymentsCardsDelete_0
      *
      * Delete a card for a given id.
      *
@@ -264,14 +264,14 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
      */
-    public function paymentsCardsDelete2($payment_id,  $card_id )
+    public function paymentsCardsDelete_0($payment_id,  $card_id )
     {
-        list($response) = $this->paymentsCardsDelete2WithHttpInfo($payment_id, $card_id);
+        list($response) = $this->paymentsCardsDelete_0WithHttpInfo($payment_id, $card_id);
         return $response;
     }
 
     /**
-     * Operation paymentsCardsDelete2WithHttpInfo
+     * Operation paymentsCardsDelete_0WithHttpInfo
      *
      * Delete a card for a given id.
      *
@@ -280,7 +280,7 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function paymentsCardsDelete2WithHttpInfo($payment_id,  $card_id )
+    public function paymentsCardsDelete_0WithHttpInfo($payment_id,  $card_id )
     {
         // parse inputs
         $resourcePath = "/payments/{payment_id}/cards/{card_id}";
@@ -435,7 +435,7 @@ class PaymentsApi
     }
 
     /**
-     * Operation paymentsCardsGet2
+     * Operation paymentsCardsGet_0
      *
      * Get a Partner from a given partner_id.
      *
@@ -444,14 +444,14 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PaymentCardResource
      */
-    public function paymentsCardsGet2($payment_id,  $payment_card_id )
+    public function paymentsCardsGet_0($payment_id,  $payment_card_id )
     {
-        list($response) = $this->paymentsCardsGet2WithHttpInfo($payment_id, $payment_card_id);
+        list($response) = $this->paymentsCardsGet_0WithHttpInfo($payment_id, $payment_card_id);
         return $response;
     }
 
     /**
-     * Operation paymentsCardsGet2WithHttpInfo
+     * Operation paymentsCardsGet_0WithHttpInfo
      *
      * Get a Partner from a given partner_id.
      *
@@ -460,7 +460,7 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PaymentCardResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function paymentsCardsGet2WithHttpInfo($payment_id,  $payment_card_id )
+    public function paymentsCardsGet_0WithHttpInfo($payment_id,  $payment_card_id )
     {
         // parse inputs
         $resourcePath = "/payments/{payment_id}/cards/{payment_card_id}";
@@ -749,7 +749,7 @@ class PaymentsApi
     }
 
     /**
-     * Operation paymentsMethodsActionsCreate2
+     * Operation paymentsMethodsActionsCreate_0
      *
      * Execute an action on a payment method.
      *
@@ -759,14 +759,14 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\PaymentMethodResource
      */
-    public function paymentsMethodsActionsCreate2($payment_id,  $payment_method_id , $payment_method_action_resource)
+    public function paymentsMethodsActionsCreate_0($payment_id,  $payment_method_id , $payment_method_action_resource)
     {
-        list($response) = $this->paymentsMethodsActionsCreate2WithHttpInfo($payment_id, $payment_method_id, $payment_method_action_resource);
+        list($response) = $this->paymentsMethodsActionsCreate_0WithHttpInfo($payment_id, $payment_method_id, $payment_method_action_resource);
         return $response;
     }
 
     /**
-     * Operation paymentsMethodsActionsCreate2WithHttpInfo
+     * Operation paymentsMethodsActionsCreate_0WithHttpInfo
      *
      * Execute an action on a payment method.
      *
@@ -776,7 +776,7 @@ class PaymentsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\PaymentMethodResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function paymentsMethodsActionsCreate2WithHttpInfo($payment_id,  $payment_method_id , $payment_method_action_resource)
+    public function paymentsMethodsActionsCreate_0WithHttpInfo($payment_id,  $payment_method_id , $payment_method_action_resource)
     {
         // parse inputs
         $resourcePath = "/payments/{payment_id}/methods/{payment_method_id}/actions";

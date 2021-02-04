@@ -363,12 +363,12 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for cvSocialDelete2
+     * Test case for cvSocialDelete_0
      *
      * Delete partner user social media..
      *
      */
-    public function testCvSocialDelete2()
+    public function testCvSocialDelete0()
     {
 
     }

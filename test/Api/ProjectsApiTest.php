@@ -110,12 +110,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsEventsCreate2
+     * Test case for projectsEventsCreate_0
      *
      * Create events for a given project..
      *
      */
-    public function testProjectsEventsCreate2()
+    public function testProjectsEventsCreate0()
     {
 
     }
@@ -143,12 +143,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsEventsGet2
+     * Test case for projectsEventsGet_0
      *
      * Get event for a given project..
      *
      */
-    public function testProjectsEventsGet2()
+    public function testProjectsEventsGet0()
     {
 
     }
@@ -165,12 +165,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsEventsIndex2
+     * Test case for projectsEventsIndex_0
      *
      * List events for a given project..
      *
      */
-    public function testProjectsEventsIndex2()
+    public function testProjectsEventsIndex0()
     {
 
     }
@@ -187,12 +187,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsEventsUpdate2
+     * Test case for projectsEventsUpdate_0
      *
      * Update e events for project events..
      *
      */
-    public function testProjectsEventsUpdate2()
+    public function testProjectsEventsUpdate0()
     {
 
     }
@@ -231,12 +231,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsNotesCreate2
+     * Test case for projectsNotesCreate_0
      *
      * Create a note for a given project..
      *
      */
-    public function testProjectsNotesCreate2()
+    public function testProjectsNotesCreate0()
     {
 
     }
@@ -264,12 +264,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsNotesGet2
+     * Test case for projectsNotesGet_0
      *
      * Get a note from Project and note id..
      *
      */
-    public function testProjectsNotesGet2()
+    public function testProjectsNotesGet0()
     {
 
     }
@@ -286,12 +286,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsNotesIndex2
+     * Test case for projectsNotesIndex_0
      *
      * List notes from a given project..
      *
      */
-    public function testProjectsNotesIndex2()
+    public function testProjectsNotesIndex0()
     {
 
     }
@@ -308,12 +308,12 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for projectsNotesUpdate2
+     * Test case for projectsNotesUpdate_0
      *
      * Update a given project note..
      *
      */
-    public function testProjectsNotesUpdate2()
+    public function testProjectsNotesUpdate0()
     {
 
     }

@@ -5,17 +5,17 @@ All URIs are relative to *https://api.ageras.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**organisationEmployeesActionsCreate**](OrganisationApi.md#organisationEmployeesActionsCreate) | **POST** /organisation/employees/{employee_id}/actions | Perform an employee action.
-[**organisationEmployeesActionsCreate2**](OrganisationApi.md#organisationEmployeesActionsCreate2) | **POST** /organisation/{organisation_id}/employees/{employee_id}/actions | Perform an employee action.
+[**organisationEmployeesActionsCreate_0**](OrganisationApi.md#organisationEmployeesActionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/actions | Perform an employee action.
 [**organisationEmployeesGet**](OrganisationApi.md#organisationEmployeesGet) | **GET** /organisation/employees/{employee_id} | Get an employee by a given employee id.
-[**organisationEmployeesGet2**](OrganisationApi.md#organisationEmployeesGet2) | **GET** /organisation/{organisation_id}/employees/{employee_id} | Get an employee by a given employee id.
+[**organisationEmployeesGet_0**](OrganisationApi.md#organisationEmployeesGet_0) | **GET** /organisation/{organisation_id}/employees/{employee_id} | Get an employee by a given employee id.
 [**organisationEmployeesIndex**](OrganisationApi.md#organisationEmployeesIndex) | **GET** /organisation/employees | List and Search for employees working at Ageras.
 [**organisationEmployeesKpiIndex**](OrganisationApi.md#organisationEmployeesKpiIndex) | **GET** /organisation/employees/kpi | List employee KPIs.
-[**organisationEmployeesKpiIndex2**](OrganisationApi.md#organisationEmployeesKpiIndex2) | **GET** /organisation/organisation/employees/kpi | List employee KPIs.
-[**organisationEmployeesKpiIndex4**](OrganisationApi.md#organisationEmployeesKpiIndex4) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
+[**organisationEmployeesKpiIndex_0**](OrganisationApi.md#organisationEmployeesKpiIndex_0) | **GET** /organisation/organisation/employees/kpi | List employee KPIs.
+[**organisationEmployeesKpiIndex_1**](OrganisationApi.md#organisationEmployeesKpiIndex_1) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
 [**organisationEmployeesLeadpredictionsCreate**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate) | **POST** /organisation/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
-[**organisationEmployeesLeadpredictionsCreate2**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate2) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
+[**organisationEmployeesLeadpredictionsCreate_0**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
 [**organisationEmployeesNotificationsIndex**](OrganisationApi.md#organisationEmployeesNotificationsIndex) | **GET** /organisation/employees/{employee_id}/notifications | List employee notifications.
-[**organisationEmployeesNotificationsIndex2**](OrganisationApi.md#organisationEmployeesNotificationsIndex2) | **GET** /organisation/{organisation_id}/employees/{employee_id}/notifications | List employee notifications.
+[**organisationEmployeesNotificationsIndex_0**](OrganisationApi.md#organisationEmployeesNotificationsIndex_0) | **GET** /organisation/{organisation_id}/employees/{employee_id}/notifications | List employee notifications.
 
 
 # **organisationEmployeesActionsCreate**
@@ -71,8 +71,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesActionsCreate2**
-> \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate2($organisation_id,  $employee_id , $employee_action_resource)
+# **organisationEmployeesActionsCreate_0**
+> \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate_0($organisation_id,  $employee_id , $employee_action_resource)
 
 Perform an employee action.
 
@@ -95,10 +95,10 @@ $employee_id = "employee_id_example"; // string |
 $employee_action_resource = new \Ageras\Api\EmployeeActionResource(); // \Ageras\Api\EmployeeActionResource | 
 
 try {
-    $result = $api_instance->organisationEmployeesActionsCreate2($organisation_id,  $employee_id , $employee_action_resource);
+    $result = $api_instance->organisationEmployeesActionsCreate_0($organisation_id,  $employee_id , $employee_action_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesActionsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesActionsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -177,8 +177,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesGet2**
-> \Ageras\Api\EmployeeResource organisationEmployeesGet2($organisation_id,  $employee_id )
+# **organisationEmployeesGet_0**
+> \Ageras\Api\EmployeeResource organisationEmployeesGet_0($organisation_id,  $employee_id )
 
 Get an employee by a given employee id.
 
@@ -200,10 +200,10 @@ $organisation_id = "organisation_id_example"; // string |
 $employee_id = "employee_id_example"; // string | 
 
 try {
-    $result = $api_instance->organisationEmployeesGet2($organisation_id,  $employee_id );
+    $result = $api_instance->organisationEmployeesGet_0($organisation_id,  $employee_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -364,8 +364,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesKpiIndex2**
-> \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex2($criteria)
+# **organisationEmployeesKpiIndex_0**
+> \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex_0($criteria)
 
 List employee KPIs.
 
@@ -395,10 +395,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->organisationEmployeesKpiIndex2($criteria);
+    $result = $api_instance->organisationEmployeesKpiIndex_0($criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesKpiIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesKpiIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -431,8 +431,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesKpiIndex4**
-> \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex4($organisation_id , $criteria)
+# **organisationEmployeesKpiIndex_1**
+> \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex_1($organisation_id , $criteria)
 
 List employee KPIs.
 
@@ -463,10 +463,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->organisationEmployeesKpiIndex4($organisation_id , $criteria);
+    $result = $api_instance->organisationEmployeesKpiIndex_1($organisation_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesKpiIndex4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesKpiIndex_1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -553,8 +553,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesLeadpredictionsCreate2**
-> \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource)
+# **organisationEmployeesLeadpredictionsCreate_0**
+> \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate_0($organisation_id,  $employee_id , $employee_lead_prediction_resource)
 
 Create an employee lead prediction.
 
@@ -577,10 +577,10 @@ $employee_id = "employee_id_example"; // string |
 $employee_lead_prediction_resource = new \Ageras\Api\EmployeeLeadPredictionResource(); // \Ageras\Api\EmployeeLeadPredictionResource | 
 
 try {
-    $result = $api_instance->organisationEmployeesLeadpredictionsCreate2($organisation_id,  $employee_id , $employee_lead_prediction_resource);
+    $result = $api_instance->organisationEmployeesLeadpredictionsCreate_0($organisation_id,  $employee_id , $employee_lead_prediction_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesLeadpredictionsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesLeadpredictionsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -669,8 +669,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **organisationEmployeesNotificationsIndex2**
-> \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex2($organisation_id,  $employee_id , $criteria)
+# **organisationEmployeesNotificationsIndex_0**
+> \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex_0($organisation_id,  $employee_id , $criteria)
 
 List employee notifications.
 
@@ -698,10 +698,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->organisationEmployeesNotificationsIndex2($organisation_id,  $employee_id , $criteria);
+    $result = $api_instance->organisationEmployeesNotificationsIndex_0($organisation_id,  $employee_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrganisationApi->organisationEmployeesNotificationsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrganisationApi->organisationEmployeesNotificationsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

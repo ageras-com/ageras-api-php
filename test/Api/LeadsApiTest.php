@@ -209,12 +209,12 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for leadsDemopartnersIndex2
+     * Test case for leadsDemopartnersIndex_0
      *
      * List leads a demo partner could expect to see if they sign up..
      *
      */
-    public function testLeadsDemopartnersIndex2()
+    public function testLeadsDemopartnersIndex0()
     {
 
     }
@@ -341,12 +341,12 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for leadsQuotesGet2
+     * Test case for leadsQuotesGet_0
      *
      * Get an quote by id..
      *
      */
-    public function testLeadsQuotesGet2()
+    public function testLeadsQuotesGet0()
     {
 
     }
@@ -363,12 +363,12 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for leadsQuotesIndex2
+     * Test case for leadsQuotesIndex_0
      *
      * List the quotes connected to a given Lead..
      *
      */
-    public function testLeadsQuotesIndex2()
+    public function testLeadsQuotesIndex0()
     {
 
     }
@@ -451,12 +451,12 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for leadsQuotesUpdate2
+     * Test case for leadsQuotesUpdate_0
      *
      * Update a quote..
      *
      */
-    public function testLeadsQuotesUpdate2()
+    public function testLeadsQuotesUpdate0()
     {
 
     }

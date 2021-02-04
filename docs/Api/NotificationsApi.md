@@ -5,7 +5,7 @@ All URIs are relative to *https://api.ageras.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**notificationsActionsCreate**](NotificationsApi.md#notificationsActionsCreate) | **POST** /notifications/actions | Perform an action on one or more notifications
-[**notificationsActionsCreate2**](NotificationsApi.md#notificationsActionsCreate2) | **POST** /notifications/{notification_id}/actions | Perform an action on one or more notifications
+[**notificationsActionsCreate_0**](NotificationsApi.md#notificationsActionsCreate_0) | **POST** /notifications/{notification_id}/actions | Perform an action on one or more notifications
 [**notificationsGet**](NotificationsApi.md#notificationsGet) | **GET** /notifications/{notification_id} | Get single notification
 [**notificationsIndex**](NotificationsApi.md#notificationsIndex) | **GET** /notifications | List notifications
 
@@ -61,8 +61,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **notificationsActionsCreate2**
-> \Ageras\Api\NotificationResource notificationsActionsCreate2($notification_id , $notification_action_resource)
+# **notificationsActionsCreate_0**
+> \Ageras\Api\NotificationResource notificationsActionsCreate_0($notification_id , $notification_action_resource)
 
 Perform an action on one or more notifications
 
@@ -84,10 +84,10 @@ $notification_id = "notification_id_example"; // string |
 $notification_action_resource = new \Ageras\Api\NotificationActionResource(); // \Ageras\Api\NotificationActionResource | 
 
 try {
-    $result = $api_instance->notificationsActionsCreate2($notification_id , $notification_action_resource);
+    $result = $api_instance->notificationsActionsCreate_0($notification_id , $notification_action_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationsApi->notificationsActionsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationsApi->notificationsActionsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -2523,7 +2523,7 @@ class CvApi
     }
 
     /**
-     * Operation cvSocialDelete2
+     * Operation cvSocialDelete_0
      *
      * Delete partner user social media.
      *
@@ -2531,14 +2531,14 @@ class CvApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
      */
-    public function cvSocialDelete2($partner_user_id )
+    public function cvSocialDelete_0($partner_user_id )
     {
-        list($response) = $this->cvSocialDelete2WithHttpInfo($partner_user_id);
+        list($response) = $this->cvSocialDelete_0WithHttpInfo($partner_user_id);
         return $response;
     }
 
     /**
-     * Operation cvSocialDelete2WithHttpInfo
+     * Operation cvSocialDelete_0WithHttpInfo
      *
      * Delete partner user social media.
      *
@@ -2546,7 +2546,7 @@ class CvApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cvSocialDelete2WithHttpInfo($partner_user_id )
+    public function cvSocialDelete_0WithHttpInfo($partner_user_id )
     {
         // parse inputs
         $resourcePath = "/cv/{partner_user_id}/social";

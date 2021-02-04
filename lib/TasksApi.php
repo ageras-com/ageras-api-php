@@ -600,7 +600,7 @@ class TasksApi
     }
 
     /**
-     * Operation tasksPrioritiesGet2
+     * Operation tasksPrioritiesGet_0
      *
      * Get a priority from a given id.
      *
@@ -609,14 +609,14 @@ class TasksApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\TaskPriorityResource
      */
-    public function tasksPrioritiesGet2($task_id,  $priority_id )
+    public function tasksPrioritiesGet_0($task_id,  $priority_id )
     {
-        list($response) = $this->tasksPrioritiesGet2WithHttpInfo($task_id, $priority_id);
+        list($response) = $this->tasksPrioritiesGet_0WithHttpInfo($task_id, $priority_id);
         return $response;
     }
 
     /**
-     * Operation tasksPrioritiesGet2WithHttpInfo
+     * Operation tasksPrioritiesGet_0WithHttpInfo
      *
      * Get a priority from a given id.
      *
@@ -625,7 +625,7 @@ class TasksApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\TaskPriorityResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function tasksPrioritiesGet2WithHttpInfo($task_id,  $priority_id )
+    public function tasksPrioritiesGet_0WithHttpInfo($task_id,  $priority_id )
     {
         // parse inputs
         $resourcePath = "/tasks/{task_id}/priorities/{priority_id}";
@@ -889,7 +889,7 @@ class TasksApi
     }
 
     /**
-     * Operation tasksStatusesGet2
+     * Operation tasksStatusesGet_0
      *
      * Get a status from a status_id.
      *
@@ -898,14 +898,14 @@ class TasksApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\TaskStatusResource
      */
-    public function tasksStatusesGet2($task_id,  $status_id )
+    public function tasksStatusesGet_0($task_id,  $status_id )
     {
-        list($response) = $this->tasksStatusesGet2WithHttpInfo($task_id, $status_id);
+        list($response) = $this->tasksStatusesGet_0WithHttpInfo($task_id, $status_id);
         return $response;
     }
 
     /**
-     * Operation tasksStatusesGet2WithHttpInfo
+     * Operation tasksStatusesGet_0WithHttpInfo
      *
      * Get a status from a status_id.
      *
@@ -914,7 +914,7 @@ class TasksApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\TaskStatusResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function tasksStatusesGet2WithHttpInfo($task_id,  $status_id )
+    public function tasksStatusesGet_0WithHttpInfo($task_id,  $status_id )
     {
         // parse inputs
         $resourcePath = "/tasks/{task_id}/statuses/{status_id}";

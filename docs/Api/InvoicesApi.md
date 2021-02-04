@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**invoicesRefundrequestsActionsCreate**](InvoicesApi.md#invoicesRefundrequestsActionsCreate) | **POST** /invoices/{invoice_id}/refundrequests/{voucher_refund_request_id}/actions | Perform an action on a refund reuqest.
 [**invoicesRefundrequestsCreate**](InvoicesApi.md#invoicesRefundrequestsCreate) | **POST** /invoices/{invoice_id}/refundrequests | Create refund request for a given invoice_id.
 [**invoicesRefundrequestsGet**](InvoicesApi.md#invoicesRefundrequestsGet) | **GET** /invoices/refundrequests/{voucher_refund_request_id} | Get a refund request by ID.
-[**invoicesRefundrequestsGet2**](InvoicesApi.md#invoicesRefundrequestsGet2) | **GET** /invoices/{invoice_id}/refundrequests/{voucher_refund_request_id} | Get a refund request by ID.
+[**invoicesRefundrequestsGet_0**](InvoicesApi.md#invoicesRefundrequestsGet_0) | **GET** /invoices/{invoice_id}/refundrequests/{voucher_refund_request_id} | Get a refund request by ID.
 [**invoicesRefundrequestsIndex**](InvoicesApi.md#invoicesRefundrequestsIndex) | **GET** /invoices/refundrequests | Get refund requests from a given invoice_id.
-[**invoicesRefundrequestsIndex2**](InvoicesApi.md#invoicesRefundrequestsIndex2) | **GET** /invoices/{voucher_id}/refundrequests | Get refund requests from a given invoice_id.
+[**invoicesRefundrequestsIndex_0**](InvoicesApi.md#invoicesRefundrequestsIndex_0) | **GET** /invoices/{voucher_id}/refundrequests | Get refund requests from a given invoice_id.
 
 
 # **invoicesGet**
@@ -299,8 +299,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **invoicesRefundrequestsGet2**
-> \Ageras\Api\VoucherRefundRequestResource invoicesRefundrequestsGet2($invoice_id,  $voucher_refund_request_id )
+# **invoicesRefundrequestsGet_0**
+> \Ageras\Api\VoucherRefundRequestResource invoicesRefundrequestsGet_0($invoice_id,  $voucher_refund_request_id )
 
 Get a refund request by ID.
 
@@ -322,10 +322,10 @@ $invoice_id = "invoice_id_example"; // string |
 $voucher_refund_request_id = "voucher_refund_request_id_example"; // string | 
 
 try {
-    $result = $api_instance->invoicesRefundrequestsGet2($invoice_id,  $voucher_refund_request_id );
+    $result = $api_instance->invoicesRefundrequestsGet_0($invoice_id,  $voucher_refund_request_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoicesApi->invoicesRefundrequestsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoicesApi->invoicesRefundrequestsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -423,8 +423,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **invoicesRefundrequestsIndex2**
-> \Ageras\Api\VoucherRefundRequestResult invoicesRefundrequestsIndex2($voucher_id , $criteria)
+# **invoicesRefundrequestsIndex_0**
+> \Ageras\Api\VoucherRefundRequestResult invoicesRefundrequestsIndex_0($voucher_id , $criteria)
 
 Get refund requests from a given invoice_id.
 
@@ -456,10 +456,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->invoicesRefundrequestsIndex2($voucher_id , $criteria);
+    $result = $api_instance->invoicesRefundrequestsIndex_0($voucher_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoicesApi->invoicesRefundrequestsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoicesApi->invoicesRefundrequestsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

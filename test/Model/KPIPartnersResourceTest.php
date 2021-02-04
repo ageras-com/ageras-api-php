@@ -107,14 +107,6 @@ class KPIPartnersResourceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "demo_logins"
-     */
-    public function testPropertyDemoLogins()
-    {
-
-    }
-
-    /**
      * Test attribute "refills"
      */
     public function testPropertyRefills()

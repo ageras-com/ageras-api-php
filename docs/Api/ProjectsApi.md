@@ -7,25 +7,25 @@ Method | HTTP request | Description
 [**projectsCreate**](ProjectsApi.md#projectsCreate) | **POST** /projects | Create Project.
 [**projectsDelete**](ProjectsApi.md#projectsDelete) | **DELETE** /projects/{project_id} | Delete a project for a given project id.
 [**projectsEventsCreate**](ProjectsApi.md#projectsEventsCreate) | **POST** /projects/events | Create events for a given project.
-[**projectsEventsCreate2**](ProjectsApi.md#projectsEventsCreate2) | **POST** /projects/{project_id}/events | Create events for a given project.
+[**projectsEventsCreate_0**](ProjectsApi.md#projectsEventsCreate_0) | **POST** /projects/{project_id}/events | Create events for a given project.
 [**projectsEventsDelete**](ProjectsApi.md#projectsEventsDelete) | **DELETE** /projects/{project_id}/events/{project_event_id} | Delete a given project event.
 [**projectsEventsGet**](ProjectsApi.md#projectsEventsGet) | **GET** /projects/events/{project_event_id} | Get event for a given project.
-[**projectsEventsGet2**](ProjectsApi.md#projectsEventsGet2) | **GET** /projects/{project_id}/events/{project_event_id} | Get event for a given project.
+[**projectsEventsGet_0**](ProjectsApi.md#projectsEventsGet_0) | **GET** /projects/{project_id}/events/{project_event_id} | Get event for a given project.
 [**projectsEventsIndex**](ProjectsApi.md#projectsEventsIndex) | **GET** /projects/events | List events for a given project.
-[**projectsEventsIndex2**](ProjectsApi.md#projectsEventsIndex2) | **GET** /projects/{project_id}/events | List events for a given project.
+[**projectsEventsIndex_0**](ProjectsApi.md#projectsEventsIndex_0) | **GET** /projects/{project_id}/events | List events for a given project.
 [**projectsEventsUpdate**](ProjectsApi.md#projectsEventsUpdate) | **PUT** /projects/events/{project_event_id} | Update e events for project events.
-[**projectsEventsUpdate2**](ProjectsApi.md#projectsEventsUpdate2) | **PUT** /projects/{project_id}/events/{project_event_id} | Update e events for project events.
+[**projectsEventsUpdate_0**](ProjectsApi.md#projectsEventsUpdate_0) | **PUT** /projects/{project_id}/events/{project_event_id} | Update e events for project events.
 [**projectsGet**](ProjectsApi.md#projectsGet) | **GET** /projects/{project_id} | Get a Project from a project id.
 [**projectsIndex**](ProjectsApi.md#projectsIndex) | **GET** /projects | List Projects.
 [**projectsNotesCreate**](ProjectsApi.md#projectsNotesCreate) | **POST** /projects/notes | Create a note for a given project.
-[**projectsNotesCreate2**](ProjectsApi.md#projectsNotesCreate2) | **POST** /projects/{project_id}/notes | Create a note for a given project.
+[**projectsNotesCreate_0**](ProjectsApi.md#projectsNotesCreate_0) | **POST** /projects/{project_id}/notes | Create a note for a given project.
 [**projectsNotesDelete**](ProjectsApi.md#projectsNotesDelete) | **DELETE** /projects/{project_id}/notes/{project_note_id} | Delete a project note.
 [**projectsNotesGet**](ProjectsApi.md#projectsNotesGet) | **GET** /projects/notes/{project_note_id} | Get a note from Project and note id.
-[**projectsNotesGet2**](ProjectsApi.md#projectsNotesGet2) | **GET** /projects/{project_id}/notes/{project_note_id} | Get a note from Project and note id.
+[**projectsNotesGet_0**](ProjectsApi.md#projectsNotesGet_0) | **GET** /projects/{project_id}/notes/{project_note_id} | Get a note from Project and note id.
 [**projectsNotesIndex**](ProjectsApi.md#projectsNotesIndex) | **GET** /projects/notes | List notes from a given project.
-[**projectsNotesIndex2**](ProjectsApi.md#projectsNotesIndex2) | **GET** /projects/{project_id}/notes | List notes from a given project.
+[**projectsNotesIndex_0**](ProjectsApi.md#projectsNotesIndex_0) | **GET** /projects/{project_id}/notes | List notes from a given project.
 [**projectsNotesUpdate**](ProjectsApi.md#projectsNotesUpdate) | **PUT** /projects/notes/{project_note_id} | Update a given project note.
-[**projectsNotesUpdate2**](ProjectsApi.md#projectsNotesUpdate2) | **PUT** /projects/{project_id}/notes/{project_note_id} | Update a given project note.
+[**projectsNotesUpdate_0**](ProjectsApi.md#projectsNotesUpdate_0) | **PUT** /projects/{project_id}/notes/{project_note_id} | Update a given project note.
 [**projectsStatusesGet**](ProjectsApi.md#projectsStatusesGet) | **GET** /projects/{status}/statuses | Get a Project Status from Id.
 [**projectsStatusesIndex**](ProjectsApi.md#projectsStatusesIndex) | **GET** /projects/statuses | List Available Project Statuses.
 [**projectsUpdate**](ProjectsApi.md#projectsUpdate) | **PUT** /projects/{project_id} | Update a project.
@@ -183,8 +183,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsEventsCreate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsCreate2($project_id , $project_event_resource)
+# **projectsEventsCreate_0**
+> \Ageras\Api\ProjectNoteResource projectsEventsCreate_0($project_id , $project_event_resource)
 
 Create events for a given project.
 
@@ -206,10 +206,10 @@ $project_id = "project_id_example"; // string |
 $project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
-    $result = $api_instance->projectsEventsCreate2($project_id , $project_event_resource);
+    $result = $api_instance->projectsEventsCreate_0($project_id , $project_event_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsEventsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsEventsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -339,8 +339,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsEventsGet2**
-> \Ageras\Api\ProjectNoteResource projectsEventsGet2($project_id,  $project_event_id )
+# **projectsEventsGet_0**
+> \Ageras\Api\ProjectNoteResource projectsEventsGet_0($project_id,  $project_event_id )
 
 Get event for a given project.
 
@@ -362,10 +362,10 @@ $project_id = "project_id_example"; // string |
 $project_event_id = "project_event_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsEventsGet2($project_id,  $project_event_id );
+    $result = $api_instance->projectsEventsGet_0($project_id,  $project_event_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsEventsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsEventsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -463,8 +463,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsEventsIndex2**
-> \Ageras\Api\ProjectNoteResult projectsEventsIndex2($project_id , $criteria)
+# **projectsEventsIndex_0**
+> \Ageras\Api\ProjectNoteResult projectsEventsIndex_0($project_id , $criteria)
 
 List events for a given project.
 
@@ -496,10 +496,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->projectsEventsIndex2($project_id , $criteria);
+    $result = $api_instance->projectsEventsIndex_0($project_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsEventsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsEventsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -587,8 +587,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsEventsUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource)
+# **projectsEventsUpdate_0**
+> \Ageras\Api\ProjectNoteResource projectsEventsUpdate_0($project_id,  $project_event_id , $project_event_resource)
 
 Update e events for project events.
 
@@ -611,10 +611,10 @@ $project_event_id = "project_event_id_example"; // string |
 $project_event_resource = new \Ageras\Api\ProjectEventResource(); // \Ageras\Api\ProjectEventResource | 
 
 try {
-    $result = $api_instance->projectsEventsUpdate2($project_id,  $project_event_id , $project_event_resource);
+    $result = $api_instance->projectsEventsUpdate_0($project_id,  $project_event_id , $project_event_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsEventsUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsEventsUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -821,8 +821,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsNotesCreate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesCreate2($project_id , $project_note_resource)
+# **projectsNotesCreate_0**
+> \Ageras\Api\ProjectNoteResource projectsNotesCreate_0($project_id , $project_note_resource)
 
 Create a note for a given project.
 
@@ -844,10 +844,10 @@ $project_id = "project_id_example"; // string |
 $project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
-    $result = $api_instance->projectsNotesCreate2($project_id , $project_note_resource);
+    $result = $api_instance->projectsNotesCreate_0($project_id , $project_note_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsNotesCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsNotesCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -977,8 +977,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsNotesGet2**
-> \Ageras\Api\ProjectNoteResource projectsNotesGet2($project_id,  $project_note_id )
+# **projectsNotesGet_0**
+> \Ageras\Api\ProjectNoteResource projectsNotesGet_0($project_id,  $project_note_id )
 
 Get a note from Project and note id.
 
@@ -1000,10 +1000,10 @@ $project_id = "project_id_example"; // string |
 $project_note_id = "project_note_id_example"; // string | 
 
 try {
-    $result = $api_instance->projectsNotesGet2($project_id,  $project_note_id );
+    $result = $api_instance->projectsNotesGet_0($project_id,  $project_note_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsNotesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsNotesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1105,8 +1105,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsNotesIndex2**
-> \Ageras\Api\ProjectNoteResult projectsNotesIndex2($project_id , $criteria)
+# **projectsNotesIndex_0**
+> \Ageras\Api\ProjectNoteResult projectsNotesIndex_0($project_id , $criteria)
 
 List notes from a given project.
 
@@ -1140,10 +1140,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->projectsNotesIndex2($project_id , $criteria);
+    $result = $api_instance->projectsNotesIndex_0($project_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsNotesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsNotesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1233,8 +1233,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **projectsNotesUpdate2**
-> \Ageras\Api\ProjectNoteResource projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource)
+# **projectsNotesUpdate_0**
+> \Ageras\Api\ProjectNoteResource projectsNotesUpdate_0($project_id,  $project_note_id , $project_note_resource)
 
 Update a given project note.
 
@@ -1257,10 +1257,10 @@ $project_note_id = "project_note_id_example"; // string |
 $project_note_resource = new \Ageras\Api\ProjectNoteResource(); // \Ageras\Api\ProjectNoteResource | 
 
 try {
-    $result = $api_instance->projectsNotesUpdate2($project_id,  $project_note_id , $project_note_resource);
+    $result = $api_instance->projectsNotesUpdate_0($project_id,  $project_note_id , $project_note_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectsApi->projectsNotesUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProjectsApi->projectsNotesUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

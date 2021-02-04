@@ -6,29 +6,29 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**conversationsActionsCreate**](ConversationsApi.md#conversationsActionsCreate) | **POST** /conversations/{conversation_id}/actions | Conversation action
 [**conversationsAttachmentsCreate**](ConversationsApi.md#conversationsAttachmentsCreate) | **POST** /conversations/attachments | Create a new attachment
-[**conversationsAttachmentsCreate2**](ConversationsApi.md#conversationsAttachmentsCreate2) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
+[**conversationsAttachmentsCreate_0**](ConversationsApi.md#conversationsAttachmentsCreate_0) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
 [**conversationsAttachmentsGet**](ConversationsApi.md#conversationsAttachmentsGet) | **GET** /conversations/attachments/{attachment_id} | Get an attachment
-[**conversationsAttachmentsGet2**](ConversationsApi.md#conversationsAttachmentsGet2) | **GET** /conversations/{conversation_id}/attachments/{attachment_id} | Get an attachment
+[**conversationsAttachmentsGet_0**](ConversationsApi.md#conversationsAttachmentsGet_0) | **GET** /conversations/{conversation_id}/attachments/{attachment_id} | Get an attachment
 [**conversationsAttachmentsIndex**](ConversationsApi.md#conversationsAttachmentsIndex) | **GET** /conversations/attachments | List conversation&#39;s attachments
-[**conversationsAttachmentsIndex2**](ConversationsApi.md#conversationsAttachmentsIndex2) | **GET** /conversations/{conversation_id}/attachments | List conversation&#39;s attachments
+[**conversationsAttachmentsIndex_0**](ConversationsApi.md#conversationsAttachmentsIndex_0) | **GET** /conversations/{conversation_id}/attachments | List conversation&#39;s attachments
 [**conversationsCreate**](ConversationsApi.md#conversationsCreate) | **POST** /conversations | Create a new conversation.
 [**conversationsGet**](ConversationsApi.md#conversationsGet) | **GET** /conversations/{conversation_id} | Get a conversations by conversation_id.
 [**conversationsIndex**](ConversationsApi.md#conversationsIndex) | **GET** /conversations | List conversations.
 [**conversationsMessagesAttachmentsCreate**](ConversationsApi.md#conversationsMessagesAttachmentsCreate) | **POST** /conversations/conversations/messages/attachments | Create a new attachment
-[**conversationsMessagesAttachmentsCreate2**](ConversationsApi.md#conversationsMessagesAttachmentsCreate2) | **POST** /conversations/messages/attachments | Create a new attachment
-[**conversationsMessagesAttachmentsCreate4**](ConversationsApi.md#conversationsMessagesAttachmentsCreate4) | **POST** /conversations/{conversation_id}/messages/attachments | Create a new attachment
+[**conversationsMessagesAttachmentsCreate_0**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_0) | **POST** /conversations/messages/attachments | Create a new attachment
+[**conversationsMessagesAttachmentsCreate_1**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_1) | **POST** /conversations/{conversation_id}/messages/attachments | Create a new attachment
 [**conversationsMessagesAttachmentsGet**](ConversationsApi.md#conversationsMessagesAttachmentsGet) | **GET** /conversations/conversations/messages/attachments/{attachment_id} | get a message attachment
-[**conversationsMessagesAttachmentsGet2**](ConversationsApi.md#conversationsMessagesAttachmentsGet2) | **GET** /conversations/messages/attachments/{attachment_id} | get a message attachment
-[**conversationsMessagesAttachmentsGet4**](ConversationsApi.md#conversationsMessagesAttachmentsGet4) | **GET** /conversations/{conversation_id}/messages/attachments/{attachment_id} | get a message attachment
+[**conversationsMessagesAttachmentsGet_0**](ConversationsApi.md#conversationsMessagesAttachmentsGet_0) | **GET** /conversations/messages/attachments/{attachment_id} | get a message attachment
+[**conversationsMessagesAttachmentsGet_1**](ConversationsApi.md#conversationsMessagesAttachmentsGet_1) | **GET** /conversations/{conversation_id}/messages/attachments/{attachment_id} | get a message attachment
 [**conversationsMessagesAttachmentsIndex**](ConversationsApi.md#conversationsMessagesAttachmentsIndex) | **GET** /conversations/conversations/messages/attachments | List message attachments
-[**conversationsMessagesAttachmentsIndex2**](ConversationsApi.md#conversationsMessagesAttachmentsIndex2) | **GET** /conversations/messages/attachments | List message attachments
-[**conversationsMessagesAttachmentsIndex4**](ConversationsApi.md#conversationsMessagesAttachmentsIndex4) | **GET** /conversations/{conversation_id}/messages/attachments | List message attachments
+[**conversationsMessagesAttachmentsIndex_0**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_0) | **GET** /conversations/messages/attachments | List message attachments
+[**conversationsMessagesAttachmentsIndex_1**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_1) | **GET** /conversations/{conversation_id}/messages/attachments | List message attachments
 [**conversationsMessagesCreate**](ConversationsApi.md#conversationsMessagesCreate) | **POST** /conversations/messages | Create a new message
-[**conversationsMessagesCreate2**](ConversationsApi.md#conversationsMessagesCreate2) | **POST** /conversations/{conversation_id}/messages | Create a new message
+[**conversationsMessagesCreate_0**](ConversationsApi.md#conversationsMessagesCreate_0) | **POST** /conversations/{conversation_id}/messages | Create a new message
 [**conversationsMessagesGet**](ConversationsApi.md#conversationsMessagesGet) | **GET** /conversations/messages/{message_id} | Get message by message_id
-[**conversationsMessagesGet2**](ConversationsApi.md#conversationsMessagesGet2) | **GET** /conversations/{conversation_id}/messages/{message_id} | Get message by message_id
+[**conversationsMessagesGet_0**](ConversationsApi.md#conversationsMessagesGet_0) | **GET** /conversations/{conversation_id}/messages/{message_id} | Get message by message_id
 [**conversationsMessagesIndex**](ConversationsApi.md#conversationsMessagesIndex) | **GET** /conversations/messages | Get messages by conversation_id.
-[**conversationsMessagesIndex2**](ConversationsApi.md#conversationsMessagesIndex2) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
+[**conversationsMessagesIndex_0**](ConversationsApi.md#conversationsMessagesIndex_0) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
 
 
 # **conversationsActionsCreate**
@@ -135,8 +135,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsAttachmentsCreate2**
-> \Ageras\Api\AttachmentResource conversationsAttachmentsCreate2($conversation_id , $attachment_resource)
+# **conversationsAttachmentsCreate_0**
+> \Ageras\Api\AttachmentResource conversationsAttachmentsCreate_0($conversation_id , $attachment_resource)
 
 Create a new attachment
 
@@ -158,10 +158,10 @@ $conversation_id = "conversation_id_example"; // string |
 $attachment_resource = new \Ageras\Api\AttachmentResource(); // \Ageras\Api\AttachmentResource | 
 
 try {
-    $result = $api_instance->conversationsAttachmentsCreate2($conversation_id , $attachment_resource);
+    $result = $api_instance->conversationsAttachmentsCreate_0($conversation_id , $attachment_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsAttachmentsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsAttachmentsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -239,8 +239,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsAttachmentsGet2**
-> \Ageras\Api\AttachmentResource conversationsAttachmentsGet2($conversation_id,  $attachment_id )
+# **conversationsAttachmentsGet_0**
+> \Ageras\Api\AttachmentResource conversationsAttachmentsGet_0($conversation_id,  $attachment_id )
 
 Get an attachment
 
@@ -262,10 +262,10 @@ $conversation_id = "conversation_id_example"; // string |
 $attachment_id = "attachment_id_example"; // string | 
 
 try {
-    $result = $api_instance->conversationsAttachmentsGet2($conversation_id,  $attachment_id );
+    $result = $api_instance->conversationsAttachmentsGet_0($conversation_id,  $attachment_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsAttachmentsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsAttachmentsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -355,8 +355,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsAttachmentsIndex2**
-> \Ageras\Api\AttachmentResult conversationsAttachmentsIndex2($conversation_id , $criteria)
+# **conversationsAttachmentsIndex_0**
+> \Ageras\Api\AttachmentResult conversationsAttachmentsIndex_0($conversation_id , $criteria)
 
 List conversation's attachments
 
@@ -384,10 +384,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->conversationsAttachmentsIndex2($conversation_id , $criteria);
+    $result = $api_instance->conversationsAttachmentsIndex_0($conversation_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsAttachmentsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsAttachmentsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -644,8 +644,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsCreate2**
-> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate2($attachment_resource)
+# **conversationsMessagesAttachmentsCreate_0**
+> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate_0($attachment_resource)
 
 Create a new attachment
 
@@ -666,10 +666,10 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $attachment_resource = new \Ageras\Api\AttachmentResource(); // \Ageras\Api\AttachmentResource | 
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsCreate2($attachment_resource);
+    $result = $api_instance->conversationsMessagesAttachmentsCreate_0($attachment_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -695,8 +695,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsCreate4**
-> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate4($conversation_id , $attachment_resource)
+# **conversationsMessagesAttachmentsCreate_1**
+> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate_1($conversation_id , $attachment_resource)
 
 Create a new attachment
 
@@ -718,10 +718,10 @@ $conversation_id = "conversation_id_example"; // string |
 $attachment_resource = new \Ageras\Api\AttachmentResource(); // \Ageras\Api\AttachmentResource | 
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsCreate4($conversation_id , $attachment_resource);
+    $result = $api_instance->conversationsMessagesAttachmentsCreate_1($conversation_id , $attachment_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsCreate4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsCreate_1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -799,8 +799,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsGet2**
-> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet2($attachment_id )
+# **conversationsMessagesAttachmentsGet_0**
+> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet_0($attachment_id )
 
 get a message attachment
 
@@ -821,10 +821,10 @@ $api_instance = new Ageras\Api\Api\ConversationsApi();
 $attachment_id = "attachment_id_example"; // string | 
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsGet2($attachment_id );
+    $result = $api_instance->conversationsMessagesAttachmentsGet_0($attachment_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -850,8 +850,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsGet4**
-> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet4($conversation_id,  $attachment_id )
+# **conversationsMessagesAttachmentsGet_1**
+> \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet_1($conversation_id,  $attachment_id )
 
 get a message attachment
 
@@ -873,10 +873,10 @@ $conversation_id = "conversation_id_example"; // string |
 $attachment_id = "attachment_id_example"; // string | 
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsGet4($conversation_id,  $attachment_id );
+    $result = $api_instance->conversationsMessagesAttachmentsGet_1($conversation_id,  $attachment_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsGet4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsGet_1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -966,8 +966,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsIndex2**
-> \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex2($criteria)
+# **conversationsMessagesAttachmentsIndex_0**
+> \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex_0($criteria)
 
 List message attachments
 
@@ -995,10 +995,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsIndex2($criteria);
+    $result = $api_instance->conversationsMessagesAttachmentsIndex_0($criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1029,8 +1029,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesAttachmentsIndex4**
-> \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex4($conversation_id , $criteria)
+# **conversationsMessagesAttachmentsIndex_1**
+> \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex_1($conversation_id , $criteria)
 
 List message attachments
 
@@ -1058,10 +1058,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->conversationsMessagesAttachmentsIndex4($conversation_id , $criteria);
+    $result = $api_instance->conversationsMessagesAttachmentsIndex_1($conversation_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsIndex4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesAttachmentsIndex_1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1143,8 +1143,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesCreate2**
-> \Ageras\Api\MessageResource conversationsMessagesCreate2($conversation_id , $message_resource)
+# **conversationsMessagesCreate_0**
+> \Ageras\Api\MessageResource conversationsMessagesCreate_0($conversation_id , $message_resource)
 
 Create a new message
 
@@ -1166,10 +1166,10 @@ $conversation_id = "conversation_id_example"; // string |
 $message_resource = new \Ageras\Api\MessageResource(); // \Ageras\Api\MessageResource | 
 
 try {
-    $result = $api_instance->conversationsMessagesCreate2($conversation_id , $message_resource);
+    $result = $api_instance->conversationsMessagesCreate_0($conversation_id , $message_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1247,8 +1247,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesGet2**
-> \Ageras\Api\MessageResource conversationsMessagesGet2($conversation_id,  $message_id )
+# **conversationsMessagesGet_0**
+> \Ageras\Api\MessageResource conversationsMessagesGet_0($conversation_id,  $message_id )
 
 Get message by message_id
 
@@ -1270,10 +1270,10 @@ $conversation_id = "conversation_id_example"; // string |
 $message_id = "message_id_example"; // string | 
 
 try {
-    $result = $api_instance->conversationsMessagesGet2($conversation_id,  $message_id );
+    $result = $api_instance->conversationsMessagesGet_0($conversation_id,  $message_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1367,8 +1367,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **conversationsMessagesIndex2**
-> \Ageras\Api\MessageResult conversationsMessagesIndex2($conversation_id , $criteria)
+# **conversationsMessagesIndex_0**
+> \Ageras\Api\MessageResult conversationsMessagesIndex_0($conversation_id , $criteria)
 
 Get messages by conversation_id.
 
@@ -1398,10 +1398,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->conversationsMessagesIndex2($conversation_id , $criteria);
+    $result = $api_instance->conversationsMessagesIndex_0($conversation_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->conversationsMessagesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->conversationsMessagesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

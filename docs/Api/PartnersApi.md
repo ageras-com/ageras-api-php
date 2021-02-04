@@ -63,23 +63,23 @@ Method | HTTP request | Description
 [**partnersCreate**](PartnersApi.md#partnersCreate) | **POST** /partners | Create a Partner.
 [**partnersDelete**](PartnersApi.md#partnersDelete) | **DELETE** /partners/{partner_id} | Delete a Partner.
 [**partnersDeliverablesCreate**](PartnersApi.md#partnersDeliverablesCreate) | **POST** /partners/deliverables | Create Deliverable for partners
-[**partnersDeliverablesCreate2**](PartnersApi.md#partnersDeliverablesCreate2) | **POST** /partners/{partner_id}/deliverables | Create Deliverable for partners
+[**partnersDeliverablesCreate_0**](PartnersApi.md#partnersDeliverablesCreate_0) | **POST** /partners/{partner_id}/deliverables | Create Deliverable for partners
 [**partnersDeliverablesGet**](PartnersApi.md#partnersDeliverablesGet) | **GET** /partners/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
-[**partnersDeliverablesGet2**](PartnersApi.md#partnersDeliverablesGet2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
+[**partnersDeliverablesGet_0**](PartnersApi.md#partnersDeliverablesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
 [**partnersDeliverablesIndex**](PartnersApi.md#partnersDeliverablesIndex) | **GET** /partners/deliverables | List Partner deliverables
-[**partnersDeliverablesIndex2**](PartnersApi.md#partnersDeliverablesIndex2) | **GET** /partners/{partner_id}/deliverables | List Partner deliverables
+[**partnersDeliverablesIndex_0**](PartnersApi.md#partnersDeliverablesIndex_0) | **GET** /partners/{partner_id}/deliverables | List Partner deliverables
 [**partnersDeliverablesLinesCreate**](PartnersApi.md#partnersDeliverablesLinesCreate) | **POST** /partners/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
-[**partnersDeliverablesLinesCreate2**](PartnersApi.md#partnersDeliverablesLinesCreate2) | **POST** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
+[**partnersDeliverablesLinesCreate_0**](PartnersApi.md#partnersDeliverablesLinesCreate_0) | **POST** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
 [**partnersDeliverablesLinesDelete**](PartnersApi.md#partnersDeliverablesLinesDelete) | **DELETE** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
-[**partnersDeliverablesLinesDelete2**](PartnersApi.md#partnersDeliverablesLinesDelete2) | **DELETE** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
+[**partnersDeliverablesLinesDelete_0**](PartnersApi.md#partnersDeliverablesLinesDelete_0) | **DELETE** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
 [**partnersDeliverablesLinesGet**](PartnersApi.md#partnersDeliverablesLinesGet) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
-[**partnersDeliverablesLinesGet2**](PartnersApi.md#partnersDeliverablesLinesGet2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
+[**partnersDeliverablesLinesGet_0**](PartnersApi.md#partnersDeliverablesLinesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
 [**partnersDeliverablesLinesIndex**](PartnersApi.md#partnersDeliverablesLinesIndex) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
-[**partnersDeliverablesLinesIndex2**](PartnersApi.md#partnersDeliverablesLinesIndex2) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
+[**partnersDeliverablesLinesIndex_0**](PartnersApi.md#partnersDeliverablesLinesIndex_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
 [**partnersDeliverablesLinesUpdate**](PartnersApi.md#partnersDeliverablesLinesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
-[**partnersDeliverablesLinesUpdate2**](PartnersApi.md#partnersDeliverablesLinesUpdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
+[**partnersDeliverablesLinesUpdate_0**](PartnersApi.md#partnersDeliverablesLinesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
 [**partnersDeliverablesUpdate**](PartnersApi.md#partnersDeliverablesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
-[**partnersDeliverablesUpdate2**](PartnersApi.md#partnersDeliverablesUpdate2) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
+[**partnersDeliverablesUpdate_0**](PartnersApi.md#partnersDeliverablesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
 [**partnersDiscountsCreate**](PartnersApi.md#partnersDiscountsCreate) | **POST** /partners/{partner_id}/discounts | Discount for a partner.
 [**partnersDiscountsDelete**](PartnersApi.md#partnersDiscountsDelete) | **DELETE** /partners/{partner_id}/discounts/{partner_package_type_discount_id} | Delete a partner discount
 [**partnersDiscountsIndex**](PartnersApi.md#partnersDiscountsIndex) | **GET** /partners/{partner_id}/discounts | Get partner&#39;s discounts.
@@ -97,19 +97,19 @@ Method | HTTP request | Description
 [**partnersIndustriesIndex**](PartnersApi.md#partnersIndustriesIndex) | **GET** /partners/{partner_id}/industries | Get partner industries.
 [**partnersIndustriesUpdate**](PartnersApi.md#partnersIndustriesUpdate) | **PUT** /partners/{partner_id}/industries | Replace partner&#39;s industries.
 [**partnersInvoicingsIndex**](PartnersApi.md#partnersInvoicingsIndex) | **GET** /partners/invoicings | List partner invoicings.
-[**partnersInvoicingsIndex2**](PartnersApi.md#partnersInvoicingsIndex2) | **GET** /partners/{partner_id}/invoicings | List partner invoicings.
+[**partnersInvoicingsIndex_0**](PartnersApi.md#partnersInvoicingsIndex_0) | **GET** /partners/{partner_id}/invoicings | List partner invoicings.
 [**partnersLeadtypesCreate**](PartnersApi.md#partnersLeadtypesCreate) | **POST** /partners/{partner_id}/lead_types | Attach type to partner.
 [**partnersLeadtypesDelete**](PartnersApi.md#partnersLeadtypesDelete) | **DELETE** /partners/{partner_id}/lead_types/{lead_type_id} | Detach type from partner.
 [**partnersLeadtypesGet**](PartnersApi.md#partnersLeadtypesGet) | **GET** /partners/lead_types/{lead_type_id} | Retrieve a given lead type.
-[**partnersLeadtypesGet2**](PartnersApi.md#partnersLeadtypesGet2) | **GET** /partners/{partner_id}/lead_types/{lead_type_id} | Retrieve a given lead type.
+[**partnersLeadtypesGet_0**](PartnersApi.md#partnersLeadtypesGet_0) | **GET** /partners/{partner_id}/lead_types/{lead_type_id} | Retrieve a given lead type.
 [**partnersLeadtypesIndex**](PartnersApi.md#partnersLeadtypesIndex) | **GET** /partners/lead_types | Get partner types criteria.
-[**partnersLeadtypesIndex2**](PartnersApi.md#partnersLeadtypesIndex2) | **GET** /partners/{partner_id}/lead_types | Get partner types criteria.
+[**partnersLeadtypesIndex_0**](PartnersApi.md#partnersLeadtypesIndex_0) | **GET** /partners/{partner_id}/lead_types | Get partner types criteria.
 [**partnersLeadtypesUpdate**](PartnersApi.md#partnersLeadtypesUpdate) | **PUT** /partners/{partner_id}/lead_types | Replace a partner&#39;s lead types.
 [**partnersNotesCreate**](PartnersApi.md#partnersNotesCreate) | **POST** /partners/notes | Create Partner notes.
-[**partnersNotesCreate2**](PartnersApi.md#partnersNotesCreate2) | **POST** /partners/{partner_id}/notes | Create Partner notes.
+[**partnersNotesCreate_0**](PartnersApi.md#partnersNotesCreate_0) | **POST** /partners/{partner_id}/notes | Create Partner notes.
 [**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
 [**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
-[**partnersNotesIndex2**](PartnersApi.md#partnersNotesIndex2) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
+[**partnersNotesIndex_0**](PartnersApi.md#partnersNotesIndex_0) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
 [**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
 [**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | Get partner sectors.
 [**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | Update partner sectors.
@@ -136,22 +136,22 @@ Method | HTTP request | Description
 [**partnersTransactionsIndex**](PartnersApi.md#partnersTransactionsIndex) | **GET** /partners/{partner_id}/transactions | List Transactions for a given Partner.
 [**partnersUpdate**](PartnersApi.md#partnersUpdate) | **PUT** /partners/{partner_id} | Update a Partner.
 [**partnersUsersContentsDelete**](PartnersApi.md#partnersUsersContentsDelete) | **DELETE** /partners/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
-[**partnersUsersContentsDelete2**](PartnersApi.md#partnersUsersContentsDelete2) | **DELETE** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
+[**partnersUsersContentsDelete_0**](PartnersApi.md#partnersUsersContentsDelete_0) | **DELETE** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
 [**partnersUsersContentsGet**](PartnersApi.md#partnersUsersContentsGet) | **GET** /partners/users/{partner_user_id}/contents/{content_key} | Get the content of a given partner user.
-[**partnersUsersContentsGet2**](PartnersApi.md#partnersUsersContentsGet2) | **GET** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Get the content of a given partner user.
+[**partnersUsersContentsGet_0**](PartnersApi.md#partnersUsersContentsGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Get the content of a given partner user.
 [**partnersUsersContentsUpdate**](PartnersApi.md#partnersUsersContentsUpdate) | **PUT** /partners/users/{partner_user_id}/contents/{content_key} | Update content for a given partner user.
-[**partnersUsersContentsUpdate2**](PartnersApi.md#partnersUsersContentsUpdate2) | **PUT** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Update content for a given partner user.
+[**partnersUsersContentsUpdate_0**](PartnersApi.md#partnersUsersContentsUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Update content for a given partner user.
 [**partnersUsersCreate**](PartnersApi.md#partnersUsersCreate) | **POST** /partners/users | Create a partner user.
-[**partnersUsersCreate2**](PartnersApi.md#partnersUsersCreate2) | **POST** /partners/{partner_id}/users | Create a partner user.
+[**partnersUsersCreate_0**](PartnersApi.md#partnersUsersCreate_0) | **POST** /partners/{partner_id}/users | Create a partner user.
 [**partnersUsersDelete**](PartnersApi.md#partnersUsersDelete) | **DELETE** /partners/{partner_id}/users/{partner_user_id} | Delete partner user from partner.
 [**partnersUsersGet**](PartnersApi.md#partnersUsersGet) | **GET** /partners/users/{partner_user_id} | Get a Partner User by a given partner_user_id.
-[**partnersUsersGet2**](PartnersApi.md#partnersUsersGet2) | **GET** /partners/{partner_id}/users/{partner_user_id} | Get a Partner User by a given partner_user_id.
+[**partnersUsersGet_0**](PartnersApi.md#partnersUsersGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id} | Get a Partner User by a given partner_user_id.
 [**partnersUsersIndex**](PartnersApi.md#partnersUsersIndex) | **GET** /partners/users | List partner users.
-[**partnersUsersIndex2**](PartnersApi.md#partnersUsersIndex2) | **GET** /partners/{partner_id}/users | List partner users.
+[**partnersUsersIndex_0**](PartnersApi.md#partnersUsersIndex_0) | **GET** /partners/{partner_id}/users | List partner users.
 [**partnersUsersUpdate**](PartnersApi.md#partnersUsersUpdate) | **PUT** /partners/users/{partner_user_id} | Update partner user profile.
-[**partnersUsersUpdate2**](PartnersApi.md#partnersUsersUpdate2) | **PUT** /partners/{partner_id}/users/{partner_user_id} | Update partner user profile.
+[**partnersUsersUpdate_0**](PartnersApi.md#partnersUsersUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id} | Update partner user profile.
 [**partnersVerificationsIndex**](PartnersApi.md#partnersVerificationsIndex) | **GET** /partners/verifications | Get Partner verifications.
-[**partnersVerificationsIndex2**](PartnersApi.md#partnersVerificationsIndex2) | **GET** /partners/{partner_id}/verifications | Get Partner verifications.
+[**partnersVerificationsIndex_0**](PartnersApi.md#partnersVerificationsIndex_0) | **GET** /partners/{partner_id}/verifications | Get Partner verifications.
 [**partnersVerificationsUpdate**](PartnersApi.md#partnersVerificationsUpdate) | **PUT** /partners/{partner_id}/verifications | Update Partner verification data.
 
 
@@ -3520,8 +3520,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesCreate2**
-> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesCreate2($partner_id , $partner_deliverable_resource)
+# **partnersDeliverablesCreate_0**
+> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesCreate_0($partner_id , $partner_deliverable_resource)
 
 Create Deliverable for partners
 
@@ -3543,10 +3543,10 @@ $partner_id = "partner_id_example"; // string |
 $partner_deliverable_resource = new \Ageras\Api\PartnerDeliverableResource(); // \Ageras\Api\PartnerDeliverableResource | 
 
 try {
-    $result = $api_instance->partnersDeliverablesCreate2($partner_id , $partner_deliverable_resource);
+    $result = $api_instance->partnersDeliverablesCreate_0($partner_id , $partner_deliverable_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3624,8 +3624,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesGet2**
-> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesGet2($partner_id,  $partner_deliverable_id )
+# **partnersDeliverablesGet_0**
+> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesGet_0($partner_id,  $partner_deliverable_id )
 
 Retrieve a single deliverable id
 
@@ -3647,10 +3647,10 @@ $partner_id = "partner_id_example"; // string |
 $partner_deliverable_id = "partner_deliverable_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersDeliverablesGet2($partner_id,  $partner_deliverable_id );
+    $result = $api_instance->partnersDeliverablesGet_0($partner_id,  $partner_deliverable_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3744,8 +3744,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesIndex2**
-> \Ageras\Api\PartnerDeliverableResult partnersDeliverablesIndex2($partner_id , $criteria)
+# **partnersDeliverablesIndex_0**
+> \Ageras\Api\PartnerDeliverableResult partnersDeliverablesIndex_0($partner_id , $criteria)
 
 List Partner deliverables
 
@@ -3775,10 +3775,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersDeliverablesIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersDeliverablesIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3864,8 +3864,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesLinesCreate2**
-> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesCreate2($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
+# **partnersDeliverablesLinesCreate_0**
+> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesCreate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
 
 Create item for Partner Deliverable
 
@@ -3888,10 +3888,10 @@ $partner_deliverable_id = "partner_deliverable_id_example"; // string |
 $partner_deliverable_line_resource = new \Ageras\Api\PartnerDeliverableLineResource(); // \Ageras\Api\PartnerDeliverableLineResource | 
 
 try {
-    $result = $api_instance->partnersDeliverablesLinesCreate2($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource);
+    $result = $api_instance->partnersDeliverablesLinesCreate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -3971,8 +3971,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesLinesDelete2**
-> partnersDeliverablesLinesDelete2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+# **partnersDeliverablesLinesDelete_0**
+> partnersDeliverablesLinesDelete_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
 
 Delete item from Partner Deliverable
 
@@ -3995,9 +3995,9 @@ $partner_deliverable_id = "partner_deliverable_id_example"; // string |
 $partner_deliverable_line_id = "partner_deliverable_line_id_example"; // string | 
 
 try {
-    $api_instance->partnersDeliverablesLinesDelete2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id );
+    $api_instance->partnersDeliverablesLinesDelete_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id );
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesDelete2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesDelete_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -4078,8 +4078,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesLinesGet2**
-> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesGet2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
+# **partnersDeliverablesLinesGet_0**
+> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesGet_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
 
 Get Partner Deliverable Item
 
@@ -4102,10 +4102,10 @@ $partner_deliverable_id = "partner_deliverable_id_example"; // string |
 $partner_deliverable_line_id = "partner_deliverable_line_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersDeliverablesLinesGet2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id );
+    $result = $api_instance->partnersDeliverablesLinesGet_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -4198,8 +4198,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesLinesIndex2**
-> \Ageras\Api\PartnerDeliverableLineResult partnersDeliverablesLinesIndex2($partner_id,  $partner_deliverable_id , $criteria)
+# **partnersDeliverablesLinesIndex_0**
+> \Ageras\Api\PartnerDeliverableLineResult partnersDeliverablesLinesIndex_0($partner_id,  $partner_deliverable_id , $criteria)
 
 List Partner Deliverable Items
 
@@ -4228,10 +4228,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersDeliverablesLinesIndex2($partner_id,  $partner_deliverable_id , $criteria);
+    $result = $api_instance->partnersDeliverablesLinesIndex_0($partner_id,  $partner_deliverable_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -4318,8 +4318,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesLinesUpdate2**
-> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesUpdate2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
+# **partnersDeliverablesLinesUpdate_0**
+> \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesUpdate_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
 
 Update item for Partner Deliverable
 
@@ -4343,10 +4343,10 @@ $partner_deliverable_line_id = "partner_deliverable_line_id_example"; // string 
 $partner_deliverable_line_resource = new \Ageras\Api\PartnerDeliverableLineResource(); // \Ageras\Api\PartnerDeliverableLineResource | 
 
 try {
-    $result = $api_instance->partnersDeliverablesLinesUpdate2($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource);
+    $result = $api_instance->partnersDeliverablesLinesUpdate_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesLinesUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -4428,8 +4428,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersDeliverablesUpdate2**
-> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesUpdate2($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
+# **partnersDeliverablesUpdate_0**
+> \Ageras\Api\PartnerDeliverableResource partnersDeliverablesUpdate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
 
 Update Partner Deliverable
 
@@ -4452,10 +4452,10 @@ $partner_deliverable_id = "partner_deliverable_id_example"; // string |
 $partner_deliverable_resource = new \Ageras\Api\PartnerDeliverableResource(); // \Ageras\Api\PartnerDeliverableResource | 
 
 try {
-    $result = $api_instance->partnersDeliverablesUpdate2($partner_id,  $partner_deliverable_id , $partner_deliverable_resource);
+    $result = $api_instance->partnersDeliverablesUpdate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersDeliverablesUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersDeliverablesUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -5472,8 +5472,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersInvoicingsIndex2**
-> \Ageras\Api\InvoicingResult partnersInvoicingsIndex2($partner_id , $criteria)
+# **partnersInvoicingsIndex_0**
+> \Ageras\Api\InvoicingResult partnersInvoicingsIndex_0($partner_id , $criteria)
 
 List partner invoicings.
 
@@ -5505,10 +5505,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersInvoicingsIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersInvoicingsIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersInvoicingsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersInvoicingsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -5699,8 +5699,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersLeadtypesGet2**
-> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet2($partner_id,  $lead_type_id )
+# **partnersLeadtypesGet_0**
+> \Ageras\Api\PartnerTypesResource partnersLeadtypesGet_0($partner_id,  $lead_type_id )
 
 Retrieve a given lead type.
 
@@ -5722,10 +5722,10 @@ $partner_id = "partner_id_example"; // string |
 $lead_type_id = "lead_type_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersLeadtypesGet2($partner_id,  $lead_type_id );
+    $result = $api_instance->partnersLeadtypesGet_0($partner_id,  $lead_type_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersLeadtypesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersLeadtypesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -5815,8 +5815,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersLeadtypesIndex2**
-> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex2($partner_id , $criteria)
+# **partnersLeadtypesIndex_0**
+> \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex_0($partner_id , $criteria)
 
 Get partner types criteria.
 
@@ -5844,10 +5844,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersLeadtypesIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersLeadtypesIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersLeadtypesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersLeadtypesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -5982,8 +5982,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersNotesCreate2**
-> \Ageras\Api\PartnerNoteResource partnersNotesCreate2($partner_id , $partner_note_resource)
+# **partnersNotesCreate_0**
+> \Ageras\Api\PartnerNoteResource partnersNotesCreate_0($partner_id , $partner_note_resource)
 
 Create Partner notes.
 
@@ -6005,10 +6005,10 @@ $partner_id = "partner_id_example"; // string |
 $partner_note_resource = new \Ageras\Api\PartnerNoteResource(); // \Ageras\Api\PartnerNoteResource | 
 
 try {
-    $result = $api_instance->partnersNotesCreate2($partner_id , $partner_note_resource);
+    $result = $api_instance->partnersNotesCreate_0($partner_id , $partner_note_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersNotesCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersNotesCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -6149,8 +6149,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersNotesIndex2**
-> \Ageras\Api\PartnerNoteResult partnersNotesIndex2($partner_id , $criteria)
+# **partnersNotesIndex_0**
+> \Ageras\Api\PartnerNoteResult partnersNotesIndex_0($partner_id , $criteria)
 
 Retrieve lists of notes.
 
@@ -6177,10 +6177,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersNotesIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersNotesIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersNotesIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersNotesIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -7680,8 +7680,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersContentsDelete2**
-> partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key )
+# **partnersUsersContentsDelete_0**
+> partnersUsersContentsDelete_0($partner_id,  $partner_user_id,  $content_key )
 
 Delete content for a given partner user.
 
@@ -7704,9 +7704,9 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $api_instance->partnersUsersContentsDelete2($partner_id,  $partner_user_id,  $content_key );
+    $api_instance->partnersUsersContentsDelete_0($partner_id,  $partner_user_id,  $content_key );
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersContentsDelete2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersContentsDelete_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -7787,8 +7787,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersContentsGet2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key )
+# **partnersUsersContentsGet_0**
+> \Ageras\Api\PartnerContentResource partnersUsersContentsGet_0($partner_id,  $partner_user_id,  $content_key )
 
 Get the content of a given partner user.
 
@@ -7811,10 +7811,10 @@ $partner_user_id = "partner_user_id_example"; // string |
 $content_key = "content_key_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersContentsGet2($partner_id,  $partner_user_id,  $content_key );
+    $result = $api_instance->partnersUsersContentsGet_0($partner_id,  $partner_user_id,  $content_key );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersContentsGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersContentsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -7897,8 +7897,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersContentsUpdate2**
-> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
+# **partnersUsersContentsUpdate_0**
+> \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate_0($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
 
 Update content for a given partner user.
 
@@ -7922,10 +7922,10 @@ $content_key = "content_key_example"; // string |
 $partner_content_resource = new \Ageras\Api\PartnerContentResource(); // \Ageras\Api\PartnerContentResource | 
 
 try {
-    $result = $api_instance->partnersUsersContentsUpdate2($partner_id,  $partner_user_id,  $content_key , $partner_content_resource);
+    $result = $api_instance->partnersUsersContentsUpdate_0($partner_id,  $partner_user_id,  $content_key , $partner_content_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersContentsUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8005,8 +8005,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersCreate2**
-> \Ageras\Api\PartnerUserResource partnersUsersCreate2($partner_id , $partner_user_resource)
+# **partnersUsersCreate_0**
+> \Ageras\Api\PartnerUserResource partnersUsersCreate_0($partner_id , $partner_user_resource)
 
 Create a partner user.
 
@@ -8028,10 +8028,10 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
-    $result = $api_instance->partnersUsersCreate2($partner_id , $partner_user_resource);
+    $result = $api_instance->partnersUsersCreate_0($partner_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersCreate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersCreate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8161,8 +8161,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersGet2**
-> \Ageras\Api\PartnerUserResource partnersUsersGet2($partner_id,  $partner_user_id )
+# **partnersUsersGet_0**
+> \Ageras\Api\PartnerUserResource partnersUsersGet_0($partner_id,  $partner_user_id )
 
 Get a Partner User by a given partner_user_id.
 
@@ -8184,10 +8184,10 @@ $partner_id = "partner_id_example"; // string |
 $partner_user_id = "partner_user_id_example"; // string | 
 
 try {
-    $result = $api_instance->partnersUsersGet2($partner_id,  $partner_user_id );
+    $result = $api_instance->partnersUsersGet_0($partner_id,  $partner_user_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8277,8 +8277,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersIndex2**
-> \Ageras\Api\PartnerUserResult partnersUsersIndex2($partner_id , $criteria)
+# **partnersUsersIndex_0**
+> \Ageras\Api\PartnerUserResult partnersUsersIndex_0($partner_id , $criteria)
 
 List partner users.
 
@@ -8306,10 +8306,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersUsersIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersUsersIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8393,8 +8393,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersUsersUpdate2**
-> \Ageras\Api\PartnerUserResource partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource)
+# **partnersUsersUpdate_0**
+> \Ageras\Api\PartnerUserResource partnersUsersUpdate_0($partner_id,  $partner_user_id , $partner_user_resource)
 
 Update partner user profile.
 
@@ -8417,10 +8417,10 @@ $partner_user_id = "partner_user_id_example"; // string |
 $partner_user_resource = new \Ageras\Api\PartnerUserResource(); // \Ageras\Api\PartnerUserResource | 
 
 try {
-    $result = $api_instance->partnersUsersUpdate2($partner_id,  $partner_user_id , $partner_user_resource);
+    $result = $api_instance->partnersUsersUpdate_0($partner_id,  $partner_user_id , $partner_user_resource);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersUsersUpdate2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersUsersUpdate_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -8507,8 +8507,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **partnersVerificationsIndex2**
-> \Ageras\Api\PartnerVerificationResult partnersVerificationsIndex2($partner_id , $criteria)
+# **partnersVerificationsIndex_0**
+> \Ageras\Api\PartnerVerificationResult partnersVerificationsIndex_0($partner_id , $criteria)
 
 Get Partner verifications.
 
@@ -8534,10 +8534,10 @@ $criteria = [
     ];
 
 try {
-    $result = $api_instance->partnersVerificationsIndex2($partner_id , $criteria);
+    $result = $api_instance->partnersVerificationsIndex_0($partner_id , $criteria);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PartnersApi->partnersVerificationsIndex2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PartnersApi->partnersVerificationsIndex_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

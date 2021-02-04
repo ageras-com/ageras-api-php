@@ -9,10 +9,10 @@ Method | HTTP request | Description
 [**tasksGet**](TasksApi.md#tasksGet) | **GET** /tasks/{task_id} | Get a given task by its given task_id.
 [**tasksIndex**](TasksApi.md#tasksIndex) | **GET** /tasks | List tasks by employee, asseigned_employee, etc.
 [**tasksPrioritiesGet**](TasksApi.md#tasksPrioritiesGet) | **GET** /tasks/priorities/{priority_id} | Get a priority from a given id.
-[**tasksPrioritiesGet2**](TasksApi.md#tasksPrioritiesGet2) | **GET** /tasks/{task_id}/priorities/{priority_id} | Get a priority from a given id.
+[**tasksPrioritiesGet_0**](TasksApi.md#tasksPrioritiesGet_0) | **GET** /tasks/{task_id}/priorities/{priority_id} | Get a priority from a given id.
 [**tasksPrioritiesIndex**](TasksApi.md#tasksPrioritiesIndex) | **GET** /tasks/priorities | List priorities.
 [**tasksStatusesGet**](TasksApi.md#tasksStatusesGet) | **GET** /tasks/statuses/{status_id} | Get a status from a status_id.
-[**tasksStatusesGet2**](TasksApi.md#tasksStatusesGet2) | **GET** /tasks/{task_id}/statuses/{status_id} | Get a status from a status_id.
+[**tasksStatusesGet_0**](TasksApi.md#tasksStatusesGet_0) | **GET** /tasks/{task_id}/statuses/{status_id} | Get a status from a status_id.
 [**tasksStatusesIndex**](TasksApi.md#tasksStatusesIndex) | **GET** /tasks/statuses | List statuses.
 [**tasksTaskablesCreate**](TasksApi.md#tasksTaskablesCreate) | **POST** /tasks/{task_id}/taskables | create a new taskable for a given task.
 [**tasksTaskablesDelete**](TasksApi.md#tasksTaskablesDelete) | **DELETE** /tasks/{task_id}/taskables/{taskable_id} | delete a taskable and remove it from the given task.
@@ -305,8 +305,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **tasksPrioritiesGet2**
-> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet2($task_id,  $priority_id )
+# **tasksPrioritiesGet_0**
+> \Ageras\Api\TaskPriorityResource tasksPrioritiesGet_0($task_id,  $priority_id )
 
 Get a priority from a given id.
 
@@ -328,10 +328,10 @@ $task_id = "task_id_example"; // string |
 $priority_id = "priority_id_example"; // string | 
 
 try {
-    $result = $api_instance->tasksPrioritiesGet2($task_id,  $priority_id );
+    $result = $api_instance->tasksPrioritiesGet_0($task_id,  $priority_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TasksApi->tasksPrioritiesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TasksApi->tasksPrioritiesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -468,8 +468,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **tasksStatusesGet2**
-> \Ageras\Api\TaskStatusResource tasksStatusesGet2($task_id,  $status_id )
+# **tasksStatusesGet_0**
+> \Ageras\Api\TaskStatusResource tasksStatusesGet_0($task_id,  $status_id )
 
 Get a status from a status_id.
 
@@ -491,10 +491,10 @@ $task_id = "task_id_example"; // string |
 $status_id = "status_id_example"; // string | 
 
 try {
-    $result = $api_instance->tasksStatusesGet2($task_id,  $status_id );
+    $result = $api_instance->tasksStatusesGet_0($task_id,  $status_id );
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TasksApi->tasksStatusesGet2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TasksApi->tasksStatusesGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

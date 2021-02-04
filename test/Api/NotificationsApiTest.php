@@ -88,12 +88,12 @@ class NotificationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for notificationsActionsCreate2
+     * Test case for notificationsActionsCreate_0
      *
      * Perform an action on one or more notifications.
      *
      */
-    public function testNotificationsActionsCreate2()
+    public function testNotificationsActionsCreate0()
     {
 
     }

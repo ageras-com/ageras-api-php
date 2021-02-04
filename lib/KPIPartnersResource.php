@@ -57,7 +57,6 @@ class KPIPartnersResource implements ArrayAccess
         'avg_credits_used' => '\Ageras\Api\KPIPartnersAvgCreditsUsedResource',
         'calls' => '\Ageras\Api\KPINumberResource',
         'churn' => '\Ageras\Api\KPINumberResource',
-        'demo_logins' => '\Ageras\Api\KPINumberResource',
         'refills' => '\Ageras\Api\KPINumberResource',
         'new_sales' => '\Ageras\Api\KPIPartnersNewSalesResource',
         'cancellations' => '\Ageras\Api\KPINumberResource',
@@ -80,7 +79,6 @@ class KPIPartnersResource implements ArrayAccess
         'avg_credits_used' => 'avg_credits_used',
         'calls' => 'calls',
         'churn' => 'churn',
-        'demo_logins' => 'demo_logins',
         'refills' => 'refills',
         'new_sales' => 'new_sales',
         'cancellations' => 'cancellations',
@@ -99,7 +97,6 @@ class KPIPartnersResource implements ArrayAccess
         'avg_credits_used' => 'setAvgCreditsUsed',
         'calls' => 'setCalls',
         'churn' => 'setChurn',
-        'demo_logins' => 'setDemoLogins',
         'refills' => 'setRefills',
         'new_sales' => 'setNewSales',
         'cancellations' => 'setCancellations',
@@ -118,7 +115,6 @@ class KPIPartnersResource implements ArrayAccess
         'avg_credits_used' => 'getAvgCreditsUsed',
         'calls' => 'getCalls',
         'churn' => 'getChurn',
-        'demo_logins' => 'getDemoLogins',
         'refills' => 'getRefills',
         'new_sales' => 'getNewSales',
         'cancellations' => 'getCancellations',
@@ -162,7 +158,6 @@ class KPIPartnersResource implements ArrayAccess
         $this->container['avg_credits_used'] = isset($data['avg_credits_used']) ? $data['avg_credits_used'] : null;
         $this->container['calls'] = isset($data['calls']) ? $data['calls'] : null;
         $this->container['churn'] = isset($data['churn']) ? $data['churn'] : null;
-        $this->container['demo_logins'] = isset($data['demo_logins']) ? $data['demo_logins'] : null;
         $this->container['refills'] = isset($data['refills']) ? $data['refills'] : null;
         $this->container['new_sales'] = isset($data['new_sales']) ? $data['new_sales'] : null;
         $this->container['cancellations'] = isset($data['cancellations']) ? $data['cancellations'] : null;
@@ -256,27 +251,6 @@ class KPIPartnersResource implements ArrayAccess
     public function setChurn($churn)
     {
         $this->container['churn'] = $churn;
-
-        return $this;
-    }
-
-    /**
-     * Gets demo_logins
-     * @return \Ageras\Api\KPINumberResource
-     */
-    public function getDemoLogins()
-    {
-        return $this->container['demo_logins'];
-    }
-
-    /**
-     * Sets demo_logins
-     * @param \Ageras\Api\KPINumberResource $demo_logins
-     * @return $this
-     */
-    public function setDemoLogins($demo_logins)
-    {
-        $this->container['demo_logins'] = $demo_logins;
 
         return $this;
     }

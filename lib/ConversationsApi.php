@@ -266,7 +266,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsAttachmentsCreate2
+     * Operation conversationsAttachmentsCreate_0
      *
      * Create a new attachment
      *
@@ -275,14 +275,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsAttachmentsCreate2($conversation_id , $attachment_resource)
+    public function conversationsAttachmentsCreate_0($conversation_id , $attachment_resource)
     {
-        list($response) = $this->conversationsAttachmentsCreate2WithHttpInfo($conversation_id, $attachment_resource);
+        list($response) = $this->conversationsAttachmentsCreate_0WithHttpInfo($conversation_id, $attachment_resource);
         return $response;
     }
 
     /**
-     * Operation conversationsAttachmentsCreate2WithHttpInfo
+     * Operation conversationsAttachmentsCreate_0WithHttpInfo
      *
      * Create a new attachment
      *
@@ -291,7 +291,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsAttachmentsCreate2WithHttpInfo($conversation_id , $attachment_resource)
+    public function conversationsAttachmentsCreate_0WithHttpInfo($conversation_id , $attachment_resource)
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/attachments";
@@ -447,7 +447,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsAttachmentsGet2
+     * Operation conversationsAttachmentsGet_0
      *
      * Get an attachment
      *
@@ -456,14 +456,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsAttachmentsGet2($conversation_id,  $attachment_id )
+    public function conversationsAttachmentsGet_0($conversation_id,  $attachment_id )
     {
-        list($response) = $this->conversationsAttachmentsGet2WithHttpInfo($conversation_id, $attachment_id);
+        list($response) = $this->conversationsAttachmentsGet_0WithHttpInfo($conversation_id, $attachment_id);
         return $response;
     }
 
     /**
-     * Operation conversationsAttachmentsGet2WithHttpInfo
+     * Operation conversationsAttachmentsGet_0WithHttpInfo
      *
      * Get an attachment
      *
@@ -472,7 +472,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsAttachmentsGet2WithHttpInfo($conversation_id,  $attachment_id )
+    public function conversationsAttachmentsGet_0WithHttpInfo($conversation_id,  $attachment_id )
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/attachments/{attachment_id}";
@@ -661,7 +661,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsAttachmentsIndex2
+     * Operation conversationsAttachmentsIndex_0
      *
      * List conversation's attachments
      *
@@ -676,14 +676,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResult
      */
-    public function conversationsAttachmentsIndex2($conversation_id , $criteria = [])
+    public function conversationsAttachmentsIndex_0($conversation_id , $criteria = [])
     {
-        list($response) = $this->conversationsAttachmentsIndex2WithHttpInfo($conversation_id, $criteria);
+        list($response) = $this->conversationsAttachmentsIndex_0WithHttpInfo($conversation_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation conversationsAttachmentsIndex2WithHttpInfo
+     * Operation conversationsAttachmentsIndex_0WithHttpInfo
      *
      * List conversation's attachments
      *
@@ -698,7 +698,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsAttachmentsIndex2WithHttpInfo($conversation_id , $criteria = [])
+    public function conversationsAttachmentsIndex_0WithHttpInfo($conversation_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/attachments";
@@ -1184,7 +1184,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsCreate2
+     * Operation conversationsMessagesAttachmentsCreate_0
      *
      * Create a new attachment
      *
@@ -1192,14 +1192,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsMessagesAttachmentsCreate2($attachment_resource)
+    public function conversationsMessagesAttachmentsCreate_0($attachment_resource)
     {
-        list($response) = $this->conversationsMessagesAttachmentsCreate2WithHttpInfo($attachment_resource);
+        list($response) = $this->conversationsMessagesAttachmentsCreate_0WithHttpInfo($attachment_resource);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsCreate2WithHttpInfo
+     * Operation conversationsMessagesAttachmentsCreate_0WithHttpInfo
      *
      * Create a new attachment
      *
@@ -1207,7 +1207,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsCreate2WithHttpInfo($attachment_resource)
+    public function conversationsMessagesAttachmentsCreate_0WithHttpInfo($attachment_resource)
     {
         // parse inputs
         $resourcePath = "/conversations/messages/attachments";
@@ -1268,7 +1268,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsCreate4
+     * Operation conversationsMessagesAttachmentsCreate_1
      *
      * Create a new attachment
      *
@@ -1277,14 +1277,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsMessagesAttachmentsCreate4($conversation_id , $attachment_resource)
+    public function conversationsMessagesAttachmentsCreate_1($conversation_id , $attachment_resource)
     {
-        list($response) = $this->conversationsMessagesAttachmentsCreate4WithHttpInfo($conversation_id, $attachment_resource);
+        list($response) = $this->conversationsMessagesAttachmentsCreate_1WithHttpInfo($conversation_id, $attachment_resource);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsCreate4WithHttpInfo
+     * Operation conversationsMessagesAttachmentsCreate_1WithHttpInfo
      *
      * Create a new attachment
      *
@@ -1293,7 +1293,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsCreate4WithHttpInfo($conversation_id , $attachment_resource)
+    public function conversationsMessagesAttachmentsCreate_1WithHttpInfo($conversation_id , $attachment_resource)
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages/attachments";
@@ -1449,7 +1449,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsGet2
+     * Operation conversationsMessagesAttachmentsGet_0
      *
      * get a message attachment
      *
@@ -1457,14 +1457,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsMessagesAttachmentsGet2($attachment_id )
+    public function conversationsMessagesAttachmentsGet_0($attachment_id )
     {
-        list($response) = $this->conversationsMessagesAttachmentsGet2WithHttpInfo($attachment_id);
+        list($response) = $this->conversationsMessagesAttachmentsGet_0WithHttpInfo($attachment_id);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsGet2WithHttpInfo
+     * Operation conversationsMessagesAttachmentsGet_0WithHttpInfo
      *
      * get a message attachment
      *
@@ -1472,7 +1472,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsGet2WithHttpInfo($attachment_id )
+    public function conversationsMessagesAttachmentsGet_0WithHttpInfo($attachment_id )
     {
         // parse inputs
         $resourcePath = "/conversations/messages/attachments/{attachment_id}";
@@ -1536,7 +1536,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsGet4
+     * Operation conversationsMessagesAttachmentsGet_1
      *
      * get a message attachment
      *
@@ -1545,14 +1545,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResource
      */
-    public function conversationsMessagesAttachmentsGet4($conversation_id,  $attachment_id )
+    public function conversationsMessagesAttachmentsGet_1($conversation_id,  $attachment_id )
     {
-        list($response) = $this->conversationsMessagesAttachmentsGet4WithHttpInfo($conversation_id, $attachment_id);
+        list($response) = $this->conversationsMessagesAttachmentsGet_1WithHttpInfo($conversation_id, $attachment_id);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsGet4WithHttpInfo
+     * Operation conversationsMessagesAttachmentsGet_1WithHttpInfo
      *
      * get a message attachment
      *
@@ -1561,7 +1561,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsGet4WithHttpInfo($conversation_id,  $attachment_id )
+    public function conversationsMessagesAttachmentsGet_1WithHttpInfo($conversation_id,  $attachment_id )
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages/attachments/{attachment_id}";
@@ -1750,7 +1750,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsIndex2
+     * Operation conversationsMessagesAttachmentsIndex_0
      *
      * List message attachments
      *
@@ -1765,14 +1765,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResult
      */
-    public function conversationsMessagesAttachmentsIndex2($criteria = [])
+    public function conversationsMessagesAttachmentsIndex_0($criteria = [])
     {
-        list($response) = $this->conversationsMessagesAttachmentsIndex2WithHttpInfo($criteria);
+        list($response) = $this->conversationsMessagesAttachmentsIndex_0WithHttpInfo($criteria);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsIndex2WithHttpInfo
+     * Operation conversationsMessagesAttachmentsIndex_0WithHttpInfo
      *
      * List message attachments
      *
@@ -1787,7 +1787,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsIndex2WithHttpInfo($criteria = [])
+    public function conversationsMessagesAttachmentsIndex_0WithHttpInfo($criteria = [])
     {
         // parse inputs
         $resourcePath = "/conversations/messages/attachments";
@@ -1867,7 +1867,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsIndex4
+     * Operation conversationsMessagesAttachmentsIndex_1
      *
      * List message attachments
      *
@@ -1882,14 +1882,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AttachmentResult
      */
-    public function conversationsMessagesAttachmentsIndex4($conversation_id , $criteria = [])
+    public function conversationsMessagesAttachmentsIndex_1($conversation_id , $criteria = [])
     {
-        list($response) = $this->conversationsMessagesAttachmentsIndex4WithHttpInfo($conversation_id, $criteria);
+        list($response) = $this->conversationsMessagesAttachmentsIndex_1WithHttpInfo($conversation_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesAttachmentsIndex4WithHttpInfo
+     * Operation conversationsMessagesAttachmentsIndex_1WithHttpInfo
      *
      * List message attachments
      *
@@ -1904,7 +1904,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AttachmentResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesAttachmentsIndex4WithHttpInfo($conversation_id , $criteria = [])
+    public function conversationsMessagesAttachmentsIndex_1WithHttpInfo($conversation_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages/attachments";
@@ -2072,7 +2072,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesCreate2
+     * Operation conversationsMessagesCreate_0
      *
      * Create a new message
      *
@@ -2081,14 +2081,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\MessageResource
      */
-    public function conversationsMessagesCreate2($conversation_id , $message_resource)
+    public function conversationsMessagesCreate_0($conversation_id , $message_resource)
     {
-        list($response) = $this->conversationsMessagesCreate2WithHttpInfo($conversation_id, $message_resource);
+        list($response) = $this->conversationsMessagesCreate_0WithHttpInfo($conversation_id, $message_resource);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesCreate2WithHttpInfo
+     * Operation conversationsMessagesCreate_0WithHttpInfo
      *
      * Create a new message
      *
@@ -2097,7 +2097,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\MessageResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesCreate2WithHttpInfo($conversation_id , $message_resource)
+    public function conversationsMessagesCreate_0WithHttpInfo($conversation_id , $message_resource)
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages";
@@ -2253,7 +2253,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesGet2
+     * Operation conversationsMessagesGet_0
      *
      * Get message by message_id
      *
@@ -2262,14 +2262,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\MessageResource
      */
-    public function conversationsMessagesGet2($conversation_id,  $message_id )
+    public function conversationsMessagesGet_0($conversation_id,  $message_id )
     {
-        list($response) = $this->conversationsMessagesGet2WithHttpInfo($conversation_id, $message_id);
+        list($response) = $this->conversationsMessagesGet_0WithHttpInfo($conversation_id, $message_id);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesGet2WithHttpInfo
+     * Operation conversationsMessagesGet_0WithHttpInfo
      *
      * Get message by message_id
      *
@@ -2278,7 +2278,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\MessageResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesGet2WithHttpInfo($conversation_id,  $message_id )
+    public function conversationsMessagesGet_0WithHttpInfo($conversation_id,  $message_id )
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages/{message_id}";
@@ -2479,7 +2479,7 @@ class ConversationsApi
     }
 
     /**
-     * Operation conversationsMessagesIndex2
+     * Operation conversationsMessagesIndex_0
      *
      * Get messages by conversation_id.
      *
@@ -2496,14 +2496,14 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\MessageResult
      */
-    public function conversationsMessagesIndex2($conversation_id , $criteria = [])
+    public function conversationsMessagesIndex_0($conversation_id , $criteria = [])
     {
-        list($response) = $this->conversationsMessagesIndex2WithHttpInfo($conversation_id, $criteria);
+        list($response) = $this->conversationsMessagesIndex_0WithHttpInfo($conversation_id, $criteria);
         return $response;
     }
 
     /**
-     * Operation conversationsMessagesIndex2WithHttpInfo
+     * Operation conversationsMessagesIndex_0WithHttpInfo
      *
      * Get messages by conversation_id.
      *
@@ -2520,7 +2520,7 @@ class ConversationsApi
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\MessageResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function conversationsMessagesIndex2WithHttpInfo($conversation_id , $criteria = [])
+    public function conversationsMessagesIndex_0WithHttpInfo($conversation_id , $criteria = [])
     {
         // parse inputs
         $resourcePath = "/conversations/{conversation_id}/messages";

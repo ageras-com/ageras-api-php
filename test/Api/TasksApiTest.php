@@ -132,12 +132,12 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for tasksPrioritiesGet2
+     * Test case for tasksPrioritiesGet_0
      *
      * Get a priority from a given id..
      *
      */
-    public function testTasksPrioritiesGet2()
+    public function testTasksPrioritiesGet0()
     {
 
     }
@@ -165,12 +165,12 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for tasksStatusesGet2
+     * Test case for tasksStatusesGet_0
      *
      * Get a status from a status_id..
      *
      */
-    public function testTasksStatusesGet2()
+    public function testTasksStatusesGet0()
     {
 
     }

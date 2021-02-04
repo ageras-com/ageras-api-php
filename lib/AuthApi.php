@@ -176,12 +176,13 @@ class AuthApi
      *
      * Logout and end session/token.
      *
+     * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
      */
-    public function authDelete()
+    public function authDelete($auth_id )
     {
-        list($response) = $this->authDeleteWithHttpInfo();
+        list($response) = $this->authDeleteWithHttpInfo($auth_id);
         return $response;
     }
 
@@ -190,13 +191,14 @@ class AuthApi
      *
      * Logout and end session/token.
      *
+     * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function authDeleteWithHttpInfo()
+    public function authDeleteWithHttpInfo($auth_id )
     {
         // parse inputs
-        $resourcePath = "/auth/token";
+        $resourcePath = "/auth/{auth_id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -207,6 +209,14 @@ class AuthApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // path params
+        if ($auth_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "auth_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($auth_id),
+                $resourcePath
+            );
+        }
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -232,7 +242,7 @@ class AuthApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/auth/token'
+                '/auth/{auth_id}'
             );
 
             return [null, $statusCode, $httpHeader];
@@ -249,12 +259,13 @@ class AuthApi
      *
      * Get information about the current Authenticated session.
      *
+     * @param string $auth_id default value is token
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AuthResource
      */
-    public function authGet()
+    public function authGet($auth_id )
     {
-        list($response) = $this->authGetWithHttpInfo();
+        list($response) = $this->authGetWithHttpInfo($auth_id);
         return $response;
     }
 
@@ -263,13 +274,14 @@ class AuthApi
      *
      * Get information about the current Authenticated session.
      *
+     * @param string $auth_id default value is token
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function authGetWithHttpInfo()
+    public function authGetWithHttpInfo($auth_id )
     {
         // parse inputs
-        $resourcePath = "/auth/token";
+        $resourcePath = "/auth/{auth_id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -280,6 +292,14 @@ class AuthApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // path params
+        if ($auth_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "auth_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($auth_id),
+                $resourcePath
+            );
+        }
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -305,7 +325,7 @@ class AuthApi
                 $httpBody,
                 $headerParams,
                 '\Ageras\Api\AuthResource',
-                '/auth/token'
+                '/auth/{auth_id}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\AuthResource', $httpHeader), $statusCode, $httpHeader];
@@ -673,30 +693,180 @@ class AuthApi
     }
 
     /**
-     * Operation authUpdate
+     * Operation authTokenDelete
      *
-     * Renew authentication session.
+     * Delete a token
+     *
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function authTokenDelete()
+    {
+        list($response) = $this->authTokenDeleteWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation authTokenDeleteWithHttpInfo
+     *
+     * Delete a token
+     *
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function authTokenDeleteWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/auth/token";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/auth/token'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation authTokenGet
+     *
+     * Get information about the token
+     *
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\AuthResource
+     */
+    public function authTokenGet()
+    {
+        list($response) = $this->authTokenGetWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation authTokenGetWithHttpInfo
+     *
+     * Get information about the token
+     *
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function authTokenGetWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/auth/token";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\AuthResource',
+                '/auth/token'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\AuthResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\AuthResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation authTokenUpdate
+     *
+     * Renew token
      *
      * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AuthResource
      */
-    public function authUpdate($auth_resource)
+    public function authTokenUpdate($auth_resource)
     {
-        list($response) = $this->authUpdateWithHttpInfo($auth_resource);
+        list($response) = $this->authTokenUpdateWithHttpInfo($auth_resource);
         return $response;
     }
 
     /**
-     * Operation authUpdateWithHttpInfo
+     * Operation authTokenUpdateWithHttpInfo
      *
-     * Renew authentication session.
+     * Renew token
      *
      * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
      */
-    public function authUpdateWithHttpInfo($auth_resource)
+    public function authTokenUpdateWithHttpInfo($auth_resource)
     {
         // parse inputs
         $resourcePath = "/auth/token";
@@ -741,6 +911,100 @@ class AuthApi
                 $headerParams,
                 '\Ageras\Api\AuthResource',
                 '/auth/token'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\AuthResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\AuthResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation authUpdate
+     *
+     * Renew authentication session.
+     *
+     * @param string $auth_id 
+     * @param \Ageras\Api\AuthResource $auth_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\AuthResource
+     */
+    public function authUpdate($auth_id , $auth_resource)
+    {
+        list($response) = $this->authUpdateWithHttpInfo($auth_id, $auth_resource);
+        return $response;
+    }
+
+    /**
+     * Operation authUpdateWithHttpInfo
+     *
+     * Renew authentication session.
+     *
+     * @param string $auth_id 
+     * @param \Ageras\Api\AuthResource $auth_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function authUpdateWithHttpInfo($auth_id , $auth_resource)
+    {
+        // parse inputs
+        $resourcePath = "/auth/{auth_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($auth_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "auth_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($auth_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($auth_resource)) {
+            $_tempBody = $auth_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\AuthResource',
+                '/auth/{auth_id}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\AuthResource', $httpHeader), $statusCode, $httpHeader];

@@ -88,12 +88,12 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for organisationEmployeesActionsCreate2
+     * Test case for organisationEmployeesActionsCreate_0
      *
      * Perform an employee action..
      *
      */
-    public function testOrganisationEmployeesActionsCreate2()
+    public function testOrganisationEmployeesActionsCreate0()
     {
 
     }
@@ -110,12 +110,12 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for organisationEmployeesGet2
+     * Test case for organisationEmployeesGet_0
      *
      * Get an employee by a given employee id..
      *
      */
-    public function testOrganisationEmployeesGet2()
+    public function testOrganisationEmployeesGet0()
     {
 
     }
@@ -143,23 +143,23 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for organisationEmployeesKpiIndex2
+     * Test case for organisationEmployeesKpiIndex_0
      *
      * List employee KPIs..
      *
      */
-    public function testOrganisationEmployeesKpiIndex2()
+    public function testOrganisationEmployeesKpiIndex0()
     {
 
     }
 
     /**
-     * Test case for organisationEmployeesKpiIndex4
+     * Test case for organisationEmployeesKpiIndex_1
      *
      * List employee KPIs..
      *
      */
-    public function testOrganisationEmployeesKpiIndex4()
+    public function testOrganisationEmployeesKpiIndex1()
     {
 
     }
@@ -176,12 +176,12 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for organisationEmployeesLeadpredictionsCreate2
+     * Test case for organisationEmployeesLeadpredictionsCreate_0
      *
      * Create an employee lead prediction..
      *
      */
-    public function testOrganisationEmployeesLeadpredictionsCreate2()
+    public function testOrganisationEmployeesLeadpredictionsCreate0()
     {
 
     }
@@ -198,12 +198,12 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for organisationEmployeesNotificationsIndex2
+     * Test case for organisationEmployeesNotificationsIndex_0
      *
      * List employee notifications..
      *
      */
-    public function testOrganisationEmployeesNotificationsIndex2()
+    public function testOrganisationEmployeesNotificationsIndex0()
     {
 
     }
