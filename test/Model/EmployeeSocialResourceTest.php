@@ -98,4 +98,20 @@ class EmployeeSocialResourceTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "twitter"
+     */
+    public function testPropertyTwitter()
+    {
+
+    }
+
+    /**
+     * Test attribute "xing"
+     */
+    public function testPropertyXing()
+    {
+
+    }
+
 }

@@ -55,7 +55,9 @@ class EmployeeSocialResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'facebook' => 'string',
-        'linkedin' => 'string'
+        'linkedin' => 'string',
+        'twitter' => 'string',
+        'xing' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +71,9 @@ class EmployeeSocialResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'facebook' => 'facebook',
-        'linkedin' => 'linkedin'
+        'linkedin' => 'linkedin',
+        'twitter' => 'twitter',
+        'xing' => 'xing'
     ];
 
 
@@ -79,7 +83,9 @@ class EmployeeSocialResource implements ArrayAccess
      */
     protected static $setters = [
         'facebook' => 'setFacebook',
-        'linkedin' => 'setLinkedin'
+        'linkedin' => 'setLinkedin',
+        'twitter' => 'setTwitter',
+        'xing' => 'setXing'
     ];
 
 
@@ -89,7 +95,9 @@ class EmployeeSocialResource implements ArrayAccess
      */
     protected static $getters = [
         'facebook' => 'getFacebook',
-        'linkedin' => 'getLinkedin'
+        'linkedin' => 'getLinkedin',
+        'twitter' => 'getTwitter',
+        'xing' => 'getXing'
     ];
 
     public static function attributeMap()
@@ -125,6 +133,8 @@ class EmployeeSocialResource implements ArrayAccess
     {
         $this->container['facebook'] = isset($data['facebook']) ? $data['facebook'] : null;
         $this->container['linkedin'] = isset($data['linkedin']) ? $data['linkedin'] : null;
+        $this->container['twitter'] = isset($data['twitter']) ? $data['twitter'] : null;
+        $this->container['xing'] = isset($data['xing']) ? $data['xing'] : null;
     }
 
     /**
@@ -190,6 +200,48 @@ class EmployeeSocialResource implements ArrayAccess
     public function setLinkedin($linkedin)
     {
         $this->container['linkedin'] = $linkedin;
+
+        return $this;
+    }
+
+    /**
+     * Gets twitter
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->container['twitter'];
+    }
+
+    /**
+     * Sets twitter
+     * @param string $twitter Twitter.
+     * @return $this
+     */
+    public function setTwitter($twitter)
+    {
+        $this->container['twitter'] = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Gets xing
+     * @return string
+     */
+    public function getXing()
+    {
+        return $this->container['xing'];
+    }
+
+    /**
+     * Sets xing
+     * @param string $xing Xing.
+     * @return $this
+     */
+    public function setXing($xing)
+    {
+        $this->container['xing'] = $xing;
 
         return $this;
     }
