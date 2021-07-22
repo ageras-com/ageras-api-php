@@ -90,7 +90,7 @@ class PackagesApi
     /**
      * Operation packagesFeaturesIndex
      *
-     * Get all package features.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -109,7 +109,7 @@ class PackagesApi
     /**
      * Operation packagesFeaturesIndexWithHttpInfo
      *
-     * Get all package features.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -189,7 +189,7 @@ class PackagesApi
     /**
      * Operation packagesGet
      *
-     * Get an individual package by ID.
+     * 
      *
      * @param string $id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -204,7 +204,7 @@ class PackagesApi
     /**
      * Operation packagesGetWithHttpInfo
      *
-     * Get an individual package by ID.
+     * 
      *
      * @param string $id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -276,7 +276,7 @@ class PackagesApi
     /**
      * Operation packagesIndex
      *
-     * Get all active packages for a given geo_code.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -297,7 +297,7 @@ class PackagesApi
     /**
      * Operation packagesIndexWithHttpInfo
      *
-     * Get all active packages for a given geo_code.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

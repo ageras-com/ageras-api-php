@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class NotificationsApiTest extends \PHPUnit_Framework_TestCase
+class NotificationsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class NotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for notificationsActionsCreate
      *
-     * Perform an action on one or more notifications.
+     * .
      *
      */
     public function testNotificationsActionsCreate()
@@ -90,7 +90,7 @@ class NotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for notificationsActionsCreate_0
      *
-     * Perform an action on one or more notifications.
+     * .
      *
      */
     public function testNotificationsActionsCreate0()
@@ -101,7 +101,7 @@ class NotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for notificationsGet
      *
-     * Get single notification.
+     * .
      *
      */
     public function testNotificationsGet()
@@ -112,7 +112,7 @@ class NotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for notificationsIndex
      *
-     * List notifications.
+     * .
      *
      */
     public function testNotificationsIndex()

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **progress** | [**\Ageras\Api\LeadProgressResource[]**](LeadProgressResource.md) | Progress | [optional] 
 **title** | **string** | Title for the Lead. | [optional] 
 **description** | **string** | A description of the given Lead. | [optional] 
+**marketplace_description** | **string** |  | [optional] 
 **client** | [**\Ageras\Api\LeadClientResource**](LeadClientResource.md) |  | [optional] 
 **customer_info** | [**\Ageras\Api\LeadCustomerInfoResource**](LeadCustomerInfoResource.md) |  | [optional] 
 **requirements** | [**\Ageras\Api\LeadRequirementsResource**](LeadRequirementsResource.md) |  | [optional] 

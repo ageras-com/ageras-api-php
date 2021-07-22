@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerDeliverableLineResultTest extends \PHPUnit_Framework_TestCase
+class PartnerDeliverableLineResultTest extends TestCase
 {
 
     /**

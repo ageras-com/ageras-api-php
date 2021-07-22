@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductResourceTest extends \PHPUnit_Framework_TestCase
+class ProductResourceTest extends TestCase
 {
 
     /**
@@ -110,6 +110,14 @@ class ProductResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "creator_employee"
      */
     public function testPropertyCreatorEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_auto_quotable"
+     */
+    public function testPropertyIsAutoQuotable()
     {
 
     }

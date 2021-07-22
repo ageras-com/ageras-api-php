@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**paymentsolutionsIndex**](PaymentsolutionsApi.md#paymentsolutionsIndex) | **GET** /paymentsolutions | List payment solutions or get available payment solutions for partner filtering by partner_id.
+[**paymentsolutionsIndex**](PaymentsolutionsApi.md#paymentsolutionsIndex) | **GET** /paymentsolutions | 
 
 
 # **paymentsolutionsIndex**
 > \Ageras\Api\PaymentSolutionResult paymentsolutionsIndex($criteria)
 
-List payment solutions or get available payment solutions for partner filtering by partner_id.
+
 
 ### Example
 ```php

@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProjectsApiTest extends \PHPUnit_Framework_TestCase
+class ProjectsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsCreate
      *
-     * Create Project..
+     * .
      *
      */
     public function testProjectsCreate()
@@ -90,7 +90,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsDelete
      *
-     * Delete a project for a given project id..
+     * .
      *
      */
     public function testProjectsDelete()
@@ -101,7 +101,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsCreate
      *
-     * Create events for a given project..
+     * .
      *
      */
     public function testProjectsEventsCreate()
@@ -112,7 +112,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsCreate_0
      *
-     * Create events for a given project..
+     * .
      *
      */
     public function testProjectsEventsCreate0()
@@ -123,7 +123,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsDelete
      *
-     * Delete a given project event..
+     * .
      *
      */
     public function testProjectsEventsDelete()
@@ -134,7 +134,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsGet
      *
-     * Get event for a given project..
+     * .
      *
      */
     public function testProjectsEventsGet()
@@ -145,7 +145,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsGet_0
      *
-     * Get event for a given project..
+     * .
      *
      */
     public function testProjectsEventsGet0()
@@ -156,7 +156,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsIndex
      *
-     * List events for a given project..
+     * .
      *
      */
     public function testProjectsEventsIndex()
@@ -167,7 +167,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsIndex_0
      *
-     * List events for a given project..
+     * .
      *
      */
     public function testProjectsEventsIndex0()
@@ -178,7 +178,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsUpdate
      *
-     * Update e events for project events..
+     * .
      *
      */
     public function testProjectsEventsUpdate()
@@ -189,7 +189,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsEventsUpdate_0
      *
-     * Update e events for project events..
+     * .
      *
      */
     public function testProjectsEventsUpdate0()
@@ -200,7 +200,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsGet
      *
-     * Get a Project from a project id..
+     * .
      *
      */
     public function testProjectsGet()
@@ -211,7 +211,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsIndex
      *
-     * List Projects..
+     * .
      *
      */
     public function testProjectsIndex()
@@ -222,7 +222,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesCreate
      *
-     * Create a note for a given project..
+     * .
      *
      */
     public function testProjectsNotesCreate()
@@ -233,7 +233,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesCreate_0
      *
-     * Create a note for a given project..
+     * .
      *
      */
     public function testProjectsNotesCreate0()
@@ -244,7 +244,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesDelete
      *
-     * Delete a project note..
+     * .
      *
      */
     public function testProjectsNotesDelete()
@@ -255,7 +255,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesGet
      *
-     * Get a note from Project and note id..
+     * .
      *
      */
     public function testProjectsNotesGet()
@@ -266,7 +266,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesGet_0
      *
-     * Get a note from Project and note id..
+     * .
      *
      */
     public function testProjectsNotesGet0()
@@ -277,7 +277,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesIndex
      *
-     * List notes from a given project..
+     * .
      *
      */
     public function testProjectsNotesIndex()
@@ -288,7 +288,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesIndex_0
      *
-     * List notes from a given project..
+     * .
      *
      */
     public function testProjectsNotesIndex0()
@@ -299,7 +299,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesUpdate
      *
-     * Update a given project note..
+     * .
      *
      */
     public function testProjectsNotesUpdate()
@@ -310,7 +310,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsNotesUpdate_0
      *
-     * Update a given project note..
+     * .
      *
      */
     public function testProjectsNotesUpdate0()
@@ -321,7 +321,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsStatusesGet
      *
-     * Get a Project Status from Id..
+     * .
      *
      */
     public function testProjectsStatusesGet()
@@ -332,7 +332,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsStatusesIndex
      *
-     * List Available Project Statuses..
+     * .
      *
      */
     public function testProjectsStatusesIndex()
@@ -343,7 +343,7 @@ class ProjectsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for projectsUpdate
      *
-     * Update a project..
+     * .
      *
      */
     public function testProjectsUpdate()

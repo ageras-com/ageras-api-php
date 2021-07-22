@@ -90,7 +90,7 @@ class TermsApi
     /**
      * Operation termsAcceptedIndex
      *
-     * Get accepted terms.
+     * 
      *
      * @param $criteria = [
      *    'acceptor_id' => int,
@@ -112,7 +112,7 @@ class TermsApi
     /**
      * Operation termsAcceptedIndexWithHttpInfo
      *
-     * Get accepted terms.
+     * 
      *
      * @param $criteria = [
      *    'acceptor_id' => int,
@@ -207,7 +207,7 @@ class TermsApi
     /**
      * Operation termsActionsCreate
      *
-     * Term actions.
+     * 
      *
      * @param string $terms_id 
      * @param \Ageras\Api\TermsActionResource $terms_action_resource 
@@ -223,7 +223,7 @@ class TermsApi
     /**
      * Operation termsActionsCreateWithHttpInfo
      *
-     * Term actions.
+     * 
      *
      * @param string $terms_id 
      * @param \Ageras\Api\TermsActionResource $terms_action_resource 
@@ -301,7 +301,7 @@ class TermsApi
     /**
      * Operation termsGet
      *
-     * Retrieve a terms set from a given location_id.
+     * 
      *
      * @param string $terms_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -316,7 +316,7 @@ class TermsApi
     /**
      * Operation termsGetWithHttpInfo
      *
-     * Retrieve a terms set from a given location_id.
+     * 
      *
      * @param string $terms_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -388,7 +388,7 @@ class TermsApi
     /**
      * Operation termsIndex
      *
-     * Search and find terms by different criterias.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -410,7 +410,7 @@ class TermsApi
     /**
      * Operation termsIndexWithHttpInfo
      *
-     * Search and find terms by different criterias.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

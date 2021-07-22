@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TasksApiTest extends \PHPUnit_Framework_TestCase
+class TasksApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksCreate
      *
-     * Create a new task..
+     * .
      *
      */
     public function testTasksCreate()
@@ -90,7 +90,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksDelete
      *
-     * Delete a given task by its task_id..
+     * .
      *
      */
     public function testTasksDelete()
@@ -101,7 +101,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksGet
      *
-     * Get a given task by its given task_id..
+     * .
      *
      */
     public function testTasksGet()
@@ -112,7 +112,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksIndex
      *
-     * List tasks by employee, asseigned_employee, etc..
+     * .
      *
      */
     public function testTasksIndex()
@@ -123,7 +123,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksPrioritiesGet
      *
-     * Get a priority from a given id..
+     * .
      *
      */
     public function testTasksPrioritiesGet()
@@ -134,7 +134,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksPrioritiesGet_0
      *
-     * Get a priority from a given id..
+     * .
      *
      */
     public function testTasksPrioritiesGet0()
@@ -145,7 +145,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksPrioritiesIndex
      *
-     * List priorities..
+     * .
      *
      */
     public function testTasksPrioritiesIndex()
@@ -156,7 +156,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksStatusesGet
      *
-     * Get a status from a status_id..
+     * .
      *
      */
     public function testTasksStatusesGet()
@@ -167,7 +167,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksStatusesGet_0
      *
-     * Get a status from a status_id..
+     * .
      *
      */
     public function testTasksStatusesGet0()
@@ -178,7 +178,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksStatusesIndex
      *
-     * List statuses..
+     * .
      *
      */
     public function testTasksStatusesIndex()
@@ -189,7 +189,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksTaskablesCreate
      *
-     * create a new taskable for a given task..
+     * .
      *
      */
     public function testTasksTaskablesCreate()
@@ -200,7 +200,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksTaskablesDelete
      *
-     * delete a taskable and remove it from the given task..
+     * .
      *
      */
     public function testTasksTaskablesDelete()
@@ -211,7 +211,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksTaskablesGet
      *
-     * Get a taskable item from a given taskable id..
+     * .
      *
      */
     public function testTasksTaskablesGet()
@@ -222,7 +222,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksTaskablesIndex
      *
-     * List the taskables for a given task..
+     * .
      *
      */
     public function testTasksTaskablesIndex()
@@ -233,7 +233,7 @@ class TasksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tasksUpdate
      *
-     * Update a given task by its task_id..
+     * .
      *
      */
     public function testTasksUpdate()

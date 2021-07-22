@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RatingsApiTest extends \PHPUnit_Framework_TestCase
+class RatingsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class RatingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ratingsCreate
      *
-     * Create a rating..
+     * .
      *
      */
     public function testRatingsCreate()
@@ -90,7 +90,7 @@ class RatingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ratingsGet
      *
-     * Return a rating from a rating ID..
+     * .
      *
      */
     public function testRatingsGet()
@@ -101,7 +101,7 @@ class RatingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ratingsIndex
      *
-     * Search for Lead's by a given set of criteria..
+     * .
      *
      */
     public function testRatingsIndex()
@@ -112,7 +112,7 @@ class RatingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ratingsUpdate
      *
-     * Update a rating..
+     * .
      *
      */
     public function testRatingsUpdate()

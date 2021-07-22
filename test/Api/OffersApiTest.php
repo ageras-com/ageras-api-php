@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OffersApiTest extends \PHPUnit_Framework_TestCase
+class OffersApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class OffersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for offersActionsCreate
      *
-     * Perform an action on an offer..
+     * .
      *
      */
     public function testOffersActionsCreate()
@@ -90,7 +90,7 @@ class OffersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for offersGet
      *
-     * Get an offer by id..
+     * .
      *
      */
     public function testOffersGet()
@@ -101,7 +101,7 @@ class OffersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for offersIndex
      *
-     * Get all partner offer..
+     * .
      *
      */
     public function testOffersIndex()

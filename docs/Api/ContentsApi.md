@@ -4,18 +4,18 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentsPagesAggregationsIndex**](ContentsApi.md#contentsPagesAggregationsIndex) | **GET** /contents/pages/aggregations | Aggreate the Pages by the letters
-[**contentsPagesAggregationsIndex_0**](ContentsApi.md#contentsPagesAggregationsIndex_0) | **GET** /contents/{content_id}/pages/aggregations | Aggreate the Pages by the letters
-[**contentsPagesGet**](ContentsApi.md#contentsPagesGet) | **GET** /contents/pages/{content_page_id} | Return a Page from a given id
-[**contentsPagesGet_0**](ContentsApi.md#contentsPagesGet_0) | **GET** /contents/{content_id}/pages/{content_page_id} | Return a Page from a given id
-[**contentsPagesIndex**](ContentsApi.md#contentsPagesIndex) | **GET** /contents/pages | List Pages
-[**contentsPagesTypesIndex**](ContentsApi.md#contentsPagesTypesIndex) | **GET** /contents/pages/types | List content page types.
+[**contentsPagesAggregationsIndex**](ContentsApi.md#contentsPagesAggregationsIndex) | **GET** /contents/pages/aggregations | 
+[**contentsPagesAggregationsIndex_0**](ContentsApi.md#contentsPagesAggregationsIndex_0) | **GET** /contents/{content_id}/pages/aggregations | 
+[**contentsPagesGet**](ContentsApi.md#contentsPagesGet) | **GET** /contents/pages/{content_page_id} | 
+[**contentsPagesGet_0**](ContentsApi.md#contentsPagesGet_0) | **GET** /contents/{content_id}/pages/{content_page_id} | 
+[**contentsPagesIndex**](ContentsApi.md#contentsPagesIndex) | **GET** /contents/pages | 
+[**contentsPagesTypesIndex**](ContentsApi.md#contentsPagesTypesIndex) | **GET** /contents/pages/types | 
 
 
 # **contentsPagesAggregationsIndex**
 > \Ageras\Api\AggregationResult contentsPagesAggregationsIndex($criteria)
 
-Aggreate the Pages by the letters
+
 
 ### Example
 ```php
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 # **contentsPagesAggregationsIndex_0**
 > \Ageras\Api\AggregationResult contentsPagesAggregationsIndex_0($content_id , $criteria)
 
-Aggreate the Pages by the letters
+
 
 ### Example
 ```php
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 # **contentsPagesGet**
 > \Ageras\Api\ContentPageResource contentsPagesGet($content_page_id )
 
-Return a Page from a given id
+
 
 ### Example
 ```php
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 # **contentsPagesGet_0**
 > \Ageras\Api\ContentPageResource contentsPagesGet_0($content_id,  $content_page_id )
 
-Return a Page from a given id
+
 
 ### Example
 ```php
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 # **contentsPagesIndex**
 > \Ageras\Api\ContentPageResult contentsPagesIndex($criteria)
 
-List Pages
+
 
 ### Example
 ```php
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 # **contentsPagesTypesIndex**
 > \Ageras\Api\ContentPageTypeResult contentsPagesTypesIndex($criteria)
 
-List content page types.
+
 
 ### Example
 ```php

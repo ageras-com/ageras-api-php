@@ -90,7 +90,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsCreate
      *
-     * Create a new Checkout
+     * 
      *
      * @param \Ageras\Api\CheckoutResource $checkout_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsCreateWithHttpInfo
      *
-     * Create a new Checkout
+     * 
      *
      * @param \Ageras\Api\CheckoutResource $checkout_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,7 +174,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsGet
      *
-     * Get a checkout resource
+     * 
      *
      * @param string $checkout_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -189,7 +189,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsGetWithHttpInfo
      *
-     * Get a checkout resource
+     * 
      *
      * @param string $checkout_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -261,7 +261,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsIndex
      *
-     * List Checkout resources
+     * 
      *
      * @param $criteria = [
      *    'checkout_id' => string,
@@ -283,7 +283,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsIndexWithHttpInfo
      *
-     * List Checkout resources
+     * 
      *
      * @param $criteria = [
      *    'checkout_id' => string,
@@ -378,7 +378,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsUpdate
      *
-     * Update a given checkout resource
+     * 
      *
      * @param string $checkout_id 
      * @param \Ageras\Api\CheckoutResource $checkout_resource 
@@ -394,7 +394,7 @@ class CheckoutsApi
     /**
      * Operation checkoutsUpdateWithHttpInfo
      *
-     * Update a given checkout resource
+     * 
      *
      * @param string $checkout_id 
      * @param \Ageras\Api\CheckoutResource $checkout_resource 

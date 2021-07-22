@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ChargesApiTest extends \PHPUnit_Framework_TestCase
+class ChargesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class ChargesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for chargesIndex
      *
-     * List charges.
+     * .
      *
      */
     public function testChargesIndex()

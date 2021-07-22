@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SoftconversionsApiTest extends \PHPUnit_Framework_TestCase
+class SoftconversionsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class SoftconversionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for softconversionsCreate
      *
-     * Create a soft conversion..
+     * .
      *
      */
     public function testSoftconversionsCreate()

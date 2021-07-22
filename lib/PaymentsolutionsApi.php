@@ -90,7 +90,7 @@ class PaymentsolutionsApi
     /**
      * Operation paymentsolutionsIndex
      *
-     * List payment solutions or get available payment solutions for partner filtering by partner_id.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -110,7 +110,7 @@ class PaymentsolutionsApi
     /**
      * Operation paymentsolutionsIndexWithHttpInfo
      *
-     * List payment solutions or get available payment solutions for partner filtering by partner_id.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,

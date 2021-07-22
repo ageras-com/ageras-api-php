@@ -90,7 +90,7 @@ class CompanysizesApi
     /**
      * Operation companysizesIndex
      *
-     * Get company sizes
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -110,7 +110,7 @@ class CompanysizesApi
     /**
      * Operation companysizesIndexWithHttpInfo
      *
-     * Get company sizes
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

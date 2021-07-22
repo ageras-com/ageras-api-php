@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ordersActionsCreate**](OrdersApi.md#ordersActionsCreate) | **POST** /orders/{order_id}/actions | Invoke actions on orders
-[**ordersIndex**](OrdersApi.md#ordersIndex) | **GET** /orders | Invoke actions on orders
+[**ordersActionsCreate**](OrdersApi.md#ordersActionsCreate) | **POST** /orders/{order_id}/actions | 
+[**ordersIndex**](OrdersApi.md#ordersIndex) | **GET** /orders | 
 
 
 # **ordersActionsCreate**
 > \Ageras\Api\OrderResource ordersActionsCreate($order_id , $order_action_resource)
 
-Invoke actions on orders
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **ordersIndex**
 > \Ageras\Api\OrderResult ordersIndex($criteria)
 
-Invoke actions on orders
+
 
 ### Example
 ```php

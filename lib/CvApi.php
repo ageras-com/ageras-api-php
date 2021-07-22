@@ -90,7 +90,7 @@ class CvApi
     /**
      * Operation cvAwardCreate
      *
-     * Create partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvAwardResource $partner_user_cv_award_resource 
@@ -106,7 +106,7 @@ class CvApi
     /**
      * Operation cvAwardCreateWithHttpInfo
      *
-     * Create partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvAwardResource $partner_user_cv_award_resource 
@@ -184,7 +184,7 @@ class CvApi
     /**
      * Operation cvAwardDelete
      *
-     * Delete partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $award_id 
@@ -200,7 +200,7 @@ class CvApi
     /**
      * Operation cvAwardDeleteWithHttpInfo
      *
-     * Delete partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $award_id 
@@ -277,7 +277,7 @@ class CvApi
     /**
      * Operation cvAwardUpdate
      *
-     * Update partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvAwardResource $partner_user_cv_award_resource 
@@ -293,7 +293,7 @@ class CvApi
     /**
      * Operation cvAwardUpdateWithHttpInfo
      *
-     * Update partner user award.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvAwardResource $partner_user_cv_award_resource 
@@ -371,7 +371,7 @@ class CvApi
     /**
      * Operation cvBadgeCreate
      *
-     * Create partner user badge.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvBadgeResource $partner_user_cv_badge_resource 
@@ -387,7 +387,7 @@ class CvApi
     /**
      * Operation cvBadgeCreateWithHttpInfo
      *
-     * Create partner user badge.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvBadgeResource $partner_user_cv_badge_resource 
@@ -465,7 +465,7 @@ class CvApi
     /**
      * Operation cvBadgeDelete
      *
-     * Delete partner user badge.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $badge_id 
@@ -481,7 +481,7 @@ class CvApi
     /**
      * Operation cvBadgeDeleteWithHttpInfo
      *
-     * Delete partner user badge.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $badge_id 
@@ -558,7 +558,7 @@ class CvApi
     /**
      * Operation cvCourseCreate
      *
-     * Create partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvCourseResource $partner_user_cv_course_resource 
@@ -574,7 +574,7 @@ class CvApi
     /**
      * Operation cvCourseCreateWithHttpInfo
      *
-     * Create partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvCourseResource $partner_user_cv_course_resource 
@@ -652,7 +652,7 @@ class CvApi
     /**
      * Operation cvCourseDelete
      *
-     * Delete partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $course_id 
@@ -668,7 +668,7 @@ class CvApi
     /**
      * Operation cvCourseDeleteWithHttpInfo
      *
-     * Delete partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $course_id 
@@ -745,7 +745,7 @@ class CvApi
     /**
      * Operation cvCourseUpdate
      *
-     * Update partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvCourseResource $partner_user_cv_course_resource 
@@ -761,7 +761,7 @@ class CvApi
     /**
      * Operation cvCourseUpdateWithHttpInfo
      *
-     * Update partner user course.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvCourseResource $partner_user_cv_course_resource 
@@ -839,7 +839,7 @@ class CvApi
     /**
      * Operation cvDescriptionCreate
      *
-     * Create partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvDescriptionResource $partner_user_cv_description_resource 
@@ -855,7 +855,7 @@ class CvApi
     /**
      * Operation cvDescriptionCreateWithHttpInfo
      *
-     * Create partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvDescriptionResource $partner_user_cv_description_resource 
@@ -933,7 +933,7 @@ class CvApi
     /**
      * Operation cvDescriptionDelete
      *
-     * Delete partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $description_id 
@@ -949,7 +949,7 @@ class CvApi
     /**
      * Operation cvDescriptionDeleteWithHttpInfo
      *
-     * Delete partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $description_id 
@@ -1026,7 +1026,7 @@ class CvApi
     /**
      * Operation cvDescriptionUpdate
      *
-     * Update partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvDescriptionResource $partner_user_cv_description_resource 
@@ -1042,7 +1042,7 @@ class CvApi
     /**
      * Operation cvDescriptionUpdateWithHttpInfo
      *
-     * Update partner user description.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvDescriptionResource $partner_user_cv_description_resource 
@@ -1120,7 +1120,7 @@ class CvApi
     /**
      * Operation cvEducationCreate
      *
-     * Create partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvEducationResource $partner_user_cv_education_resource 
@@ -1136,7 +1136,7 @@ class CvApi
     /**
      * Operation cvEducationCreateWithHttpInfo
      *
-     * Create partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvEducationResource $partner_user_cv_education_resource 
@@ -1214,7 +1214,7 @@ class CvApi
     /**
      * Operation cvEducationDelete
      *
-     * Delete partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $education_id 
@@ -1230,7 +1230,7 @@ class CvApi
     /**
      * Operation cvEducationDeleteWithHttpInfo
      *
-     * Delete partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $education_id 
@@ -1307,7 +1307,7 @@ class CvApi
     /**
      * Operation cvEducationUpdate
      *
-     * Update partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvEducationResource $partner_user_cv_education_resource 
@@ -1323,7 +1323,7 @@ class CvApi
     /**
      * Operation cvEducationUpdateWithHttpInfo
      *
-     * Update partner user education.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvEducationResource $partner_user_cv_education_resource 
@@ -1401,7 +1401,7 @@ class CvApi
     /**
      * Operation cvExperienceCreate
      *
-     * Create partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExperienceResource $partner_user_cv_experience_resource 
@@ -1417,7 +1417,7 @@ class CvApi
     /**
      * Operation cvExperienceCreateWithHttpInfo
      *
-     * Create partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExperienceResource $partner_user_cv_experience_resource 
@@ -1495,7 +1495,7 @@ class CvApi
     /**
      * Operation cvExperienceDelete
      *
-     * Delete partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $experience_id 
@@ -1511,7 +1511,7 @@ class CvApi
     /**
      * Operation cvExperienceDeleteWithHttpInfo
      *
-     * Delete partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $experience_id 
@@ -1588,7 +1588,7 @@ class CvApi
     /**
      * Operation cvExperienceUpdate
      *
-     * Update partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExperienceResource $partner_user_cv_experience_resource 
@@ -1604,7 +1604,7 @@ class CvApi
     /**
      * Operation cvExperienceUpdateWithHttpInfo
      *
-     * Update partner user experience.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExperienceResource $partner_user_cv_experience_resource 
@@ -1682,7 +1682,7 @@ class CvApi
     /**
      * Operation cvExpertiseCreate
      *
-     * Create partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExpertiseResource $partner_user_cv_expertise_resource 
@@ -1698,7 +1698,7 @@ class CvApi
     /**
      * Operation cvExpertiseCreateWithHttpInfo
      *
-     * Create partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExpertiseResource $partner_user_cv_expertise_resource 
@@ -1776,7 +1776,7 @@ class CvApi
     /**
      * Operation cvExpertiseDelete
      *
-     * Delete partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $expertise_id 
@@ -1792,7 +1792,7 @@ class CvApi
     /**
      * Operation cvExpertiseDeleteWithHttpInfo
      *
-     * Delete partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $expertise_id 
@@ -1869,7 +1869,7 @@ class CvApi
     /**
      * Operation cvExpertiseUpdate
      *
-     * Update partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExpertiseResource $partner_user_cv_expertise_resource 
@@ -1885,7 +1885,7 @@ class CvApi
     /**
      * Operation cvExpertiseUpdateWithHttpInfo
      *
-     * Update partner user expertise.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvExpertiseResource $partner_user_cv_expertise_resource 
@@ -1963,7 +1963,7 @@ class CvApi
     /**
      * Operation cvGet
      *
-     * Get partner user cv.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1978,7 +1978,7 @@ class CvApi
     /**
      * Operation cvGetWithHttpInfo
      *
-     * Get partner user cv.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2050,7 +2050,7 @@ class CvApi
     /**
      * Operation cvIndex
      *
-     * Index all partner user CV for given partner.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -2071,7 +2071,7 @@ class CvApi
     /**
      * Operation cvIndexWithHttpInfo
      *
-     * Index all partner user CV for given partner.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -2161,7 +2161,7 @@ class CvApi
     /**
      * Operation cvLanguageCreate
      *
-     * Create partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvLanguageResource $partner_user_cv_language_resource 
@@ -2177,7 +2177,7 @@ class CvApi
     /**
      * Operation cvLanguageCreateWithHttpInfo
      *
-     * Create partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvLanguageResource $partner_user_cv_language_resource 
@@ -2255,7 +2255,7 @@ class CvApi
     /**
      * Operation cvLanguageDelete
      *
-     * Delete partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $language_id 
@@ -2271,7 +2271,7 @@ class CvApi
     /**
      * Operation cvLanguageDeleteWithHttpInfo
      *
-     * Delete partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $language_id 
@@ -2348,7 +2348,7 @@ class CvApi
     /**
      * Operation cvLanguageUpdate
      *
-     * Update partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvLanguageResource $partner_user_cv_language_resource 
@@ -2364,7 +2364,7 @@ class CvApi
     /**
      * Operation cvLanguageUpdateWithHttpInfo
      *
-     * Update partner user language.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvLanguageResource $partner_user_cv_language_resource 
@@ -2442,7 +2442,7 @@ class CvApi
     /**
      * Operation cvSocialDelete
      *
-     * Delete partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2457,7 +2457,7 @@ class CvApi
     /**
      * Operation cvSocialDeleteWithHttpInfo
      *
-     * Delete partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2525,7 +2525,7 @@ class CvApi
     /**
      * Operation cvSocialDelete_0
      *
-     * Delete partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2540,7 +2540,7 @@ class CvApi
     /**
      * Operation cvSocialDelete_0WithHttpInfo
      *
-     * Delete partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2608,7 +2608,7 @@ class CvApi
     /**
      * Operation cvSocialUpdate
      *
-     * Update partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvSocialMediaResource $partner_user_cv_social_media_resource 
@@ -2624,7 +2624,7 @@ class CvApi
     /**
      * Operation cvSocialUpdateWithHttpInfo
      *
-     * Update partner user social media.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserCvSocialMediaResource $partner_user_cv_social_media_resource 

@@ -90,7 +90,7 @@ class TasksApi
     /**
      * Operation tasksCreate
      *
-     * Create a new task.
+     * 
      *
      * @param \Ageras\Api\TaskResource $task_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class TasksApi
     /**
      * Operation tasksCreateWithHttpInfo
      *
-     * Create a new task.
+     * 
      *
      * @param \Ageras\Api\TaskResource $task_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,7 +174,7 @@ class TasksApi
     /**
      * Operation tasksDelete
      *
-     * Delete a given task by its task_id.
+     * 
      *
      * @param string $task_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -189,7 +189,7 @@ class TasksApi
     /**
      * Operation tasksDeleteWithHttpInfo
      *
-     * Delete a given task by its task_id.
+     * 
      *
      * @param string $task_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -257,7 +257,7 @@ class TasksApi
     /**
      * Operation tasksGet
      *
-     * Get a given task by its given task_id.
+     * 
      *
      * @param string $task_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -272,7 +272,7 @@ class TasksApi
     /**
      * Operation tasksGetWithHttpInfo
      *
-     * Get a given task by its given task_id.
+     * 
      *
      * @param string $task_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -344,7 +344,7 @@ class TasksApi
     /**
      * Operation tasksIndex
      *
-     * List tasks by employee, asseigned_employee, etc.
+     * 
      *
      * @param $criteria = [
      *    'task_id' => string,
@@ -375,7 +375,7 @@ class TasksApi
     /**
      * Operation tasksIndexWithHttpInfo
      *
-     * List tasks by employee, asseigned_employee, etc.
+     * 
      *
      * @param $criteria = [
      *    'task_id' => string,
@@ -515,7 +515,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesGet
      *
-     * Get a priority from a given id.
+     * 
      *
      * @param string $priority_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -530,7 +530,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesGetWithHttpInfo
      *
-     * Get a priority from a given id.
+     * 
      *
      * @param string $priority_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -602,7 +602,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesGet_0
      *
-     * Get a priority from a given id.
+     * 
      *
      * @param string $task_id 
      * @param string $priority_id 
@@ -618,7 +618,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesGet_0WithHttpInfo
      *
-     * Get a priority from a given id.
+     * 
      *
      * @param string $task_id 
      * @param string $priority_id 
@@ -699,7 +699,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesIndex
      *
-     * List priorities.
+     * 
      *
      * @param $criteria = [
      *    'priority_id' => string,
@@ -719,7 +719,7 @@ class TasksApi
     /**
      * Operation tasksPrioritiesIndexWithHttpInfo
      *
-     * List priorities.
+     * 
      *
      * @param $criteria = [
      *    'priority_id' => string,
@@ -804,7 +804,7 @@ class TasksApi
     /**
      * Operation tasksStatusesGet
      *
-     * Get a status from a status_id.
+     * 
      *
      * @param string $status_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -819,7 +819,7 @@ class TasksApi
     /**
      * Operation tasksStatusesGetWithHttpInfo
      *
-     * Get a status from a status_id.
+     * 
      *
      * @param string $status_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -891,7 +891,7 @@ class TasksApi
     /**
      * Operation tasksStatusesGet_0
      *
-     * Get a status from a status_id.
+     * 
      *
      * @param string $task_id 
      * @param string $status_id 
@@ -907,7 +907,7 @@ class TasksApi
     /**
      * Operation tasksStatusesGet_0WithHttpInfo
      *
-     * Get a status from a status_id.
+     * 
      *
      * @param string $task_id 
      * @param string $status_id 
@@ -988,7 +988,7 @@ class TasksApi
     /**
      * Operation tasksStatusesIndex
      *
-     * List statuses.
+     * 
      *
      * @param $criteria = [
      *    'status_id' => string,
@@ -1008,7 +1008,7 @@ class TasksApi
     /**
      * Operation tasksStatusesIndexWithHttpInfo
      *
-     * List statuses.
+     * 
      *
      * @param $criteria = [
      *    'status_id' => string,
@@ -1093,7 +1093,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesCreate
      *
-     * create a new taskable for a given task.
+     * 
      *
      * @param string $task_id 
      * @param \Ageras\Api\TaskableResource $taskable_resource 
@@ -1109,7 +1109,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesCreateWithHttpInfo
      *
-     * create a new taskable for a given task.
+     * 
      *
      * @param string $task_id 
      * @param \Ageras\Api\TaskableResource $taskable_resource 
@@ -1187,7 +1187,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesDelete
      *
-     * delete a taskable and remove it from the given task.
+     * 
      *
      * @param string $task_id 
      * @param string $taskable_id 
@@ -1203,7 +1203,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesDeleteWithHttpInfo
      *
-     * delete a taskable and remove it from the given task.
+     * 
      *
      * @param string $task_id 
      * @param string $taskable_id 
@@ -1280,7 +1280,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesGet
      *
-     * Get a taskable item from a given taskable id.
+     * 
      *
      * @param string $task_id 
      * @param string $taskable_id 
@@ -1296,7 +1296,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesGetWithHttpInfo
      *
-     * Get a taskable item from a given taskable id.
+     * 
      *
      * @param string $task_id 
      * @param string $taskable_id 
@@ -1377,7 +1377,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesIndex
      *
-     * List the taskables for a given task.
+     * 
      *
      * @param string $task_id 
      * @param $criteria = [
@@ -1398,7 +1398,7 @@ class TasksApi
     /**
      * Operation tasksTaskablesIndexWithHttpInfo
      *
-     * List the taskables for a given task.
+     * 
      *
      * @param string $task_id 
      * @param $criteria = [
@@ -1492,7 +1492,7 @@ class TasksApi
     /**
      * Operation tasksUpdate
      *
-     * Update a given task by its task_id.
+     * 
      *
      * @param string $task_id 
      * @param \Ageras\Api\TaskResource $task_resource 
@@ -1508,7 +1508,7 @@ class TasksApi
     /**
      * Operation tasksUpdateWithHttpInfo
      *
-     * Update a given task by its task_id.
+     * 
      *
      * @param string $task_id 
      * @param \Ageras\Api\TaskResource $task_resource 

@@ -65,6 +65,7 @@ class PartnerResource implements ArrayAccess
         'is_public' => 'bool',
         'has_subscription' => 'bool',
         'has_active_contract' => 'bool',
+        'has_unused_allocations' => 'bool',
         'state' => 'string',
         'access' => 'string',
         'company_information' => 'string',
@@ -102,7 +103,8 @@ class PartnerResource implements ArrayAccess
         'features' => 'string[]',
         'association' => '\Ageras\Api\PartnerAssociationResource',
         'has_portal_access' => 'bool',
-        'company_size' => '\Ageras\Api\CompanySizeResource'
+        'company_size' => '\Ageras\Api\CompanySizeResource',
+        'hide_from_website' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -126,6 +128,7 @@ class PartnerResource implements ArrayAccess
         'is_public' => 'is_public',
         'has_subscription' => 'has_subscription',
         'has_active_contract' => 'has_active_contract',
+        'has_unused_allocations' => 'has_unused_allocations',
         'state' => 'state',
         'access' => 'access',
         'company_information' => 'company_information',
@@ -163,7 +166,8 @@ class PartnerResource implements ArrayAccess
         'features' => 'features',
         'association' => 'association',
         'has_portal_access' => 'has_portal_access',
-        'company_size' => 'company_size'
+        'company_size' => 'company_size',
+        'hide_from_website' => 'hide_from_website'
     ];
 
 
@@ -183,6 +187,7 @@ class PartnerResource implements ArrayAccess
         'is_public' => 'setIsPublic',
         'has_subscription' => 'setHasSubscription',
         'has_active_contract' => 'setHasActiveContract',
+        'has_unused_allocations' => 'setHasUnusedAllocations',
         'state' => 'setState',
         'access' => 'setAccess',
         'company_information' => 'setCompanyInformation',
@@ -220,7 +225,8 @@ class PartnerResource implements ArrayAccess
         'features' => 'setFeatures',
         'association' => 'setAssociation',
         'has_portal_access' => 'setHasPortalAccess',
-        'company_size' => 'setCompanySize'
+        'company_size' => 'setCompanySize',
+        'hide_from_website' => 'setHideFromWebsite'
     ];
 
 
@@ -240,6 +246,7 @@ class PartnerResource implements ArrayAccess
         'is_public' => 'getIsPublic',
         'has_subscription' => 'getHasSubscription',
         'has_active_contract' => 'getHasActiveContract',
+        'has_unused_allocations' => 'getHasUnusedAllocations',
         'state' => 'getState',
         'access' => 'getAccess',
         'company_information' => 'getCompanyInformation',
@@ -277,7 +284,8 @@ class PartnerResource implements ArrayAccess
         'features' => 'getFeatures',
         'association' => 'getAssociation',
         'has_portal_access' => 'getHasPortalAccess',
-        'company_size' => 'getCompanySize'
+        'company_size' => 'getCompanySize',
+        'hide_from_website' => 'getHideFromWebsite'
     ];
 
     public static function attributeMap()
@@ -362,6 +370,7 @@ class PartnerResource implements ArrayAccess
         $this->container['is_public'] = isset($data['is_public']) ? $data['is_public'] : false;
         $this->container['has_subscription'] = isset($data['has_subscription']) ? $data['has_subscription'] : false;
         $this->container['has_active_contract'] = isset($data['has_active_contract']) ? $data['has_active_contract'] : false;
+        $this->container['has_unused_allocations'] = isset($data['has_unused_allocations']) ? $data['has_unused_allocations'] : false;
         $this->container['state'] = isset($data['state']) ? $data['state'] : 'unknown';
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
@@ -400,6 +409,7 @@ class PartnerResource implements ArrayAccess
         $this->container['association'] = isset($data['association']) ? $data['association'] : null;
         $this->container['has_portal_access'] = isset($data['has_portal_access']) ? $data['has_portal_access'] : false;
         $this->container['company_size'] = isset($data['company_size']) ? $data['company_size'] : null;
+        $this->container['hide_from_website'] = isset($data['hide_from_website']) ? $data['hide_from_website'] : false;
     }
 
     /**
@@ -672,6 +682,27 @@ class PartnerResource implements ArrayAccess
     public function setHasActiveContract($has_active_contract)
     {
         $this->container['has_active_contract'] = $has_active_contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_unused_allocations
+     * @return bool
+     */
+    public function getHasUnusedAllocations()
+    {
+        return $this->container['has_unused_allocations'];
+    }
+
+    /**
+     * Sets has_unused_allocations
+     * @param bool $has_unused_allocations Has the partner got an active contract.
+     * @return $this
+     */
+    public function setHasUnusedAllocations($has_unused_allocations)
+    {
+        $this->container['has_unused_allocations'] = $has_unused_allocations;
 
         return $this;
     }
@@ -1478,6 +1509,27 @@ class PartnerResource implements ArrayAccess
     public function setCompanySize($company_size)
     {
         $this->container['company_size'] = $company_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets hide_from_website
+     * @return bool
+     */
+    public function getHideFromWebsite()
+    {
+        return $this->container['hide_from_website'];
+    }
+
+    /**
+     * Sets hide_from_website
+     * @param bool $hide_from_website Hide from public website
+     * @return $this
+     */
+    public function setHideFromWebsite($hide_from_website)
+    {
+        $this->container['hide_from_website'] = $hide_from_website;
 
         return $this;
     }

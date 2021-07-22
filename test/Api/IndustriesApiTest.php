@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class IndustriesApiTest extends \PHPUnit_Framework_TestCase
+class IndustriesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class IndustriesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for industriesIndex
      *
-     * List Industries and filter by parent industry..
+     * Get all industries..
      *
      */
     public function testIndustriesIndex()

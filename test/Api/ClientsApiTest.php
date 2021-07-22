@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ClientsApiTest extends \PHPUnit_Framework_TestCase
+class ClientsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class ClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for clientsBrowserpushsubscriptionsCreate
      *
-     * Create a browser push subscription.
+     * .
      *
      */
     public function testClientsBrowserpushsubscriptionsCreate()
@@ -90,7 +90,7 @@ class ClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for clientsGet
      *
-     * Return a Client.
+     * .
      *
      */
     public function testClientsGet()
@@ -101,7 +101,7 @@ class ClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for clientsUpdate
      *
-     * Update a client.
+     * .
      *
      */
     public function testClientsUpdate()

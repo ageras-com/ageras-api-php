@@ -90,7 +90,7 @@ class AffiliatesApi
     /**
      * Operation affiliatesCampaignsIndex
      *
-     * List of affiliate campaigns.
+     * 
      *
      * @param string $affiliate_id 
      * @param $criteria = [
@@ -111,7 +111,7 @@ class AffiliatesApi
     /**
      * Operation affiliatesCampaignsIndexWithHttpInfo
      *
-     * List of affiliate campaigns.
+     * 
      *
      * @param string $affiliate_id 
      * @param $criteria = [
@@ -205,7 +205,7 @@ class AffiliatesApi
     /**
      * Operation affiliatesIndex
      *
-     * List Affiliates.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -227,7 +227,7 @@ class AffiliatesApi
     /**
      * Operation affiliatesIndexWithHttpInfo
      *
-     * List Affiliates.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

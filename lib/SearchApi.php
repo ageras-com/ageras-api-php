@@ -90,7 +90,7 @@ class SearchApi
     /**
      * Operation searchIndex
      *
-     * Search by criterias.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -109,7 +109,7 @@ class SearchApi
     /**
      * Operation searchIndexWithHttpInfo
      *
-     * Search by criterias.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -189,7 +189,7 @@ class SearchApi
     /**
      * Operation searchSuggestIndex
      *
-     * Suggest by criteria.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -211,7 +211,7 @@ class SearchApi
     /**
      * Operation searchSuggestIndexWithHttpInfo
      *
-     * Suggest by criteria.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -306,7 +306,7 @@ class SearchApi
     /**
      * Operation searchTypeaheadIndex
      *
-     * Typeahead recommendations.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -328,7 +328,7 @@ class SearchApi
     /**
      * Operation searchTypeaheadIndexWithHttpInfo
      *
-     * Typeahead recommendations.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,

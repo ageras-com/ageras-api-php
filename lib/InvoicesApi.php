@@ -90,7 +90,7 @@ class InvoicesApi
     /**
      * Operation invoicesGet
      *
-     * Get an Invoice from a given invoice_id.
+     * 
      *
      * @param string $invoice_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class InvoicesApi
     /**
      * Operation invoicesGetWithHttpInfo
      *
-     * Get an Invoice from a given invoice_id.
+     * 
      *
      * @param string $invoice_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -177,7 +177,7 @@ class InvoicesApi
     /**
      * Operation invoicesIndex
      *
-     * Search and find invoices by specific criterias.
+     * 
      *
      * @param $criteria = [
      *    'invoice_id' => string,
@@ -205,7 +205,7 @@ class InvoicesApi
     /**
      * Operation invoicesIndexWithHttpInfo
      *
-     * Search and find invoices by specific criterias.
+     * 
      *
      * @param $criteria = [
      *    'invoice_id' => string,
@@ -330,7 +330,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsActionsCreate
      *
-     * Perform an action on a refund reuqest.
+     * 
      *
      * @param string $invoice_id 
      * @param string $voucher_refund_request_id 
@@ -347,7 +347,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsActionsCreateWithHttpInfo
      *
-     * Perform an action on a refund reuqest.
+     * 
      *
      * @param string $invoice_id 
      * @param string $voucher_refund_request_id 
@@ -434,7 +434,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsCreate
      *
-     * Create refund request for a given invoice_id.
+     * 
      *
      * @param string $invoice_id 
      * @param \Ageras\Api\VoucherRefundRequestResource $voucher_refund_request_resource 
@@ -450,7 +450,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsCreateWithHttpInfo
      *
-     * Create refund request for a given invoice_id.
+     * 
      *
      * @param string $invoice_id 
      * @param \Ageras\Api\VoucherRefundRequestResource $voucher_refund_request_resource 
@@ -528,7 +528,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsGet
      *
-     * Get a refund request by ID.
+     * 
      *
      * @param string $voucher_refund_request_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -543,7 +543,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsGetWithHttpInfo
      *
-     * Get a refund request by ID.
+     * 
      *
      * @param string $voucher_refund_request_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -615,7 +615,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsGet_0
      *
-     * Get a refund request by ID.
+     * 
      *
      * @param string $invoice_id 
      * @param string $voucher_refund_request_id 
@@ -631,7 +631,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsGet_0WithHttpInfo
      *
-     * Get a refund request by ID.
+     * 
      *
      * @param string $invoice_id 
      * @param string $voucher_refund_request_id 
@@ -712,7 +712,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsIndex
      *
-     * Get refund requests from a given invoice_id.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -738,7 +738,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsIndexWithHttpInfo
      *
-     * Get refund requests from a given invoice_id.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -853,7 +853,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsIndex_0
      *
-     * Get refund requests from a given invoice_id.
+     * 
      *
      * @param string $voucher_id 
      * @param $criteria = [
@@ -879,7 +879,7 @@ class InvoicesApi
     /**
      * Operation invoicesRefundrequestsIndex_0WithHttpInfo
      *
-     * Get refund requests from a given invoice_id.
+     * 
      *
      * @param string $voucher_id 
      * @param $criteria = [

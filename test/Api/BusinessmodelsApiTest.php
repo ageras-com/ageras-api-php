@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
+class BusinessmodelsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for businessModelsCreate
      *
-     * Create business model..
+     * .
      *
      */
     public function testBusinessModelsCreate()
@@ -90,7 +90,7 @@ class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for businessModelsDelete
      *
-     * Delete business model..
+     * .
      *
      */
     public function testBusinessModelsDelete()
@@ -101,7 +101,7 @@ class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for businessModelsGet
      *
-     * Return a business model.
+     * .
      *
      */
     public function testBusinessModelsGet()
@@ -112,7 +112,7 @@ class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for businessModelsIndex
      *
-     * List business models..
+     * .
      *
      */
     public function testBusinessModelsIndex()
@@ -123,7 +123,7 @@ class BusinessmodelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for businessModelsUpdate
      *
-     * Update business model..
+     * .
      *
      */
     public function testBusinessModelsUpdate()

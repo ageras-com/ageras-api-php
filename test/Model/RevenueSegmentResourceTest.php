@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
+class RevenueSegmentResourceTest extends TestCase
 {
 
     /**
@@ -150,6 +150,22 @@ class RevenueSegmentResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "minimum_pps_price_excl_vat"
      */
     public function testPropertyMinimumPpsPriceExclVat()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_category"
+     */
+    public function testPropertyLeadCategory()
+    {
+
+    }
+
+    /**
+     * Test attribute "archived_at"
+     */
+    public function testPropertyArchivedAt()
     {
 
     }

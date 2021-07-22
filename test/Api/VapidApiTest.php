@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class VapidApiTest extends \PHPUnit_Framework_TestCase
+class VapidApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class VapidApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for vapidGet
      *
-     * Get the VAPID public key.
+     * .
      *
      */
     public function testVapidGet()

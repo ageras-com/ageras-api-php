@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AffiliatesApiTest extends \PHPUnit_Framework_TestCase
+class AffiliatesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class AffiliatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for affiliatesCampaignsIndex
      *
-     * List of affiliate campaigns..
+     * .
      *
      */
     public function testAffiliatesCampaignsIndex()
@@ -90,7 +90,7 @@ class AffiliatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for affiliatesIndex
      *
-     * List Affiliates..
+     * .
      *
      */
     public function testAffiliatesIndex()

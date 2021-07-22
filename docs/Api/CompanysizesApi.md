@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**companysizesIndex**](CompanysizesApi.md#companysizesIndex) | **GET** /companysizes | Get company sizes
+[**companysizesIndex**](CompanysizesApi.md#companysizesIndex) | **GET** /companysizes | 
 
 
 # **companysizesIndex**
 > \Ageras\Api\CompanySizeResult companysizesIndex($criteria)
 
-Get company sizes
+
 
 ### Example
 ```php

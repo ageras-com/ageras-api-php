@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PaymentsolutionsApiTest extends \PHPUnit_Framework_TestCase
+class PaymentsolutionsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PaymentsolutionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsolutionsIndex
      *
-     * List payment solutions or get available payment solutions for partner filtering by partner_id..
+     * .
      *
      */
     public function testPaymentsolutionsIndex()

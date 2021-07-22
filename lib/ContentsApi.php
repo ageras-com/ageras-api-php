@@ -90,7 +90,7 @@ class ContentsApi
     /**
      * Operation contentsPagesAggregationsIndex
      *
-     * Aggreate the Pages by the letters
+     * 
      *
      * @param $criteria = [
      *    'page_id' => string,
@@ -114,7 +114,7 @@ class ContentsApi
     /**
      * Operation contentsPagesAggregationsIndexWithHttpInfo
      *
-     * Aggreate the Pages by the letters
+     * 
      *
      * @param $criteria = [
      *    'page_id' => string,
@@ -219,7 +219,7 @@ class ContentsApi
     /**
      * Operation contentsPagesAggregationsIndex_0
      *
-     * Aggreate the Pages by the letters
+     * 
      *
      * @param string $content_id 
      * @param $criteria = [
@@ -244,7 +244,7 @@ class ContentsApi
     /**
      * Operation contentsPagesAggregationsIndex_0WithHttpInfo
      *
-     * Aggreate the Pages by the letters
+     * 
      *
      * @param string $content_id 
      * @param $criteria = [
@@ -358,7 +358,7 @@ class ContentsApi
     /**
      * Operation contentsPagesGet
      *
-     * Return a Page from a given id
+     * 
      *
      * @param string $content_page_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -373,7 +373,7 @@ class ContentsApi
     /**
      * Operation contentsPagesGetWithHttpInfo
      *
-     * Return a Page from a given id
+     * 
      *
      * @param string $content_page_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -445,7 +445,7 @@ class ContentsApi
     /**
      * Operation contentsPagesGet_0
      *
-     * Return a Page from a given id
+     * 
      *
      * @param string $content_id 
      * @param string $content_page_id 
@@ -461,7 +461,7 @@ class ContentsApi
     /**
      * Operation contentsPagesGet_0WithHttpInfo
      *
-     * Return a Page from a given id
+     * 
      *
      * @param string $content_id 
      * @param string $content_page_id 
@@ -542,7 +542,7 @@ class ContentsApi
     /**
      * Operation contentsPagesIndex
      *
-     * List Pages
+     * 
      *
      * @param $criteria = [
      *    'page_id' => string,
@@ -566,7 +566,7 @@ class ContentsApi
     /**
      * Operation contentsPagesIndexWithHttpInfo
      *
-     * List Pages
+     * 
      *
      * @param $criteria = [
      *    'page_id' => string,
@@ -671,7 +671,7 @@ class ContentsApi
     /**
      * Operation contentsPagesTypesIndex
      *
-     * List content page types.
+     * 
      *
      * @param $criteria = [
      *    'page_type_id' => string,
@@ -692,7 +692,7 @@ class ContentsApi
     /**
      * Operation contentsPagesTypesIndexWithHttpInfo
      *
-     * List content page types.
+     * 
      *
      * @param $criteria = [
      *    'page_type_id' => string,

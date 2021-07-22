@@ -90,7 +90,7 @@ class LocationsApi
     /**
      * Operation locationsGet
      *
-     * Retrieve a location from a given location_id.
+     * 
      *
      * @param string $location_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class LocationsApi
     /**
      * Operation locationsGetWithHttpInfo
      *
-     * Retrieve a location from a given location_id.
+     * 
      *
      * @param string $location_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -177,7 +177,7 @@ class LocationsApi
     /**
      * Operation locationsIndex
      *
-     * Search and find locations by different criterias.
+     * 
      *
      * @param $criteria = [
      *    'location_id' => string,
@@ -206,7 +206,7 @@ class LocationsApi
     /**
      * Operation locationsIndexWithHttpInfo
      *
-     * Search and find locations by different criterias.
+     * 
      *
      * @param $criteria = [
      *    'location_id' => string,
@@ -336,7 +336,7 @@ class LocationsApi
     /**
      * Operation locationsSegmentationgeoregionsIndex
      *
-     * List the segmentation geo regions
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -356,7 +356,7 @@ class LocationsApi
     /**
      * Operation locationsSegmentationgeoregionsIndexWithHttpInfo
      *
-     * List the segmentation geo regions
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -441,7 +441,7 @@ class LocationsApi
     /**
      * Operation locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex
      *
-     * List segmentation sub geo regions.
+     * 
      *
      * @param $criteria = [
      *    'segmentation_geo_region_id' => string,
@@ -461,7 +461,7 @@ class LocationsApi
     /**
      * Operation locationsSegmentationgeoregionsSegmentationsubgeoregionsIndexWithHttpInfo
      *
-     * List segmentation sub geo regions.
+     * 
      *
      * @param $criteria = [
      *    'segmentation_geo_region_id' => string,

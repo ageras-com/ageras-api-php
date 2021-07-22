@@ -90,7 +90,7 @@ class MatchesApi
     /**
      * Operation matchesIndex
      *
-     * List matches
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,
@@ -116,7 +116,7 @@ class MatchesApi
     /**
      * Operation matchesIndexWithHttpInfo
      *
-     * List matches
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,

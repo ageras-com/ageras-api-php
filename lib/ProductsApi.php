@@ -181,6 +181,7 @@ class ProductsApi
      *    'employee_id' => int,
      *    'geo_code' => string,
      *    'is_archived' => bool,
+     *    'is_auto_quotable' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -204,6 +205,7 @@ class ProductsApi
      *    'employee_id' => int,
      *    'geo_code' => string,
      *    'is_archived' => bool,
+     *    'is_auto_quotable' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -240,6 +242,10 @@ class ProductsApi
         // query params
         if (isset($criteria['is_archived'])) {
             $queryParams['is_archived'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_archived']);
+        }
+        // query params
+        if (isset($criteria['is_auto_quotable'])) {
+            $queryParams['is_auto_quotable'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_auto_quotable']);
         }
         // query params
         if (isset($criteria['limit'])) {

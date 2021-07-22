@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notificationsActionsCreate**](NotificationsApi.md#notificationsActionsCreate) | **POST** /notifications/actions | Perform an action on one or more notifications
-[**notificationsActionsCreate_0**](NotificationsApi.md#notificationsActionsCreate_0) | **POST** /notifications/{notification_id}/actions | Perform an action on one or more notifications
-[**notificationsGet**](NotificationsApi.md#notificationsGet) | **GET** /notifications/{notification_id} | Get single notification
-[**notificationsIndex**](NotificationsApi.md#notificationsIndex) | **GET** /notifications | List notifications
+[**notificationsActionsCreate**](NotificationsApi.md#notificationsActionsCreate) | **POST** /notifications/actions | 
+[**notificationsActionsCreate_0**](NotificationsApi.md#notificationsActionsCreate_0) | **POST** /notifications/{notification_id}/actions | 
+[**notificationsGet**](NotificationsApi.md#notificationsGet) | **GET** /notifications/{notification_id} | 
+[**notificationsIndex**](NotificationsApi.md#notificationsIndex) | **GET** /notifications | 
 
 
 # **notificationsActionsCreate**
 > \Ageras\Api\NotificationResource notificationsActionsCreate($notification_action_resource)
 
-Perform an action on one or more notifications
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **notificationsActionsCreate_0**
 > \Ageras\Api\NotificationResource notificationsActionsCreate_0($notification_id , $notification_action_resource)
 
-Perform an action on one or more notifications
+
 
 ### Example
 ```php
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 # **notificationsGet**
 > \Ageras\Api\NotificationResource notificationsGet($notification_id )
 
-Get single notification
+
 
 ### Example
 ```php
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 # **notificationsIndex**
 > \Ageras\Api\NotificationResult notificationsIndex($criteria)
 
-List notifications
+
 
 ### Example
 ```php

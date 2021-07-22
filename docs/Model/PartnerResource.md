@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **is_public** | **bool** | Is it a public partner | [optional] [default to false]
 **has_subscription** | **bool** | Has the partner an active subscription. | [optional] [default to false]
 **has_active_contract** | **bool** | Has the partner got an active contract. | [optional] [default to false]
+**has_unused_allocations** | **bool** | Has the partner got an active contract. | [optional] [default to false]
 **state** | **string** | What is the current state of the partner. | [optional] [default to 'unknown']
 **access** | **string** | Access information regarding the partner. | [optional] 
 **company_information** | **string** | Information regarding the partner company. | [optional] 
@@ -52,6 +53,7 @@ Name | Type | Description | Notes
 **association** | [**\Ageras\Api\PartnerAssociationResource**](PartnerAssociationResource.md) |  | [optional] 
 **has_portal_access** | **bool** | True if partner has access to the Partner portal. | [optional] [default to false]
 **company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
+**hide_from_website** | **bool** | Hide from public website | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

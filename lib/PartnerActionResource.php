@@ -128,6 +128,7 @@ class PartnerActionResource implements ArrayAccess
     const ACTION_TRANSITION_TO_CONTRACT = 'transition_to_contract';
     const ACTION_GRANT_PORTAL_ACCESS = 'grant_portal_access';
     const ACTION_REVOKE_PORTAL_ACCESS = 'revoke_portal_access';
+    const ACTION_SUBSCRIBE_TO_LEAD_MARKETPLACE = 'subscribe_to_lead_marketplace';
     
 
     
@@ -155,6 +156,7 @@ class PartnerActionResource implements ArrayAccess
             self::ACTION_TRANSITION_TO_CONTRACT,
             self::ACTION_GRANT_PORTAL_ACCESS,
             self::ACTION_REVOKE_PORTAL_ACCESS,
+            self::ACTION_SUBSCRIBE_TO_LEAD_MARKETPLACE,
         ];
     }
     
@@ -185,9 +187,9 @@ class PartnerActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten", "transition_to_contract", "grant_portal_access", "revoke_portal_access"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten", "transition_to_contract", "grant_portal_access", "revoke_portal_access", "subscribe_to_lead_marketplace"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access', 'subscribe_to_lead_marketplace'.";
         }
 
         return $invalid_properties;
@@ -202,7 +204,7 @@ class PartnerActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten", "transition_to_contract", "grant_portal_access", "revoke_portal_access"];
+        $allowed_values = ["unknown", "make-partner", "make-demo", "make-canvas", "continue-demo", "not-interested", "stripe-sync", "canvas-postpone", "canvas-not-in-industry", "canvas-out-of-business", "canvas-already-partner", "canvas-not-relevant", "employee-calls-partner", "invoke_right_to_be_forgotten", "transition_to_contract", "grant_portal_access", "revoke_portal_access", "subscribe_to_lead_marketplace"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -226,9 +228,9 @@ class PartnerActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access');
+        $allowed_values = array('unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access', 'subscribe_to_lead_marketplace');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'make-partner', 'make-demo', 'make-canvas', 'continue-demo', 'not-interested', 'stripe-sync', 'canvas-postpone', 'canvas-not-in-industry', 'canvas-out-of-business', 'canvas-already-partner', 'canvas-not-relevant', 'employee-calls-partner', 'invoke_right_to_be_forgotten', 'transition_to_contract', 'grant_portal_access', 'revoke_portal_access', 'subscribe_to_lead_marketplace'");
         }
         $this->container['action'] = $action;
 

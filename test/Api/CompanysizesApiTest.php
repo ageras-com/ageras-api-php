@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CompanysizesApiTest extends \PHPUnit_Framework_TestCase
+class CompanysizesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class CompanysizesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for companysizesIndex
      *
-     * Get company sizes.
+     * .
      *
      */
     public function testCompanysizesIndex()

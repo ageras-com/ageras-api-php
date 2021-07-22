@@ -90,7 +90,7 @@ class ContactarchivesApi
     /**
      * Operation contactarchivesActionsCreate
      *
-     * Contact archive actions
+     * 
      *
      * @param string $contact_archive_id 
      * @param \Ageras\Api\ContactArchiveActionResource $contact_archive_action_resource 
@@ -106,7 +106,7 @@ class ContactarchivesApi
     /**
      * Operation contactarchivesActionsCreateWithHttpInfo
      *
-     * Contact archive actions
+     * 
      *
      * @param string $contact_archive_id 
      * @param \Ageras\Api\ContactArchiveActionResource $contact_archive_action_resource 
@@ -184,7 +184,7 @@ class ContactarchivesApi
     /**
      * Operation contactarchivesIndex
      *
-     * Search for contact's correspondence (e-mails and text messages) by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'receiver_partner_id' => int,
@@ -207,7 +207,7 @@ class ContactarchivesApi
     /**
      * Operation contactarchivesIndexWithHttpInfo
      *
-     * Search for contact's correspondence (e-mails and text messages) by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'receiver_partner_id' => int,

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chargesIndex**](ChargesApi.md#chargesIndex) | **GET** /charges | List charges
+[**chargesIndex**](ChargesApi.md#chargesIndex) | **GET** /charges | 
 
 
 # **chargesIndex**
 > \Ageras\Api\ChargeResult chargesIndex($criteria)
 
-List charges
+
 
 ### Example
 ```php

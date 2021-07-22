@@ -90,7 +90,7 @@ class OffersApi
     /**
      * Operation offersActionsCreate
      *
-     * Perform an action on an offer.
+     * 
      *
      * @param string $offer_id 
      * @param \Ageras\Api\OfferActionResource $offer_action_resource 
@@ -106,7 +106,7 @@ class OffersApi
     /**
      * Operation offersActionsCreateWithHttpInfo
      *
-     * Perform an action on an offer.
+     * 
      *
      * @param string $offer_id 
      * @param \Ageras\Api\OfferActionResource $offer_action_resource 
@@ -184,7 +184,7 @@ class OffersApi
     /**
      * Operation offersGet
      *
-     * Get an offer by id.
+     * 
      *
      * @param string $offer_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -199,7 +199,7 @@ class OffersApi
     /**
      * Operation offersGetWithHttpInfo
      *
-     * Get an offer by id.
+     * 
      *
      * @param string $offer_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -271,7 +271,7 @@ class OffersApi
     /**
      * Operation offersIndex
      *
-     * Get all partner offer.
+     * 
      *
      * @param $criteria = [
      *    'show_expired' => bool,
@@ -298,7 +298,7 @@ class OffersApi
     /**
      * Operation offersIndexWithHttpInfo
      *
-     * Get all partner offer.
+     * 
      *
      * @param $criteria = [
      *    'show_expired' => bool,

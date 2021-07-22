@@ -4,27 +4,27 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tasksCreate**](TasksApi.md#tasksCreate) | **POST** /tasks | Create a new task.
-[**tasksDelete**](TasksApi.md#tasksDelete) | **DELETE** /tasks/{task_id} | Delete a given task by its task_id.
-[**tasksGet**](TasksApi.md#tasksGet) | **GET** /tasks/{task_id} | Get a given task by its given task_id.
-[**tasksIndex**](TasksApi.md#tasksIndex) | **GET** /tasks | List tasks by employee, asseigned_employee, etc.
-[**tasksPrioritiesGet**](TasksApi.md#tasksPrioritiesGet) | **GET** /tasks/priorities/{priority_id} | Get a priority from a given id.
-[**tasksPrioritiesGet_0**](TasksApi.md#tasksPrioritiesGet_0) | **GET** /tasks/{task_id}/priorities/{priority_id} | Get a priority from a given id.
-[**tasksPrioritiesIndex**](TasksApi.md#tasksPrioritiesIndex) | **GET** /tasks/priorities | List priorities.
-[**tasksStatusesGet**](TasksApi.md#tasksStatusesGet) | **GET** /tasks/statuses/{status_id} | Get a status from a status_id.
-[**tasksStatusesGet_0**](TasksApi.md#tasksStatusesGet_0) | **GET** /tasks/{task_id}/statuses/{status_id} | Get a status from a status_id.
-[**tasksStatusesIndex**](TasksApi.md#tasksStatusesIndex) | **GET** /tasks/statuses | List statuses.
-[**tasksTaskablesCreate**](TasksApi.md#tasksTaskablesCreate) | **POST** /tasks/{task_id}/taskables | create a new taskable for a given task.
-[**tasksTaskablesDelete**](TasksApi.md#tasksTaskablesDelete) | **DELETE** /tasks/{task_id}/taskables/{taskable_id} | delete a taskable and remove it from the given task.
-[**tasksTaskablesGet**](TasksApi.md#tasksTaskablesGet) | **GET** /tasks/{task_id}/taskables/{taskable_id} | Get a taskable item from a given taskable id.
-[**tasksTaskablesIndex**](TasksApi.md#tasksTaskablesIndex) | **GET** /tasks/{task_id}/taskables | List the taskables for a given task.
-[**tasksUpdate**](TasksApi.md#tasksUpdate) | **PUT** /tasks/{task_id} | Update a given task by its task_id.
+[**tasksCreate**](TasksApi.md#tasksCreate) | **POST** /tasks | 
+[**tasksDelete**](TasksApi.md#tasksDelete) | **DELETE** /tasks/{task_id} | 
+[**tasksGet**](TasksApi.md#tasksGet) | **GET** /tasks/{task_id} | 
+[**tasksIndex**](TasksApi.md#tasksIndex) | **GET** /tasks | 
+[**tasksPrioritiesGet**](TasksApi.md#tasksPrioritiesGet) | **GET** /tasks/priorities/{priority_id} | 
+[**tasksPrioritiesGet_0**](TasksApi.md#tasksPrioritiesGet_0) | **GET** /tasks/{task_id}/priorities/{priority_id} | 
+[**tasksPrioritiesIndex**](TasksApi.md#tasksPrioritiesIndex) | **GET** /tasks/priorities | 
+[**tasksStatusesGet**](TasksApi.md#tasksStatusesGet) | **GET** /tasks/statuses/{status_id} | 
+[**tasksStatusesGet_0**](TasksApi.md#tasksStatusesGet_0) | **GET** /tasks/{task_id}/statuses/{status_id} | 
+[**tasksStatusesIndex**](TasksApi.md#tasksStatusesIndex) | **GET** /tasks/statuses | 
+[**tasksTaskablesCreate**](TasksApi.md#tasksTaskablesCreate) | **POST** /tasks/{task_id}/taskables | 
+[**tasksTaskablesDelete**](TasksApi.md#tasksTaskablesDelete) | **DELETE** /tasks/{task_id}/taskables/{taskable_id} | 
+[**tasksTaskablesGet**](TasksApi.md#tasksTaskablesGet) | **GET** /tasks/{task_id}/taskables/{taskable_id} | 
+[**tasksTaskablesIndex**](TasksApi.md#tasksTaskablesIndex) | **GET** /tasks/{task_id}/taskables | 
+[**tasksUpdate**](TasksApi.md#tasksUpdate) | **PUT** /tasks/{task_id} | 
 
 
 # **tasksCreate**
 > \Ageras\Api\TaskResource tasksCreate($task_resource)
 
-Create a new task.
+
 
 ### Example
 ```php
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **tasksDelete**
 > tasksDelete($task_id )
 
-Delete a given task by its task_id.
+
 
 ### Example
 ```php
@@ -125,7 +125,7 @@ void (empty response body)
 # **tasksGet**
 > \Ageras\Api\TaskResource tasksGet($task_id )
 
-Get a given task by its given task_id.
+
 
 ### Example
 ```php
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 # **tasksIndex**
 > \Ageras\Api\TaskResult tasksIndex($criteria)
 
-List tasks by employee, asseigned_employee, etc.
+
 
 ### Example
 ```php
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 # **tasksPrioritiesGet**
 > \Ageras\Api\TaskPriorityResource tasksPrioritiesGet($priority_id )
 
-Get a priority from a given id.
+
 
 ### Example
 ```php
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 # **tasksPrioritiesGet_0**
 > \Ageras\Api\TaskPriorityResource tasksPrioritiesGet_0($task_id,  $priority_id )
 
-Get a priority from a given id.
+
 
 ### Example
 ```php
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 # **tasksPrioritiesIndex**
 > \Ageras\Api\TaskPriorityResult tasksPrioritiesIndex($criteria)
 
-List priorities.
+
 
 ### Example
 ```php
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 # **tasksStatusesGet**
 > \Ageras\Api\TaskStatusResource tasksStatusesGet($status_id )
 
-Get a status from a status_id.
+
 
 ### Example
 ```php
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 # **tasksStatusesGet_0**
 > \Ageras\Api\TaskStatusResource tasksStatusesGet_0($task_id,  $status_id )
 
-Get a status from a status_id.
+
 
 ### Example
 ```php
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 # **tasksStatusesIndex**
 > \Ageras\Api\TaskStatusResult tasksStatusesIndex($criteria)
 
-List statuses.
+
 
 ### Example
 ```php
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 # **tasksTaskablesCreate**
 > \Ageras\Api\TaskableResource tasksTaskablesCreate($task_id , $taskable_resource)
 
-create a new taskable for a given task.
+
 
 ### Example
 ```php
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 # **tasksTaskablesDelete**
 > tasksTaskablesDelete($task_id,  $taskable_id )
 
-delete a taskable and remove it from the given task.
+
 
 ### Example
 ```php
@@ -688,7 +688,7 @@ void (empty response body)
 # **tasksTaskablesGet**
 > \Ageras\Api\TaskableResource tasksTaskablesGet($task_id,  $taskable_id )
 
-Get a taskable item from a given taskable id.
+
 
 ### Example
 ```php
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 # **tasksTaskablesIndex**
 > \Ageras\Api\TaskableResult tasksTaskablesIndex($task_id , $criteria)
 
-List the taskables for a given task.
+
 
 ### Example
 ```php
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
 # **tasksUpdate**
 > \Ageras\Api\TaskResource tasksUpdate($task_id , $task_resource)
 
-Update a given task by its task_id.
+
 
 ### Example
 ```php

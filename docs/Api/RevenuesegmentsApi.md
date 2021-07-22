@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**revenuesegmentsIndex**](RevenuesegmentsApi.md#revenuesegmentsIndex) | **GET** /revenuesegments | List revenue segments.
+[**revenuesegmentsIndex**](RevenuesegmentsApi.md#revenuesegmentsIndex) | **GET** /revenuesegments | 
 
 
 # **revenuesegmentsIndex**
 > \Ageras\Api\RevenueSegmentResult revenuesegmentsIndex($criteria)
 
-List revenue segments.
+
 
 ### Example
 ```php

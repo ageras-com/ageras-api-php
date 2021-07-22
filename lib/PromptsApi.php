@@ -90,7 +90,7 @@ class PromptsApi
     /**
      * Operation promptsActionsCreate
      *
-     * Action on prompt
+     * 
      *
      * @param string $prompt_id 
      * @param \Ageras\Api\PromptActionResource $prompt_action_resource 
@@ -106,7 +106,7 @@ class PromptsApi
     /**
      * Operation promptsActionsCreateWithHttpInfo
      *
-     * Action on prompt
+     * 
      *
      * @param string $prompt_id 
      * @param \Ageras\Api\PromptActionResource $prompt_action_resource 
@@ -184,7 +184,7 @@ class PromptsApi
     /**
      * Operation promptsIndex
      *
-     * List of prompts
+     * 
      *
      * @param $criteria = [
      *    'show_expired' => bool,
@@ -207,7 +207,7 @@ class PromptsApi
     /**
      * Operation promptsIndexWithHttpInfo
      *
-     * List of prompts
+     * 
      *
      * @param $criteria = [
      *    'show_expired' => bool,

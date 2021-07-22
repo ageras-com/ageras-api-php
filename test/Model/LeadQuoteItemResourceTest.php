@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadQuoteItemResourceTest extends \PHPUnit_Framework_TestCase
+class LeadQuoteItemResourceTest extends TestCase
 {
 
     /**
@@ -126,6 +126,14 @@ class LeadQuoteItemResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "lead_product_id"
      */
     public function testPropertyLeadProductId()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_product"
+     */
+    public function testPropertyLeadProduct()
     {
 
     }

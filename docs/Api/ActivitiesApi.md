@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activitiesActionsCreate**](ActivitiesApi.md#activitiesActionsCreate) | **POST** /activities/{activity_id}/actions | Perform an action on an Activity
-[**activitiesIndex**](ActivitiesApi.md#activitiesIndex) | **GET** /activities | List Activities.
+[**activitiesActionsCreate**](ActivitiesApi.md#activitiesActionsCreate) | **POST** /activities/{activity_id}/actions | 
+[**activitiesIndex**](ActivitiesApi.md#activitiesIndex) | **GET** /activities | List activities
 
 
 # **activitiesActionsCreate**
 > \Ageras\Api\ActivityResource activitiesActionsCreate($activity_id , $activity_action_resource)
 
-Perform an action on an Activity
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **activitiesIndex**
 > \Ageras\Api\ActivityResult activitiesIndex($criteria)
 
-List Activities.
+List activities
 
 ### Example
 ```php

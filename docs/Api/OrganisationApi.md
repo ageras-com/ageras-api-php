@@ -4,24 +4,24 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**organisationEmployeesActionsCreate**](OrganisationApi.md#organisationEmployeesActionsCreate) | **POST** /organisation/employees/{employee_id}/actions | Perform an employee action.
-[**organisationEmployeesActionsCreate_0**](OrganisationApi.md#organisationEmployeesActionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/actions | Perform an employee action.
-[**organisationEmployeesGet**](OrganisationApi.md#organisationEmployeesGet) | **GET** /organisation/employees/{employee_id} | Get an employee by a given employee id.
-[**organisationEmployeesGet_0**](OrganisationApi.md#organisationEmployeesGet_0) | **GET** /organisation/{organisation_id}/employees/{employee_id} | Get an employee by a given employee id.
-[**organisationEmployeesIndex**](OrganisationApi.md#organisationEmployeesIndex) | **GET** /organisation/employees | List and Search for employees working at Ageras.
-[**organisationEmployeesKpiIndex**](OrganisationApi.md#organisationEmployeesKpiIndex) | **GET** /organisation/employees/kpi | List employee KPIs.
-[**organisationEmployeesKpiIndex_0**](OrganisationApi.md#organisationEmployeesKpiIndex_0) | **GET** /organisation/organisation/employees/kpi | List employee KPIs.
-[**organisationEmployeesKpiIndex_1**](OrganisationApi.md#organisationEmployeesKpiIndex_1) | **GET** /organisation/{organisation_id}/employees/kpi | List employee KPIs.
-[**organisationEmployeesLeadpredictionsCreate**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate) | **POST** /organisation/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
-[**organisationEmployeesLeadpredictionsCreate_0**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | Create an employee lead prediction.
-[**organisationEmployeesNotificationsIndex**](OrganisationApi.md#organisationEmployeesNotificationsIndex) | **GET** /organisation/employees/{employee_id}/notifications | List employee notifications.
-[**organisationEmployeesNotificationsIndex_0**](OrganisationApi.md#organisationEmployeesNotificationsIndex_0) | **GET** /organisation/{organisation_id}/employees/{employee_id}/notifications | List employee notifications.
+[**organisationEmployeesActionsCreate**](OrganisationApi.md#organisationEmployeesActionsCreate) | **POST** /organisation/employees/{employee_id}/actions | 
+[**organisationEmployeesActionsCreate_0**](OrganisationApi.md#organisationEmployeesActionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/actions | 
+[**organisationEmployeesGet**](OrganisationApi.md#organisationEmployeesGet) | **GET** /organisation/employees/{employee_id} | 
+[**organisationEmployeesGet_0**](OrganisationApi.md#organisationEmployeesGet_0) | **GET** /organisation/{organisation_id}/employees/{employee_id} | 
+[**organisationEmployeesIndex**](OrganisationApi.md#organisationEmployeesIndex) | **GET** /organisation/employees | 
+[**organisationEmployeesKpiIndex**](OrganisationApi.md#organisationEmployeesKpiIndex) | **GET** /organisation/employees/kpi | 
+[**organisationEmployeesKpiIndex_0**](OrganisationApi.md#organisationEmployeesKpiIndex_0) | **GET** /organisation/organisation/employees/kpi | 
+[**organisationEmployeesKpiIndex_1**](OrganisationApi.md#organisationEmployeesKpiIndex_1) | **GET** /organisation/{organisation_id}/employees/kpi | 
+[**organisationEmployeesLeadpredictionsCreate**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate) | **POST** /organisation/employees/{employee_id}/leadpredictions | 
+[**organisationEmployeesLeadpredictionsCreate_0**](OrganisationApi.md#organisationEmployeesLeadpredictionsCreate_0) | **POST** /organisation/{organisation_id}/employees/{employee_id}/leadpredictions | 
+[**organisationEmployeesNotificationsIndex**](OrganisationApi.md#organisationEmployeesNotificationsIndex) | **GET** /organisation/employees/{employee_id}/notifications | 
+[**organisationEmployeesNotificationsIndex_0**](OrganisationApi.md#organisationEmployeesNotificationsIndex_0) | **GET** /organisation/{organisation_id}/employees/{employee_id}/notifications | 
 
 
 # **organisationEmployeesActionsCreate**
 > \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate($employee_id , $employee_action_resource)
 
-Perform an employee action.
+
 
 ### Example
 ```php
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesActionsCreate_0**
 > \Ageras\Api\EmployeeResource organisationEmployeesActionsCreate_0($organisation_id,  $employee_id , $employee_action_resource)
 
-Perform an employee action.
+
 
 ### Example
 ```php
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesGet**
 > \Ageras\Api\EmployeeResource organisationEmployeesGet($employee_id )
 
-Get an employee by a given employee id.
+
 
 ### Example
 ```php
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesGet_0**
 > \Ageras\Api\EmployeeResource organisationEmployeesGet_0($organisation_id,  $employee_id )
 
-Get an employee by a given employee id.
+
 
 ### Example
 ```php
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesIndex**
 > \Ageras\Api\EmployeeResult organisationEmployeesIndex($criteria)
 
-List and Search for employees working at Ageras.
+
 
 ### Example
 ```php
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesKpiIndex**
 > \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex($criteria)
 
-List employee KPIs.
+
 
 ### Example
 ```php
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesKpiIndex_0**
 > \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex_0($criteria)
 
-List employee KPIs.
+
 
 ### Example
 ```php
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesKpiIndex_1**
 > \Ageras\Api\EmployeeKpiResult organisationEmployeesKpiIndex_1($organisation_id , $criteria)
 
-List employee KPIs.
+
 
 ### Example
 ```php
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesLeadpredictionsCreate**
 > \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate($employee_id , $employee_lead_prediction_resource)
 
-Create an employee lead prediction.
+
 
 ### Example
 ```php
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesLeadpredictionsCreate_0**
 > \Ageras\Api\EmployeeLeadPredictionResource organisationEmployeesLeadpredictionsCreate_0($organisation_id,  $employee_id , $employee_lead_prediction_resource)
 
-Create an employee lead prediction.
+
 
 ### Example
 ```php
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesNotificationsIndex**
 > \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex($employee_id , $criteria)
 
-List employee notifications.
+
 
 ### Example
 ```php
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 # **organisationEmployeesNotificationsIndex_0**
 > \Ageras\Api\EmployeeNotificationResult organisationEmployeesNotificationsIndex_0($organisation_id,  $employee_id , $criteria)
 
-List employee notifications.
+
 
 ### Example
 ```php

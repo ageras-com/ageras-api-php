@@ -90,7 +90,7 @@ class KpiApi
     /**
      * Operation kpiIndex
      *
-     * List the different KPI's
+     * 
      *
      * @param $criteria = [
      *    'kpi_id' => string,
@@ -115,7 +115,7 @@ class KpiApi
     /**
      * Operation kpiIndexWithHttpInfo
      *
-     * List the different KPI's
+     * 
      *
      * @param $criteria = [
      *    'kpi_id' => string,
@@ -225,7 +225,7 @@ class KpiApi
     /**
      * Operation kpiTargetsCreate
      *
-     * Create kpi target
+     * 
      *
      * @param \Ageras\Api\KpiTargetResource $kpi_target_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -240,7 +240,7 @@ class KpiApi
     /**
      * Operation kpiTargetsCreateWithHttpInfo
      *
-     * Create kpi target
+     * 
      *
      * @param \Ageras\Api\KpiTargetResource $kpi_target_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -309,7 +309,7 @@ class KpiApi
     /**
      * Operation kpiTargetsIndex
      *
-     * Get KPI target values.
+     * 
      *
      * @param $criteria = [
      *    'kpi_identifier' => string,
@@ -331,7 +331,7 @@ class KpiApi
     /**
      * Operation kpiTargetsIndexWithHttpInfo
      *
-     * Get KPI target values.
+     * 
      *
      * @param $criteria = [
      *    'kpi_identifier' => string,
@@ -426,7 +426,7 @@ class KpiApi
     /**
      * Operation kpiValuesIndex
      *
-     * Get KPI values.
+     * 
      *
      * @param $criteria = [
      *    'kpi_identifier' => string,
@@ -448,7 +448,7 @@ class KpiApi
     /**
      * Operation kpiValuesIndexWithHttpInfo
      *
-     * Get KPI values.
+     * 
      *
      * @param $criteria = [
      *    'kpi_identifier' => string,

@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadTypeResourceTest extends \PHPUnit_Framework_TestCase
+class LeadTypeResourceTest extends TestCase
 {
 
     /**
@@ -110,6 +110,14 @@ class LeadTypeResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "archived_at"
+     */
+    public function testPropertyArchivedAt()
     {
 
     }

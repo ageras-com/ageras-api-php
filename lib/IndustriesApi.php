@@ -90,7 +90,7 @@ class IndustriesApi
     /**
      * Operation industriesIndex
      *
-     * List Industries and filter by parent industry.
+     * Get all industries.
      *
      * @param $criteria = [
      *    'industry_id' => string,
@@ -115,7 +115,7 @@ class IndustriesApi
     /**
      * Operation industriesIndexWithHttpInfo
      *
-     * List Industries and filter by parent industry.
+     * Get all industries.
      *
      * @param $criteria = [
      *    'industry_id' => string,

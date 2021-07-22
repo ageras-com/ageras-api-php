@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clientsBrowserpushsubscriptionsCreate**](ClientsApi.md#clientsBrowserpushsubscriptionsCreate) | **POST** /clients/{client_id}/browserpushsubscriptions | Create a browser push subscription
-[**clientsGet**](ClientsApi.md#clientsGet) | **GET** /clients/{client_id} | Return a Client
-[**clientsUpdate**](ClientsApi.md#clientsUpdate) | **PUT** /clients/{client_id} | Update a client
+[**clientsBrowserpushsubscriptionsCreate**](ClientsApi.md#clientsBrowserpushsubscriptionsCreate) | **POST** /clients/{client_id}/browserpushsubscriptions | 
+[**clientsGet**](ClientsApi.md#clientsGet) | **GET** /clients/{client_id} | 
+[**clientsUpdate**](ClientsApi.md#clientsUpdate) | **PUT** /clients/{client_id} | 
 
 
 # **clientsBrowserpushsubscriptionsCreate**
 > \Ageras\Api\BrowserPushSubscriptionResource clientsBrowserpushsubscriptionsCreate($client_id , $browser_push_subscription_resource)
 
-Create a browser push subscription
+
 
 ### Example
 ```php
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **clientsGet**
 > \Ageras\Api\ClientResource clientsGet($client_id )
 
-Return a Client
+
 
 ### Example
 ```php
@@ -81,7 +81,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\ClientsApi();
-$client_id = "client_id_example"; // string | Id of the client
+$client_id = "client_id_example"; // string | 
 
 try {
     $result = $api_instance->clientsGet($client_id );
@@ -96,7 +96,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **string**| Id of the client |
+ **client_id** | **string**|  |
 
 ### Return type
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 # **clientsUpdate**
 > \Ageras\Api\ClientResource clientsUpdate($client_id , $client_resource)
 
-Update a client
+
 
 ### Example
 ```php

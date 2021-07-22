@@ -66,6 +66,7 @@ class LeadResource implements ArrayAccess
         'progress' => '\Ageras\Api\LeadProgressResource[]',
         'title' => 'string',
         'description' => 'string',
+        'marketplace_description' => 'string',
         'client' => '\Ageras\Api\LeadClientResource',
         'customer_info' => '\Ageras\Api\LeadCustomerInfoResource',
         'requirements' => '\Ageras\Api\LeadRequirementsResource',
@@ -120,6 +121,7 @@ class LeadResource implements ArrayAccess
         'progress' => 'progress',
         'title' => 'title',
         'description' => 'description',
+        'marketplace_description' => 'marketplace_description',
         'client' => 'client',
         'customer_info' => 'customer_info',
         'requirements' => 'requirements',
@@ -170,6 +172,7 @@ class LeadResource implements ArrayAccess
         'progress' => 'setProgress',
         'title' => 'setTitle',
         'description' => 'setDescription',
+        'marketplace_description' => 'setMarketplaceDescription',
         'client' => 'setClient',
         'customer_info' => 'setCustomerInfo',
         'requirements' => 'setRequirements',
@@ -220,6 +223,7 @@ class LeadResource implements ArrayAccess
         'progress' => 'getProgress',
         'title' => 'getTitle',
         'description' => 'getDescription',
+        'marketplace_description' => 'getMarketplaceDescription',
         'client' => 'getClient',
         'customer_info' => 'getCustomerInfo',
         'requirements' => 'getRequirements',
@@ -321,6 +325,7 @@ class LeadResource implements ArrayAccess
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['marketplace_description'] = isset($data['marketplace_description']) ? $data['marketplace_description'] : null;
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
         $this->container['customer_info'] = isset($data['customer_info']) ? $data['customer_info'] : null;
         $this->container['requirements'] = isset($data['requirements']) ? $data['requirements'] : null;
@@ -639,6 +644,27 @@ class LeadResource implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketplace_description
+     * @return string
+     */
+    public function getMarketplaceDescription()
+    {
+        return $this->container['marketplace_description'];
+    }
+
+    /**
+     * Sets marketplace_description
+     * @param string $marketplace_description
+     * @return $this
+     */
+    public function setMarketplaceDescription($marketplace_description)
+    {
+        $this->container['marketplace_description'] = $marketplace_description;
 
         return $this;
     }

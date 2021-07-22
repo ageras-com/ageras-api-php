@@ -90,7 +90,7 @@ class NotificationsApi
     /**
      * Operation notificationsActionsCreate
      *
-     * Perform an action on one or more notifications
+     * 
      *
      * @param \Ageras\Api\NotificationActionResource $notification_action_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class NotificationsApi
     /**
      * Operation notificationsActionsCreateWithHttpInfo
      *
-     * Perform an action on one or more notifications
+     * 
      *
      * @param \Ageras\Api\NotificationActionResource $notification_action_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,7 +174,7 @@ class NotificationsApi
     /**
      * Operation notificationsActionsCreate_0
      *
-     * Perform an action on one or more notifications
+     * 
      *
      * @param string $notification_id 
      * @param \Ageras\Api\NotificationActionResource $notification_action_resource 
@@ -190,7 +190,7 @@ class NotificationsApi
     /**
      * Operation notificationsActionsCreate_0WithHttpInfo
      *
-     * Perform an action on one or more notifications
+     * 
      *
      * @param string $notification_id 
      * @param \Ageras\Api\NotificationActionResource $notification_action_resource 
@@ -268,7 +268,7 @@ class NotificationsApi
     /**
      * Operation notificationsGet
      *
-     * Get single notification
+     * 
      *
      * @param string $notification_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -283,7 +283,7 @@ class NotificationsApi
     /**
      * Operation notificationsGetWithHttpInfo
      *
-     * Get single notification
+     * 
      *
      * @param string $notification_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -355,7 +355,7 @@ class NotificationsApi
     /**
      * Operation notificationsIndex
      *
-     * List notifications
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -380,7 +380,7 @@ class NotificationsApi
     /**
      * Operation notificationsIndexWithHttpInfo
      *
-     * List notifications
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

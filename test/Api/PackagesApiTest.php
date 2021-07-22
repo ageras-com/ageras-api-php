@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PackagesApiTest extends \PHPUnit_Framework_TestCase
+class PackagesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PackagesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for packagesFeaturesIndex
      *
-     * Get all package features..
+     * .
      *
      */
     public function testPackagesFeaturesIndex()
@@ -90,7 +90,7 @@ class PackagesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for packagesGet
      *
-     * Get an individual package by ID..
+     * .
      *
      */
     public function testPackagesGet()
@@ -101,7 +101,7 @@ class PackagesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for packagesIndex
      *
-     * Get all active packages for a given geo_code..
+     * .
      *
      */
     public function testPackagesIndex()

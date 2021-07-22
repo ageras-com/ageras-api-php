@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AuthApiTest extends \PHPUnit_Framework_TestCase
+class AuthApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authCreate
      *
-     * Authenticate user and receive a token..
+     * .
      *
      */
     public function testAuthCreate()
@@ -90,7 +90,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authDelete
      *
-     * Logout and end session/token..
+     * .
      *
      */
     public function testAuthDelete()
@@ -101,7 +101,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authGet
      *
-     * Get information about the current Authenticated session..
+     * .
      *
      */
     public function testAuthGet()
@@ -112,7 +112,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authPasswordCreate
      *
-     * Reset Password from a given reset token..
+     * .
      *
      */
     public function testAuthPasswordCreate()
@@ -123,7 +123,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authPasswordUpdate
      *
-     * Change Password..
+     * .
      *
      */
     public function testAuthPasswordUpdate()
@@ -134,7 +134,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authPasswordreminderCreate
      *
-     * Request a password reminder e-mail..
+     * .
      *
      */
     public function testAuthPasswordreminderCreate()
@@ -145,7 +145,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authPermissionsIndex
      *
-     * List the Permissions for the given authenticated user..
+     * .
      *
      */
     public function testAuthPermissionsIndex()
@@ -156,7 +156,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authTokenDelete
      *
-     * Delete a token.
+     * .
      *
      */
     public function testAuthTokenDelete()
@@ -167,7 +167,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authTokenGet
      *
-     * Get information about the token.
+     * .
      *
      */
     public function testAuthTokenGet()
@@ -178,7 +178,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authTokenUpdate
      *
-     * Renew token.
+     * .
      *
      */
     public function testAuthTokenUpdate()
@@ -189,7 +189,7 @@ class AuthApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for authUpdate
      *
-     * Renew authentication session..
+     * .
      *
      */
     public function testAuthUpdate()

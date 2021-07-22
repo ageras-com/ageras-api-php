@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**certificationsIndex**](CertificationsApi.md#certificationsIndex) | **GET** /certifications | Get all available certifications.
+[**certificationsIndex**](CertificationsApi.md#certificationsIndex) | **GET** /certifications | 
 
 
 # **certificationsIndex**
 > \Ageras\Api\CertificationResult certificationsIndex($criteria)
 
-Get all available certifications.
+
 
 ### Example
 ```php

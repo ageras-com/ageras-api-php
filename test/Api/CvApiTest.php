@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CvApiTest extends \PHPUnit_Framework_TestCase
+class CvApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvAwardCreate
      *
-     * Create partner user award..
+     * .
      *
      */
     public function testCvAwardCreate()
@@ -90,7 +90,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvAwardDelete
      *
-     * Delete partner user award..
+     * .
      *
      */
     public function testCvAwardDelete()
@@ -101,7 +101,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvAwardUpdate
      *
-     * Update partner user award..
+     * .
      *
      */
     public function testCvAwardUpdate()
@@ -112,7 +112,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvBadgeCreate
      *
-     * Create partner user badge..
+     * .
      *
      */
     public function testCvBadgeCreate()
@@ -123,7 +123,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvBadgeDelete
      *
-     * Delete partner user badge..
+     * .
      *
      */
     public function testCvBadgeDelete()
@@ -134,7 +134,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvCourseCreate
      *
-     * Create partner user course..
+     * .
      *
      */
     public function testCvCourseCreate()
@@ -145,7 +145,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvCourseDelete
      *
-     * Delete partner user course..
+     * .
      *
      */
     public function testCvCourseDelete()
@@ -156,7 +156,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvCourseUpdate
      *
-     * Update partner user course..
+     * .
      *
      */
     public function testCvCourseUpdate()
@@ -167,7 +167,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvDescriptionCreate
      *
-     * Create partner user description..
+     * .
      *
      */
     public function testCvDescriptionCreate()
@@ -178,7 +178,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvDescriptionDelete
      *
-     * Delete partner user description..
+     * .
      *
      */
     public function testCvDescriptionDelete()
@@ -189,7 +189,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvDescriptionUpdate
      *
-     * Update partner user description..
+     * .
      *
      */
     public function testCvDescriptionUpdate()
@@ -200,7 +200,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvEducationCreate
      *
-     * Create partner user education..
+     * .
      *
      */
     public function testCvEducationCreate()
@@ -211,7 +211,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvEducationDelete
      *
-     * Delete partner user education..
+     * .
      *
      */
     public function testCvEducationDelete()
@@ -222,7 +222,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvEducationUpdate
      *
-     * Update partner user education..
+     * .
      *
      */
     public function testCvEducationUpdate()
@@ -233,7 +233,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExperienceCreate
      *
-     * Create partner user experience..
+     * .
      *
      */
     public function testCvExperienceCreate()
@@ -244,7 +244,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExperienceDelete
      *
-     * Delete partner user experience..
+     * .
      *
      */
     public function testCvExperienceDelete()
@@ -255,7 +255,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExperienceUpdate
      *
-     * Update partner user experience..
+     * .
      *
      */
     public function testCvExperienceUpdate()
@@ -266,7 +266,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExpertiseCreate
      *
-     * Create partner user expertise..
+     * .
      *
      */
     public function testCvExpertiseCreate()
@@ -277,7 +277,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExpertiseDelete
      *
-     * Delete partner user expertise..
+     * .
      *
      */
     public function testCvExpertiseDelete()
@@ -288,7 +288,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvExpertiseUpdate
      *
-     * Update partner user expertise..
+     * .
      *
      */
     public function testCvExpertiseUpdate()
@@ -299,7 +299,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvGet
      *
-     * Get partner user cv..
+     * .
      *
      */
     public function testCvGet()
@@ -310,7 +310,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvIndex
      *
-     * Index all partner user CV for given partner..
+     * .
      *
      */
     public function testCvIndex()
@@ -321,7 +321,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvLanguageCreate
      *
-     * Create partner user language..
+     * .
      *
      */
     public function testCvLanguageCreate()
@@ -332,7 +332,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvLanguageDelete
      *
-     * Delete partner user language..
+     * .
      *
      */
     public function testCvLanguageDelete()
@@ -343,7 +343,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvLanguageUpdate
      *
-     * Update partner user language..
+     * .
      *
      */
     public function testCvLanguageUpdate()
@@ -354,7 +354,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvSocialDelete
      *
-     * Delete partner user social media..
+     * .
      *
      */
     public function testCvSocialDelete()
@@ -365,7 +365,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvSocialDelete_0
      *
-     * Delete partner user social media..
+     * .
      *
      */
     public function testCvSocialDelete0()
@@ -376,7 +376,7 @@ class CvApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cvSocialUpdate
      *
-     * Update partner user social media..
+     * .
      *
      */
     public function testCvSocialUpdate()

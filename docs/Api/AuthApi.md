@@ -4,23 +4,23 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authCreate**](AuthApi.md#authCreate) | **POST** /auth | Authenticate user and receive a token.
-[**authDelete**](AuthApi.md#authDelete) | **DELETE** /auth/{auth_id} | Logout and end session/token.
-[**authGet**](AuthApi.md#authGet) | **GET** /auth/{auth_id} | Get information about the current Authenticated session.
-[**authPasswordCreate**](AuthApi.md#authPasswordCreate) | **POST** /auth/password | Reset Password from a given reset token.
-[**authPasswordUpdate**](AuthApi.md#authPasswordUpdate) | **PUT** /auth/password | Change Password.
-[**authPasswordreminderCreate**](AuthApi.md#authPasswordreminderCreate) | **POST** /auth/passwordreminder | Request a password reminder e-mail.
-[**authPermissionsIndex**](AuthApi.md#authPermissionsIndex) | **GET** /auth/permissions | List the Permissions for the given authenticated user.
-[**authTokenDelete**](AuthApi.md#authTokenDelete) | **DELETE** /auth/token | Delete a token
-[**authTokenGet**](AuthApi.md#authTokenGet) | **GET** /auth/token | Get information about the token
-[**authTokenUpdate**](AuthApi.md#authTokenUpdate) | **PUT** /auth/token | Renew token
-[**authUpdate**](AuthApi.md#authUpdate) | **PUT** /auth/{auth_id} | Renew authentication session.
+[**authCreate**](AuthApi.md#authCreate) | **POST** /auth | 
+[**authDelete**](AuthApi.md#authDelete) | **DELETE** /auth/{auth_id} | 
+[**authGet**](AuthApi.md#authGet) | **GET** /auth/{auth_id} | 
+[**authPasswordCreate**](AuthApi.md#authPasswordCreate) | **POST** /auth/password | 
+[**authPasswordUpdate**](AuthApi.md#authPasswordUpdate) | **PUT** /auth/password | 
+[**authPasswordreminderCreate**](AuthApi.md#authPasswordreminderCreate) | **POST** /auth/passwordreminder | 
+[**authPermissionsIndex**](AuthApi.md#authPermissionsIndex) | **GET** /auth/permissions | 
+[**authTokenDelete**](AuthApi.md#authTokenDelete) | **DELETE** /auth/token | 
+[**authTokenGet**](AuthApi.md#authTokenGet) | **GET** /auth/token | 
+[**authTokenUpdate**](AuthApi.md#authTokenUpdate) | **PUT** /auth/token | 
+[**authUpdate**](AuthApi.md#authUpdate) | **PUT** /auth/{auth_id} | 
 
 
 # **authCreate**
 > \Ageras\Api\AuthResource authCreate($auth_resource)
 
-Authenticate user and receive a token.
+
 
 ### Example
 ```php
@@ -36,7 +36,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | Authentication Resource with authorize information
+$auth_resource = new \Ageras\Api\AuthResource(); // \Ageras\Api\AuthResource | 
 
 try {
     $result = $api_instance->authCreate($auth_resource);
@@ -51,7 +51,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)| Authentication Resource with authorize information |
+ **auth_resource** | [**\Ageras\Api\AuthResource**](../Model/\Ageras\Api\AuthResource.md)|  |
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **authDelete**
 > authDelete($auth_id )
 
-Logout and end session/token.
+
 
 ### Example
 ```php
@@ -121,7 +121,7 @@ void (empty response body)
 # **authGet**
 > \Ageras\Api\AuthResource authGet($auth_id )
 
-Get information about the current Authenticated session.
+
 
 ### Example
 ```php
@@ -137,7 +137,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\AuthApi();
-$auth_id = "auth_id_example"; // string | default value is token
+$auth_id = "auth_id_example"; // string | 
 
 try {
     $result = $api_instance->authGet($auth_id );
@@ -152,7 +152,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_id** | **string**| default value is token |
+ **auth_id** | **string**|  |
 
 ### Return type
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 # **authPasswordCreate**
 > \Ageras\Api\PasswordResetResource authPasswordCreate($password_reset_resource)
 
-Reset Password from a given reset token.
+
 
 ### Example
 ```php
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 # **authPasswordUpdate**
 > \Ageras\Api\PasswordResetResource authPasswordUpdate($password_reset_resource)
 
-Change Password.
+
 
 ### Example
 ```php
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 # **authPasswordreminderCreate**
 > \Ageras\Api\PasswordReminderResource authPasswordreminderCreate($password_reminder_resource)
 
-Request a password reminder e-mail.
+
 
 ### Example
 ```php
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 # **authPermissionsIndex**
 > \Ageras\Api\PermissionResult authPermissionsIndex($criteria)
 
-List the Permissions for the given authenticated user.
+
 
 ### Example
 ```php
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 # **authTokenDelete**
 > authTokenDelete()
 
-Delete a token
+
 
 ### Example
 ```php
@@ -428,7 +428,7 @@ void (empty response body)
 # **authTokenGet**
 > \Ageras\Api\AuthResource authTokenGet()
 
-Get information about the token
+
 
 ### Example
 ```php
@@ -475,7 +475,7 @@ This endpoint does not need any parameter.
 # **authTokenUpdate**
 > \Ageras\Api\AuthResource authTokenUpdate($auth_resource)
 
-Renew token
+
 
 ### Example
 ```php
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 # **authUpdate**
 > \Ageras\Api\AuthResource authUpdate($auth_id , $auth_resource)
 
-Renew authentication session.
+
 
 ### Example
 ```php

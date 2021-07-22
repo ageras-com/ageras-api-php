@@ -90,7 +90,7 @@ class RatingsApi
     /**
      * Operation ratingsCreate
      *
-     * Create a rating.
+     * 
      *
      * @param \Ageras\Api\RatingResource $rating_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class RatingsApi
     /**
      * Operation ratingsCreateWithHttpInfo
      *
-     * Create a rating.
+     * 
      *
      * @param \Ageras\Api\RatingResource $rating_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,9 +174,9 @@ class RatingsApi
     /**
      * Operation ratingsGet
      *
-     * Return a rating from a rating ID.
+     * 
      *
-     * @param string $rating_id The id the Rating to return
+     * @param string $rating_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\RatingResource
      */
@@ -189,9 +189,9 @@ class RatingsApi
     /**
      * Operation ratingsGetWithHttpInfo
      *
-     * Return a rating from a rating ID.
+     * 
      *
-     * @param string $rating_id The id the Rating to return
+     * @param string $rating_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\RatingResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -261,7 +261,7 @@ class RatingsApi
     /**
      * Operation ratingsIndex
      *
-     * Search for Lead's by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -290,7 +290,7 @@ class RatingsApi
     /**
      * Operation ratingsIndexWithHttpInfo
      *
-     * Search for Lead's by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -420,7 +420,7 @@ class RatingsApi
     /**
      * Operation ratingsUpdate
      *
-     * Update a rating.
+     * 
      *
      * @param string $rating_id 
      * @param \Ageras\Api\RatingResource $rating_resource 
@@ -436,7 +436,7 @@ class RatingsApi
     /**
      * Operation ratingsUpdateWithHttpInfo
      *
-     * Update a rating.
+     * 
      *
      * @param string $rating_id 
      * @param \Ageras\Api\RatingResource $rating_resource 

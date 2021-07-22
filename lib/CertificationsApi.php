@@ -90,7 +90,7 @@ class CertificationsApi
     /**
      * Operation certificationsIndex
      *
-     * Get all available certifications.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -112,7 +112,7 @@ class CertificationsApi
     /**
      * Operation certificationsIndexWithHttpInfo
      *
-     * Get all available certifications.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

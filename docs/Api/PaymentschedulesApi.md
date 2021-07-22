@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**paymentschedulesIndex**](PaymentschedulesApi.md#paymentschedulesIndex) | **GET** /paymentschedules | List partner payment schedules.
+[**paymentschedulesIndex**](PaymentschedulesApi.md#paymentschedulesIndex) | **GET** /paymentschedules | 
 
 
 # **paymentschedulesIndex**
 > \Ageras\Api\PartnerPaymentScheduleResult paymentschedulesIndex($criteria)
 
-List partner payment schedules.
+
 
 ### Example
 ```php

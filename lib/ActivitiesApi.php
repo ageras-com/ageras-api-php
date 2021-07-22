@@ -90,7 +90,7 @@ class ActivitiesApi
     /**
      * Operation activitiesActionsCreate
      *
-     * Perform an action on an Activity
+     * 
      *
      * @param string $activity_id 
      * @param \Ageras\Api\ActivityActionResource $activity_action_resource 
@@ -106,7 +106,7 @@ class ActivitiesApi
     /**
      * Operation activitiesActionsCreateWithHttpInfo
      *
-     * Perform an action on an Activity
+     * 
      *
      * @param string $activity_id 
      * @param \Ageras\Api\ActivityActionResource $activity_action_resource 
@@ -184,7 +184,7 @@ class ActivitiesApi
     /**
      * Operation activitiesIndex
      *
-     * List Activities.
+     * List activities
      *
      * @param $criteria = [
      *    'activity_id' => string,
@@ -212,7 +212,7 @@ class ActivitiesApi
     /**
      * Operation activitiesIndexWithHttpInfo
      *
-     * List Activities.
+     * List activities
      *
      * @param $criteria = [
      *    'activity_id' => string,

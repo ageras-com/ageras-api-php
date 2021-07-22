@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LocationsApiTest extends \PHPUnit_Framework_TestCase
+class LocationsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for locationsGet
      *
-     * Retrieve a location from a given location_id..
+     * .
      *
      */
     public function testLocationsGet()
@@ -90,7 +90,7 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for locationsIndex
      *
-     * Search and find locations by different criterias..
+     * .
      *
      */
     public function testLocationsIndex()
@@ -101,7 +101,7 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for locationsSegmentationgeoregionsIndex
      *
-     * List the segmentation geo regions.
+     * .
      *
      */
     public function testLocationsSegmentationgeoregionsIndex()
@@ -112,7 +112,7 @@ class LocationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex
      *
-     * List segmentation sub geo regions..
+     * .
      *
      */
     public function testLocationsSegmentationgeoregionsSegmentationsubgeoregionsIndex()

@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RevenuesegmentsApiTest extends \PHPUnit_Framework_TestCase
+class RevenuesegmentsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class RevenuesegmentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for revenuesegmentsIndex
      *
-     * List revenue segments..
+     * .
      *
      */
     public function testRevenuesegmentsIndex()

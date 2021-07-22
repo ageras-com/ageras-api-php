@@ -90,7 +90,7 @@ class ProjectsApi
     /**
      * Operation projectsCreate
      *
-     * Create Project.
+     * 
      *
      * @param \Ageras\Api\ProjectResource $project_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class ProjectsApi
     /**
      * Operation projectsCreateWithHttpInfo
      *
-     * Create Project.
+     * 
      *
      * @param \Ageras\Api\ProjectResource $project_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,7 +174,7 @@ class ProjectsApi
     /**
      * Operation projectsDelete
      *
-     * Delete a project for a given project id.
+     * 
      *
      * @param string $project_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -189,7 +189,7 @@ class ProjectsApi
     /**
      * Operation projectsDeleteWithHttpInfo
      *
-     * Delete a project for a given project id.
+     * 
      *
      * @param string $project_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -257,7 +257,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsCreate
      *
-     * Create events for a given project.
+     * 
      *
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -272,7 +272,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsCreateWithHttpInfo
      *
-     * Create events for a given project.
+     * 
      *
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -341,7 +341,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsCreate_0
      *
-     * Create events for a given project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
@@ -357,7 +357,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsCreate_0WithHttpInfo
      *
-     * Create events for a given project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
@@ -435,7 +435,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsDelete
      *
-     * Delete a given project event.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -451,7 +451,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsDeleteWithHttpInfo
      *
-     * Delete a given project event.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -528,7 +528,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsGet
      *
-     * Get event for a given project.
+     * 
      *
      * @param string $project_event_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -543,7 +543,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsGetWithHttpInfo
      *
-     * Get event for a given project.
+     * 
      *
      * @param string $project_event_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -615,7 +615,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsGet_0
      *
-     * Get event for a given project.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -631,7 +631,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsGet_0WithHttpInfo
      *
-     * Get event for a given project.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -712,7 +712,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsIndex
      *
-     * List events for a given project.
+     * 
      *
      * @param $criteria = [
      *    'project_event_id' => string,
@@ -738,7 +738,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsIndexWithHttpInfo
      *
-     * List events for a given project.
+     * 
      *
      * @param $criteria = [
      *    'project_event_id' => string,
@@ -853,7 +853,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsIndex_0
      *
-     * List events for a given project.
+     * 
      *
      * @param string $project_id 
      * @param $criteria = [
@@ -879,7 +879,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsIndex_0WithHttpInfo
      *
-     * List events for a given project.
+     * 
      *
      * @param string $project_id 
      * @param $criteria = [
@@ -998,7 +998,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsUpdate
      *
-     * Update e events for project events.
+     * 
      *
      * @param string $project_event_id 
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
@@ -1014,7 +1014,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsUpdateWithHttpInfo
      *
-     * Update e events for project events.
+     * 
      *
      * @param string $project_event_id 
      * @param \Ageras\Api\ProjectEventResource $project_event_resource 
@@ -1092,7 +1092,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsUpdate_0
      *
-     * Update e events for project events.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -1109,7 +1109,7 @@ class ProjectsApi
     /**
      * Operation projectsEventsUpdate_0WithHttpInfo
      *
-     * Update e events for project events.
+     * 
      *
      * @param string $project_id 
      * @param string $project_event_id 
@@ -1196,7 +1196,7 @@ class ProjectsApi
     /**
      * Operation projectsGet
      *
-     * Get a Project from a project id.
+     * 
      *
      * @param string $project_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1211,7 +1211,7 @@ class ProjectsApi
     /**
      * Operation projectsGetWithHttpInfo
      *
-     * Get a Project from a project id.
+     * 
      *
      * @param string $project_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1283,7 +1283,7 @@ class ProjectsApi
     /**
      * Operation projectsIndex
      *
-     * List Projects.
+     * 
      *
      * @param $criteria = [
      *    'project_id' => string,
@@ -1312,7 +1312,7 @@ class ProjectsApi
     /**
      * Operation projectsIndexWithHttpInfo
      *
-     * List Projects.
+     * 
      *
      * @param $criteria = [
      *    'project_id' => string,
@@ -1442,7 +1442,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesCreate
      *
-     * Create a note for a given project.
+     * 
      *
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1457,7 +1457,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesCreateWithHttpInfo
      *
-     * Create a note for a given project.
+     * 
      *
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1526,7 +1526,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesCreate_0
      *
-     * Create a note for a given project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
@@ -1542,7 +1542,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesCreate_0WithHttpInfo
      *
-     * Create a note for a given project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
@@ -1620,7 +1620,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesDelete
      *
-     * Delete a project note.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -1636,7 +1636,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesDeleteWithHttpInfo
      *
-     * Delete a project note.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -1713,7 +1713,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesGet
      *
-     * Get a note from Project and note id.
+     * 
      *
      * @param string $project_note_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1728,7 +1728,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesGetWithHttpInfo
      *
-     * Get a note from Project and note id.
+     * 
      *
      * @param string $project_note_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1800,7 +1800,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesGet_0
      *
-     * Get a note from Project and note id.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -1816,7 +1816,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesGet_0WithHttpInfo
      *
-     * Get a note from Project and note id.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -1897,7 +1897,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesIndex
      *
-     * List notes from a given project.
+     * 
      *
      * @param $criteria = [
      *    'project_note_id' => string,
@@ -1925,7 +1925,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesIndexWithHttpInfo
      *
-     * List notes from a given project.
+     * 
      *
      * @param $criteria = [
      *    'project_note_id' => string,
@@ -2050,7 +2050,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesIndex_0
      *
-     * List notes from a given project.
+     * 
      *
      * @param string $project_id 
      * @param $criteria = [
@@ -2078,7 +2078,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesIndex_0WithHttpInfo
      *
-     * List notes from a given project.
+     * 
      *
      * @param string $project_id 
      * @param $criteria = [
@@ -2207,7 +2207,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesUpdate
      *
-     * Update a given project note.
+     * 
      *
      * @param string $project_note_id 
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
@@ -2223,7 +2223,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesUpdateWithHttpInfo
      *
-     * Update a given project note.
+     * 
      *
      * @param string $project_note_id 
      * @param \Ageras\Api\ProjectNoteResource $project_note_resource 
@@ -2301,7 +2301,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesUpdate_0
      *
-     * Update a given project note.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -2318,7 +2318,7 @@ class ProjectsApi
     /**
      * Operation projectsNotesUpdate_0WithHttpInfo
      *
-     * Update a given project note.
+     * 
      *
      * @param string $project_id 
      * @param string $project_note_id 
@@ -2405,7 +2405,7 @@ class ProjectsApi
     /**
      * Operation projectsStatusesGet
      *
-     * Get a Project Status from Id.
+     * 
      *
      * @param string $status 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2420,7 +2420,7 @@ class ProjectsApi
     /**
      * Operation projectsStatusesGetWithHttpInfo
      *
-     * Get a Project Status from Id.
+     * 
      *
      * @param string $status 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2492,7 +2492,7 @@ class ProjectsApi
     /**
      * Operation projectsStatusesIndex
      *
-     * List Available Project Statuses.
+     * 
      *
      * @param $criteria = [
      *    'status' => string,
@@ -2512,7 +2512,7 @@ class ProjectsApi
     /**
      * Operation projectsStatusesIndexWithHttpInfo
      *
-     * List Available Project Statuses.
+     * 
      *
      * @param $criteria = [
      *    'status' => string,
@@ -2597,7 +2597,7 @@ class ProjectsApi
     /**
      * Operation projectsUpdate
      *
-     * Update a project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectResource $project_resource 
@@ -2613,7 +2613,7 @@ class ProjectsApi
     /**
      * Operation projectsUpdateWithHttpInfo
      *
-     * Update a project.
+     * 
      *
      * @param string $project_id 
      * @param \Ageras\Api\ProjectResource $project_resource 

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**refundsGet**](RefundsApi.md#refundsGet) | **GET** /refunds/{refund_id} | Get a single refund request.
-[**refundsIndex**](RefundsApi.md#refundsIndex) | **GET** /refunds | List refund requests.
+[**refundsGet**](RefundsApi.md#refundsGet) | **GET** /refunds/{refund_id} | 
+[**refundsIndex**](RefundsApi.md#refundsIndex) | **GET** /refunds | 
 
 
 # **refundsGet**
 > \Ageras\Api\RefundResource refundsGet($refund_id )
 
-Get a single refund request.
+
 
 ### Example
 ```php
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 # **refundsIndex**
 > \Ageras\Api\RefundResult refundsIndex($criteria)
 
-List refund requests.
+
 
 ### Example
 ```php

@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**packagesFeaturesIndex**](PackagesApi.md#packagesFeaturesIndex) | **GET** /packages/features | Get all package features.
-[**packagesGet**](PackagesApi.md#packagesGet) | **GET** /packages/{id} | Get an individual package by ID.
-[**packagesIndex**](PackagesApi.md#packagesIndex) | **GET** /packages | Get all active packages for a given geo_code.
+[**packagesFeaturesIndex**](PackagesApi.md#packagesFeaturesIndex) | **GET** /packages/features | 
+[**packagesGet**](PackagesApi.md#packagesGet) | **GET** /packages/{id} | 
+[**packagesIndex**](PackagesApi.md#packagesIndex) | **GET** /packages | 
 
 
 # **packagesFeaturesIndex**
 > \Ageras\Api\PackageFeatureResult packagesFeaturesIndex($criteria)
 
-Get all package features.
+
 
 ### Example
 ```php
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **packagesGet**
 > \Ageras\Api\PackageResource packagesGet($id )
 
-Get an individual package by ID.
+
 
 ### Example
 ```php
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 # **packagesIndex**
 > \Ageras\Api\PackageResult packagesIndex($criteria)
 
-Get all active packages for a given geo_code.
+
 
 ### Example
 ```php

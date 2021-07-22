@@ -90,7 +90,7 @@ class RefundsApi
     /**
      * Operation refundsGet
      *
-     * Get a single refund request.
+     * 
      *
      * @param string $refund_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class RefundsApi
     /**
      * Operation refundsGetWithHttpInfo
      *
-     * Get a single refund request.
+     * 
      *
      * @param string $refund_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -177,7 +177,7 @@ class RefundsApi
     /**
      * Operation refundsIndex
      *
-     * List refund requests.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -198,7 +198,7 @@ class RefundsApi
     /**
      * Operation refundsIndexWithHttpInfo
      *
-     * List refund requests.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,

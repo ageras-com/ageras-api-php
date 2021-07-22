@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vapidGet**](VapidApi.md#vapidGet) | **GET** /vapid | Get the VAPID public key
+[**vapidGet**](VapidApi.md#vapidGet) | **GET** /vapid | 
 
 
 # **vapidGet**
 > \Ageras\Api\VapidResource vapidGet()
 
-Get the VAPID public key
+
 
 ### Example
 ```php

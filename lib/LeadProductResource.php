@@ -133,6 +133,8 @@ class LeadProductResource implements ArrayAccess
     const TYPE_QUARTERLY = 'quarterly';
     const TYPE_MONTHLY = 'monthly';
     const TYPE_BIANNUALLY = 'biannually';
+    const TYPE_WEEKLY = 'weekly';
+    const TYPE_EVERY_SECOND_MONTH = 'every_second_month';
     
 
     
@@ -149,6 +151,8 @@ class LeadProductResource implements ArrayAccess
             self::TYPE_QUARTERLY,
             self::TYPE_MONTHLY,
             self::TYPE_BIANNUALLY,
+            self::TYPE_WEEKLY,
+            self::TYPE_EVERY_SECOND_MONTH,
         ];
     }
     
@@ -183,9 +187,9 @@ class LeadProductResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually", "weekly", "every_second_month"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month'.";
         }
 
         return $invalid_properties;
@@ -200,7 +204,7 @@ class LeadProductResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually", "weekly", "every_second_month"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -308,9 +312,9 @@ class LeadProductResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually');
+        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month'");
         }
         $this->container['type'] = $type;
 

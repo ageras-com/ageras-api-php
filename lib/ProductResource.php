@@ -57,7 +57,8 @@ class ProductResource implements ArrayAccess
         'id' => 'int',
         'geo_code' => 'string',
         'name' => 'string',
-        'creator_employee' => '\Ageras\Api\EmployeeResource'
+        'creator_employee' => '\Ageras\Api\EmployeeResource',
+        'is_auto_quotable' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class ProductResource implements ArrayAccess
         'id' => 'id',
         'geo_code' => 'geo_code',
         'name' => 'name',
-        'creator_employee' => 'creator_employee'
+        'creator_employee' => 'creator_employee',
+        'is_auto_quotable' => 'is_auto_quotable'
     ];
 
 
@@ -85,7 +87,8 @@ class ProductResource implements ArrayAccess
         'id' => 'setId',
         'geo_code' => 'setGeoCode',
         'name' => 'setName',
-        'creator_employee' => 'setCreatorEmployee'
+        'creator_employee' => 'setCreatorEmployee',
+        'is_auto_quotable' => 'setIsAutoQuotable'
     ];
 
 
@@ -97,7 +100,8 @@ class ProductResource implements ArrayAccess
         'id' => 'getId',
         'geo_code' => 'getGeoCode',
         'name' => 'getName',
-        'creator_employee' => 'getCreatorEmployee'
+        'creator_employee' => 'getCreatorEmployee',
+        'is_auto_quotable' => 'getIsAutoQuotable'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class ProductResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['creator_employee'] = isset($data['creator_employee']) ? $data['creator_employee'] : null;
+        $this->container['is_auto_quotable'] = isset($data['is_auto_quotable']) ? $data['is_auto_quotable'] : false;
     }
 
     /**
@@ -242,6 +247,27 @@ class ProductResource implements ArrayAccess
     public function setCreatorEmployee($creator_employee)
     {
         $this->container['creator_employee'] = $creator_employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_auto_quotable
+     * @return bool
+     */
+    public function getIsAutoQuotable()
+    {
+        return $this->container['is_auto_quotable'];
+    }
+
+    /**
+     * Sets is_auto_quotable
+     * @param bool $is_auto_quotable The partners can set up prices to auto-quote but not all products are auto-quotable
+     * @return $this
+     */
+    public function setIsAutoQuotable($is_auto_quotable)
+    {
+        $this->container['is_auto_quotable'] = $is_auto_quotable;
 
         return $this;
     }

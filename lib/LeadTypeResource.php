@@ -57,7 +57,8 @@ class LeadTypeResource implements ArrayAccess
         'id' => 'int',
         'title' => 'string',
         'geo_code' => 'string',
-        'created_at' => 'string'
+        'created_at' => 'string',
+        'archived_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class LeadTypeResource implements ArrayAccess
         'id' => 'id',
         'title' => 'title',
         'geo_code' => 'geo_code',
-        'created_at' => 'created_at'
+        'created_at' => 'created_at',
+        'archived_at' => 'archived_at'
     ];
 
 
@@ -85,7 +87,8 @@ class LeadTypeResource implements ArrayAccess
         'id' => 'setId',
         'title' => 'setTitle',
         'geo_code' => 'setGeoCode',
-        'created_at' => 'setCreatedAt'
+        'created_at' => 'setCreatedAt',
+        'archived_at' => 'setArchivedAt'
     ];
 
 
@@ -97,7 +100,8 @@ class LeadTypeResource implements ArrayAccess
         'id' => 'getId',
         'title' => 'getTitle',
         'geo_code' => 'getGeoCode',
-        'created_at' => 'getCreatedAt'
+        'created_at' => 'getCreatedAt',
+        'archived_at' => 'getArchivedAt'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class LeadTypeResource implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['archived_at'] = isset($data['archived_at']) ? $data['archived_at'] : null;
     }
 
     /**
@@ -236,12 +241,33 @@ class LeadTypeResource implements ArrayAccess
 
     /**
      * Sets created_at
-     * @param string $created_at Created at time stamp. @var \\Carbon
+     * @param string $created_at Created at time stamp. @var Carbon
      * @return $this
      */
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets archived_at
+     * @return string
+     */
+    public function getArchivedAt()
+    {
+        return $this->container['archived_at'];
+    }
+
+    /**
+     * Sets archived_at
+     * @param string $archived_at Archived at time stamp. @var Carbon
+     * @return $this
+     */
+    public function setArchivedAt($archived_at)
+    {
+        $this->container['archived_at'] = $archived_at;
 
         return $this;
     }

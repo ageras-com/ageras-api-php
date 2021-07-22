@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PhonesApiTest extends \PHPUnit_Framework_TestCase
+class PhonesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PhonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for phonesActionsCreate
      *
-     * Phone actions..
+     * .
      *
      */
     public function testPhonesActionsCreate()

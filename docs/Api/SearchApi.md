@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**searchIndex**](SearchApi.md#searchIndex) | **GET** /search | Search by criterias.
-[**searchSuggestIndex**](SearchApi.md#searchSuggestIndex) | **GET** /search/suggest | Suggest by criteria.
-[**searchTypeaheadIndex**](SearchApi.md#searchTypeaheadIndex) | **GET** /search/typeahead | Typeahead recommendations.
+[**searchIndex**](SearchApi.md#searchIndex) | **GET** /search | 
+[**searchSuggestIndex**](SearchApi.md#searchSuggestIndex) | **GET** /search/suggest | 
+[**searchTypeaheadIndex**](SearchApi.md#searchTypeaheadIndex) | **GET** /search/typeahead | 
 
 
 # **searchIndex**
 > \Ageras\Api\SearchResult searchIndex($criteria)
 
-Search by criterias.
+
 
 ### Example
 ```php
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **searchSuggestIndex**
 > \Ageras\Api\SearchResult searchSuggestIndex($criteria)
 
-Suggest by criteria.
+
 
 ### Example
 ```php
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 # **searchTypeaheadIndex**
 > \Ageras\Api\TypeaheadResult searchTypeaheadIndex($criteria)
 
-Typeahead recommendations.
+
 
 ### Example
 ```php

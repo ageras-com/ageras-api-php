@@ -90,7 +90,7 @@ class LeadsApi
     /**
      * Operation leadsActionsCreate
      *
-     * Coupon action
+     * This function serves up one class with a lot of functionality
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadActionResource $lead_action_resource 
@@ -106,7 +106,7 @@ class LeadsApi
     /**
      * Operation leadsActionsCreateWithHttpInfo
      *
-     * Coupon action
+     * This function serves up one class with a lot of functionality
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadActionResource $lead_action_resource 
@@ -184,7 +184,7 @@ class LeadsApi
     /**
      * Operation leadsAggregationsIndex
      *
-     * List facets and aggregations for the Lead Search.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,
@@ -219,10 +219,15 @@ class LeadsApi
      *    'is_validation_postponed' => bool,
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
+     *    'validated_at_gte' => string,
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
      *    'sub_geo_region_name' => string,
+     *    'is_anonymized' => bool,
+     *    'has_lead_quote_fee' => bool,
+     *    'desired_partner_company_size_id' => string,
+     *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -239,7 +244,7 @@ class LeadsApi
     /**
      * Operation leadsAggregationsIndexWithHttpInfo
      *
-     * List facets and aggregations for the Lead Search.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,
@@ -274,10 +279,15 @@ class LeadsApi
      *    'is_validation_postponed' => bool,
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
+     *    'validated_at_gte' => string,
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
      *    'sub_geo_region_name' => string,
+     *    'is_anonymized' => bool,
+     *    'has_lead_quote_fee' => bool,
+     *    'desired_partner_company_size_id' => string,
+     *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -428,6 +438,10 @@ class LeadsApi
             $queryParams['created_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['created_at_gte']);
         }
         // query params
+        if (isset($criteria['validated_at_gte'])) {
+            $queryParams['validated_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['validated_at_gte']);
+        }
+        // query params
         if (isset($criteria['latest_called_at_before'])) {
             $queryParams['latest_called_at_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['latest_called_at_before']);
         }
@@ -442,6 +456,22 @@ class LeadsApi
         // query params
         if (isset($criteria['sub_geo_region_name'])) {
             $queryParams['sub_geo_region_name'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sub_geo_region_name']);
+        }
+        // query params
+        if (isset($criteria['is_anonymized'])) {
+            $queryParams['is_anonymized'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_anonymized']);
+        }
+        // query params
+        if (isset($criteria['has_lead_quote_fee'])) {
+            $queryParams['has_lead_quote_fee'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_lead_quote_fee']);
+        }
+        // query params
+        if (isset($criteria['desired_partner_company_size_id'])) {
+            $queryParams['desired_partner_company_size_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['desired_partner_company_size_id']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_lead_marketplace_partner_id'])) {
+            $queryParams['segmented_for_lead_marketplace_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_marketplace_partner_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -499,7 +529,7 @@ class LeadsApi
     /**
      * Operation leadsAllocationsCreate
      *
-     * Allocate partners to a lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadAllocationsResource $lead_allocations_resource 
@@ -515,7 +545,7 @@ class LeadsApi
     /**
      * Operation leadsAllocationsCreateWithHttpInfo
      *
-     * Allocate partners to a lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadAllocationsResource $lead_allocations_resource 
@@ -593,7 +623,7 @@ class LeadsApi
     /**
      * Operation leadsAllocationsIndex
      *
-     * List a lead's allocation.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => int,
@@ -621,7 +651,7 @@ class LeadsApi
     /**
      * Operation leadsAllocationsIndexWithHttpInfo
      *
-     * List a lead's allocation.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => int,
@@ -746,7 +776,7 @@ class LeadsApi
     /**
      * Operation leadsCategoriesIndex
      *
-     * Index lead categories .
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -768,7 +798,7 @@ class LeadsApi
     /**
      * Operation leadsCategoriesIndexWithHttpInfo
      *
-     * Index lead categories .
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -863,7 +893,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsCreate
      *
-     * Add a certification to a lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\CertificationResource $certification_resource 
@@ -879,7 +909,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsCreateWithHttpInfo
      *
-     * Add a certification to a lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\CertificationResource $certification_resource 
@@ -957,7 +987,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsDelete
      *
-     * Delete a certification from a lead.
+     * 
      *
      * @param string $lead_id 
      * @param string $certification_id 
@@ -973,7 +1003,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsDeleteWithHttpInfo
      *
-     * Delete a certification from a lead.
+     * 
      *
      * @param string $lead_id 
      * @param string $certification_id 
@@ -1050,7 +1080,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsIndex
      *
-     * List a lead's certifications.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -1071,7 +1101,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsIndexWithHttpInfo
      *
-     * List a lead's certifications.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -1165,7 +1195,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsUpdate
      *
-     * Replace a lead's certifications.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadCertificationsResource $lead_certifications_resource 
@@ -1181,7 +1211,7 @@ class LeadsApi
     /**
      * Operation leadsCertificationsUpdateWithHttpInfo
      *
-     * Replace a lead's certifications.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadCertificationsResource $lead_certifications_resource 
@@ -1257,11 +1287,214 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsCompanysizesIndex
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadCompanySizesResult
+     */
+    public function leadsCompanysizesIndex($lead_id , $criteria = [])
+    {
+        list($response) = $this->leadsCompanysizesIndexWithHttpInfo($lead_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsCompanysizesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadCompanySizesResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsCompanysizesIndexWithHttpInfo($lead_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/companysizes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadCompanySizesResult',
+                '/leads/{lead_id}/companysizes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadCompanySizesResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadCompanySizesResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsCompanysizesUpdate
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\LeadCompanySizesResource $lead_company_sizes_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadCompanySizesResource
+     */
+    public function leadsCompanysizesUpdate($lead_id , $lead_company_sizes_resource)
+    {
+        list($response) = $this->leadsCompanysizesUpdateWithHttpInfo($lead_id, $lead_company_sizes_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsCompanysizesUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param \Ageras\Api\LeadCompanySizesResource $lead_company_sizes_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadCompanySizesResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsCompanysizesUpdateWithHttpInfo($lead_id , $lead_company_sizes_resource)
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/companysizes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($lead_company_sizes_resource)) {
+            $_tempBody = $lead_company_sizes_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadCompanySizesResource',
+                '/leads/{lead_id}/companysizes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadCompanySizesResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadCompanySizesResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsCreate
      *
-     * Create a new Lead.
+     * 
      *
-     * @param \Ageras\Api\LeadResource $lead_resource The given Lead Resource that should be created
+     * @param \Ageras\Api\LeadResource $lead_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadResource
      */
@@ -1274,9 +1507,9 @@ class LeadsApi
     /**
      * Operation leadsCreateWithHttpInfo
      *
-     * Create a new Lead.
+     * 
      *
-     * @param \Ageras\Api\LeadResource $lead_resource The given Lead Resource that should be created
+     * @param \Ageras\Api\LeadResource $lead_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1343,7 +1576,7 @@ class LeadsApi
     /**
      * Operation leadsDelete
      *
-     * Delete a Lead from a given lead_id.
+     * 
      *
      * @param string $lead_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1358,7 +1591,7 @@ class LeadsApi
     /**
      * Operation leadsDeleteWithHttpInfo
      *
-     * Delete a Lead from a given lead_id.
+     * 
      *
      * @param string $lead_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1426,7 +1659,7 @@ class LeadsApi
     /**
      * Operation leadsDemopartnersIndex
      *
-     * List leads a demo partner could expect to see if they sign up.
+     * 
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1441,7 +1674,7 @@ class LeadsApi
     /**
      * Operation leadsDemopartnersIndexWithHttpInfo
      *
-     * List leads a demo partner could expect to see if they sign up.
+     * 
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1513,7 +1746,7 @@ class LeadsApi
     /**
      * Operation leadsDemopartnersIndex_0
      *
-     * List leads a demo partner could expect to see if they sign up.
+     * 
      *
      * @param string $lead_id 
      * @param string $partner_id 
@@ -1529,7 +1762,7 @@ class LeadsApi
     /**
      * Operation leadsDemopartnersIndex_0WithHttpInfo
      *
-     * List leads a demo partner could expect to see if they sign up.
+     * 
      *
      * @param string $lead_id 
      * @param string $partner_id 
@@ -1610,7 +1843,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersCreate
      *
-     * Add partner to lead's excluded partner list
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\PartnerSuggestResource $partner_suggest_resource 
@@ -1626,7 +1859,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersCreateWithHttpInfo
      *
-     * Add partner to lead's excluded partner list
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\PartnerSuggestResource $partner_suggest_resource 
@@ -1704,7 +1937,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersDelete
      *
-     * Remove partner from the lead's excluded partner list
+     * 
      *
      * @param string $lead_id 
      * @param string $partner_id 
@@ -1720,7 +1953,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersDeleteWithHttpInfo
      *
-     * Remove partner from the lead's excluded partner list
+     * 
      *
      * @param string $lead_id 
      * @param string $partner_id 
@@ -1797,7 +2030,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersIndex
      *
-     * Show all excluded partners for a specific lead.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -1817,7 +2050,7 @@ class LeadsApi
     /**
      * Operation leadsExcludedpartnersIndexWithHttpInfo
      *
-     * Show all excluded partners for a specific lead.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -1906,9 +2139,9 @@ class LeadsApi
     /**
      * Operation leadsGet
      *
-     * Return a Lead from a Lead Id.
+     * 
      *
-     * @param string $lead_id The id the Lead to return
+     * @param string $lead_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\LeadResource
      */
@@ -1921,9 +2154,9 @@ class LeadsApi
     /**
      * Operation leadsGetWithHttpInfo
      *
-     * Return a Lead from a Lead Id.
+     * 
      *
-     * @param string $lead_id The id the Lead to return
+     * @param string $lead_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\LeadResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1993,7 +2226,7 @@ class LeadsApi
     /**
      * Operation leadsIndex
      *
-     * Search for Lead's by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,
@@ -2028,10 +2261,15 @@ class LeadsApi
      *    'is_validation_postponed' => bool,
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
+     *    'validated_at_gte' => string,
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
      *    'sub_geo_region_name' => string,
+     *    'is_anonymized' => bool,
+     *    'has_lead_quote_fee' => bool,
+     *    'desired_partner_company_size_id' => string,
+     *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2048,7 +2286,7 @@ class LeadsApi
     /**
      * Operation leadsIndexWithHttpInfo
      *
-     * Search for Lead's by a given set of criteria.
+     * 
      *
      * @param $criteria = [
      *    'lead_id' => string,
@@ -2083,10 +2321,15 @@ class LeadsApi
      *    'is_validation_postponed' => bool,
      *    'created_at_lte' => string,
      *    'created_at_gte' => string,
+     *    'validated_at_gte' => string,
      *    'latest_called_at_before' => string,
      *    'segmentation_criteria' => string,
      *    'segmented_for_partner_business_unit_id' => int,
      *    'sub_geo_region_name' => string,
+     *    'is_anonymized' => bool,
+     *    'has_lead_quote_fee' => bool,
+     *    'desired_partner_company_size_id' => string,
+     *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2237,6 +2480,10 @@ class LeadsApi
             $queryParams['created_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['created_at_gte']);
         }
         // query params
+        if (isset($criteria['validated_at_gte'])) {
+            $queryParams['validated_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['validated_at_gte']);
+        }
+        // query params
         if (isset($criteria['latest_called_at_before'])) {
             $queryParams['latest_called_at_before'] = $this->apiClient->getSerializer()->toQueryValue($criteria['latest_called_at_before']);
         }
@@ -2251,6 +2498,22 @@ class LeadsApi
         // query params
         if (isset($criteria['sub_geo_region_name'])) {
             $queryParams['sub_geo_region_name'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sub_geo_region_name']);
+        }
+        // query params
+        if (isset($criteria['is_anonymized'])) {
+            $queryParams['is_anonymized'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_anonymized']);
+        }
+        // query params
+        if (isset($criteria['has_lead_quote_fee'])) {
+            $queryParams['has_lead_quote_fee'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_lead_quote_fee']);
+        }
+        // query params
+        if (isset($criteria['desired_partner_company_size_id'])) {
+            $queryParams['desired_partner_company_size_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['desired_partner_company_size_id']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_lead_marketplace_partner_id'])) {
+            $queryParams['segmented_for_lead_marketplace_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_marketplace_partner_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2308,7 +2571,7 @@ class LeadsApi
     /**
      * Operation leadsNotesCreate
      *
-     * Create lead note
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadNoteResource $lead_note_resource 
@@ -2324,7 +2587,7 @@ class LeadsApi
     /**
      * Operation leadsNotesCreateWithHttpInfo
      *
-     * Create lead note
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadNoteResource $lead_note_resource 
@@ -2402,7 +2665,7 @@ class LeadsApi
     /**
      * Operation leadsQuotefeesCreate
      *
-     * Create lead quote_fee.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadQuoteFeeResource $lead_quote_fee_resource 
@@ -2418,7 +2681,7 @@ class LeadsApi
     /**
      * Operation leadsQuotefeesCreateWithHttpInfo
      *
-     * Create lead quote_fee.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadQuoteFeeResource $lead_quote_fee_resource 
@@ -2496,7 +2759,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesActionsCreate
      *
-     * Publish a given quote, accept it and other actions.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2513,7 +2776,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesActionsCreateWithHttpInfo
      *
-     * Publish a given quote, accept it and other actions.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2600,7 +2863,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesCreate
      *
-     * Create a new quote for a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadQuoteResource $lead_quote_resource 
@@ -2616,7 +2879,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesCreateWithHttpInfo
      *
-     * Create a new quote for a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadQuoteResource $lead_quote_resource 
@@ -2694,7 +2957,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesDelete
      *
-     * Delete a quote for a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2710,7 +2973,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesDeleteWithHttpInfo
      *
-     * Delete a quote for a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2787,7 +3050,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesGet
      *
-     * Get an quote by id.
+     * 
      *
      * @param string $lead_quote_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2802,7 +3065,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesGetWithHttpInfo
      *
-     * Get an quote by id.
+     * 
      *
      * @param string $lead_quote_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2874,7 +3137,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesGet_0
      *
-     * Get an quote by id.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2890,7 +3153,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesGet_0WithHttpInfo
      *
-     * Get an quote by id.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -2971,7 +3234,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesIndex
      *
-     * List the quotes connected to a given Lead.
+     * 
      *
      * @param $criteria = [
      *    'client_id' => string,
@@ -3001,7 +3264,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesIndexWithHttpInfo
      *
-     * List the quotes connected to a given Lead.
+     * 
      *
      * @param $criteria = [
      *    'client_id' => string,
@@ -3136,7 +3399,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesIndex_0
      *
-     * List the quotes connected to a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -3166,7 +3429,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesIndex_0WithHttpInfo
      *
-     * List the quotes connected to a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -3305,7 +3568,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsCreate
      *
-     * Create a new quote item for a given Quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3322,7 +3585,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsCreateWithHttpInfo
      *
-     * Create a new quote item for a given Quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3409,7 +3672,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsDelete
      *
-     * Delete a quote item.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3426,7 +3689,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsDeleteWithHttpInfo
      *
-     * Delete a quote item.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3512,7 +3775,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsGet
      *
-     * Get a quote item by id.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3529,7 +3792,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsGetWithHttpInfo
      *
-     * Get a quote item by id.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3619,7 +3882,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsIndex
      *
-     * List the quote items connected to a given Quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3640,7 +3903,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsIndexWithHttpInfo
      *
-     * List the quote items connected to a given Quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3738,7 +4001,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsUpdate
      *
-     * Update a quote item.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3756,7 +4019,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesItemsUpdateWithHttpInfo
      *
-     * Update a quote item.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -3852,7 +4115,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesProgressstepsIndex
      *
-     * Get quote progress statuses.
+     * 
      *
      * @param $criteria = [
      *    'title' => string,
@@ -3872,7 +4135,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesProgressstepsIndexWithHttpInfo
      *
-     * Get quote progress statuses.
+     * 
      *
      * @param $criteria = [
      *    'title' => string,
@@ -3957,7 +4220,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesUpdate
      *
-     * Update a quote.
+     * 
      *
      * @param string $lead_quote_id 
      * @param \Ageras\Api\LeadQuoteResource $lead_quote_resource 
@@ -3973,7 +4236,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesUpdateWithHttpInfo
      *
-     * Update a quote.
+     * 
      *
      * @param string $lead_quote_id 
      * @param \Ageras\Api\LeadQuoteResource $lead_quote_resource 
@@ -4051,7 +4314,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesUpdate_0
      *
-     * Update a quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -4068,7 +4331,7 @@ class LeadsApi
     /**
      * Operation leadsQuotesUpdate_0WithHttpInfo
      *
-     * Update a quote.
+     * 
      *
      * @param string $lead_id 
      * @param string $lead_quote_id 
@@ -4155,7 +4418,7 @@ class LeadsApi
     /**
      * Operation leadsSegmentationsubgeoregionsIndex
      *
-     * List a lead's sub geo regions.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -4175,7 +4438,7 @@ class LeadsApi
     /**
      * Operation leadsSegmentationsubgeoregionsIndexWithHttpInfo
      *
-     * List a lead's sub geo regions.
+     * 
      *
      * @param string $lead_id 
      * @param $criteria = [
@@ -4264,7 +4527,7 @@ class LeadsApi
     /**
      * Operation leadsSegmentationsubgeoregionsUpdate
      *
-     * Update a lead's sub geo regions.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\SegmentationSubGeoRegionsResource $segmentation_sub_geo_regions_resource 
@@ -4280,7 +4543,7 @@ class LeadsApi
     /**
      * Operation leadsSegmentationsubgeoregionsUpdateWithHttpInfo
      *
-     * Update a lead's sub geo regions.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\SegmentationSubGeoRegionsResource $segmentation_sub_geo_regions_resource 
@@ -4358,7 +4621,7 @@ class LeadsApi
     /**
      * Operation leadsTypesIndex
      *
-     * Index lead types.
+     * 
      *
      * @param $criteria = [
      *    'type_id' => string,
@@ -4380,7 +4643,7 @@ class LeadsApi
     /**
      * Operation leadsTypesIndexWithHttpInfo
      *
-     * Index lead types.
+     * 
      *
      * @param $criteria = [
      *    'type_id' => string,
@@ -4475,7 +4738,7 @@ class LeadsApi
     /**
      * Operation leadsUpdate
      *
-     * Update Properties on a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadResource $lead_resource 
@@ -4491,7 +4754,7 @@ class LeadsApi
     /**
      * Operation leadsUpdateWithHttpInfo
      *
-     * Update Properties on a given Lead.
+     * 
      *
      * @param string $lead_id 
      * @param \Ageras\Api\LeadResource $lead_resource 

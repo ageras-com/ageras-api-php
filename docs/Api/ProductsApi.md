@@ -83,6 +83,7 @@ $criteria = [
         'employee_id' => 56; // int | Employee id of Products to filter by.
         'geo_code' => "geo_code_example"; // string | Geo code of Products to filter by.
         'is_archived' => false; // bool | Filter products by archived status.
+        'is_auto_quotable' => false; // bool | Filter products by auto-quote availability
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -105,6 +106,7 @@ Name | Type | Description  | Notes
  **employee_id** | **int**| Employee id of Products to filter by. | [optional]
  **geo_code** | **string**| Geo code of Products to filter by. | [optional]
  **is_archived** | **bool**| Filter products by archived status. | [optional] [default to false]
+ **is_auto_quotable** | **bool**| Filter products by auto-quote availability | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

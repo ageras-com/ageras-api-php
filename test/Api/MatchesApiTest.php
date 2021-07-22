@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MatchesApiTest extends \PHPUnit_Framework_TestCase
+class MatchesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class MatchesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for matchesIndex
      *
-     * List matches.
+     * .
      *
      */
     public function testMatchesIndex()

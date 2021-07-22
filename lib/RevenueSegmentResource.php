@@ -62,7 +62,9 @@ class RevenueSegmentResource implements ArrayAccess
         'lb_price_excl_vat' => '\Ageras\Api\AmountResource',
         'pps_price_excl_vat' => '\Ageras\Api\AmountResource',
         'minimum_lb_price_excl_vat' => '\Ageras\Api\AmountResource',
-        'minimum_pps_price_excl_vat' => '\Ageras\Api\AmountResource'
+        'minimum_pps_price_excl_vat' => '\Ageras\Api\AmountResource',
+        'lead_category' => '\Ageras\Api\LeadCategoryResource',
+        'archived_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,9 @@ class RevenueSegmentResource implements ArrayAccess
         'lb_price_excl_vat' => 'lb_price_excl_vat',
         'pps_price_excl_vat' => 'pps_price_excl_vat',
         'minimum_lb_price_excl_vat' => 'minimum_lb_price_excl_vat',
-        'minimum_pps_price_excl_vat' => 'minimum_pps_price_excl_vat'
+        'minimum_pps_price_excl_vat' => 'minimum_pps_price_excl_vat',
+        'lead_category' => 'lead_category',
+        'archived_at' => 'archived_at'
     ];
 
 
@@ -100,7 +104,9 @@ class RevenueSegmentResource implements ArrayAccess
         'lb_price_excl_vat' => 'setLbPriceExclVat',
         'pps_price_excl_vat' => 'setPpsPriceExclVat',
         'minimum_lb_price_excl_vat' => 'setMinimumLbPriceExclVat',
-        'minimum_pps_price_excl_vat' => 'setMinimumPpsPriceExclVat'
+        'minimum_pps_price_excl_vat' => 'setMinimumPpsPriceExclVat',
+        'lead_category' => 'setLeadCategory',
+        'archived_at' => 'setArchivedAt'
     ];
 
 
@@ -117,7 +123,9 @@ class RevenueSegmentResource implements ArrayAccess
         'lb_price_excl_vat' => 'getLbPriceExclVat',
         'pps_price_excl_vat' => 'getPpsPriceExclVat',
         'minimum_lb_price_excl_vat' => 'getMinimumLbPriceExclVat',
-        'minimum_pps_price_excl_vat' => 'getMinimumPpsPriceExclVat'
+        'minimum_pps_price_excl_vat' => 'getMinimumPpsPriceExclVat',
+        'lead_category' => 'getLeadCategory',
+        'archived_at' => 'getArchivedAt'
     ];
 
     public static function attributeMap()
@@ -160,6 +168,8 @@ class RevenueSegmentResource implements ArrayAccess
         $this->container['pps_price_excl_vat'] = isset($data['pps_price_excl_vat']) ? $data['pps_price_excl_vat'] : null;
         $this->container['minimum_lb_price_excl_vat'] = isset($data['minimum_lb_price_excl_vat']) ? $data['minimum_lb_price_excl_vat'] : null;
         $this->container['minimum_pps_price_excl_vat'] = isset($data['minimum_pps_price_excl_vat']) ? $data['minimum_pps_price_excl_vat'] : null;
+        $this->container['lead_category'] = isset($data['lead_category']) ? $data['lead_category'] : null;
+        $this->container['archived_at'] = isset($data['archived_at']) ? $data['archived_at'] : null;
     }
 
     /**
@@ -372,6 +382,48 @@ class RevenueSegmentResource implements ArrayAccess
     public function setMinimumPpsPriceExclVat($minimum_pps_price_excl_vat)
     {
         $this->container['minimum_pps_price_excl_vat'] = $minimum_pps_price_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_category
+     * @return \Ageras\Api\LeadCategoryResource
+     */
+    public function getLeadCategory()
+    {
+        return $this->container['lead_category'];
+    }
+
+    /**
+     * Sets lead_category
+     * @param \Ageras\Api\LeadCategoryResource $lead_category
+     * @return $this
+     */
+    public function setLeadCategory($lead_category)
+    {
+        $this->container['lead_category'] = $lead_category;
+
+        return $this;
+    }
+
+    /**
+     * Gets archived_at
+     * @return string
+     */
+    public function getArchivedAt()
+    {
+        return $this->container['archived_at'];
+    }
+
+    /**
+     * Sets archived_at
+     * @param string $archived_at If and when was the segment archived.
+     * @return $this
+     */
+    public function setArchivedAt($archived_at)
+    {
+        $this->container['archived_at'] = $archived_at;
 
         return $this;
     }

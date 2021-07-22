@@ -4,17 +4,17 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**businessModelsCreate**](BusinessmodelsApi.md#businessModelsCreate) | **POST** /business_models | Create business model.
-[**businessModelsDelete**](BusinessmodelsApi.md#businessModelsDelete) | **DELETE** /business_models/{business_model_id} | Delete business model.
-[**businessModelsGet**](BusinessmodelsApi.md#businessModelsGet) | **GET** /business_models/{business_model_id} | Return a business model
-[**businessModelsIndex**](BusinessmodelsApi.md#businessModelsIndex) | **GET** /business_models | List business models.
-[**businessModelsUpdate**](BusinessmodelsApi.md#businessModelsUpdate) | **PUT** /business_models/{business_model_id} | Update business model.
+[**businessModelsCreate**](BusinessmodelsApi.md#businessModelsCreate) | **POST** /business_models | 
+[**businessModelsDelete**](BusinessmodelsApi.md#businessModelsDelete) | **DELETE** /business_models/{business_model_id} | 
+[**businessModelsGet**](BusinessmodelsApi.md#businessModelsGet) | **GET** /business_models/{business_model_id} | 
+[**businessModelsIndex**](BusinessmodelsApi.md#businessModelsIndex) | **GET** /business_models | 
+[**businessModelsUpdate**](BusinessmodelsApi.md#businessModelsUpdate) | **PUT** /business_models/{business_model_id} | 
 
 
 # **businessModelsCreate**
 > \Ageras\Api\BusinessModelResource businessModelsCreate($business_model_resource)
 
-Create business model.
+
 
 ### Example
 ```php
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **businessModelsDelete**
 > businessModelsDelete($business_model_id )
 
-Delete business model.
+
 
 ### Example
 ```php
@@ -115,7 +115,7 @@ void (empty response body)
 # **businessModelsGet**
 > \Ageras\Api\BusinessModelResource businessModelsGet($business_model_id )
 
-Return a business model
+
 
 ### Example
 ```php
@@ -131,7 +131,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\BusinessmodelsApi();
-$business_model_id = "business_model_id_example"; // string | Id of the business model
+$business_model_id = "business_model_id_example"; // string | 
 
 try {
     $result = $api_instance->businessModelsGet($business_model_id );
@@ -146,7 +146,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **business_model_id** | **string**| Id of the business model |
+ **business_model_id** | **string**|  |
 
 ### Return type
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 # **businessModelsIndex**
 > \Ageras\Api\BusinessModelResult businessModelsIndex($criteria)
 
-List business models.
+
 
 ### Example
 ```php
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 # **businessModelsUpdate**
 > \Ageras\Api\BusinessModelResource businessModelsUpdate($business_model_id , $business_model_resource)
 
-Update business model.
+
 
 ### Example
 ```php

@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LeadsApiTest extends \PHPUnit_Framework_TestCase
+class LeadsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsActionsCreate
      *
-     * Coupon action.
+     * This function serves up one class with a lot of functionality.
      *
      */
     public function testLeadsActionsCreate()
@@ -90,7 +90,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsAggregationsIndex
      *
-     * List facets and aggregations for the Lead Search..
+     * .
      *
      */
     public function testLeadsAggregationsIndex()
@@ -101,7 +101,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsAllocationsCreate
      *
-     * Allocate partners to a lead..
+     * .
      *
      */
     public function testLeadsAllocationsCreate()
@@ -112,7 +112,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsAllocationsIndex
      *
-     * List a lead's allocation..
+     * .
      *
      */
     public function testLeadsAllocationsIndex()
@@ -123,7 +123,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsCategoriesIndex
      *
-     * Index lead categories ..
+     * .
      *
      */
     public function testLeadsCategoriesIndex()
@@ -134,7 +134,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsCertificationsCreate
      *
-     * Add a certification to a lead..
+     * .
      *
      */
     public function testLeadsCertificationsCreate()
@@ -145,7 +145,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsCertificationsDelete
      *
-     * Delete a certification from a lead..
+     * .
      *
      */
     public function testLeadsCertificationsDelete()
@@ -156,7 +156,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsCertificationsIndex
      *
-     * List a lead's certifications..
+     * .
      *
      */
     public function testLeadsCertificationsIndex()
@@ -167,7 +167,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsCertificationsUpdate
      *
-     * Replace a lead's certifications..
+     * .
      *
      */
     public function testLeadsCertificationsUpdate()
@@ -176,9 +176,31 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for leadsCompanysizesIndex
+     *
+     * .
+     *
+     */
+    public function testLeadsCompanysizesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for leadsCompanysizesUpdate
+     *
+     * .
+     *
+     */
+    public function testLeadsCompanysizesUpdate()
+    {
+
+    }
+
+    /**
      * Test case for leadsCreate
      *
-     * Create a new Lead..
+     * .
      *
      */
     public function testLeadsCreate()
@@ -189,7 +211,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsDelete
      *
-     * Delete a Lead from a given lead_id..
+     * .
      *
      */
     public function testLeadsDelete()
@@ -200,7 +222,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsDemopartnersIndex
      *
-     * List leads a demo partner could expect to see if they sign up..
+     * .
      *
      */
     public function testLeadsDemopartnersIndex()
@@ -211,7 +233,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsDemopartnersIndex_0
      *
-     * List leads a demo partner could expect to see if they sign up..
+     * .
      *
      */
     public function testLeadsDemopartnersIndex0()
@@ -222,7 +244,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsExcludedpartnersCreate
      *
-     * Add partner to lead's excluded partner list.
+     * .
      *
      */
     public function testLeadsExcludedpartnersCreate()
@@ -233,7 +255,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsExcludedpartnersDelete
      *
-     * Remove partner from the lead's excluded partner list.
+     * .
      *
      */
     public function testLeadsExcludedpartnersDelete()
@@ -244,7 +266,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsExcludedpartnersIndex
      *
-     * Show all excluded partners for a specific lead..
+     * .
      *
      */
     public function testLeadsExcludedpartnersIndex()
@@ -255,7 +277,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsGet
      *
-     * Return a Lead from a Lead Id..
+     * .
      *
      */
     public function testLeadsGet()
@@ -266,7 +288,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsIndex
      *
-     * Search for Lead's by a given set of criteria..
+     * .
      *
      */
     public function testLeadsIndex()
@@ -277,7 +299,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsNotesCreate
      *
-     * Create lead note.
+     * .
      *
      */
     public function testLeadsNotesCreate()
@@ -288,7 +310,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotefeesCreate
      *
-     * Create lead quote_fee..
+     * .
      *
      */
     public function testLeadsQuotefeesCreate()
@@ -299,7 +321,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesActionsCreate
      *
-     * Publish a given quote, accept it and other actions..
+     * .
      *
      */
     public function testLeadsQuotesActionsCreate()
@@ -310,7 +332,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesCreate
      *
-     * Create a new quote for a given Lead..
+     * .
      *
      */
     public function testLeadsQuotesCreate()
@@ -321,7 +343,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesDelete
      *
-     * Delete a quote for a given Lead..
+     * .
      *
      */
     public function testLeadsQuotesDelete()
@@ -332,7 +354,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesGet
      *
-     * Get an quote by id..
+     * .
      *
      */
     public function testLeadsQuotesGet()
@@ -343,7 +365,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesGet_0
      *
-     * Get an quote by id..
+     * .
      *
      */
     public function testLeadsQuotesGet0()
@@ -354,7 +376,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesIndex
      *
-     * List the quotes connected to a given Lead..
+     * .
      *
      */
     public function testLeadsQuotesIndex()
@@ -365,7 +387,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesIndex_0
      *
-     * List the quotes connected to a given Lead..
+     * .
      *
      */
     public function testLeadsQuotesIndex0()
@@ -376,7 +398,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesItemsCreate
      *
-     * Create a new quote item for a given Quote..
+     * .
      *
      */
     public function testLeadsQuotesItemsCreate()
@@ -387,7 +409,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesItemsDelete
      *
-     * Delete a quote item..
+     * .
      *
      */
     public function testLeadsQuotesItemsDelete()
@@ -398,7 +420,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesItemsGet
      *
-     * Get a quote item by id..
+     * .
      *
      */
     public function testLeadsQuotesItemsGet()
@@ -409,7 +431,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesItemsIndex
      *
-     * List the quote items connected to a given Quote..
+     * .
      *
      */
     public function testLeadsQuotesItemsIndex()
@@ -420,7 +442,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesItemsUpdate
      *
-     * Update a quote item..
+     * .
      *
      */
     public function testLeadsQuotesItemsUpdate()
@@ -431,7 +453,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesProgressstepsIndex
      *
-     * Get quote progress statuses..
+     * .
      *
      */
     public function testLeadsQuotesProgressstepsIndex()
@@ -442,7 +464,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesUpdate
      *
-     * Update a quote..
+     * .
      *
      */
     public function testLeadsQuotesUpdate()
@@ -453,7 +475,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsQuotesUpdate_0
      *
-     * Update a quote..
+     * .
      *
      */
     public function testLeadsQuotesUpdate0()
@@ -464,7 +486,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsSegmentationsubgeoregionsIndex
      *
-     * List a lead's sub geo regions..
+     * .
      *
      */
     public function testLeadsSegmentationsubgeoregionsIndex()
@@ -475,7 +497,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsSegmentationsubgeoregionsUpdate
      *
-     * Update a lead's sub geo regions..
+     * .
      *
      */
     public function testLeadsSegmentationsubgeoregionsUpdate()
@@ -486,7 +508,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsTypesIndex
      *
-     * Index lead types..
+     * .
      *
      */
     public function testLeadsTypesIndex()
@@ -497,7 +519,7 @@ class LeadsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for leadsUpdate
      *
-     * Update Properties on a given Lead..
+     * .
      *
      */
     public function testLeadsUpdate()

@@ -4,37 +4,37 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**projectsCreate**](ProjectsApi.md#projectsCreate) | **POST** /projects | Create Project.
-[**projectsDelete**](ProjectsApi.md#projectsDelete) | **DELETE** /projects/{project_id} | Delete a project for a given project id.
-[**projectsEventsCreate**](ProjectsApi.md#projectsEventsCreate) | **POST** /projects/events | Create events for a given project.
-[**projectsEventsCreate_0**](ProjectsApi.md#projectsEventsCreate_0) | **POST** /projects/{project_id}/events | Create events for a given project.
-[**projectsEventsDelete**](ProjectsApi.md#projectsEventsDelete) | **DELETE** /projects/{project_id}/events/{project_event_id} | Delete a given project event.
-[**projectsEventsGet**](ProjectsApi.md#projectsEventsGet) | **GET** /projects/events/{project_event_id} | Get event for a given project.
-[**projectsEventsGet_0**](ProjectsApi.md#projectsEventsGet_0) | **GET** /projects/{project_id}/events/{project_event_id} | Get event for a given project.
-[**projectsEventsIndex**](ProjectsApi.md#projectsEventsIndex) | **GET** /projects/events | List events for a given project.
-[**projectsEventsIndex_0**](ProjectsApi.md#projectsEventsIndex_0) | **GET** /projects/{project_id}/events | List events for a given project.
-[**projectsEventsUpdate**](ProjectsApi.md#projectsEventsUpdate) | **PUT** /projects/events/{project_event_id} | Update e events for project events.
-[**projectsEventsUpdate_0**](ProjectsApi.md#projectsEventsUpdate_0) | **PUT** /projects/{project_id}/events/{project_event_id} | Update e events for project events.
-[**projectsGet**](ProjectsApi.md#projectsGet) | **GET** /projects/{project_id} | Get a Project from a project id.
-[**projectsIndex**](ProjectsApi.md#projectsIndex) | **GET** /projects | List Projects.
-[**projectsNotesCreate**](ProjectsApi.md#projectsNotesCreate) | **POST** /projects/notes | Create a note for a given project.
-[**projectsNotesCreate_0**](ProjectsApi.md#projectsNotesCreate_0) | **POST** /projects/{project_id}/notes | Create a note for a given project.
-[**projectsNotesDelete**](ProjectsApi.md#projectsNotesDelete) | **DELETE** /projects/{project_id}/notes/{project_note_id} | Delete a project note.
-[**projectsNotesGet**](ProjectsApi.md#projectsNotesGet) | **GET** /projects/notes/{project_note_id} | Get a note from Project and note id.
-[**projectsNotesGet_0**](ProjectsApi.md#projectsNotesGet_0) | **GET** /projects/{project_id}/notes/{project_note_id} | Get a note from Project and note id.
-[**projectsNotesIndex**](ProjectsApi.md#projectsNotesIndex) | **GET** /projects/notes | List notes from a given project.
-[**projectsNotesIndex_0**](ProjectsApi.md#projectsNotesIndex_0) | **GET** /projects/{project_id}/notes | List notes from a given project.
-[**projectsNotesUpdate**](ProjectsApi.md#projectsNotesUpdate) | **PUT** /projects/notes/{project_note_id} | Update a given project note.
-[**projectsNotesUpdate_0**](ProjectsApi.md#projectsNotesUpdate_0) | **PUT** /projects/{project_id}/notes/{project_note_id} | Update a given project note.
-[**projectsStatusesGet**](ProjectsApi.md#projectsStatusesGet) | **GET** /projects/{status}/statuses | Get a Project Status from Id.
-[**projectsStatusesIndex**](ProjectsApi.md#projectsStatusesIndex) | **GET** /projects/statuses | List Available Project Statuses.
-[**projectsUpdate**](ProjectsApi.md#projectsUpdate) | **PUT** /projects/{project_id} | Update a project.
+[**projectsCreate**](ProjectsApi.md#projectsCreate) | **POST** /projects | 
+[**projectsDelete**](ProjectsApi.md#projectsDelete) | **DELETE** /projects/{project_id} | 
+[**projectsEventsCreate**](ProjectsApi.md#projectsEventsCreate) | **POST** /projects/events | 
+[**projectsEventsCreate_0**](ProjectsApi.md#projectsEventsCreate_0) | **POST** /projects/{project_id}/events | 
+[**projectsEventsDelete**](ProjectsApi.md#projectsEventsDelete) | **DELETE** /projects/{project_id}/events/{project_event_id} | 
+[**projectsEventsGet**](ProjectsApi.md#projectsEventsGet) | **GET** /projects/events/{project_event_id} | 
+[**projectsEventsGet_0**](ProjectsApi.md#projectsEventsGet_0) | **GET** /projects/{project_id}/events/{project_event_id} | 
+[**projectsEventsIndex**](ProjectsApi.md#projectsEventsIndex) | **GET** /projects/events | 
+[**projectsEventsIndex_0**](ProjectsApi.md#projectsEventsIndex_0) | **GET** /projects/{project_id}/events | 
+[**projectsEventsUpdate**](ProjectsApi.md#projectsEventsUpdate) | **PUT** /projects/events/{project_event_id} | 
+[**projectsEventsUpdate_0**](ProjectsApi.md#projectsEventsUpdate_0) | **PUT** /projects/{project_id}/events/{project_event_id} | 
+[**projectsGet**](ProjectsApi.md#projectsGet) | **GET** /projects/{project_id} | 
+[**projectsIndex**](ProjectsApi.md#projectsIndex) | **GET** /projects | 
+[**projectsNotesCreate**](ProjectsApi.md#projectsNotesCreate) | **POST** /projects/notes | 
+[**projectsNotesCreate_0**](ProjectsApi.md#projectsNotesCreate_0) | **POST** /projects/{project_id}/notes | 
+[**projectsNotesDelete**](ProjectsApi.md#projectsNotesDelete) | **DELETE** /projects/{project_id}/notes/{project_note_id} | 
+[**projectsNotesGet**](ProjectsApi.md#projectsNotesGet) | **GET** /projects/notes/{project_note_id} | 
+[**projectsNotesGet_0**](ProjectsApi.md#projectsNotesGet_0) | **GET** /projects/{project_id}/notes/{project_note_id} | 
+[**projectsNotesIndex**](ProjectsApi.md#projectsNotesIndex) | **GET** /projects/notes | 
+[**projectsNotesIndex_0**](ProjectsApi.md#projectsNotesIndex_0) | **GET** /projects/{project_id}/notes | 
+[**projectsNotesUpdate**](ProjectsApi.md#projectsNotesUpdate) | **PUT** /projects/notes/{project_note_id} | 
+[**projectsNotesUpdate_0**](ProjectsApi.md#projectsNotesUpdate_0) | **PUT** /projects/{project_id}/notes/{project_note_id} | 
+[**projectsStatusesGet**](ProjectsApi.md#projectsStatusesGet) | **GET** /projects/{status}/statuses | 
+[**projectsStatusesIndex**](ProjectsApi.md#projectsStatusesIndex) | **GET** /projects/statuses | 
+[**projectsUpdate**](ProjectsApi.md#projectsUpdate) | **PUT** /projects/{project_id} | 
 
 
 # **projectsCreate**
 > \Ageras\Api\ProjectResource projectsCreate($project_resource)
 
-Create Project.
+
 
 ### Example
 ```php
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 # **projectsDelete**
 > projectsDelete($project_id )
 
-Delete a project for a given project id.
+
 
 ### Example
 ```php
@@ -135,7 +135,7 @@ void (empty response body)
 # **projectsEventsCreate**
 > \Ageras\Api\ProjectNoteResource projectsEventsCreate($project_event_resource)
 
-Create events for a given project.
+
 
 ### Example
 ```php
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 # **projectsEventsCreate_0**
 > \Ageras\Api\ProjectNoteResource projectsEventsCreate_0($project_id , $project_event_resource)
 
-Create events for a given project.
+
 
 ### Example
 ```php
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 # **projectsEventsDelete**
 > projectsEventsDelete($project_id,  $project_event_id )
 
-Delete a given project event.
+
 
 ### Example
 ```php
@@ -291,7 +291,7 @@ void (empty response body)
 # **projectsEventsGet**
 > \Ageras\Api\ProjectNoteResource projectsEventsGet($project_event_id )
 
-Get event for a given project.
+
 
 ### Example
 ```php
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 # **projectsEventsGet_0**
 > \Ageras\Api\ProjectNoteResource projectsEventsGet_0($project_id,  $project_event_id )
 
-Get event for a given project.
+
 
 ### Example
 ```php
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 # **projectsEventsIndex**
 > \Ageras\Api\ProjectNoteResult projectsEventsIndex($criteria)
 
-List events for a given project.
+
 
 ### Example
 ```php
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 # **projectsEventsIndex_0**
 > \Ageras\Api\ProjectNoteResult projectsEventsIndex_0($project_id , $criteria)
 
-List events for a given project.
+
 
 ### Example
 ```php
@@ -537,7 +537,7 @@ Name | Type | Description  | Notes
 # **projectsEventsUpdate**
 > \Ageras\Api\ProjectNoteResource projectsEventsUpdate($project_event_id , $project_event_resource)
 
-Update e events for project events.
+
 
 ### Example
 ```php
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 # **projectsEventsUpdate_0**
 > \Ageras\Api\ProjectNoteResource projectsEventsUpdate_0($project_id,  $project_event_id , $project_event_resource)
 
-Update e events for project events.
+
 
 ### Example
 ```php
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 # **projectsGet**
 > \Ageras\Api\ProjectResource projectsGet($project_id )
 
-Get a Project from a project id.
+
 
 ### Example
 ```php
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 # **projectsIndex**
 > \Ageras\Api\ProjectResult projectsIndex($criteria)
 
-List Projects.
+
 
 ### Example
 ```php
@@ -773,7 +773,7 @@ Name | Type | Description  | Notes
 # **projectsNotesCreate**
 > \Ageras\Api\ProjectNoteResource projectsNotesCreate($project_note_resource)
 
-Create a note for a given project.
+
 
 ### Example
 ```php
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 # **projectsNotesCreate_0**
 > \Ageras\Api\ProjectNoteResource projectsNotesCreate_0($project_id , $project_note_resource)
 
-Create a note for a given project.
+
 
 ### Example
 ```php
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 # **projectsNotesDelete**
 > projectsNotesDelete($project_id,  $project_note_id )
 
-Delete a project note.
+
 
 ### Example
 ```php
@@ -929,7 +929,7 @@ void (empty response body)
 # **projectsNotesGet**
 > \Ageras\Api\ProjectNoteResource projectsNotesGet($project_note_id )
 
-Get a note from Project and note id.
+
 
 ### Example
 ```php
@@ -980,7 +980,7 @@ Name | Type | Description  | Notes
 # **projectsNotesGet_0**
 > \Ageras\Api\ProjectNoteResource projectsNotesGet_0($project_id,  $project_note_id )
 
-Get a note from Project and note id.
+
 
 ### Example
 ```php
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 # **projectsNotesIndex**
 > \Ageras\Api\ProjectNoteResult projectsNotesIndex($criteria)
 
-List notes from a given project.
+
 
 ### Example
 ```php
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
 # **projectsNotesIndex_0**
 > \Ageras\Api\ProjectNoteResult projectsNotesIndex_0($project_id , $criteria)
 
-List notes from a given project.
+
 
 ### Example
 ```php
@@ -1183,7 +1183,7 @@ Name | Type | Description  | Notes
 # **projectsNotesUpdate**
 > \Ageras\Api\ProjectNoteResource projectsNotesUpdate($project_note_id , $project_note_resource)
 
-Update a given project note.
+
 
 ### Example
 ```php
@@ -1236,7 +1236,7 @@ Name | Type | Description  | Notes
 # **projectsNotesUpdate_0**
 > \Ageras\Api\ProjectNoteResource projectsNotesUpdate_0($project_id,  $project_note_id , $project_note_resource)
 
-Update a given project note.
+
 
 ### Example
 ```php
@@ -1291,7 +1291,7 @@ Name | Type | Description  | Notes
 # **projectsStatusesGet**
 > \Ageras\Api\ProjectStatusResource projectsStatusesGet($status )
 
-Get a Project Status from Id.
+
 
 ### Example
 ```php
@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
 # **projectsStatusesIndex**
 > \Ageras\Api\ProjectStatusResult projectsStatusesIndex($criteria)
 
-List Available Project Statuses.
+
 
 ### Example
 ```php
@@ -1401,7 +1401,7 @@ Name | Type | Description  | Notes
 # **projectsUpdate**
 > \Ageras\Api\ProjectResource projectsUpdate($project_id , $project_resource)
 
-Update a project.
+
 
 ### Example
 ```php

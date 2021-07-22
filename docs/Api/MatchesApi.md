@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**matchesIndex**](MatchesApi.md#matchesIndex) | **GET** /matches | List matches
+[**matchesIndex**](MatchesApi.md#matchesIndex) | **GET** /matches | 
 
 
 # **matchesIndex**
 > \Ageras\Api\MatchResult matchesIndex($criteria)
 
-List matches
+
 
 ### Example
 ```php

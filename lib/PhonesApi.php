@@ -90,7 +90,7 @@ class PhonesApi
     /**
      * Operation phonesActionsCreate
      *
-     * Phone actions.
+     * 
      *
      * @param string $phone_id 
      * @param \Ageras\Api\PhoneActionResource $phone_action_resource 
@@ -106,7 +106,7 @@ class PhonesApi
     /**
      * Operation phonesActionsCreateWithHttpInfo
      *
-     * Phone actions.
+     * 
      *
      * @param string $phone_id 
      * @param \Ageras\Api\PhoneActionResource $phone_action_resource 

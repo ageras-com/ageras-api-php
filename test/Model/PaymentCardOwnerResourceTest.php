@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentCardOwnerResourceTest extends \PHPUnit_Framework_TestCase
+class PaymentCardOwnerResourceTest extends TestCase
 {
 
     /**

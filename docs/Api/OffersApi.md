@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**offersActionsCreate**](OffersApi.md#offersActionsCreate) | **POST** /offers/{offer_id}/actions | Perform an action on an offer.
-[**offersGet**](OffersApi.md#offersGet) | **GET** /offers/{offer_id} | Get an offer by id.
-[**offersIndex**](OffersApi.md#offersIndex) | **GET** /offers | Get all partner offer.
+[**offersActionsCreate**](OffersApi.md#offersActionsCreate) | **POST** /offers/{offer_id}/actions | 
+[**offersGet**](OffersApi.md#offersGet) | **GET** /offers/{offer_id} | 
+[**offersIndex**](OffersApi.md#offersIndex) | **GET** /offers | 
 
 
 # **offersActionsCreate**
 > \Ageras\Api\PartnerOfferResource offersActionsCreate($offer_id , $offer_action_resource)
 
-Perform an action on an offer.
+
 
 ### Example
 ```php
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **offersGet**
 > \Ageras\Api\PartnerOfferResource offersGet($offer_id )
 
-Get an offer by id.
+
 
 ### Example
 ```php
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 # **offersIndex**
 > \Ageras\Api\PartnerOfferResult offersIndex($criteria)
 
-Get all partner offer.
+
 
 ### Example
 ```php

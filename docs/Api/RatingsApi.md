@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ratingsCreate**](RatingsApi.md#ratingsCreate) | **POST** /ratings | Create a rating.
-[**ratingsGet**](RatingsApi.md#ratingsGet) | **GET** /ratings/{rating_id} | Return a rating from a rating ID.
-[**ratingsIndex**](RatingsApi.md#ratingsIndex) | **GET** /ratings | Search for Lead&#39;s by a given set of criteria.
-[**ratingsUpdate**](RatingsApi.md#ratingsUpdate) | **PUT** /ratings/{rating_id} | Update a rating.
+[**ratingsCreate**](RatingsApi.md#ratingsCreate) | **POST** /ratings | 
+[**ratingsGet**](RatingsApi.md#ratingsGet) | **GET** /ratings/{rating_id} | 
+[**ratingsIndex**](RatingsApi.md#ratingsIndex) | **GET** /ratings | 
+[**ratingsUpdate**](RatingsApi.md#ratingsUpdate) | **PUT** /ratings/{rating_id} | 
 
 
 # **ratingsCreate**
 > \Ageras\Api\RatingResource ratingsCreate($rating_resource)
 
-Create a rating.
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **ratingsGet**
 > \Ageras\Api\RatingResource ratingsGet($rating_id )
 
-Return a rating from a rating ID.
+
 
 ### Example
 ```php
@@ -80,7 +80,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\RatingsApi();
-$rating_id = "rating_id_example"; // string | The id the Rating to return
+$rating_id = "rating_id_example"; // string | 
 
 try {
     $result = $api_instance->ratingsGet($rating_id );
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rating_id** | **string**| The id the Rating to return |
+ **rating_id** | **string**|  |
 
 ### Return type
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 # **ratingsIndex**
 > \Ageras\Api\RatingResult ratingsIndex($criteria)
 
-Search for Lead's by a given set of criteria.
+
 
 ### Example
 ```php
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 # **ratingsUpdate**
 > \Ageras\Api\RatingResource ratingsUpdate($rating_id , $rating_resource)
 
-Update a rating.
+
 
 ### Example
 ```php

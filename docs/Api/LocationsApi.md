@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**locationsGet**](LocationsApi.md#locationsGet) | **GET** /locations/{location_id} | Retrieve a location from a given location_id.
-[**locationsIndex**](LocationsApi.md#locationsIndex) | **GET** /locations | Search and find locations by different criterias.
-[**locationsSegmentationgeoregionsIndex**](LocationsApi.md#locationsSegmentationgeoregionsIndex) | **GET** /locations/segmentationgeoregions | List the segmentation geo regions
-[**locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex**](LocationsApi.md#locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex) | **GET** /locations/segmentationgeoregions/segmentationsubgeoregions | List segmentation sub geo regions.
+[**locationsGet**](LocationsApi.md#locationsGet) | **GET** /locations/{location_id} | 
+[**locationsIndex**](LocationsApi.md#locationsIndex) | **GET** /locations | 
+[**locationsSegmentationgeoregionsIndex**](LocationsApi.md#locationsSegmentationgeoregionsIndex) | **GET** /locations/segmentationgeoregions | 
+[**locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex**](LocationsApi.md#locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex) | **GET** /locations/segmentationgeoregions/segmentationsubgeoregions | 
 
 
 # **locationsGet**
 > \Ageras\Api\LocationResource locationsGet($location_id )
 
-Retrieve a location from a given location_id.
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **locationsIndex**
 > \Ageras\Api\LocationResult locationsIndex($criteria)
 
-Search and find locations by different criterias.
+
 
 ### Example
 ```php
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 # **locationsSegmentationgeoregionsIndex**
 > \Ageras\Api\SegmentationGeoRegionResult locationsSegmentationgeoregionsIndex($criteria)
 
-List the segmentation geo regions
+
 
 ### Example
 ```php
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 # **locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex**
 > \Ageras\Api\SegmentationSubGeoRegionResult locationsSegmentationgeoregionsSegmentationsubgeoregionsIndex($criteria)
 
-List segmentation sub geo regions.
+
 
 ### Example
 ```php

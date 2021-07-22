@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**termsAcceptedIndex**](TermsApi.md#termsAcceptedIndex) | **GET** /terms/accepted | Get accepted terms.
-[**termsActionsCreate**](TermsApi.md#termsActionsCreate) | **POST** /terms/{terms_id}/actions | Term actions.
-[**termsGet**](TermsApi.md#termsGet) | **GET** /terms/{terms_id} | Retrieve a terms set from a given location_id.
-[**termsIndex**](TermsApi.md#termsIndex) | **GET** /terms | Search and find terms by different criterias.
+[**termsAcceptedIndex**](TermsApi.md#termsAcceptedIndex) | **GET** /terms/accepted | 
+[**termsActionsCreate**](TermsApi.md#termsActionsCreate) | **POST** /terms/{terms_id}/actions | 
+[**termsGet**](TermsApi.md#termsGet) | **GET** /terms/{terms_id} | 
+[**termsIndex**](TermsApi.md#termsIndex) | **GET** /terms | 
 
 
 # **termsAcceptedIndex**
 > \Ageras\Api\TermsResult termsAcceptedIndex($criteria)
 
-Get accepted terms.
+
 
 ### Example
 ```php
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 # **termsActionsCreate**
 > \Ageras\Api\TermsActionResource termsActionsCreate($terms_id , $terms_action_resource)
 
-Term actions.
+
 
 ### Example
 ```php
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 # **termsGet**
 > \Ageras\Api\TermsResource termsGet($terms_id )
 
-Retrieve a terms set from a given location_id.
+
 
 ### Example
 ```php
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 # **termsIndex**
 > \Ageras\Api\TermsResult termsIndex($criteria)
 
-Search and find terms by different criterias.
+
 
 ### Example
 ```php

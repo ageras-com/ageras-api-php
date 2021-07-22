@@ -90,7 +90,7 @@ class ConversationsApi
     /**
      * Operation conversationsActionsCreate
      *
-     * Conversation action
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\ConversationActionResource $conversation_action_resource 
@@ -106,7 +106,7 @@ class ConversationsApi
     /**
      * Operation conversationsActionsCreateWithHttpInfo
      *
-     * Conversation action
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\ConversationActionResource $conversation_action_resource 
@@ -184,7 +184,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsCreate
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -199,7 +199,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsCreateWithHttpInfo
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -268,7 +268,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsCreate_0
      *
-     * Create a new attachment
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
@@ -284,7 +284,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsCreate_0WithHttpInfo
      *
-     * Create a new attachment
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
@@ -362,7 +362,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsGet
      *
-     * Get an attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -377,7 +377,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsGetWithHttpInfo
      *
-     * Get an attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -449,7 +449,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsGet_0
      *
-     * Get an attachment
+     * 
      *
      * @param string $conversation_id 
      * @param string $attachment_id 
@@ -465,7 +465,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsGet_0WithHttpInfo
      *
-     * Get an attachment
+     * 
      *
      * @param string $conversation_id 
      * @param string $attachment_id 
@@ -546,7 +546,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsIndex
      *
-     * List conversation's attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -568,7 +568,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsIndexWithHttpInfo
      *
-     * List conversation's attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -663,7 +663,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsIndex_0
      *
-     * List conversation's attachments
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [
@@ -685,7 +685,7 @@ class ConversationsApi
     /**
      * Operation conversationsAttachmentsIndex_0WithHttpInfo
      *
-     * List conversation's attachments
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [
@@ -784,7 +784,7 @@ class ConversationsApi
     /**
      * Operation conversationsCreate
      *
-     * Create a new conversation.
+     * 
      *
      * @param \Ageras\Api\ConversationResource $conversation_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -799,7 +799,7 @@ class ConversationsApi
     /**
      * Operation conversationsCreateWithHttpInfo
      *
-     * Create a new conversation.
+     * 
      *
      * @param \Ageras\Api\ConversationResource $conversation_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -868,7 +868,7 @@ class ConversationsApi
     /**
      * Operation conversationsGet
      *
-     * Get a conversations by conversation_id.
+     * 
      *
      * @param string $conversation_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -883,7 +883,7 @@ class ConversationsApi
     /**
      * Operation conversationsGetWithHttpInfo
      *
-     * Get a conversations by conversation_id.
+     * 
      *
      * @param string $conversation_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -955,7 +955,7 @@ class ConversationsApi
     /**
      * Operation conversationsIndex
      *
-     * List conversations.
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -982,7 +982,7 @@ class ConversationsApi
     /**
      * Operation conversationsIndexWithHttpInfo
      *
-     * List conversations.
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -1102,7 +1102,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreate
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1117,7 +1117,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreateWithHttpInfo
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1186,7 +1186,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreate_0
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1201,7 +1201,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreate_0WithHttpInfo
      *
-     * Create a new attachment
+     * 
      *
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1270,7 +1270,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreate_1
      *
-     * Create a new attachment
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
@@ -1286,7 +1286,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsCreate_1WithHttpInfo
      *
-     * Create a new attachment
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\AttachmentResource $attachment_resource 
@@ -1364,7 +1364,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGet
      *
-     * get a message attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1379,7 +1379,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGetWithHttpInfo
      *
-     * get a message attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1451,7 +1451,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGet_0
      *
-     * get a message attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1466,7 +1466,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGet_0WithHttpInfo
      *
-     * get a message attachment
+     * 
      *
      * @param string $attachment_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -1538,7 +1538,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGet_1
      *
-     * get a message attachment
+     * 
      *
      * @param string $conversation_id 
      * @param string $attachment_id 
@@ -1554,7 +1554,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsGet_1WithHttpInfo
      *
-     * get a message attachment
+     * 
      *
      * @param string $conversation_id 
      * @param string $attachment_id 
@@ -1635,7 +1635,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndex
      *
-     * List message attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -1657,7 +1657,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndexWithHttpInfo
      *
-     * List message attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -1752,7 +1752,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndex_0
      *
-     * List message attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -1774,7 +1774,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndex_0WithHttpInfo
      *
-     * List message attachments
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -1869,7 +1869,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndex_1
      *
-     * List message attachments
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [
@@ -1891,7 +1891,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesAttachmentsIndex_1WithHttpInfo
      *
-     * List message attachments
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [
@@ -1990,7 +1990,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesCreate
      *
-     * Create a new message
+     * 
      *
      * @param \Ageras\Api\MessageResource $message_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2005,7 +2005,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesCreateWithHttpInfo
      *
-     * Create a new message
+     * 
      *
      * @param \Ageras\Api\MessageResource $message_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2074,7 +2074,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesCreate_0
      *
-     * Create a new message
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\MessageResource $message_resource 
@@ -2090,7 +2090,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesCreate_0WithHttpInfo
      *
-     * Create a new message
+     * 
      *
      * @param string $conversation_id 
      * @param \Ageras\Api\MessageResource $message_resource 
@@ -2168,7 +2168,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesGet
      *
-     * Get message by message_id
+     * 
      *
      * @param string $message_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2183,7 +2183,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesGetWithHttpInfo
      *
-     * Get message by message_id
+     * 
      *
      * @param string $message_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -2255,7 +2255,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesGet_0
      *
-     * Get message by message_id
+     * 
      *
      * @param string $conversation_id 
      * @param string $message_id 
@@ -2271,7 +2271,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesGet_0WithHttpInfo
      *
-     * Get message by message_id
+     * 
      *
      * @param string $conversation_id 
      * @param string $message_id 
@@ -2352,7 +2352,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesIndex
      *
-     * Get messages by conversation_id.
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -2376,7 +2376,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesIndexWithHttpInfo
      *
-     * Get messages by conversation_id.
+     * 
      *
      * @param $criteria = [
      *    'conversation_id' => string,
@@ -2481,7 +2481,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesIndex_0
      *
-     * Get messages by conversation_id.
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [
@@ -2505,7 +2505,7 @@ class ConversationsApi
     /**
      * Operation conversationsMessagesIndex_0WithHttpInfo
      *
-     * Get messages by conversation_id.
+     * 
      *
      * @param string $conversation_id 
      * @param $criteria = [

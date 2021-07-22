@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PaymentsApiTest extends \PHPUnit_Framework_TestCase
+class PaymentsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsCardsCreate
      *
-     * Create a payment card..
+     * .
      *
      */
     public function testPaymentsCardsCreate()
@@ -112,7 +112,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsCardsGet
      *
-     * Get a Partner from a given partner_id..
+     * .
      *
      */
     public function testPaymentsCardsGet()
@@ -123,7 +123,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsCardsGet_0
      *
-     * Get a Partner from a given partner_id..
+     * .
      *
      */
     public function testPaymentsCardsGet0()
@@ -134,7 +134,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsCardsIndex
      *
-     * List payment cards..
+     * .
      *
      */
     public function testPaymentsCardsIndex()
@@ -145,7 +145,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsMethodsActionsCreate
      *
-     * Execute an action on a payment method..
+     * .
      *
      */
     public function testPaymentsMethodsActionsCreate()
@@ -156,7 +156,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for paymentsMethodsActionsCreate_0
      *
-     * Execute an action on a payment method..
+     * .
      *
      */
     public function testPaymentsMethodsActionsCreate0()

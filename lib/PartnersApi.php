@@ -90,7 +90,7 @@ class PartnersApi
     /**
      * Operation partnersActionsCreate
      *
-     * Partner actions.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerActionResource $partner_action_resource 
@@ -106,7 +106,7 @@ class PartnersApi
     /**
      * Operation partnersActionsCreateWithHttpInfo
      *
-     * Partner actions.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerActionResource $partner_action_resource 
@@ -184,7 +184,7 @@ class PartnersApi
     /**
      * Operation partnersAggregationsIndex
      *
-     * List facets and aggregations for the Partner Search.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -208,6 +208,7 @@ class PartnersApi
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'has_active_contract' => bool,
+     *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -225,7 +226,7 @@ class PartnersApi
     /**
      * Operation partnersAggregationsIndexWithHttpInfo
      *
-     * List facets and aggregations for the Partner Search.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -249,6 +250,7 @@ class PartnersApi
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'has_active_contract' => bool,
+     *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -356,6 +358,10 @@ class PartnersApi
             $queryParams['has_active_contract'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_active_contract']);
         }
         // query params
+        if (isset($criteria['has_unused_allocations'])) {
+            $queryParams['has_unused_allocations'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_unused_allocations']);
+        }
+        // query params
         if (isset($criteria['wants_exclusive_leads'])) {
             $queryParams['wants_exclusive_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['wants_exclusive_leads']);
         }
@@ -413,9 +419,295 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersAllocationdeliveriesIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'process_at_gte' => string,
+     *    'process_at_lte' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'geo_code' => string,
+     *    'employee_id' => string,
+     *    'revenue_segment_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAllocationDeliveryResult
+     */
+    public function partnersAllocationdeliveriesIndex($criteria = [])
+    {
+        list($response) = $this->partnersAllocationdeliveriesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAllocationdeliveriesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'process_at_gte' => string,
+     *    'process_at_lte' => string,
+     *    'partner_id' => string,
+     *    'sort' => string,
+     *    'geo_code' => string,
+     *    'employee_id' => string,
+     *    'revenue_segment_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAllocationDeliveryResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAllocationdeliveriesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/allocationdeliveries";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['process_at_gte'])) {
+            $queryParams['process_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['process_at_gte']);
+        }
+        // query params
+        if (isset($criteria['process_at_lte'])) {
+            $queryParams['process_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['process_at_lte']);
+        }
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['revenue_segment_id'])) {
+            $queryParams['revenue_segment_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['revenue_segment_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAllocationDeliveryResult',
+                '/partners/allocationdeliveries'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAllocationDeliveryResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAllocationDeliveryResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersAllocationdeliveriesIndex_0
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'process_at_gte' => string,
+     *    'process_at_lte' => string,
+     *    'sort' => string,
+     *    'geo_code' => string,
+     *    'employee_id' => string,
+     *    'revenue_segment_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAllocationDeliveryResult
+     */
+    public function partnersAllocationdeliveriesIndex_0($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersAllocationdeliveriesIndex_0WithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAllocationdeliveriesIndex_0WithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'process_at_gte' => string,
+     *    'process_at_lte' => string,
+     *    'sort' => string,
+     *    'geo_code' => string,
+     *    'employee_id' => string,
+     *    'revenue_segment_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAllocationDeliveryResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAllocationdeliveriesIndex_0WithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/allocationdeliveries";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['process_at_gte'])) {
+            $queryParams['process_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['process_at_gte']);
+        }
+        // query params
+        if (isset($criteria['process_at_lte'])) {
+            $queryParams['process_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['process_at_lte']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['revenue_segment_id'])) {
+            $queryParams['revenue_segment_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['revenue_segment_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAllocationDeliveryResult',
+                '/partners/{partner_id}/allocationdeliveries'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAllocationDeliveryResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAllocationDeliveryResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersAllocationpausesCreate
      *
-     * Create an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerAllocationPauseResource $partner_allocation_pause_resource 
@@ -431,7 +723,7 @@ class PartnersApi
     /**
      * Operation partnersAllocationpausesCreateWithHttpInfo
      *
-     * Create an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerAllocationPauseResource $partner_allocation_pause_resource 
@@ -507,9 +799,311 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersAssigneesCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAssigneeResource $partner_assignee_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAssigneeResource
+     */
+    public function partnersAssigneesCreate($partner_id , $partner_assignee_resource)
+    {
+        list($response) = $this->partnersAssigneesCreateWithHttpInfo($partner_id, $partner_assignee_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAssigneesCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAssigneeResource $partner_assignee_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAssigneeResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAssigneesCreateWithHttpInfo($partner_id , $partner_assignee_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/assignees";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_assignee_resource)) {
+            $_tempBody = $partner_assignee_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAssigneeResource',
+                '/partners/{partner_id}/assignees'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAssigneeResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAssigneeResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersAssigneesDelete
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_assignee_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersAssigneesDelete($partner_id,  $partner_assignee_id )
+    {
+        list($response) = $this->partnersAssigneesDeleteWithHttpInfo($partner_id, $partner_assignee_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAssigneesDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_assignee_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAssigneesDeleteWithHttpInfo($partner_id,  $partner_assignee_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/assignees/{partner_assignee_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_assignee_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_assignee_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_assignee_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/assignees/{partner_assignee_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersAssigneesIndex
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'roles' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAssigneeResult
+     */
+    public function partnersAssigneesIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersAssigneesIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAssigneesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'roles' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAssigneeResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAssigneesIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/assignees";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['roles'])) {
+            $queryParams['roles'] = $this->apiClient->getSerializer()->toQueryValue($criteria['roles']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAssigneeResult',
+                '/partners/{partner_id}/assignees'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAssigneeResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAssigneeResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersBankaccountsCreate
      *
-     * Subscribe a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBankaccountResource $partner_bankaccount_resource 
@@ -525,7 +1119,7 @@ class PartnersApi
     /**
      * Operation partnersBankaccountsCreateWithHttpInfo
      *
-     * Subscribe a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBankaccountResource $partner_bankaccount_resource 
@@ -603,7 +1197,7 @@ class PartnersApi
     /**
      * Operation partnersBankaccountsIndex
      *
-     * Get partner's bank accounts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -623,7 +1217,7 @@ class PartnersApi
     /**
      * Operation partnersBankaccountsIndexWithHttpInfo
      *
-     * Get partner's bank accounts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -712,7 +1306,7 @@ class PartnersApi
     /**
      * Operation partnersBrowserpushsubscriptionsCreate
      *
-     * Create a browser push subscription
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
@@ -728,7 +1322,7 @@ class PartnersApi
     /**
      * Operation partnersBrowserpushsubscriptionsCreateWithHttpInfo
      *
-     * Create a browser push subscription
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
@@ -806,7 +1400,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsCreate
      *
-     * Create a business unit contract.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBusinessUnitContractResource $partner_business_unit_contract_resource 
@@ -822,7 +1416,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsCreateWithHttpInfo
      *
-     * Create a business unit contract.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBusinessUnitContractResource $partner_business_unit_contract_resource 
@@ -900,7 +1494,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsGet
      *
-     * Get a business unit agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -916,7 +1510,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsGetWithHttpInfo
      *
-     * Get a business unit agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -997,7 +1591,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsIndex
      *
-     * List business unit contracts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1017,7 +1611,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitcontractsIndexWithHttpInfo
      *
-     * List business unit contracts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1106,7 +1700,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsCreate
      *
-     * Create a lead allocation limit for a business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1123,7 +1717,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsCreateWithHttpInfo
      *
-     * Create a lead allocation limit for a business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1210,7 +1804,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsDelete
      *
-     * Delete a lead allocation limit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1227,7 +1821,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsDeleteWithHttpInfo
      *
-     * Delete a lead allocation limit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1313,7 +1907,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsIndex
      *
-     * List lead allocation limits.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1336,7 +1930,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsIndexWithHttpInfo
      *
-     * List lead allocation limits.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1440,7 +2034,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsUpdate
      *
-     * Update a lead allocation limit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1458,7 +2052,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationlimitsUpdateWithHttpInfo
      *
-     * Update a lead allocation limit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1554,7 +2148,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasCreate
      *
-     * Create a lead allocation quota for a business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1571,7 +2165,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasCreateWithHttpInfo
      *
-     * Create a lead allocation quota for a business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1658,7 +2252,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasDelete
      *
-     * Delete a lead allocation quota.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1675,7 +2269,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasDeleteWithHttpInfo
      *
-     * Delete a lead allocation quota.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -1761,7 +2355,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasIndex
      *
-     * List lead allocation quotas.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1784,7 +2378,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsAllocationquotasIndexWithHttpInfo
      *
-     * List lead allocation quotas.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -1888,7 +2482,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsCreate
      *
-     * Create partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
@@ -1904,7 +2498,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsCreateWithHttpInfo
      *
-     * Create partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerBusinessUnitResource $partner_business_unit_resource 
@@ -1982,7 +2576,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsDelete
      *
-     * Delete a partner business unit
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_businessunit_id 
@@ -1998,7 +2592,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsDeleteWithHttpInfo
      *
-     * Delete a partner business unit
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_businessunit_id 
@@ -2075,7 +2669,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsGet
      *
-     * Get a single partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2091,7 +2685,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsGetWithHttpInfo
      *
-     * Get a single partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2172,7 +2766,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndex
      *
-     * List partner business units.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -2210,7 +2804,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndexWithHttpInfo
      *
-     * List partner business units.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -2385,7 +2979,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndustriesIndex
      *
-     * List business unit industries.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2407,7 +3001,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndustriesIndexWithHttpInfo
      *
-     * List business unit industries.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2510,7 +3104,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndustriesUpdate
      *
-     * Update business unit industries.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2527,7 +3121,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsIndustriesUpdateWithHttpInfo
      *
-     * Update business unit industries.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2614,7 +3208,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsRevenuerangesCreate
      *
-     * Create a business unit revenue range.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2631,7 +3225,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsRevenuerangesCreateWithHttpInfo
      *
-     * Create a business unit revenue range.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2718,7 +3312,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSectorsIndex
      *
-     * List business unit sectors.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2739,7 +3333,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSectorsIndexWithHttpInfo
      *
-     * List business unit sectors.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2837,7 +3431,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSectorsUpdate
      *
-     * Update partner business unit sectors.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2854,7 +3448,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSectorsUpdateWithHttpInfo
      *
-     * Update partner business unit sectors.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2941,7 +3535,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSegmentationgeoregionsIndex
      *
-     * List a business unit's segmentation geo regions.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -2962,7 +3556,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSegmentationgeoregionsIndexWithHttpInfo
      *
-     * List a business unit's segmentation geo regions.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3060,7 +3654,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSegmentationgeoregionsUpdate
      *
-     * Replace a business unit's segmentation geo regions.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3077,7 +3671,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsSegmentationgeoregionsUpdateWithHttpInfo
      *
-     * Replace a business unit's segmentation geo regions.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3164,7 +3758,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsTypesIndex
      *
-     * List business unit types.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3185,7 +3779,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsTypesIndexWithHttpInfo
      *
-     * List business unit types.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3283,7 +3877,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsTypesUpdate
      *
-     * Update partner business unit types.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3300,7 +3894,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsTypesUpdateWithHttpInfo
      *
-     * Update partner business unit types.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3387,7 +3981,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsUpdate
      *
-     * Update partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3404,7 +3998,7 @@ class PartnersApi
     /**
      * Operation partnersBusinessunitsUpdateWithHttpInfo
      *
-     * Update partner business unit.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_business_unit_id 
@@ -3491,7 +4085,7 @@ class PartnersApi
     /**
      * Operation partnersCategoriesIndex
      *
-     * List of partner categories.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -3514,7 +4108,7 @@ class PartnersApi
     /**
      * Operation partnersCategoriesIndexWithHttpInfo
      *
-     * List of partner categories.
+     * 
      *
      * @param $criteria = [
      *    'id' => string,
@@ -3614,7 +4208,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsCreate
      *
-     * Attach certification to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\CertificationResource $certification_resource 
@@ -3630,7 +4224,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsCreateWithHttpInfo
      *
-     * Attach certification to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\CertificationResource $certification_resource 
@@ -3708,7 +4302,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsDelete
      *
-     * Detach certification from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $certification_id 
@@ -3724,7 +4318,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsDeleteWithHttpInfo
      *
-     * Detach certification from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $certification_id 
@@ -3801,7 +4395,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsGet
      *
-     * Get Partner certification.
+     * 
      *
      * @param string $partner_id 
      * @param string $certification_id 
@@ -3817,7 +4411,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsGetWithHttpInfo
      *
-     * Get Partner certification.
+     * 
      *
      * @param string $partner_id 
      * @param string $certification_id 
@@ -3898,7 +4492,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsIndex
      *
-     * Get partner certifications.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -3920,7 +4514,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsIndexWithHttpInfo
      *
-     * Get partner certifications.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -4019,7 +4613,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsUpdate
      *
-     * Update partner certifications.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerCertificationsResource $partner_certifications_resource 
@@ -4035,7 +4629,7 @@ class PartnersApi
     /**
      * Operation partnersCertificationsUpdateWithHttpInfo
      *
-     * Update partner certifications.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerCertificationsResource $partner_certifications_resource 
@@ -4113,7 +4707,7 @@ class PartnersApi
     /**
      * Operation partnersContentsDelete
      *
-     * Delete content for a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4129,7 +4723,7 @@ class PartnersApi
     /**
      * Operation partnersContentsDeleteWithHttpInfo
      *
-     * Delete content for a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4206,7 +4800,7 @@ class PartnersApi
     /**
      * Operation partnersContentsGet
      *
-     * Get the content of a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4222,7 +4816,7 @@ class PartnersApi
     /**
      * Operation partnersContentsGetWithHttpInfo
      *
-     * Get the content of a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4303,7 +4897,7 @@ class PartnersApi
     /**
      * Operation partnersContentsUpdate
      *
-     * Update content for a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4320,7 +4914,7 @@ class PartnersApi
     /**
      * Operation partnersContentsUpdateWithHttpInfo
      *
-     * Update content for a given partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $content_key 
@@ -4407,7 +5001,7 @@ class PartnersApi
     /**
      * Operation partnersContractoffergroupsCreate
      *
-     * List partner contract offer groups.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerContractOfferGroupResource $partner_contract_offer_group_resource 
@@ -4423,7 +5017,7 @@ class PartnersApi
     /**
      * Operation partnersContractoffergroupsCreateWithHttpInfo
      *
-     * List partner contract offer groups.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerContractOfferGroupResource $partner_contract_offer_group_resource 
@@ -4501,7 +5095,7 @@ class PartnersApi
     /**
      * Operation partnersContractoffergroupsIndex
      *
-     * List partner contract offer groups.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -4522,7 +5116,7 @@ class PartnersApi
     /**
      * Operation partnersContractoffergroupsIndexWithHttpInfo
      *
-     * List partner contract offer groups.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -4616,7 +5210,7 @@ class PartnersApi
     /**
      * Operation partnersContractsActionsCreate
      *
-     * Perform an action on a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -4633,7 +5227,7 @@ class PartnersApi
     /**
      * Operation partnersContractsActionsCreateWithHttpInfo
      *
-     * Perform an action on a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -4720,7 +5314,7 @@ class PartnersApi
     /**
      * Operation partnersContractsAllocationpausesDelete
      *
-     * Delete an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -4737,7 +5331,7 @@ class PartnersApi
     /**
      * Operation partnersContractsAllocationpausesDeleteWithHttpInfo
      *
-     * Delete an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -4823,7 +5417,7 @@ class PartnersApi
     /**
      * Operation partnersContractsAllocationpausesUpdate
      *
-     * Update an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -4841,7 +5435,7 @@ class PartnersApi
     /**
      * Operation partnersContractsAllocationpausesUpdateWithHttpInfo
      *
-     * Update an allocation pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -4937,7 +5531,7 @@ class PartnersApi
     /**
      * Operation partnersContractsCreate
      *
-     * Create a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerContractResource $partner_contract_resource 
@@ -4953,7 +5547,7 @@ class PartnersApi
     /**
      * Operation partnersContractsCreateWithHttpInfo
      *
-     * Create a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerContractResource $partner_contract_resource 
@@ -5031,7 +5625,7 @@ class PartnersApi
     /**
      * Operation partnersContractsDelete
      *
-     * Delete a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -5047,7 +5641,7 @@ class PartnersApi
     /**
      * Operation partnersContractsDeleteWithHttpInfo
      *
-     * Delete a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -5124,7 +5718,7 @@ class PartnersApi
     /**
      * Operation partnersContractsGet
      *
-     * Get a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5140,7 +5734,7 @@ class PartnersApi
     /**
      * Operation partnersContractsGetWithHttpInfo
      *
-     * Get a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5221,11 +5815,12 @@ class PartnersApi
     /**
      * Operation partnersContractsIndex
      *
-     * List partner contracts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
      *    'is_accepted' => bool,
+     *    'is_archived' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -5242,11 +5837,12 @@ class PartnersApi
     /**
      * Operation partnersContractsIndexWithHttpInfo
      *
-     * List partner contracts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
      *    'is_accepted' => bool,
+     *    'is_archived' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -5271,6 +5867,10 @@ class PartnersApi
         // query params
         if (isset($criteria['is_accepted'])) {
             $queryParams['is_accepted'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_accepted']);
+        }
+        // query params
+        if (isset($criteria['is_archived'])) {
+            $queryParams['is_archived'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_archived']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -5336,7 +5936,7 @@ class PartnersApi
     /**
      * Operation partnersContractsPdfGet
      *
-     * Get a PDF download link
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5352,7 +5952,7 @@ class PartnersApi
     /**
      * Operation partnersContractsPdfGetWithHttpInfo
      *
-     * Get a PDF download link
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5433,7 +6033,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSignedpdfCreate
      *
-     * Upload signed contract
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5450,7 +6050,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSignedpdfCreateWithHttpInfo
      *
-     * Upload signed contract
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5537,7 +6137,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSignedpdfGet
      *
-     * Get a PDF download link for signed pdf
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5553,7 +6153,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSignedpdfGetWithHttpInfo
      *
-     * Get a PDF download link for signed pdf
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5634,7 +6234,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSigningurlGet
      *
-     * Get a signing url
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5650,7 +6250,7 @@ class PartnersApi
     /**
      * Operation partnersContractsSigningurlGetWithHttpInfo
      *
-     * Get a signing url
+     * 
      *
      * @param string $partner_id 
      * @param string $contract_id 
@@ -5731,7 +6331,7 @@ class PartnersApi
     /**
      * Operation partnersContractsUpdate
      *
-     * Update a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -5748,7 +6348,7 @@ class PartnersApi
     /**
      * Operation partnersContractsUpdateWithHttpInfo
      *
-     * Update a partner contract.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_contract_id 
@@ -5835,7 +6435,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsActionsCreate
      *
-     * Coupon action
+     * 
      *
      * @param string $partner_id 
      * @param string $coupon_id 
@@ -5852,7 +6452,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsActionsCreateWithHttpInfo
      *
-     * Coupon action
+     * 
      *
      * @param string $partner_id 
      * @param string $coupon_id 
@@ -5939,7 +6539,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsCreate
      *
-     * Create a new partner coupon.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerCouponResource $partner_coupon_resource 
@@ -5955,7 +6555,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsCreateWithHttpInfo
      *
-     * Create a new partner coupon.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerCouponResource $partner_coupon_resource 
@@ -6033,7 +6633,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsIndex
      *
-     * List Partner Coupons.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -6057,7 +6657,7 @@ class PartnersApi
     /**
      * Operation partnersCouponsIndexWithHttpInfo
      *
-     * List Partner Coupons.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -6166,7 +6766,7 @@ class PartnersApi
     /**
      * Operation partnersCreate
      *
-     * Create a Partner.
+     * Create a Partner
      *
      * @param \Ageras\Api\PartnerResource $partner_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6181,7 +6781,7 @@ class PartnersApi
     /**
      * Operation partnersCreateWithHttpInfo
      *
-     * Create a Partner.
+     * Create a Partner
      *
      * @param \Ageras\Api\PartnerResource $partner_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6250,7 +6850,7 @@ class PartnersApi
     /**
      * Operation partnersDelete
      *
-     * Delete a Partner.
+     * 
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6265,7 +6865,7 @@ class PartnersApi
     /**
      * Operation partnersDeleteWithHttpInfo
      *
-     * Delete a Partner.
+     * 
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6333,7 +6933,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesCreate
      *
-     * Create Deliverable for partners
+     * 
      *
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6348,7 +6948,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesCreateWithHttpInfo
      *
-     * Create Deliverable for partners
+     * 
      *
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6417,7 +7017,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesCreate_0
      *
-     * Create Deliverable for partners
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
@@ -6433,7 +7033,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesCreate_0WithHttpInfo
      *
-     * Create Deliverable for partners
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
@@ -6511,7 +7111,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesGet
      *
-     * Retrieve a single deliverable id
+     * 
      *
      * @param string $partner_deliverable_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6526,7 +7126,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesGetWithHttpInfo
      *
-     * Retrieve a single deliverable id
+     * 
      *
      * @param string $partner_deliverable_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -6598,7 +7198,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesGet_0
      *
-     * Retrieve a single deliverable id
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -6614,7 +7214,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesGet_0WithHttpInfo
      *
-     * Retrieve a single deliverable id
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -6695,7 +7295,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesIndex
      *
-     * List Partner deliverables
+     * 
      *
      * @param $criteria = [
      *    'client_id' => string,
@@ -6719,7 +7319,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesIndexWithHttpInfo
      *
-     * List Partner deliverables
+     * 
      *
      * @param $criteria = [
      *    'client_id' => string,
@@ -6824,7 +7424,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesIndex_0
      *
-     * List Partner deliverables
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -6848,7 +7448,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesIndex_0WithHttpInfo
      *
-     * List Partner deliverables
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -6957,7 +7557,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesCreate
      *
-     * Create item for Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
@@ -6973,7 +7573,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesCreateWithHttpInfo
      *
-     * Create item for Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param \Ageras\Api\PartnerDeliverableLineResource $partner_deliverable_line_resource 
@@ -7051,7 +7651,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesCreate_0
      *
-     * Create item for Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7068,7 +7668,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesCreate_0WithHttpInfo
      *
-     * Create item for Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7155,7 +7755,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesDelete
      *
-     * Delete item from Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7171,7 +7771,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesDeleteWithHttpInfo
      *
-     * Delete item from Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7248,7 +7848,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesDelete_0
      *
-     * Delete item from Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7265,7 +7865,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesDelete_0WithHttpInfo
      *
-     * Delete item from Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7351,7 +7951,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesGet
      *
-     * Get Partner Deliverable Item
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7367,7 +7967,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesGetWithHttpInfo
      *
-     * Get Partner Deliverable Item
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7448,7 +8048,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesGet_0
      *
-     * Get Partner Deliverable Item
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7465,7 +8065,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesGet_0WithHttpInfo
      *
-     * Get Partner Deliverable Item
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7555,7 +8155,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesIndex
      *
-     * List Partner Deliverable Items
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param $criteria = [
@@ -7578,7 +8178,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesIndexWithHttpInfo
      *
-     * List Partner Deliverable Items
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param $criteria = [
@@ -7682,7 +8282,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesIndex_0
      *
-     * List Partner Deliverable Items
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7705,7 +8305,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesIndex_0WithHttpInfo
      *
-     * List Partner Deliverable Items
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7813,7 +8413,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesUpdate
      *
-     * Update item for Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7830,7 +8430,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesUpdateWithHttpInfo
      *
-     * Update item for Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param string $partner_deliverable_line_id 
@@ -7917,7 +8517,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesUpdate_0
      *
-     * Update item for Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -7935,7 +8535,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesLinesUpdate_0WithHttpInfo
      *
-     * Update item for Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -8031,7 +8631,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesUpdate
      *
-     * Update Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
@@ -8047,7 +8647,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesUpdateWithHttpInfo
      *
-     * Update Partner Deliverable
+     * 
      *
      * @param string $partner_deliverable_id 
      * @param \Ageras\Api\PartnerDeliverableResource $partner_deliverable_resource 
@@ -8125,7 +8725,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesUpdate_0
      *
-     * Update Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -8142,7 +8742,7 @@ class PartnersApi
     /**
      * Operation partnersDeliverablesUpdate_0WithHttpInfo
      *
-     * Update Partner Deliverable
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_deliverable_id 
@@ -8229,7 +8829,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsCreate
      *
-     * Discount for a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerDiscountResource $partner_discount_resource 
@@ -8245,7 +8845,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsCreateWithHttpInfo
      *
-     * Discount for a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerDiscountResource $partner_discount_resource 
@@ -8323,7 +8923,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsDelete
      *
-     * Delete a partner discount
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_package_type_discount_id 
@@ -8339,7 +8939,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsDeleteWithHttpInfo
      *
-     * Delete a partner discount
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_package_type_discount_id 
@@ -8416,7 +9016,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsIndex
      *
-     * Get partner's discounts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -8437,7 +9037,7 @@ class PartnersApi
     /**
      * Operation partnersDiscountsIndexWithHttpInfo
      *
-     * Get partner's discounts.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -8529,9 +9129,311 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersEmployeenotesCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerEmployeeNoteResource $partner_employee_note_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerEmployeeNoteResource
+     */
+    public function partnersEmployeenotesCreate($partner_id , $partner_employee_note_resource)
+    {
+        list($response) = $this->partnersEmployeenotesCreateWithHttpInfo($partner_id, $partner_employee_note_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersEmployeenotesCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerEmployeeNoteResource $partner_employee_note_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerEmployeeNoteResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersEmployeenotesCreateWithHttpInfo($partner_id , $partner_employee_note_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/employeenotes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_employee_note_resource)) {
+            $_tempBody = $partner_employee_note_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerEmployeeNoteResource',
+                '/partners/{partner_id}/employeenotes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerEmployeeNoteResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerEmployeeNoteResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersEmployeenotesDelete
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $employee_note_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersEmployeenotesDelete($partner_id,  $employee_note_id )
+    {
+        list($response) = $this->partnersEmployeenotesDeleteWithHttpInfo($partner_id, $employee_note_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersEmployeenotesDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $employee_note_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersEmployeenotesDeleteWithHttpInfo($partner_id,  $employee_note_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/employeenotes/{employee_note_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($employee_note_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "employee_note_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($employee_note_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/employeenotes/{employee_note_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersEmployeenotesIndex
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'lead_id' => int,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerEmployeeNoteResult
+     */
+    public function partnersEmployeenotesIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersEmployeenotesIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersEmployeenotesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'lead_id' => int,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerEmployeeNoteResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersEmployeenotesIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/employeenotes";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['lead_id'])) {
+            $queryParams['lead_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['lead_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerEmployeeNoteResult',
+                '/partners/{partner_id}/employeenotes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerEmployeeNoteResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerEmployeeNoteResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersFeaturesCreate
      *
-     * Attach feature to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerFeatureResource $partner_feature_resource 
@@ -8547,7 +9449,7 @@ class PartnersApi
     /**
      * Operation partnersFeaturesCreateWithHttpInfo
      *
-     * Attach feature to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerFeatureResource $partner_feature_resource 
@@ -8625,7 +9527,7 @@ class PartnersApi
     /**
      * Operation partnersFeaturesDelete
      *
-     * Detach a single feature from a partner
+     * 
      *
      * @param string $partner_id 
      * @param string $feature_identifier 
@@ -8641,7 +9543,7 @@ class PartnersApi
     /**
      * Operation partnersFeaturesDeleteWithHttpInfo
      *
-     * Detach a single feature from a partner
+     * 
      *
      * @param string $partner_id 
      * @param string $feature_identifier 
@@ -8718,7 +9620,7 @@ class PartnersApi
     /**
      * Operation partnersFeesCreate
      *
-     * Create partner fee
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerFeeResource $partner_fee_resource 
@@ -8734,7 +9636,7 @@ class PartnersApi
     /**
      * Operation partnersFeesCreateWithHttpInfo
      *
-     * Create partner fee
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerFeeResource $partner_fee_resource 
@@ -8812,7 +9714,7 @@ class PartnersApi
     /**
      * Operation partnersFeesDelete
      *
-     * Delete a partner fee
+     * 
      *
      * @param string $partner_id 
      * @param string $id 
@@ -8828,7 +9730,7 @@ class PartnersApi
     /**
      * Operation partnersFeesDeleteWithHttpInfo
      *
-     * Delete a partner fee
+     * 
      *
      * @param string $partner_id 
      * @param string $id 
@@ -8905,7 +9807,7 @@ class PartnersApi
     /**
      * Operation partnersFeesIndex
      *
-     * Get all partner fees.
+     * 
      *
      * @param $criteria = [
      *    'id' => int,
@@ -8927,7 +9829,7 @@ class PartnersApi
     /**
      * Operation partnersFeesIndexWithHttpInfo
      *
-     * Get all partner fees.
+     * 
      *
      * @param $criteria = [
      *    'id' => int,
@@ -9022,7 +9924,7 @@ class PartnersApi
     /**
      * Operation partnersGet
      *
-     * Get a Partner from a given partner_id.
+     * Get a single partner by ID
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -9037,7 +9939,7 @@ class PartnersApi
     /**
      * Operation partnersGetWithHttpInfo
      *
-     * Get a Partner from a given partner_id.
+     * Get a single partner by ID
      *
      * @param string $partner_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -9109,7 +10011,7 @@ class PartnersApi
     /**
      * Operation partnersImpressumsCreate
      *
-     * Create a partner impressum.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerImpressumResource $partner_impressum_resource 
@@ -9125,7 +10027,7 @@ class PartnersApi
     /**
      * Operation partnersImpressumsCreateWithHttpInfo
      *
-     * Create a partner impressum.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerImpressumResource $partner_impressum_resource 
@@ -9203,7 +10105,7 @@ class PartnersApi
     /**
      * Operation partnersIndex
      *
-     * List Partners.
+     * List partners
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -9227,6 +10129,7 @@ class PartnersApi
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'has_active_contract' => bool,
+     *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -9244,7 +10147,7 @@ class PartnersApi
     /**
      * Operation partnersIndexWithHttpInfo
      *
-     * List Partners.
+     * List partners
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -9268,6 +10171,7 @@ class PartnersApi
      *    'digital_leads' => bool,
      *    'has_marketing_package' => bool,
      *    'has_active_contract' => bool,
+     *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
      *    'limit' => int,
      *    'page' => int,
@@ -9375,6 +10279,10 @@ class PartnersApi
             $queryParams['has_active_contract'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_active_contract']);
         }
         // query params
+        if (isset($criteria['has_unused_allocations'])) {
+            $queryParams['has_unused_allocations'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_unused_allocations']);
+        }
+        // query params
         if (isset($criteria['wants_exclusive_leads'])) {
             $queryParams['wants_exclusive_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['wants_exclusive_leads']);
         }
@@ -9434,7 +10342,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesCreate
      *
-     * Attach industry to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerIndustryResource $partner_industry_resource 
@@ -9450,7 +10358,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesCreateWithHttpInfo
      *
-     * Attach industry to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerIndustryResource $partner_industry_resource 
@@ -9528,7 +10436,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesDelete
      *
-     * Detach industry from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $industry_id 
@@ -9544,7 +10452,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesDeleteWithHttpInfo
      *
-     * Detach industry from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $industry_id 
@@ -9621,7 +10529,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesGet
      *
-     * Get a given industry for partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $industry_id 
@@ -9637,7 +10545,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesGetWithHttpInfo
      *
-     * Get a given industry for partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $industry_id 
@@ -9718,7 +10626,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesIndex
      *
-     * Get partner industries.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -9740,7 +10648,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesIndexWithHttpInfo
      *
-     * Get partner industries.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -9839,7 +10747,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesUpdate
      *
-     * Replace partner's industries.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerIndustriesResource $partner_industries_resource 
@@ -9855,7 +10763,7 @@ class PartnersApi
     /**
      * Operation partnersIndustriesUpdateWithHttpInfo
      *
-     * Replace partner's industries.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerIndustriesResource $partner_industries_resource 
@@ -9933,7 +10841,7 @@ class PartnersApi
     /**
      * Operation partnersInvoicingsIndex
      *
-     * List partner invoicings.
+     * 
      *
      * @param $criteria = [
      *    'process_at_gte' => string,
@@ -9959,7 +10867,7 @@ class PartnersApi
     /**
      * Operation partnersInvoicingsIndexWithHttpInfo
      *
-     * List partner invoicings.
+     * 
      *
      * @param $criteria = [
      *    'process_at_gte' => string,
@@ -10074,7 +10982,7 @@ class PartnersApi
     /**
      * Operation partnersInvoicingsIndex_0
      *
-     * List partner invoicings.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -10100,7 +11008,7 @@ class PartnersApi
     /**
      * Operation partnersInvoicingsIndex_0WithHttpInfo
      *
-     * List partner invoicings.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -10219,7 +11127,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesCreate
      *
-     * Attach type to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\LeadTypeResource $lead_type_resource 
@@ -10235,7 +11143,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesCreateWithHttpInfo
      *
-     * Attach type to partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\LeadTypeResource $lead_type_resource 
@@ -10313,7 +11221,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesDelete
      *
-     * Detach type from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $lead_type_id 
@@ -10329,7 +11237,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesDeleteWithHttpInfo
      *
-     * Detach type from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $lead_type_id 
@@ -10406,7 +11314,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesGet
      *
-     * Retrieve a given lead type.
+     * 
      *
      * @param string $lead_type_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -10421,7 +11329,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesGetWithHttpInfo
      *
-     * Retrieve a given lead type.
+     * 
      *
      * @param string $lead_type_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -10493,7 +11401,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesGet_0
      *
-     * Retrieve a given lead type.
+     * 
      *
      * @param string $partner_id 
      * @param string $lead_type_id 
@@ -10509,7 +11417,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesGet_0WithHttpInfo
      *
-     * Retrieve a given lead type.
+     * 
      *
      * @param string $partner_id 
      * @param string $lead_type_id 
@@ -10590,7 +11498,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesIndex
      *
-     * Get partner types criteria.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -10612,7 +11520,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesIndexWithHttpInfo
      *
-     * Get partner types criteria.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -10707,7 +11615,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesIndex_0
      *
-     * Get partner types criteria.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -10729,7 +11637,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesIndex_0WithHttpInfo
      *
-     * Get partner types criteria.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -10828,7 +11736,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesUpdate
      *
-     * Replace a partner's lead types.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerLeadTypesResource $partner_lead_types_resource 
@@ -10844,7 +11752,7 @@ class PartnersApi
     /**
      * Operation partnersLeadtypesUpdateWithHttpInfo
      *
-     * Replace a partner's lead types.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerLeadTypesResource $partner_lead_types_resource 
@@ -10922,7 +11830,7 @@ class PartnersApi
     /**
      * Operation partnersNotesCreate
      *
-     * Create Partner notes.
+     * 
      *
      * @param \Ageras\Api\PartnerNoteResource $partner_note_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -10937,7 +11845,7 @@ class PartnersApi
     /**
      * Operation partnersNotesCreateWithHttpInfo
      *
-     * Create Partner notes.
+     * 
      *
      * @param \Ageras\Api\PartnerNoteResource $partner_note_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -11006,7 +11914,7 @@ class PartnersApi
     /**
      * Operation partnersNotesCreate_0
      *
-     * Create Partner notes.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerNoteResource $partner_note_resource 
@@ -11022,7 +11930,7 @@ class PartnersApi
     /**
      * Operation partnersNotesCreate_0WithHttpInfo
      *
-     * Create Partner notes.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerNoteResource $partner_note_resource 
@@ -11100,7 +12008,7 @@ class PartnersApi
     /**
      * Operation partnersNotesGet
      *
-     * Retrieve a given partner note by partner id and partner_note_id.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_note_id 
@@ -11116,7 +12024,7 @@ class PartnersApi
     /**
      * Operation partnersNotesGetWithHttpInfo
      *
-     * Retrieve a given partner note by partner id and partner_note_id.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_note_id 
@@ -11197,7 +12105,7 @@ class PartnersApi
     /**
      * Operation partnersNotesIndex
      *
-     * Retrieve lists of notes.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -11218,7 +12126,7 @@ class PartnersApi
     /**
      * Operation partnersNotesIndexWithHttpInfo
      *
-     * Retrieve lists of notes.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => int,
@@ -11308,7 +12216,7 @@ class PartnersApi
     /**
      * Operation partnersNotesIndex_0
      *
-     * Retrieve lists of notes.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -11329,7 +12237,7 @@ class PartnersApi
     /**
      * Operation partnersNotesIndex_0WithHttpInfo
      *
-     * Retrieve lists of notes.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -11423,7 +12331,7 @@ class PartnersApi
     /**
      * Operation partnersRevenuerangesCreate
      *
-     * Create a revenue range.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerRevenueRangeResource $partner_revenue_range_resource 
@@ -11439,7 +12347,7 @@ class PartnersApi
     /**
      * Operation partnersRevenuerangesCreateWithHttpInfo
      *
-     * Create a revenue range.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerRevenueRangeResource $partner_revenue_range_resource 
@@ -11517,7 +12425,7 @@ class PartnersApi
     /**
      * Operation partnersSectorsIndex
      *
-     * Get partner sectors.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -11537,7 +12445,7 @@ class PartnersApi
     /**
      * Operation partnersSectorsIndexWithHttpInfo
      *
-     * Get partner sectors.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -11626,7 +12534,7 @@ class PartnersApi
     /**
      * Operation partnersSectorsUpdate
      *
-     * Update partner sectors.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
@@ -11642,7 +12550,7 @@ class PartnersApi
     /**
      * Operation partnersSectorsUpdateWithHttpInfo
      *
-     * Update partner sectors.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSectorsResource $partner_sectors_resource 
@@ -11720,7 +12628,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsCreate
      *
-     * Create partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
@@ -11736,7 +12644,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsCreateWithHttpInfo
      *
-     * Create partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerUniqueSellingPointResource $partner_unique_selling_point_resource 
@@ -11814,7 +12722,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsDelete
      *
-     * Delete partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param string $selling_point_id 
@@ -11830,7 +12738,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsDeleteWithHttpInfo
      *
-     * Delete partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param string $selling_point_id 
@@ -11907,7 +12815,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsIndex
      *
-     * List of partner selling points.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -11928,7 +12836,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsIndexWithHttpInfo
      *
-     * List of partner selling points.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -12022,7 +12930,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsUpdate
      *
-     * Update partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param string $selling_point_id 
@@ -12039,7 +12947,7 @@ class PartnersApi
     /**
      * Operation partnersSellingpointsUpdateWithHttpInfo
      *
-     * Update partner selling point.
+     * 
      *
      * @param string $partner_id 
      * @param string $selling_point_id 
@@ -12126,7 +13034,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsActionsCreate
      *
-     * Execute an action on a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $agreement_id 
@@ -12143,7 +13051,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsActionsCreateWithHttpInfo
      *
-     * Execute an action on a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $agreement_id 
@@ -12230,7 +13138,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsCreate
      *
-     * Create a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSubscriptionAgreementResource $partner_subscription_agreement_resource 
@@ -12246,7 +13154,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsCreateWithHttpInfo
      *
-     * Create a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSubscriptionAgreementResource $partner_subscription_agreement_resource 
@@ -12324,7 +13232,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsIndex
      *
-     * List partner subscription agreements.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -12345,7 +13253,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsIndexWithHttpInfo
      *
-     * List partner subscription agreements.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -12439,7 +13347,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsUpdate
      *
-     * Update a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $agreement_id 
@@ -12456,7 +13364,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionagreementsUpdateWithHttpInfo
      *
-     * Update a subscription agreement.
+     * 
      *
      * @param string $partner_id 
      * @param string $agreement_id 
@@ -12543,7 +13451,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsActionsCreate
      *
-     * Cancel subscription.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -12560,7 +13468,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsActionsCreateWithHttpInfo
      *
-     * Cancel subscription.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -12647,7 +13555,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsCreate
      *
-     * Subscribe a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSubscriptionResource $partner_subscription_resource 
@@ -12663,7 +13571,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsCreateWithHttpInfo
      *
-     * Subscribe a partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerSubscriptionResource $partner_subscription_resource 
@@ -12741,7 +13649,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsIndex
      *
-     * Get partner's subscriptions.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -12762,7 +13670,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsIndexWithHttpInfo
      *
-     * Get partner's subscriptions.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -12856,7 +13764,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesCreate
      *
-     * Create a subscription pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -12873,7 +13781,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesCreateWithHttpInfo
      *
-     * Create a subscription pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -12960,7 +13868,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesDelete
      *
-     * Delete a subscription pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -12977,7 +13885,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesDeleteWithHttpInfo
      *
-     * Delete a subscription pause.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13063,7 +13971,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesIndex
      *
-     * List subscription pauses.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13084,7 +13992,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPausesIndexWithHttpInfo
      *
-     * List subscription pauses.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13182,7 +14090,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesCreate
      *
-     * Create a new subscription price effective at a specific date
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13199,7 +14107,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesCreateWithHttpInfo
      *
-     * Create a new subscription price effective at a specific date
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13286,7 +14194,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesDelete
      *
-     * Delete a future subscription price
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13303,7 +14211,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesDeleteWithHttpInfo
      *
-     * Delete a future subscription price
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13389,7 +14297,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesIndex
      *
-     * List the subscription's prices.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13410,7 +14318,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsPricesIndexWithHttpInfo
      *
-     * List the subscription's prices.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13508,7 +14416,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsUpdate
      *
-     * Update partner subscription.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13525,7 +14433,7 @@ class PartnersApi
     /**
      * Operation partnersSubscriptionsUpdateWithHttpInfo
      *
-     * Update partner subscription.
+     * 
      *
      * @param string $partner_id 
      * @param string $subscription_id 
@@ -13612,7 +14520,7 @@ class PartnersApi
     /**
      * Operation partnersSuggestIndex
      *
-     * Suggest Partners to search for.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -13634,7 +14542,7 @@ class PartnersApi
     /**
      * Operation partnersSuggestIndexWithHttpInfo
      *
-     * Suggest Partners to search for.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -13729,7 +14637,7 @@ class PartnersApi
     /**
      * Operation partnersTitlesIndex
      *
-     * Get all partner titles.
+     * 
      *
      * @param $criteria = [
      *    'id' => int,
@@ -13754,7 +14662,7 @@ class PartnersApi
     /**
      * Operation partnersTitlesIndexWithHttpInfo
      *
-     * Get all partner titles.
+     * 
      *
      * @param $criteria = [
      *    'id' => int,
@@ -13864,7 +14772,7 @@ class PartnersApi
     /**
      * Operation partnersTransactionsIndex
      *
-     * List Transactions for a given Partner.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -13884,7 +14792,7 @@ class PartnersApi
     /**
      * Operation partnersTransactionsIndexWithHttpInfo
      *
-     * List Transactions for a given Partner.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -13973,7 +14881,7 @@ class PartnersApi
     /**
      * Operation partnersUpdate
      *
-     * Update a Partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerResource $partner_resource 
@@ -13989,7 +14897,7 @@ class PartnersApi
     /**
      * Operation partnersUpdateWithHttpInfo
      *
-     * Update a Partner.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerResource $partner_resource 
@@ -14067,7 +14975,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsDelete
      *
-     * Delete content for a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14083,7 +14991,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsDeleteWithHttpInfo
      *
-     * Delete content for a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14160,7 +15068,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsDelete_0
      *
-     * Delete content for a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14177,7 +15085,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsDelete_0WithHttpInfo
      *
-     * Delete content for a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14263,7 +15171,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsGet
      *
-     * Get the content of a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14279,7 +15187,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsGetWithHttpInfo
      *
-     * Get the content of a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14360,7 +15268,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsGet_0
      *
-     * Get the content of a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14377,7 +15285,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsGet_0WithHttpInfo
      *
-     * Get the content of a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14467,7 +15375,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsUpdate
      *
-     * Update content for a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14484,7 +15392,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsUpdateWithHttpInfo
      *
-     * Update content for a given partner user.
+     * 
      *
      * @param string $partner_user_id 
      * @param string $content_key 
@@ -14571,7 +15479,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsUpdate_0
      *
-     * Update content for a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14589,7 +15497,7 @@ class PartnersApi
     /**
      * Operation partnersUsersContentsUpdate_0WithHttpInfo
      *
-     * Update content for a given partner user.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14685,7 +15593,7 @@ class PartnersApi
     /**
      * Operation partnersUsersCreate
      *
-     * Create a partner user.
+     * 
      *
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -14700,7 +15608,7 @@ class PartnersApi
     /**
      * Operation partnersUsersCreateWithHttpInfo
      *
-     * Create a partner user.
+     * 
      *
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -14769,7 +15677,7 @@ class PartnersApi
     /**
      * Operation partnersUsersCreate_0
      *
-     * Create a partner user.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
@@ -14785,7 +15693,7 @@ class PartnersApi
     /**
      * Operation partnersUsersCreate_0WithHttpInfo
      *
-     * Create a partner user.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
@@ -14863,7 +15771,7 @@ class PartnersApi
     /**
      * Operation partnersUsersDelete
      *
-     * Delete partner user from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14879,7 +15787,7 @@ class PartnersApi
     /**
      * Operation partnersUsersDeleteWithHttpInfo
      *
-     * Delete partner user from partner.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -14956,7 +15864,7 @@ class PartnersApi
     /**
      * Operation partnersUsersGet
      *
-     * Get a Partner User by a given partner_user_id.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -14971,7 +15879,7 @@ class PartnersApi
     /**
      * Operation partnersUsersGetWithHttpInfo
      *
-     * Get a Partner User by a given partner_user_id.
+     * 
      *
      * @param string $partner_user_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -15043,7 +15951,7 @@ class PartnersApi
     /**
      * Operation partnersUsersGet_0
      *
-     * Get a Partner User by a given partner_user_id.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -15059,7 +15967,7 @@ class PartnersApi
     /**
      * Operation partnersUsersGet_0WithHttpInfo
      *
-     * Get a Partner User by a given partner_user_id.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -15140,7 +16048,7 @@ class PartnersApi
     /**
      * Operation partnersUsersIndex
      *
-     * List partner users.
+     * 
      *
      * @param $criteria = [
      *    'partner_user_id' => string,
@@ -15162,7 +16070,7 @@ class PartnersApi
     /**
      * Operation partnersUsersIndexWithHttpInfo
      *
-     * List partner users.
+     * 
      *
      * @param $criteria = [
      *    'partner_user_id' => string,
@@ -15257,7 +16165,7 @@ class PartnersApi
     /**
      * Operation partnersUsersIndex_0
      *
-     * List partner users.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -15279,7 +16187,7 @@ class PartnersApi
     /**
      * Operation partnersUsersIndex_0WithHttpInfo
      *
-     * List partner users.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -15378,7 +16286,7 @@ class PartnersApi
     /**
      * Operation partnersUsersUpdate
      *
-     * Update partner user profile.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
@@ -15394,7 +16302,7 @@ class PartnersApi
     /**
      * Operation partnersUsersUpdateWithHttpInfo
      *
-     * Update partner user profile.
+     * 
      *
      * @param string $partner_user_id 
      * @param \Ageras\Api\PartnerUserResource $partner_user_resource 
@@ -15472,7 +16380,7 @@ class PartnersApi
     /**
      * Operation partnersUsersUpdate_0
      *
-     * Update partner user profile.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -15489,7 +16397,7 @@ class PartnersApi
     /**
      * Operation partnersUsersUpdate_0WithHttpInfo
      *
-     * Update partner user profile.
+     * 
      *
      * @param string $partner_id 
      * @param string $partner_user_id 
@@ -15576,7 +16484,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsIndex
      *
-     * Get Partner verifications.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -15596,7 +16504,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsIndexWithHttpInfo
      *
-     * Get Partner verifications.
+     * 
      *
      * @param $criteria = [
      *    'partner_id' => string,
@@ -15681,7 +16589,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsIndex_0
      *
-     * Get Partner verifications.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -15701,7 +16609,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsIndex_0WithHttpInfo
      *
-     * Get Partner verifications.
+     * 
      *
      * @param string $partner_id 
      * @param $criteria = [
@@ -15790,7 +16698,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsUpdate
      *
-     * Update Partner verification data.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerVerificationResource $partner_verification_resource 
@@ -15806,7 +16714,7 @@ class PartnersApi
     /**
      * Operation partnersVerificationsUpdateWithHttpInfo
      *
-     * Update Partner verification data.
+     * 
      *
      * @param string $partner_id 
      * @param \Ageras\Api\PartnerVerificationResource $partner_verification_resource 

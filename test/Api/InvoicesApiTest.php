@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InvoicesApiTest extends \PHPUnit_Framework_TestCase
+class InvoicesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesGet
      *
-     * Get an Invoice from a given invoice_id..
+     * .
      *
      */
     public function testInvoicesGet()
@@ -90,7 +90,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesIndex
      *
-     * Search and find invoices by specific criterias..
+     * .
      *
      */
     public function testInvoicesIndex()
@@ -101,7 +101,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsActionsCreate
      *
-     * Perform an action on a refund reuqest..
+     * .
      *
      */
     public function testInvoicesRefundrequestsActionsCreate()
@@ -112,7 +112,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsCreate
      *
-     * Create refund request for a given invoice_id..
+     * .
      *
      */
     public function testInvoicesRefundrequestsCreate()
@@ -123,7 +123,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsGet
      *
-     * Get a refund request by ID..
+     * .
      *
      */
     public function testInvoicesRefundrequestsGet()
@@ -134,7 +134,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsGet_0
      *
-     * Get a refund request by ID..
+     * .
      *
      */
     public function testInvoicesRefundrequestsGet0()
@@ -145,7 +145,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsIndex
      *
-     * Get refund requests from a given invoice_id..
+     * .
      *
      */
     public function testInvoicesRefundrequestsIndex()
@@ -156,7 +156,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for invoicesRefundrequestsIndex_0
      *
-     * Get refund requests from a given invoice_id..
+     * .
      *
      */
     public function testInvoicesRefundrequestsIndex0()

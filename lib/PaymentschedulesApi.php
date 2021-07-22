@@ -90,7 +90,7 @@ class PaymentschedulesApi
     /**
      * Operation paymentschedulesIndex
      *
-     * List partner payment schedules.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -109,7 +109,7 @@ class PaymentschedulesApi
     /**
      * Operation paymentschedulesIndexWithHttpInfo
      *
-     * List partner payment schedules.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,

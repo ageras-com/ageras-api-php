@@ -4,40 +4,40 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cvAwardCreate**](CvApi.md#cvAwardCreate) | **POST** /cv/{partner_user_id}/award | Create partner user award.
-[**cvAwardDelete**](CvApi.md#cvAwardDelete) | **DELETE** /cv/{partner_user_id}/award/{award_id} | Delete partner user award.
-[**cvAwardUpdate**](CvApi.md#cvAwardUpdate) | **PUT** /cv/{partner_user_id}/award | Update partner user award.
-[**cvBadgeCreate**](CvApi.md#cvBadgeCreate) | **POST** /cv/{partner_user_id}/badge | Create partner user badge.
-[**cvBadgeDelete**](CvApi.md#cvBadgeDelete) | **DELETE** /cv/{partner_user_id}/badge/{badge_id} | Delete partner user badge.
-[**cvCourseCreate**](CvApi.md#cvCourseCreate) | **POST** /cv/{partner_user_id}/course | Create partner user course.
-[**cvCourseDelete**](CvApi.md#cvCourseDelete) | **DELETE** /cv/{partner_user_id}/course/{course_id} | Delete partner user course.
-[**cvCourseUpdate**](CvApi.md#cvCourseUpdate) | **PUT** /cv/{partner_user_id}/course | Update partner user course.
-[**cvDescriptionCreate**](CvApi.md#cvDescriptionCreate) | **POST** /cv/{partner_user_id}/description | Create partner user description.
-[**cvDescriptionDelete**](CvApi.md#cvDescriptionDelete) | **DELETE** /cv/{partner_user_id}/description/{description_id} | Delete partner user description.
-[**cvDescriptionUpdate**](CvApi.md#cvDescriptionUpdate) | **PUT** /cv/{partner_user_id}/description | Update partner user description.
-[**cvEducationCreate**](CvApi.md#cvEducationCreate) | **POST** /cv/{partner_user_id}/education | Create partner user education.
-[**cvEducationDelete**](CvApi.md#cvEducationDelete) | **DELETE** /cv/{partner_user_id}/education/{education_id} | Delete partner user education.
-[**cvEducationUpdate**](CvApi.md#cvEducationUpdate) | **PUT** /cv/{partner_user_id}/education | Update partner user education.
-[**cvExperienceCreate**](CvApi.md#cvExperienceCreate) | **POST** /cv/{partner_user_id}/experience | Create partner user experience.
-[**cvExperienceDelete**](CvApi.md#cvExperienceDelete) | **DELETE** /cv/{partner_user_id}/experience/{experience_id} | Delete partner user experience.
-[**cvExperienceUpdate**](CvApi.md#cvExperienceUpdate) | **PUT** /cv/{partner_user_id}/experience | Update partner user experience.
-[**cvExpertiseCreate**](CvApi.md#cvExpertiseCreate) | **POST** /cv/{partner_user_id}/expertise | Create partner user expertise.
-[**cvExpertiseDelete**](CvApi.md#cvExpertiseDelete) | **DELETE** /cv/{partner_user_id}/expertise/{expertise_id} | Delete partner user expertise.
-[**cvExpertiseUpdate**](CvApi.md#cvExpertiseUpdate) | **PUT** /cv/{partner_user_id}/expertise | Update partner user expertise.
-[**cvGet**](CvApi.md#cvGet) | **GET** /cv/{partner_user_id} | Get partner user cv.
-[**cvIndex**](CvApi.md#cvIndex) | **GET** /cv | Index all partner user CV for given partner.
-[**cvLanguageCreate**](CvApi.md#cvLanguageCreate) | **POST** /cv/{partner_user_id}/language | Create partner user language.
-[**cvLanguageDelete**](CvApi.md#cvLanguageDelete) | **DELETE** /cv/{partner_user_id}/language/{language_id} | Delete partner user language.
-[**cvLanguageUpdate**](CvApi.md#cvLanguageUpdate) | **PUT** /cv/{partner_user_id}/language | Update partner user language.
-[**cvSocialDelete**](CvApi.md#cvSocialDelete) | **DELETE** /cv/cv/{partner_user_id}/social | Delete partner user social media.
-[**cvSocialDelete_0**](CvApi.md#cvSocialDelete_0) | **DELETE** /cv/{partner_user_id}/social | Delete partner user social media.
-[**cvSocialUpdate**](CvApi.md#cvSocialUpdate) | **PUT** /cv/{partner_user_id}/social | Update partner user social media.
+[**cvAwardCreate**](CvApi.md#cvAwardCreate) | **POST** /cv/{partner_user_id}/award | 
+[**cvAwardDelete**](CvApi.md#cvAwardDelete) | **DELETE** /cv/{partner_user_id}/award/{award_id} | 
+[**cvAwardUpdate**](CvApi.md#cvAwardUpdate) | **PUT** /cv/{partner_user_id}/award | 
+[**cvBadgeCreate**](CvApi.md#cvBadgeCreate) | **POST** /cv/{partner_user_id}/badge | 
+[**cvBadgeDelete**](CvApi.md#cvBadgeDelete) | **DELETE** /cv/{partner_user_id}/badge/{badge_id} | 
+[**cvCourseCreate**](CvApi.md#cvCourseCreate) | **POST** /cv/{partner_user_id}/course | 
+[**cvCourseDelete**](CvApi.md#cvCourseDelete) | **DELETE** /cv/{partner_user_id}/course/{course_id} | 
+[**cvCourseUpdate**](CvApi.md#cvCourseUpdate) | **PUT** /cv/{partner_user_id}/course | 
+[**cvDescriptionCreate**](CvApi.md#cvDescriptionCreate) | **POST** /cv/{partner_user_id}/description | 
+[**cvDescriptionDelete**](CvApi.md#cvDescriptionDelete) | **DELETE** /cv/{partner_user_id}/description/{description_id} | 
+[**cvDescriptionUpdate**](CvApi.md#cvDescriptionUpdate) | **PUT** /cv/{partner_user_id}/description | 
+[**cvEducationCreate**](CvApi.md#cvEducationCreate) | **POST** /cv/{partner_user_id}/education | 
+[**cvEducationDelete**](CvApi.md#cvEducationDelete) | **DELETE** /cv/{partner_user_id}/education/{education_id} | 
+[**cvEducationUpdate**](CvApi.md#cvEducationUpdate) | **PUT** /cv/{partner_user_id}/education | 
+[**cvExperienceCreate**](CvApi.md#cvExperienceCreate) | **POST** /cv/{partner_user_id}/experience | 
+[**cvExperienceDelete**](CvApi.md#cvExperienceDelete) | **DELETE** /cv/{partner_user_id}/experience/{experience_id} | 
+[**cvExperienceUpdate**](CvApi.md#cvExperienceUpdate) | **PUT** /cv/{partner_user_id}/experience | 
+[**cvExpertiseCreate**](CvApi.md#cvExpertiseCreate) | **POST** /cv/{partner_user_id}/expertise | 
+[**cvExpertiseDelete**](CvApi.md#cvExpertiseDelete) | **DELETE** /cv/{partner_user_id}/expertise/{expertise_id} | 
+[**cvExpertiseUpdate**](CvApi.md#cvExpertiseUpdate) | **PUT** /cv/{partner_user_id}/expertise | 
+[**cvGet**](CvApi.md#cvGet) | **GET** /cv/{partner_user_id} | 
+[**cvIndex**](CvApi.md#cvIndex) | **GET** /cv | 
+[**cvLanguageCreate**](CvApi.md#cvLanguageCreate) | **POST** /cv/{partner_user_id}/language | 
+[**cvLanguageDelete**](CvApi.md#cvLanguageDelete) | **DELETE** /cv/{partner_user_id}/language/{language_id} | 
+[**cvLanguageUpdate**](CvApi.md#cvLanguageUpdate) | **PUT** /cv/{partner_user_id}/language | 
+[**cvSocialDelete**](CvApi.md#cvSocialDelete) | **DELETE** /cv/cv/{partner_user_id}/social | 
+[**cvSocialDelete_0**](CvApi.md#cvSocialDelete_0) | **DELETE** /cv/{partner_user_id}/social | 
+[**cvSocialUpdate**](CvApi.md#cvSocialUpdate) | **PUT** /cv/{partner_user_id}/social | 
 
 
 # **cvAwardCreate**
 > \Ageras\Api\PartnerUserCvAwardResource cvAwardCreate($partner_user_id , $partner_user_cv_award_resource)
 
-Create partner user award.
+
 
 ### Example
 ```php
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 # **cvAwardDelete**
 > cvAwardDelete($partner_user_id,  $award_id )
 
-Delete partner user award.
+
 
 ### Example
 ```php
@@ -142,7 +142,7 @@ void (empty response body)
 # **cvAwardUpdate**
 > \Ageras\Api\PartnerUserCvAwardResource cvAwardUpdate($partner_user_id , $partner_user_cv_award_resource)
 
-Update partner user award.
+
 
 ### Example
 ```php
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 # **cvBadgeCreate**
 > \Ageras\Api\CertificationResource cvBadgeCreate($partner_user_id , $partner_user_cv_badge_resource)
 
-Create partner user badge.
+
 
 ### Example
 ```php
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 # **cvBadgeDelete**
 > cvBadgeDelete($partner_user_id,  $badge_id )
 
-Delete partner user badge.
+
 
 ### Example
 ```php
@@ -300,7 +300,7 @@ void (empty response body)
 # **cvCourseCreate**
 > \Ageras\Api\PartnerUserCvCourseResource cvCourseCreate($partner_user_id , $partner_user_cv_course_resource)
 
-Create partner user course.
+
 
 ### Example
 ```php
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 # **cvCourseDelete**
 > cvCourseDelete($partner_user_id,  $course_id )
 
-Delete partner user course.
+
 
 ### Example
 ```php
@@ -405,7 +405,7 @@ void (empty response body)
 # **cvCourseUpdate**
 > \Ageras\Api\PartnerUserCvCourseResource cvCourseUpdate($partner_user_id , $partner_user_cv_course_resource)
 
-Update partner user course.
+
 
 ### Example
 ```php
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 # **cvDescriptionCreate**
 > \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionCreate($partner_user_id , $partner_user_cv_description_resource)
 
-Create partner user description.
+
 
 ### Example
 ```php
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 # **cvDescriptionDelete**
 > cvDescriptionDelete($partner_user_id,  $description_id )
 
-Delete partner user description.
+
 
 ### Example
 ```php
@@ -563,7 +563,7 @@ void (empty response body)
 # **cvDescriptionUpdate**
 > \Ageras\Api\PartnerUserCvDescriptionResource cvDescriptionUpdate($partner_user_id , $partner_user_cv_description_resource)
 
-Update partner user description.
+
 
 ### Example
 ```php
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 # **cvEducationCreate**
 > \Ageras\Api\PartnerUserCvEducationResource cvEducationCreate($partner_user_id , $partner_user_cv_education_resource)
 
-Create partner user education.
+
 
 ### Example
 ```php
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 # **cvEducationDelete**
 > cvEducationDelete($partner_user_id,  $education_id )
 
-Delete partner user education.
+
 
 ### Example
 ```php
@@ -721,7 +721,7 @@ void (empty response body)
 # **cvEducationUpdate**
 > \Ageras\Api\PartnerUserCvEducationResource cvEducationUpdate($partner_user_id , $partner_user_cv_education_resource)
 
-Update partner user education.
+
 
 ### Example
 ```php
@@ -774,7 +774,7 @@ Name | Type | Description  | Notes
 # **cvExperienceCreate**
 > \Ageras\Api\PartnerUserCvExperienceResource cvExperienceCreate($partner_user_id , $partner_user_cv_experience_resource)
 
-Create partner user experience.
+
 
 ### Example
 ```php
@@ -827,7 +827,7 @@ Name | Type | Description  | Notes
 # **cvExperienceDelete**
 > cvExperienceDelete($partner_user_id,  $experience_id )
 
-Delete partner user experience.
+
 
 ### Example
 ```php
@@ -879,7 +879,7 @@ void (empty response body)
 # **cvExperienceUpdate**
 > \Ageras\Api\PartnerUserCvExperienceResource cvExperienceUpdate($partner_user_id , $partner_user_cv_experience_resource)
 
-Update partner user experience.
+
 
 ### Example
 ```php
@@ -932,7 +932,7 @@ Name | Type | Description  | Notes
 # **cvExpertiseCreate**
 > \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseCreate($partner_user_id , $partner_user_cv_expertise_resource)
 
-Create partner user expertise.
+
 
 ### Example
 ```php
@@ -985,7 +985,7 @@ Name | Type | Description  | Notes
 # **cvExpertiseDelete**
 > cvExpertiseDelete($partner_user_id,  $expertise_id )
 
-Delete partner user expertise.
+
 
 ### Example
 ```php
@@ -1037,7 +1037,7 @@ void (empty response body)
 # **cvExpertiseUpdate**
 > \Ageras\Api\PartnerUserCvExpertiseResource cvExpertiseUpdate($partner_user_id , $partner_user_cv_expertise_resource)
 
-Update partner user expertise.
+
 
 ### Example
 ```php
@@ -1090,7 +1090,7 @@ Name | Type | Description  | Notes
 # **cvGet**
 > \Ageras\Api\PartnerUserCvResource cvGet($partner_user_id )
 
-Get partner user cv.
+
 
 ### Example
 ```php
@@ -1141,7 +1141,7 @@ Name | Type | Description  | Notes
 # **cvIndex**
 > \Ageras\Api\PartnerUserCvResult cvIndex($criteria)
 
-Index all partner user CV for given partner.
+
 
 ### Example
 ```php
@@ -1202,7 +1202,7 @@ Name | Type | Description  | Notes
 # **cvLanguageCreate**
 > \Ageras\Api\PartnerUserCvLanguageResource cvLanguageCreate($partner_user_id , $partner_user_cv_language_resource)
 
-Create partner user language.
+
 
 ### Example
 ```php
@@ -1255,7 +1255,7 @@ Name | Type | Description  | Notes
 # **cvLanguageDelete**
 > cvLanguageDelete($partner_user_id,  $language_id )
 
-Delete partner user language.
+
 
 ### Example
 ```php
@@ -1307,7 +1307,7 @@ void (empty response body)
 # **cvLanguageUpdate**
 > \Ageras\Api\PartnerUserCvLanguageResource cvLanguageUpdate($partner_user_id , $partner_user_cv_language_resource)
 
-Update partner user language.
+
 
 ### Example
 ```php
@@ -1360,7 +1360,7 @@ Name | Type | Description  | Notes
 # **cvSocialDelete**
 > cvSocialDelete($partner_user_id )
 
-Delete partner user social media.
+
 
 ### Example
 ```php
@@ -1410,7 +1410,7 @@ void (empty response body)
 # **cvSocialDelete_0**
 > cvSocialDelete_0($partner_user_id )
 
-Delete partner user social media.
+
 
 ### Example
 ```php
@@ -1460,7 +1460,7 @@ void (empty response body)
 # **cvSocialUpdate**
 > \Ageras\Api\PartnerUserCvSocialMediaResource cvSocialUpdate($partner_user_id , $partner_user_cv_social_media_resource)
 
-Update partner user social media.
+
 
 ### Example
 ```php

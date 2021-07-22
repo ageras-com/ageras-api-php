@@ -90,7 +90,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsCreate
      *
-     * Create a payment card.
+     * 
      *
      * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsCreateWithHttpInfo
      *
-     * Create a payment card.
+     * 
      *
      * @param \Ageras\Api\PaymentCardResource $payment_card_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -350,7 +350,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsGet
      *
-     * Get a Partner from a given partner_id.
+     * 
      *
      * @param string $payment_card_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -365,7 +365,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsGetWithHttpInfo
      *
-     * Get a Partner from a given partner_id.
+     * 
      *
      * @param string $payment_card_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -437,7 +437,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsGet_0
      *
-     * Get a Partner from a given partner_id.
+     * 
      *
      * @param string $payment_id 
      * @param string $payment_card_id 
@@ -453,7 +453,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsGet_0WithHttpInfo
      *
-     * Get a Partner from a given partner_id.
+     * 
      *
      * @param string $payment_id 
      * @param string $payment_card_id 
@@ -534,7 +534,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsIndex
      *
-     * List payment cards.
+     * 
      *
      * @param $criteria = [
      *    'payment_card_id' => string,
@@ -557,7 +557,7 @@ class PaymentsApi
     /**
      * Operation paymentsCardsIndexWithHttpInfo
      *
-     * List payment cards.
+     * 
      *
      * @param $criteria = [
      *    'payment_card_id' => string,
@@ -657,7 +657,7 @@ class PaymentsApi
     /**
      * Operation paymentsMethodsActionsCreate
      *
-     * Execute an action on a payment method.
+     * 
      *
      * @param string $payment_method_id 
      * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
@@ -673,7 +673,7 @@ class PaymentsApi
     /**
      * Operation paymentsMethodsActionsCreateWithHttpInfo
      *
-     * Execute an action on a payment method.
+     * 
      *
      * @param string $payment_method_id 
      * @param \Ageras\Api\PaymentMethodActionResource $payment_method_action_resource 
@@ -751,7 +751,7 @@ class PaymentsApi
     /**
      * Operation paymentsMethodsActionsCreate_0
      *
-     * Execute an action on a payment method.
+     * 
      *
      * @param string $payment_id 
      * @param string $payment_method_id 
@@ -768,7 +768,7 @@ class PaymentsApi
     /**
      * Operation paymentsMethodsActionsCreate_0WithHttpInfo
      *
-     * Execute an action on a payment method.
+     * 
      *
      * @param string $payment_id 
      * @param string $payment_method_id 

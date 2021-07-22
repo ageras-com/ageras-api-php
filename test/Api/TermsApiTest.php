@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TermsApiTest extends \PHPUnit_Framework_TestCase
+class TermsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class TermsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for termsAcceptedIndex
      *
-     * Get accepted terms..
+     * .
      *
      */
     public function testTermsAcceptedIndex()
@@ -90,7 +90,7 @@ class TermsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for termsActionsCreate
      *
-     * Term actions..
+     * .
      *
      */
     public function testTermsActionsCreate()
@@ -101,7 +101,7 @@ class TermsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for termsGet
      *
-     * Retrieve a terms set from a given location_id..
+     * .
      *
      */
     public function testTermsGet()
@@ -112,7 +112,7 @@ class TermsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for termsIndex
      *
-     * Search and find terms by different criterias..
+     * .
      *
      */
     public function testTermsIndex()

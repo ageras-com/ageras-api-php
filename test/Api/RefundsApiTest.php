@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RefundsApiTest extends \PHPUnit_Framework_TestCase
+class RefundsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class RefundsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for refundsGet
      *
-     * Get a single refund request..
+     * .
      *
      */
     public function testRefundsGet()
@@ -90,7 +90,7 @@ class RefundsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for refundsIndex
      *
-     * List refund requests..
+     * .
      *
      */
     public function testRefundsIndex()

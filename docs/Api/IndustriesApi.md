@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**industriesIndex**](IndustriesApi.md#industriesIndex) | **GET** /industries | List Industries and filter by parent industry.
+[**industriesIndex**](IndustriesApi.md#industriesIndex) | **GET** /industries | Get all industries.
 
 
 # **industriesIndex**
 > \Ageras\Api\IndustryResult industriesIndex($criteria)
 
-List Industries and filter by parent industry.
+Get all industries.
 
 ### Example
 ```php

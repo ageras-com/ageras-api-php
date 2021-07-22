@@ -90,7 +90,7 @@ class VapidApi
     /**
      * Operation vapidGet
      *
-     * Get the VAPID public key
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\VapidResource
@@ -104,7 +104,7 @@ class VapidApi
     /**
      * Operation vapidGetWithHttpInfo
      *
-     * Get the VAPID public key
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\VapidResource, HTTP status code, HTTP response headers (array of strings)

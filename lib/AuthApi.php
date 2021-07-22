@@ -90,9 +90,9 @@ class AuthApi
     /**
      * Operation authCreate
      *
-     * Authenticate user and receive a token.
+     * 
      *
-     * @param \Ageras\Api\AuthResource $auth_resource Authentication Resource with authorize information
+     * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AuthResource
      */
@@ -105,9 +105,9 @@ class AuthApi
     /**
      * Operation authCreateWithHttpInfo
      *
-     * Authenticate user and receive a token.
+     * 
      *
-     * @param \Ageras\Api\AuthResource $auth_resource Authentication Resource with authorize information
+     * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -174,7 +174,7 @@ class AuthApi
     /**
      * Operation authDelete
      *
-     * Logout and end session/token.
+     * 
      *
      * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -189,7 +189,7 @@ class AuthApi
     /**
      * Operation authDeleteWithHttpInfo
      *
-     * Logout and end session/token.
+     * 
      *
      * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -257,9 +257,9 @@ class AuthApi
     /**
      * Operation authGet
      *
-     * Get information about the current Authenticated session.
+     * 
      *
-     * @param string $auth_id default value is token
+     * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AuthResource
      */
@@ -272,9 +272,9 @@ class AuthApi
     /**
      * Operation authGetWithHttpInfo
      *
-     * Get information about the current Authenticated session.
+     * 
      *
-     * @param string $auth_id default value is token
+     * @param string $auth_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -344,7 +344,7 @@ class AuthApi
     /**
      * Operation authPasswordCreate
      *
-     * Reset Password from a given reset token.
+     * 
      *
      * @param \Ageras\Api\PasswordResetResource $password_reset_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -359,7 +359,7 @@ class AuthApi
     /**
      * Operation authPasswordCreateWithHttpInfo
      *
-     * Reset Password from a given reset token.
+     * 
      *
      * @param \Ageras\Api\PasswordResetResource $password_reset_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -428,7 +428,7 @@ class AuthApi
     /**
      * Operation authPasswordUpdate
      *
-     * Change Password.
+     * 
      *
      * @param \Ageras\Api\PasswordResetResource $password_reset_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -443,7 +443,7 @@ class AuthApi
     /**
      * Operation authPasswordUpdateWithHttpInfo
      *
-     * Change Password.
+     * 
      *
      * @param \Ageras\Api\PasswordResetResource $password_reset_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -512,7 +512,7 @@ class AuthApi
     /**
      * Operation authPasswordreminderCreate
      *
-     * Request a password reminder e-mail.
+     * 
      *
      * @param \Ageras\Api\PasswordReminderResource $password_reminder_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -527,7 +527,7 @@ class AuthApi
     /**
      * Operation authPasswordreminderCreateWithHttpInfo
      *
-     * Request a password reminder e-mail.
+     * 
      *
      * @param \Ageras\Api\PasswordReminderResource $password_reminder_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -596,7 +596,7 @@ class AuthApi
     /**
      * Operation authPermissionsIndex
      *
-     * List the Permissions for the given authenticated user.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -615,7 +615,7 @@ class AuthApi
     /**
      * Operation authPermissionsIndexWithHttpInfo
      *
-     * List the Permissions for the given authenticated user.
+     * 
      *
      * @param $criteria = [
      *    'limit' => int,
@@ -695,7 +695,7 @@ class AuthApi
     /**
      * Operation authTokenDelete
      *
-     * Delete a token
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return void
@@ -709,7 +709,7 @@ class AuthApi
     /**
      * Operation authTokenDeleteWithHttpInfo
      *
-     * Delete a token
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
@@ -768,7 +768,7 @@ class AuthApi
     /**
      * Operation authTokenGet
      *
-     * Get information about the token
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\AuthResource
@@ -782,7 +782,7 @@ class AuthApi
     /**
      * Operation authTokenGetWithHttpInfo
      *
-     * Get information about the token
+     * 
      *
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\AuthResource, HTTP status code, HTTP response headers (array of strings)
@@ -845,7 +845,7 @@ class AuthApi
     /**
      * Operation authTokenUpdate
      *
-     * Renew token
+     * 
      *
      * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -860,7 +860,7 @@ class AuthApi
     /**
      * Operation authTokenUpdateWithHttpInfo
      *
-     * Renew token
+     * 
      *
      * @param \Ageras\Api\AuthResource $auth_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -929,7 +929,7 @@ class AuthApi
     /**
      * Operation authUpdate
      *
-     * Renew authentication session.
+     * 
      *
      * @param string $auth_id 
      * @param \Ageras\Api\AuthResource $auth_resource 
@@ -945,7 +945,7 @@ class AuthApi
     /**
      * Operation authUpdateWithHttpInfo
      *
-     * Renew authentication session.
+     * 
      *
      * @param string $auth_id 
      * @param \Ageras\Api\AuthResource $auth_resource 

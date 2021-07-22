@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OrdersApiTest extends \PHPUnit_Framework_TestCase
+class OrdersApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ordersActionsCreate
      *
-     * Invoke actions on orders.
+     * .
      *
      */
     public function testOrdersActionsCreate()
@@ -90,7 +90,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ordersIndex
      *
-     * Invoke actions on orders.
+     * .
      *
      */
     public function testOrdersIndex()

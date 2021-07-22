@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SearchApiTest extends \PHPUnit_Framework_TestCase
+class SearchApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class SearchApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchIndex
      *
-     * Search by criterias..
+     * .
      *
      */
     public function testSearchIndex()
@@ -90,7 +90,7 @@ class SearchApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchSuggestIndex
      *
-     * Suggest by criteria..
+     * .
      *
      */
     public function testSearchSuggestIndex()
@@ -101,7 +101,7 @@ class SearchApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchTypeaheadIndex
      *
-     * Typeahead recommendations..
+     * .
      *
      */
     public function testSearchTypeaheadIndex()

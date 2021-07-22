@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**promptsActionsCreate**](PromptsApi.md#promptsActionsCreate) | **POST** /prompts/{prompt_id}/actions | Action on prompt
-[**promptsIndex**](PromptsApi.md#promptsIndex) | **GET** /prompts | List of prompts
+[**promptsActionsCreate**](PromptsApi.md#promptsActionsCreate) | **POST** /prompts/{prompt_id}/actions | 
+[**promptsIndex**](PromptsApi.md#promptsIndex) | **GET** /prompts | 
 
 
 # **promptsActionsCreate**
 > \Ageras\Api\PromptResource promptsActionsCreate($prompt_id , $prompt_action_resource)
 
-Action on prompt
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **promptsIndex**
 > \Ageras\Api\PromptResult promptsIndex($criteria)
 
-List of prompts
+
 
 ### Example
 ```php

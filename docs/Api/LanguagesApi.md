@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**languagesIndex**](LanguagesApi.md#languagesIndex) | **GET** /languages | List Languages available.
+[**languagesIndex**](LanguagesApi.md#languagesIndex) | **GET** /languages | 
 
 
 # **languagesIndex**
 > \Ageras\Api\LanguageResult languagesIndex($criteria)
 
-List Languages available.
+
 
 ### Example
 ```php

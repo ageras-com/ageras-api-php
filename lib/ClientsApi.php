@@ -90,7 +90,7 @@ class ClientsApi
     /**
      * Operation clientsBrowserpushsubscriptionsCreate
      *
-     * Create a browser push subscription
+     * 
      *
      * @param string $client_id 
      * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
@@ -106,7 +106,7 @@ class ClientsApi
     /**
      * Operation clientsBrowserpushsubscriptionsCreateWithHttpInfo
      *
-     * Create a browser push subscription
+     * 
      *
      * @param string $client_id 
      * @param \Ageras\Api\BrowserPushSubscriptionResource $browser_push_subscription_resource 
@@ -184,9 +184,9 @@ class ClientsApi
     /**
      * Operation clientsGet
      *
-     * Return a Client
+     * 
      *
-     * @param string $client_id Id of the client
+     * @param string $client_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\ClientResource
      */
@@ -199,9 +199,9 @@ class ClientsApi
     /**
      * Operation clientsGetWithHttpInfo
      *
-     * Return a Client
+     * 
      *
-     * @param string $client_id Id of the client
+     * @param string $client_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\ClientResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -271,7 +271,7 @@ class ClientsApi
     /**
      * Operation clientsUpdate
      *
-     * Update a client
+     * 
      *
      * @param string $client_id 
      * @param \Ageras\Api\ClientResource $client_resource 
@@ -287,7 +287,7 @@ class ClientsApi
     /**
      * Operation clientsUpdateWithHttpInfo
      *
-     * Update a client
+     * 
      *
      * @param string $client_id 
      * @param \Ageras\Api\ClientResource $client_resource 

@@ -58,6 +58,10 @@ class AuthResource implements ArrayAccess
         'expires_at' => 'string',
         'user_id' => 'string',
         'user_type' => 'string',
+        'employee' => '\Ageras\Api\EmployeeResource',
+        'partner_user' => '\Ageras\Api\PartnerUserResource',
+        'client' => '\Ageras\Api\ClientResource',
+        'partner_sign_up' => '\Ageras\Api\PartnerSignUpResource',
         'email' => 'string',
         'password' => 'string'
     ];
@@ -76,6 +80,10 @@ class AuthResource implements ArrayAccess
         'expires_at' => 'expires_at',
         'user_id' => 'user_id',
         'user_type' => 'user_type',
+        'employee' => 'employee',
+        'partner_user' => 'partner_user',
+        'client' => 'client',
+        'partner_sign_up' => 'partner_sign_up',
         'email' => 'email',
         'password' => 'password'
     ];
@@ -90,6 +98,10 @@ class AuthResource implements ArrayAccess
         'expires_at' => 'setExpiresAt',
         'user_id' => 'setUserId',
         'user_type' => 'setUserType',
+        'employee' => 'setEmployee',
+        'partner_user' => 'setPartnerUser',
+        'client' => 'setClient',
+        'partner_sign_up' => 'setPartnerSignUp',
         'email' => 'setEmail',
         'password' => 'setPassword'
     ];
@@ -104,6 +116,10 @@ class AuthResource implements ArrayAccess
         'expires_at' => 'getExpiresAt',
         'user_id' => 'getUserId',
         'user_type' => 'getUserType',
+        'employee' => 'getEmployee',
+        'partner_user' => 'getPartnerUser',
+        'client' => 'getClient',
+        'partner_sign_up' => 'getPartnerSignUp',
         'email' => 'getEmail',
         'password' => 'getPassword'
     ];
@@ -143,6 +159,10 @@ class AuthResource implements ArrayAccess
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['user_type'] = isset($data['user_type']) ? $data['user_type'] : null;
+        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
+        $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
+        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['partner_sign_up'] = isset($data['partner_sign_up']) ? $data['partner_sign_up'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
     }
@@ -225,7 +245,7 @@ class AuthResource implements ArrayAccess
 
     /**
      * Sets user_id
-     * @param string $user_id Id for the given user.
+     * @param string $user_id Id for the given user. @deprecated See $employee, $partner_user, $client
      * @return $this
      */
     public function setUserId($user_id)
@@ -252,6 +272,90 @@ class AuthResource implements ArrayAccess
     public function setUserType($user_type)
     {
         $this->container['user_type'] = $user_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets employee
+     * @return \Ageras\Api\EmployeeResource
+     */
+    public function getEmployee()
+    {
+        return $this->container['employee'];
+    }
+
+    /**
+     * Sets employee
+     * @param \Ageras\Api\EmployeeResource $employee
+     * @return $this
+     */
+    public function setEmployee($employee)
+    {
+        $this->container['employee'] = $employee;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_user
+     * @return \Ageras\Api\PartnerUserResource
+     */
+    public function getPartnerUser()
+    {
+        return $this->container['partner_user'];
+    }
+
+    /**
+     * Sets partner_user
+     * @param \Ageras\Api\PartnerUserResource $partner_user
+     * @return $this
+     */
+    public function setPartnerUser($partner_user)
+    {
+        $this->container['partner_user'] = $partner_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets client
+     * @return \Ageras\Api\ClientResource
+     */
+    public function getClient()
+    {
+        return $this->container['client'];
+    }
+
+    /**
+     * Sets client
+     * @param \Ageras\Api\ClientResource $client
+     * @return $this
+     */
+    public function setClient($client)
+    {
+        $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_sign_up
+     * @return \Ageras\Api\PartnerSignUpResource
+     */
+    public function getPartnerSignUp()
+    {
+        return $this->container['partner_sign_up'];
+    }
+
+    /**
+     * Sets partner_sign_up
+     * @param \Ageras\Api\PartnerSignUpResource $partner_sign_up
+     * @return $this
+     */
+    public function setPartnerSignUp($partner_sign_up)
+    {
+        $this->container['partner_sign_up'] = $partner_sign_up;
 
         return $this;
     }

@@ -90,7 +90,7 @@ class SoftconversionsApi
     /**
      * Operation softconversionsCreate
      *
-     * Create a soft conversion.
+     * 
      *
      * @param \Ageras\Api\SoftConversionResource $soft_conversion_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class SoftconversionsApi
     /**
      * Operation softconversionsCreateWithHttpInfo
      *
-     * Create a soft conversion.
+     * 
      *
      * @param \Ageras\Api\SoftConversionResource $soft_conversion_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response

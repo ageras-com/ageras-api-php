@@ -90,7 +90,7 @@ class LanguagesApi
     /**
      * Operation languagesIndex
      *
-     * List Languages available.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -113,7 +113,7 @@ class LanguagesApi
     /**
      * Operation languagesIndexWithHttpInfo
      *
-     * List Languages available.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

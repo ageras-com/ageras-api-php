@@ -4,161 +4,169 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | Partner actions.
-[**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | List facets and aggregations for the Partner Search.
-[**partnersAllocationpausesCreate**](PartnersApi.md#partnersAllocationpausesCreate) | **POST** /partners/{partner_id}/allocationpauses | Create an allocation pause.
-[**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | Subscribe a partner.
-[**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | Get partner&#39;s bank accounts.
-[**partnersBrowserpushsubscriptionsCreate**](PartnersApi.md#partnersBrowserpushsubscriptionsCreate) | **POST** /partners/{partner_id}/browserpushsubscriptions | Create a browser push subscription
-[**partnersBusinessunitcontractsCreate**](PartnersApi.md#partnersBusinessunitcontractsCreate) | **POST** /partners/{partner_id}/businessunitcontracts | Create a business unit contract.
-[**partnersBusinessunitcontractsGet**](PartnersApi.md#partnersBusinessunitcontractsGet) | **GET** /partners/{partner_id}/businessunitcontracts/{contract_id} | Get a business unit agreement.
-[**partnersBusinessunitcontractsIndex**](PartnersApi.md#partnersBusinessunitcontractsIndex) | **GET** /partners/{partner_id}/businessunitcontracts | List business unit contracts.
-[**partnersBusinessunitsAllocationlimitsCreate**](PartnersApi.md#partnersBusinessunitsAllocationlimitsCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits | Create a lead allocation limit for a business unit.
-[**partnersBusinessunitsAllocationlimitsDelete**](PartnersApi.md#partnersBusinessunitsAllocationlimitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits/{limit_id} | Delete a lead allocation limit.
-[**partnersBusinessunitsAllocationlimitsIndex**](PartnersApi.md#partnersBusinessunitsAllocationlimitsIndex) | **GET** /partners/{partner_id}/businessunits/allocationlimits | List lead allocation limits.
-[**partnersBusinessunitsAllocationlimitsUpdate**](PartnersApi.md#partnersBusinessunitsAllocationlimitsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits/{limit_id} | Update a lead allocation limit.
-[**partnersBusinessunitsAllocationquotasCreate**](PartnersApi.md#partnersBusinessunitsAllocationquotasCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas | Create a lead allocation quota for a business unit.
-[**partnersBusinessunitsAllocationquotasDelete**](PartnersApi.md#partnersBusinessunitsAllocationquotasDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas/{quota_id} | Delete a lead allocation quota.
-[**partnersBusinessunitsAllocationquotasIndex**](PartnersApi.md#partnersBusinessunitsAllocationquotasIndex) | **GET** /partners/{partner_id}/businessunits/allocationquotas | List lead allocation quotas.
-[**partnersBusinessunitsCreate**](PartnersApi.md#partnersBusinessunitsCreate) | **POST** /partners/{partner_id}/businessunits | Create partner business unit.
-[**partnersBusinessunitsDelete**](PartnersApi.md#partnersBusinessunitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_businessunit_id} | Delete a partner business unit
-[**partnersBusinessunitsGet**](PartnersApi.md#partnersBusinessunitsGet) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id} | Get a single partner business unit.
-[**partnersBusinessunitsIndex**](PartnersApi.md#partnersBusinessunitsIndex) | **GET** /partners/businessunits | List partner business units.
-[**partnersBusinessunitsIndustriesIndex**](PartnersApi.md#partnersBusinessunitsIndustriesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | List business unit industries.
-[**partnersBusinessunitsIndustriesUpdate**](PartnersApi.md#partnersBusinessunitsIndustriesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | Update business unit industries.
-[**partnersBusinessunitsRevenuerangesCreate**](PartnersApi.md#partnersBusinessunitsRevenuerangesCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/revenueranges | Create a business unit revenue range.
-[**partnersBusinessunitsSectorsIndex**](PartnersApi.md#partnersBusinessunitsSectorsIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | List business unit sectors.
-[**partnersBusinessunitsSectorsUpdate**](PartnersApi.md#partnersBusinessunitsSectorsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | Update partner business unit sectors.
-[**partnersBusinessunitsSegmentationgeoregionsIndex**](PartnersApi.md#partnersBusinessunitsSegmentationgeoregionsIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/segmentationgeoregions | List a business unit&#39;s segmentation geo regions.
-[**partnersBusinessunitsSegmentationgeoregionsUpdate**](PartnersApi.md#partnersBusinessunitsSegmentationgeoregionsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/segmentationgeoregions | Replace a business unit&#39;s segmentation geo regions.
-[**partnersBusinessunitsTypesIndex**](PartnersApi.md#partnersBusinessunitsTypesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | List business unit types.
-[**partnersBusinessunitsTypesUpdate**](PartnersApi.md#partnersBusinessunitsTypesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | Update partner business unit types.
-[**partnersBusinessunitsUpdate**](PartnersApi.md#partnersBusinessunitsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id} | Update partner business unit.
-[**partnersCategoriesIndex**](PartnersApi.md#partnersCategoriesIndex) | **GET** /partners/categories | List of partner categories.
-[**partnersCertificationsCreate**](PartnersApi.md#partnersCertificationsCreate) | **POST** /partners/{partner_id}/certifications | Attach certification to partner.
-[**partnersCertificationsDelete**](PartnersApi.md#partnersCertificationsDelete) | **DELETE** /partners/{partner_id}/certifications/{certification_id} | Detach certification from partner.
-[**partnersCertificationsGet**](PartnersApi.md#partnersCertificationsGet) | **GET** /partners/{partner_id}/certifications/{certification_id} | Get Partner certification.
-[**partnersCertificationsIndex**](PartnersApi.md#partnersCertificationsIndex) | **GET** /partners/{partner_id}/certifications | Get partner certifications.
-[**partnersCertificationsUpdate**](PartnersApi.md#partnersCertificationsUpdate) | **PUT** /partners/{partner_id}/certifications | Update partner certifications.
-[**partnersContentsDelete**](PartnersApi.md#partnersContentsDelete) | **DELETE** /partners/{partner_id}/contents/{content_key} | Delete content for a given partner.
-[**partnersContentsGet**](PartnersApi.md#partnersContentsGet) | **GET** /partners/{partner_id}/contents/{content_key} | Get the content of a given partner.
-[**partnersContentsUpdate**](PartnersApi.md#partnersContentsUpdate) | **PUT** /partners/{partner_id}/contents/{content_key} | Update content for a given partner.
-[**partnersContractoffergroupsCreate**](PartnersApi.md#partnersContractoffergroupsCreate) | **POST** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
-[**partnersContractoffergroupsIndex**](PartnersApi.md#partnersContractoffergroupsIndex) | **GET** /partners/{partner_id}/contractoffergroups | List partner contract offer groups.
-[**partnersContractsActionsCreate**](PartnersApi.md#partnersContractsActionsCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/actions | Perform an action on a partner contract.
-[**partnersContractsAllocationpausesDelete**](PartnersApi.md#partnersContractsAllocationpausesDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | Delete an allocation pause.
-[**partnersContractsAllocationpausesUpdate**](PartnersApi.md#partnersContractsAllocationpausesUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | Update an allocation pause.
-[**partnersContractsCreate**](PartnersApi.md#partnersContractsCreate) | **POST** /partners/{partner_id}/contracts | Create a partner contract.
-[**partnersContractsDelete**](PartnersApi.md#partnersContractsDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id} | Delete a partner contract.
-[**partnersContractsGet**](PartnersApi.md#partnersContractsGet) | **GET** /partners/{partner_id}/contracts/{contract_id} | Get a partner contract.
-[**partnersContractsIndex**](PartnersApi.md#partnersContractsIndex) | **GET** /partners/{partner_id}/contracts | List partner contracts.
-[**partnersContractsPdfGet**](PartnersApi.md#partnersContractsPdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/pdf | Get a PDF download link
-[**partnersContractsSignedpdfCreate**](PartnersApi.md#partnersContractsSignedpdfCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/signedpdf | Upload signed contract
-[**partnersContractsSignedpdfGet**](PartnersApi.md#partnersContractsSignedpdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signedpdf | Get a PDF download link for signed pdf
-[**partnersContractsSigningurlGet**](PartnersApi.md#partnersContractsSigningurlGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signingurl | Get a signing url
-[**partnersContractsUpdate**](PartnersApi.md#partnersContractsUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id} | Update a partner contract.
-[**partnersCouponsActionsCreate**](PartnersApi.md#partnersCouponsActionsCreate) | **POST** /partners/{partner_id}/coupons/{coupon_id}/actions | Coupon action
-[**partnersCouponsCreate**](PartnersApi.md#partnersCouponsCreate) | **POST** /partners/{partner_id}/coupons | Create a new partner coupon.
-[**partnersCouponsIndex**](PartnersApi.md#partnersCouponsIndex) | **GET** /partners/{partner_id}/coupons | List Partner Coupons.
-[**partnersCreate**](PartnersApi.md#partnersCreate) | **POST** /partners | Create a Partner.
-[**partnersDelete**](PartnersApi.md#partnersDelete) | **DELETE** /partners/{partner_id} | Delete a Partner.
-[**partnersDeliverablesCreate**](PartnersApi.md#partnersDeliverablesCreate) | **POST** /partners/deliverables | Create Deliverable for partners
-[**partnersDeliverablesCreate_0**](PartnersApi.md#partnersDeliverablesCreate_0) | **POST** /partners/{partner_id}/deliverables | Create Deliverable for partners
-[**partnersDeliverablesGet**](PartnersApi.md#partnersDeliverablesGet) | **GET** /partners/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
-[**partnersDeliverablesGet_0**](PartnersApi.md#partnersDeliverablesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Retrieve a single deliverable id
-[**partnersDeliverablesIndex**](PartnersApi.md#partnersDeliverablesIndex) | **GET** /partners/deliverables | List Partner deliverables
-[**partnersDeliverablesIndex_0**](PartnersApi.md#partnersDeliverablesIndex_0) | **GET** /partners/{partner_id}/deliverables | List Partner deliverables
-[**partnersDeliverablesLinesCreate**](PartnersApi.md#partnersDeliverablesLinesCreate) | **POST** /partners/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
-[**partnersDeliverablesLinesCreate_0**](PartnersApi.md#partnersDeliverablesLinesCreate_0) | **POST** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | Create item for Partner Deliverable
-[**partnersDeliverablesLinesDelete**](PartnersApi.md#partnersDeliverablesLinesDelete) | **DELETE** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
-[**partnersDeliverablesLinesDelete_0**](PartnersApi.md#partnersDeliverablesLinesDelete_0) | **DELETE** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Delete item from Partner Deliverable
-[**partnersDeliverablesLinesGet**](PartnersApi.md#partnersDeliverablesLinesGet) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
-[**partnersDeliverablesLinesGet_0**](PartnersApi.md#partnersDeliverablesLinesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Get Partner Deliverable Item
-[**partnersDeliverablesLinesIndex**](PartnersApi.md#partnersDeliverablesLinesIndex) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
-[**partnersDeliverablesLinesIndex_0**](PartnersApi.md#partnersDeliverablesLinesIndex_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | List Partner Deliverable Items
-[**partnersDeliverablesLinesUpdate**](PartnersApi.md#partnersDeliverablesLinesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
-[**partnersDeliverablesLinesUpdate_0**](PartnersApi.md#partnersDeliverablesLinesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | Update item for Partner Deliverable
-[**partnersDeliverablesUpdate**](PartnersApi.md#partnersDeliverablesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
-[**partnersDeliverablesUpdate_0**](PartnersApi.md#partnersDeliverablesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | Update Partner Deliverable
-[**partnersDiscountsCreate**](PartnersApi.md#partnersDiscountsCreate) | **POST** /partners/{partner_id}/discounts | Discount for a partner.
-[**partnersDiscountsDelete**](PartnersApi.md#partnersDiscountsDelete) | **DELETE** /partners/{partner_id}/discounts/{partner_package_type_discount_id} | Delete a partner discount
-[**partnersDiscountsIndex**](PartnersApi.md#partnersDiscountsIndex) | **GET** /partners/{partner_id}/discounts | Get partner&#39;s discounts.
-[**partnersFeaturesCreate**](PartnersApi.md#partnersFeaturesCreate) | **POST** /partners/{partner_id}/features | Attach feature to partner.
-[**partnersFeaturesDelete**](PartnersApi.md#partnersFeaturesDelete) | **DELETE** /partners/{partner_id}/features/{feature_identifier} | Detach a single feature from a partner
-[**partnersFeesCreate**](PartnersApi.md#partnersFeesCreate) | **POST** /partners/{partner_id}/fees | Create partner fee
-[**partnersFeesDelete**](PartnersApi.md#partnersFeesDelete) | **DELETE** /partners/{partner_id}/fees/{id} | Delete a partner fee
-[**partnersFeesIndex**](PartnersApi.md#partnersFeesIndex) | **GET** /partners/fees | Get all partner fees.
-[**partnersGet**](PartnersApi.md#partnersGet) | **GET** /partners/{partner_id} | Get a Partner from a given partner_id.
-[**partnersImpressumsCreate**](PartnersApi.md#partnersImpressumsCreate) | **POST** /partners/{partner_id}/impressums | Create a partner impressum.
-[**partnersIndex**](PartnersApi.md#partnersIndex) | **GET** /partners | List Partners.
-[**partnersIndustriesCreate**](PartnersApi.md#partnersIndustriesCreate) | **POST** /partners/{partner_id}/industries | Attach industry to partner.
-[**partnersIndustriesDelete**](PartnersApi.md#partnersIndustriesDelete) | **DELETE** /partners/{partner_id}/industries/{industry_id} | Detach industry from partner.
-[**partnersIndustriesGet**](PartnersApi.md#partnersIndustriesGet) | **GET** /partners/{partner_id}/industries/{industry_id} | Get a given industry for partner.
-[**partnersIndustriesIndex**](PartnersApi.md#partnersIndustriesIndex) | **GET** /partners/{partner_id}/industries | Get partner industries.
-[**partnersIndustriesUpdate**](PartnersApi.md#partnersIndustriesUpdate) | **PUT** /partners/{partner_id}/industries | Replace partner&#39;s industries.
-[**partnersInvoicingsIndex**](PartnersApi.md#partnersInvoicingsIndex) | **GET** /partners/invoicings | List partner invoicings.
-[**partnersInvoicingsIndex_0**](PartnersApi.md#partnersInvoicingsIndex_0) | **GET** /partners/{partner_id}/invoicings | List partner invoicings.
-[**partnersLeadtypesCreate**](PartnersApi.md#partnersLeadtypesCreate) | **POST** /partners/{partner_id}/lead_types | Attach type to partner.
-[**partnersLeadtypesDelete**](PartnersApi.md#partnersLeadtypesDelete) | **DELETE** /partners/{partner_id}/lead_types/{lead_type_id} | Detach type from partner.
-[**partnersLeadtypesGet**](PartnersApi.md#partnersLeadtypesGet) | **GET** /partners/lead_types/{lead_type_id} | Retrieve a given lead type.
-[**partnersLeadtypesGet_0**](PartnersApi.md#partnersLeadtypesGet_0) | **GET** /partners/{partner_id}/lead_types/{lead_type_id} | Retrieve a given lead type.
-[**partnersLeadtypesIndex**](PartnersApi.md#partnersLeadtypesIndex) | **GET** /partners/lead_types | Get partner types criteria.
-[**partnersLeadtypesIndex_0**](PartnersApi.md#partnersLeadtypesIndex_0) | **GET** /partners/{partner_id}/lead_types | Get partner types criteria.
-[**partnersLeadtypesUpdate**](PartnersApi.md#partnersLeadtypesUpdate) | **PUT** /partners/{partner_id}/lead_types | Replace a partner&#39;s lead types.
-[**partnersNotesCreate**](PartnersApi.md#partnersNotesCreate) | **POST** /partners/notes | Create Partner notes.
-[**partnersNotesCreate_0**](PartnersApi.md#partnersNotesCreate_0) | **POST** /partners/{partner_id}/notes | Create Partner notes.
-[**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | Retrieve a given partner note by partner id and partner_note_id.
-[**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | Retrieve lists of notes.
-[**partnersNotesIndex_0**](PartnersApi.md#partnersNotesIndex_0) | **GET** /partners/{partner_id}/notes | Retrieve lists of notes.
-[**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | Create a revenue range.
-[**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | Get partner sectors.
-[**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | Update partner sectors.
-[**partnersSellingpointsCreate**](PartnersApi.md#partnersSellingpointsCreate) | **POST** /partners/{partner_id}/sellingpoints | Create partner selling point.
-[**partnersSellingpointsDelete**](PartnersApi.md#partnersSellingpointsDelete) | **DELETE** /partners/{partner_id}/sellingpoints/{selling_point_id} | Delete partner selling point.
-[**partnersSellingpointsIndex**](PartnersApi.md#partnersSellingpointsIndex) | **GET** /partners/{partner_id}/sellingpoints | List of partner selling points.
-[**partnersSellingpointsUpdate**](PartnersApi.md#partnersSellingpointsUpdate) | **PUT** /partners/{partner_id}/sellingpoints/{selling_point_id} | Update partner selling point.
-[**partnersSubscriptionagreementsActionsCreate**](PartnersApi.md#partnersSubscriptionagreementsActionsCreate) | **POST** /partners/{partner_id}/subscriptionagreements/{agreement_id}/actions | Execute an action on a subscription agreement.
-[**partnersSubscriptionagreementsCreate**](PartnersApi.md#partnersSubscriptionagreementsCreate) | **POST** /partners/{partner_id}/subscriptionagreements | Create a subscription agreement.
-[**partnersSubscriptionagreementsIndex**](PartnersApi.md#partnersSubscriptionagreementsIndex) | **GET** /partners/{partner_id}/subscriptionagreements | List partner subscription agreements.
-[**partnersSubscriptionagreementsUpdate**](PartnersApi.md#partnersSubscriptionagreementsUpdate) | **PUT** /partners/{partner_id}/subscriptionagreements/{agreement_id} | Update a subscription agreement.
-[**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | Cancel subscription.
-[**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | Subscribe a partner.
-[**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | Get partner&#39;s subscriptions.
-[**partnersSubscriptionsPausesCreate**](PartnersApi.md#partnersSubscriptionsPausesCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/pauses | Create a subscription pause.
-[**partnersSubscriptionsPausesDelete**](PartnersApi.md#partnersSubscriptionsPausesDelete) | **DELETE** /partners/{partner_id}/subscriptions/{subscription_id}/pauses/{pause_id} | Delete a subscription pause.
-[**partnersSubscriptionsPausesIndex**](PartnersApi.md#partnersSubscriptionsPausesIndex) | **GET** /partners/{partner_id}/subscriptions/{subscription_id}/pauses | List subscription pauses.
-[**partnersSubscriptionsPricesCreate**](PartnersApi.md#partnersSubscriptionsPricesCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/prices | Create a new subscription price effective at a specific date
-[**partnersSubscriptionsPricesDelete**](PartnersApi.md#partnersSubscriptionsPricesDelete) | **DELETE** /partners/{partner_id}/subscriptions/{subscription_id}/prices/{subscription_price_id} | Delete a future subscription price
-[**partnersSubscriptionsPricesIndex**](PartnersApi.md#partnersSubscriptionsPricesIndex) | **GET** /partners/{partner_id}/subscriptions/{subscription_id}/prices | List the subscription&#39;s prices.
-[**partnersSubscriptionsUpdate**](PartnersApi.md#partnersSubscriptionsUpdate) | **PUT** /partners/{partner_id}/subscriptions/{subscription_id} | Update partner subscription.
-[**partnersSuggestIndex**](PartnersApi.md#partnersSuggestIndex) | **GET** /partners/suggest | Suggest Partners to search for.
-[**partnersTitlesIndex**](PartnersApi.md#partnersTitlesIndex) | **GET** /partners/titles | Get all partner titles.
-[**partnersTransactionsIndex**](PartnersApi.md#partnersTransactionsIndex) | **GET** /partners/{partner_id}/transactions | List Transactions for a given Partner.
-[**partnersUpdate**](PartnersApi.md#partnersUpdate) | **PUT** /partners/{partner_id} | Update a Partner.
-[**partnersUsersContentsDelete**](PartnersApi.md#partnersUsersContentsDelete) | **DELETE** /partners/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
-[**partnersUsersContentsDelete_0**](PartnersApi.md#partnersUsersContentsDelete_0) | **DELETE** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Delete content for a given partner user.
-[**partnersUsersContentsGet**](PartnersApi.md#partnersUsersContentsGet) | **GET** /partners/users/{partner_user_id}/contents/{content_key} | Get the content of a given partner user.
-[**partnersUsersContentsGet_0**](PartnersApi.md#partnersUsersContentsGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Get the content of a given partner user.
-[**partnersUsersContentsUpdate**](PartnersApi.md#partnersUsersContentsUpdate) | **PUT** /partners/users/{partner_user_id}/contents/{content_key} | Update content for a given partner user.
-[**partnersUsersContentsUpdate_0**](PartnersApi.md#partnersUsersContentsUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | Update content for a given partner user.
-[**partnersUsersCreate**](PartnersApi.md#partnersUsersCreate) | **POST** /partners/users | Create a partner user.
-[**partnersUsersCreate_0**](PartnersApi.md#partnersUsersCreate_0) | **POST** /partners/{partner_id}/users | Create a partner user.
-[**partnersUsersDelete**](PartnersApi.md#partnersUsersDelete) | **DELETE** /partners/{partner_id}/users/{partner_user_id} | Delete partner user from partner.
-[**partnersUsersGet**](PartnersApi.md#partnersUsersGet) | **GET** /partners/users/{partner_user_id} | Get a Partner User by a given partner_user_id.
-[**partnersUsersGet_0**](PartnersApi.md#partnersUsersGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id} | Get a Partner User by a given partner_user_id.
-[**partnersUsersIndex**](PartnersApi.md#partnersUsersIndex) | **GET** /partners/users | List partner users.
-[**partnersUsersIndex_0**](PartnersApi.md#partnersUsersIndex_0) | **GET** /partners/{partner_id}/users | List partner users.
-[**partnersUsersUpdate**](PartnersApi.md#partnersUsersUpdate) | **PUT** /partners/users/{partner_user_id} | Update partner user profile.
-[**partnersUsersUpdate_0**](PartnersApi.md#partnersUsersUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id} | Update partner user profile.
-[**partnersVerificationsIndex**](PartnersApi.md#partnersVerificationsIndex) | **GET** /partners/verifications | Get Partner verifications.
-[**partnersVerificationsIndex_0**](PartnersApi.md#partnersVerificationsIndex_0) | **GET** /partners/{partner_id}/verifications | Get Partner verifications.
-[**partnersVerificationsUpdate**](PartnersApi.md#partnersVerificationsUpdate) | **PUT** /partners/{partner_id}/verifications | Update Partner verification data.
+[**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | 
+[**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | 
+[**partnersAllocationdeliveriesIndex**](PartnersApi.md#partnersAllocationdeliveriesIndex) | **GET** /partners/allocationdeliveries | 
+[**partnersAllocationdeliveriesIndex_0**](PartnersApi.md#partnersAllocationdeliveriesIndex_0) | **GET** /partners/{partner_id}/allocationdeliveries | 
+[**partnersAllocationpausesCreate**](PartnersApi.md#partnersAllocationpausesCreate) | **POST** /partners/{partner_id}/allocationpauses | 
+[**partnersAssigneesCreate**](PartnersApi.md#partnersAssigneesCreate) | **POST** /partners/{partner_id}/assignees | 
+[**partnersAssigneesDelete**](PartnersApi.md#partnersAssigneesDelete) | **DELETE** /partners/{partner_id}/assignees/{partner_assignee_id} | 
+[**partnersAssigneesIndex**](PartnersApi.md#partnersAssigneesIndex) | **GET** /partners/{partner_id}/assignees | 
+[**partnersBankaccountsCreate**](PartnersApi.md#partnersBankaccountsCreate) | **POST** /partners/{partner_id}/bankaccounts | 
+[**partnersBankaccountsIndex**](PartnersApi.md#partnersBankaccountsIndex) | **GET** /partners/{partner_id}/bankaccounts | 
+[**partnersBrowserpushsubscriptionsCreate**](PartnersApi.md#partnersBrowserpushsubscriptionsCreate) | **POST** /partners/{partner_id}/browserpushsubscriptions | 
+[**partnersBusinessunitcontractsCreate**](PartnersApi.md#partnersBusinessunitcontractsCreate) | **POST** /partners/{partner_id}/businessunitcontracts | 
+[**partnersBusinessunitcontractsGet**](PartnersApi.md#partnersBusinessunitcontractsGet) | **GET** /partners/{partner_id}/businessunitcontracts/{contract_id} | 
+[**partnersBusinessunitcontractsIndex**](PartnersApi.md#partnersBusinessunitcontractsIndex) | **GET** /partners/{partner_id}/businessunitcontracts | 
+[**partnersBusinessunitsAllocationlimitsCreate**](PartnersApi.md#partnersBusinessunitsAllocationlimitsCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits | 
+[**partnersBusinessunitsAllocationlimitsDelete**](PartnersApi.md#partnersBusinessunitsAllocationlimitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits/{limit_id} | 
+[**partnersBusinessunitsAllocationlimitsIndex**](PartnersApi.md#partnersBusinessunitsAllocationlimitsIndex) | **GET** /partners/{partner_id}/businessunits/allocationlimits | 
+[**partnersBusinessunitsAllocationlimitsUpdate**](PartnersApi.md#partnersBusinessunitsAllocationlimitsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationlimits/{limit_id} | 
+[**partnersBusinessunitsAllocationquotasCreate**](PartnersApi.md#partnersBusinessunitsAllocationquotasCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas | 
+[**partnersBusinessunitsAllocationquotasDelete**](PartnersApi.md#partnersBusinessunitsAllocationquotasDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_business_unit_id}/allocationquotas/{quota_id} | 
+[**partnersBusinessunitsAllocationquotasIndex**](PartnersApi.md#partnersBusinessunitsAllocationquotasIndex) | **GET** /partners/{partner_id}/businessunits/allocationquotas | 
+[**partnersBusinessunitsCreate**](PartnersApi.md#partnersBusinessunitsCreate) | **POST** /partners/{partner_id}/businessunits | 
+[**partnersBusinessunitsDelete**](PartnersApi.md#partnersBusinessunitsDelete) | **DELETE** /partners/{partner_id}/businessunits/{partner_businessunit_id} | 
+[**partnersBusinessunitsGet**](PartnersApi.md#partnersBusinessunitsGet) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id} | 
+[**partnersBusinessunitsIndex**](PartnersApi.md#partnersBusinessunitsIndex) | **GET** /partners/businessunits | 
+[**partnersBusinessunitsIndustriesIndex**](PartnersApi.md#partnersBusinessunitsIndustriesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | 
+[**partnersBusinessunitsIndustriesUpdate**](PartnersApi.md#partnersBusinessunitsIndustriesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/industries | 
+[**partnersBusinessunitsRevenuerangesCreate**](PartnersApi.md#partnersBusinessunitsRevenuerangesCreate) | **POST** /partners/{partner_id}/businessunits/{partner_business_unit_id}/revenueranges | 
+[**partnersBusinessunitsSectorsIndex**](PartnersApi.md#partnersBusinessunitsSectorsIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | 
+[**partnersBusinessunitsSectorsUpdate**](PartnersApi.md#partnersBusinessunitsSectorsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/sectors | 
+[**partnersBusinessunitsSegmentationgeoregionsIndex**](PartnersApi.md#partnersBusinessunitsSegmentationgeoregionsIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/segmentationgeoregions | 
+[**partnersBusinessunitsSegmentationgeoregionsUpdate**](PartnersApi.md#partnersBusinessunitsSegmentationgeoregionsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/segmentationgeoregions | 
+[**partnersBusinessunitsTypesIndex**](PartnersApi.md#partnersBusinessunitsTypesIndex) | **GET** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | 
+[**partnersBusinessunitsTypesUpdate**](PartnersApi.md#partnersBusinessunitsTypesUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id}/types | 
+[**partnersBusinessunitsUpdate**](PartnersApi.md#partnersBusinessunitsUpdate) | **PUT** /partners/{partner_id}/businessunits/{partner_business_unit_id} | 
+[**partnersCategoriesIndex**](PartnersApi.md#partnersCategoriesIndex) | **GET** /partners/categories | 
+[**partnersCertificationsCreate**](PartnersApi.md#partnersCertificationsCreate) | **POST** /partners/{partner_id}/certifications | 
+[**partnersCertificationsDelete**](PartnersApi.md#partnersCertificationsDelete) | **DELETE** /partners/{partner_id}/certifications/{certification_id} | 
+[**partnersCertificationsGet**](PartnersApi.md#partnersCertificationsGet) | **GET** /partners/{partner_id}/certifications/{certification_id} | 
+[**partnersCertificationsIndex**](PartnersApi.md#partnersCertificationsIndex) | **GET** /partners/{partner_id}/certifications | 
+[**partnersCertificationsUpdate**](PartnersApi.md#partnersCertificationsUpdate) | **PUT** /partners/{partner_id}/certifications | 
+[**partnersContentsDelete**](PartnersApi.md#partnersContentsDelete) | **DELETE** /partners/{partner_id}/contents/{content_key} | 
+[**partnersContentsGet**](PartnersApi.md#partnersContentsGet) | **GET** /partners/{partner_id}/contents/{content_key} | 
+[**partnersContentsUpdate**](PartnersApi.md#partnersContentsUpdate) | **PUT** /partners/{partner_id}/contents/{content_key} | 
+[**partnersContractoffergroupsCreate**](PartnersApi.md#partnersContractoffergroupsCreate) | **POST** /partners/{partner_id}/contractoffergroups | 
+[**partnersContractoffergroupsIndex**](PartnersApi.md#partnersContractoffergroupsIndex) | **GET** /partners/{partner_id}/contractoffergroups | 
+[**partnersContractsActionsCreate**](PartnersApi.md#partnersContractsActionsCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/actions | 
+[**partnersContractsAllocationpausesDelete**](PartnersApi.md#partnersContractsAllocationpausesDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | 
+[**partnersContractsAllocationpausesUpdate**](PartnersApi.md#partnersContractsAllocationpausesUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id}/allocationpauses/{pause_id} | 
+[**partnersContractsCreate**](PartnersApi.md#partnersContractsCreate) | **POST** /partners/{partner_id}/contracts | 
+[**partnersContractsDelete**](PartnersApi.md#partnersContractsDelete) | **DELETE** /partners/{partner_id}/contracts/{partner_contract_id} | 
+[**partnersContractsGet**](PartnersApi.md#partnersContractsGet) | **GET** /partners/{partner_id}/contracts/{contract_id} | 
+[**partnersContractsIndex**](PartnersApi.md#partnersContractsIndex) | **GET** /partners/{partner_id}/contracts | 
+[**partnersContractsPdfGet**](PartnersApi.md#partnersContractsPdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/pdf | 
+[**partnersContractsSignedpdfCreate**](PartnersApi.md#partnersContractsSignedpdfCreate) | **POST** /partners/{partner_id}/contracts/{contract_id}/signedpdf | 
+[**partnersContractsSignedpdfGet**](PartnersApi.md#partnersContractsSignedpdfGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signedpdf | 
+[**partnersContractsSigningurlGet**](PartnersApi.md#partnersContractsSigningurlGet) | **GET** /partners/{partner_id}/contracts/{contract_id}/signingurl | 
+[**partnersContractsUpdate**](PartnersApi.md#partnersContractsUpdate) | **PUT** /partners/{partner_id}/contracts/{partner_contract_id} | 
+[**partnersCouponsActionsCreate**](PartnersApi.md#partnersCouponsActionsCreate) | **POST** /partners/{partner_id}/coupons/{coupon_id}/actions | 
+[**partnersCouponsCreate**](PartnersApi.md#partnersCouponsCreate) | **POST** /partners/{partner_id}/coupons | 
+[**partnersCouponsIndex**](PartnersApi.md#partnersCouponsIndex) | **GET** /partners/{partner_id}/coupons | 
+[**partnersCreate**](PartnersApi.md#partnersCreate) | **POST** /partners | Create a Partner
+[**partnersDelete**](PartnersApi.md#partnersDelete) | **DELETE** /partners/{partner_id} | 
+[**partnersDeliverablesCreate**](PartnersApi.md#partnersDeliverablesCreate) | **POST** /partners/deliverables | 
+[**partnersDeliverablesCreate_0**](PartnersApi.md#partnersDeliverablesCreate_0) | **POST** /partners/{partner_id}/deliverables | 
+[**partnersDeliverablesGet**](PartnersApi.md#partnersDeliverablesGet) | **GET** /partners/deliverables/{partnerDeliverable_id} | 
+[**partnersDeliverablesGet_0**](PartnersApi.md#partnersDeliverablesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | 
+[**partnersDeliverablesIndex**](PartnersApi.md#partnersDeliverablesIndex) | **GET** /partners/deliverables | 
+[**partnersDeliverablesIndex_0**](PartnersApi.md#partnersDeliverablesIndex_0) | **GET** /partners/{partner_id}/deliverables | 
+[**partnersDeliverablesLinesCreate**](PartnersApi.md#partnersDeliverablesLinesCreate) | **POST** /partners/deliverables/{partnerDeliverable_id}/lines | 
+[**partnersDeliverablesLinesCreate_0**](PartnersApi.md#partnersDeliverablesLinesCreate_0) | **POST** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | 
+[**partnersDeliverablesLinesDelete**](PartnersApi.md#partnersDeliverablesLinesDelete) | **DELETE** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesLinesDelete_0**](PartnersApi.md#partnersDeliverablesLinesDelete_0) | **DELETE** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesLinesGet**](PartnersApi.md#partnersDeliverablesLinesGet) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesLinesGet_0**](PartnersApi.md#partnersDeliverablesLinesGet_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesLinesIndex**](PartnersApi.md#partnersDeliverablesLinesIndex) | **GET** /partners/deliverables/{partnerDeliverable_id}/lines | 
+[**partnersDeliverablesLinesIndex_0**](PartnersApi.md#partnersDeliverablesLinesIndex_0) | **GET** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines | 
+[**partnersDeliverablesLinesUpdate**](PartnersApi.md#partnersDeliverablesLinesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesLinesUpdate_0**](PartnersApi.md#partnersDeliverablesLinesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id}/lines/{partnerDeliverableLine_id} | 
+[**partnersDeliverablesUpdate**](PartnersApi.md#partnersDeliverablesUpdate) | **PUT** /partners/deliverables/{partnerDeliverable_id} | 
+[**partnersDeliverablesUpdate_0**](PartnersApi.md#partnersDeliverablesUpdate_0) | **PUT** /partners/{partner_id}/deliverables/{partnerDeliverable_id} | 
+[**partnersDiscountsCreate**](PartnersApi.md#partnersDiscountsCreate) | **POST** /partners/{partner_id}/discounts | 
+[**partnersDiscountsDelete**](PartnersApi.md#partnersDiscountsDelete) | **DELETE** /partners/{partner_id}/discounts/{partner_package_type_discount_id} | 
+[**partnersDiscountsIndex**](PartnersApi.md#partnersDiscountsIndex) | **GET** /partners/{partner_id}/discounts | 
+[**partnersEmployeenotesCreate**](PartnersApi.md#partnersEmployeenotesCreate) | **POST** /partners/{partner_id}/employeenotes | 
+[**partnersEmployeenotesDelete**](PartnersApi.md#partnersEmployeenotesDelete) | **DELETE** /partners/{partner_id}/employeenotes/{employee_note_id} | 
+[**partnersEmployeenotesIndex**](PartnersApi.md#partnersEmployeenotesIndex) | **GET** /partners/{partner_id}/employeenotes | 
+[**partnersFeaturesCreate**](PartnersApi.md#partnersFeaturesCreate) | **POST** /partners/{partner_id}/features | 
+[**partnersFeaturesDelete**](PartnersApi.md#partnersFeaturesDelete) | **DELETE** /partners/{partner_id}/features/{feature_identifier} | 
+[**partnersFeesCreate**](PartnersApi.md#partnersFeesCreate) | **POST** /partners/{partner_id}/fees | 
+[**partnersFeesDelete**](PartnersApi.md#partnersFeesDelete) | **DELETE** /partners/{partner_id}/fees/{id} | 
+[**partnersFeesIndex**](PartnersApi.md#partnersFeesIndex) | **GET** /partners/fees | 
+[**partnersGet**](PartnersApi.md#partnersGet) | **GET** /partners/{partner_id} | Get a single partner by ID
+[**partnersImpressumsCreate**](PartnersApi.md#partnersImpressumsCreate) | **POST** /partners/{partner_id}/impressums | 
+[**partnersIndex**](PartnersApi.md#partnersIndex) | **GET** /partners | List partners
+[**partnersIndustriesCreate**](PartnersApi.md#partnersIndustriesCreate) | **POST** /partners/{partner_id}/industries | 
+[**partnersIndustriesDelete**](PartnersApi.md#partnersIndustriesDelete) | **DELETE** /partners/{partner_id}/industries/{industry_id} | 
+[**partnersIndustriesGet**](PartnersApi.md#partnersIndustriesGet) | **GET** /partners/{partner_id}/industries/{industry_id} | 
+[**partnersIndustriesIndex**](PartnersApi.md#partnersIndustriesIndex) | **GET** /partners/{partner_id}/industries | 
+[**partnersIndustriesUpdate**](PartnersApi.md#partnersIndustriesUpdate) | **PUT** /partners/{partner_id}/industries | 
+[**partnersInvoicingsIndex**](PartnersApi.md#partnersInvoicingsIndex) | **GET** /partners/invoicings | 
+[**partnersInvoicingsIndex_0**](PartnersApi.md#partnersInvoicingsIndex_0) | **GET** /partners/{partner_id}/invoicings | 
+[**partnersLeadtypesCreate**](PartnersApi.md#partnersLeadtypesCreate) | **POST** /partners/{partner_id}/lead_types | 
+[**partnersLeadtypesDelete**](PartnersApi.md#partnersLeadtypesDelete) | **DELETE** /partners/{partner_id}/lead_types/{lead_type_id} | 
+[**partnersLeadtypesGet**](PartnersApi.md#partnersLeadtypesGet) | **GET** /partners/lead_types/{lead_type_id} | 
+[**partnersLeadtypesGet_0**](PartnersApi.md#partnersLeadtypesGet_0) | **GET** /partners/{partner_id}/lead_types/{lead_type_id} | 
+[**partnersLeadtypesIndex**](PartnersApi.md#partnersLeadtypesIndex) | **GET** /partners/lead_types | 
+[**partnersLeadtypesIndex_0**](PartnersApi.md#partnersLeadtypesIndex_0) | **GET** /partners/{partner_id}/lead_types | 
+[**partnersLeadtypesUpdate**](PartnersApi.md#partnersLeadtypesUpdate) | **PUT** /partners/{partner_id}/lead_types | 
+[**partnersNotesCreate**](PartnersApi.md#partnersNotesCreate) | **POST** /partners/notes | 
+[**partnersNotesCreate_0**](PartnersApi.md#partnersNotesCreate_0) | **POST** /partners/{partner_id}/notes | 
+[**partnersNotesGet**](PartnersApi.md#partnersNotesGet) | **GET** /partners/{partner_id}/notes/{partner_note_id} | 
+[**partnersNotesIndex**](PartnersApi.md#partnersNotesIndex) | **GET** /partners/notes | 
+[**partnersNotesIndex_0**](PartnersApi.md#partnersNotesIndex_0) | **GET** /partners/{partner_id}/notes | 
+[**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | 
+[**partnersSectorsIndex**](PartnersApi.md#partnersSectorsIndex) | **GET** /partners/{partner_id}/sectors | 
+[**partnersSectorsUpdate**](PartnersApi.md#partnersSectorsUpdate) | **PUT** /partners/{partner_id}/sectors | 
+[**partnersSellingpointsCreate**](PartnersApi.md#partnersSellingpointsCreate) | **POST** /partners/{partner_id}/sellingpoints | 
+[**partnersSellingpointsDelete**](PartnersApi.md#partnersSellingpointsDelete) | **DELETE** /partners/{partner_id}/sellingpoints/{selling_point_id} | 
+[**partnersSellingpointsIndex**](PartnersApi.md#partnersSellingpointsIndex) | **GET** /partners/{partner_id}/sellingpoints | 
+[**partnersSellingpointsUpdate**](PartnersApi.md#partnersSellingpointsUpdate) | **PUT** /partners/{partner_id}/sellingpoints/{selling_point_id} | 
+[**partnersSubscriptionagreementsActionsCreate**](PartnersApi.md#partnersSubscriptionagreementsActionsCreate) | **POST** /partners/{partner_id}/subscriptionagreements/{agreement_id}/actions | 
+[**partnersSubscriptionagreementsCreate**](PartnersApi.md#partnersSubscriptionagreementsCreate) | **POST** /partners/{partner_id}/subscriptionagreements | 
+[**partnersSubscriptionagreementsIndex**](PartnersApi.md#partnersSubscriptionagreementsIndex) | **GET** /partners/{partner_id}/subscriptionagreements | 
+[**partnersSubscriptionagreementsUpdate**](PartnersApi.md#partnersSubscriptionagreementsUpdate) | **PUT** /partners/{partner_id}/subscriptionagreements/{agreement_id} | 
+[**partnersSubscriptionsActionsCreate**](PartnersApi.md#partnersSubscriptionsActionsCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/actions | 
+[**partnersSubscriptionsCreate**](PartnersApi.md#partnersSubscriptionsCreate) | **POST** /partners/{partner_id}/subscriptions | 
+[**partnersSubscriptionsIndex**](PartnersApi.md#partnersSubscriptionsIndex) | **GET** /partners/{partner_id}/subscriptions | 
+[**partnersSubscriptionsPausesCreate**](PartnersApi.md#partnersSubscriptionsPausesCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/pauses | 
+[**partnersSubscriptionsPausesDelete**](PartnersApi.md#partnersSubscriptionsPausesDelete) | **DELETE** /partners/{partner_id}/subscriptions/{subscription_id}/pauses/{pause_id} | 
+[**partnersSubscriptionsPausesIndex**](PartnersApi.md#partnersSubscriptionsPausesIndex) | **GET** /partners/{partner_id}/subscriptions/{subscription_id}/pauses | 
+[**partnersSubscriptionsPricesCreate**](PartnersApi.md#partnersSubscriptionsPricesCreate) | **POST** /partners/{partner_id}/subscriptions/{subscription_id}/prices | 
+[**partnersSubscriptionsPricesDelete**](PartnersApi.md#partnersSubscriptionsPricesDelete) | **DELETE** /partners/{partner_id}/subscriptions/{subscription_id}/prices/{subscription_price_id} | 
+[**partnersSubscriptionsPricesIndex**](PartnersApi.md#partnersSubscriptionsPricesIndex) | **GET** /partners/{partner_id}/subscriptions/{subscription_id}/prices | 
+[**partnersSubscriptionsUpdate**](PartnersApi.md#partnersSubscriptionsUpdate) | **PUT** /partners/{partner_id}/subscriptions/{subscription_id} | 
+[**partnersSuggestIndex**](PartnersApi.md#partnersSuggestIndex) | **GET** /partners/suggest | 
+[**partnersTitlesIndex**](PartnersApi.md#partnersTitlesIndex) | **GET** /partners/titles | 
+[**partnersTransactionsIndex**](PartnersApi.md#partnersTransactionsIndex) | **GET** /partners/{partner_id}/transactions | 
+[**partnersUpdate**](PartnersApi.md#partnersUpdate) | **PUT** /partners/{partner_id} | 
+[**partnersUsersContentsDelete**](PartnersApi.md#partnersUsersContentsDelete) | **DELETE** /partners/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersContentsDelete_0**](PartnersApi.md#partnersUsersContentsDelete_0) | **DELETE** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersContentsGet**](PartnersApi.md#partnersUsersContentsGet) | **GET** /partners/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersContentsGet_0**](PartnersApi.md#partnersUsersContentsGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersContentsUpdate**](PartnersApi.md#partnersUsersContentsUpdate) | **PUT** /partners/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersContentsUpdate_0**](PartnersApi.md#partnersUsersContentsUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | 
+[**partnersUsersCreate**](PartnersApi.md#partnersUsersCreate) | **POST** /partners/users | 
+[**partnersUsersCreate_0**](PartnersApi.md#partnersUsersCreate_0) | **POST** /partners/{partner_id}/users | 
+[**partnersUsersDelete**](PartnersApi.md#partnersUsersDelete) | **DELETE** /partners/{partner_id}/users/{partner_user_id} | 
+[**partnersUsersGet**](PartnersApi.md#partnersUsersGet) | **GET** /partners/users/{partner_user_id} | 
+[**partnersUsersGet_0**](PartnersApi.md#partnersUsersGet_0) | **GET** /partners/{partner_id}/users/{partner_user_id} | 
+[**partnersUsersIndex**](PartnersApi.md#partnersUsersIndex) | **GET** /partners/users | 
+[**partnersUsersIndex_0**](PartnersApi.md#partnersUsersIndex_0) | **GET** /partners/{partner_id}/users | 
+[**partnersUsersUpdate**](PartnersApi.md#partnersUsersUpdate) | **PUT** /partners/users/{partner_user_id} | 
+[**partnersUsersUpdate_0**](PartnersApi.md#partnersUsersUpdate_0) | **PUT** /partners/{partner_id}/users/{partner_user_id} | 
+[**partnersVerificationsIndex**](PartnersApi.md#partnersVerificationsIndex) | **GET** /partners/verifications | 
+[**partnersVerificationsIndex_0**](PartnersApi.md#partnersVerificationsIndex_0) | **GET** /partners/{partner_id}/verifications | 
+[**partnersVerificationsUpdate**](PartnersApi.md#partnersVerificationsUpdate) | **PUT** /partners/{partner_id}/verifications | 
 
 
 # **partnersActionsCreate**
 > \Ageras\Api\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
 
-Partner actions.
+
 
 ### Example
 ```php
@@ -211,7 +219,7 @@ Name | Type | Description  | Notes
 # **partnersAggregationsIndex**
 > \Ageras\Api\AggregationResult partnersAggregationsIndex($criteria)
 
-List facets and aggregations for the Partner Search.
+
 
 ### Example
 ```php
@@ -228,7 +236,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $criteria = [
-        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'partner_id' => "partner_id_example"; // string | Filter partners by partner ID
         'state' => "state_example"; // string | States for the partners.
         'is_enabled' => false; // bool | 
         'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
@@ -249,6 +257,7 @@ $criteria = [
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
         'has_active_contract' => false; // bool | 
+        'has_unused_allocations' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -268,7 +277,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_id** | **string**| Partner id of the partners to filter by. | [optional]
+ **partner_id** | **string**| Filter partners by partner ID | [optional]
  **state** | **string**| States for the partners. | [optional]
  **is_enabled** | **bool**|  | [optional] [default to false]
  **employee_id** | **string**| Employee id of the partners to filter by. | [optional]
@@ -289,6 +298,7 @@ Name | Type | Description  | Notes
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
  **has_active_contract** | **bool**|  | [optional] [default to false]
+ **has_unused_allocations** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -309,10 +319,152 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersAllocationdeliveriesIndex**
+> \Ageras\Api\PartnerAllocationDeliveryResult partnersAllocationdeliveriesIndex($criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$criteria = [
+        'process_at_gte' => "process_at_gte_example"; // string | Get invoicings processed at after a date.
+        'process_at_lte' => "process_at_lte_example"; // string | Get invoicings processed at after a date.
+        'partner_id' => "partner_id_example"; // string | Filter by zero or more partner IDs.
+        'sort' => "process_at"; // string | Sort the invoicings.
+        'geo_code' => "geo_code_example"; // string | Filter by geo codes.
+        'employee_id' => "employee_id_example"; // string | Filter by partner's employee.
+        'revenue_segment_id' => "revenue_segment_id_example"; // string | Filter by revenue segment ID.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersAllocationdeliveriesIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAllocationdeliveriesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **process_at_gte** | **string**| Get invoicings processed at after a date. | [optional]
+ **process_at_lte** | **string**| Get invoicings processed at after a date. | [optional]
+ **partner_id** | **string**| Filter by zero or more partner IDs. | [optional]
+ **sort** | **string**| Sort the invoicings. | [optional] [default to process_at]
+ **geo_code** | **string**| Filter by geo codes. | [optional]
+ **employee_id** | **string**| Filter by partner&#39;s employee. | [optional]
+ **revenue_segment_id** | **string**| Filter by revenue segment ID. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerAllocationDeliveryResult**](../Model/PartnerAllocationDeliveryResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersAllocationdeliveriesIndex_0**
+> \Ageras\Api\PartnerAllocationDeliveryResult partnersAllocationdeliveriesIndex_0($partner_id , $criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'process_at_gte' => "process_at_gte_example"; // string | Get invoicings processed at after a date.
+        'process_at_lte' => "process_at_lte_example"; // string | Get invoicings processed at after a date.
+        'sort' => "process_at"; // string | Sort the invoicings.
+        'geo_code' => "geo_code_example"; // string | Filter by geo codes.
+        'employee_id' => "employee_id_example"; // string | Filter by partner's employee.
+        'revenue_segment_id' => "revenue_segment_id_example"; // string | Filter by revenue segment ID.
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersAllocationdeliveriesIndex_0($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAllocationdeliveriesIndex_0: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **process_at_gte** | **string**| Get invoicings processed at after a date. | [optional]
+ **process_at_lte** | **string**| Get invoicings processed at after a date. | [optional]
+ **sort** | **string**| Sort the invoicings. | [optional] [default to process_at]
+ **geo_code** | **string**| Filter by geo codes. | [optional]
+ **employee_id** | **string**| Filter by partner&#39;s employee. | [optional]
+ **revenue_segment_id** | **string**| Filter by revenue segment ID. | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerAllocationDeliveryResult**](../Model/PartnerAllocationDeliveryResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersAllocationpausesCreate**
 > \Ageras\Api\PartnerAllocationPauseResource partnersAllocationpausesCreate($partner_id , $partner_allocation_pause_resource)
 
-Create an allocation pause.
+
 
 ### Example
 ```php
@@ -362,10 +514,176 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersAssigneesCreate**
+> \Ageras\Api\PartnerAssigneeResource partnersAssigneesCreate($partner_id , $partner_assignee_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_assignee_resource = new \Ageras\Api\PartnerAssigneeResource(); // \Ageras\Api\PartnerAssigneeResource | 
+
+try {
+    $result = $api_instance->partnersAssigneesCreate($partner_id , $partner_assignee_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAssigneesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_assignee_resource** | [**\Ageras\Api\PartnerAssigneeResource**](../Model/\Ageras\Api\PartnerAssigneeResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerAssigneeResource**](../Model/PartnerAssigneeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersAssigneesDelete**
+> partnersAssigneesDelete($partner_id,  $partner_assignee_id )
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_assignee_id = "partner_assignee_id_example"; // string | 
+
+try {
+    $api_instance->partnersAssigneesDelete($partner_id,  $partner_assignee_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAssigneesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_assignee_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersAssigneesIndex**
+> \Ageras\Api\PartnerAssigneeResult partnersAssigneesIndex($partner_id , $criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'roles' => "all"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersAssigneesIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersAssigneesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **roles** | **string**|  | [optional] [default to all]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerAssigneeResult**](../Model/PartnerAssigneeResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersBankaccountsCreate**
 > \Ageras\Api\PartnerBankaccountResource partnersBankaccountsCreate($partner_id , $partner_bankaccount_resource)
 
-Subscribe a partner.
+
 
 ### Example
 ```php
@@ -418,7 +736,7 @@ Name | Type | Description  | Notes
 # **partnersBankaccountsIndex**
 > \Ageras\Api\PartnerBankaccountResult partnersBankaccountsIndex($partner_id , $criteria)
 
-Get partner's bank accounts.
+
 
 ### Example
 ```php
@@ -477,7 +795,7 @@ Name | Type | Description  | Notes
 # **partnersBrowserpushsubscriptionsCreate**
 > \Ageras\Api\BrowserPushSubscriptionResource partnersBrowserpushsubscriptionsCreate($partner_id , $browser_push_subscription_resource)
 
-Create a browser push subscription
+
 
 ### Example
 ```php
@@ -530,7 +848,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitcontractsCreate**
 > \Ageras\Api\PartnerBusinessUnitContractResource partnersBusinessunitcontractsCreate($partner_id , $partner_business_unit_contract_resource)
 
-Create a business unit contract.
+
 
 ### Example
 ```php
@@ -583,7 +901,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitcontractsGet**
 > \Ageras\Api\PartnerBusinessUnitContractResource partnersBusinessunitcontractsGet($partner_id,  $contract_id )
 
-Get a business unit agreement.
+
 
 ### Example
 ```php
@@ -636,7 +954,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitcontractsIndex**
 > \Ageras\Api\PartnerBusinessUnitContractResult partnersBusinessunitcontractsIndex($partner_id , $criteria)
 
-List business unit contracts.
+
 
 ### Example
 ```php
@@ -695,7 +1013,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsAllocationlimitsCreate**
 > \Ageras\Api\LeadPartnerAllocationLimitResource partnersBusinessunitsAllocationlimitsCreate($partner_id,  $partner_business_unit_id , $lead_partner_allocation_limit_resource)
 
-Create a lead allocation limit for a business unit.
+
 
 ### Example
 ```php
@@ -750,7 +1068,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsAllocationlimitsDelete**
 > partnersBusinessunitsAllocationlimitsDelete($partner_id,  $partner_business_unit_id,  $limit_id )
 
-Delete a lead allocation limit.
+
 
 ### Example
 ```php
@@ -804,7 +1122,7 @@ void (empty response body)
 # **partnersBusinessunitsAllocationlimitsIndex**
 > \Ageras\Api\LeadPartnerAllocationLimitResult partnersBusinessunitsAllocationlimitsIndex($partner_id , $criteria)
 
-List lead allocation limits.
+
 
 ### Example
 ```php
@@ -869,7 +1187,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsAllocationlimitsUpdate**
 > \Ageras\Api\LeadPartnerAllocationLimitResource partnersBusinessunitsAllocationlimitsUpdate($partner_id,  $partner_business_unit_id,  $limit_id , $lead_partner_allocation_limit_resource)
 
-Update a lead allocation limit.
+
 
 ### Example
 ```php
@@ -926,7 +1244,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsAllocationquotasCreate**
 > \Ageras\Api\LeadAllocationQuotaResource partnersBusinessunitsAllocationquotasCreate($partner_id,  $partner_business_unit_id , $lead_allocation_quota_resource)
 
-Create a lead allocation quota for a business unit.
+
 
 ### Example
 ```php
@@ -981,7 +1299,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsAllocationquotasDelete**
 > partnersBusinessunitsAllocationquotasDelete($partner_id,  $partner_business_unit_id,  $quota_id )
 
-Delete a lead allocation quota.
+
 
 ### Example
 ```php
@@ -1035,7 +1353,7 @@ void (empty response body)
 # **partnersBusinessunitsAllocationquotasIndex**
 > \Ageras\Api\LeadAllocationQuotaResult partnersBusinessunitsAllocationquotasIndex($partner_id , $criteria)
 
-List lead allocation quotas.
+
 
 ### Example
 ```php
@@ -1100,7 +1418,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsCreate**
 > \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsCreate($partner_id , $partner_business_unit_resource)
 
-Create partner business unit.
+
 
 ### Example
 ```php
@@ -1153,7 +1471,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsDelete**
 > partnersBusinessunitsDelete($partner_id,  $partner_businessunit_id )
 
-Delete a partner business unit
+
 
 ### Example
 ```php
@@ -1205,7 +1523,7 @@ void (empty response body)
 # **partnersBusinessunitsGet**
 > \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsGet($partner_id,  $partner_business_unit_id )
 
-Get a single partner business unit.
+
 
 ### Example
 ```php
@@ -1258,7 +1576,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsIndex**
 > \Ageras\Api\PartnerBusinessUnitResult partnersBusinessunitsIndex($criteria)
 
-List partner business units.
+
 
 ### Example
 ```php
@@ -1353,7 +1671,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsIndustriesIndex**
 > \Ageras\Api\PartnerBusinessUnitIndustryResult partnersBusinessunitsIndustriesIndex($partner_id,  $partner_business_unit_id , $criteria)
 
-List business unit industries.
+
 
 ### Example
 ```php
@@ -1416,7 +1734,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsIndustriesUpdate**
 > \Ageras\Api\PartnerBusinessUnitIndustriesResource partnersBusinessunitsIndustriesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_industries_resource)
 
-Update business unit industries.
+
 
 ### Example
 ```php
@@ -1471,7 +1789,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsRevenuerangesCreate**
 > \Ageras\Api\PartnerBusinessUnitRevenueRangeResource partnersBusinessunitsRevenuerangesCreate($partner_id,  $partner_business_unit_id , $partner_business_unit_revenue_range_resource)
 
-Create a business unit revenue range.
+
 
 ### Example
 ```php
@@ -1526,7 +1844,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsSectorsIndex**
 > \Ageras\Api\SectorResult partnersBusinessunitsSectorsIndex($partner_id,  $partner_business_unit_id , $criteria)
 
-List business unit sectors.
+
 
 ### Example
 ```php
@@ -1587,7 +1905,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsSectorsUpdate**
 > \Ageras\Api\PartnerSectorsResource partnersBusinessunitsSectorsUpdate($partner_id,  $partner_business_unit_id , $partner_sectors_resource)
 
-Update partner business unit sectors.
+
 
 ### Example
 ```php
@@ -1642,7 +1960,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsSegmentationgeoregionsIndex**
 > \Ageras\Api\PartnerBusinessUnitSegmentationGeoRegionResult partnersBusinessunitsSegmentationgeoregionsIndex($partner_id,  $partner_business_unit_id , $criteria)
 
-List a business unit's segmentation geo regions.
+
 
 ### Example
 ```php
@@ -1703,7 +2021,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsSegmentationgeoregionsUpdate**
 > \Ageras\Api\PartnerBusinessUnitSegmentationGeoRegionsResource partnersBusinessunitsSegmentationgeoregionsUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_segmentation_geo_regions_resource)
 
-Replace a business unit's segmentation geo regions.
+
 
 ### Example
 ```php
@@ -1758,7 +2076,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsTypesIndex**
 > \Ageras\Api\PartnerBusinessUnitTypeResult partnersBusinessunitsTypesIndex($partner_id,  $partner_business_unit_id , $criteria)
 
-List business unit types.
+
 
 ### Example
 ```php
@@ -1819,7 +2137,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsTypesUpdate**
 > \Ageras\Api\PartnerBusinessUnitTypesResource partnersBusinessunitsTypesUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_types_resource)
 
-Update partner business unit types.
+
 
 ### Example
 ```php
@@ -1874,7 +2192,7 @@ Name | Type | Description  | Notes
 # **partnersBusinessunitsUpdate**
 > \Ageras\Api\PartnerBusinessUnitResource partnersBusinessunitsUpdate($partner_id,  $partner_business_unit_id , $partner_business_unit_resource)
 
-Update partner business unit.
+
 
 ### Example
 ```php
@@ -1929,7 +2247,7 @@ Name | Type | Description  | Notes
 # **partnersCategoriesIndex**
 > \Ageras\Api\PartnerCategoryResult partnersCategoriesIndex($criteria)
 
-List of partner categories.
+
 
 ### Example
 ```php
@@ -1994,7 +2312,7 @@ Name | Type | Description  | Notes
 # **partnersCertificationsCreate**
 > \Ageras\Api\CertificationResource partnersCertificationsCreate($partner_id , $certification_resource)
 
-Attach certification to partner.
+
 
 ### Example
 ```php
@@ -2047,7 +2365,7 @@ Name | Type | Description  | Notes
 # **partnersCertificationsDelete**
 > partnersCertificationsDelete($partner_id,  $certification_id )
 
-Detach certification from partner.
+
 
 ### Example
 ```php
@@ -2099,7 +2417,7 @@ void (empty response body)
 # **partnersCertificationsGet**
 > \Ageras\Api\CertificationResource partnersCertificationsGet($partner_id,  $certification_id )
 
-Get Partner certification.
+
 
 ### Example
 ```php
@@ -2152,7 +2470,7 @@ Name | Type | Description  | Notes
 # **partnersCertificationsIndex**
 > \Ageras\Api\CertificationResult partnersCertificationsIndex($partner_id , $criteria)
 
-Get partner certifications.
+
 
 ### Example
 ```php
@@ -2215,7 +2533,7 @@ Name | Type | Description  | Notes
 # **partnersCertificationsUpdate**
 > \Ageras\Api\PartnerCertificationsResource partnersCertificationsUpdate($partner_id , $partner_certifications_resource)
 
-Update partner certifications.
+
 
 ### Example
 ```php
@@ -2268,7 +2586,7 @@ Name | Type | Description  | Notes
 # **partnersContentsDelete**
 > partnersContentsDelete($partner_id,  $content_key )
 
-Delete content for a given partner.
+
 
 ### Example
 ```php
@@ -2320,7 +2638,7 @@ void (empty response body)
 # **partnersContentsGet**
 > \Ageras\Api\PartnerContentResource partnersContentsGet($partner_id,  $content_key )
 
-Get the content of a given partner.
+
 
 ### Example
 ```php
@@ -2373,7 +2691,7 @@ Name | Type | Description  | Notes
 # **partnersContentsUpdate**
 > \Ageras\Api\PartnerContentResource partnersContentsUpdate($partner_id,  $content_key , $partner_content_resource)
 
-Update content for a given partner.
+
 
 ### Example
 ```php
@@ -2428,7 +2746,7 @@ Name | Type | Description  | Notes
 # **partnersContractoffergroupsCreate**
 > \Ageras\Api\PartnerContractOfferGroupResource partnersContractoffergroupsCreate($partner_id , $partner_contract_offer_group_resource)
 
-List partner contract offer groups.
+
 
 ### Example
 ```php
@@ -2481,7 +2799,7 @@ Name | Type | Description  | Notes
 # **partnersContractoffergroupsIndex**
 > \Ageras\Api\PartnerContractOfferGroupResult partnersContractoffergroupsIndex($partner_id , $criteria)
 
-List partner contract offer groups.
+
 
 ### Example
 ```php
@@ -2542,7 +2860,7 @@ Name | Type | Description  | Notes
 # **partnersContractsActionsCreate**
 > \Ageras\Api\PartnerContractResource partnersContractsActionsCreate($partner_id,  $contract_id , $partner_contract_action_resource)
 
-Perform an action on a partner contract.
+
 
 ### Example
 ```php
@@ -2597,7 +2915,7 @@ Name | Type | Description  | Notes
 # **partnersContractsAllocationpausesDelete**
 > partnersContractsAllocationpausesDelete($partner_id,  $partner_contract_id,  $pause_id )
 
-Delete an allocation pause.
+
 
 ### Example
 ```php
@@ -2651,7 +2969,7 @@ void (empty response body)
 # **partnersContractsAllocationpausesUpdate**
 > \Ageras\Api\DateSpanResource partnersContractsAllocationpausesUpdate($partner_id,  $partner_contract_id,  $pause_id , $date_span_resource)
 
-Update an allocation pause.
+
 
 ### Example
 ```php
@@ -2708,7 +3026,7 @@ Name | Type | Description  | Notes
 # **partnersContractsCreate**
 > \Ageras\Api\PartnerContractResource partnersContractsCreate($partner_id , $partner_contract_resource)
 
-Create a partner contract.
+
 
 ### Example
 ```php
@@ -2761,7 +3079,7 @@ Name | Type | Description  | Notes
 # **partnersContractsDelete**
 > partnersContractsDelete($partner_id,  $partner_contract_id )
 
-Delete a partner contract.
+
 
 ### Example
 ```php
@@ -2813,7 +3131,7 @@ void (empty response body)
 # **partnersContractsGet**
 > \Ageras\Api\PartnerContractResource partnersContractsGet($partner_id,  $contract_id )
 
-Get a partner contract.
+
 
 ### Example
 ```php
@@ -2866,7 +3184,7 @@ Name | Type | Description  | Notes
 # **partnersContractsIndex**
 > \Ageras\Api\PartnerContractResult partnersContractsIndex($partner_id , $criteria)
 
-List partner contracts.
+
 
 ### Example
 ```php
@@ -2885,6 +3203,7 @@ $api_instance = new Ageras\Api\Api\PartnersApi();
 $partner_id = "partner_id_example"; // string | 
 $criteria = [
         'is_accepted' => false; // bool | 
+        'is_archived' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -2905,6 +3224,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partner_id** | **string**|  |
  **is_accepted** | **bool**|  | [optional] [default to false]
+ **is_archived** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -2927,7 +3247,7 @@ Name | Type | Description  | Notes
 # **partnersContractsPdfGet**
 > \Ageras\Api\PartnerContractPdfResource partnersContractsPdfGet($partner_id,  $contract_id )
 
-Get a PDF download link
+
 
 ### Example
 ```php
@@ -2980,7 +3300,7 @@ Name | Type | Description  | Notes
 # **partnersContractsSignedpdfCreate**
 > \Ageras\Api\PartnerContractSignedPdfFileResource partnersContractsSignedpdfCreate($partner_id,  $contract_id , $partner_contract_signed_pdf_file_resource)
 
-Upload signed contract
+
 
 ### Example
 ```php
@@ -3035,7 +3355,7 @@ Name | Type | Description  | Notes
 # **partnersContractsSignedpdfGet**
 > \Ageras\Api\PartnerContractPdfResource partnersContractsSignedpdfGet($partner_id,  $contract_id )
 
-Get a PDF download link for signed pdf
+
 
 ### Example
 ```php
@@ -3088,7 +3408,7 @@ Name | Type | Description  | Notes
 # **partnersContractsSigningurlGet**
 > \Ageras\Api\PartnerContractResource partnersContractsSigningurlGet($partner_id,  $contract_id )
 
-Get a signing url
+
 
 ### Example
 ```php
@@ -3141,7 +3461,7 @@ Name | Type | Description  | Notes
 # **partnersContractsUpdate**
 > \Ageras\Api\PartnerContractResource partnersContractsUpdate($partner_id,  $partner_contract_id , $partner_contract_resource)
 
-Update a partner contract.
+
 
 ### Example
 ```php
@@ -3196,7 +3516,7 @@ Name | Type | Description  | Notes
 # **partnersCouponsActionsCreate**
 > \Ageras\Api\PartnerCouponResource partnersCouponsActionsCreate($partner_id,  $coupon_id , $partner_coupon_action_resource)
 
-Coupon action
+
 
 ### Example
 ```php
@@ -3251,7 +3571,7 @@ Name | Type | Description  | Notes
 # **partnersCouponsCreate**
 > \Ageras\Api\PartnerCouponResource partnersCouponsCreate($partner_id , $partner_coupon_resource)
 
-Create a new partner coupon.
+
 
 ### Example
 ```php
@@ -3304,7 +3624,7 @@ Name | Type | Description  | Notes
 # **partnersCouponsIndex**
 > \Ageras\Api\PartnerCouponResult partnersCouponsIndex($partner_id , $criteria)
 
-List Partner Coupons.
+
 
 ### Example
 ```php
@@ -3371,7 +3691,7 @@ Name | Type | Description  | Notes
 # **partnersCreate**
 > \Ageras\Api\PartnerResource partnersCreate($partner_resource)
 
-Create a Partner.
+Create a Partner
 
 ### Example
 ```php
@@ -3422,7 +3742,7 @@ Name | Type | Description  | Notes
 # **partnersDelete**
 > partnersDelete($partner_id )
 
-Delete a Partner.
+
 
 ### Example
 ```php
@@ -3472,7 +3792,7 @@ void (empty response body)
 # **partnersDeliverablesCreate**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesCreate($partner_deliverable_resource)
 
-Create Deliverable for partners
+
 
 ### Example
 ```php
@@ -3523,7 +3843,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesCreate_0**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesCreate_0($partner_id , $partner_deliverable_resource)
 
-Create Deliverable for partners
+
 
 ### Example
 ```php
@@ -3576,7 +3896,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesGet**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesGet($partner_deliverable_id )
 
-Retrieve a single deliverable id
+
 
 ### Example
 ```php
@@ -3627,7 +3947,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesGet_0**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesGet_0($partner_id,  $partner_deliverable_id )
 
-Retrieve a single deliverable id
+
 
 ### Example
 ```php
@@ -3680,7 +4000,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesIndex**
 > \Ageras\Api\PartnerDeliverableResult partnersDeliverablesIndex($criteria)
 
-List Partner deliverables
+
 
 ### Example
 ```php
@@ -3747,7 +4067,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesIndex_0**
 > \Ageras\Api\PartnerDeliverableResult partnersDeliverablesIndex_0($partner_id , $criteria)
 
-List Partner deliverables
+
 
 ### Example
 ```php
@@ -3814,7 +4134,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesCreate**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesCreate($partner_deliverable_id , $partner_deliverable_line_resource)
 
-Create item for Partner Deliverable
+
 
 ### Example
 ```php
@@ -3867,7 +4187,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesCreate_0**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesCreate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_line_resource)
 
-Create item for Partner Deliverable
+
 
 ### Example
 ```php
@@ -3922,7 +4242,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesDelete**
 > partnersDeliverablesLinesDelete($partner_deliverable_id,  $partner_deliverable_line_id )
 
-Delete item from Partner Deliverable
+
 
 ### Example
 ```php
@@ -3974,7 +4294,7 @@ void (empty response body)
 # **partnersDeliverablesLinesDelete_0**
 > partnersDeliverablesLinesDelete_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
 
-Delete item from Partner Deliverable
+
 
 ### Example
 ```php
@@ -4028,7 +4348,7 @@ void (empty response body)
 # **partnersDeliverablesLinesGet**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesGet($partner_deliverable_id,  $partner_deliverable_line_id )
 
-Get Partner Deliverable Item
+
 
 ### Example
 ```php
@@ -4081,7 +4401,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesGet_0**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesGet_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id )
 
-Get Partner Deliverable Item
+
 
 ### Example
 ```php
@@ -4136,7 +4456,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesIndex**
 > \Ageras\Api\PartnerDeliverableLineResult partnersDeliverablesLinesIndex($partner_deliverable_id , $criteria)
 
-List Partner Deliverable Items
+
 
 ### Example
 ```php
@@ -4201,7 +4521,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesIndex_0**
 > \Ageras\Api\PartnerDeliverableLineResult partnersDeliverablesLinesIndex_0($partner_id,  $partner_deliverable_id , $criteria)
 
-List Partner Deliverable Items
+
 
 ### Example
 ```php
@@ -4266,7 +4586,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesUpdate**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesUpdate($partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
 
-Update item for Partner Deliverable
+
 
 ### Example
 ```php
@@ -4321,7 +4641,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesLinesUpdate_0**
 > \Ageras\Api\PartnerDeliverableLineResource partnersDeliverablesLinesUpdate_0($partner_id,  $partner_deliverable_id,  $partner_deliverable_line_id , $partner_deliverable_line_resource)
 
-Update item for Partner Deliverable
+
 
 ### Example
 ```php
@@ -4378,7 +4698,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesUpdate**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesUpdate($partner_deliverable_id , $partner_deliverable_resource)
 
-Update Partner Deliverable
+
 
 ### Example
 ```php
@@ -4431,7 +4751,7 @@ Name | Type | Description  | Notes
 # **partnersDeliverablesUpdate_0**
 > \Ageras\Api\PartnerDeliverableResource partnersDeliverablesUpdate_0($partner_id,  $partner_deliverable_id , $partner_deliverable_resource)
 
-Update Partner Deliverable
+
 
 ### Example
 ```php
@@ -4486,7 +4806,7 @@ Name | Type | Description  | Notes
 # **partnersDiscountsCreate**
 > \Ageras\Api\PartnerDiscountResource partnersDiscountsCreate($partner_id , $partner_discount_resource)
 
-Discount for a partner.
+
 
 ### Example
 ```php
@@ -4539,7 +4859,7 @@ Name | Type | Description  | Notes
 # **partnersDiscountsDelete**
 > partnersDiscountsDelete($partner_id,  $partner_package_type_discount_id )
 
-Delete a partner discount
+
 
 ### Example
 ```php
@@ -4591,7 +4911,7 @@ void (empty response body)
 # **partnersDiscountsIndex**
 > \Ageras\Api\PartnerDiscountResult partnersDiscountsIndex($partner_id , $criteria)
 
-Get partner's discounts.
+
 
 ### Example
 ```php
@@ -4649,10 +4969,176 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersEmployeenotesCreate**
+> \Ageras\Api\PartnerEmployeeNoteResource partnersEmployeenotesCreate($partner_id , $partner_employee_note_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_employee_note_resource = new \Ageras\Api\PartnerEmployeeNoteResource(); // \Ageras\Api\PartnerEmployeeNoteResource | 
+
+try {
+    $result = $api_instance->partnersEmployeenotesCreate($partner_id , $partner_employee_note_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersEmployeenotesCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_employee_note_resource** | [**\Ageras\Api\PartnerEmployeeNoteResource**](../Model/\Ageras\Api\PartnerEmployeeNoteResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerEmployeeNoteResource**](../Model/PartnerEmployeeNoteResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersEmployeenotesDelete**
+> partnersEmployeenotesDelete($partner_id,  $employee_note_id )
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$employee_note_id = "employee_note_id_example"; // string | 
+
+try {
+    $api_instance->partnersEmployeenotesDelete($partner_id,  $employee_note_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersEmployeenotesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **employee_note_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersEmployeenotesIndex**
+> \Ageras\Api\PartnerEmployeeNoteResult partnersEmployeenotesIndex($partner_id , $criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'lead_id' => 56; // int | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersEmployeenotesIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersEmployeenotesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **lead_id** | **int**|  | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerEmployeeNoteResult**](../Model/PartnerEmployeeNoteResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersFeaturesCreate**
 > \Ageras\Api\PartnerFeatureResource partnersFeaturesCreate($partner_id , $partner_feature_resource)
 
-Attach feature to partner.
+
 
 ### Example
 ```php
@@ -4705,7 +5191,7 @@ Name | Type | Description  | Notes
 # **partnersFeaturesDelete**
 > partnersFeaturesDelete($partner_id,  $feature_identifier )
 
-Detach a single feature from a partner
+
 
 ### Example
 ```php
@@ -4757,7 +5243,7 @@ void (empty response body)
 # **partnersFeesCreate**
 > \Ageras\Api\PartnerFeeResource partnersFeesCreate($partner_id , $partner_fee_resource)
 
-Create partner fee
+
 
 ### Example
 ```php
@@ -4810,7 +5296,7 @@ Name | Type | Description  | Notes
 # **partnersFeesDelete**
 > partnersFeesDelete($partner_id,  $id )
 
-Delete a partner fee
+
 
 ### Example
 ```php
@@ -4862,7 +5348,7 @@ void (empty response body)
 # **partnersFeesIndex**
 > \Ageras\Api\PartnerFeeResult partnersFeesIndex($criteria)
 
-Get all partner fees.
+
 
 ### Example
 ```php
@@ -4925,7 +5411,7 @@ Name | Type | Description  | Notes
 # **partnersGet**
 > \Ageras\Api\PartnerResource partnersGet($partner_id )
 
-Get a Partner from a given partner_id.
+Get a single partner by ID
 
 ### Example
 ```php
@@ -4976,7 +5462,7 @@ Name | Type | Description  | Notes
 # **partnersImpressumsCreate**
 > \Ageras\Api\PartnerImpressumResource partnersImpressumsCreate($partner_id , $partner_impressum_resource)
 
-Create a partner impressum.
+
 
 ### Example
 ```php
@@ -5029,7 +5515,7 @@ Name | Type | Description  | Notes
 # **partnersIndex**
 > \Ageras\Api\PartnerResult partnersIndex($criteria)
 
-List Partners.
+List partners
 
 ### Example
 ```php
@@ -5046,7 +5532,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\PartnersApi();
 $criteria = [
-        'partner_id' => "partner_id_example"; // string | Partner id of the partners to filter by.
+        'partner_id' => "partner_id_example"; // string | Filter partners by partner ID
         'state' => "state_example"; // string | States for the partners.
         'is_enabled' => false; // bool | 
         'employee_id' => "employee_id_example"; // string | Employee id of the partners to filter by.
@@ -5067,6 +5553,7 @@ $criteria = [
         'digital_leads' => false; // bool | 
         'has_marketing_package' => false; // bool | 
         'has_active_contract' => false; // bool | 
+        'has_unused_allocations' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
@@ -5086,7 +5573,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **partner_id** | **string**| Partner id of the partners to filter by. | [optional]
+ **partner_id** | **string**| Filter partners by partner ID | [optional]
  **state** | **string**| States for the partners. | [optional]
  **is_enabled** | **bool**|  | [optional] [default to false]
  **employee_id** | **string**| Employee id of the partners to filter by. | [optional]
@@ -5107,6 +5594,7 @@ Name | Type | Description  | Notes
  **digital_leads** | **bool**|  | [optional] [default to false]
  **has_marketing_package** | **bool**|  | [optional] [default to false]
  **has_active_contract** | **bool**|  | [optional] [default to false]
+ **has_unused_allocations** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
@@ -5130,7 +5618,7 @@ Name | Type | Description  | Notes
 # **partnersIndustriesCreate**
 > \Ageras\Api\PartnerIndustryResource partnersIndustriesCreate($partner_id , $partner_industry_resource)
 
-Attach industry to partner.
+
 
 ### Example
 ```php
@@ -5183,7 +5671,7 @@ Name | Type | Description  | Notes
 # **partnersIndustriesDelete**
 > partnersIndustriesDelete($partner_id,  $industry_id )
 
-Detach industry from partner.
+
 
 ### Example
 ```php
@@ -5235,7 +5723,7 @@ void (empty response body)
 # **partnersIndustriesGet**
 > \Ageras\Api\PartnerIndustryResource partnersIndustriesGet($partner_id,  $industry_id )
 
-Get a given industry for partner.
+
 
 ### Example
 ```php
@@ -5288,7 +5776,7 @@ Name | Type | Description  | Notes
 # **partnersIndustriesIndex**
 > \Ageras\Api\PartnerIndustryResult partnersIndustriesIndex($partner_id , $criteria)
 
-Get partner industries.
+
 
 ### Example
 ```php
@@ -5351,7 +5839,7 @@ Name | Type | Description  | Notes
 # **partnersIndustriesUpdate**
 > \Ageras\Api\PartnerIndustriesResource partnersIndustriesUpdate($partner_id , $partner_industries_resource)
 
-Replace partner's industries.
+
 
 ### Example
 ```php
@@ -5404,7 +5892,7 @@ Name | Type | Description  | Notes
 # **partnersInvoicingsIndex**
 > \Ageras\Api\InvoicingResult partnersInvoicingsIndex($criteria)
 
-List partner invoicings.
+
 
 ### Example
 ```php
@@ -5475,7 +5963,7 @@ Name | Type | Description  | Notes
 # **partnersInvoicingsIndex_0**
 > \Ageras\Api\InvoicingResult partnersInvoicingsIndex_0($partner_id , $criteria)
 
-List partner invoicings.
+
 
 ### Example
 ```php
@@ -5546,7 +6034,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesCreate**
 > \Ageras\Api\PartnerTypesResource partnersLeadtypesCreate($partner_id , $lead_type_resource)
 
-Attach type to partner.
+
 
 ### Example
 ```php
@@ -5599,7 +6087,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesDelete**
 > partnersLeadtypesDelete($partner_id,  $lead_type_id )
 
-Detach type from partner.
+
 
 ### Example
 ```php
@@ -5651,7 +6139,7 @@ void (empty response body)
 # **partnersLeadtypesGet**
 > \Ageras\Api\PartnerTypesResource partnersLeadtypesGet($lead_type_id )
 
-Retrieve a given lead type.
+
 
 ### Example
 ```php
@@ -5702,7 +6190,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesGet_0**
 > \Ageras\Api\PartnerTypesResource partnersLeadtypesGet_0($partner_id,  $lead_type_id )
 
-Retrieve a given lead type.
+
 
 ### Example
 ```php
@@ -5755,7 +6243,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesIndex**
 > \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex($criteria)
 
-Get partner types criteria.
+
 
 ### Example
 ```php
@@ -5818,7 +6306,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesIndex_0**
 > \Ageras\Api\PartnerTypesResult partnersLeadtypesIndex_0($partner_id , $criteria)
 
-Get partner types criteria.
+
 
 ### Example
 ```php
@@ -5881,7 +6369,7 @@ Name | Type | Description  | Notes
 # **partnersLeadtypesUpdate**
 > \Ageras\Api\PartnerLeadTypesResource partnersLeadtypesUpdate($partner_id , $partner_lead_types_resource)
 
-Replace a partner's lead types.
+
 
 ### Example
 ```php
@@ -5934,7 +6422,7 @@ Name | Type | Description  | Notes
 # **partnersNotesCreate**
 > \Ageras\Api\PartnerNoteResource partnersNotesCreate($partner_note_resource)
 
-Create Partner notes.
+
 
 ### Example
 ```php
@@ -5985,7 +6473,7 @@ Name | Type | Description  | Notes
 # **partnersNotesCreate_0**
 > \Ageras\Api\PartnerNoteResource partnersNotesCreate_0($partner_id , $partner_note_resource)
 
-Create Partner notes.
+
 
 ### Example
 ```php
@@ -6038,7 +6526,7 @@ Name | Type | Description  | Notes
 # **partnersNotesGet**
 > \Ageras\Api\PartnerNoteResource partnersNotesGet($partner_id,  $partner_note_id )
 
-Retrieve a given partner note by partner id and partner_note_id.
+
 
 ### Example
 ```php
@@ -6091,7 +6579,7 @@ Name | Type | Description  | Notes
 # **partnersNotesIndex**
 > \Ageras\Api\PartnerNoteResult partnersNotesIndex($criteria)
 
-Retrieve lists of notes.
+
 
 ### Example
 ```php
@@ -6152,7 +6640,7 @@ Name | Type | Description  | Notes
 # **partnersNotesIndex_0**
 > \Ageras\Api\PartnerNoteResult partnersNotesIndex_0($partner_id , $criteria)
 
-Retrieve lists of notes.
+
 
 ### Example
 ```php
@@ -6213,7 +6701,7 @@ Name | Type | Description  | Notes
 # **partnersRevenuerangesCreate**
 > \Ageras\Api\PartnerRevenueRangeResource partnersRevenuerangesCreate($partner_id , $partner_revenue_range_resource)
 
-Create a revenue range.
+
 
 ### Example
 ```php
@@ -6266,7 +6754,7 @@ Name | Type | Description  | Notes
 # **partnersSectorsIndex**
 > \Ageras\Api\SectorResult partnersSectorsIndex($partner_id , $criteria)
 
-Get partner sectors.
+
 
 ### Example
 ```php
@@ -6325,7 +6813,7 @@ Name | Type | Description  | Notes
 # **partnersSectorsUpdate**
 > \Ageras\Api\PartnerSectorsResource partnersSectorsUpdate($partner_id , $partner_sectors_resource)
 
-Update partner sectors.
+
 
 ### Example
 ```php
@@ -6378,7 +6866,7 @@ Name | Type | Description  | Notes
 # **partnersSellingpointsCreate**
 > \Ageras\Api\PartnerUniqueSellingPointResource partnersSellingpointsCreate($partner_id , $partner_unique_selling_point_resource)
 
-Create partner selling point.
+
 
 ### Example
 ```php
@@ -6431,7 +6919,7 @@ Name | Type | Description  | Notes
 # **partnersSellingpointsDelete**
 > partnersSellingpointsDelete($partner_id,  $selling_point_id )
 
-Delete partner selling point.
+
 
 ### Example
 ```php
@@ -6483,7 +6971,7 @@ void (empty response body)
 # **partnersSellingpointsIndex**
 > \Ageras\Api\PartnerUniqueSellingPointResult partnersSellingpointsIndex($partner_id , $criteria)
 
-List of partner selling points.
+
 
 ### Example
 ```php
@@ -6544,7 +7032,7 @@ Name | Type | Description  | Notes
 # **partnersSellingpointsUpdate**
 > \Ageras\Api\PartnerUniqueSellingPointResource partnersSellingpointsUpdate($partner_id,  $selling_point_id , $partner_unique_selling_point_resource)
 
-Update partner selling point.
+
 
 ### Example
 ```php
@@ -6599,7 +7087,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionagreementsActionsCreate**
 > \Ageras\Api\PartnerSubscriptionAgreementResource partnersSubscriptionagreementsActionsCreate($partner_id,  $agreement_id , $partner_subscription_agreement_action_resource)
 
-Execute an action on a subscription agreement.
+
 
 ### Example
 ```php
@@ -6654,7 +7142,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionagreementsCreate**
 > \Ageras\Api\PartnerSubscriptionAgreementResource partnersSubscriptionagreementsCreate($partner_id , $partner_subscription_agreement_resource)
 
-Create a subscription agreement.
+
 
 ### Example
 ```php
@@ -6707,7 +7195,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionagreementsIndex**
 > \Ageras\Api\PartnerSubscriptionAgreementResult partnersSubscriptionagreementsIndex($partner_id , $criteria)
 
-List partner subscription agreements.
+
 
 ### Example
 ```php
@@ -6768,7 +7256,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionagreementsUpdate**
 > \Ageras\Api\PartnerSubscriptionAgreementResource partnersSubscriptionagreementsUpdate($partner_id,  $agreement_id , $partner_subscription_agreement_resource)
 
-Update a subscription agreement.
+
 
 ### Example
 ```php
@@ -6823,7 +7311,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsActionsCreate**
 > \Ageras\Api\PartnerSubscriptionActionResource partnersSubscriptionsActionsCreate($partner_id,  $subscription_id , $partner_subscription_action_resource)
 
-Cancel subscription.
+
 
 ### Example
 ```php
@@ -6878,7 +7366,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsCreate**
 > \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsCreate($partner_id , $partner_subscription_resource)
 
-Subscribe a partner.
+
 
 ### Example
 ```php
@@ -6931,7 +7419,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsIndex**
 > \Ageras\Api\PartnerSubscriptionResult partnersSubscriptionsIndex($partner_id , $criteria)
 
-Get partner's subscriptions.
+
 
 ### Example
 ```php
@@ -6992,7 +7480,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsPausesCreate**
 > \Ageras\Api\PartnerSubscriptionPauseResource partnersSubscriptionsPausesCreate($partner_id,  $subscription_id , $partner_subscription_pause_resource)
 
-Create a subscription pause.
+
 
 ### Example
 ```php
@@ -7047,7 +7535,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsPausesDelete**
 > partnersSubscriptionsPausesDelete($partner_id,  $subscription_id,  $pause_id )
 
-Delete a subscription pause.
+
 
 ### Example
 ```php
@@ -7101,7 +7589,7 @@ void (empty response body)
 # **partnersSubscriptionsPausesIndex**
 > \Ageras\Api\PartnerSubscriptionPauseResult partnersSubscriptionsPausesIndex($partner_id,  $subscription_id , $criteria)
 
-List subscription pauses.
+
 
 ### Example
 ```php
@@ -7162,7 +7650,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsPricesCreate**
 > \Ageras\Api\PartnerSubscriptionPriceResource partnersSubscriptionsPricesCreate($partner_id,  $subscription_id , $partner_subscription_price_resource)
 
-Create a new subscription price effective at a specific date
+
 
 ### Example
 ```php
@@ -7217,7 +7705,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsPricesDelete**
 > partnersSubscriptionsPricesDelete($partner_id,  $subscription_id,  $subscription_price_id )
 
-Delete a future subscription price
+
 
 ### Example
 ```php
@@ -7271,7 +7759,7 @@ void (empty response body)
 # **partnersSubscriptionsPricesIndex**
 > \Ageras\Api\PartnerSubscriptionPriceResult partnersSubscriptionsPricesIndex($partner_id,  $subscription_id , $criteria)
 
-List the subscription's prices.
+
 
 ### Example
 ```php
@@ -7332,7 +7820,7 @@ Name | Type | Description  | Notes
 # **partnersSubscriptionsUpdate**
 > \Ageras\Api\PartnerSubscriptionResource partnersSubscriptionsUpdate($partner_id,  $subscription_id , $partner_subscription_resource)
 
-Update partner subscription.
+
 
 ### Example
 ```php
@@ -7387,7 +7875,7 @@ Name | Type | Description  | Notes
 # **partnersSuggestIndex**
 > \Ageras\Api\PartnerSuggestResult partnersSuggestIndex($criteria)
 
-Suggest Partners to search for.
+
 
 ### Example
 ```php
@@ -7450,7 +7938,7 @@ Name | Type | Description  | Notes
 # **partnersTitlesIndex**
 > \Ageras\Api\PartnerTitleResult partnersTitlesIndex($criteria)
 
-Get all partner titles.
+
 
 ### Example
 ```php
@@ -7519,7 +8007,7 @@ Name | Type | Description  | Notes
 # **partnersTransactionsIndex**
 > \Ageras\Api\PartnerCouponTransactionResult partnersTransactionsIndex($partner_id , $criteria)
 
-List Transactions for a given Partner.
+
 
 ### Example
 ```php
@@ -7578,7 +8066,7 @@ Name | Type | Description  | Notes
 # **partnersUpdate**
 > \Ageras\Api\PartnerResource partnersUpdate($partner_id , $partner_resource)
 
-Update a Partner.
+
 
 ### Example
 ```php
@@ -7631,7 +8119,7 @@ Name | Type | Description  | Notes
 # **partnersUsersContentsDelete**
 > partnersUsersContentsDelete($partner_user_id,  $content_key )
 
-Delete content for a given partner user.
+
 
 ### Example
 ```php
@@ -7683,7 +8171,7 @@ void (empty response body)
 # **partnersUsersContentsDelete_0**
 > partnersUsersContentsDelete_0($partner_id,  $partner_user_id,  $content_key )
 
-Delete content for a given partner user.
+
 
 ### Example
 ```php
@@ -7737,7 +8225,7 @@ void (empty response body)
 # **partnersUsersContentsGet**
 > \Ageras\Api\PartnerContentResource partnersUsersContentsGet($partner_user_id,  $content_key )
 
-Get the content of a given partner user.
+
 
 ### Example
 ```php
@@ -7790,7 +8278,7 @@ Name | Type | Description  | Notes
 # **partnersUsersContentsGet_0**
 > \Ageras\Api\PartnerContentResource partnersUsersContentsGet_0($partner_id,  $partner_user_id,  $content_key )
 
-Get the content of a given partner user.
+
 
 ### Example
 ```php
@@ -7845,7 +8333,7 @@ Name | Type | Description  | Notes
 # **partnersUsersContentsUpdate**
 > \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate($partner_user_id,  $content_key , $partner_content_resource)
 
-Update content for a given partner user.
+
 
 ### Example
 ```php
@@ -7900,7 +8388,7 @@ Name | Type | Description  | Notes
 # **partnersUsersContentsUpdate_0**
 > \Ageras\Api\PartnerContentResource partnersUsersContentsUpdate_0($partner_id,  $partner_user_id,  $content_key , $partner_content_resource)
 
-Update content for a given partner user.
+
 
 ### Example
 ```php
@@ -7957,7 +8445,7 @@ Name | Type | Description  | Notes
 # **partnersUsersCreate**
 > \Ageras\Api\PartnerUserResource partnersUsersCreate($partner_user_resource)
 
-Create a partner user.
+
 
 ### Example
 ```php
@@ -8008,7 +8496,7 @@ Name | Type | Description  | Notes
 # **partnersUsersCreate_0**
 > \Ageras\Api\PartnerUserResource partnersUsersCreate_0($partner_id , $partner_user_resource)
 
-Create a partner user.
+
 
 ### Example
 ```php
@@ -8061,7 +8549,7 @@ Name | Type | Description  | Notes
 # **partnersUsersDelete**
 > partnersUsersDelete($partner_id,  $partner_user_id )
 
-Delete partner user from partner.
+
 
 ### Example
 ```php
@@ -8113,7 +8601,7 @@ void (empty response body)
 # **partnersUsersGet**
 > \Ageras\Api\PartnerUserResource partnersUsersGet($partner_user_id )
 
-Get a Partner User by a given partner_user_id.
+
 
 ### Example
 ```php
@@ -8164,7 +8652,7 @@ Name | Type | Description  | Notes
 # **partnersUsersGet_0**
 > \Ageras\Api\PartnerUserResource partnersUsersGet_0($partner_id,  $partner_user_id )
 
-Get a Partner User by a given partner_user_id.
+
 
 ### Example
 ```php
@@ -8217,7 +8705,7 @@ Name | Type | Description  | Notes
 # **partnersUsersIndex**
 > \Ageras\Api\PartnerUserResult partnersUsersIndex($criteria)
 
-List partner users.
+
 
 ### Example
 ```php
@@ -8280,7 +8768,7 @@ Name | Type | Description  | Notes
 # **partnersUsersIndex_0**
 > \Ageras\Api\PartnerUserResult partnersUsersIndex_0($partner_id , $criteria)
 
-List partner users.
+
 
 ### Example
 ```php
@@ -8343,7 +8831,7 @@ Name | Type | Description  | Notes
 # **partnersUsersUpdate**
 > \Ageras\Api\PartnerUserResource partnersUsersUpdate($partner_user_id , $partner_user_resource)
 
-Update partner user profile.
+
 
 ### Example
 ```php
@@ -8396,7 +8884,7 @@ Name | Type | Description  | Notes
 # **partnersUsersUpdate_0**
 > \Ageras\Api\PartnerUserResource partnersUsersUpdate_0($partner_id,  $partner_user_id , $partner_user_resource)
 
-Update partner user profile.
+
 
 ### Example
 ```php
@@ -8451,7 +8939,7 @@ Name | Type | Description  | Notes
 # **partnersVerificationsIndex**
 > \Ageras\Api\PartnerVerificationResult partnersVerificationsIndex($criteria)
 
-Get Partner verifications.
+
 
 ### Example
 ```php
@@ -8510,7 +8998,7 @@ Name | Type | Description  | Notes
 # **partnersVerificationsIndex_0**
 > \Ageras\Api\PartnerVerificationResult partnersVerificationsIndex_0($partner_id , $criteria)
 
-Get Partner verifications.
+
 
 ### Example
 ```php
@@ -8569,7 +9057,7 @@ Name | Type | Description  | Notes
 # **partnersVerificationsUpdate**
 > \Ageras\Api\PartnerVerificationResource partnersVerificationsUpdate($partner_id , $partner_verification_resource)
 
-Update Partner verification data.
+
 
 ### Example
 ```php

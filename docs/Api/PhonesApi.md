@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**phonesActionsCreate**](PhonesApi.md#phonesActionsCreate) | **POST** /phones/{phone_id}/actions | Phone actions.
+[**phonesActionsCreate**](PhonesApi.md#phonesActionsCreate) | **POST** /phones/{phone_id}/actions | 
 
 
 # **phonesActionsCreate**
 > \Ageras\Api\PhoneResource phonesActionsCreate($phone_id , $phone_action_resource)
 
-Phone actions.
+
 
 ### Example
 ```php

@@ -90,7 +90,7 @@ class SectorsApi
     /**
      * Operation sectorsIndex
      *
-     * List sectors.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -110,7 +110,7 @@ class SectorsApi
     /**
      * Operation sectorsIndexWithHttpInfo
      *
-     * List sectors.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

@@ -90,7 +90,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesActionsCreate
      *
-     * Perform an employee action.
+     * 
      *
      * @param string $employee_id 
      * @param \Ageras\Api\EmployeeActionResource $employee_action_resource 
@@ -106,7 +106,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesActionsCreateWithHttpInfo
      *
-     * Perform an employee action.
+     * 
      *
      * @param string $employee_id 
      * @param \Ageras\Api\EmployeeActionResource $employee_action_resource 
@@ -184,7 +184,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesActionsCreate_0
      *
-     * Perform an employee action.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -201,7 +201,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesActionsCreate_0WithHttpInfo
      *
-     * Perform an employee action.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -288,7 +288,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesGet
      *
-     * Get an employee by a given employee id.
+     * 
      *
      * @param string $employee_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -303,7 +303,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesGetWithHttpInfo
      *
-     * Get an employee by a given employee id.
+     * 
      *
      * @param string $employee_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -375,7 +375,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesGet_0
      *
-     * Get an employee by a given employee id.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -391,7 +391,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesGet_0WithHttpInfo
      *
-     * Get an employee by a given employee id.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -472,7 +472,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesIndex
      *
-     * List and Search for employees working at Ageras.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -496,7 +496,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesIndexWithHttpInfo
      *
-     * List and Search for employees working at Ageras.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -601,7 +601,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndex
      *
-     * List employee KPIs.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -625,7 +625,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndexWithHttpInfo
      *
-     * List employee KPIs.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -730,7 +730,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndex_0
      *
-     * List employee KPIs.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -754,7 +754,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndex_0WithHttpInfo
      *
-     * List employee KPIs.
+     * 
      *
      * @param $criteria = [
      *    'employee_id' => string,
@@ -859,7 +859,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndex_1
      *
-     * List employee KPIs.
+     * 
      *
      * @param string $organisation_id 
      * @param $criteria = [
@@ -884,7 +884,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesKpiIndex_1WithHttpInfo
      *
-     * List employee KPIs.
+     * 
      *
      * @param string $organisation_id 
      * @param $criteria = [
@@ -998,7 +998,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesLeadpredictionsCreate
      *
-     * Create an employee lead prediction.
+     * 
      *
      * @param string $employee_id 
      * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
@@ -1014,7 +1014,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesLeadpredictionsCreateWithHttpInfo
      *
-     * Create an employee lead prediction.
+     * 
      *
      * @param string $employee_id 
      * @param \Ageras\Api\EmployeeLeadPredictionResource $employee_lead_prediction_resource 
@@ -1092,7 +1092,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesLeadpredictionsCreate_0
      *
-     * Create an employee lead prediction.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -1109,7 +1109,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesLeadpredictionsCreate_0WithHttpInfo
      *
-     * Create an employee lead prediction.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -1196,7 +1196,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesNotificationsIndex
      *
-     * List employee notifications.
+     * 
      *
      * @param string $employee_id 
      * @param $criteria = [
@@ -1217,7 +1217,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesNotificationsIndexWithHttpInfo
      *
-     * List employee notifications.
+     * 
      *
      * @param string $employee_id 
      * @param $criteria = [
@@ -1311,7 +1311,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesNotificationsIndex_0
      *
-     * List employee notifications.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 
@@ -1333,7 +1333,7 @@ class OrganisationApi
     /**
      * Operation organisationEmployeesNotificationsIndex_0WithHttpInfo
      *
-     * List employee notifications.
+     * 
      *
      * @param string $organisation_id 
      * @param string $employee_id 

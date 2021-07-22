@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**kpiIndex**](KpiApi.md#kpiIndex) | **GET** /kpi | List the different KPI&#39;s
-[**kpiTargetsCreate**](KpiApi.md#kpiTargetsCreate) | **POST** /kpi/targets | Create kpi target
-[**kpiTargetsIndex**](KpiApi.md#kpiTargetsIndex) | **GET** /kpi/targets | Get KPI target values.
-[**kpiValuesIndex**](KpiApi.md#kpiValuesIndex) | **GET** /kpi/values | Get KPI values.
+[**kpiIndex**](KpiApi.md#kpiIndex) | **GET** /kpi | 
+[**kpiTargetsCreate**](KpiApi.md#kpiTargetsCreate) | **POST** /kpi/targets | 
+[**kpiTargetsIndex**](KpiApi.md#kpiTargetsIndex) | **GET** /kpi/targets | 
+[**kpiValuesIndex**](KpiApi.md#kpiValuesIndex) | **GET** /kpi/values | 
 
 
 # **kpiIndex**
 > \Ageras\Api\KPIResult kpiIndex($criteria)
 
-List the different KPI's
+
 
 ### Example
 ```php
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 # **kpiTargetsCreate**
 > \Ageras\Api\KpiTargetResource kpiTargetsCreate($kpi_target_resource)
 
-Create kpi target
+
 
 ### Example
 ```php
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 # **kpiTargetsIndex**
 > \Ageras\Api\KpiTargetResult kpiTargetsIndex($criteria)
 
-Get KPI target values.
+
 
 ### Example
 ```php
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 # **kpiValuesIndex**
 > \Ageras\Api\KpiValueResult kpiValuesIndex($criteria)
 
-Get KPI values.
+
 
 ### Example
 ```php

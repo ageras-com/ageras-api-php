@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datafieldsIndex**](DatafieldsApi.md#datafieldsIndex) | **GET** /datafields | List DataFields.
+[**datafieldsIndex**](DatafieldsApi.md#datafieldsIndex) | **GET** /datafields | 
 
 
 # **datafieldsIndex**
 > \Ageras\Api\DataFieldResult datafieldsIndex($criteria)
 
-List DataFields.
+
 
 ### Example
 ```php

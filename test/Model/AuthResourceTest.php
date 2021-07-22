@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AuthResourceTest extends \PHPUnit_Framework_TestCase
+class AuthResourceTest extends TestCase
 {
 
     /**
@@ -110,6 +110,38 @@ class AuthResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "user_type"
      */
     public function testPropertyUserType()
+    {
+
+    }
+
+    /**
+     * Test attribute "employee"
+     */
+    public function testPropertyEmployee()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner_user"
+     */
+    public function testPropertyPartnerUser()
+    {
+
+    }
+
+    /**
+     * Test attribute "client"
+     */
+    public function testPropertyClient()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner_sign_up"
+     */
+    public function testPropertyPartnerSignUp()
     {
 
     }

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**softconversionsCreate**](SoftconversionsApi.md#softconversionsCreate) | **POST** /softconversions | Create a soft conversion.
+[**softconversionsCreate**](SoftconversionsApi.md#softconversionsCreate) | **POST** /softconversions | 
 
 
 # **softconversionsCreate**
 > \Ageras\Api\SoftConversionResource softconversionsCreate($soft_conversion_resource)
 
-Create a soft conversion.
+
 
 ### Example
 ```php

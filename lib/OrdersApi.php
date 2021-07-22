@@ -90,7 +90,7 @@ class OrdersApi
     /**
      * Operation ordersActionsCreate
      *
-     * Invoke actions on orders
+     * 
      *
      * @param string $order_id 
      * @param \Ageras\Api\OrderActionResource $order_action_resource 
@@ -106,7 +106,7 @@ class OrdersApi
     /**
      * Operation ordersActionsCreateWithHttpInfo
      *
-     * Invoke actions on orders
+     * 
      *
      * @param string $order_id 
      * @param \Ageras\Api\OrderActionResource $order_action_resource 
@@ -184,7 +184,7 @@ class OrdersApi
     /**
      * Operation ordersIndex
      *
-     * Invoke actions on orders
+     * 
      *
      * @param $criteria = [
      *    'order_id' => string,
@@ -209,7 +209,7 @@ class OrdersApi
     /**
      * Operation ordersIndexWithHttpInfo
      *
-     * Invoke actions on orders
+     * 
      *
      * @param $criteria = [
      *    'order_id' => string,

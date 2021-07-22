@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class KpiApiTest extends \PHPUnit_Framework_TestCase
+class KpiApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class KpiApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for kpiIndex
      *
-     * List the different KPI's.
+     * .
      *
      */
     public function testKpiIndex()
@@ -90,7 +90,7 @@ class KpiApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for kpiTargetsCreate
      *
-     * Create kpi target.
+     * .
      *
      */
     public function testKpiTargetsCreate()
@@ -101,7 +101,7 @@ class KpiApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for kpiTargetsIndex
      *
-     * Get KPI target values..
+     * .
      *
      */
     public function testKpiTargetsIndex()
@@ -112,7 +112,7 @@ class KpiApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for kpiValuesIndex
      *
-     * Get KPI values..
+     * .
      *
      */
     public function testKpiValuesIndex()

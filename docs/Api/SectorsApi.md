@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**sectorsIndex**](SectorsApi.md#sectorsIndex) | **GET** /sectors | List sectors.
+[**sectorsIndex**](SectorsApi.md#sectorsIndex) | **GET** /sectors | 
 
 
 # **sectorsIndex**
 > \Ageras\Api\SectorResult sectorsIndex($criteria)
 
-List sectors.
+
 
 ### Example
 ```php

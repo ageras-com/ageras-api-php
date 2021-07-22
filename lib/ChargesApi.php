@@ -90,7 +90,7 @@ class ChargesApi
     /**
      * Operation chargesIndex
      *
-     * List charges
+     * 
      *
      * @param $criteria = [
      *    'voucher_id' => int,
@@ -110,7 +110,7 @@ class ChargesApi
     /**
      * Operation chargesIndexWithHttpInfo
      *
-     * List charges
+     * 
      *
      * @param $criteria = [
      *    'voucher_id' => int,

@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerResourceTest extends \PHPUnit_Framework_TestCase
+class PartnerResourceTest extends TestCase
 {
 
     /**
@@ -166,6 +166,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "has_active_contract"
      */
     public function testPropertyHasActiveContract()
+    {
+
+    }
+
+    /**
+     * Test attribute "has_unused_allocations"
+     */
+    public function testPropertyHasUnusedAllocations()
     {
 
     }
@@ -470,6 +478,14 @@ class PartnerResourceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "company_size"
      */
     public function testPropertyCompanySize()
+    {
+
+    }
+
+    /**
+     * Test attribute "hide_from_website"
+     */
+    public function testPropertyHideFromWebsite()
     {
 
     }

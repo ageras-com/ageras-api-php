@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PromptsApiTest extends \PHPUnit_Framework_TestCase
+class PromptsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PromptsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for promptsActionsCreate
      *
-     * Action on prompt.
+     * .
      *
      */
     public function testPromptsActionsCreate()
@@ -90,7 +90,7 @@ class PromptsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for promptsIndex
      *
-     * List of prompts.
+     * .
      *
      */
     public function testPromptsIndex()

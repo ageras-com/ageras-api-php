@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OrganisationApiTest extends \PHPUnit_Framework_TestCase
+class OrganisationApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesActionsCreate
      *
-     * Perform an employee action..
+     * .
      *
      */
     public function testOrganisationEmployeesActionsCreate()
@@ -90,7 +90,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesActionsCreate_0
      *
-     * Perform an employee action..
+     * .
      *
      */
     public function testOrganisationEmployeesActionsCreate0()
@@ -101,7 +101,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesGet
      *
-     * Get an employee by a given employee id..
+     * .
      *
      */
     public function testOrganisationEmployeesGet()
@@ -112,7 +112,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesGet_0
      *
-     * Get an employee by a given employee id..
+     * .
      *
      */
     public function testOrganisationEmployeesGet0()
@@ -123,7 +123,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesIndex
      *
-     * List and Search for employees working at Ageras..
+     * .
      *
      */
     public function testOrganisationEmployeesIndex()
@@ -134,7 +134,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesKpiIndex
      *
-     * List employee KPIs..
+     * .
      *
      */
     public function testOrganisationEmployeesKpiIndex()
@@ -145,7 +145,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesKpiIndex_0
      *
-     * List employee KPIs..
+     * .
      *
      */
     public function testOrganisationEmployeesKpiIndex0()
@@ -156,7 +156,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesKpiIndex_1
      *
-     * List employee KPIs..
+     * .
      *
      */
     public function testOrganisationEmployeesKpiIndex1()
@@ -167,7 +167,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesLeadpredictionsCreate
      *
-     * Create an employee lead prediction..
+     * .
      *
      */
     public function testOrganisationEmployeesLeadpredictionsCreate()
@@ -178,7 +178,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesLeadpredictionsCreate_0
      *
-     * Create an employee lead prediction..
+     * .
      *
      */
     public function testOrganisationEmployeesLeadpredictionsCreate0()
@@ -189,7 +189,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesNotificationsIndex
      *
-     * List employee notifications..
+     * .
      *
      */
     public function testOrganisationEmployeesNotificationsIndex()
@@ -200,7 +200,7 @@ class OrganisationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for organisationEmployeesNotificationsIndex_0
      *
-     * List employee notifications..
+     * .
      *
      */
     public function testOrganisationEmployeesNotificationsIndex0()

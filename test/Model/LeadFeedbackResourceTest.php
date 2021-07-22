@@ -39,7 +39,7 @@ namespace Ageras\Api;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LeadFeedbackResourceTest extends \PHPUnit_Framework_TestCase
+class LeadFeedbackResourceTest extends TestCase
 {
 
     /**

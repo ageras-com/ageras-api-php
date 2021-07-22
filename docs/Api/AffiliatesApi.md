@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**affiliatesCampaignsIndex**](AffiliatesApi.md#affiliatesCampaignsIndex) | **GET** /affiliates/{affiliate_id}/campaigns | List of affiliate campaigns.
-[**affiliatesIndex**](AffiliatesApi.md#affiliatesIndex) | **GET** /affiliates | List Affiliates.
+[**affiliatesCampaignsIndex**](AffiliatesApi.md#affiliatesCampaignsIndex) | **GET** /affiliates/{affiliate_id}/campaigns | 
+[**affiliatesIndex**](AffiliatesApi.md#affiliatesIndex) | **GET** /affiliates | 
 
 
 # **affiliatesCampaignsIndex**
 > \Ageras\Api\AffiliateCampaignResult affiliatesCampaignsIndex($affiliate_id , $criteria)
 
-List of affiliate campaigns.
+
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **affiliatesIndex**
 > \Ageras\Api\AffiliateResult affiliatesIndex($criteria)
 
-List Affiliates.
+
 
 ### Example
 ```php

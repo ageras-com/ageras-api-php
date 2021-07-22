@@ -90,7 +90,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsCreate
      *
-     * Create business model.
+     * 
      *
      * @param \Ageras\Api\BusinessModelResource $business_model_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsCreateWithHttpInfo
      *
-     * Create business model.
+     * 
      *
      * @param \Ageras\Api\BusinessModelResource $business_model_resource 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -174,7 +174,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsDelete
      *
-     * Delete business model.
+     * 
      *
      * @param string $business_model_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -189,7 +189,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsDeleteWithHttpInfo
      *
-     * Delete business model.
+     * 
      *
      * @param string $business_model_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
@@ -257,9 +257,9 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsGet
      *
-     * Return a business model
+     * 
      *
-     * @param string $business_model_id Id of the business model
+     * @param string $business_model_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return \Ageras\Api\BusinessModelResource
      */
@@ -272,9 +272,9 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsGetWithHttpInfo
      *
-     * Return a business model
+     * 
      *
-     * @param string $business_model_id Id of the business model
+     * @param string $business_model_id 
      * @throws \Ageras\Api\ApiException on non-2xx response
      * @return array of \Ageras\Api\BusinessModelResource, HTTP status code, HTTP response headers (array of strings)
      */
@@ -344,7 +344,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsIndex
      *
-     * List business models.
+     * 
      *
      * @param $criteria = [
      *    'business_model_id' => string,
@@ -366,7 +366,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsIndexWithHttpInfo
      *
-     * List business models.
+     * 
      *
      * @param $criteria = [
      *    'business_model_id' => string,
@@ -461,7 +461,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsUpdate
      *
-     * Update business model.
+     * 
      *
      * @param string $business_model_id 
      * @param \Ageras\Api\BusinessModelResource $business_model_resource 
@@ -477,7 +477,7 @@ class BusinessmodelsApi
     /**
      * Operation businessModelsUpdateWithHttpInfo
      *
-     * Update business model.
+     * 
      *
      * @param string $business_model_id 
      * @param \Ageras\Api\BusinessModelResource $business_model_resource 

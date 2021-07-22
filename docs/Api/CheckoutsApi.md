@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**checkoutsCreate**](CheckoutsApi.md#checkoutsCreate) | **POST** /checkouts | Create a new Checkout
-[**checkoutsGet**](CheckoutsApi.md#checkoutsGet) | **GET** /checkouts/{checkout_id} | Get a checkout resource
-[**checkoutsIndex**](CheckoutsApi.md#checkoutsIndex) | **GET** /checkouts | List Checkout resources
-[**checkoutsUpdate**](CheckoutsApi.md#checkoutsUpdate) | **PUT** /checkouts/{checkout_id} | Update a given checkout resource
+[**checkoutsCreate**](CheckoutsApi.md#checkoutsCreate) | **POST** /checkouts | 
+[**checkoutsGet**](CheckoutsApi.md#checkoutsGet) | **GET** /checkouts/{checkout_id} | 
+[**checkoutsIndex**](CheckoutsApi.md#checkoutsIndex) | **GET** /checkouts | 
+[**checkoutsUpdate**](CheckoutsApi.md#checkoutsUpdate) | **PUT** /checkouts/{checkout_id} | 
 
 
 # **checkoutsCreate**
 > \Ageras\Api\CheckoutResource checkoutsCreate($checkout_resource)
 
-Create a new Checkout
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **checkoutsGet**
 > \Ageras\Api\CheckoutResource checkoutsGet($checkout_id )
 
-Get a checkout resource
+
 
 ### Example
 ```php
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 # **checkoutsIndex**
 > \Ageras\Api\CheckoutResult checkoutsIndex($criteria)
 
-List Checkout resources
+
 
 ### Example
 ```php
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 # **checkoutsUpdate**
 > \Ageras\Api\CheckoutResource checkoutsUpdate($checkout_id , $checkout_resource)
 
-Update a given checkout resource
+
 
 ### Example
 ```php

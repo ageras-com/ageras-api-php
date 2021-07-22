@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
+class CheckoutsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for checkoutsCreate
      *
-     * Create a new Checkout.
+     * .
      *
      */
     public function testCheckoutsCreate()
@@ -90,7 +90,7 @@ class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for checkoutsGet
      *
-     * Get a checkout resource.
+     * .
      *
      */
     public function testCheckoutsGet()
@@ -101,7 +101,7 @@ class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for checkoutsIndex
      *
-     * List Checkout resources.
+     * .
      *
      */
     public function testCheckoutsIndex()
@@ -112,7 +112,7 @@ class CheckoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for checkoutsUpdate
      *
-     * Update a given checkout resource.
+     * .
      *
      */
     public function testCheckoutsUpdate()

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contactarchivesActionsCreate**](ContactarchivesApi.md#contactarchivesActionsCreate) | **POST** /contactarchives/{contact_archive_id}/actions | Contact archive actions
-[**contactarchivesIndex**](ContactarchivesApi.md#contactarchivesIndex) | **GET** /contactarchives | Search for contact&#39;s correspondence (e-mails and text messages) by a given set of criteria.
+[**contactarchivesActionsCreate**](ContactarchivesApi.md#contactarchivesActionsCreate) | **POST** /contactarchives/{contact_archive_id}/actions | 
+[**contactarchivesIndex**](ContactarchivesApi.md#contactarchivesIndex) | **GET** /contactarchives | 
 
 
 # **contactarchivesActionsCreate**
 > \Ageras\Api\ContactArchiveResource contactarchivesActionsCreate($contact_archive_id , $contact_archive_action_resource)
 
-Contact archive actions
+
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **contactarchivesIndex**
 > \Ageras\Api\ContactArchiveResult contactarchivesIndex($criteria)
 
-Search for contact's correspondence (e-mails and text messages) by a given set of criteria.
+
 
 ### Example
 ```php

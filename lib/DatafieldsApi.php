@@ -90,7 +90,7 @@ class DatafieldsApi
     /**
      * Operation datafieldsIndex
      *
-     * List DataFields.
+     * 
      *
      * @param $criteria = [
      *    'industry_id' => string,
@@ -113,7 +113,7 @@ class DatafieldsApi
     /**
      * Operation datafieldsIndexWithHttpInfo
      *
-     * List DataFields.
+     * 
      *
      * @param $criteria = [
      *    'industry_id' => string,

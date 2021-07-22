@@ -4,51 +4,53 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**leadsActionsCreate**](LeadsApi.md#leadsActionsCreate) | **POST** /leads/{lead_id}/actions | Coupon action
-[**leadsAggregationsIndex**](LeadsApi.md#leadsAggregationsIndex) | **GET** /leads/aggregations | List facets and aggregations for the Lead Search.
-[**leadsAllocationsCreate**](LeadsApi.md#leadsAllocationsCreate) | **POST** /leads/{lead_id}/allocations | Allocate partners to a lead.
-[**leadsAllocationsIndex**](LeadsApi.md#leadsAllocationsIndex) | **GET** /leads/allocations | List a lead&#39;s allocation.
-[**leadsCategoriesIndex**](LeadsApi.md#leadsCategoriesIndex) | **GET** /leads/categories | Index lead categories .
-[**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | Add a certification to a lead.
-[**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | Delete a certification from a lead.
-[**leadsCertificationsIndex**](LeadsApi.md#leadsCertificationsIndex) | **GET** /leads/{lead_id}/certifications | List a lead&#39;s certifications.
-[**leadsCertificationsUpdate**](LeadsApi.md#leadsCertificationsUpdate) | **PUT** /leads/{lead_id}/certifications | Replace a lead&#39;s certifications.
-[**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | Create a new Lead.
-[**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | Delete a Lead from a given lead_id.
-[**leadsDemopartnersIndex**](LeadsApi.md#leadsDemopartnersIndex) | **GET** /leads/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
-[**leadsDemopartnersIndex_0**](LeadsApi.md#leadsDemopartnersIndex_0) | **GET** /leads/{lead_id}/demopartners/{partner_id} | List leads a demo partner could expect to see if they sign up.
-[**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | Add partner to lead&#39;s excluded partner list
-[**leadsExcludedpartnersDelete**](LeadsApi.md#leadsExcludedpartnersDelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | Remove partner from the lead&#39;s excluded partner list
-[**leadsExcludedpartnersIndex**](LeadsApi.md#leadsExcludedpartnersIndex) | **GET** /leads/{lead_id}/excludedpartners | Show all excluded partners for a specific lead.
-[**leadsGet**](LeadsApi.md#leadsGet) | **GET** /leads/{lead_id} | Return a Lead from a Lead Id.
-[**leadsIndex**](LeadsApi.md#leadsIndex) | **GET** /leads | Search for Lead&#39;s by a given set of criteria.
-[**leadsNotesCreate**](LeadsApi.md#leadsNotesCreate) | **POST** /leads/{lead_id}/notes | Create lead note
-[**leadsQuotefeesCreate**](LeadsApi.md#leadsQuotefeesCreate) | **POST** /leads/{lead_id}/quotefees | Create lead quote_fee.
-[**leadsQuotesActionsCreate**](LeadsApi.md#leadsQuotesActionsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/actions | Publish a given quote, accept it and other actions.
-[**leadsQuotesCreate**](LeadsApi.md#leadsQuotesCreate) | **POST** /leads/{lead_id}/quotes | Create a new quote for a given Lead.
-[**leadsQuotesDelete**](LeadsApi.md#leadsQuotesDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | Delete a quote for a given Lead.
-[**leadsQuotesGet**](LeadsApi.md#leadsQuotesGet) | **GET** /leads/quotes/{lead_quote_id} | Get an quote by id.
-[**leadsQuotesGet_0**](LeadsApi.md#leadsQuotesGet_0) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | Get an quote by id.
-[**leadsQuotesIndex**](LeadsApi.md#leadsQuotesIndex) | **GET** /leads/quotes | List the quotes connected to a given Lead.
-[**leadsQuotesIndex_0**](LeadsApi.md#leadsQuotesIndex_0) | **GET** /leads/{lead_id}/quotes | List the quotes connected to a given Lead.
-[**leadsQuotesItemsCreate**](LeadsApi.md#leadsQuotesItemsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/items | Create a new quote item for a given Quote.
-[**leadsQuotesItemsDelete**](LeadsApi.md#leadsQuotesItemsDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Delete a quote item.
-[**leadsQuotesItemsGet**](LeadsApi.md#leadsQuotesItemsGet) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Get a quote item by id.
-[**leadsQuotesItemsIndex**](LeadsApi.md#leadsQuotesItemsIndex) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items | List the quote items connected to a given Quote.
-[**leadsQuotesItemsUpdate**](LeadsApi.md#leadsQuotesItemsUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | Update a quote item.
-[**leadsQuotesProgressstepsIndex**](LeadsApi.md#leadsQuotesProgressstepsIndex) | **GET** /leads/quotes/progresssteps | Get quote progress statuses.
-[**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | Update a quote.
-[**leadsQuotesUpdate_0**](LeadsApi.md#leadsQuotesUpdate_0) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | Update a quote.
-[**leadsSegmentationsubgeoregionsIndex**](LeadsApi.md#leadsSegmentationsubgeoregionsIndex) | **GET** /leads/{lead_id}/segmentationsubgeoregions | List a lead&#39;s sub geo regions.
-[**leadsSegmentationsubgeoregionsUpdate**](LeadsApi.md#leadsSegmentationsubgeoregionsUpdate) | **PUT** /leads/{lead_id}/segmentationsubgeoregions | Update a lead&#39;s sub geo regions.
-[**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | Index lead types.
-[**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | Update Properties on a given Lead.
+[**leadsActionsCreate**](LeadsApi.md#leadsActionsCreate) | **POST** /leads/{lead_id}/actions | This function serves up one class with a lot of functionality
+[**leadsAggregationsIndex**](LeadsApi.md#leadsAggregationsIndex) | **GET** /leads/aggregations | 
+[**leadsAllocationsCreate**](LeadsApi.md#leadsAllocationsCreate) | **POST** /leads/{lead_id}/allocations | 
+[**leadsAllocationsIndex**](LeadsApi.md#leadsAllocationsIndex) | **GET** /leads/allocations | 
+[**leadsCategoriesIndex**](LeadsApi.md#leadsCategoriesIndex) | **GET** /leads/categories | 
+[**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | 
+[**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | 
+[**leadsCertificationsIndex**](LeadsApi.md#leadsCertificationsIndex) | **GET** /leads/{lead_id}/certifications | 
+[**leadsCertificationsUpdate**](LeadsApi.md#leadsCertificationsUpdate) | **PUT** /leads/{lead_id}/certifications | 
+[**leadsCompanysizesIndex**](LeadsApi.md#leadsCompanysizesIndex) | **GET** /leads/{lead_id}/companysizes | 
+[**leadsCompanysizesUpdate**](LeadsApi.md#leadsCompanysizesUpdate) | **PUT** /leads/{lead_id}/companysizes | 
+[**leadsCreate**](LeadsApi.md#leadsCreate) | **POST** /leads | 
+[**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | 
+[**leadsDemopartnersIndex**](LeadsApi.md#leadsDemopartnersIndex) | **GET** /leads/demopartners/{partner_id} | 
+[**leadsDemopartnersIndex_0**](LeadsApi.md#leadsDemopartnersIndex_0) | **GET** /leads/{lead_id}/demopartners/{partner_id} | 
+[**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | 
+[**leadsExcludedpartnersDelete**](LeadsApi.md#leadsExcludedpartnersDelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | 
+[**leadsExcludedpartnersIndex**](LeadsApi.md#leadsExcludedpartnersIndex) | **GET** /leads/{lead_id}/excludedpartners | 
+[**leadsGet**](LeadsApi.md#leadsGet) | **GET** /leads/{lead_id} | 
+[**leadsIndex**](LeadsApi.md#leadsIndex) | **GET** /leads | 
+[**leadsNotesCreate**](LeadsApi.md#leadsNotesCreate) | **POST** /leads/{lead_id}/notes | 
+[**leadsQuotefeesCreate**](LeadsApi.md#leadsQuotefeesCreate) | **POST** /leads/{lead_id}/quotefees | 
+[**leadsQuotesActionsCreate**](LeadsApi.md#leadsQuotesActionsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/actions | 
+[**leadsQuotesCreate**](LeadsApi.md#leadsQuotesCreate) | **POST** /leads/{lead_id}/quotes | 
+[**leadsQuotesDelete**](LeadsApi.md#leadsQuotesDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | 
+[**leadsQuotesGet**](LeadsApi.md#leadsQuotesGet) | **GET** /leads/quotes/{lead_quote_id} | 
+[**leadsQuotesGet_0**](LeadsApi.md#leadsQuotesGet_0) | **GET** /leads/{lead_id}/quotes/{lead_quote_id} | 
+[**leadsQuotesIndex**](LeadsApi.md#leadsQuotesIndex) | **GET** /leads/quotes | 
+[**leadsQuotesIndex_0**](LeadsApi.md#leadsQuotesIndex_0) | **GET** /leads/{lead_id}/quotes | 
+[**leadsQuotesItemsCreate**](LeadsApi.md#leadsQuotesItemsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/items | 
+[**leadsQuotesItemsDelete**](LeadsApi.md#leadsQuotesItemsDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | 
+[**leadsQuotesItemsGet**](LeadsApi.md#leadsQuotesItemsGet) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | 
+[**leadsQuotesItemsIndex**](LeadsApi.md#leadsQuotesItemsIndex) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items | 
+[**leadsQuotesItemsUpdate**](LeadsApi.md#leadsQuotesItemsUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | 
+[**leadsQuotesProgressstepsIndex**](LeadsApi.md#leadsQuotesProgressstepsIndex) | **GET** /leads/quotes/progresssteps | 
+[**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | 
+[**leadsQuotesUpdate_0**](LeadsApi.md#leadsQuotesUpdate_0) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | 
+[**leadsSegmentationsubgeoregionsIndex**](LeadsApi.md#leadsSegmentationsubgeoregionsIndex) | **GET** /leads/{lead_id}/segmentationsubgeoregions | 
+[**leadsSegmentationsubgeoregionsUpdate**](LeadsApi.md#leadsSegmentationsubgeoregionsUpdate) | **PUT** /leads/{lead_id}/segmentationsubgeoregions | 
+[**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | 
+[**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | 
 
 
 # **leadsActionsCreate**
 > \Ageras\Api\LeadResource leadsActionsCreate($lead_id , $lead_action_resource)
 
-Coupon action
+This function serves up one class with a lot of functionality
 
 ### Example
 ```php
@@ -101,7 +103,7 @@ Name | Type | Description  | Notes
 # **leadsAggregationsIndex**
 > \Ageras\Api\AggregationResult leadsAggregationsIndex($criteria)
 
-List facets and aggregations for the Lead Search.
+
 
 ### Example
 ```php
@@ -150,10 +152,15 @@ $criteria = [
         'is_validation_postponed' => false; // bool | Is the lead's validation postponed?
         'created_at_lte' => "created_at_lte_example"; // string | Get leads created before this date (inclusive).
         'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
+        'validated_at_gte' => "validated_at_gte_example"; // string | Get leads validated after this date (inclusive).
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
         'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
         'sub_geo_region_name' => "sub_geo_region_name_example"; // string | List leads in any of these sub geo regions. E.g. 'Aarhus', 'Copenhagen'.
+        'is_anonymized' => false; // bool | Have the leads been anonymized.
+        'has_lead_quote_fee' => false; // bool | Filter by has lead quote fee.
+        'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
+        'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -204,10 +211,15 @@ Name | Type | Description  | Notes
  **is_validation_postponed** | **bool**| Is the lead&#39;s validation postponed? | [optional] [default to false]
  **created_at_lte** | **string**| Get leads created before this date (inclusive). | [optional]
  **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
+ **validated_at_gte** | **string**| Get leads validated after this date (inclusive). | [optional]
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
  **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
  **sub_geo_region_name** | **string**| List leads in any of these sub geo regions. E.g. &#39;Aarhus&#39;, &#39;Copenhagen&#39;. | [optional]
+ **is_anonymized** | **bool**| Have the leads been anonymized. | [optional] [default to false]
+ **has_lead_quote_fee** | **bool**| Filter by has lead quote fee. | [optional] [default to false]
+ **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
+ **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -230,7 +242,7 @@ Name | Type | Description  | Notes
 # **leadsAllocationsCreate**
 > \Ageras\Api\LeadAllocationsResource leadsAllocationsCreate($lead_id , $lead_allocations_resource)
 
-Allocate partners to a lead.
+
 
 ### Example
 ```php
@@ -283,7 +295,7 @@ Name | Type | Description  | Notes
 # **leadsAllocationsIndex**
 > \Ageras\Api\LeadPartnerAllocationResult leadsAllocationsIndex($criteria)
 
-List a lead's allocation.
+
 
 ### Example
 ```php
@@ -358,7 +370,7 @@ Name | Type | Description  | Notes
 # **leadsCategoriesIndex**
 > \Ageras\Api\LeadCategoryResult leadsCategoriesIndex($criteria)
 
-Index lead categories .
+
 
 ### Example
 ```php
@@ -421,7 +433,7 @@ Name | Type | Description  | Notes
 # **leadsCertificationsCreate**
 > \Ageras\Api\CertificationResource leadsCertificationsCreate($lead_id , $certification_resource)
 
-Add a certification to a lead.
+
 
 ### Example
 ```php
@@ -474,7 +486,7 @@ Name | Type | Description  | Notes
 # **leadsCertificationsDelete**
 > leadsCertificationsDelete($lead_id,  $certification_id )
 
-Delete a certification from a lead.
+
 
 ### Example
 ```php
@@ -526,7 +538,7 @@ void (empty response body)
 # **leadsCertificationsIndex**
 > \Ageras\Api\CertificationResult leadsCertificationsIndex($lead_id , $criteria)
 
-List a lead's certifications.
+
 
 ### Example
 ```php
@@ -587,7 +599,7 @@ Name | Type | Description  | Notes
 # **leadsCertificationsUpdate**
 > \Ageras\Api\CertificationResource leadsCertificationsUpdate($lead_id , $lead_certifications_resource)
 
-Replace a lead's certifications.
+
 
 ### Example
 ```php
@@ -637,10 +649,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **leadsCreate**
-> \Ageras\Api\LeadResource leadsCreate($lead_resource)
+# **leadsCompanysizesIndex**
+> \Ageras\Api\LeadCompanySizesResult leadsCompanysizesIndex($lead_id , $criteria)
 
-Create a new Lead.
+
 
 ### Example
 ```php
@@ -656,7 +668,119 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
-$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | The given Lead Resource that should be created
+$lead_id = "lead_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->leadsCompanysizesIndex($lead_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsCompanysizesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\LeadCompanySizesResult**](../Model/LeadCompanySizesResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsCompanysizesUpdate**
+> \Ageras\Api\LeadCompanySizesResource leadsCompanysizesUpdate($lead_id , $lead_company_sizes_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_company_sizes_resource = new \Ageras\Api\LeadCompanySizesResource(); // \Ageras\Api\LeadCompanySizesResource | 
+
+try {
+    $result = $api_instance->leadsCompanysizesUpdate($lead_id , $lead_company_sizes_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsCompanysizesUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_company_sizes_resource** | [**\Ageras\Api\LeadCompanySizesResource**](../Model/\Ageras\Api\LeadCompanySizesResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadCompanySizesResource**](../Model/LeadCompanySizesResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsCreate**
+> \Ageras\Api\LeadResource leadsCreate($lead_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_resource = new \Ageras\Api\LeadResource(); // \Ageras\Api\LeadResource | 
 
 try {
     $result = $api_instance->leadsCreate($lead_resource);
@@ -671,7 +795,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)| The given Lead Resource that should be created |
+ **lead_resource** | [**\Ageras\Api\LeadResource**](../Model/\Ageras\Api\LeadResource.md)|  |
 
 ### Return type
 
@@ -691,7 +815,7 @@ Name | Type | Description  | Notes
 # **leadsDelete**
 > leadsDelete($lead_id )
 
-Delete a Lead from a given lead_id.
+
 
 ### Example
 ```php
@@ -741,7 +865,7 @@ void (empty response body)
 # **leadsDemopartnersIndex**
 > \Ageras\Api\LeadResult leadsDemopartnersIndex($partner_id )
 
-List leads a demo partner could expect to see if they sign up.
+
 
 ### Example
 ```php
@@ -792,7 +916,7 @@ Name | Type | Description  | Notes
 # **leadsDemopartnersIndex_0**
 > \Ageras\Api\LeadResult leadsDemopartnersIndex_0($lead_id,  $partner_id )
 
-List leads a demo partner could expect to see if they sign up.
+
 
 ### Example
 ```php
@@ -845,7 +969,7 @@ Name | Type | Description  | Notes
 # **leadsExcludedpartnersCreate**
 > \Ageras\Api\LeadResource leadsExcludedpartnersCreate($lead_id , $partner_suggest_resource)
 
-Add partner to lead's excluded partner list
+
 
 ### Example
 ```php
@@ -898,7 +1022,7 @@ Name | Type | Description  | Notes
 # **leadsExcludedpartnersDelete**
 > leadsExcludedpartnersDelete($lead_id,  $partner_id )
 
-Remove partner from the lead's excluded partner list
+
 
 ### Example
 ```php
@@ -950,7 +1074,7 @@ void (empty response body)
 # **leadsExcludedpartnersIndex**
 > \Ageras\Api\LeadPartnerResult leadsExcludedpartnersIndex($lead_id , $criteria)
 
-Show all excluded partners for a specific lead.
+
 
 ### Example
 ```php
@@ -1009,7 +1133,7 @@ Name | Type | Description  | Notes
 # **leadsGet**
 > \Ageras\Api\LeadResource leadsGet($lead_id )
 
-Return a Lead from a Lead Id.
+
 
 ### Example
 ```php
@@ -1025,7 +1149,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME'
 Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
 $api_instance = new Ageras\Api\Api\LeadsApi();
-$lead_id = "lead_id_example"; // string | The id the Lead to return
+$lead_id = "lead_id_example"; // string | 
 
 try {
     $result = $api_instance->leadsGet($lead_id );
@@ -1040,7 +1164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lead_id** | **string**| The id the Lead to return |
+ **lead_id** | **string**|  |
 
 ### Return type
 
@@ -1060,7 +1184,7 @@ Name | Type | Description  | Notes
 # **leadsIndex**
 > \Ageras\Api\LeadResult leadsIndex($criteria)
 
-Search for Lead's by a given set of criteria.
+
 
 ### Example
 ```php
@@ -1109,10 +1233,15 @@ $criteria = [
         'is_validation_postponed' => false; // bool | Is the lead's validation postponed?
         'created_at_lte' => "created_at_lte_example"; // string | Get leads created before this date (inclusive).
         'created_at_gte' => "created_at_gte_example"; // string | Get leads created after this date (inclusive).
+        'validated_at_gte' => "validated_at_gte_example"; // string | Get leads validated after this date (inclusive).
         'latest_called_at_before' => "latest_called_at_before_example"; // string | Find leads with a latest call before this date.
         'segmentation_criteria' => "segmentation_criteria_example"; // string | Which criteria to segment on, e.g. language.
         'segmented_for_partner_business_unit_id' => 56; // int | List leads that are segmented for a business unit.
         'sub_geo_region_name' => "sub_geo_region_name_example"; // string | List leads in any of these sub geo regions. E.g. 'Aarhus', 'Copenhagen'.
+        'is_anonymized' => false; // bool | Have the leads been anonymized.
+        'has_lead_quote_fee' => false; // bool | Filter by has lead quote fee.
+        'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
+        'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1163,10 +1292,15 @@ Name | Type | Description  | Notes
  **is_validation_postponed** | **bool**| Is the lead&#39;s validation postponed? | [optional] [default to false]
  **created_at_lte** | **string**| Get leads created before this date (inclusive). | [optional]
  **created_at_gte** | **string**| Get leads created after this date (inclusive). | [optional]
+ **validated_at_gte** | **string**| Get leads validated after this date (inclusive). | [optional]
  **latest_called_at_before** | **string**| Find leads with a latest call before this date. | [optional]
  **segmentation_criteria** | **string**| Which criteria to segment on, e.g. language. | [optional]
  **segmented_for_partner_business_unit_id** | **int**| List leads that are segmented for a business unit. | [optional]
  **sub_geo_region_name** | **string**| List leads in any of these sub geo regions. E.g. &#39;Aarhus&#39;, &#39;Copenhagen&#39;. | [optional]
+ **is_anonymized** | **bool**| Have the leads been anonymized. | [optional] [default to false]
+ **has_lead_quote_fee** | **bool**| Filter by has lead quote fee. | [optional] [default to false]
+ **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
+ **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1189,7 +1323,7 @@ Name | Type | Description  | Notes
 # **leadsNotesCreate**
 > \Ageras\Api\LeadResource leadsNotesCreate($lead_id , $lead_note_resource)
 
-Create lead note
+
 
 ### Example
 ```php
@@ -1242,7 +1376,7 @@ Name | Type | Description  | Notes
 # **leadsQuotefeesCreate**
 > \Ageras\Api\LeadQuoteFeeResource leadsQuotefeesCreate($lead_id , $lead_quote_fee_resource)
 
-Create lead quote_fee.
+
 
 ### Example
 ```php
@@ -1295,7 +1429,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesActionsCreate**
 > \Ageras\Api\LeadQuoteResource leadsQuotesActionsCreate($lead_id,  $lead_quote_id , $lead_quote_action_resource)
 
-Publish a given quote, accept it and other actions.
+
 
 ### Example
 ```php
@@ -1350,7 +1484,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesCreate**
 > \Ageras\Api\LeadQuoteResource leadsQuotesCreate($lead_id , $lead_quote_resource)
 
-Create a new quote for a given Lead.
+
 
 ### Example
 ```php
@@ -1403,7 +1537,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesDelete**
 > leadsQuotesDelete($lead_id,  $lead_quote_id )
 
-Delete a quote for a given Lead.
+
 
 ### Example
 ```php
@@ -1455,7 +1589,7 @@ void (empty response body)
 # **leadsQuotesGet**
 > \Ageras\Api\LeadQuoteResource leadsQuotesGet($lead_quote_id )
 
-Get an quote by id.
+
 
 ### Example
 ```php
@@ -1506,7 +1640,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesGet_0**
 > \Ageras\Api\LeadQuoteResource leadsQuotesGet_0($lead_id,  $lead_quote_id )
 
-Get an quote by id.
+
 
 ### Example
 ```php
@@ -1559,7 +1693,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesIndex**
 > \Ageras\Api\LeadQuoteResult leadsQuotesIndex($criteria)
 
-List the quotes connected to a given Lead.
+
 
 ### Example
 ```php
@@ -1638,7 +1772,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesIndex_0**
 > \Ageras\Api\LeadQuoteResult leadsQuotesIndex_0($lead_id , $criteria)
 
-List the quotes connected to a given Lead.
+
 
 ### Example
 ```php
@@ -1717,7 +1851,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesItemsCreate**
 > \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsCreate($lead_id,  $lead_quote_id , $lead_quote_item_resource)
 
-Create a new quote item for a given Quote.
+
 
 ### Example
 ```php
@@ -1772,7 +1906,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesItemsDelete**
 > leadsQuotesItemsDelete($lead_id,  $lead_quote_id,  $lead_quote_item_id )
 
-Delete a quote item.
+
 
 ### Example
 ```php
@@ -1826,7 +1960,7 @@ void (empty response body)
 # **leadsQuotesItemsGet**
 > \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsGet($lead_id,  $lead_quote_id,  $lead_quote_item_id )
 
-Get a quote item by id.
+
 
 ### Example
 ```php
@@ -1881,7 +2015,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesItemsIndex**
 > \Ageras\Api\LeadQuoteItemResult leadsQuotesItemsIndex($lead_id,  $lead_quote_id , $criteria)
 
-List the quote items connected to a given Quote.
+
 
 ### Example
 ```php
@@ -1942,7 +2076,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesItemsUpdate**
 > \Ageras\Api\LeadQuoteItemResource leadsQuotesItemsUpdate($lead_id,  $lead_quote_id,  $lead_quote_item_id , $lead_quote_item_resource)
 
-Update a quote item.
+
 
 ### Example
 ```php
@@ -1999,7 +2133,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesProgressstepsIndex**
 > \Ageras\Api\LeadQuoteProgressResult leadsQuotesProgressstepsIndex($criteria)
 
-Get quote progress statuses.
+
 
 ### Example
 ```php
@@ -2058,7 +2192,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesUpdate**
 > \Ageras\Api\LeadQuoteResource leadsQuotesUpdate($lead_quote_id , $lead_quote_resource)
 
-Update a quote.
+
 
 ### Example
 ```php
@@ -2111,7 +2245,7 @@ Name | Type | Description  | Notes
 # **leadsQuotesUpdate_0**
 > \Ageras\Api\LeadQuoteResource leadsQuotesUpdate_0($lead_id,  $lead_quote_id , $lead_quote_resource)
 
-Update a quote.
+
 
 ### Example
 ```php
@@ -2166,7 +2300,7 @@ Name | Type | Description  | Notes
 # **leadsSegmentationsubgeoregionsIndex**
 > \Ageras\Api\SegmentationSubGeoRegionResult leadsSegmentationsubgeoregionsIndex($lead_id , $criteria)
 
-List a lead's sub geo regions.
+
 
 ### Example
 ```php
@@ -2225,7 +2359,7 @@ Name | Type | Description  | Notes
 # **leadsSegmentationsubgeoregionsUpdate**
 > \Ageras\Api\SegmentationSubGeoRegionsResource leadsSegmentationsubgeoregionsUpdate($lead_id , $segmentation_sub_geo_regions_resource)
 
-Update a lead's sub geo regions.
+
 
 ### Example
 ```php
@@ -2278,7 +2412,7 @@ Name | Type | Description  | Notes
 # **leadsTypesIndex**
 > \Ageras\Api\LeadTypeResult leadsTypesIndex($criteria)
 
-Index lead types.
+
 
 ### Example
 ```php
@@ -2341,7 +2475,7 @@ Name | Type | Description  | Notes
 # **leadsUpdate**
 > \Ageras\Api\LeadResource leadsUpdate($lead_id , $lead_resource)
 
-Update Properties on a given Lead.
+
 
 ### Example
 ```php

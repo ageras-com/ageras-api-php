@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContactarchivesApiTest extends \PHPUnit_Framework_TestCase
+class ContactarchivesApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class ContactarchivesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contactarchivesActionsCreate
      *
-     * Contact archive actions.
+     * .
      *
      */
     public function testContactarchivesActionsCreate()
@@ -90,7 +90,7 @@ class ContactarchivesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contactarchivesIndex
      *
-     * Search for contact's correspondence (e-mails and text messages) by a given set of criteria..
+     * .
      *
      */
     public function testContactarchivesIndex()

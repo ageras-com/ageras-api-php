@@ -4,37 +4,37 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**conversationsActionsCreate**](ConversationsApi.md#conversationsActionsCreate) | **POST** /conversations/{conversation_id}/actions | Conversation action
-[**conversationsAttachmentsCreate**](ConversationsApi.md#conversationsAttachmentsCreate) | **POST** /conversations/attachments | Create a new attachment
-[**conversationsAttachmentsCreate_0**](ConversationsApi.md#conversationsAttachmentsCreate_0) | **POST** /conversations/{conversation_id}/attachments | Create a new attachment
-[**conversationsAttachmentsGet**](ConversationsApi.md#conversationsAttachmentsGet) | **GET** /conversations/attachments/{attachment_id} | Get an attachment
-[**conversationsAttachmentsGet_0**](ConversationsApi.md#conversationsAttachmentsGet_0) | **GET** /conversations/{conversation_id}/attachments/{attachment_id} | Get an attachment
-[**conversationsAttachmentsIndex**](ConversationsApi.md#conversationsAttachmentsIndex) | **GET** /conversations/attachments | List conversation&#39;s attachments
-[**conversationsAttachmentsIndex_0**](ConversationsApi.md#conversationsAttachmentsIndex_0) | **GET** /conversations/{conversation_id}/attachments | List conversation&#39;s attachments
-[**conversationsCreate**](ConversationsApi.md#conversationsCreate) | **POST** /conversations | Create a new conversation.
-[**conversationsGet**](ConversationsApi.md#conversationsGet) | **GET** /conversations/{conversation_id} | Get a conversations by conversation_id.
-[**conversationsIndex**](ConversationsApi.md#conversationsIndex) | **GET** /conversations | List conversations.
-[**conversationsMessagesAttachmentsCreate**](ConversationsApi.md#conversationsMessagesAttachmentsCreate) | **POST** /conversations/conversations/messages/attachments | Create a new attachment
-[**conversationsMessagesAttachmentsCreate_0**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_0) | **POST** /conversations/messages/attachments | Create a new attachment
-[**conversationsMessagesAttachmentsCreate_1**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_1) | **POST** /conversations/{conversation_id}/messages/attachments | Create a new attachment
-[**conversationsMessagesAttachmentsGet**](ConversationsApi.md#conversationsMessagesAttachmentsGet) | **GET** /conversations/conversations/messages/attachments/{attachment_id} | get a message attachment
-[**conversationsMessagesAttachmentsGet_0**](ConversationsApi.md#conversationsMessagesAttachmentsGet_0) | **GET** /conversations/messages/attachments/{attachment_id} | get a message attachment
-[**conversationsMessagesAttachmentsGet_1**](ConversationsApi.md#conversationsMessagesAttachmentsGet_1) | **GET** /conversations/{conversation_id}/messages/attachments/{attachment_id} | get a message attachment
-[**conversationsMessagesAttachmentsIndex**](ConversationsApi.md#conversationsMessagesAttachmentsIndex) | **GET** /conversations/conversations/messages/attachments | List message attachments
-[**conversationsMessagesAttachmentsIndex_0**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_0) | **GET** /conversations/messages/attachments | List message attachments
-[**conversationsMessagesAttachmentsIndex_1**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_1) | **GET** /conversations/{conversation_id}/messages/attachments | List message attachments
-[**conversationsMessagesCreate**](ConversationsApi.md#conversationsMessagesCreate) | **POST** /conversations/messages | Create a new message
-[**conversationsMessagesCreate_0**](ConversationsApi.md#conversationsMessagesCreate_0) | **POST** /conversations/{conversation_id}/messages | Create a new message
-[**conversationsMessagesGet**](ConversationsApi.md#conversationsMessagesGet) | **GET** /conversations/messages/{message_id} | Get message by message_id
-[**conversationsMessagesGet_0**](ConversationsApi.md#conversationsMessagesGet_0) | **GET** /conversations/{conversation_id}/messages/{message_id} | Get message by message_id
-[**conversationsMessagesIndex**](ConversationsApi.md#conversationsMessagesIndex) | **GET** /conversations/messages | Get messages by conversation_id.
-[**conversationsMessagesIndex_0**](ConversationsApi.md#conversationsMessagesIndex_0) | **GET** /conversations/{conversation_id}/messages | Get messages by conversation_id.
+[**conversationsActionsCreate**](ConversationsApi.md#conversationsActionsCreate) | **POST** /conversations/{conversation_id}/actions | 
+[**conversationsAttachmentsCreate**](ConversationsApi.md#conversationsAttachmentsCreate) | **POST** /conversations/attachments | 
+[**conversationsAttachmentsCreate_0**](ConversationsApi.md#conversationsAttachmentsCreate_0) | **POST** /conversations/{conversation_id}/attachments | 
+[**conversationsAttachmentsGet**](ConversationsApi.md#conversationsAttachmentsGet) | **GET** /conversations/attachments/{attachment_id} | 
+[**conversationsAttachmentsGet_0**](ConversationsApi.md#conversationsAttachmentsGet_0) | **GET** /conversations/{conversation_id}/attachments/{attachment_id} | 
+[**conversationsAttachmentsIndex**](ConversationsApi.md#conversationsAttachmentsIndex) | **GET** /conversations/attachments | 
+[**conversationsAttachmentsIndex_0**](ConversationsApi.md#conversationsAttachmentsIndex_0) | **GET** /conversations/{conversation_id}/attachments | 
+[**conversationsCreate**](ConversationsApi.md#conversationsCreate) | **POST** /conversations | 
+[**conversationsGet**](ConversationsApi.md#conversationsGet) | **GET** /conversations/{conversation_id} | 
+[**conversationsIndex**](ConversationsApi.md#conversationsIndex) | **GET** /conversations | 
+[**conversationsMessagesAttachmentsCreate**](ConversationsApi.md#conversationsMessagesAttachmentsCreate) | **POST** /conversations/conversations/messages/attachments | 
+[**conversationsMessagesAttachmentsCreate_0**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_0) | **POST** /conversations/messages/attachments | 
+[**conversationsMessagesAttachmentsCreate_1**](ConversationsApi.md#conversationsMessagesAttachmentsCreate_1) | **POST** /conversations/{conversation_id}/messages/attachments | 
+[**conversationsMessagesAttachmentsGet**](ConversationsApi.md#conversationsMessagesAttachmentsGet) | **GET** /conversations/conversations/messages/attachments/{attachment_id} | 
+[**conversationsMessagesAttachmentsGet_0**](ConversationsApi.md#conversationsMessagesAttachmentsGet_0) | **GET** /conversations/messages/attachments/{attachment_id} | 
+[**conversationsMessagesAttachmentsGet_1**](ConversationsApi.md#conversationsMessagesAttachmentsGet_1) | **GET** /conversations/{conversation_id}/messages/attachments/{attachment_id} | 
+[**conversationsMessagesAttachmentsIndex**](ConversationsApi.md#conversationsMessagesAttachmentsIndex) | **GET** /conversations/conversations/messages/attachments | 
+[**conversationsMessagesAttachmentsIndex_0**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_0) | **GET** /conversations/messages/attachments | 
+[**conversationsMessagesAttachmentsIndex_1**](ConversationsApi.md#conversationsMessagesAttachmentsIndex_1) | **GET** /conversations/{conversation_id}/messages/attachments | 
+[**conversationsMessagesCreate**](ConversationsApi.md#conversationsMessagesCreate) | **POST** /conversations/messages | 
+[**conversationsMessagesCreate_0**](ConversationsApi.md#conversationsMessagesCreate_0) | **POST** /conversations/{conversation_id}/messages | 
+[**conversationsMessagesGet**](ConversationsApi.md#conversationsMessagesGet) | **GET** /conversations/messages/{message_id} | 
+[**conversationsMessagesGet_0**](ConversationsApi.md#conversationsMessagesGet_0) | **GET** /conversations/{conversation_id}/messages/{message_id} | 
+[**conversationsMessagesIndex**](ConversationsApi.md#conversationsMessagesIndex) | **GET** /conversations/messages | 
+[**conversationsMessagesIndex_0**](ConversationsApi.md#conversationsMessagesIndex_0) | **GET** /conversations/{conversation_id}/messages | 
 
 
 # **conversationsActionsCreate**
 > \Ageras\Api\ConversationResource conversationsActionsCreate($conversation_id , $conversation_action_resource)
 
-Conversation action
+
 
 ### Example
 ```php
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsCreate**
 > \Ageras\Api\AttachmentResource conversationsAttachmentsCreate($attachment_resource)
 
-Create a new attachment
+
 
 ### Example
 ```php
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsCreate_0**
 > \Ageras\Api\AttachmentResource conversationsAttachmentsCreate_0($conversation_id , $attachment_resource)
 
-Create a new attachment
+
 
 ### Example
 ```php
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsGet**
 > \Ageras\Api\AttachmentResource conversationsAttachmentsGet($attachment_id )
 
-Get an attachment
+
 
 ### Example
 ```php
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsGet_0**
 > \Ageras\Api\AttachmentResource conversationsAttachmentsGet_0($conversation_id,  $attachment_id )
 
-Get an attachment
+
 
 ### Example
 ```php
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsIndex**
 > \Ageras\Api\AttachmentResult conversationsAttachmentsIndex($criteria)
 
-List conversation's attachments
+
 
 ### Example
 ```php
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 # **conversationsAttachmentsIndex_0**
 > \Ageras\Api\AttachmentResult conversationsAttachmentsIndex_0($conversation_id , $criteria)
 
-List conversation's attachments
+
 
 ### Example
 ```php
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 # **conversationsCreate**
 > \Ageras\Api\ConversationResource conversationsCreate($conversation_resource)
 
-Create a new conversation.
+
 
 ### Example
 ```php
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 # **conversationsGet**
 > \Ageras\Api\ConversationResource conversationsGet($conversation_id )
 
-Get a conversations by conversation_id.
+
 
 ### Example
 ```php
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 # **conversationsIndex**
 > \Ageras\Api\ConversationResult conversationsIndex($criteria)
 
-List conversations.
+
 
 ### Example
 ```php
@@ -596,7 +596,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsCreate**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate($attachment_resource)
 
-Create a new attachment
+
 
 ### Example
 ```php
@@ -647,7 +647,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsCreate_0**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate_0($attachment_resource)
 
-Create a new attachment
+
 
 ### Example
 ```php
@@ -698,7 +698,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsCreate_1**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsCreate_1($conversation_id , $attachment_resource)
 
-Create a new attachment
+
 
 ### Example
 ```php
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsGet**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet($attachment_id )
 
-get a message attachment
+
 
 ### Example
 ```php
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsGet_0**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet_0($attachment_id )
 
-get a message attachment
+
 
 ### Example
 ```php
@@ -853,7 +853,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsGet_1**
 > \Ageras\Api\AttachmentResource conversationsMessagesAttachmentsGet_1($conversation_id,  $attachment_id )
 
-get a message attachment
+
 
 ### Example
 ```php
@@ -906,7 +906,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsIndex**
 > \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex($criteria)
 
-List message attachments
+
 
 ### Example
 ```php
@@ -969,7 +969,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsIndex_0**
 > \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex_0($criteria)
 
-List message attachments
+
 
 ### Example
 ```php
@@ -1032,7 +1032,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesAttachmentsIndex_1**
 > \Ageras\Api\AttachmentResult conversationsMessagesAttachmentsIndex_1($conversation_id , $criteria)
 
-List message attachments
+
 
 ### Example
 ```php
@@ -1095,7 +1095,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesCreate**
 > \Ageras\Api\MessageResource conversationsMessagesCreate($message_resource)
 
-Create a new message
+
 
 ### Example
 ```php
@@ -1146,7 +1146,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesCreate_0**
 > \Ageras\Api\MessageResource conversationsMessagesCreate_0($conversation_id , $message_resource)
 
-Create a new message
+
 
 ### Example
 ```php
@@ -1199,7 +1199,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesGet**
 > \Ageras\Api\MessageResource conversationsMessagesGet($message_id )
 
-Get message by message_id
+
 
 ### Example
 ```php
@@ -1250,7 +1250,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesGet_0**
 > \Ageras\Api\MessageResource conversationsMessagesGet_0($conversation_id,  $message_id )
 
-Get message by message_id
+
 
 ### Example
 ```php
@@ -1303,7 +1303,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesIndex**
 > \Ageras\Api\MessageResult conversationsMessagesIndex($criteria)
 
-Get messages by conversation_id.
+
 
 ### Example
 ```php
@@ -1370,7 +1370,7 @@ Name | Type | Description  | Notes
 # **conversationsMessagesIndex_0**
 > \Ageras\Api\MessageResult conversationsMessagesIndex_0($conversation_id , $criteria)
 
-Get messages by conversation_id.
+
 
 ### Example
 ```php

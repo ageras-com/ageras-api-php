@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PartnersApiTest extends \PHPUnit_Framework_TestCase
+class PartnersApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersActionsCreate
      *
-     * Partner actions..
+     * .
      *
      */
     public function testPartnersActionsCreate()
@@ -90,7 +90,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersAggregationsIndex
      *
-     * List facets and aggregations for the Partner Search..
+     * .
      *
      */
     public function testPartnersAggregationsIndex()
@@ -99,9 +99,31 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersAllocationdeliveriesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersAllocationdeliveriesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersAllocationdeliveriesIndex_0
+     *
+     * .
+     *
+     */
+    public function testPartnersAllocationdeliveriesIndex0()
+    {
+
+    }
+
+    /**
      * Test case for partnersAllocationpausesCreate
      *
-     * Create an allocation pause..
+     * .
      *
      */
     public function testPartnersAllocationpausesCreate()
@@ -110,9 +132,42 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersAssigneesCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersAssigneesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersAssigneesDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersAssigneesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersAssigneesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersAssigneesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersBankaccountsCreate
      *
-     * Subscribe a partner..
+     * .
      *
      */
     public function testPartnersBankaccountsCreate()
@@ -123,7 +178,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBankaccountsIndex
      *
-     * Get partner's bank accounts..
+     * .
      *
      */
     public function testPartnersBankaccountsIndex()
@@ -134,7 +189,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBrowserpushsubscriptionsCreate
      *
-     * Create a browser push subscription.
+     * .
      *
      */
     public function testPartnersBrowserpushsubscriptionsCreate()
@@ -145,7 +200,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitcontractsCreate
      *
-     * Create a business unit contract..
+     * .
      *
      */
     public function testPartnersBusinessunitcontractsCreate()
@@ -156,7 +211,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitcontractsGet
      *
-     * Get a business unit agreement..
+     * .
      *
      */
     public function testPartnersBusinessunitcontractsGet()
@@ -167,7 +222,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitcontractsIndex
      *
-     * List business unit contracts..
+     * .
      *
      */
     public function testPartnersBusinessunitcontractsIndex()
@@ -178,7 +233,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationlimitsCreate
      *
-     * Create a lead allocation limit for a business unit..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationlimitsCreate()
@@ -189,7 +244,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationlimitsDelete
      *
-     * Delete a lead allocation limit..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationlimitsDelete()
@@ -200,7 +255,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationlimitsIndex
      *
-     * List lead allocation limits..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationlimitsIndex()
@@ -211,7 +266,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationlimitsUpdate
      *
-     * Update a lead allocation limit..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationlimitsUpdate()
@@ -222,7 +277,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationquotasCreate
      *
-     * Create a lead allocation quota for a business unit..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationquotasCreate()
@@ -233,7 +288,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationquotasDelete
      *
-     * Delete a lead allocation quota..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationquotasDelete()
@@ -244,7 +299,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsAllocationquotasIndex
      *
-     * List lead allocation quotas..
+     * .
      *
      */
     public function testPartnersBusinessunitsAllocationquotasIndex()
@@ -255,7 +310,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsCreate
      *
-     * Create partner business unit..
+     * .
      *
      */
     public function testPartnersBusinessunitsCreate()
@@ -266,7 +321,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsDelete
      *
-     * Delete a partner business unit.
+     * .
      *
      */
     public function testPartnersBusinessunitsDelete()
@@ -277,7 +332,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsGet
      *
-     * Get a single partner business unit..
+     * .
      *
      */
     public function testPartnersBusinessunitsGet()
@@ -288,7 +343,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsIndex
      *
-     * List partner business units..
+     * .
      *
      */
     public function testPartnersBusinessunitsIndex()
@@ -299,7 +354,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsIndustriesIndex
      *
-     * List business unit industries..
+     * .
      *
      */
     public function testPartnersBusinessunitsIndustriesIndex()
@@ -310,7 +365,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsIndustriesUpdate
      *
-     * Update business unit industries..
+     * .
      *
      */
     public function testPartnersBusinessunitsIndustriesUpdate()
@@ -321,7 +376,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsRevenuerangesCreate
      *
-     * Create a business unit revenue range..
+     * .
      *
      */
     public function testPartnersBusinessunitsRevenuerangesCreate()
@@ -332,7 +387,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsSectorsIndex
      *
-     * List business unit sectors..
+     * .
      *
      */
     public function testPartnersBusinessunitsSectorsIndex()
@@ -343,7 +398,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsSectorsUpdate
      *
-     * Update partner business unit sectors..
+     * .
      *
      */
     public function testPartnersBusinessunitsSectorsUpdate()
@@ -354,7 +409,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsSegmentationgeoregionsIndex
      *
-     * List a business unit's segmentation geo regions..
+     * .
      *
      */
     public function testPartnersBusinessunitsSegmentationgeoregionsIndex()
@@ -365,7 +420,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsSegmentationgeoregionsUpdate
      *
-     * Replace a business unit's segmentation geo regions..
+     * .
      *
      */
     public function testPartnersBusinessunitsSegmentationgeoregionsUpdate()
@@ -376,7 +431,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsTypesIndex
      *
-     * List business unit types..
+     * .
      *
      */
     public function testPartnersBusinessunitsTypesIndex()
@@ -387,7 +442,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsTypesUpdate
      *
-     * Update partner business unit types..
+     * .
      *
      */
     public function testPartnersBusinessunitsTypesUpdate()
@@ -398,7 +453,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersBusinessunitsUpdate
      *
-     * Update partner business unit..
+     * .
      *
      */
     public function testPartnersBusinessunitsUpdate()
@@ -409,7 +464,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCategoriesIndex
      *
-     * List of partner categories..
+     * .
      *
      */
     public function testPartnersCategoriesIndex()
@@ -420,7 +475,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCertificationsCreate
      *
-     * Attach certification to partner..
+     * .
      *
      */
     public function testPartnersCertificationsCreate()
@@ -431,7 +486,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCertificationsDelete
      *
-     * Detach certification from partner..
+     * .
      *
      */
     public function testPartnersCertificationsDelete()
@@ -442,7 +497,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCertificationsGet
      *
-     * Get Partner certification..
+     * .
      *
      */
     public function testPartnersCertificationsGet()
@@ -453,7 +508,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCertificationsIndex
      *
-     * Get partner certifications..
+     * .
      *
      */
     public function testPartnersCertificationsIndex()
@@ -464,7 +519,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCertificationsUpdate
      *
-     * Update partner certifications..
+     * .
      *
      */
     public function testPartnersCertificationsUpdate()
@@ -475,7 +530,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContentsDelete
      *
-     * Delete content for a given partner..
+     * .
      *
      */
     public function testPartnersContentsDelete()
@@ -486,7 +541,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContentsGet
      *
-     * Get the content of a given partner..
+     * .
      *
      */
     public function testPartnersContentsGet()
@@ -497,7 +552,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContentsUpdate
      *
-     * Update content for a given partner..
+     * .
      *
      */
     public function testPartnersContentsUpdate()
@@ -508,7 +563,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractoffergroupsCreate
      *
-     * List partner contract offer groups..
+     * .
      *
      */
     public function testPartnersContractoffergroupsCreate()
@@ -519,7 +574,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractoffergroupsIndex
      *
-     * List partner contract offer groups..
+     * .
      *
      */
     public function testPartnersContractoffergroupsIndex()
@@ -530,7 +585,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsActionsCreate
      *
-     * Perform an action on a partner contract..
+     * .
      *
      */
     public function testPartnersContractsActionsCreate()
@@ -541,7 +596,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsAllocationpausesDelete
      *
-     * Delete an allocation pause..
+     * .
      *
      */
     public function testPartnersContractsAllocationpausesDelete()
@@ -552,7 +607,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsAllocationpausesUpdate
      *
-     * Update an allocation pause..
+     * .
      *
      */
     public function testPartnersContractsAllocationpausesUpdate()
@@ -563,7 +618,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsCreate
      *
-     * Create a partner contract..
+     * .
      *
      */
     public function testPartnersContractsCreate()
@@ -574,7 +629,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsDelete
      *
-     * Delete a partner contract..
+     * .
      *
      */
     public function testPartnersContractsDelete()
@@ -585,7 +640,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsGet
      *
-     * Get a partner contract..
+     * .
      *
      */
     public function testPartnersContractsGet()
@@ -596,7 +651,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsIndex
      *
-     * List partner contracts..
+     * .
      *
      */
     public function testPartnersContractsIndex()
@@ -607,7 +662,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsPdfGet
      *
-     * Get a PDF download link.
+     * .
      *
      */
     public function testPartnersContractsPdfGet()
@@ -618,7 +673,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsSignedpdfCreate
      *
-     * Upload signed contract.
+     * .
      *
      */
     public function testPartnersContractsSignedpdfCreate()
@@ -629,7 +684,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsSignedpdfGet
      *
-     * Get a PDF download link for signed pdf.
+     * .
      *
      */
     public function testPartnersContractsSignedpdfGet()
@@ -640,7 +695,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsSigningurlGet
      *
-     * Get a signing url.
+     * .
      *
      */
     public function testPartnersContractsSigningurlGet()
@@ -651,7 +706,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersContractsUpdate
      *
-     * Update a partner contract..
+     * .
      *
      */
     public function testPartnersContractsUpdate()
@@ -662,7 +717,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCouponsActionsCreate
      *
-     * Coupon action.
+     * .
      *
      */
     public function testPartnersCouponsActionsCreate()
@@ -673,7 +728,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCouponsCreate
      *
-     * Create a new partner coupon..
+     * .
      *
      */
     public function testPartnersCouponsCreate()
@@ -684,7 +739,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCouponsIndex
      *
-     * List Partner Coupons..
+     * .
      *
      */
     public function testPartnersCouponsIndex()
@@ -695,7 +750,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersCreate
      *
-     * Create a Partner..
+     * Create a Partner.
      *
      */
     public function testPartnersCreate()
@@ -706,7 +761,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDelete
      *
-     * Delete a Partner..
+     * .
      *
      */
     public function testPartnersDelete()
@@ -717,7 +772,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesCreate
      *
-     * Create Deliverable for partners.
+     * .
      *
      */
     public function testPartnersDeliverablesCreate()
@@ -728,7 +783,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesCreate_0
      *
-     * Create Deliverable for partners.
+     * .
      *
      */
     public function testPartnersDeliverablesCreate0()
@@ -739,7 +794,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesGet
      *
-     * Retrieve a single deliverable id.
+     * .
      *
      */
     public function testPartnersDeliverablesGet()
@@ -750,7 +805,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesGet_0
      *
-     * Retrieve a single deliverable id.
+     * .
      *
      */
     public function testPartnersDeliverablesGet0()
@@ -761,7 +816,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesIndex
      *
-     * List Partner deliverables.
+     * .
      *
      */
     public function testPartnersDeliverablesIndex()
@@ -772,7 +827,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesIndex_0
      *
-     * List Partner deliverables.
+     * .
      *
      */
     public function testPartnersDeliverablesIndex0()
@@ -783,7 +838,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesCreate
      *
-     * Create item for Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesCreate()
@@ -794,7 +849,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesCreate_0
      *
-     * Create item for Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesCreate0()
@@ -805,7 +860,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesDelete
      *
-     * Delete item from Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesDelete()
@@ -816,7 +871,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesDelete_0
      *
-     * Delete item from Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesDelete0()
@@ -827,7 +882,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesGet
      *
-     * Get Partner Deliverable Item.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesGet()
@@ -838,7 +893,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesGet_0
      *
-     * Get Partner Deliverable Item.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesGet0()
@@ -849,7 +904,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesIndex
      *
-     * List Partner Deliverable Items.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesIndex()
@@ -860,7 +915,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesIndex_0
      *
-     * List Partner Deliverable Items.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesIndex0()
@@ -871,7 +926,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesUpdate
      *
-     * Update item for Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesUpdate()
@@ -882,7 +937,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesLinesUpdate_0
      *
-     * Update item for Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesLinesUpdate0()
@@ -893,7 +948,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesUpdate
      *
-     * Update Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesUpdate()
@@ -904,7 +959,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDeliverablesUpdate_0
      *
-     * Update Partner Deliverable.
+     * .
      *
      */
     public function testPartnersDeliverablesUpdate0()
@@ -915,7 +970,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDiscountsCreate
      *
-     * Discount for a partner..
+     * .
      *
      */
     public function testPartnersDiscountsCreate()
@@ -926,7 +981,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDiscountsDelete
      *
-     * Delete a partner discount.
+     * .
      *
      */
     public function testPartnersDiscountsDelete()
@@ -937,7 +992,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersDiscountsIndex
      *
-     * Get partner's discounts..
+     * .
      *
      */
     public function testPartnersDiscountsIndex()
@@ -946,9 +1001,42 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for partnersEmployeenotesCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersEmployeenotesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersEmployeenotesDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersEmployeenotesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersEmployeenotesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersEmployeenotesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersFeaturesCreate
      *
-     * Attach feature to partner..
+     * .
      *
      */
     public function testPartnersFeaturesCreate()
@@ -959,7 +1047,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersFeaturesDelete
      *
-     * Detach a single feature from a partner.
+     * .
      *
      */
     public function testPartnersFeaturesDelete()
@@ -970,7 +1058,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersFeesCreate
      *
-     * Create partner fee.
+     * .
      *
      */
     public function testPartnersFeesCreate()
@@ -981,7 +1069,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersFeesDelete
      *
-     * Delete a partner fee.
+     * .
      *
      */
     public function testPartnersFeesDelete()
@@ -992,7 +1080,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersFeesIndex
      *
-     * Get all partner fees..
+     * .
      *
      */
     public function testPartnersFeesIndex()
@@ -1003,7 +1091,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersGet
      *
-     * Get a Partner from a given partner_id..
+     * Get a single partner by ID.
      *
      */
     public function testPartnersGet()
@@ -1014,7 +1102,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersImpressumsCreate
      *
-     * Create a partner impressum..
+     * .
      *
      */
     public function testPartnersImpressumsCreate()
@@ -1025,7 +1113,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndex
      *
-     * List Partners..
+     * List partners.
      *
      */
     public function testPartnersIndex()
@@ -1036,7 +1124,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndustriesCreate
      *
-     * Attach industry to partner..
+     * .
      *
      */
     public function testPartnersIndustriesCreate()
@@ -1047,7 +1135,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndustriesDelete
      *
-     * Detach industry from partner..
+     * .
      *
      */
     public function testPartnersIndustriesDelete()
@@ -1058,7 +1146,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndustriesGet
      *
-     * Get a given industry for partner..
+     * .
      *
      */
     public function testPartnersIndustriesGet()
@@ -1069,7 +1157,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndustriesIndex
      *
-     * Get partner industries..
+     * .
      *
      */
     public function testPartnersIndustriesIndex()
@@ -1080,7 +1168,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersIndustriesUpdate
      *
-     * Replace partner's industries..
+     * .
      *
      */
     public function testPartnersIndustriesUpdate()
@@ -1091,7 +1179,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersInvoicingsIndex
      *
-     * List partner invoicings..
+     * .
      *
      */
     public function testPartnersInvoicingsIndex()
@@ -1102,7 +1190,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersInvoicingsIndex_0
      *
-     * List partner invoicings..
+     * .
      *
      */
     public function testPartnersInvoicingsIndex0()
@@ -1113,7 +1201,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesCreate
      *
-     * Attach type to partner..
+     * .
      *
      */
     public function testPartnersLeadtypesCreate()
@@ -1124,7 +1212,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesDelete
      *
-     * Detach type from partner..
+     * .
      *
      */
     public function testPartnersLeadtypesDelete()
@@ -1135,7 +1223,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesGet
      *
-     * Retrieve a given lead type..
+     * .
      *
      */
     public function testPartnersLeadtypesGet()
@@ -1146,7 +1234,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesGet_0
      *
-     * Retrieve a given lead type..
+     * .
      *
      */
     public function testPartnersLeadtypesGet0()
@@ -1157,7 +1245,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesIndex
      *
-     * Get partner types criteria..
+     * .
      *
      */
     public function testPartnersLeadtypesIndex()
@@ -1168,7 +1256,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesIndex_0
      *
-     * Get partner types criteria..
+     * .
      *
      */
     public function testPartnersLeadtypesIndex0()
@@ -1179,7 +1267,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersLeadtypesUpdate
      *
-     * Replace a partner's lead types..
+     * .
      *
      */
     public function testPartnersLeadtypesUpdate()
@@ -1190,7 +1278,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersNotesCreate
      *
-     * Create Partner notes..
+     * .
      *
      */
     public function testPartnersNotesCreate()
@@ -1201,7 +1289,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersNotesCreate_0
      *
-     * Create Partner notes..
+     * .
      *
      */
     public function testPartnersNotesCreate0()
@@ -1212,7 +1300,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersNotesGet
      *
-     * Retrieve a given partner note by partner id and partner_note_id..
+     * .
      *
      */
     public function testPartnersNotesGet()
@@ -1223,7 +1311,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersNotesIndex
      *
-     * Retrieve lists of notes..
+     * .
      *
      */
     public function testPartnersNotesIndex()
@@ -1234,7 +1322,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersNotesIndex_0
      *
-     * Retrieve lists of notes..
+     * .
      *
      */
     public function testPartnersNotesIndex0()
@@ -1245,7 +1333,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersRevenuerangesCreate
      *
-     * Create a revenue range..
+     * .
      *
      */
     public function testPartnersRevenuerangesCreate()
@@ -1256,7 +1344,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSectorsIndex
      *
-     * Get partner sectors..
+     * .
      *
      */
     public function testPartnersSectorsIndex()
@@ -1267,7 +1355,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSectorsUpdate
      *
-     * Update partner sectors..
+     * .
      *
      */
     public function testPartnersSectorsUpdate()
@@ -1278,7 +1366,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSellingpointsCreate
      *
-     * Create partner selling point..
+     * .
      *
      */
     public function testPartnersSellingpointsCreate()
@@ -1289,7 +1377,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSellingpointsDelete
      *
-     * Delete partner selling point..
+     * .
      *
      */
     public function testPartnersSellingpointsDelete()
@@ -1300,7 +1388,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSellingpointsIndex
      *
-     * List of partner selling points..
+     * .
      *
      */
     public function testPartnersSellingpointsIndex()
@@ -1311,7 +1399,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSellingpointsUpdate
      *
-     * Update partner selling point..
+     * .
      *
      */
     public function testPartnersSellingpointsUpdate()
@@ -1322,7 +1410,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionagreementsActionsCreate
      *
-     * Execute an action on a subscription agreement..
+     * .
      *
      */
     public function testPartnersSubscriptionagreementsActionsCreate()
@@ -1333,7 +1421,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionagreementsCreate
      *
-     * Create a subscription agreement..
+     * .
      *
      */
     public function testPartnersSubscriptionagreementsCreate()
@@ -1344,7 +1432,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionagreementsIndex
      *
-     * List partner subscription agreements..
+     * .
      *
      */
     public function testPartnersSubscriptionagreementsIndex()
@@ -1355,7 +1443,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionagreementsUpdate
      *
-     * Update a subscription agreement..
+     * .
      *
      */
     public function testPartnersSubscriptionagreementsUpdate()
@@ -1366,7 +1454,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsActionsCreate
      *
-     * Cancel subscription..
+     * .
      *
      */
     public function testPartnersSubscriptionsActionsCreate()
@@ -1377,7 +1465,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsCreate
      *
-     * Subscribe a partner..
+     * .
      *
      */
     public function testPartnersSubscriptionsCreate()
@@ -1388,7 +1476,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsIndex
      *
-     * Get partner's subscriptions..
+     * .
      *
      */
     public function testPartnersSubscriptionsIndex()
@@ -1399,7 +1487,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPausesCreate
      *
-     * Create a subscription pause..
+     * .
      *
      */
     public function testPartnersSubscriptionsPausesCreate()
@@ -1410,7 +1498,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPausesDelete
      *
-     * Delete a subscription pause..
+     * .
      *
      */
     public function testPartnersSubscriptionsPausesDelete()
@@ -1421,7 +1509,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPausesIndex
      *
-     * List subscription pauses..
+     * .
      *
      */
     public function testPartnersSubscriptionsPausesIndex()
@@ -1432,7 +1520,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPricesCreate
      *
-     * Create a new subscription price effective at a specific date.
+     * .
      *
      */
     public function testPartnersSubscriptionsPricesCreate()
@@ -1443,7 +1531,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPricesDelete
      *
-     * Delete a future subscription price.
+     * .
      *
      */
     public function testPartnersSubscriptionsPricesDelete()
@@ -1454,7 +1542,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsPricesIndex
      *
-     * List the subscription's prices..
+     * .
      *
      */
     public function testPartnersSubscriptionsPricesIndex()
@@ -1465,7 +1553,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSubscriptionsUpdate
      *
-     * Update partner subscription..
+     * .
      *
      */
     public function testPartnersSubscriptionsUpdate()
@@ -1476,7 +1564,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersSuggestIndex
      *
-     * Suggest Partners to search for..
+     * .
      *
      */
     public function testPartnersSuggestIndex()
@@ -1487,7 +1575,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersTitlesIndex
      *
-     * Get all partner titles..
+     * .
      *
      */
     public function testPartnersTitlesIndex()
@@ -1498,7 +1586,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersTransactionsIndex
      *
-     * List Transactions for a given Partner..
+     * .
      *
      */
     public function testPartnersTransactionsIndex()
@@ -1509,7 +1597,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUpdate
      *
-     * Update a Partner..
+     * .
      *
      */
     public function testPartnersUpdate()
@@ -1520,7 +1608,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsDelete
      *
-     * Delete content for a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsDelete()
@@ -1531,7 +1619,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsDelete_0
      *
-     * Delete content for a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsDelete0()
@@ -1542,7 +1630,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsGet
      *
-     * Get the content of a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsGet()
@@ -1553,7 +1641,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsGet_0
      *
-     * Get the content of a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsGet0()
@@ -1564,7 +1652,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsUpdate
      *
-     * Update content for a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsUpdate()
@@ -1575,7 +1663,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersContentsUpdate_0
      *
-     * Update content for a given partner user..
+     * .
      *
      */
     public function testPartnersUsersContentsUpdate0()
@@ -1586,7 +1674,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersCreate
      *
-     * Create a partner user..
+     * .
      *
      */
     public function testPartnersUsersCreate()
@@ -1597,7 +1685,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersCreate_0
      *
-     * Create a partner user..
+     * .
      *
      */
     public function testPartnersUsersCreate0()
@@ -1608,7 +1696,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersDelete
      *
-     * Delete partner user from partner..
+     * .
      *
      */
     public function testPartnersUsersDelete()
@@ -1619,7 +1707,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersGet
      *
-     * Get a Partner User by a given partner_user_id..
+     * .
      *
      */
     public function testPartnersUsersGet()
@@ -1630,7 +1718,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersGet_0
      *
-     * Get a Partner User by a given partner_user_id..
+     * .
      *
      */
     public function testPartnersUsersGet0()
@@ -1641,7 +1729,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersIndex
      *
-     * List partner users..
+     * .
      *
      */
     public function testPartnersUsersIndex()
@@ -1652,7 +1740,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersIndex_0
      *
-     * List partner users..
+     * .
      *
      */
     public function testPartnersUsersIndex0()
@@ -1663,7 +1751,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersUpdate
      *
-     * Update partner user profile..
+     * .
      *
      */
     public function testPartnersUsersUpdate()
@@ -1674,7 +1762,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersUsersUpdate_0
      *
-     * Update partner user profile..
+     * .
      *
      */
     public function testPartnersUsersUpdate0()
@@ -1685,7 +1773,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersVerificationsIndex
      *
-     * Get Partner verifications..
+     * .
      *
      */
     public function testPartnersVerificationsIndex()
@@ -1696,7 +1784,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersVerificationsIndex_0
      *
-     * Get Partner verifications..
+     * .
      *
      */
     public function testPartnersVerificationsIndex0()
@@ -1707,7 +1795,7 @@ class PartnersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for partnersVerificationsUpdate
      *
-     * Update Partner verification data..
+     * .
      *
      */
     public function testPartnersVerificationsUpdate()

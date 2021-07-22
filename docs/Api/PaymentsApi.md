@@ -4,20 +4,20 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**paymentsCardsCreate**](PaymentsApi.md#paymentsCardsCreate) | **POST** /payments/cards | Create a payment card.
+[**paymentsCardsCreate**](PaymentsApi.md#paymentsCardsCreate) | **POST** /payments/cards | 
 [**paymentsCardsDelete**](PaymentsApi.md#paymentsCardsDelete) | **DELETE** /payments/cards/{card_id} | Delete a card for a given id.
 [**paymentsCardsDelete_0**](PaymentsApi.md#paymentsCardsDelete_0) | **DELETE** /payments/{payment_id}/cards/{card_id} | Delete a card for a given id.
-[**paymentsCardsGet**](PaymentsApi.md#paymentsCardsGet) | **GET** /payments/cards/{payment_card_id} | Get a Partner from a given partner_id.
-[**paymentsCardsGet_0**](PaymentsApi.md#paymentsCardsGet_0) | **GET** /payments/{payment_id}/cards/{payment_card_id} | Get a Partner from a given partner_id.
-[**paymentsCardsIndex**](PaymentsApi.md#paymentsCardsIndex) | **GET** /payments/cards | List payment cards.
-[**paymentsMethodsActionsCreate**](PaymentsApi.md#paymentsMethodsActionsCreate) | **POST** /payments/methods/{payment_method_id}/actions | Execute an action on a payment method.
-[**paymentsMethodsActionsCreate_0**](PaymentsApi.md#paymentsMethodsActionsCreate_0) | **POST** /payments/{payment_id}/methods/{payment_method_id}/actions | Execute an action on a payment method.
+[**paymentsCardsGet**](PaymentsApi.md#paymentsCardsGet) | **GET** /payments/cards/{payment_card_id} | 
+[**paymentsCardsGet_0**](PaymentsApi.md#paymentsCardsGet_0) | **GET** /payments/{payment_id}/cards/{payment_card_id} | 
+[**paymentsCardsIndex**](PaymentsApi.md#paymentsCardsIndex) | **GET** /payments/cards | 
+[**paymentsMethodsActionsCreate**](PaymentsApi.md#paymentsMethodsActionsCreate) | **POST** /payments/methods/{payment_method_id}/actions | 
+[**paymentsMethodsActionsCreate_0**](PaymentsApi.md#paymentsMethodsActionsCreate_0) | **POST** /payments/{payment_id}/methods/{payment_method_id}/actions | 
 
 
 # **paymentsCardsCreate**
 > \Ageras\Api\PaymentCardResource paymentsCardsCreate($payment_card_resource)
 
-Create a payment card.
+
 
 ### Example
 ```php
@@ -170,7 +170,7 @@ void (empty response body)
 # **paymentsCardsGet**
 > \Ageras\Api\PaymentCardResource paymentsCardsGet($payment_card_id )
 
-Get a Partner from a given partner_id.
+
 
 ### Example
 ```php
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 # **paymentsCardsGet_0**
 > \Ageras\Api\PaymentCardResource paymentsCardsGet_0($payment_id,  $payment_card_id )
 
-Get a Partner from a given partner_id.
+
 
 ### Example
 ```php
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 # **paymentsCardsIndex**
 > \Ageras\Api\PaymentCardResult paymentsCardsIndex($criteria)
 
-List payment cards.
+
 
 ### Example
 ```php
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 # **paymentsMethodsActionsCreate**
 > \Ageras\Api\PaymentMethodResource paymentsMethodsActionsCreate($payment_method_id , $payment_method_action_resource)
 
-Execute an action on a payment method.
+
 
 ### Example
 ```php
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 # **paymentsMethodsActionsCreate_0**
 > \Ageras\Api\PaymentMethodResource paymentsMethodsActionsCreate_0($payment_id,  $payment_method_id , $payment_method_action_resource)
 
-Execute an action on a payment method.
+
 
 ### Example
 ```php

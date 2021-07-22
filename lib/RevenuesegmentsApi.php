@@ -90,7 +90,7 @@ class RevenuesegmentsApi
     /**
      * Operation revenuesegmentsIndex
      *
-     * List revenue segments.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,
@@ -111,7 +111,7 @@ class RevenuesegmentsApi
     /**
      * Operation revenuesegmentsIndexWithHttpInfo
      *
-     * List revenue segments.
+     * 
      *
      * @param $criteria = [
      *    'geo_code' => string,

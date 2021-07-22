@@ -41,7 +41,7 @@ use \Ageras\Api\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContentsApiTest extends \PHPUnit_Framework_TestCase
+class ContentsApiTest extends TestCase
 {
 
     /**
@@ -79,7 +79,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesAggregationsIndex
      *
-     * Aggreate the Pages by the letters.
+     * .
      *
      */
     public function testContentsPagesAggregationsIndex()
@@ -90,7 +90,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesAggregationsIndex_0
      *
-     * Aggreate the Pages by the letters.
+     * .
      *
      */
     public function testContentsPagesAggregationsIndex0()
@@ -101,7 +101,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesGet
      *
-     * Return a Page from a given id.
+     * .
      *
      */
     public function testContentsPagesGet()
@@ -112,7 +112,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesGet_0
      *
-     * Return a Page from a given id.
+     * .
      *
      */
     public function testContentsPagesGet0()
@@ -123,7 +123,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesIndex
      *
-     * List Pages.
+     * .
      *
      */
     public function testContentsPagesIndex()
@@ -134,7 +134,7 @@ class ContentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for contentsPagesTypesIndex
      *
-     * List content page types..
+     * .
      *
      */
     public function testContentsPagesTypesIndex()

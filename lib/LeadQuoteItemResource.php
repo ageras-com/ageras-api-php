@@ -60,6 +60,7 @@ class LeadQuoteItemResource implements ArrayAccess
         'updated_at' => 'string',
         'type' => 'string',
         'lead_product_id' => 'int',
+        'lead_product' => '\Ageras\Api\LeadProductResource',
         'is_product' => 'string',
         'quantity' => 'int',
         'amount_vat' => '\Ageras\Api\AmountResource',
@@ -86,6 +87,7 @@ class LeadQuoteItemResource implements ArrayAccess
         'updated_at' => 'updated_at',
         'type' => 'type',
         'lead_product_id' => 'lead_product_id',
+        'lead_product' => 'lead_product',
         'is_product' => 'is_product',
         'quantity' => 'quantity',
         'amount_vat' => 'amount_vat',
@@ -108,6 +110,7 @@ class LeadQuoteItemResource implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'type' => 'setType',
         'lead_product_id' => 'setLeadProductId',
+        'lead_product' => 'setLeadProduct',
         'is_product' => 'setIsProduct',
         'quantity' => 'setQuantity',
         'amount_vat' => 'setAmountVat',
@@ -130,6 +133,7 @@ class LeadQuoteItemResource implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'type' => 'getType',
         'lead_product_id' => 'getLeadProductId',
+        'lead_product' => 'getLeadProduct',
         'is_product' => 'getIsProduct',
         'quantity' => 'getQuantity',
         'amount_vat' => 'getAmountVat',
@@ -161,6 +165,8 @@ class LeadQuoteItemResource implements ArrayAccess
     const TYPE_QUARTERLY = 'quarterly';
     const TYPE_MONTHLY = 'monthly';
     const TYPE_BIANNUALLY = 'biannually';
+    const TYPE_WEEKLY = 'weekly';
+    const TYPE_EVERY_SECOND_MONTH = 'every_second_month';
     
 
     
@@ -177,6 +183,8 @@ class LeadQuoteItemResource implements ArrayAccess
             self::TYPE_QUARTERLY,
             self::TYPE_MONTHLY,
             self::TYPE_BIANNUALLY,
+            self::TYPE_WEEKLY,
+            self::TYPE_EVERY_SECOND_MONTH,
         ];
     }
     
@@ -199,6 +207,7 @@ class LeadQuoteItemResource implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'unknown';
         $this->container['lead_product_id'] = isset($data['lead_product_id']) ? $data['lead_product_id'] : null;
+        $this->container['lead_product'] = isset($data['lead_product']) ? $data['lead_product'] : null;
         $this->container['is_product'] = isset($data['is_product']) ? $data['is_product'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
         $this->container['amount_vat'] = isset($data['amount_vat']) ? $data['amount_vat'] : null;
@@ -218,9 +227,9 @@ class LeadQuoteItemResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually", "weekly", "every_second_month"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month'.";
         }
 
         return $invalid_properties;
@@ -235,7 +244,7 @@ class LeadQuoteItemResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually"];
+        $allowed_values = ["unknown", "unit", "yearly", "quarterly", "monthly", "biannually", "weekly", "every_second_month"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -343,9 +352,9 @@ class LeadQuoteItemResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually');
+        $allowed_values = array('unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'unknown', 'unit', 'yearly', 'quarterly', 'monthly', 'biannually', 'weekly', 'every_second_month'");
         }
         $this->container['type'] = $type;
 
@@ -363,12 +372,33 @@ class LeadQuoteItemResource implements ArrayAccess
 
     /**
      * Sets lead_product_id
-     * @param int $lead_product_id Product id of quote item
+     * @param int $lead_product_id Lead product id of quote item
      * @return $this
      */
     public function setLeadProductId($lead_product_id)
     {
         $this->container['lead_product_id'] = $lead_product_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_product
+     * @return \Ageras\Api\LeadProductResource
+     */
+    public function getLeadProduct()
+    {
+        return $this->container['lead_product'];
+    }
+
+    /**
+     * Sets lead_product
+     * @param \Ageras\Api\LeadProductResource $lead_product
+     * @return $this
+     */
+    public function setLeadProduct($lead_product)
+    {
+        $this->container['lead_product'] = $lead_product;
 
         return $this;
     }
