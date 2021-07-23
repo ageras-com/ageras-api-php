@@ -1331,12 +1331,89 @@ class PartnersApiTest extends TestCase
     }
 
     /**
+     * Test case for partnersQuoteproductpricesCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductpricesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteproductpricesDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductpricesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteproductpricesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductpricesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersRevenuerangesCreate
      *
      * .
      *
      */
     public function testPartnersRevenuerangesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersRevenuesegmentsCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersRevenuesegmentsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersRevenuesegmentsCreate_0
+     *
+     * .
+     *
+     */
+    public function testPartnersRevenuesegmentsCreate0()
+    {
+
+    }
+
+    /**
+     * Test case for partnersRevenuesegmentsDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersRevenuesegmentsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersRevenuesegmentsIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersRevenuesegmentsIndex()
     {
 
     }
@@ -1557,6 +1634,28 @@ class PartnersApiTest extends TestCase
      *
      */
     public function testPartnersSubscriptionsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptiontypesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersSubscriptiontypesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersSubscriptiontypesIndex_0
+     *
+     * .
+     *
+     */
+    public function testPartnersSubscriptiontypesIndex0()
     {
 
     }

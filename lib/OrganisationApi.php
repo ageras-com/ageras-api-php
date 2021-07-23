@@ -1432,4 +1432,133 @@ class OrganisationApi
             throw $e;
         }
     }
+
+    /**
+     * Operation organisationFrontendemployeesIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'frontend_employee_team_id' => string,
+     *    'employee_id' => string,
+     *    'geo_code' => string,
+     *    'is_active' => bool,
+     *    'has_team' => bool,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\FrontendEmployeeResult
+     */
+    public function organisationFrontendemployeesIndex($criteria = [])
+    {
+        list($response) = $this->organisationFrontendemployeesIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation organisationFrontendemployeesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'frontend_employee_team_id' => string,
+     *    'employee_id' => string,
+     *    'geo_code' => string,
+     *    'is_active' => bool,
+     *    'has_team' => bool,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\FrontendEmployeeResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function organisationFrontendemployeesIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/organisation/frontendemployees";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['frontend_employee_team_id'])) {
+            $queryParams['frontend_employee_team_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['frontend_employee_team_id']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['is_active'])) {
+            $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
+        }
+        // query params
+        if (isset($criteria['has_team'])) {
+            $queryParams['has_team'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_team']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\FrontendEmployeeResult',
+                '/organisation/frontendemployees'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\FrontendEmployeeResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\FrontendEmployeeResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }
