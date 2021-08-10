@@ -753,7 +753,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 
 $api_instance = new Ageras\Api\Api\OrganisationApi();
 $criteria = [
-        'frontend_employee_team_id' => "frontend_employee_team_id_example"; // string | IDs of frontend teams this frontend employee is assigned to
+        'frontend_employee_team_id' => "frontend_employee_team_id_example"; // string | IDs of frontend employee teams
         'employee_id' => "employee_id_example"; // string | IDs of employees this frontend employee is associated with
         'geo_code' => "geo_code_example"; // string | Geo Location Code ( ISO 3166 ).
         'is_active' => false; // bool | Return only frontend employees that have an active employee assigned
@@ -776,7 +776,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **frontend_employee_team_id** | **string**| IDs of frontend teams this frontend employee is assigned to | [optional]
+ **frontend_employee_team_id** | **string**| IDs of frontend employee teams | [optional]
  **employee_id** | **string**| IDs of employees this frontend employee is associated with | [optional]
  **geo_code** | **string**| Geo Location Code ( ISO 3166 ). | [optional]
  **is_active** | **bool**| Return only frontend employees that have an active employee assigned | [optional] [default to false]

@@ -1,6 +1,6 @@
 <?php
 /**
- * FrontendEmployeeTeamResourceTest
+ * NestedContractOfferGroupResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * FrontendEmployeeTeamResourceTest Class Doc Comment
+ * NestedContractOfferGroupResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description FrontendEmployeeTeamResource
+// * @description NestedContractOfferGroupResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FrontendEmployeeTeamResourceTest extends TestCase
+class NestedContractOfferGroupResourceTest extends TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class FrontendEmployeeTeamResourceTest extends TestCase
     }
 
     /**
-     * Test "FrontendEmployeeTeamResource"
+     * Test "NestedContractOfferGroupResource"
      */
-    public function testFrontendEmployeeTeamResource()
+    public function testNestedContractOfferGroupResource()
     {
 
     }
@@ -86,22 +86,6 @@ class FrontendEmployeeTeamResourceTest extends TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "identifier"
-     */
-    public function testPropertyIdentifier()
-    {
-
-    }
-
-    /**
-     * Test attribute "sort"
-     */
-    public function testPropertySort()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * NestedPartnerContractOfferGroupResource
+ * NestedContractOfferGroupResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * NestedPartnerContractOfferGroupResource Class Doc Comment
+ * NestedContractOfferGroupResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NestedPartnerContractOfferGroupResource implements ArrayAccess
+class NestedContractOfferGroupResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'NestedPartnerContractOfferGroupResource';
+    protected static $swaggerModelName = 'NestedContractOfferGroupResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 **deadline_at** | **string** |  | [optional] 
+**completed_at** | **string** |  | [optional] 
 **title** | **string** |  | [optional] 
 **description** | **string** |  | [optional] 
 **employee** | [**\Ageras\Api\EmployeeResource**](EmployeeResource.md) |  | [optional] 

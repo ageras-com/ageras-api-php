@@ -59,8 +59,7 @@ class FrontendEmployeeResource implements ArrayAccess
         'geo_code' => 'string',
         'job_title' => 'string',
         'job_description' => 'string',
-        'sort' => 'int',
-        'frontend_employee_team' => '\Ageras\Api\FrontendEmployeeTeamResource'
+        'sort' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -78,8 +77,7 @@ class FrontendEmployeeResource implements ArrayAccess
         'geo_code' => 'geo_code',
         'job_title' => 'job_title',
         'job_description' => 'job_description',
-        'sort' => 'sort',
-        'frontend_employee_team' => 'frontend_employee_team'
+        'sort' => 'sort'
     ];
 
 
@@ -93,8 +91,7 @@ class FrontendEmployeeResource implements ArrayAccess
         'geo_code' => 'setGeoCode',
         'job_title' => 'setJobTitle',
         'job_description' => 'setJobDescription',
-        'sort' => 'setSort',
-        'frontend_employee_team' => 'setFrontendEmployeeTeam'
+        'sort' => 'setSort'
     ];
 
 
@@ -108,8 +105,7 @@ class FrontendEmployeeResource implements ArrayAccess
         'geo_code' => 'getGeoCode',
         'job_title' => 'getJobTitle',
         'job_description' => 'getJobDescription',
-        'sort' => 'getSort',
-        'frontend_employee_team' => 'getFrontendEmployeeTeam'
+        'sort' => 'getSort'
     ];
 
     public static function attributeMap()
@@ -149,7 +145,6 @@ class FrontendEmployeeResource implements ArrayAccess
         $this->container['job_title'] = isset($data['job_title']) ? $data['job_title'] : null;
         $this->container['job_description'] = isset($data['job_description']) ? $data['job_description'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
-        $this->container['frontend_employee_team'] = isset($data['frontend_employee_team']) ? $data['frontend_employee_team'] : null;
     }
 
     /**
@@ -299,27 +294,6 @@ class FrontendEmployeeResource implements ArrayAccess
     public function setSort($sort)
     {
         $this->container['sort'] = $sort;
-
-        return $this;
-    }
-
-    /**
-     * Gets frontend_employee_team
-     * @return \Ageras\Api\FrontendEmployeeTeamResource
-     */
-    public function getFrontendEmployeeTeam()
-    {
-        return $this->container['frontend_employee_team'];
-    }
-
-    /**
-     * Sets frontend_employee_team
-     * @param \Ageras\Api\FrontendEmployeeTeamResource $frontend_employee_team
-     * @return $this
-     */
-    public function setFrontendEmployeeTeam($frontend_employee_team)
-    {
-        $this->container['frontend_employee_team'] = $frontend_employee_team;
 
         return $this;
     }
