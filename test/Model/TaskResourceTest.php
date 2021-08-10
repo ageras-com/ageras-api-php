@@ -115,6 +115,14 @@ class TaskResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "completed_at"
+     */
+    public function testPropertyCompletedAt()
+    {
+
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()

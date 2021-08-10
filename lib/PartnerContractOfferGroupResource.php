@@ -55,7 +55,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'partner' => '\Ageras\Api\NestedPartnerContractOfferGroupResource',
+        'partner' => '\Ageras\Api\NestedContractOfferGroupResource',
         'offers' => '\Ageras\Api\PartnerContractOfferResource[]',
         'segmentation_geo_regions' => '\Ageras\Api\SegmentationGeoRegionResource[]'
     ];
@@ -185,7 +185,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
 
     /**
      * Gets partner
-     * @return \Ageras\Api\NestedPartnerContractOfferGroupResource
+     * @return \Ageras\Api\NestedContractOfferGroupResource
      */
     public function getPartner()
     {
@@ -194,7 +194,7 @@ class PartnerContractOfferGroupResource implements ArrayAccess
 
     /**
      * Sets partner
-     * @param \Ageras\Api\NestedPartnerContractOfferGroupResource $partner
+     * @param \Ageras\Api\NestedContractOfferGroupResource $partner
      * @return $this
      */
     public function setPartner($partner)

@@ -218,4 +218,12 @@ class EmployeeResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "profile_picture"
+     */
+    public function testPropertyProfilePicture()
+    {
+
+    }
+
 }

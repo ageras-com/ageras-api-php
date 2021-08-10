@@ -1,6 +1,6 @@
 <?php
 /**
- * FrontendEmployeeResource
+ * FrontendEmployeeTeamResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * FrontendEmployeeResource Class Doc Comment
+ * FrontendEmployeeTeamResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FrontendEmployeeResource implements ArrayAccess
+class FrontendEmployeeTeamResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,19 +47,19 @@ class FrontendEmployeeResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'FrontendEmployeeResource';
+    protected static $swaggerModelName = 'FrontendEmployeeTeamResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'employee' => '\Ageras\Api\EmployeeResource',
-        'geo_code' => 'string',
-        'job_title' => 'string',
-        'job_description' => 'string',
-        'sort' => 'int'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\FrontendEmployeeTeamResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -72,12 +72,12 @@ class FrontendEmployeeResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'employee' => 'employee',
-        'geo_code' => 'geo_code',
-        'job_title' => 'job_title',
-        'job_description' => 'job_description',
-        'sort' => 'sort'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -86,12 +86,12 @@ class FrontendEmployeeResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'employee' => 'setEmployee',
-        'geo_code' => 'setGeoCode',
-        'job_title' => 'setJobTitle',
-        'job_description' => 'setJobDescription',
-        'sort' => 'setSort'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -100,12 +100,12 @@ class FrontendEmployeeResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'employee' => 'getEmployee',
-        'geo_code' => 'getGeoCode',
-        'job_title' => 'getJobTitle',
-        'job_description' => 'getJobDescription',
-        'sort' => 'getSort'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -139,12 +139,12 @@ class FrontendEmployeeResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['job_title'] = isset($data['job_title']) ? $data['job_title'] : null;
-        $this->container['job_description'] = isset($data['job_description']) ? $data['job_description'] : null;
-        $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -173,127 +173,127 @@ class FrontendEmployeeResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets page
      * @return int
      */
-    public function getId()
+    public function getPage()
     {
-        return $this->container['id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setId($id)
+    public function setPage($page)
     {
-        $this->container['id'] = $id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets employee
-     * @return \Ageras\Api\EmployeeResource
-     */
-    public function getEmployee()
-    {
-        return $this->container['employee'];
-    }
-
-    /**
-     * Sets employee
-     * @param \Ageras\Api\EmployeeResource $employee
-     * @return $this
-     */
-    public function setEmployee($employee)
-    {
-        $this->container['employee'] = $employee;
-
-        return $this;
-    }
-
-    /**
-     * Gets geo_code
-     * @return string
-     */
-    public function getGeoCode()
-    {
-        return $this->container['geo_code'];
-    }
-
-    /**
-     * Sets geo_code
-     * @param string $geo_code
-     * @return $this
-     */
-    public function setGeoCode($geo_code)
-    {
-        $this->container['geo_code'] = $geo_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets job_title
-     * @return string
-     */
-    public function getJobTitle()
-    {
-        return $this->container['job_title'];
-    }
-
-    /**
-     * Sets job_title
-     * @param string $job_title
-     * @return $this
-     */
-    public function setJobTitle($job_title)
-    {
-        $this->container['job_title'] = $job_title;
-
-        return $this;
-    }
-
-    /**
-     * Gets job_description
-     * @return string
-     */
-    public function getJobDescription()
-    {
-        return $this->container['job_description'];
-    }
-
-    /**
-     * Sets job_description
-     * @param string $job_description
-     * @return $this
-     */
-    public function setJobDescription($job_description)
-    {
-        $this->container['job_description'] = $job_description;
-
-        return $this;
-    }
-
-    /**
-     * Gets sort
+     * Gets limit
      * @return int
      */
-    public function getSort()
+    public function getLimit()
     {
-        return $this->container['sort'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets sort
-     * @param int $sort
+     * Sets limit
+     * @param int $limit Number of results per page.
      * @return $this
      */
-    public function setSort($sort)
+    public function setLimit($limit)
     {
-        $this->container['sort'] = $sort;
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\FrontendEmployeeTeamResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\FrontendEmployeeTeamResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
+     * @return string
+     */
+    public function getDidYouMean()
+    {
+        return $this->container['did_you_mean'];
+    }
+
+    /**
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
+     * @return $this
+     */
+    public function setDidYouMean($did_you_mean)
+    {
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

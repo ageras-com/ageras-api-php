@@ -219,4 +219,15 @@ class OrganisationApiTest extends TestCase
 
     }
 
+    /**
+     * Test case for organisationFrontendemployeeteamsIndex
+     *
+     * .
+     *
+     */
+    public function testOrganisationFrontendemployeeteamsIndex()
+    {
+
+    }
+
 }
