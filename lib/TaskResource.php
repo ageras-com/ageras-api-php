@@ -58,6 +58,7 @@ class TaskResource implements ArrayAccess
         'created_at' => 'string',
         'updated_at' => 'string',
         'deadline_at' => 'string',
+        'completed_at' => 'string',
         'title' => 'string',
         'description' => 'string',
         'employee' => '\Ageras\Api\EmployeeResource',
@@ -82,6 +83,7 @@ class TaskResource implements ArrayAccess
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'deadline_at' => 'deadline_at',
+        'completed_at' => 'completed_at',
         'title' => 'title',
         'description' => 'description',
         'employee' => 'employee',
@@ -102,6 +104,7 @@ class TaskResource implements ArrayAccess
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'deadline_at' => 'setDeadlineAt',
+        'completed_at' => 'setCompletedAt',
         'title' => 'setTitle',
         'description' => 'setDescription',
         'employee' => 'setEmployee',
@@ -122,6 +125,7 @@ class TaskResource implements ArrayAccess
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'deadline_at' => 'getDeadlineAt',
+        'completed_at' => 'getCompletedAt',
         'title' => 'getTitle',
         'description' => 'getDescription',
         'employee' => 'getEmployee',
@@ -167,6 +171,7 @@ class TaskResource implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['deadline_at'] = isset($data['deadline_at']) ? $data['deadline_at'] : null;
+        $this->container['completed_at'] = isset($data['completed_at']) ? $data['completed_at'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['employee'] = isset($data['employee']) ? $data['employee'] : null;
@@ -282,6 +287,27 @@ class TaskResource implements ArrayAccess
     public function setDeadlineAt($deadline_at)
     {
         $this->container['deadline_at'] = $deadline_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets completed_at
+     * @return string
+     */
+    public function getCompletedAt()
+    {
+        return $this->container['completed_at'];
+    }
+
+    /**
+     * Sets completed_at
+     * @param string $completed_at
+     * @return $this
+     */
+    public function setCompletedAt($completed_at)
+    {
+        $this->container['completed_at'] = $completed_at;
 
         return $this;
     }

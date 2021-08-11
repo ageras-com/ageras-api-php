@@ -56,7 +56,8 @@ class FrontendEmployeeTeamResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'identifier' => 'string',
-        'sort' => 'int'
+        'sort' => 'int',
+        'frontend_employees' => '\Ageras\Api\FrontendEmployeeResource[]'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +72,8 @@ class FrontendEmployeeTeamResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'identifier' => 'identifier',
-        'sort' => 'sort'
+        'sort' => 'sort',
+        'frontend_employees' => 'frontend_employees'
     ];
 
 
@@ -82,7 +84,8 @@ class FrontendEmployeeTeamResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'identifier' => 'setIdentifier',
-        'sort' => 'setSort'
+        'sort' => 'setSort',
+        'frontend_employees' => 'setFrontendEmployees'
     ];
 
 
@@ -93,7 +96,8 @@ class FrontendEmployeeTeamResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'identifier' => 'getIdentifier',
-        'sort' => 'getSort'
+        'sort' => 'getSort',
+        'frontend_employees' => 'getFrontendEmployees'
     ];
 
     public static function attributeMap()
@@ -130,6 +134,7 @@ class FrontendEmployeeTeamResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['frontend_employees'] = isset($data['frontend_employees']) ? $data['frontend_employees'] : null;
     }
 
     /**
@@ -216,6 +221,27 @@ class FrontendEmployeeTeamResource implements ArrayAccess
     public function setSort($sort)
     {
         $this->container['sort'] = $sort;
+
+        return $this;
+    }
+
+    /**
+     * Gets frontend_employees
+     * @return \Ageras\Api\FrontendEmployeeResource[]
+     */
+    public function getFrontendEmployees()
+    {
+        return $this->container['frontend_employees'];
+    }
+
+    /**
+     * Sets frontend_employees
+     * @param \Ageras\Api\FrontendEmployeeResource[] $frontend_employees
+     * @return $this
+     */
+    public function setFrontendEmployees($frontend_employees)
+    {
+        $this->container['frontend_employees'] = $frontend_employees;
 
         return $this;
     }

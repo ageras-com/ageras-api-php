@@ -70,7 +70,8 @@ class EmployeeResource implements ArrayAccess
         'initials' => 'string',
         'is_active' => 'bool',
         'current_call_activity' => '\Ageras\Api\EmployeeCurrentCallActivityResource',
-        'social' => '\Ageras\Api\EmployeeSocialResource'
+        'social' => '\Ageras\Api\EmployeeSocialResource',
+        'profile_picture' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -99,7 +100,8 @@ class EmployeeResource implements ArrayAccess
         'initials' => 'initials',
         'is_active' => 'is_active',
         'current_call_activity' => 'current_call_activity',
-        'social' => 'social'
+        'social' => 'social',
+        'profile_picture' => 'profile_picture'
     ];
 
 
@@ -124,7 +126,8 @@ class EmployeeResource implements ArrayAccess
         'initials' => 'setInitials',
         'is_active' => 'setIsActive',
         'current_call_activity' => 'setCurrentCallActivity',
-        'social' => 'setSocial'
+        'social' => 'setSocial',
+        'profile_picture' => 'setProfilePicture'
     ];
 
 
@@ -149,7 +152,8 @@ class EmployeeResource implements ArrayAccess
         'initials' => 'getInitials',
         'is_active' => 'getIsActive',
         'current_call_activity' => 'getCurrentCallActivity',
-        'social' => 'getSocial'
+        'social' => 'getSocial',
+        'profile_picture' => 'getProfilePicture'
     ];
 
     public static function attributeMap()
@@ -200,6 +204,7 @@ class EmployeeResource implements ArrayAccess
         $this->container['is_active'] = isset($data['is_active']) ? $data['is_active'] : false;
         $this->container['current_call_activity'] = isset($data['current_call_activity']) ? $data['current_call_activity'] : null;
         $this->container['social'] = isset($data['social']) ? $data['social'] : null;
+        $this->container['profile_picture'] = isset($data['profile_picture']) ? $data['profile_picture'] : null;
     }
 
     /**
@@ -580,6 +585,27 @@ class EmployeeResource implements ArrayAccess
     public function setSocial($social)
     {
         $this->container['social'] = $social;
+
+        return $this;
+    }
+
+    /**
+     * Gets profile_picture
+     * @return string
+     */
+    public function getProfilePicture()
+    {
+        return $this->container['profile_picture'];
+    }
+
+    /**
+     * Sets profile_picture
+     * @param string $profile_picture
+     * @return $this
+     */
+    public function setProfilePicture($profile_picture)
+    {
+        $this->container['profile_picture'] = $profile_picture;
 
         return $this;
     }
