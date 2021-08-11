@@ -130,12 +130,4 @@ class FrontendEmployeeResourceTest extends TestCase
 
     }
 
-    /**
-     * Test attribute "frontend_employee_team"
-     */
-    public function testPropertyFrontendEmployeeTeam()
-    {
-
-    }
-
 }

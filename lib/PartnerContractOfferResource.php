@@ -55,7 +55,7 @@ class PartnerContractOfferResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'offer_group' => '\Ageras\Api\NestedPartnerContractOfferGroupResource',
+        'offer_group' => '\Ageras\Api\NestedContractOfferGroupResource',
         'offer_items' => '\Ageras\Api\PartnerContractOfferItemResource[]',
         'price_excl_vat' => '\Ageras\Api\AmountResource',
         'sort' => 'int'
@@ -190,7 +190,7 @@ class PartnerContractOfferResource implements ArrayAccess
 
     /**
      * Gets offer_group
-     * @return \Ageras\Api\NestedPartnerContractOfferGroupResource
+     * @return \Ageras\Api\NestedContractOfferGroupResource
      */
     public function getOfferGroup()
     {
@@ -199,7 +199,7 @@ class PartnerContractOfferResource implements ArrayAccess
 
     /**
      * Sets offer_group
-     * @param \Ageras\Api\NestedPartnerContractOfferGroupResource $offer_group
+     * @param \Ageras\Api\NestedContractOfferGroupResource $offer_group
      * @return $this
      */
     public function setOfferGroup($offer_group)

@@ -1561,4 +1561,121 @@ class OrganisationApi
             throw $e;
         }
     }
+
+    /**
+     * Operation organisationFrontendemployeeteamsIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'has_frontend_employees' => bool,
+     *    'frontend_employee_id' => string,
+     *    'employee_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\FrontendEmployeeTeamResult
+     */
+    public function organisationFrontendemployeeteamsIndex($criteria = [])
+    {
+        list($response) = $this->organisationFrontendemployeeteamsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation organisationFrontendemployeeteamsIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'has_frontend_employees' => bool,
+     *    'frontend_employee_id' => string,
+     *    'employee_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\FrontendEmployeeTeamResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function organisationFrontendemployeeteamsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/organisation/frontendemployeeteams";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['has_frontend_employees'])) {
+            $queryParams['has_frontend_employees'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_frontend_employees']);
+        }
+        // query params
+        if (isset($criteria['frontend_employee_id'])) {
+            $queryParams['frontend_employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['frontend_employee_id']);
+        }
+        // query params
+        if (isset($criteria['employee_id'])) {
+            $queryParams['employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['employee_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\FrontendEmployeeTeamResult',
+                '/organisation/frontendemployeeteams'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\FrontendEmployeeTeamResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\FrontendEmployeeTeamResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

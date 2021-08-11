@@ -1,6 +1,6 @@
 <?php
 /**
- * FrontendEmployeeTeamResourceTest
+ * FrontendEmployeeTeamResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * FrontendEmployeeTeamResourceTest Class Doc Comment
+ * FrontendEmployeeTeamResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description FrontendEmployeeTeamResource
+// * @description FrontendEmployeeTeamResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FrontendEmployeeTeamResourceTest extends TestCase
+class FrontendEmployeeTeamResultTest extends TestCase
 {
 
     /**
@@ -75,41 +75,57 @@ class FrontendEmployeeTeamResourceTest extends TestCase
     }
 
     /**
-     * Test "FrontendEmployeeTeamResource"
+     * Test "FrontendEmployeeTeamResult"
      */
-    public function testFrontendEmployeeTeamResource()
+    public function testFrontendEmployeeTeamResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "identifier"
+     * Test attribute "limit"
      */
-    public function testPropertyIdentifier()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "sort"
+     * Test attribute "pages"
      */
-    public function testPropertySort()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "frontend_employees"
+     * Test attribute "total"
      */
-    public function testPropertyFrontendEmployees()
+    public function testPropertyTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+
+    }
+
+    /**
+     * Test attribute "did_you_mean"
+     */
+    public function testPropertyDidYouMean()
     {
 
     }
