@@ -264,4 +264,145 @@ class PartnersignupsApi
             throw $e;
         }
     }
+
+    /**
+     * Operation partnersignupsIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'is_processed' => bool,
+     *    'processed_at_gte' => string,
+     *    'processed_at_lte' => string,
+     *    'expires_at_gte' => string,
+     *    'expires_at_lte' => string,
+     *    'geo_code' => string,
+     *    'industry_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerSignUpResult
+     */
+    public function partnersignupsIndex($criteria = [])
+    {
+        list($response) = $this->partnersignupsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersignupsIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'is_processed' => bool,
+     *    'processed_at_gte' => string,
+     *    'processed_at_lte' => string,
+     *    'expires_at_gte' => string,
+     *    'expires_at_lte' => string,
+     *    'geo_code' => string,
+     *    'industry_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerSignUpResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersignupsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partnersignups";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['is_processed'])) {
+            $queryParams['is_processed'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_processed']);
+        }
+        // query params
+        if (isset($criteria['processed_at_gte'])) {
+            $queryParams['processed_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['processed_at_gte']);
+        }
+        // query params
+        if (isset($criteria['processed_at_lte'])) {
+            $queryParams['processed_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['processed_at_lte']);
+        }
+        // query params
+        if (isset($criteria['expires_at_gte'])) {
+            $queryParams['expires_at_gte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['expires_at_gte']);
+        }
+        // query params
+        if (isset($criteria['expires_at_lte'])) {
+            $queryParams['expires_at_lte'] = $this->apiClient->getSerializer()->toQueryValue($criteria['expires_at_lte']);
+        }
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['industry_id'])) {
+            $queryParams['industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['industry_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerSignUpResult',
+                '/partnersignups'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerSignUpResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerSignUpResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

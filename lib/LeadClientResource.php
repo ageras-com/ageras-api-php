@@ -62,7 +62,9 @@ class LeadClientResource implements ArrayAccess
         'email' => 'string',
         'phone' => 'string',
         'mobile' => 'string',
-        'vat_number' => 'string'
+        'vat_number' => 'string',
+        'customer_type' => '\Ageras\Api\LeadCustomerTypeResource',
+        'social_security_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,9 @@ class LeadClientResource implements ArrayAccess
         'email' => 'email',
         'phone' => 'phone',
         'mobile' => 'mobile',
-        'vat_number' => 'vat_number'
+        'vat_number' => 'vat_number',
+        'customer_type' => 'customer_type',
+        'social_security_number' => 'social_security_number'
     ];
 
 
@@ -100,7 +104,9 @@ class LeadClientResource implements ArrayAccess
         'email' => 'setEmail',
         'phone' => 'setPhone',
         'mobile' => 'setMobile',
-        'vat_number' => 'setVatNumber'
+        'vat_number' => 'setVatNumber',
+        'customer_type' => 'setCustomerType',
+        'social_security_number' => 'setSocialSecurityNumber'
     ];
 
 
@@ -117,7 +123,9 @@ class LeadClientResource implements ArrayAccess
         'email' => 'getEmail',
         'phone' => 'getPhone',
         'mobile' => 'getMobile',
-        'vat_number' => 'getVatNumber'
+        'vat_number' => 'getVatNumber',
+        'customer_type' => 'getCustomerType',
+        'social_security_number' => 'getSocialSecurityNumber'
     ];
 
     public static function attributeMap()
@@ -160,6 +168,8 @@ class LeadClientResource implements ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
+        $this->container['customer_type'] = isset($data['customer_type']) ? $data['customer_type'] : null;
+        $this->container['social_security_number'] = isset($data['social_security_number']) ? $data['social_security_number'] : null;
     }
 
     /**
@@ -372,6 +382,48 @@ class LeadClientResource implements ArrayAccess
     public function setVatNumber($vat_number)
     {
         $this->container['vat_number'] = $vat_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_type
+     * @return \Ageras\Api\LeadCustomerTypeResource
+     */
+    public function getCustomerType()
+    {
+        return $this->container['customer_type'];
+    }
+
+    /**
+     * Sets customer_type
+     * @param \Ageras\Api\LeadCustomerTypeResource $customer_type
+     * @return $this
+     */
+    public function setCustomerType($customer_type)
+    {
+        $this->container['customer_type'] = $customer_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets social_security_number
+     * @return string
+     */
+    public function getSocialSecurityNumber()
+    {
+        return $this->container['social_security_number'];
+    }
+
+    /**
+     * Sets social_security_number
+     * @param string $social_security_number Social security number.
+     * @return $this
+     */
+    public function setSocialSecurityNumber($social_security_number)
+    {
+        $this->container['social_security_number'] = $social_security_number;
 
         return $this;
     }

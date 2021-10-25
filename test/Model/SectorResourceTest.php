@@ -106,4 +106,12 @@ class SectorResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "archived_at"
+     */
+    public function testPropertyArchivedAt()
+    {
+
+    }
+
 }

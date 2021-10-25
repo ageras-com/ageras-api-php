@@ -72,6 +72,7 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'string',
         'description' => 'string',
         'items' => '\Ageras\Api\LeadQuoteItemResource[]',
+        'loans' => '\Ageras\Api\LeadQuoteLoanResource[]',
         'payment' => '\Ageras\Api\LeadQuotePaymentResource',
         'total_vat_amount' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
@@ -115,6 +116,7 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'title',
         'description' => 'description',
         'items' => 'items',
+        'loans' => 'loans',
         'payment' => 'payment',
         'total_vat_amount' => 'total_vat_amount',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
@@ -154,6 +156,7 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'setTitle',
         'description' => 'setDescription',
         'items' => 'setItems',
+        'loans' => 'setLoans',
         'payment' => 'setPayment',
         'total_vat_amount' => 'setTotalVatAmount',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
@@ -193,6 +196,7 @@ class LeadQuoteResource implements ArrayAccess
         'title' => 'getTitle',
         'description' => 'getDescription',
         'items' => 'getItems',
+        'loans' => 'getLoans',
         'payment' => 'getPayment',
         'total_vat_amount' => 'getTotalVatAmount',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
@@ -299,6 +303,7 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['loans'] = isset($data['loans']) ? $data['loans'] : null;
         $this->container['payment'] = isset($data['payment']) ? $data['payment'] : null;
         $this->container['total_vat_amount'] = isset($data['total_vat_amount']) ? $data['total_vat_amount'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
@@ -739,6 +744,27 @@ class LeadQuoteResource implements ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets loans
+     * @return \Ageras\Api\LeadQuoteLoanResource[]
+     */
+    public function getLoans()
+    {
+        return $this->container['loans'];
+    }
+
+    /**
+     * Sets loans
+     * @param \Ageras\Api\LeadQuoteLoanResource[] $loans Quote loans
+     * @return $this
+     */
+    public function setLoans($loans)
+    {
+        $this->container['loans'] = $loans;
 
         return $this;
     }

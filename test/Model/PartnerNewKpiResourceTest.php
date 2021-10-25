@@ -170,4 +170,28 @@ class PartnerNewKpiResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "all_time_purchased_marketplace_leads_value_excl_vat_local_currency"
+     */
+    public function testPropertyAllTimePurchasedMarketplaceLeadsValueExclVatLocalCurrency()
+    {
+
+    }
+
+    /**
+     * Test attribute "all_time_purchased_marketplace_leads_count"
+     */
+    public function testPropertyAllTimePurchasedMarketplaceLeadsCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_marketplace_partner_spend_excl_vat_local_currency"
+     */
+    public function testPropertyLeadMarketplacePartnerSpendExclVatLocalCurrency()
+    {
+
+    }
+
 }

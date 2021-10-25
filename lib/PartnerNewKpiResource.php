@@ -64,7 +64,10 @@ class PartnerNewKpiResource implements ArrayAccess
         'next_contract_renewal_at' => 'string',
         'active_business_units_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'active_business_units_mrr_excl_vat' => '\Ageras\Api\AmountResource',
-        'current_period_weighted_delivery_trend' => 'float'
+        'current_period_weighted_delivery_trend' => 'float',
+        'all_time_purchased_marketplace_leads_value_excl_vat_local_currency' => '\Ageras\Api\AmountResource',
+        'all_time_purchased_marketplace_leads_count' => 'int',
+        'lead_marketplace_partner_spend_excl_vat_local_currency' => '\Ageras\Api\AmountResource'
     ];
 
     public static function swaggerTypes()
@@ -87,7 +90,10 @@ class PartnerNewKpiResource implements ArrayAccess
         'next_contract_renewal_at' => 'next_contract_renewal_at',
         'active_business_units_amount_excl_vat' => 'active_business_units_amount_excl_vat',
         'active_business_units_mrr_excl_vat' => 'active_business_units_mrr_excl_vat',
-        'current_period_weighted_delivery_trend' => 'current_period_weighted_delivery_trend'
+        'current_period_weighted_delivery_trend' => 'current_period_weighted_delivery_trend',
+        'all_time_purchased_marketplace_leads_value_excl_vat_local_currency' => 'all_time_purchased_marketplace_leads_value_excl_vat_local_currency',
+        'all_time_purchased_marketplace_leads_count' => 'all_time_purchased_marketplace_leads_count',
+        'lead_marketplace_partner_spend_excl_vat_local_currency' => 'lead_marketplace_partner_spend_excl_vat_local_currency'
     ];
 
 
@@ -106,7 +112,10 @@ class PartnerNewKpiResource implements ArrayAccess
         'next_contract_renewal_at' => 'setNextContractRenewalAt',
         'active_business_units_amount_excl_vat' => 'setActiveBusinessUnitsAmountExclVat',
         'active_business_units_mrr_excl_vat' => 'setActiveBusinessUnitsMrrExclVat',
-        'current_period_weighted_delivery_trend' => 'setCurrentPeriodWeightedDeliveryTrend'
+        'current_period_weighted_delivery_trend' => 'setCurrentPeriodWeightedDeliveryTrend',
+        'all_time_purchased_marketplace_leads_value_excl_vat_local_currency' => 'setAllTimePurchasedMarketplaceLeadsValueExclVatLocalCurrency',
+        'all_time_purchased_marketplace_leads_count' => 'setAllTimePurchasedMarketplaceLeadsCount',
+        'lead_marketplace_partner_spend_excl_vat_local_currency' => 'setLeadMarketplacePartnerSpendExclVatLocalCurrency'
     ];
 
 
@@ -125,7 +134,10 @@ class PartnerNewKpiResource implements ArrayAccess
         'next_contract_renewal_at' => 'getNextContractRenewalAt',
         'active_business_units_amount_excl_vat' => 'getActiveBusinessUnitsAmountExclVat',
         'active_business_units_mrr_excl_vat' => 'getActiveBusinessUnitsMrrExclVat',
-        'current_period_weighted_delivery_trend' => 'getCurrentPeriodWeightedDeliveryTrend'
+        'current_period_weighted_delivery_trend' => 'getCurrentPeriodWeightedDeliveryTrend',
+        'all_time_purchased_marketplace_leads_value_excl_vat_local_currency' => 'getAllTimePurchasedMarketplaceLeadsValueExclVatLocalCurrency',
+        'all_time_purchased_marketplace_leads_count' => 'getAllTimePurchasedMarketplaceLeadsCount',
+        'lead_marketplace_partner_spend_excl_vat_local_currency' => 'getLeadMarketplacePartnerSpendExclVatLocalCurrency'
     ];
 
     public static function attributeMap()
@@ -170,6 +182,9 @@ class PartnerNewKpiResource implements ArrayAccess
         $this->container['active_business_units_amount_excl_vat'] = isset($data['active_business_units_amount_excl_vat']) ? $data['active_business_units_amount_excl_vat'] : null;
         $this->container['active_business_units_mrr_excl_vat'] = isset($data['active_business_units_mrr_excl_vat']) ? $data['active_business_units_mrr_excl_vat'] : null;
         $this->container['current_period_weighted_delivery_trend'] = isset($data['current_period_weighted_delivery_trend']) ? $data['current_period_weighted_delivery_trend'] : null;
+        $this->container['all_time_purchased_marketplace_leads_value_excl_vat_local_currency'] = isset($data['all_time_purchased_marketplace_leads_value_excl_vat_local_currency']) ? $data['all_time_purchased_marketplace_leads_value_excl_vat_local_currency'] : null;
+        $this->container['all_time_purchased_marketplace_leads_count'] = isset($data['all_time_purchased_marketplace_leads_count']) ? $data['all_time_purchased_marketplace_leads_count'] : null;
+        $this->container['lead_marketplace_partner_spend_excl_vat_local_currency'] = isset($data['lead_marketplace_partner_spend_excl_vat_local_currency']) ? $data['lead_marketplace_partner_spend_excl_vat_local_currency'] : null;
     }
 
     /**
@@ -424,6 +439,69 @@ class PartnerNewKpiResource implements ArrayAccess
     public function setCurrentPeriodWeightedDeliveryTrend($current_period_weighted_delivery_trend)
     {
         $this->container['current_period_weighted_delivery_trend'] = $current_period_weighted_delivery_trend;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_time_purchased_marketplace_leads_value_excl_vat_local_currency
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getAllTimePurchasedMarketplaceLeadsValueExclVatLocalCurrency()
+    {
+        return $this->container['all_time_purchased_marketplace_leads_value_excl_vat_local_currency'];
+    }
+
+    /**
+     * Sets all_time_purchased_marketplace_leads_value_excl_vat_local_currency
+     * @param \Ageras\Api\AmountResource $all_time_purchased_marketplace_leads_value_excl_vat_local_currency
+     * @return $this
+     */
+    public function setAllTimePurchasedMarketplaceLeadsValueExclVatLocalCurrency($all_time_purchased_marketplace_leads_value_excl_vat_local_currency)
+    {
+        $this->container['all_time_purchased_marketplace_leads_value_excl_vat_local_currency'] = $all_time_purchased_marketplace_leads_value_excl_vat_local_currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets all_time_purchased_marketplace_leads_count
+     * @return int
+     */
+    public function getAllTimePurchasedMarketplaceLeadsCount()
+    {
+        return $this->container['all_time_purchased_marketplace_leads_count'];
+    }
+
+    /**
+     * Sets all_time_purchased_marketplace_leads_count
+     * @param int $all_time_purchased_marketplace_leads_count @var $all_time_purchased_marketplace_leads_count
+     * @return $this
+     */
+    public function setAllTimePurchasedMarketplaceLeadsCount($all_time_purchased_marketplace_leads_count)
+    {
+        $this->container['all_time_purchased_marketplace_leads_count'] = $all_time_purchased_marketplace_leads_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_marketplace_partner_spend_excl_vat_local_currency
+     * @return \Ageras\Api\AmountResource
+     */
+    public function getLeadMarketplacePartnerSpendExclVatLocalCurrency()
+    {
+        return $this->container['lead_marketplace_partner_spend_excl_vat_local_currency'];
+    }
+
+    /**
+     * Sets lead_marketplace_partner_spend_excl_vat_local_currency
+     * @param \Ageras\Api\AmountResource $lead_marketplace_partner_spend_excl_vat_local_currency
+     * @return $this
+     */
+    public function setLeadMarketplacePartnerSpendExclVatLocalCurrency($lead_marketplace_partner_spend_excl_vat_local_currency)
+    {
+        $this->container['lead_marketplace_partner_spend_excl_vat_local_currency'] = $lead_marketplace_partner_spend_excl_vat_local_currency;
 
         return $this;
     }

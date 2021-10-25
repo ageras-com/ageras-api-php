@@ -227,6 +227,14 @@ class LeadQuoteResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "loans"
+     */
+    public function testPropertyLoans()
+    {
+
+    }
+
+    /**
      * Test attribute "payment"
      */
     public function testPropertyPayment()

@@ -122,4 +122,12 @@ class PartnerRevenueSegmentResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "sectors"
+     */
+    public function testPropertySectors()
+    {
+
+    }
+
 }

@@ -228,6 +228,7 @@ class LeadsApi
      *    'has_lead_quote_fee' => bool,
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
+     *    'personal_title_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -288,6 +289,7 @@ class LeadsApi
      *    'has_lead_quote_fee' => bool,
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
+     *    'personal_title_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -472,6 +474,10 @@ class LeadsApi
         // query params
         if (isset($criteria['segmented_for_lead_marketplace_partner_id'])) {
             $queryParams['segmented_for_lead_marketplace_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_marketplace_partner_id']);
+        }
+        // query params
+        if (isset($criteria['personal_title_id'])) {
+            $queryParams['personal_title_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['personal_title_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2270,6 +2276,7 @@ class LeadsApi
      *    'has_lead_quote_fee' => bool,
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
+     *    'personal_title_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2330,6 +2337,7 @@ class LeadsApi
      *    'has_lead_quote_fee' => bool,
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
+     *    'personal_title_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2514,6 +2522,10 @@ class LeadsApi
         // query params
         if (isset($criteria['segmented_for_lead_marketplace_partner_id'])) {
             $queryParams['segmented_for_lead_marketplace_partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_lead_marketplace_partner_id']);
+        }
+        // query params
+        if (isset($criteria['personal_title_id'])) {
+            $queryParams['personal_title_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['personal_title_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -4104,6 +4116,120 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteItemResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsQuotesLoansUpdate
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param string $lead_quote_id 
+     * @param string $lead_quote_loan_id 
+     * @param \Ageras\Api\LeadQuoteLoanResource $lead_quote_loan_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadQuoteLoanResource
+     */
+    public function leadsQuotesLoansUpdate($lead_id,  $lead_quote_id,  $lead_quote_loan_id , $lead_quote_loan_resource)
+    {
+        list($response) = $this->leadsQuotesLoansUpdateWithHttpInfo($lead_id, $lead_quote_id, $lead_quote_loan_id, $lead_quote_loan_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsQuotesLoansUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param string $lead_quote_id 
+     * @param string $lead_quote_loan_id 
+     * @param \Ageras\Api\LeadQuoteLoanResource $lead_quote_loan_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadQuoteLoanResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsQuotesLoansUpdateWithHttpInfo($lead_id,  $lead_quote_id,  $lead_quote_loan_id , $lead_quote_loan_resource)
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/quotes/{lead_quote_id}/loans/{lead_quote_loan_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($lead_quote_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_quote_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_quote_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($lead_quote_loan_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_quote_loan_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_quote_loan_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($lead_quote_loan_resource)) {
+            $_tempBody = $lead_quote_loan_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadQuoteLoanResource',
+                '/leads/{lead_id}/quotes/{lead_quote_id}/loans/{lead_quote_loan_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadQuoteLoanResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteLoanResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

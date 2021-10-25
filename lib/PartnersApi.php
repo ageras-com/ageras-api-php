@@ -12329,6 +12329,302 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersQuoteloanproductpricesCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerQuoteLoanProductPriceResource $partner_quote_loan_product_price_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerQuoteLoanProductPriceResource
+     */
+    public function partnersQuoteloanproductpricesCreate($partner_id , $partner_quote_loan_product_price_resource)
+    {
+        list($response) = $this->partnersQuoteloanproductpricesCreateWithHttpInfo($partner_id, $partner_quote_loan_product_price_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteloanproductpricesCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerQuoteLoanProductPriceResource $partner_quote_loan_product_price_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerQuoteLoanProductPriceResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteloanproductpricesCreateWithHttpInfo($partner_id , $partner_quote_loan_product_price_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteloanproductprices";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_quote_loan_product_price_resource)) {
+            $_tempBody = $partner_quote_loan_product_price_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerQuoteLoanProductPriceResource',
+                '/partners/{partner_id}/quoteloanproductprices'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerQuoteLoanProductPriceResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteLoanProductPriceResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersQuoteloanproductpricesDelete
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $quote_loan_product_price_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersQuoteloanproductpricesDelete($partner_id,  $quote_loan_product_price_id )
+    {
+        list($response) = $this->partnersQuoteloanproductpricesDeleteWithHttpInfo($partner_id, $quote_loan_product_price_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteloanproductpricesDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $quote_loan_product_price_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteloanproductpricesDeleteWithHttpInfo($partner_id,  $quote_loan_product_price_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteloanproductprices/{quote_loan_product_price_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($quote_loan_product_price_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "quote_loan_product_price_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($quote_loan_product_price_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/quoteloanproductprices/{quote_loan_product_price_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersQuoteloanproductpricesIndex
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerQuoteLoanProductPriceResult
+     */
+    public function partnersQuoteloanproductpricesIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersQuoteloanproductpricesIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteloanproductpricesIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerQuoteLoanProductPriceResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteloanproductpricesIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteloanproductprices";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerQuoteLoanProductPriceResult',
+                '/partners/{partner_id}/quoteloanproductprices'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerQuoteLoanProductPriceResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteLoanProductPriceResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersQuoteproductpricesCreate
      *
      * 

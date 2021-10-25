@@ -96,7 +96,8 @@ class LeadResource implements ArrayAccess
         'geo_range' => 'int',
         'primary_sector' => '\Ageras\Api\SectorResource',
         'revenue_segment' => '\Ageras\Api\RevenueSegmentResource',
-        'desired_partner_company_size' => '\Ageras\Api\CompanySizeResource'
+        'desired_partner_company_size' => '\Ageras\Api\CompanySizeResource',
+        'personal_title' => '\Ageras\Api\PersonalTitleResource'
     ];
 
     public static function swaggerTypes()
@@ -151,7 +152,8 @@ class LeadResource implements ArrayAccess
         'geo_range' => 'geo_range',
         'primary_sector' => 'primary_sector',
         'revenue_segment' => 'revenue_segment',
-        'desired_partner_company_size' => 'desired_partner_company_size'
+        'desired_partner_company_size' => 'desired_partner_company_size',
+        'personal_title' => 'personal_title'
     ];
 
 
@@ -202,7 +204,8 @@ class LeadResource implements ArrayAccess
         'geo_range' => 'setGeoRange',
         'primary_sector' => 'setPrimarySector',
         'revenue_segment' => 'setRevenueSegment',
-        'desired_partner_company_size' => 'setDesiredPartnerCompanySize'
+        'desired_partner_company_size' => 'setDesiredPartnerCompanySize',
+        'personal_title' => 'setPersonalTitle'
     ];
 
 
@@ -253,7 +256,8 @@ class LeadResource implements ArrayAccess
         'geo_range' => 'getGeoRange',
         'primary_sector' => 'getPrimarySector',
         'revenue_segment' => 'getRevenueSegment',
-        'desired_partner_company_size' => 'getDesiredPartnerCompanySize'
+        'desired_partner_company_size' => 'getDesiredPartnerCompanySize',
+        'personal_title' => 'getPersonalTitle'
     ];
 
     public static function attributeMap()
@@ -356,6 +360,7 @@ class LeadResource implements ArrayAccess
         $this->container['primary_sector'] = isset($data['primary_sector']) ? $data['primary_sector'] : null;
         $this->container['revenue_segment'] = isset($data['revenue_segment']) ? $data['revenue_segment'] : null;
         $this->container['desired_partner_company_size'] = isset($data['desired_partner_company_size']) ? $data['desired_partner_company_size'] : null;
+        $this->container['personal_title'] = isset($data['personal_title']) ? $data['personal_title'] : null;
     }
 
     /**
@@ -1295,6 +1300,27 @@ class LeadResource implements ArrayAccess
     public function setDesiredPartnerCompanySize($desired_partner_company_size)
     {
         $this->container['desired_partner_company_size'] = $desired_partner_company_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets personal_title
+     * @return \Ageras\Api\PersonalTitleResource
+     */
+    public function getPersonalTitle()
+    {
+        return $this->container['personal_title'];
+    }
+
+    /**
+     * Sets personal_title
+     * @param \Ageras\Api\PersonalTitleResource $personal_title
+     * @return $this
+     */
+    public function setPersonalTitle($personal_title)
+    {
+        $this->container['personal_title'] = $personal_title;
 
         return $this;
     }

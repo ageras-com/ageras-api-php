@@ -14,6 +14,9 @@ Name | Type | Description | Notes
 **active_business_units_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **active_business_units_mrr_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **current_period_weighted_delivery_trend** | **float** | Ratio between optimal delivery ratio and acutal delivery ratio within current contract period | [optional] 
+**all_time_purchased_marketplace_leads_value_excl_vat_local_currency** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**all_time_purchased_marketplace_leads_count** | **int** | @var $all_time_purchased_marketplace_leads_count | [optional] 
+**lead_marketplace_partner_spend_excl_vat_local_currency** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

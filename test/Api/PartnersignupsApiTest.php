@@ -98,4 +98,15 @@ class PartnersignupsApiTest extends TestCase
 
     }
 
+    /**
+     * Test case for partnersignupsIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersignupsIndex()
+    {
+
+    }
+
 }

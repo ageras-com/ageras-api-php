@@ -1331,6 +1331,39 @@ class PartnersApiTest extends TestCase
     }
 
     /**
+     * Test case for partnersQuoteloanproductpricesCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteloanproductpricesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteloanproductpricesDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteloanproductpricesDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteloanproductpricesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteloanproductpricesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersQuoteproductpricesCreate
      *
      * .

@@ -94,6 +94,7 @@ class SectorsApi
      *
      * @param $criteria = [
      *    'geo_code' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -114,6 +115,7 @@ class SectorsApi
      *
      * @param $criteria = [
      *    'geo_code' => string,
+     *    'sort' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -138,6 +140,10 @@ class SectorsApi
         // query params
         if (isset($criteria['geo_code'])) {
             $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['sort'])) {
+            $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
         }
         // query params
         if (isset($criteria['limit'])) {

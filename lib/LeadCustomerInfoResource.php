@@ -62,7 +62,8 @@ class LeadCustomerInfoResource implements ArrayAccess
         'mobile' => 'string',
         'vat_number' => 'string',
         'customer_type' => '\Ageras\Api\LeadCustomerTypeResource',
-        'show_prices_including_vat' => 'bool'
+        'show_prices_including_vat' => 'bool',
+        'social_security_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class LeadCustomerInfoResource implements ArrayAccess
         'mobile' => 'mobile',
         'vat_number' => 'vat_number',
         'customer_type' => 'customer_type',
-        'show_prices_including_vat' => 'show_prices_including_vat'
+        'show_prices_including_vat' => 'show_prices_including_vat',
+        'social_security_number' => 'social_security_number'
     ];
 
 
@@ -100,7 +102,8 @@ class LeadCustomerInfoResource implements ArrayAccess
         'mobile' => 'setMobile',
         'vat_number' => 'setVatNumber',
         'customer_type' => 'setCustomerType',
-        'show_prices_including_vat' => 'setShowPricesIncludingVat'
+        'show_prices_including_vat' => 'setShowPricesIncludingVat',
+        'social_security_number' => 'setSocialSecurityNumber'
     ];
 
 
@@ -117,7 +120,8 @@ class LeadCustomerInfoResource implements ArrayAccess
         'mobile' => 'getMobile',
         'vat_number' => 'getVatNumber',
         'customer_type' => 'getCustomerType',
-        'show_prices_including_vat' => 'getShowPricesIncludingVat'
+        'show_prices_including_vat' => 'getShowPricesIncludingVat',
+        'social_security_number' => 'getSocialSecurityNumber'
     ];
 
     public static function attributeMap()
@@ -160,6 +164,7 @@ class LeadCustomerInfoResource implements ArrayAccess
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
         $this->container['customer_type'] = isset($data['customer_type']) ? $data['customer_type'] : null;
         $this->container['show_prices_including_vat'] = isset($data['show_prices_including_vat']) ? $data['show_prices_including_vat'] : false;
+        $this->container['social_security_number'] = isset($data['social_security_number']) ? $data['social_security_number'] : null;
     }
 
     /**
@@ -372,6 +377,27 @@ class LeadCustomerInfoResource implements ArrayAccess
     public function setShowPricesIncludingVat($show_prices_including_vat)
     {
         $this->container['show_prices_including_vat'] = $show_prices_including_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets social_security_number
+     * @return string
+     */
+    public function getSocialSecurityNumber()
+    {
+        return $this->container['social_security_number'];
+    }
+
+    /**
+     * Sets social_security_number
+     * @param string $social_security_number Social security number.
+     * @return $this
+     */
+    public function setSocialSecurityNumber($social_security_number)
+    {
+        $this->container['social_security_number'] = $social_security_number;
 
         return $this;
     }

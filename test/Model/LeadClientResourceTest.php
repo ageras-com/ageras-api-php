@@ -154,4 +154,20 @@ class LeadClientResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "customer_type"
+     */
+    public function testPropertyCustomerType()
+    {
+
+    }
+
+    /**
+     * Test attribute "social_security_number"
+     */
+    public function testPropertySocialSecurityNumber()
+    {
+
+    }
+
 }

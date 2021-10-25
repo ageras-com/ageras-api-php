@@ -58,7 +58,8 @@ class PartnerRevenueSegmentResource implements ArrayAccess
         'lead_type' => '\Ageras\Api\LeadTypeResource',
         'partner' => '\Ageras\Api\PartnerResource',
         'maximum_revenue' => '\Ageras\Api\AmountResource',
-        'minimum_revenue' => '\Ageras\Api\AmountResource'
+        'minimum_revenue' => '\Ageras\Api\AmountResource',
+        'sectors' => '\Ageras\Api\SectorResource[]'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class PartnerRevenueSegmentResource implements ArrayAccess
         'lead_type' => 'lead_type',
         'partner' => 'partner',
         'maximum_revenue' => 'maximum_revenue',
-        'minimum_revenue' => 'minimum_revenue'
+        'minimum_revenue' => 'minimum_revenue',
+        'sectors' => 'sectors'
     ];
 
 
@@ -88,7 +90,8 @@ class PartnerRevenueSegmentResource implements ArrayAccess
         'lead_type' => 'setLeadType',
         'partner' => 'setPartner',
         'maximum_revenue' => 'setMaximumRevenue',
-        'minimum_revenue' => 'setMinimumRevenue'
+        'minimum_revenue' => 'setMinimumRevenue',
+        'sectors' => 'setSectors'
     ];
 
 
@@ -101,7 +104,8 @@ class PartnerRevenueSegmentResource implements ArrayAccess
         'lead_type' => 'getLeadType',
         'partner' => 'getPartner',
         'maximum_revenue' => 'getMaximumRevenue',
-        'minimum_revenue' => 'getMinimumRevenue'
+        'minimum_revenue' => 'getMinimumRevenue',
+        'sectors' => 'getSectors'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class PartnerRevenueSegmentResource implements ArrayAccess
         $this->container['partner'] = isset($data['partner']) ? $data['partner'] : null;
         $this->container['maximum_revenue'] = isset($data['maximum_revenue']) ? $data['maximum_revenue'] : null;
         $this->container['minimum_revenue'] = isset($data['minimum_revenue']) ? $data['minimum_revenue'] : null;
+        $this->container['sectors'] = isset($data['sectors']) ? $data['sectors'] : null;
     }
 
     /**
@@ -268,6 +273,27 @@ class PartnerRevenueSegmentResource implements ArrayAccess
     public function setMinimumRevenue($minimum_revenue)
     {
         $this->container['minimum_revenue'] = $minimum_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets sectors
+     * @return \Ageras\Api\SectorResource[]
+     */
+    public function getSectors()
+    {
+        return $this->container['sectors'];
+    }
+
+    /**
+     * Sets sectors
+     * @param \Ageras\Api\SectorResource[] $sectors
+     * @return $this
+     */
+    public function setSectors($sectors)
+    {
+        $this->container['sectors'] = $sectors;
 
         return $this;
     }

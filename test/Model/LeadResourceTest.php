@@ -426,4 +426,12 @@ class LeadResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "personal_title"
+     */
+    public function testPropertyPersonalTitle()
+    {
+
+    }
+
 }

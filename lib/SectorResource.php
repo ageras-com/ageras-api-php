@@ -56,7 +56,8 @@ class SectorResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'geo_code' => 'string',
-        'display_name' => 'string'
+        'display_name' => 'string',
+        'archived_at' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +72,8 @@ class SectorResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'geo_code' => 'geo_code',
-        'display_name' => 'display_name'
+        'display_name' => 'display_name',
+        'archived_at' => 'archived_at'
     ];
 
 
@@ -82,7 +84,8 @@ class SectorResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'geo_code' => 'setGeoCode',
-        'display_name' => 'setDisplayName'
+        'display_name' => 'setDisplayName',
+        'archived_at' => 'setArchivedAt'
     ];
 
 
@@ -93,7 +96,8 @@ class SectorResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'geo_code' => 'getGeoCode',
-        'display_name' => 'getDisplayName'
+        'display_name' => 'getDisplayName',
+        'archived_at' => 'getArchivedAt'
     ];
 
     public static function attributeMap()
@@ -130,6 +134,7 @@ class SectorResource implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
+        $this->container['archived_at'] = isset($data['archived_at']) ? $data['archived_at'] : null;
     }
 
     /**
@@ -216,6 +221,27 @@ class SectorResource implements ArrayAccess
     public function setDisplayName($display_name)
     {
         $this->container['display_name'] = $display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets archived_at
+     * @return string
+     */
+    public function getArchivedAt()
+    {
+        return $this->container['archived_at'];
+    }
+
+    /**
+     * Sets archived_at
+     * @param string $archived_at
+     * @return $this
+     */
+    public function setArchivedAt($archived_at)
+    {
+        $this->container['archived_at'] = $archived_at;
 
         return $this;
     }

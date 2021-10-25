@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **title** | **string** | Title | [optional] 
 **description** | **string** | Description | [optional] 
 **items** | [**\Ageras\Api\LeadQuoteItemResource[]**](LeadQuoteItemResource.md) | Quote Items | [optional] 
+**loans** | [**\Ageras\Api\LeadQuoteLoanResource[]**](LeadQuoteLoanResource.md) | Quote loans | [optional] 
 **payment** | [**\Ageras\Api\LeadQuotePaymentResource**](LeadQuotePaymentResource.md) |  | [optional] 
 **total_vat_amount** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **total_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 

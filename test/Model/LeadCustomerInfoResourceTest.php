@@ -154,4 +154,12 @@ class LeadCustomerInfoResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "social_security_number"
+     */
+    public function testPropertySocialSecurityNumber()
+    {
+
+    }
+
 }

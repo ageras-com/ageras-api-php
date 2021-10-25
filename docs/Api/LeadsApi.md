@@ -38,6 +38,7 @@ Method | HTTP request | Description
 [**leadsQuotesItemsGet**](LeadsApi.md#leadsQuotesItemsGet) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | 
 [**leadsQuotesItemsIndex**](LeadsApi.md#leadsQuotesItemsIndex) | **GET** /leads/{lead_id}/quotes/{lead_quote_id}/items | 
 [**leadsQuotesItemsUpdate**](LeadsApi.md#leadsQuotesItemsUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/items/{lead_quote_item_id} | 
+[**leadsQuotesLoansUpdate**](LeadsApi.md#leadsQuotesLoansUpdate) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id}/loans/{lead_quote_loan_id} | 
 [**leadsQuotesProgressstepsIndex**](LeadsApi.md#leadsQuotesProgressstepsIndex) | **GET** /leads/quotes/progresssteps | 
 [**leadsQuotesUpdate**](LeadsApi.md#leadsQuotesUpdate) | **PUT** /leads/quotes/{lead_quote_id} | 
 [**leadsQuotesUpdate_0**](LeadsApi.md#leadsQuotesUpdate_0) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | 
@@ -161,6 +162,7 @@ $criteria = [
         'has_lead_quote_fee' => false; // bool | Filter by has lead quote fee.
         'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
         'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
+        'personal_title_id' => "personal_title_id_example"; // string | Filter by lead's personal title
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -220,6 +222,7 @@ Name | Type | Description  | Notes
  **has_lead_quote_fee** | **bool**| Filter by has lead quote fee. | [optional] [default to false]
  **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
  **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
+ **personal_title_id** | **string**| Filter by lead&#39;s personal title | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1242,6 +1245,7 @@ $criteria = [
         'has_lead_quote_fee' => false; // bool | Filter by has lead quote fee.
         'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
         'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
+        'personal_title_id' => "personal_title_id_example"; // string | Filter by lead's personal title
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1301,6 +1305,7 @@ Name | Type | Description  | Notes
  **has_lead_quote_fee** | **bool**| Filter by has lead quote fee. | [optional] [default to false]
  **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
  **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
+ **personal_title_id** | **string**| Filter by lead&#39;s personal title | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -2118,6 +2123,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadQuoteItemResource**](../Model/LeadQuoteItemResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotesLoansUpdate**
+> \Ageras\Api\LeadQuoteLoanResource leadsQuotesLoansUpdate($lead_id,  $lead_quote_id,  $lead_quote_loan_id , $lead_quote_loan_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$lead_quote_id = "lead_quote_id_example"; // string | 
+$lead_quote_loan_id = "lead_quote_loan_id_example"; // string | 
+$lead_quote_loan_resource = new \Ageras\Api\LeadQuoteLoanResource(); // \Ageras\Api\LeadQuoteLoanResource | 
+
+try {
+    $result = $api_instance->leadsQuotesLoansUpdate($lead_id,  $lead_quote_id,  $lead_quote_loan_id , $lead_quote_loan_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotesLoansUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **lead_quote_id** | **string**|  |
+ **lead_quote_loan_id** | **string**|  |
+ **lead_quote_loan_resource** | [**\Ageras\Api\LeadQuoteLoanResource**](../Model/\Ageras\Api\LeadQuoteLoanResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadQuoteLoanResource**](../Model/LeadQuoteLoanResource.md)
 
 ### Authorization
 

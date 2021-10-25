@@ -77,6 +77,28 @@ class ClientsApiTest extends TestCase
     }
 
     /**
+     * Test case for clientsAllocationsuggestionsActionsCreate
+     *
+     * .
+     *
+     */
+    public function testClientsAllocationsuggestionsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for clientsAllocationsuggestionsIndex
+     *
+     * .
+     *
+     */
+    public function testClientsAllocationsuggestionsIndex()
+    {
+
+    }
+
+    /**
      * Test case for clientsBrowserpushsubscriptionsCreate
      *
      * .

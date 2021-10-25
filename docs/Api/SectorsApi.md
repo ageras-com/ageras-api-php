@@ -28,6 +28,7 @@ Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD'
 $api_instance = new Ageras\Api\Api\SectorsApi();
 $criteria = [
         'geo_code' => "geo_code_example"; // string | 
+        'sort' => "sort_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -47,6 +48,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geo_code** | **string**|  | [optional]
+ **sort** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

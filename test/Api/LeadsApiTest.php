@@ -451,6 +451,17 @@ class LeadsApiTest extends TestCase
     }
 
     /**
+     * Test case for leadsQuotesLoansUpdate
+     *
+     * .
+     *
+     */
+    public function testLeadsQuotesLoansUpdate()
+    {
+
+    }
+
+    /**
      * Test case for leadsQuotesProgressstepsIndex
      *
      * .
