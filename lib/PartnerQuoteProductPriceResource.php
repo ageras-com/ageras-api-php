@@ -59,7 +59,8 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
         'partner_revenue_segment' => '\Ageras\Api\PartnerRevenueSegmentResource',
         'minimum_quantity' => 'int',
         'maximum_quantity' => 'int',
-        'price_per_unit_excl_vat' => '\Ageras\Api\AmountResource'
+        'price_per_unit_excl_vat' => '\Ageras\Api\AmountResource',
+        'is_fixed_price' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -77,7 +78,8 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
         'partner_revenue_segment' => 'partner_revenue_segment',
         'minimum_quantity' => 'minimum_quantity',
         'maximum_quantity' => 'maximum_quantity',
-        'price_per_unit_excl_vat' => 'price_per_unit_excl_vat'
+        'price_per_unit_excl_vat' => 'price_per_unit_excl_vat',
+        'is_fixed_price' => 'is_fixed_price'
     ];
 
 
@@ -91,7 +93,8 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
         'partner_revenue_segment' => 'setPartnerRevenueSegment',
         'minimum_quantity' => 'setMinimumQuantity',
         'maximum_quantity' => 'setMaximumQuantity',
-        'price_per_unit_excl_vat' => 'setPricePerUnitExclVat'
+        'price_per_unit_excl_vat' => 'setPricePerUnitExclVat',
+        'is_fixed_price' => 'setIsFixedPrice'
     ];
 
 
@@ -105,7 +108,8 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
         'partner_revenue_segment' => 'getPartnerRevenueSegment',
         'minimum_quantity' => 'getMinimumQuantity',
         'maximum_quantity' => 'getMaximumQuantity',
-        'price_per_unit_excl_vat' => 'getPricePerUnitExclVat'
+        'price_per_unit_excl_vat' => 'getPricePerUnitExclVat',
+        'is_fixed_price' => 'getIsFixedPrice'
     ];
 
     public static function attributeMap()
@@ -145,6 +149,7 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
         $this->container['minimum_quantity'] = isset($data['minimum_quantity']) ? $data['minimum_quantity'] : null;
         $this->container['maximum_quantity'] = isset($data['maximum_quantity']) ? $data['maximum_quantity'] : null;
         $this->container['price_per_unit_excl_vat'] = isset($data['price_per_unit_excl_vat']) ? $data['price_per_unit_excl_vat'] : null;
+        $this->container['is_fixed_price'] = isset($data['is_fixed_price']) ? $data['is_fixed_price'] : false;
     }
 
     /**
@@ -294,6 +299,27 @@ class PartnerQuoteProductPriceResource implements ArrayAccess
     public function setPricePerUnitExclVat($price_per_unit_excl_vat)
     {
         $this->container['price_per_unit_excl_vat'] = $price_per_unit_excl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_fixed_price
+     * @return bool
+     */
+    public function getIsFixedPrice()
+    {
+        return $this->container['is_fixed_price'];
+    }
+
+    /**
+     * Sets is_fixed_price
+     * @param bool $is_fixed_price
+     * @return $this
+     */
+    public function setIsFixedPrice($is_fixed_price)
+    {
+        $this->container['is_fixed_price'] = $is_fixed_price;
 
         return $this;
     }

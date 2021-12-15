@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerQuoteProductPriceResourceTest
+ * PartnerQuoteProductCommentResultTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerQuoteProductPriceResourceTest Class Doc Comment
+ * PartnerQuoteProductCommentResultTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerQuoteProductPriceResource
+// * @description PartnerQuoteProductCommentResult
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerQuoteProductPriceResourceTest extends TestCase
+class PartnerQuoteProductCommentResultTest extends TestCase
 {
 
     /**
@@ -75,65 +75,57 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test "PartnerQuoteProductPriceResource"
+     * Test "PartnerQuoteProductCommentResult"
      */
-    public function testPartnerQuoteProductPriceResource()
+    public function testPartnerQuoteProductCommentResult()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
 
     }
 
     /**
-     * Test attribute "product"
+     * Test attribute "limit"
      */
-    public function testPropertyProduct()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "partner_revenue_segment"
+     * Test attribute "pages"
      */
-    public function testPropertyPartnerRevenueSegment()
+    public function testPropertyPages()
     {
 
     }
 
     /**
-     * Test attribute "minimum_quantity"
+     * Test attribute "total"
      */
-    public function testPropertyMinimumQuantity()
+    public function testPropertyTotal()
     {
 
     }
 
     /**
-     * Test attribute "maximum_quantity"
+     * Test attribute "data"
      */
-    public function testPropertyMaximumQuantity()
+    public function testPropertyData()
     {
 
     }
 
     /**
-     * Test attribute "price_per_unit_excl_vat"
+     * Test attribute "did_you_mean"
      */
-    public function testPropertyPricePerUnitExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_fixed_price"
-     */
-    public function testPropertyIsFixedPrice()
+    public function testPropertyDidYouMean()
     {
 
     }

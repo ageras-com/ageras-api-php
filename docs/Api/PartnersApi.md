@@ -121,9 +121,13 @@ Method | HTTP request | Description
 [**partnersQuoteloanproductpricesCreate**](PartnersApi.md#partnersQuoteloanproductpricesCreate) | **POST** /partners/{partner_id}/quoteloanproductprices | 
 [**partnersQuoteloanproductpricesDelete**](PartnersApi.md#partnersQuoteloanproductpricesDelete) | **DELETE** /partners/{partner_id}/quoteloanproductprices/{quote_loan_product_price_id} | 
 [**partnersQuoteloanproductpricesIndex**](PartnersApi.md#partnersQuoteloanproductpricesIndex) | **GET** /partners/{partner_id}/quoteloanproductprices | 
+[**partnersQuoteproductcommentsCreate**](PartnersApi.md#partnersQuoteproductcommentsCreate) | **POST** /partners/{partner_id}/quoteproductcomments | 
+[**partnersQuoteproductcommentsDelete**](PartnersApi.md#partnersQuoteproductcommentsDelete) | **DELETE** /partners/{partner_id}/quoteproductcomments/{quote_product_comment_id} | 
+[**partnersQuoteproductcommentsIndex**](PartnersApi.md#partnersQuoteproductcommentsIndex) | **GET** /partners/{partner_id}/quoteproductcomments | 
 [**partnersQuoteproductpricesCreate**](PartnersApi.md#partnersQuoteproductpricesCreate) | **POST** /partners/{partner_id}/quoteproductprices | 
 [**partnersQuoteproductpricesDelete**](PartnersApi.md#partnersQuoteproductpricesDelete) | **DELETE** /partners/{partner_id}/quoteproductprices/{quote_product_price_id} | 
 [**partnersQuoteproductpricesIndex**](PartnersApi.md#partnersQuoteproductpricesIndex) | **GET** /partners/{partner_id}/quoteproductprices | 
+[**partnersQuotevendorsIndex**](PartnersApi.md#partnersQuotevendorsIndex) | **GET** /partners/quotevendors | 
 [**partnersRevenuerangesCreate**](PartnersApi.md#partnersRevenuerangesCreate) | **POST** /partners/{partner_id}/revenueranges | 
 [**partnersRevenuesegmentsCreate**](PartnersApi.md#partnersRevenuesegmentsCreate) | **POST** /partners/revenuesegments | 
 [**partnersRevenuesegmentsCreate_0**](PartnersApi.md#partnersRevenuesegmentsCreate_0) | **POST** /partners/{partner_id}/revenuesegments | 
@@ -155,6 +159,7 @@ Method | HTTP request | Description
 [**partnersTitlesIndex**](PartnersApi.md#partnersTitlesIndex) | **GET** /partners/titles | 
 [**partnersTransactionsIndex**](PartnersApi.md#partnersTransactionsIndex) | **GET** /partners/{partner_id}/transactions | 
 [**partnersUpdate**](PartnersApi.md#partnersUpdate) | **PUT** /partners/{partner_id} | 
+[**partnersUsersActionsCreate**](PartnersApi.md#partnersUsersActionsCreate) | **POST** /partners/{partner_id}/users/{partner_user_id}/actions | 
 [**partnersUsersContentsDelete**](PartnersApi.md#partnersUsersContentsDelete) | **DELETE** /partners/users/{partner_user_id}/contents/{content_key} | 
 [**partnersUsersContentsDelete_0**](PartnersApi.md#partnersUsersContentsDelete_0) | **DELETE** /partners/{partner_id}/users/{partner_user_id}/contents/{content_key} | 
 [**partnersUsersContentsGet**](PartnersApi.md#partnersUsersContentsGet) | **GET** /partners/users/{partner_user_id}/contents/{content_key} | 
@@ -271,6 +276,7 @@ $criteria = [
         'has_active_contract' => false; // bool | 
         'has_unused_allocations' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
+        'partner_assignee_client_consultant_employee_id' => "partner_assignee_client_consultant_employee_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -312,6 +318,7 @@ Name | Type | Description  | Notes
  **has_active_contract** | **bool**|  | [optional] [default to false]
  **has_unused_allocations** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
+ **partner_assignee_client_consultant_employee_id** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -5567,6 +5574,7 @@ $criteria = [
         'has_active_contract' => false; // bool | 
         'has_unused_allocations' => false; // bool | 
         'wants_exclusive_leads' => false; // bool | 
+        'partner_assignee_client_consultant_employee_id' => "partner_assignee_client_consultant_employee_id_example"; // string | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -5608,6 +5616,7 @@ Name | Type | Description  | Notes
  **has_active_contract** | **bool**|  | [optional] [default to false]
  **has_unused_allocations** | **bool**|  | [optional] [default to false]
  **wants_exclusive_leads** | **bool**|  | [optional] [default to false]
+ **partner_assignee_client_consultant_employee_id** | **string**|  | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -6874,6 +6883,170 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **partnersQuoteproductcommentsCreate**
+> \Ageras\Api\PartnerQuoteProductCommentResource partnersQuoteproductcommentsCreate($partner_id , $partner_quote_product_comment_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_quote_product_comment_resource = new \Ageras\Api\PartnerQuoteProductCommentResource(); // \Ageras\Api\PartnerQuoteProductCommentResource | 
+
+try {
+    $result = $api_instance->partnersQuoteproductcommentsCreate($partner_id , $partner_quote_product_comment_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersQuoteproductcommentsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_quote_product_comment_resource** | [**\Ageras\Api\PartnerQuoteProductCommentResource**](../Model/\Ageras\Api\PartnerQuoteProductCommentResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerQuoteProductCommentResource**](../Model/PartnerQuoteProductCommentResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersQuoteproductcommentsDelete**
+> partnersQuoteproductcommentsDelete($partner_id,  $quote_product_comment_id )
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$quote_product_comment_id = "quote_product_comment_id_example"; // string | 
+
+try {
+    $api_instance->partnersQuoteproductcommentsDelete($partner_id,  $quote_product_comment_id );
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersQuoteproductcommentsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **quote_product_comment_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersQuoteproductcommentsIndex**
+> \Ageras\Api\PartnerQuoteProductCommentResult partnersQuoteproductcommentsIndex($partner_id , $criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersQuoteproductcommentsIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersQuoteproductcommentsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerQuoteProductCommentResult**](../Model/PartnerQuoteProductCommentResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **partnersQuoteproductpricesCreate**
 > \Ageras\Api\PartnerQuoteProductPriceResource partnersQuoteproductpricesCreate($partner_id , $partner_quote_product_price_resource)
 
@@ -7026,6 +7199,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerQuoteProductPriceResult**](../Model/PartnerQuoteProductPriceResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersQuotevendorsIndex**
+> \Ageras\Api\PartnerQuoteVendorResult partnersQuotevendorsIndex($criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$criteria = [
+        'partner_id' => "partner_id_example"; // string | IDs of partners
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersQuotevendorsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersQuotevendorsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**| IDs of partners | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerQuoteVendorResult**](../Model/PartnerQuoteVendorResult.md)
 
 ### Authorization
 
@@ -8787,6 +9019,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\PartnerResource**](../Model/PartnerResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **partnersUsersActionsCreate**
+> \Ageras\Api\PartnerUserResource partnersUsersActionsCreate($partner_id,  $partner_user_id , $partner_user_action_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$partner_user_id = "partner_user_id_example"; // string | 
+$partner_user_action_resource = new \Ageras\Api\PartnerUserActionResource(); // \Ageras\Api\PartnerUserActionResource | 
+
+try {
+    $result = $api_instance->partnersUsersActionsCreate($partner_id,  $partner_user_id , $partner_user_action_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersUsersActionsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **partner_user_id** | **string**|  |
+ **partner_user_action_resource** | [**\Ageras\Api\PartnerUserActionResource**](../Model/\Ageras\Api\PartnerUserActionResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\PartnerUserResource**](../Model/PartnerUserResource.md)
 
 ### Authorization
 

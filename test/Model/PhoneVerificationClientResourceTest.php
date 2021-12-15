@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerQuoteProductPriceResourceTest
+ * PhoneVerificationClientResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerQuoteProductPriceResourceTest Class Doc Comment
+ * PhoneVerificationClientResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerQuoteProductPriceResource
+// * @description PhoneVerificationClientResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerQuoteProductPriceResourceTest extends TestCase
+class PhoneVerificationClientResourceTest extends TestCase
 {
 
     /**
@@ -75,65 +75,17 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test "PartnerQuoteProductPriceResource"
+     * Test "PhoneVerificationClientResource"
      */
-    public function testPartnerQuoteProductPriceResource()
+    public function testPhoneVerificationClientResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "token"
      */
-    public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "product"
-     */
-    public function testPropertyProduct()
-    {
-
-    }
-
-    /**
-     * Test attribute "partner_revenue_segment"
-     */
-    public function testPropertyPartnerRevenueSegment()
-    {
-
-    }
-
-    /**
-     * Test attribute "minimum_quantity"
-     */
-    public function testPropertyMinimumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "maximum_quantity"
-     */
-    public function testPropertyMaximumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "price_per_unit_excl_vat"
-     */
-    public function testPropertyPricePerUnitExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_fixed_price"
-     */
-    public function testPropertyIsFixedPrice()
+    public function testPropertyToken()
     {
 
     }

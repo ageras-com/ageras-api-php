@@ -490,4 +490,20 @@ class PartnerResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "auto_quoting_enabled"
+     */
+    public function testPropertyAutoQuotingEnabled()
+    {
+
+    }
+
+    /**
+     * Test attribute "marketing_consent"
+     */
+    public function testPropertyMarketingConsent()
+    {
+
+    }
+
 }

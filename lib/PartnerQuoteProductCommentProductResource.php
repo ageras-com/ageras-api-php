@@ -1,6 +1,6 @@
 <?php
 /**
- * PhoneVerificationResource
+ * PartnerQuoteProductCommentProductResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PhoneVerificationResource Class Doc Comment
+ * PartnerQuoteProductCommentProductResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhoneVerificationResource implements ArrayAccess
+class PartnerQuoteProductCommentProductResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,14 @@ class PhoneVerificationResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PhoneVerificationResource';
+    protected static $swaggerModelName = 'PartnerQuoteProductCommentProductResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'phone_number' => 'string',
-        'geo_code' => 'string',
-        'verification_code' => 'string',
-        'verified_at' => 'string',
-        'created_at' => 'string',
-        'client' => '\Ageras\Api\PhoneVerificationClientResource'
+        'id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -73,13 +67,7 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'phone_number' => 'phone_number',
-        'geo_code' => 'geo_code',
-        'verification_code' => 'verification_code',
-        'verified_at' => 'verified_at',
-        'created_at' => 'created_at',
-        'client' => 'client'
+        'id' => 'id'
     ];
 
 
@@ -88,13 +76,7 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'phone_number' => 'setPhoneNumber',
-        'geo_code' => 'setGeoCode',
-        'verification_code' => 'setVerificationCode',
-        'verified_at' => 'setVerifiedAt',
-        'created_at' => 'setCreatedAt',
-        'client' => 'setClient'
+        'id' => 'setId'
     ];
 
 
@@ -103,13 +85,7 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'phone_number' => 'getPhoneNumber',
-        'geo_code' => 'getGeoCode',
-        'verification_code' => 'getVerificationCode',
-        'verified_at' => 'getVerifiedAt',
-        'created_at' => 'getCreatedAt',
-        'client' => 'getClient'
+        'id' => 'getId'
     ];
 
     public static function attributeMap()
@@ -144,12 +120,6 @@ class PhoneVerificationResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['verification_code'] = isset($data['verification_code']) ? $data['verification_code'] : null;
-        $this->container['verified_at'] = isset($data['verified_at']) ? $data['verified_at'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
     }
 
     /**
@@ -194,132 +164,6 @@ class PhoneVerificationResource implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone_number
-     * @return string
-     */
-    public function getPhoneNumber()
-    {
-        return $this->container['phone_number'];
-    }
-
-    /**
-     * Sets phone_number
-     * @param string $phone_number
-     * @return $this
-     */
-    public function setPhoneNumber($phone_number)
-    {
-        $this->container['phone_number'] = $phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets geo_code
-     * @return string
-     */
-    public function getGeoCode()
-    {
-        return $this->container['geo_code'];
-    }
-
-    /**
-     * Sets geo_code
-     * @param string $geo_code
-     * @return $this
-     */
-    public function setGeoCode($geo_code)
-    {
-        $this->container['geo_code'] = $geo_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verification_code
-     * @return string
-     */
-    public function getVerificationCode()
-    {
-        return $this->container['verification_code'];
-    }
-
-    /**
-     * Sets verification_code
-     * @param string $verification_code
-     * @return $this
-     */
-    public function setVerificationCode($verification_code)
-    {
-        $this->container['verification_code'] = $verification_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verified_at
-     * @return string
-     */
-    public function getVerifiedAt()
-    {
-        return $this->container['verified_at'];
-    }
-
-    /**
-     * Sets verified_at
-     * @param string $verified_at
-     * @return $this
-     */
-    public function setVerifiedAt($verified_at)
-    {
-        $this->container['verified_at'] = $verified_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param string $created_at
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets client
-     * @return \Ageras\Api\PhoneVerificationClientResource
-     */
-    public function getClient()
-    {
-        return $this->container['client'];
-    }
-
-    /**
-     * Sets client
-     * @param \Ageras\Api\PhoneVerificationClientResource $client
-     * @return $this
-     */
-    public function setClient($client)
-    {
-        $this->container['client'] = $client;
 
         return $this;
     }

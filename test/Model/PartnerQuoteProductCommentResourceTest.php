@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerQuoteProductPriceResourceTest
+ * PartnerQuoteProductCommentResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerQuoteProductPriceResourceTest Class Doc Comment
+ * PartnerQuoteProductCommentResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerQuoteProductPriceResource
+// * @description PartnerQuoteProductCommentResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerQuoteProductPriceResourceTest extends TestCase
+class PartnerQuoteProductCommentResourceTest extends TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test "PartnerQuoteProductPriceResource"
+     * Test "PartnerQuoteProductCommentResource"
      */
-    public function testPartnerQuoteProductPriceResource()
+    public function testPartnerQuoteProductCommentResource()
     {
 
     }
@@ -99,41 +99,9 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test attribute "partner_revenue_segment"
+     * Test attribute "comment"
      */
-    public function testPropertyPartnerRevenueSegment()
-    {
-
-    }
-
-    /**
-     * Test attribute "minimum_quantity"
-     */
-    public function testPropertyMinimumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "maximum_quantity"
-     */
-    public function testPropertyMaximumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "price_per_unit_excl_vat"
-     */
-    public function testPropertyPricePerUnitExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_fixed_price"
-     */
-    public function testPropertyIsFixedPrice()
+    public function testPropertyComment()
     {
 
     }

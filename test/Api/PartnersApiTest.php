@@ -1364,6 +1364,39 @@ class PartnersApiTest extends TestCase
     }
 
     /**
+     * Test case for partnersQuoteproductcommentsCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductcommentsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteproductcommentsDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductcommentsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuoteproductcommentsIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersQuoteproductcommentsIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersQuoteproductpricesCreate
      *
      * .
@@ -1392,6 +1425,17 @@ class PartnersApiTest extends TestCase
      *
      */
     public function testPartnersQuoteproductpricesIndex()
+    {
+
+    }
+
+    /**
+     * Test case for partnersQuotevendorsIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersQuotevendorsIndex()
     {
 
     }
@@ -1733,6 +1777,17 @@ class PartnersApiTest extends TestCase
      *
      */
     public function testPartnersUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersUsersActionsCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersUsersActionsCreate()
     {
 
     }

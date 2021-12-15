@@ -104,7 +104,9 @@ class PartnerResource implements ArrayAccess
         'association' => '\Ageras\Api\PartnerAssociationResource',
         'has_portal_access' => 'bool',
         'company_size' => '\Ageras\Api\CompanySizeResource',
-        'hide_from_website' => 'bool'
+        'hide_from_website' => 'bool',
+        'auto_quoting_enabled' => 'bool',
+        'marketing_consent' => '\Ageras\Api\PartnerMarketingConsentResource'
     ];
 
     public static function swaggerTypes()
@@ -167,7 +169,9 @@ class PartnerResource implements ArrayAccess
         'association' => 'association',
         'has_portal_access' => 'has_portal_access',
         'company_size' => 'company_size',
-        'hide_from_website' => 'hide_from_website'
+        'hide_from_website' => 'hide_from_website',
+        'auto_quoting_enabled' => 'auto_quoting_enabled',
+        'marketing_consent' => 'marketing_consent'
     ];
 
 
@@ -226,7 +230,9 @@ class PartnerResource implements ArrayAccess
         'association' => 'setAssociation',
         'has_portal_access' => 'setHasPortalAccess',
         'company_size' => 'setCompanySize',
-        'hide_from_website' => 'setHideFromWebsite'
+        'hide_from_website' => 'setHideFromWebsite',
+        'auto_quoting_enabled' => 'setAutoQuotingEnabled',
+        'marketing_consent' => 'setMarketingConsent'
     ];
 
 
@@ -285,7 +291,9 @@ class PartnerResource implements ArrayAccess
         'association' => 'getAssociation',
         'has_portal_access' => 'getHasPortalAccess',
         'company_size' => 'getCompanySize',
-        'hide_from_website' => 'getHideFromWebsite'
+        'hide_from_website' => 'getHideFromWebsite',
+        'auto_quoting_enabled' => 'getAutoQuotingEnabled',
+        'marketing_consent' => 'getMarketingConsent'
     ];
 
     public static function attributeMap()
@@ -410,6 +418,8 @@ class PartnerResource implements ArrayAccess
         $this->container['has_portal_access'] = isset($data['has_portal_access']) ? $data['has_portal_access'] : false;
         $this->container['company_size'] = isset($data['company_size']) ? $data['company_size'] : null;
         $this->container['hide_from_website'] = isset($data['hide_from_website']) ? $data['hide_from_website'] : false;
+        $this->container['auto_quoting_enabled'] = isset($data['auto_quoting_enabled']) ? $data['auto_quoting_enabled'] : false;
+        $this->container['marketing_consent'] = isset($data['marketing_consent']) ? $data['marketing_consent'] : null;
     }
 
     /**
@@ -1530,6 +1540,48 @@ class PartnerResource implements ArrayAccess
     public function setHideFromWebsite($hide_from_website)
     {
         $this->container['hide_from_website'] = $hide_from_website;
+
+        return $this;
+    }
+
+    /**
+     * Gets auto_quoting_enabled
+     * @return bool
+     */
+    public function getAutoQuotingEnabled()
+    {
+        return $this->container['auto_quoting_enabled'];
+    }
+
+    /**
+     * Sets auto_quoting_enabled
+     * @param bool $auto_quoting_enabled enable/disable autoquoting for partner
+     * @return $this
+     */
+    public function setAutoQuotingEnabled($auto_quoting_enabled)
+    {
+        $this->container['auto_quoting_enabled'] = $auto_quoting_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketing_consent
+     * @return \Ageras\Api\PartnerMarketingConsentResource
+     */
+    public function getMarketingConsent()
+    {
+        return $this->container['marketing_consent'];
+    }
+
+    /**
+     * Sets marketing_consent
+     * @param \Ageras\Api\PartnerMarketingConsentResource $marketing_consent
+     * @return $this
+     */
+    public function setMarketingConsent($marketing_consent)
+    {
+        $this->container['marketing_consent'] = $marketing_consent;
 
         return $this;
     }

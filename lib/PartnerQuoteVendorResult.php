@@ -1,6 +1,6 @@
 <?php
 /**
- * PhoneVerificationResource
+ * PartnerQuoteVendorResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PhoneVerificationResource Class Doc Comment
+ * PartnerQuoteVendorResult Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhoneVerificationResource implements ArrayAccess
+class PartnerQuoteVendorResult implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,19 @@ class PhoneVerificationResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PhoneVerificationResource';
+    protected static $swaggerModelName = 'PartnerQuoteVendorResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'phone_number' => 'string',
-        'geo_code' => 'string',
-        'verification_code' => 'string',
-        'verified_at' => 'string',
-        'created_at' => 'string',
-        'client' => '\Ageras\Api\PhoneVerificationClientResource'
+        'page' => 'int',
+        'limit' => 'int',
+        'pages' => 'int',
+        'total' => 'int',
+        'data' => '\Ageras\Api\PartnerQuoteVendorResource[]',
+        'did_you_mean' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,13 +72,12 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'phone_number' => 'phone_number',
-        'geo_code' => 'geo_code',
-        'verification_code' => 'verification_code',
-        'verified_at' => 'verified_at',
-        'created_at' => 'created_at',
-        'client' => 'client'
+        'page' => 'page',
+        'limit' => 'limit',
+        'pages' => 'pages',
+        'total' => 'total',
+        'data' => 'data',
+        'did_you_mean' => 'didYouMean'
     ];
 
 
@@ -88,13 +86,12 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'phone_number' => 'setPhoneNumber',
-        'geo_code' => 'setGeoCode',
-        'verification_code' => 'setVerificationCode',
-        'verified_at' => 'setVerifiedAt',
-        'created_at' => 'setCreatedAt',
-        'client' => 'setClient'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'pages' => 'setPages',
+        'total' => 'setTotal',
+        'data' => 'setData',
+        'did_you_mean' => 'setDidYouMean'
     ];
 
 
@@ -103,13 +100,12 @@ class PhoneVerificationResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'phone_number' => 'getPhoneNumber',
-        'geo_code' => 'getGeoCode',
-        'verification_code' => 'getVerificationCode',
-        'verified_at' => 'getVerifiedAt',
-        'created_at' => 'getCreatedAt',
-        'client' => 'getClient'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'pages' => 'getPages',
+        'total' => 'getTotal',
+        'data' => 'getData',
+        'did_you_mean' => 'getDidYouMean'
     ];
 
     public static function attributeMap()
@@ -143,13 +139,12 @@ class PhoneVerificationResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['verification_code'] = isset($data['verification_code']) ? $data['verification_code'] : null;
-        $this->container['verified_at'] = isset($data['verified_at']) ? $data['verified_at'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['pages'] = isset($data['pages']) ? $data['pages'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['did_you_mean'] = isset($data['did_you_mean']) ? $data['did_you_mean'] : null;
     }
 
     /**
@@ -178,148 +173,127 @@ class PhoneVerificationResource implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets page
      * @return int
      */
-    public function getId()
+    public function getPage()
     {
-        return $this->container['id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets page
+     * @param int $page Current Page.
      * @return $this
      */
-    public function setId($id)
+    public function setPage($page)
     {
-        $this->container['id'] = $id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
+     * Gets limit
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param int $limit Number of results per page.
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets pages
+     * @return int
+     */
+    public function getPages()
+    {
+        return $this->container['pages'];
+    }
+
+    /**
+     * Sets pages
+     * @param int $pages Number of pages.
+     * @return $this
+     */
+    public function setPages($pages)
+    {
+        $this->container['pages'] = $pages;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     * @param int $total Total number of results.
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Ageras\Api\PartnerQuoteVendorResource[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Ageras\Api\PartnerQuoteVendorResource[] $data The result.
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets did_you_mean
      * @return string
      */
-    public function getPhoneNumber()
+    public function getDidYouMean()
     {
-        return $this->container['phone_number'];
+        return $this->container['did_you_mean'];
     }
 
     /**
-     * Sets phone_number
-     * @param string $phone_number
+     * Sets did_you_mean
+     * @param string $did_you_mean Options for related or alternative searches.
      * @return $this
      */
-    public function setPhoneNumber($phone_number)
+    public function setDidYouMean($did_you_mean)
     {
-        $this->container['phone_number'] = $phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets geo_code
-     * @return string
-     */
-    public function getGeoCode()
-    {
-        return $this->container['geo_code'];
-    }
-
-    /**
-     * Sets geo_code
-     * @param string $geo_code
-     * @return $this
-     */
-    public function setGeoCode($geo_code)
-    {
-        $this->container['geo_code'] = $geo_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verification_code
-     * @return string
-     */
-    public function getVerificationCode()
-    {
-        return $this->container['verification_code'];
-    }
-
-    /**
-     * Sets verification_code
-     * @param string $verification_code
-     * @return $this
-     */
-    public function setVerificationCode($verification_code)
-    {
-        $this->container['verification_code'] = $verification_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verified_at
-     * @return string
-     */
-    public function getVerifiedAt()
-    {
-        return $this->container['verified_at'];
-    }
-
-    /**
-     * Sets verified_at
-     * @param string $verified_at
-     * @return $this
-     */
-    public function setVerifiedAt($verified_at)
-    {
-        $this->container['verified_at'] = $verified_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param string $created_at
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets client
-     * @return \Ageras\Api\PhoneVerificationClientResource
-     */
-    public function getClient()
-    {
-        return $this->container['client'];
-    }
-
-    /**
-     * Sets client
-     * @param \Ageras\Api\PhoneVerificationClientResource $client
-     * @return $this
-     */
-    public function setClient($client)
-    {
-        $this->container['client'] = $client;
+        $this->container['did_you_mean'] = $did_you_mean;
 
         return $this;
     }

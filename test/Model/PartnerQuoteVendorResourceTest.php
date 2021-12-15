@@ -1,6 +1,6 @@
 <?php
 /**
- * PartnerQuoteProductPriceResourceTest
+ * PartnerQuoteVendorResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * PartnerQuoteProductPriceResourceTest Class Doc Comment
+ * PartnerQuoteVendorResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartnerQuoteProductPriceResource
+// * @description PartnerQuoteVendorResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartnerQuoteProductPriceResourceTest extends TestCase
+class PartnerQuoteVendorResourceTest extends TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test "PartnerQuoteProductPriceResource"
+     * Test "PartnerQuoteVendorResource"
      */
-    public function testPartnerQuoteProductPriceResource()
+    public function testPartnerQuoteVendorResource()
     {
 
     }
@@ -91,49 +91,17 @@ class PartnerQuoteProductPriceResourceTest extends TestCase
     }
 
     /**
-     * Test attribute "product"
+     * Test attribute "partner"
      */
-    public function testPropertyProduct()
+    public function testPropertyPartner()
     {
 
     }
 
     /**
-     * Test attribute "partner_revenue_segment"
+     * Test attribute "integration_identifier"
      */
-    public function testPropertyPartnerRevenueSegment()
-    {
-
-    }
-
-    /**
-     * Test attribute "minimum_quantity"
-     */
-    public function testPropertyMinimumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "maximum_quantity"
-     */
-    public function testPropertyMaximumQuantity()
-    {
-
-    }
-
-    /**
-     * Test attribute "price_per_unit_excl_vat"
-     */
-    public function testPropertyPricePerUnitExclVat()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_fixed_price"
-     */
-    public function testPropertyIsFixedPrice()
+    public function testPropertyIntegrationIdentifier()
     {
 
     }

@@ -130,4 +130,12 @@ class PhoneVerificationResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "client"
+     */
+    public function testPropertyClient()
+    {
+
+    }
+
 }

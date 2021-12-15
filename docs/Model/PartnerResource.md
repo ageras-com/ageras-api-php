@@ -54,6 +54,8 @@ Name | Type | Description | Notes
 **has_portal_access** | **bool** | True if partner has access to the Partner portal. | [optional] [default to false]
 **company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
 **hide_from_website** | **bool** | Hide from public website | [optional] [default to false]
+**auto_quoting_enabled** | **bool** | enable/disable autoquoting for partner | [optional] [default to false]
+**marketing_consent** | [**\Ageras\Api\PartnerMarketingConsentResource**](PartnerMarketingConsentResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

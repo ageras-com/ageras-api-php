@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **minimum_quantity** | **int** |  | [optional] 
 **maximum_quantity** | **int** |  | [optional] 
 **price_per_unit_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**is_fixed_price** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

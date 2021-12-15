@@ -210,6 +210,7 @@ class PartnersApi
      *    'has_active_contract' => bool,
      *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
+     *    'partner_assignee_client_consultant_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -252,6 +253,7 @@ class PartnersApi
      *    'has_active_contract' => bool,
      *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
+     *    'partner_assignee_client_consultant_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -364,6 +366,10 @@ class PartnersApi
         // query params
         if (isset($criteria['wants_exclusive_leads'])) {
             $queryParams['wants_exclusive_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['wants_exclusive_leads']);
+        }
+        // query params
+        if (isset($criteria['partner_assignee_client_consultant_employee_id'])) {
+            $queryParams['partner_assignee_client_consultant_employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_assignee_client_consultant_employee_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -10131,6 +10137,7 @@ class PartnersApi
      *    'has_active_contract' => bool,
      *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
+     *    'partner_assignee_client_consultant_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -10173,6 +10180,7 @@ class PartnersApi
      *    'has_active_contract' => bool,
      *    'has_unused_allocations' => bool,
      *    'wants_exclusive_leads' => bool,
+     *    'partner_assignee_client_consultant_employee_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -10285,6 +10293,10 @@ class PartnersApi
         // query params
         if (isset($criteria['wants_exclusive_leads'])) {
             $queryParams['wants_exclusive_leads'] = $this->apiClient->getSerializer()->toQueryValue($criteria['wants_exclusive_leads']);
+        }
+        // query params
+        if (isset($criteria['partner_assignee_client_consultant_employee_id'])) {
+            $queryParams['partner_assignee_client_consultant_employee_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_assignee_client_consultant_employee_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -12625,6 +12637,302 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersQuoteproductcommentsCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerQuoteProductCommentResource $partner_quote_product_comment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerQuoteProductCommentResource
+     */
+    public function partnersQuoteproductcommentsCreate($partner_id , $partner_quote_product_comment_resource)
+    {
+        list($response) = $this->partnersQuoteproductcommentsCreateWithHttpInfo($partner_id, $partner_quote_product_comment_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteproductcommentsCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerQuoteProductCommentResource $partner_quote_product_comment_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerQuoteProductCommentResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteproductcommentsCreateWithHttpInfo($partner_id , $partner_quote_product_comment_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteproductcomments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_quote_product_comment_resource)) {
+            $_tempBody = $partner_quote_product_comment_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerQuoteProductCommentResource',
+                '/partners/{partner_id}/quoteproductcomments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerQuoteProductCommentResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteProductCommentResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersQuoteproductcommentsDelete
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $quote_product_comment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersQuoteproductcommentsDelete($partner_id,  $quote_product_comment_id )
+    {
+        list($response) = $this->partnersQuoteproductcommentsDeleteWithHttpInfo($partner_id, $quote_product_comment_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteproductcommentsDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $quote_product_comment_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteproductcommentsDeleteWithHttpInfo($partner_id,  $quote_product_comment_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteproductcomments/{quote_product_comment_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($quote_product_comment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "quote_product_comment_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($quote_product_comment_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/quoteproductcomments/{quote_product_comment_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersQuoteproductcommentsIndex
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerQuoteProductCommentResult
+     */
+    public function partnersQuoteproductcommentsIndex($partner_id , $criteria = [])
+    {
+        list($response) = $this->partnersQuoteproductcommentsIndexWithHttpInfo($partner_id, $criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuoteproductcommentsIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param $criteria = [
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerQuoteProductCommentResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuoteproductcommentsIndexWithHttpInfo($partner_id , $criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/quoteproductcomments";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerQuoteProductCommentResult',
+                '/partners/{partner_id}/quoteproductcomments'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerQuoteProductCommentResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteProductCommentResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersQuoteproductpricesCreate
      *
      * 
@@ -12912,6 +13220,111 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteProductPriceResult', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersQuotevendorsIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerQuoteVendorResult
+     */
+    public function partnersQuotevendorsIndex($criteria = [])
+    {
+        list($response) = $this->partnersQuotevendorsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation partnersQuotevendorsIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'partner_id' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerQuoteVendorResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersQuotevendorsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/partners/quotevendors";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['partner_id'])) {
+            $queryParams['partner_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['partner_id']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerQuoteVendorResult',
+                '/partners/quotevendors'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerQuoteVendorResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerQuoteVendorResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -16180,6 +16593,110 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersUsersActionsCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_user_id 
+     * @param \Ageras\Api\PartnerUserActionResource $partner_user_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerUserResource
+     */
+    public function partnersUsersActionsCreate($partner_id,  $partner_user_id , $partner_user_action_resource)
+    {
+        list($response) = $this->partnersUsersActionsCreateWithHttpInfo($partner_id, $partner_user_id, $partner_user_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersUsersActionsCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_user_id 
+     * @param \Ageras\Api\PartnerUserActionResource $partner_user_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerUserResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersUsersActionsCreateWithHttpInfo($partner_id,  $partner_user_id , $partner_user_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/users/{partner_user_id}/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_user_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_user_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_user_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_user_action_resource)) {
+            $_tempBody = $partner_user_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerUserResource',
+                '/partners/{partner_id}/users/{partner_user_id}/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerUserResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerUserResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

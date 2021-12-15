@@ -1,6 +1,6 @@
 <?php
 /**
- * PhoneVerificationResource
+ * PartnerQuoteProductCommentResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * PhoneVerificationResource Class Doc Comment
+ * PartnerQuoteProductCommentResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhoneVerificationResource implements ArrayAccess
+class PartnerQuoteProductCommentResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PhoneVerificationResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PhoneVerificationResource';
+    protected static $swaggerModelName = 'PartnerQuoteProductCommentResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,12 +55,8 @@ class PhoneVerificationResource implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'phone_number' => 'string',
-        'geo_code' => 'string',
-        'verification_code' => 'string',
-        'verified_at' => 'string',
-        'created_at' => 'string',
-        'client' => '\Ageras\Api\PhoneVerificationClientResource'
+        'product' => '\Ageras\Api\PartnerQuoteProductCommentProductResource',
+        'comment' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -74,12 +70,8 @@ class PhoneVerificationResource implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'phone_number' => 'phone_number',
-        'geo_code' => 'geo_code',
-        'verification_code' => 'verification_code',
-        'verified_at' => 'verified_at',
-        'created_at' => 'created_at',
-        'client' => 'client'
+        'product' => 'product',
+        'comment' => 'comment'
     ];
 
 
@@ -89,12 +81,8 @@ class PhoneVerificationResource implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'phone_number' => 'setPhoneNumber',
-        'geo_code' => 'setGeoCode',
-        'verification_code' => 'setVerificationCode',
-        'verified_at' => 'setVerifiedAt',
-        'created_at' => 'setCreatedAt',
-        'client' => 'setClient'
+        'product' => 'setProduct',
+        'comment' => 'setComment'
     ];
 
 
@@ -104,12 +92,8 @@ class PhoneVerificationResource implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'phone_number' => 'getPhoneNumber',
-        'geo_code' => 'getGeoCode',
-        'verification_code' => 'getVerificationCode',
-        'verified_at' => 'getVerifiedAt',
-        'created_at' => 'getCreatedAt',
-        'client' => 'getClient'
+        'product' => 'getProduct',
+        'comment' => 'getComment'
     ];
 
     public static function attributeMap()
@@ -144,12 +128,8 @@ class PhoneVerificationResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
-        $this->container['verification_code'] = isset($data['verification_code']) ? $data['verification_code'] : null;
-        $this->container['verified_at'] = isset($data['verified_at']) ? $data['verified_at'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
+        $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
     }
 
     /**
@@ -199,127 +179,43 @@ class PhoneVerificationResource implements ArrayAccess
     }
 
     /**
-     * Gets phone_number
-     * @return string
+     * Gets product
+     * @return \Ageras\Api\PartnerQuoteProductCommentProductResource
      */
-    public function getPhoneNumber()
+    public function getProduct()
     {
-        return $this->container['phone_number'];
+        return $this->container['product'];
     }
 
     /**
-     * Sets phone_number
-     * @param string $phone_number
+     * Sets product
+     * @param \Ageras\Api\PartnerQuoteProductCommentProductResource $product
      * @return $this
      */
-    public function setPhoneNumber($phone_number)
+    public function setProduct($product)
     {
-        $this->container['phone_number'] = $phone_number;
+        $this->container['product'] = $product;
 
         return $this;
     }
 
     /**
-     * Gets geo_code
+     * Gets comment
      * @return string
      */
-    public function getGeoCode()
+    public function getComment()
     {
-        return $this->container['geo_code'];
+        return $this->container['comment'];
     }
 
     /**
-     * Sets geo_code
-     * @param string $geo_code
+     * Sets comment
+     * @param string $comment
      * @return $this
      */
-    public function setGeoCode($geo_code)
+    public function setComment($comment)
     {
-        $this->container['geo_code'] = $geo_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verification_code
-     * @return string
-     */
-    public function getVerificationCode()
-    {
-        return $this->container['verification_code'];
-    }
-
-    /**
-     * Sets verification_code
-     * @param string $verification_code
-     * @return $this
-     */
-    public function setVerificationCode($verification_code)
-    {
-        $this->container['verification_code'] = $verification_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets verified_at
-     * @return string
-     */
-    public function getVerifiedAt()
-    {
-        return $this->container['verified_at'];
-    }
-
-    /**
-     * Sets verified_at
-     * @param string $verified_at
-     * @return $this
-     */
-    public function setVerifiedAt($verified_at)
-    {
-        $this->container['verified_at'] = $verified_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param string $created_at
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets client
-     * @return \Ageras\Api\PhoneVerificationClientResource
-     */
-    public function getClient()
-    {
-        return $this->container['client'];
-    }
-
-    /**
-     * Sets client
-     * @param \Ageras\Api\PhoneVerificationClientResource $client
-     * @return $this
-     */
-    public function setClient($client)
-    {
-        $this->container['client'] = $client;
+        $this->container['comment'] = $comment;
 
         return $this;
     }
