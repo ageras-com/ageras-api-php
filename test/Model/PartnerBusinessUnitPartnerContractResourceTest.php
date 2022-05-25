@@ -155,6 +155,14 @@ class PartnerBusinessUnitPartnerContractResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "allocation_boosts"
+     */
+    public function testPropertyAllocationBoosts()
+    {
+
+    }
+
+    /**
      * Test attribute "business_unit_mrr"
      */
     public function testPropertyBusinessUnitMrr()

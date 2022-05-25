@@ -138,4 +138,12 @@ class PhoneVerificationResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "latest_lead_id"
+     */
+    public function testPropertyLatestLeadId()
+    {
+
+    }
+
 }

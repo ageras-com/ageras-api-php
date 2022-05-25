@@ -31,6 +31,7 @@ $criteria = [
         'tag' => "tag_example"; // string | List data fields by tag
         'type' => "type_example"; // string | List data fields by type
         'is_active' => false; // bool | Filter by whether a data field is active
+        'identifier' => "identifier_example"; // string | Filter data fields by identifier
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
  **tag** | **string**| List data fields by tag | [optional]
  **type** | **string**| List data fields by type | [optional]
  **is_active** | **bool**| Filter by whether a data field is active | [optional] [default to false]
+ **identifier** | **string**| Filter data fields by identifier | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

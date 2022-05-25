@@ -56,9 +56,16 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'company_name' => 'string',
+        'company_information' => 'string',
+        'slug' => 'string',
+        'logo' => 'string',
         'has_marketing_package' => 'bool',
         'is_subscription_paused' => 'bool',
-        'features' => 'string[]'
+        'features' => 'string[]',
+        'rating' => '\Ageras\Api\PartnerRatingResource',
+        'badges' => '\Ageras\Api\PartnerBadgeResource[]',
+        'geo' => '\Ageras\Api\PartnerGeoResource',
+        'public_employees' => '\Ageras\Api\PartnerBusinessUnitPartnerUserResource[]'
     ];
 
     public static function swaggerTypes()
@@ -73,9 +80,16 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'company_name' => 'company_name',
+        'company_information' => 'company_information',
+        'slug' => 'slug',
+        'logo' => 'logo',
         'has_marketing_package' => 'has_marketing_package',
         'is_subscription_paused' => 'is_subscription_paused',
-        'features' => 'features'
+        'features' => 'features',
+        'rating' => 'rating',
+        'badges' => 'badges',
+        'geo' => 'geo',
+        'public_employees' => 'public_employees'
     ];
 
 
@@ -86,9 +100,16 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'company_name' => 'setCompanyName',
+        'company_information' => 'setCompanyInformation',
+        'slug' => 'setSlug',
+        'logo' => 'setLogo',
         'has_marketing_package' => 'setHasMarketingPackage',
         'is_subscription_paused' => 'setIsSubscriptionPaused',
-        'features' => 'setFeatures'
+        'features' => 'setFeatures',
+        'rating' => 'setRating',
+        'badges' => 'setBadges',
+        'geo' => 'setGeo',
+        'public_employees' => 'setPublicEmployees'
     ];
 
 
@@ -99,9 +120,16 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'company_name' => 'getCompanyName',
+        'company_information' => 'getCompanyInformation',
+        'slug' => 'getSlug',
+        'logo' => 'getLogo',
         'has_marketing_package' => 'getHasMarketingPackage',
         'is_subscription_paused' => 'getIsSubscriptionPaused',
-        'features' => 'getFeatures'
+        'features' => 'getFeatures',
+        'rating' => 'getRating',
+        'badges' => 'getBadges',
+        'geo' => 'getGeo',
+        'public_employees' => 'getPublicEmployees'
     ];
 
     public static function attributeMap()
@@ -137,9 +165,16 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['company_information'] = isset($data['company_information']) ? $data['company_information'] : null;
+        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
+        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['has_marketing_package'] = isset($data['has_marketing_package']) ? $data['has_marketing_package'] : false;
         $this->container['is_subscription_paused'] = isset($data['is_subscription_paused']) ? $data['is_subscription_paused'] : false;
         $this->container['features'] = isset($data['features']) ? $data['features'] : null;
+        $this->container['rating'] = isset($data['rating']) ? $data['rating'] : null;
+        $this->container['badges'] = isset($data['badges']) ? $data['badges'] : null;
+        $this->container['geo'] = isset($data['geo']) ? $data['geo'] : null;
+        $this->container['public_employees'] = isset($data['public_employees']) ? $data['public_employees'] : null;
     }
 
     /**
@@ -210,6 +245,69 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets company_information
+     * @return string
+     */
+    public function getCompanyInformation()
+    {
+        return $this->container['company_information'];
+    }
+
+    /**
+     * Sets company_information
+     * @param string $company_information
+     * @return $this
+     */
+    public function setCompanyInformation($company_information)
+    {
+        $this->container['company_information'] = $company_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     * @param string $slug
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo
+     * @return string
+     */
+    public function getLogo()
+    {
+        return $this->container['logo'];
+    }
+
+    /**
+     * Sets logo
+     * @param string $logo
+     * @return $this
+     */
+    public function setLogo($logo)
+    {
+        $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
      * Gets has_marketing_package
      * @return bool
      */
@@ -268,6 +366,90 @@ class PartnerBusinessUnitPartnerResource implements ArrayAccess
     public function setFeatures($features)
     {
         $this->container['features'] = $features;
+
+        return $this;
+    }
+
+    /**
+     * Gets rating
+     * @return \Ageras\Api\PartnerRatingResource
+     */
+    public function getRating()
+    {
+        return $this->container['rating'];
+    }
+
+    /**
+     * Sets rating
+     * @param \Ageras\Api\PartnerRatingResource $rating
+     * @return $this
+     */
+    public function setRating($rating)
+    {
+        $this->container['rating'] = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Gets badges
+     * @return \Ageras\Api\PartnerBadgeResource[]
+     */
+    public function getBadges()
+    {
+        return $this->container['badges'];
+    }
+
+    /**
+     * Sets badges
+     * @param \Ageras\Api\PartnerBadgeResource[] $badges
+     * @return $this
+     */
+    public function setBadges($badges)
+    {
+        $this->container['badges'] = $badges;
+
+        return $this;
+    }
+
+    /**
+     * Gets geo
+     * @return \Ageras\Api\PartnerGeoResource
+     */
+    public function getGeo()
+    {
+        return $this->container['geo'];
+    }
+
+    /**
+     * Sets geo
+     * @param \Ageras\Api\PartnerGeoResource $geo
+     * @return $this
+     */
+    public function setGeo($geo)
+    {
+        $this->container['geo'] = $geo;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_employees
+     * @return \Ageras\Api\PartnerBusinessUnitPartnerUserResource[]
+     */
+    public function getPublicEmployees()
+    {
+        return $this->container['public_employees'];
+    }
+
+    /**
+     * Sets public_employees
+     * @param \Ageras\Api\PartnerBusinessUnitPartnerUserResource[] $public_employees
+     * @return $this
+     */
+    public function setPublicEmployees($public_employees)
+    {
+        $this->container['public_employees'] = $public_employees;
 
         return $this;
     }

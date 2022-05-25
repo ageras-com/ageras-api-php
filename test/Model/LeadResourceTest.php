@@ -307,6 +307,14 @@ class LeadResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "allocation_suggestions_info"
+     */
+    public function testPropertyAllocationSuggestionsInfo()
+    {
+
+    }
+
+    /**
      * Test attribute "affiliate_campaign"
      */
     public function testPropertyAffiliateCampaign()

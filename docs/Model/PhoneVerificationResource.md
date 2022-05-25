@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **verified_at** | **string** |  | [optional] 
 **created_at** | **string** |  | [optional] 
 **client** | [**\Ageras\Api\PhoneVerificationClientResource**](PhoneVerificationClientResource.md) |  | [optional] 
+**latest_lead_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

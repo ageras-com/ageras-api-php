@@ -97,6 +97,7 @@ class DatafieldsApi
      *    'tag' => string,
      *    'type' => string,
      *    'is_active' => bool,
+     *    'identifier' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -120,6 +121,7 @@ class DatafieldsApi
      *    'tag' => string,
      *    'type' => string,
      *    'is_active' => bool,
+     *    'identifier' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -156,6 +158,10 @@ class DatafieldsApi
         // query params
         if (isset($criteria['is_active'])) {
             $queryParams['is_active'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_active']);
+        }
+        // query params
+        if (isset($criteria['identifier'])) {
+            $queryParams['identifier'] = $this->apiClient->getSerializer()->toQueryValue($criteria['identifier']);
         }
         // query params
         if (isset($criteria['limit'])) {

@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **accepted** | [**\Ageras\Api\LeadAcceptedResource**](LeadAcceptedResource.md) |  | [optional] 
 **offers_info** | [**\Ageras\Api\LeadOffersInfoResource**](LeadOffersInfoResource.md) |  | [optional] 
 **quotes_info** | [**\Ageras\Api\LeadQuotesInfoResource**](LeadQuotesInfoResource.md) |  | [optional] 
+**allocation_suggestions_info** | [**\Ageras\Api\LeadAllocationSuggestionsInfoResource**](LeadAllocationSuggestionsInfoResource.md) |  | [optional] 
 **affiliate_campaign** | [**\Ageras\Api\AffiliateCampaignResource**](AffiliateCampaignResource.md) |  | [optional] 
 **feedback** | [**\Ageras\Api\LeadFeedbackResource**](LeadFeedbackResource.md) |  | [optional] 
 **validator** | [**\Ageras\Api\LeadEmployeeResource**](LeadEmployeeResource.md) |  | [optional] 

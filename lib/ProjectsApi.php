@@ -1296,6 +1296,7 @@ class ProjectsApi
      *    'progress' => string,
      *    'sort' => string,
      *    'is_archived' => bool,
+     *    'is_lead_validated' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1325,6 +1326,7 @@ class ProjectsApi
      *    'progress' => string,
      *    'sort' => string,
      *    'is_archived' => bool,
+     *    'is_lead_validated' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1385,6 +1387,10 @@ class ProjectsApi
         // query params
         if (isset($criteria['is_archived'])) {
             $queryParams['is_archived'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_archived']);
+        }
+        // query params
+        if (isset($criteria['is_lead_validated'])) {
+            $queryParams['is_lead_validated'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_lead_validated']);
         }
         // query params
         if (isset($criteria['limit'])) {

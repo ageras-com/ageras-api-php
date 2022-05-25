@@ -114,4 +114,12 @@ class LeadIndustryResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "is_auto_allocatable"
+     */
+    public function testPropertyIsAutoAllocatable()
+    {
+
+    }
+
 }

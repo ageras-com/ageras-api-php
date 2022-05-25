@@ -121,6 +121,17 @@ class LeadsApiTest extends TestCase
     }
 
     /**
+     * Test case for leadsAllocationsuggestionsDelete
+     *
+     * .
+     *
+     */
+    public function testLeadsAllocationsuggestionsDelete()
+    {
+
+    }
+
+    /**
      * Test case for leadsCategoriesIndex
      *
      * .

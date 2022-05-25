@@ -780,6 +780,99 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsAllocationsuggestionsDelete
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param string $allocation_suggestion_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function leadsAllocationsuggestionsDelete($lead_id,  $allocation_suggestion_id )
+    {
+        list($response) = $this->leadsAllocationsuggestionsDeleteWithHttpInfo($lead_id, $allocation_suggestion_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsAllocationsuggestionsDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @param string $allocation_suggestion_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsAllocationsuggestionsDeleteWithHttpInfo($lead_id,  $allocation_suggestion_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/allocationsuggestions/{allocation_suggestion_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($allocation_suggestion_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "allocation_suggestion_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($allocation_suggestion_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/leads/{lead_id}/allocationsuggestions/{allocation_suggestion_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsCategoriesIndex
      *
      * 
@@ -4754,6 +4847,7 @@ class LeadsApi
      *    'title' => string,
      *    'geo_code' => string,
      *    'limit' => int,
+     *    'is_archived' => bool,
      *    'page' => int,
      *    'query' => string,
      * ]
@@ -4776,6 +4870,7 @@ class LeadsApi
      *    'title' => string,
      *    'geo_code' => string,
      *    'limit' => int,
+     *    'is_archived' => bool,
      *    'page' => int,
      *    'query' => string,
      * ]
@@ -4811,6 +4906,10 @@ class LeadsApi
         // query params
         if (isset($criteria['limit'])) {
             $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['is_archived'])) {
+            $queryParams['is_archived'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_archived']);
         }
         // query params
         if (isset($criteria['page'])) {

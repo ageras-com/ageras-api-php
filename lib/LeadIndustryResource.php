@@ -57,7 +57,8 @@ class LeadIndustryResource implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'slug' => 'string',
-        'identifier' => 'string'
+        'identifier' => 'string',
+        'is_auto_allocatable' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class LeadIndustryResource implements ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'slug' => 'slug',
-        'identifier' => 'identifier'
+        'identifier' => 'identifier',
+        'is_auto_allocatable' => 'is_auto_allocatable'
     ];
 
 
@@ -85,7 +87,8 @@ class LeadIndustryResource implements ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'slug' => 'setSlug',
-        'identifier' => 'setIdentifier'
+        'identifier' => 'setIdentifier',
+        'is_auto_allocatable' => 'setIsAutoAllocatable'
     ];
 
 
@@ -97,7 +100,8 @@ class LeadIndustryResource implements ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'slug' => 'getSlug',
-        'identifier' => 'getIdentifier'
+        'identifier' => 'getIdentifier',
+        'is_auto_allocatable' => 'getIsAutoAllocatable'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class LeadIndustryResource implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['is_auto_allocatable'] = isset($data['is_auto_allocatable']) ? $data['is_auto_allocatable'] : false;
     }
 
     /**
@@ -242,6 +247,27 @@ class LeadIndustryResource implements ArrayAccess
     public function setIdentifier($identifier)
     {
         $this->container['identifier'] = $identifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_auto_allocatable
+     * @return bool
+     */
+    public function getIsAutoAllocatable()
+    {
+        return $this->container['is_auto_allocatable'];
+    }
+
+    /**
+     * Sets is_auto_allocatable
+     * @param bool $is_auto_allocatable
+     * @return $this
+     */
+    public function setIsAutoAllocatable($is_auto_allocatable)
+    {
+        $this->container['is_auto_allocatable'] = $is_auto_allocatable;
 
         return $this;
     }

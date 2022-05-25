@@ -491,9 +491,33 @@ class PartnerResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "wants_overdue_invoice_reminders"
+     */
+    public function testPropertyWantsOverdueInvoiceReminders()
+    {
+
+    }
+
+    /**
      * Test attribute "auto_quoting_enabled"
      */
     public function testPropertyAutoQuotingEnabled()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_marketplace_recent_purchase_count"
+     */
+    public function testPropertyLeadMarketplaceRecentPurchaseCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "lead_marketplace_recent_purchase_count_max"
+     */
+    public function testPropertyLeadMarketplaceRecentPurchaseCountMax()
     {
 
     }

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **vat_number** | **string** | VAT number. | [optional] 
 **customer_type** | [**\Ageras\Api\LeadCustomerTypeResource**](LeadCustomerTypeResource.md) |  | [optional] 
 **social_security_number** | **string** | Social security number. | [optional] 
+**is_phone_verified** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

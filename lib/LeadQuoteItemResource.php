@@ -68,7 +68,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'amount_incl_vat' => '\Ageras\Api\AmountResource',
         'total_amount_vat' => '\Ageras\Api\AmountResource',
         'total_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'total_amount_incl_vat' => '\Ageras\Api\AmountResource'
+        'total_amount_incl_vat' => '\Ageras\Api\AmountResource',
+        'partner_product_comment' => '\Ageras\Api\PartnerQuoteProductCommentResource'
     ];
 
     public static function swaggerTypes()
@@ -95,7 +96,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'amount_incl_vat' => 'amount_incl_vat',
         'total_amount_vat' => 'total_amount_vat',
         'total_amount_excl_vat' => 'total_amount_excl_vat',
-        'total_amount_incl_vat' => 'total_amount_incl_vat'
+        'total_amount_incl_vat' => 'total_amount_incl_vat',
+        'partner_product_comment' => 'partner_product_comment'
     ];
 
 
@@ -118,7 +120,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'amount_incl_vat' => 'setAmountInclVat',
         'total_amount_vat' => 'setTotalAmountVat',
         'total_amount_excl_vat' => 'setTotalAmountExclVat',
-        'total_amount_incl_vat' => 'setTotalAmountInclVat'
+        'total_amount_incl_vat' => 'setTotalAmountInclVat',
+        'partner_product_comment' => 'setPartnerProductComment'
     ];
 
 
@@ -141,7 +144,8 @@ class LeadQuoteItemResource implements ArrayAccess
         'amount_incl_vat' => 'getAmountInclVat',
         'total_amount_vat' => 'getTotalAmountVat',
         'total_amount_excl_vat' => 'getTotalAmountExclVat',
-        'total_amount_incl_vat' => 'getTotalAmountInclVat'
+        'total_amount_incl_vat' => 'getTotalAmountInclVat',
+        'partner_product_comment' => 'getPartnerProductComment'
     ];
 
     public static function attributeMap()
@@ -216,6 +220,7 @@ class LeadQuoteItemResource implements ArrayAccess
         $this->container['total_amount_vat'] = isset($data['total_amount_vat']) ? $data['total_amount_vat'] : null;
         $this->container['total_amount_excl_vat'] = isset($data['total_amount_excl_vat']) ? $data['total_amount_excl_vat'] : null;
         $this->container['total_amount_incl_vat'] = isset($data['total_amount_incl_vat']) ? $data['total_amount_incl_vat'] : null;
+        $this->container['partner_product_comment'] = isset($data['partner_product_comment']) ? $data['partner_product_comment'] : null;
     }
 
     /**
@@ -567,6 +572,27 @@ class LeadQuoteItemResource implements ArrayAccess
     public function setTotalAmountInclVat($total_amount_incl_vat)
     {
         $this->container['total_amount_incl_vat'] = $total_amount_incl_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_product_comment
+     * @return \Ageras\Api\PartnerQuoteProductCommentResource
+     */
+    public function getPartnerProductComment()
+    {
+        return $this->container['partner_product_comment'];
+    }
+
+    /**
+     * Sets partner_product_comment
+     * @param \Ageras\Api\PartnerQuoteProductCommentResource $partner_product_comment
+     * @return $this
+     */
+    public function setPartnerProductComment($partner_product_comment)
+    {
+        $this->container['partner_product_comment'] = $partner_product_comment;
 
         return $this;
     }

@@ -202,4 +202,12 @@ class LeadQuoteItemResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "partner_product_comment"
+     */
+    public function testPropertyPartnerProductComment()
+    {
+
+    }
+
 }

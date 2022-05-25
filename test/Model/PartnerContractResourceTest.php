@@ -250,4 +250,12 @@ class PartnerContractResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "allocation_boosts"
+     */
+    public function testPropertyAllocationBoosts()
+    {
+
+    }
+
 }

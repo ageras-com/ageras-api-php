@@ -99,6 +99,30 @@ class PartnerBusinessUnitPartnerResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "company_information"
+     */
+    public function testPropertyCompanyInformation()
+    {
+
+    }
+
+    /**
+     * Test attribute "slug"
+     */
+    public function testPropertySlug()
+    {
+
+    }
+
+    /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
+    {
+
+    }
+
+    /**
      * Test attribute "has_marketing_package"
      */
     public function testPropertyHasMarketingPackage()
@@ -118,6 +142,38 @@ class PartnerBusinessUnitPartnerResourceTest extends TestCase
      * Test attribute "features"
      */
     public function testPropertyFeatures()
+    {
+
+    }
+
+    /**
+     * Test attribute "rating"
+     */
+    public function testPropertyRating()
+    {
+
+    }
+
+    /**
+     * Test attribute "badges"
+     */
+    public function testPropertyBadges()
+    {
+
+    }
+
+    /**
+     * Test attribute "geo"
+     */
+    public function testPropertyGeo()
+    {
+
+    }
+
+    /**
+     * Test attribute "public_employees"
+     */
+    public function testPropertyPublicEmployees()
     {
 
     }

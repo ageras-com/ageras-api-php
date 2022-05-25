@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **partner_user** | [**\Ageras\Api\PartnerUserResource**](PartnerUserResource.md) |  | [optional] 
 **client** | [**\Ageras\Api\ClientResource**](ClientResource.md) |  | [optional] 
 **partner_sign_up** | [**\Ageras\Api\PartnerSignUpResource**](PartnerSignUpResource.md) |  | [optional] 
+**client_sign_up** | [**\Ageras\Api\ClientSignUpResource**](ClientSignUpResource.md) |  | [optional] 
 **email** | **string** | Email for the given user associated with the token. | [optional] 
 **password** | **string** | Password used to post when logging in, will always be blank when resource is retrieved from server. | [optional] 
 

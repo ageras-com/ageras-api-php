@@ -74,7 +74,8 @@ class PartnerContractResource implements ArrayAccess
         'category' => '\Ageras\Api\PartnerCategoryResource',
         'allocation_pauses' => '\Ageras\Api\PartnerContractAllocationPauseResource[]',
         'binding_period_amount_excl_vat' => '\Ageras\Api\AmountResource',
-        'kpi' => '\Ageras\Api\PartnerContractKpiResource'
+        'kpi' => '\Ageras\Api\PartnerContractKpiResource',
+        'allocation_boosts' => '\Ageras\Api\PartnerContractAllocationBoostResource[]'
     ];
 
     public static function swaggerTypes()
@@ -107,7 +108,8 @@ class PartnerContractResource implements ArrayAccess
         'category' => 'category',
         'allocation_pauses' => 'allocation_pauses',
         'binding_period_amount_excl_vat' => 'binding_period_amount_excl_vat',
-        'kpi' => 'kpi'
+        'kpi' => 'kpi',
+        'allocation_boosts' => 'allocation_boosts'
     ];
 
 
@@ -136,7 +138,8 @@ class PartnerContractResource implements ArrayAccess
         'category' => 'setCategory',
         'allocation_pauses' => 'setAllocationPauses',
         'binding_period_amount_excl_vat' => 'setBindingPeriodAmountExclVat',
-        'kpi' => 'setKpi'
+        'kpi' => 'setKpi',
+        'allocation_boosts' => 'setAllocationBoosts'
     ];
 
 
@@ -165,7 +168,8 @@ class PartnerContractResource implements ArrayAccess
         'category' => 'getCategory',
         'allocation_pauses' => 'getAllocationPauses',
         'binding_period_amount_excl_vat' => 'getBindingPeriodAmountExclVat',
-        'kpi' => 'getKpi'
+        'kpi' => 'getKpi',
+        'allocation_boosts' => 'getAllocationBoosts'
     ];
 
     public static function attributeMap()
@@ -220,6 +224,7 @@ class PartnerContractResource implements ArrayAccess
         $this->container['allocation_pauses'] = isset($data['allocation_pauses']) ? $data['allocation_pauses'] : null;
         $this->container['binding_period_amount_excl_vat'] = isset($data['binding_period_amount_excl_vat']) ? $data['binding_period_amount_excl_vat'] : null;
         $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
+        $this->container['allocation_boosts'] = isset($data['allocation_boosts']) ? $data['allocation_boosts'] : null;
     }
 
     /**
@@ -684,6 +689,27 @@ class PartnerContractResource implements ArrayAccess
     public function setKpi($kpi)
     {
         $this->container['kpi'] = $kpi;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_boosts
+     * @return \Ageras\Api\PartnerContractAllocationBoostResource[]
+     */
+    public function getAllocationBoosts()
+    {
+        return $this->container['allocation_boosts'];
+    }
+
+    /**
+     * Sets allocation_boosts
+     * @param \Ageras\Api\PartnerContractAllocationBoostResource[] $allocation_boosts List of allocation boost periods.
+     * @return $this
+     */
+    public function setAllocationBoosts($allocation_boosts)
+    {
+        $this->container['allocation_boosts'] = $allocation_boosts;
 
         return $this;
     }

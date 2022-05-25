@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **total_amount_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **total_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **total_amount_incl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
+**partner_product_comment** | [**\Ageras\Api\PartnerQuoteProductCommentResource**](PartnerQuoteProductCommentResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

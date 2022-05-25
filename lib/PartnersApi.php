@@ -425,6 +425,100 @@ class PartnersApi
     }
 
     /**
+     * Operation partnersAllocationboostsCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAllocationBoostResource $partner_allocation_boost_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerAllocationBoostResource
+     */
+    public function partnersAllocationboostsCreate($partner_id , $partner_allocation_boost_resource)
+    {
+        list($response) = $this->partnersAllocationboostsCreateWithHttpInfo($partner_id, $partner_allocation_boost_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersAllocationboostsCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerAllocationBoostResource $partner_allocation_boost_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerAllocationBoostResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersAllocationboostsCreateWithHttpInfo($partner_id , $partner_allocation_boost_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/allocationboosts";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_allocation_boost_resource)) {
+            $_tempBody = $partner_allocation_boost_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerAllocationBoostResource',
+                '/partners/{partner_id}/allocationboosts'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerAllocationBoostResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerAllocationBoostResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation partnersAllocationdeliveriesIndex
      *
      * 
@@ -2794,6 +2888,13 @@ class PartnersApi
      *    'sub_geo_region_id' => string,
      *    'is_eligible_for_allocation' => bool,
      *    'primary_industry_id' => string,
+     *    'minimum_partner_rating' => int,
+     *    'collapse' => string,
+     *    'segmented_for_certification_id' => string,
+     *    'segmented_for_industry_id' => string,
+     *    'segmented_for_client_type_id' => string,
+     *    'is_lead_budget' => bool,
+     *    'has_unused_allocations' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2832,6 +2933,13 @@ class PartnersApi
      *    'sub_geo_region_id' => string,
      *    'is_eligible_for_allocation' => bool,
      *    'primary_industry_id' => string,
+     *    'minimum_partner_rating' => int,
+     *    'collapse' => string,
+     *    'segmented_for_certification_id' => string,
+     *    'segmented_for_industry_id' => string,
+     *    'segmented_for_client_type_id' => string,
+     *    'is_lead_budget' => bool,
+     *    'has_unused_allocations' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2928,6 +3036,34 @@ class PartnersApi
         // query params
         if (isset($criteria['primary_industry_id'])) {
             $queryParams['primary_industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['primary_industry_id']);
+        }
+        // query params
+        if (isset($criteria['minimum_partner_rating'])) {
+            $queryParams['minimum_partner_rating'] = $this->apiClient->getSerializer()->toQueryValue($criteria['minimum_partner_rating']);
+        }
+        // query params
+        if (isset($criteria['collapse'])) {
+            $queryParams['collapse'] = $this->apiClient->getSerializer()->toQueryValue($criteria['collapse']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_certification_id'])) {
+            $queryParams['segmented_for_certification_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_certification_id']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_industry_id'])) {
+            $queryParams['segmented_for_industry_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_industry_id']);
+        }
+        // query params
+        if (isset($criteria['segmented_for_client_type_id'])) {
+            $queryParams['segmented_for_client_type_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['segmented_for_client_type_id']);
+        }
+        // query params
+        if (isset($criteria['is_lead_budget'])) {
+            $queryParams['is_lead_budget'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_lead_budget']);
+        }
+        // query params
+        if (isset($criteria['has_unused_allocations'])) {
+            $queryParams['has_unused_allocations'] = $this->apiClient->getSerializer()->toQueryValue($criteria['has_unused_allocations']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -5309,6 +5445,223 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerContractResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersContractsAllocationboostsDelete
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_contract_id 
+     * @param string $boost_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function partnersContractsAllocationboostsDelete($partner_id,  $partner_contract_id,  $boost_id )
+    {
+        list($response) = $this->partnersContractsAllocationboostsDeleteWithHttpInfo($partner_id, $partner_contract_id, $boost_id);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsAllocationboostsDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_contract_id 
+     * @param string $boost_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsAllocationboostsDeleteWithHttpInfo($partner_id,  $partner_contract_id,  $boost_id )
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{partner_contract_id}/allocationboosts/{boost_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_contract_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($boost_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "boost_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($boost_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/partners/{partner_id}/contracts/{partner_contract_id}/allocationboosts/{boost_id}'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersContractsAllocationboostsUpdate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_contract_id 
+     * @param string $boost_id 
+     * @param \Ageras\Api\DateSpanResource $date_span_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\DateSpanResource
+     */
+    public function partnersContractsAllocationboostsUpdate($partner_id,  $partner_contract_id,  $boost_id , $date_span_resource)
+    {
+        list($response) = $this->partnersContractsAllocationboostsUpdateWithHttpInfo($partner_id, $partner_contract_id, $boost_id, $date_span_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersContractsAllocationboostsUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param string $partner_contract_id 
+     * @param string $boost_id 
+     * @param \Ageras\Api\DateSpanResource $date_span_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\DateSpanResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersContractsAllocationboostsUpdateWithHttpInfo($partner_id,  $partner_contract_id,  $boost_id , $date_span_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/contracts/{partner_contract_id}/allocationboosts/{boost_id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($partner_contract_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_contract_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_contract_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($boost_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "boost_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($boost_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($date_span_resource)) {
+            $_tempBody = $date_span_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\DateSpanResource',
+                '/partners/{partner_id}/contracts/{partner_contract_id}/allocationboosts/{boost_id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\DateSpanResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\DateSpanResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -13419,6 +13772,100 @@ class PartnersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRevenueRangeResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation partnersRevenuesegmentsActionsCreate
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerRevenueSegmentActionResource $partner_revenue_segment_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\PartnerRevenueSegmentActionResource
+     */
+    public function partnersRevenuesegmentsActionsCreate($partner_id , $partner_revenue_segment_action_resource)
+    {
+        list($response) = $this->partnersRevenuesegmentsActionsCreateWithHttpInfo($partner_id, $partner_revenue_segment_action_resource);
+        return $response;
+    }
+
+    /**
+     * Operation partnersRevenuesegmentsActionsCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $partner_id 
+     * @param \Ageras\Api\PartnerRevenueSegmentActionResource $partner_revenue_segment_action_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\PartnerRevenueSegmentActionResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function partnersRevenuesegmentsActionsCreateWithHttpInfo($partner_id , $partner_revenue_segment_action_resource)
+    {
+        // parse inputs
+        $resourcePath = "/partners/{partner_id}/revenuesegments/actions";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($partner_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "partner_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($partner_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($partner_revenue_segment_action_resource)) {
+            $_tempBody = $partner_revenue_segment_action_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\PartnerRevenueSegmentActionResource',
+                '/partners/{partner_id}/revenuesegments/actions'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\PartnerRevenueSegmentActionResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\PartnerRevenueSegmentActionResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

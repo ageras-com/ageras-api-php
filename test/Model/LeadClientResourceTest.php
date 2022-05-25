@@ -170,4 +170,12 @@ class LeadClientResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "is_phone_verified"
+     */
+    public function testPropertyIsPhoneVerified()
+    {
+
+    }
+
 }

@@ -105,7 +105,10 @@ class PartnerResource implements ArrayAccess
         'has_portal_access' => 'bool',
         'company_size' => '\Ageras\Api\CompanySizeResource',
         'hide_from_website' => 'bool',
+        'wants_overdue_invoice_reminders' => 'bool',
         'auto_quoting_enabled' => 'bool',
+        'lead_marketplace_recent_purchase_count' => 'int',
+        'lead_marketplace_recent_purchase_count_max' => 'int',
         'marketing_consent' => '\Ageras\Api\PartnerMarketingConsentResource'
     ];
 
@@ -170,7 +173,10 @@ class PartnerResource implements ArrayAccess
         'has_portal_access' => 'has_portal_access',
         'company_size' => 'company_size',
         'hide_from_website' => 'hide_from_website',
+        'wants_overdue_invoice_reminders' => 'wants_overdue_invoice_reminders',
         'auto_quoting_enabled' => 'auto_quoting_enabled',
+        'lead_marketplace_recent_purchase_count' => 'lead_marketplace_recent_purchase_count',
+        'lead_marketplace_recent_purchase_count_max' => 'lead_marketplace_recent_purchase_count_max',
         'marketing_consent' => 'marketing_consent'
     ];
 
@@ -231,7 +237,10 @@ class PartnerResource implements ArrayAccess
         'has_portal_access' => 'setHasPortalAccess',
         'company_size' => 'setCompanySize',
         'hide_from_website' => 'setHideFromWebsite',
+        'wants_overdue_invoice_reminders' => 'setWantsOverdueInvoiceReminders',
         'auto_quoting_enabled' => 'setAutoQuotingEnabled',
+        'lead_marketplace_recent_purchase_count' => 'setLeadMarketplaceRecentPurchaseCount',
+        'lead_marketplace_recent_purchase_count_max' => 'setLeadMarketplaceRecentPurchaseCountMax',
         'marketing_consent' => 'setMarketingConsent'
     ];
 
@@ -292,7 +301,10 @@ class PartnerResource implements ArrayAccess
         'has_portal_access' => 'getHasPortalAccess',
         'company_size' => 'getCompanySize',
         'hide_from_website' => 'getHideFromWebsite',
+        'wants_overdue_invoice_reminders' => 'getWantsOverdueInvoiceReminders',
         'auto_quoting_enabled' => 'getAutoQuotingEnabled',
+        'lead_marketplace_recent_purchase_count' => 'getLeadMarketplaceRecentPurchaseCount',
+        'lead_marketplace_recent_purchase_count_max' => 'getLeadMarketplaceRecentPurchaseCountMax',
         'marketing_consent' => 'getMarketingConsent'
     ];
 
@@ -418,7 +430,10 @@ class PartnerResource implements ArrayAccess
         $this->container['has_portal_access'] = isset($data['has_portal_access']) ? $data['has_portal_access'] : false;
         $this->container['company_size'] = isset($data['company_size']) ? $data['company_size'] : null;
         $this->container['hide_from_website'] = isset($data['hide_from_website']) ? $data['hide_from_website'] : false;
+        $this->container['wants_overdue_invoice_reminders'] = isset($data['wants_overdue_invoice_reminders']) ? $data['wants_overdue_invoice_reminders'] : false;
         $this->container['auto_quoting_enabled'] = isset($data['auto_quoting_enabled']) ? $data['auto_quoting_enabled'] : false;
+        $this->container['lead_marketplace_recent_purchase_count'] = isset($data['lead_marketplace_recent_purchase_count']) ? $data['lead_marketplace_recent_purchase_count'] : null;
+        $this->container['lead_marketplace_recent_purchase_count_max'] = isset($data['lead_marketplace_recent_purchase_count_max']) ? $data['lead_marketplace_recent_purchase_count_max'] : null;
         $this->container['marketing_consent'] = isset($data['marketing_consent']) ? $data['marketing_consent'] : null;
     }
 
@@ -1545,6 +1560,27 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets wants_overdue_invoice_reminders
+     * @return bool
+     */
+    public function getWantsOverdueInvoiceReminders()
+    {
+        return $this->container['wants_overdue_invoice_reminders'];
+    }
+
+    /**
+     * Sets wants_overdue_invoice_reminders
+     * @param bool $wants_overdue_invoice_reminders
+     * @return $this
+     */
+    public function setWantsOverdueInvoiceReminders($wants_overdue_invoice_reminders)
+    {
+        $this->container['wants_overdue_invoice_reminders'] = $wants_overdue_invoice_reminders;
+
+        return $this;
+    }
+
+    /**
      * Gets auto_quoting_enabled
      * @return bool
      */
@@ -1561,6 +1597,48 @@ class PartnerResource implements ArrayAccess
     public function setAutoQuotingEnabled($auto_quoting_enabled)
     {
         $this->container['auto_quoting_enabled'] = $auto_quoting_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_marketplace_recent_purchase_count
+     * @return int
+     */
+    public function getLeadMarketplaceRecentPurchaseCount()
+    {
+        return $this->container['lead_marketplace_recent_purchase_count'];
+    }
+
+    /**
+     * Sets lead_marketplace_recent_purchase_count
+     * @param int $lead_marketplace_recent_purchase_count Recent number of purchases on marketplace light
+     * @return $this
+     */
+    public function setLeadMarketplaceRecentPurchaseCount($lead_marketplace_recent_purchase_count)
+    {
+        $this->container['lead_marketplace_recent_purchase_count'] = $lead_marketplace_recent_purchase_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_marketplace_recent_purchase_count_max
+     * @return int
+     */
+    public function getLeadMarketplaceRecentPurchaseCountMax()
+    {
+        return $this->container['lead_marketplace_recent_purchase_count_max'];
+    }
+
+    /**
+     * Sets lead_marketplace_recent_purchase_count_max
+     * @param int $lead_marketplace_recent_purchase_count_max Maximum number of purchases on marketplace light
+     * @return $this
+     */
+    public function setLeadMarketplaceRecentPurchaseCountMax($lead_marketplace_recent_purchase_count_max)
+    {
+        $this->container['lead_marketplace_recent_purchase_count_max'] = $lead_marketplace_recent_purchase_count_max;
 
         return $this;
     }

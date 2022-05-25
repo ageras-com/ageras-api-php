@@ -63,6 +63,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'billing_frequency_months' => 'int',
         'current_partner_contract_period' => '\Ageras\Api\PartnerBusinessUnitPartnerContractPeriodResource',
         'allocation_pauses' => '\Ageras\Api\DateSpanResource[]',
+        'allocation_boosts' => '\Ageras\Api\DateSpanResource[]',
         'business_unit_mrr' => '\Ageras\Api\AmountResource'
     ];
 
@@ -85,6 +86,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'billing_frequency_months' => 'billing_frequency_months',
         'current_partner_contract_period' => 'current_partner_contract_period',
         'allocation_pauses' => 'allocation_pauses',
+        'allocation_boosts' => 'allocation_boosts',
         'business_unit_mrr' => 'business_unit_mrr'
     ];
 
@@ -103,6 +105,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'billing_frequency_months' => 'setBillingFrequencyMonths',
         'current_partner_contract_period' => 'setCurrentPartnerContractPeriod',
         'allocation_pauses' => 'setAllocationPauses',
+        'allocation_boosts' => 'setAllocationBoosts',
         'business_unit_mrr' => 'setBusinessUnitMrr'
     ];
 
@@ -121,6 +124,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         'billing_frequency_months' => 'getBillingFrequencyMonths',
         'current_partner_contract_period' => 'getCurrentPartnerContractPeriod',
         'allocation_pauses' => 'getAllocationPauses',
+        'allocation_boosts' => 'getAllocationBoosts',
         'business_unit_mrr' => 'getBusinessUnitMrr'
     ];
 
@@ -164,6 +168,7 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
         $this->container['billing_frequency_months'] = isset($data['billing_frequency_months']) ? $data['billing_frequency_months'] : null;
         $this->container['current_partner_contract_period'] = isset($data['current_partner_contract_period']) ? $data['current_partner_contract_period'] : null;
         $this->container['allocation_pauses'] = isset($data['allocation_pauses']) ? $data['allocation_pauses'] : null;
+        $this->container['allocation_boosts'] = isset($data['allocation_boosts']) ? $data['allocation_boosts'] : null;
         $this->container['business_unit_mrr'] = isset($data['business_unit_mrr']) ? $data['business_unit_mrr'] : null;
     }
 
@@ -377,6 +382,27 @@ class PartnerBusinessUnitPartnerContractResource implements ArrayAccess
     public function setAllocationPauses($allocation_pauses)
     {
         $this->container['allocation_pauses'] = $allocation_pauses;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_boosts
+     * @return \Ageras\Api\DateSpanResource[]
+     */
+    public function getAllocationBoosts()
+    {
+        return $this->container['allocation_boosts'];
+    }
+
+    /**
+     * Sets allocation_boosts
+     * @param \Ageras\Api\DateSpanResource[] $allocation_boosts List of allocation boosts.
+     * @return $this
+     */
+    public function setAllocationBoosts($allocation_boosts)
+    {
+        $this->container['allocation_boosts'] = $allocation_boosts;
 
         return $this;
     }

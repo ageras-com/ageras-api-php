@@ -77,6 +77,17 @@ class CustomersApiTest extends TestCase
     }
 
     /**
+     * Test case for customersActionsCreate
+     *
+     * .
+     *
+     */
+    public function testCustomersActionsCreate()
+    {
+
+    }
+
+    /**
      * Test case for customersPhoneverificationsCreate
      *
      * .

@@ -54,7 +54,10 @@ Name | Type | Description | Notes
 **has_portal_access** | **bool** | True if partner has access to the Partner portal. | [optional] [default to false]
 **company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
 **hide_from_website** | **bool** | Hide from public website | [optional] [default to false]
+**wants_overdue_invoice_reminders** | **bool** |  | [optional] [default to false]
 **auto_quoting_enabled** | **bool** | enable/disable autoquoting for partner | [optional] [default to false]
+**lead_marketplace_recent_purchase_count** | **int** | Recent number of purchases on marketplace light | [optional] 
+**lead_marketplace_recent_purchase_count_max** | **int** | Maximum number of purchases on marketplace light | [optional] 
 **marketing_consent** | [**\Ageras\Api\PartnerMarketingConsentResource**](PartnerMarketingConsentResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

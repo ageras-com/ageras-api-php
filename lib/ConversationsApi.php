@@ -966,6 +966,7 @@ class ConversationsApi
      *    'employee_id' => string,
      *    'lead_id' => string,
      *    'sort' => string,
+     *    'is_lead_validated' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -993,6 +994,7 @@ class ConversationsApi
      *    'employee_id' => string,
      *    'lead_id' => string,
      *    'sort' => string,
+     *    'is_lead_validated' => bool,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -1045,6 +1047,10 @@ class ConversationsApi
         // query params
         if (isset($criteria['sort'])) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($criteria['sort']);
+        }
+        // query params
+        if (isset($criteria['is_lead_validated'])) {
+            $queryParams['is_lead_validated'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_lead_validated']);
         }
         // query params
         if (isset($criteria['limit'])) {

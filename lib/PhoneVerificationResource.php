@@ -60,7 +60,8 @@ class PhoneVerificationResource implements ArrayAccess
         'verification_code' => 'string',
         'verified_at' => 'string',
         'created_at' => 'string',
-        'client' => '\Ageras\Api\PhoneVerificationClientResource'
+        'client' => '\Ageras\Api\PhoneVerificationClientResource',
+        'latest_lead_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class PhoneVerificationResource implements ArrayAccess
         'verification_code' => 'verification_code',
         'verified_at' => 'verified_at',
         'created_at' => 'created_at',
-        'client' => 'client'
+        'client' => 'client',
+        'latest_lead_id' => 'latest_lead_id'
     ];
 
 
@@ -94,7 +96,8 @@ class PhoneVerificationResource implements ArrayAccess
         'verification_code' => 'setVerificationCode',
         'verified_at' => 'setVerifiedAt',
         'created_at' => 'setCreatedAt',
-        'client' => 'setClient'
+        'client' => 'setClient',
+        'latest_lead_id' => 'setLatestLeadId'
     ];
 
 
@@ -109,7 +112,8 @@ class PhoneVerificationResource implements ArrayAccess
         'verification_code' => 'getVerificationCode',
         'verified_at' => 'getVerifiedAt',
         'created_at' => 'getCreatedAt',
-        'client' => 'getClient'
+        'client' => 'getClient',
+        'latest_lead_id' => 'getLatestLeadId'
     ];
 
     public static function attributeMap()
@@ -150,6 +154,7 @@ class PhoneVerificationResource implements ArrayAccess
         $this->container['verified_at'] = isset($data['verified_at']) ? $data['verified_at'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
+        $this->container['latest_lead_id'] = isset($data['latest_lead_id']) ? $data['latest_lead_id'] : null;
     }
 
     /**
@@ -320,6 +325,27 @@ class PhoneVerificationResource implements ArrayAccess
     public function setClient($client)
     {
         $this->container['client'] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Gets latest_lead_id
+     * @return int
+     */
+    public function getLatestLeadId()
+    {
+        return $this->container['latest_lead_id'];
+    }
+
+    /**
+     * Sets latest_lead_id
+     * @param int $latest_lead_id
+     * @return $this
+     */
+    public function setLatestLeadId($latest_lead_id)
+    {
+        $this->container['latest_lead_id'] = $latest_lead_id;
 
         return $this;
     }

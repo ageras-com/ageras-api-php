@@ -99,6 +99,17 @@ class PartnersApiTest extends TestCase
     }
 
     /**
+     * Test case for partnersAllocationboostsCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersAllocationboostsCreate()
+    {
+
+    }
+
+    /**
      * Test case for partnersAllocationdeliveriesIndex
      *
      * .
@@ -589,6 +600,28 @@ class PartnersApiTest extends TestCase
      *
      */
     public function testPartnersContractsActionsCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsAllocationboostsDelete
+     *
+     * .
+     *
+     */
+    public function testPartnersContractsAllocationboostsDelete()
+    {
+
+    }
+
+    /**
+     * Test case for partnersContractsAllocationboostsUpdate
+     *
+     * .
+     *
+     */
+    public function testPartnersContractsAllocationboostsUpdate()
     {
 
     }
@@ -1447,6 +1480,17 @@ class PartnersApiTest extends TestCase
      *
      */
     public function testPartnersRevenuerangesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for partnersRevenuesegmentsActionsCreate
+     *
+     * .
+     *
+     */
+    public function testPartnersRevenuesegmentsActionsCreate()
     {
 
     }

@@ -82,6 +82,7 @@ class LeadResource implements ArrayAccess
         'accepted' => '\Ageras\Api\LeadAcceptedResource',
         'offers_info' => '\Ageras\Api\LeadOffersInfoResource',
         'quotes_info' => '\Ageras\Api\LeadQuotesInfoResource',
+        'allocation_suggestions_info' => '\Ageras\Api\LeadAllocationSuggestionsInfoResource',
         'affiliate_campaign' => '\Ageras\Api\AffiliateCampaignResource',
         'feedback' => '\Ageras\Api\LeadFeedbackResource',
         'validator' => '\Ageras\Api\LeadEmployeeResource',
@@ -138,6 +139,7 @@ class LeadResource implements ArrayAccess
         'accepted' => 'accepted',
         'offers_info' => 'offers_info',
         'quotes_info' => 'quotes_info',
+        'allocation_suggestions_info' => 'allocation_suggestions_info',
         'affiliate_campaign' => 'affiliate_campaign',
         'feedback' => 'feedback',
         'validator' => 'validator',
@@ -190,6 +192,7 @@ class LeadResource implements ArrayAccess
         'accepted' => 'setAccepted',
         'offers_info' => 'setOffersInfo',
         'quotes_info' => 'setQuotesInfo',
+        'allocation_suggestions_info' => 'setAllocationSuggestionsInfo',
         'affiliate_campaign' => 'setAffiliateCampaign',
         'feedback' => 'setFeedback',
         'validator' => 'setValidator',
@@ -242,6 +245,7 @@ class LeadResource implements ArrayAccess
         'accepted' => 'getAccepted',
         'offers_info' => 'getOffersInfo',
         'quotes_info' => 'getQuotesInfo',
+        'allocation_suggestions_info' => 'getAllocationSuggestionsInfo',
         'affiliate_campaign' => 'getAffiliateCampaign',
         'feedback' => 'getFeedback',
         'validator' => 'getValidator',
@@ -345,6 +349,7 @@ class LeadResource implements ArrayAccess
         $this->container['accepted'] = isset($data['accepted']) ? $data['accepted'] : null;
         $this->container['offers_info'] = isset($data['offers_info']) ? $data['offers_info'] : null;
         $this->container['quotes_info'] = isset($data['quotes_info']) ? $data['quotes_info'] : null;
+        $this->container['allocation_suggestions_info'] = isset($data['allocation_suggestions_info']) ? $data['allocation_suggestions_info'] : null;
         $this->container['affiliate_campaign'] = isset($data['affiliate_campaign']) ? $data['affiliate_campaign'] : null;
         $this->container['feedback'] = isset($data['feedback']) ? $data['feedback'] : null;
         $this->container['validator'] = isset($data['validator']) ? $data['validator'] : null;
@@ -985,6 +990,27 @@ class LeadResource implements ArrayAccess
     public function setQuotesInfo($quotes_info)
     {
         $this->container['quotes_info'] = $quotes_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets allocation_suggestions_info
+     * @return \Ageras\Api\LeadAllocationSuggestionsInfoResource
+     */
+    public function getAllocationSuggestionsInfo()
+    {
+        return $this->container['allocation_suggestions_info'];
+    }
+
+    /**
+     * Sets allocation_suggestions_info
+     * @param \Ageras\Api\LeadAllocationSuggestionsInfoResource $allocation_suggestions_info
+     * @return $this
+     */
+    public function setAllocationSuggestionsInfo($allocation_suggestions_info)
+    {
+        $this->container['allocation_suggestions_info'] = $allocation_suggestions_info;
 
         return $this;
     }

@@ -723,6 +723,7 @@ $criteria = [
         'progress' => "progress_example"; // string | Project quote progress.
         'sort' => "created_at"; // string | Sort projects
         'is_archived' => false; // bool | Filter projects that are archived.
+        'is_lead_validated' => false; // bool | 
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -751,6 +752,7 @@ Name | Type | Description  | Notes
  **progress** | **string**| Project quote progress. | [optional]
  **sort** | **string**| Sort projects | [optional] [default to created_at]
  **is_archived** | **bool**| Filter projects that are archived. | [optional] [default to false]
+ **is_lead_validated** | **bool**|  | [optional] [default to false]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

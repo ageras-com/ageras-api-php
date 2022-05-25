@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**leadsAggregationsIndex**](LeadsApi.md#leadsAggregationsIndex) | **GET** /leads/aggregations | 
 [**leadsAllocationsCreate**](LeadsApi.md#leadsAllocationsCreate) | **POST** /leads/{lead_id}/allocations | 
 [**leadsAllocationsIndex**](LeadsApi.md#leadsAllocationsIndex) | **GET** /leads/allocations | 
+[**leadsAllocationsuggestionsDelete**](LeadsApi.md#leadsAllocationsuggestionsDelete) | **DELETE** /leads/{lead_id}/allocationsuggestions/{allocation_suggestion_id} | 
 [**leadsCategoriesIndex**](LeadsApi.md#leadsCategoriesIndex) | **GET** /leads/categories | 
 [**leadsCertificationsCreate**](LeadsApi.md#leadsCertificationsCreate) | **POST** /leads/{lead_id}/certifications | 
 [**leadsCertificationsDelete**](LeadsApi.md#leadsCertificationsDelete) | **DELETE** /leads/{lead_id}/certifications/{certification_id} | 
@@ -358,6 +359,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadPartnerAllocationResult**](../Model/LeadPartnerAllocationResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsAllocationsuggestionsDelete**
+> leadsAllocationsuggestionsDelete($lead_id,  $allocation_suggestion_id )
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+$allocation_suggestion_id = "allocation_suggestion_id_example"; // string | 
+
+try {
+    $api_instance->leadsAllocationsuggestionsDelete($lead_id,  $allocation_suggestion_id );
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsAllocationsuggestionsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+ **allocation_suggestion_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -2495,6 +2548,7 @@ $criteria = [
         'title' => "title_example"; // string | Type title in its native language. @var string
         'geo_code' => "geo_code_example"; // string | Industry geo code origin. @var string
         'limit' => 56; // int | Limit of industries per page. @var int
+        'is_archived' => false; // bool | 
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
     ];
@@ -2516,6 +2570,7 @@ Name | Type | Description  | Notes
  **title** | **string**| Type title in its native language. @var string | [optional]
  **geo_code** | **string**| Industry geo code origin. @var string | [optional]
  **limit** | **int**| Limit of industries per page. @var int | [optional]
+ **is_archived** | **bool**|  | [optional] [default to false]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
 

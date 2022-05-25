@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **billing_frequency_months** | **int** | How many months the partner pays for at a time. | [optional] 
 **current_partner_contract_period** | [**\Ageras\Api\PartnerBusinessUnitPartnerContractPeriodResource**](PartnerBusinessUnitPartnerContractPeriodResource.md) |  | [optional] 
 **allocation_pauses** | [**\Ageras\Api\DateSpanResource[]**](DateSpanResource.md) | List of allocation pauses. | [optional] 
+**allocation_boosts** | [**\Ageras\Api\DateSpanResource[]**](DateSpanResource.md) | List of allocation boosts. | [optional] 
 **business_unit_mrr** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

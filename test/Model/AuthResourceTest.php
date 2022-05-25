@@ -147,6 +147,14 @@ class AuthResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "client_sign_up"
+     */
+    public function testPropertyClientSignUp()
+    {
+
+    }
+
+    /**
      * Test attribute "email"
      */
     public function testPropertyEmail()

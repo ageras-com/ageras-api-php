@@ -62,6 +62,7 @@ class AuthResource implements ArrayAccess
         'partner_user' => '\Ageras\Api\PartnerUserResource',
         'client' => '\Ageras\Api\ClientResource',
         'partner_sign_up' => '\Ageras\Api\PartnerSignUpResource',
+        'client_sign_up' => '\Ageras\Api\ClientSignUpResource',
         'email' => 'string',
         'password' => 'string'
     ];
@@ -84,6 +85,7 @@ class AuthResource implements ArrayAccess
         'partner_user' => 'partner_user',
         'client' => 'client',
         'partner_sign_up' => 'partner_sign_up',
+        'client_sign_up' => 'client_sign_up',
         'email' => 'email',
         'password' => 'password'
     ];
@@ -102,6 +104,7 @@ class AuthResource implements ArrayAccess
         'partner_user' => 'setPartnerUser',
         'client' => 'setClient',
         'partner_sign_up' => 'setPartnerSignUp',
+        'client_sign_up' => 'setClientSignUp',
         'email' => 'setEmail',
         'password' => 'setPassword'
     ];
@@ -120,6 +123,7 @@ class AuthResource implements ArrayAccess
         'partner_user' => 'getPartnerUser',
         'client' => 'getClient',
         'partner_sign_up' => 'getPartnerSignUp',
+        'client_sign_up' => 'getClientSignUp',
         'email' => 'getEmail',
         'password' => 'getPassword'
     ];
@@ -163,6 +167,7 @@ class AuthResource implements ArrayAccess
         $this->container['partner_user'] = isset($data['partner_user']) ? $data['partner_user'] : null;
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
         $this->container['partner_sign_up'] = isset($data['partner_sign_up']) ? $data['partner_sign_up'] : null;
+        $this->container['client_sign_up'] = isset($data['client_sign_up']) ? $data['client_sign_up'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
     }
@@ -356,6 +361,27 @@ class AuthResource implements ArrayAccess
     public function setPartnerSignUp($partner_sign_up)
     {
         $this->container['partner_sign_up'] = $partner_sign_up;
+
+        return $this;
+    }
+
+    /**
+     * Gets client_sign_up
+     * @return \Ageras\Api\ClientSignUpResource
+     */
+    public function getClientSignUp()
+    {
+        return $this->container['client_sign_up'];
+    }
+
+    /**
+     * Sets client_sign_up
+     * @param \Ageras\Api\ClientSignUpResource $client_sign_up
+     * @return $this
+     */
+    public function setClientSignUp($client_sign_up)
+    {
+        $this->container['client_sign_up'] = $client_sign_up;
 
         return $this;
     }

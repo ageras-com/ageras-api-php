@@ -64,7 +64,8 @@ class LeadClientResource implements ArrayAccess
         'mobile' => 'string',
         'vat_number' => 'string',
         'customer_type' => '\Ageras\Api\LeadCustomerTypeResource',
-        'social_security_number' => 'string'
+        'social_security_number' => 'string',
+        'is_phone_verified' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class LeadClientResource implements ArrayAccess
         'mobile' => 'mobile',
         'vat_number' => 'vat_number',
         'customer_type' => 'customer_type',
-        'social_security_number' => 'social_security_number'
+        'social_security_number' => 'social_security_number',
+        'is_phone_verified' => 'is_phone_verified'
     ];
 
 
@@ -106,7 +108,8 @@ class LeadClientResource implements ArrayAccess
         'mobile' => 'setMobile',
         'vat_number' => 'setVatNumber',
         'customer_type' => 'setCustomerType',
-        'social_security_number' => 'setSocialSecurityNumber'
+        'social_security_number' => 'setSocialSecurityNumber',
+        'is_phone_verified' => 'setIsPhoneVerified'
     ];
 
 
@@ -125,7 +128,8 @@ class LeadClientResource implements ArrayAccess
         'mobile' => 'getMobile',
         'vat_number' => 'getVatNumber',
         'customer_type' => 'getCustomerType',
-        'social_security_number' => 'getSocialSecurityNumber'
+        'social_security_number' => 'getSocialSecurityNumber',
+        'is_phone_verified' => 'getIsPhoneVerified'
     ];
 
     public static function attributeMap()
@@ -170,6 +174,7 @@ class LeadClientResource implements ArrayAccess
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
         $this->container['customer_type'] = isset($data['customer_type']) ? $data['customer_type'] : null;
         $this->container['social_security_number'] = isset($data['social_security_number']) ? $data['social_security_number'] : null;
+        $this->container['is_phone_verified'] = isset($data['is_phone_verified']) ? $data['is_phone_verified'] : false;
     }
 
     /**
@@ -424,6 +429,27 @@ class LeadClientResource implements ArrayAccess
     public function setSocialSecurityNumber($social_security_number)
     {
         $this->container['social_security_number'] = $social_security_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_phone_verified
+     * @return bool
+     */
+    public function getIsPhoneVerified()
+    {
+        return $this->container['is_phone_verified'];
+    }
+
+    /**
+     * Sets is_phone_verified
+     * @param bool $is_phone_verified
+     * @return $this
+     */
+    public function setIsPhoneVerified($is_phone_verified)
+    {
+        $this->container['is_phone_verified'] = $is_phone_verified;
 
         return $this;
     }
