@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**leadsDelete**](LeadsApi.md#leadsDelete) | **DELETE** /leads/{lead_id} | 
 [**leadsDemopartnersIndex**](LeadsApi.md#leadsDemopartnersIndex) | **GET** /leads/demopartners/{partner_id} | 
 [**leadsDemopartnersIndex_0**](LeadsApi.md#leadsDemopartnersIndex_0) | **GET** /leads/{lead_id}/demopartners/{partner_id} | 
+[**leadsDiscardsCreate**](LeadsApi.md#leadsDiscardsCreate) | **POST** /leads/discards | 
 [**leadsExcludedpartnersCreate**](LeadsApi.md#leadsExcludedpartnersCreate) | **POST** /leads/{lead_id}/excludedpartners | 
 [**leadsExcludedpartnersDelete**](LeadsApi.md#leadsExcludedpartnersDelete) | **DELETE** /leads/{lead_id}/excludedpartners/{partner_id} | 
 [**leadsExcludedpartnersIndex**](LeadsApi.md#leadsExcludedpartnersIndex) | **GET** /leads/{lead_id}/excludedpartners | 
@@ -27,6 +28,7 @@ Method | HTTP request | Description
 [**leadsIndex**](LeadsApi.md#leadsIndex) | **GET** /leads | 
 [**leadsNotesCreate**](LeadsApi.md#leadsNotesCreate) | **POST** /leads/{lead_id}/notes | 
 [**leadsQuotefeesCreate**](LeadsApi.md#leadsQuotefeesCreate) | **POST** /leads/{lead_id}/quotefees | 
+[**leadsQuotefeesDelete**](LeadsApi.md#leadsQuotefeesDelete) | **DELETE** /leads/{lead_id}/quotefees | 
 [**leadsQuotesActionsCreate**](LeadsApi.md#leadsQuotesActionsCreate) | **POST** /leads/{lead_id}/quotes/{lead_quote_id}/actions | 
 [**leadsQuotesCreate**](LeadsApi.md#leadsQuotesCreate) | **POST** /leads/{lead_id}/quotes | 
 [**leadsQuotesDelete**](LeadsApi.md#leadsQuotesDelete) | **DELETE** /leads/{lead_id}/quotes/{lead_quote_id} | 
@@ -45,6 +47,7 @@ Method | HTTP request | Description
 [**leadsQuotesUpdate_0**](LeadsApi.md#leadsQuotesUpdate_0) | **PUT** /leads/{lead_id}/quotes/{lead_quote_id} | 
 [**leadsSegmentationsubgeoregionsIndex**](LeadsApi.md#leadsSegmentationsubgeoregionsIndex) | **GET** /leads/{lead_id}/segmentationsubgeoregions | 
 [**leadsSegmentationsubgeoregionsUpdate**](LeadsApi.md#leadsSegmentationsubgeoregionsUpdate) | **PUT** /leads/{lead_id}/segmentationsubgeoregions | 
+[**leadsTypegroupsIndex**](LeadsApi.md#leadsTypegroupsIndex) | **GET** /leads/typegroups | 
 [**leadsTypesIndex**](LeadsApi.md#leadsTypesIndex) | **GET** /leads/types | 
 [**leadsUpdate**](LeadsApi.md#leadsUpdate) | **PUT** /leads/{lead_id} | 
 
@@ -164,6 +167,9 @@ $criteria = [
         'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
         'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
         'personal_title_id' => "personal_title_id_example"; // string | Filter by lead's personal title
+        'is_limited_access_marketplace_lead' => false; // bool | List marketplace leads that have been validated within limited access time window
+        'is_basic_access_marketplace_lead' => false; // bool | List marketplace leads that have been created within basic access time window
+        'type_id' => "type_id_example"; // string | List leads by the client type id
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -224,6 +230,9 @@ Name | Type | Description  | Notes
  **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
  **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
  **personal_title_id** | **string**| Filter by lead&#39;s personal title | [optional]
+ **is_limited_access_marketplace_lead** | **bool**| List marketplace leads that have been validated within limited access time window | [optional] [default to false]
+ **is_basic_access_marketplace_lead** | **bool**| List marketplace leads that have been created within basic access time window | [optional] [default to false]
+ **type_id** | **string**| List leads by the client type id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1022,6 +1031,57 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **leadsDiscardsCreate**
+> \Ageras\Api\LeadBulkActionDiscardResource leadsDiscardsCreate($lead_bulk_action_discard_resource)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_bulk_action_discard_resource = new \Ageras\Api\LeadBulkActionDiscardResource(); // \Ageras\Api\LeadBulkActionDiscardResource | 
+
+try {
+    $result = $api_instance->leadsDiscardsCreate($lead_bulk_action_discard_resource);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsDiscardsCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_bulk_action_discard_resource** | [**\Ageras\Api\LeadBulkActionDiscardResource**](../Model/\Ageras\Api\LeadBulkActionDiscardResource.md)|  |
+
+### Return type
+
+[**\Ageras\Api\LeadBulkActionDiscardResource**](../Model/LeadBulkActionDiscardResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **leadsExcludedpartnersCreate**
 > \Ageras\Api\LeadResource leadsExcludedpartnersCreate($lead_id , $partner_suggest_resource)
 
@@ -1299,6 +1359,9 @@ $criteria = [
         'desired_partner_company_size_id' => "desired_partner_company_size_id_example"; // string | Filter by desired partner company size.
         'segmented_for_lead_marketplace_partner_id' => 56; // int | Find leads for the partner's lead marketplace.
         'personal_title_id' => "personal_title_id_example"; // string | Filter by lead's personal title
+        'is_limited_access_marketplace_lead' => false; // bool | List marketplace leads that have been validated within limited access time window
+        'is_basic_access_marketplace_lead' => false; // bool | List marketplace leads that have been created within basic access time window
+        'type_id' => "type_id_example"; // string | List leads by the client type id
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -1359,6 +1422,9 @@ Name | Type | Description  | Notes
  **desired_partner_company_size_id** | **string**| Filter by desired partner company size. | [optional]
  **segmented_for_lead_marketplace_partner_id** | **int**| Find leads for the partner&#39;s lead marketplace. | [optional]
  **personal_title_id** | **string**| Filter by lead&#39;s personal title | [optional]
+ **is_limited_access_marketplace_lead** | **bool**| List marketplace leads that have been validated within limited access time window | [optional] [default to false]
+ **is_basic_access_marketplace_lead** | **bool**| List marketplace leads that have been created within basic access time window | [optional] [default to false]
+ **type_id** | **string**| List leads by the client type id | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]
@@ -1472,6 +1538,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\LeadQuoteFeeResource**](../Model/LeadQuoteFeeResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsQuotefeesDelete**
+> leadsQuotefeesDelete($lead_id )
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$lead_id = "lead_id_example"; // string | 
+
+try {
+    $api_instance->leadsQuotefeesDelete($lead_id );
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsQuotefeesDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lead_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -2512,6 +2628,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Ageras\Api\SegmentationSubGeoRegionsResource**](../Model/SegmentationSubGeoRegionsResource.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **leadsTypegroupsIndex**
+> \Ageras\Api\LeadTypeGroupResult leadsTypegroupsIndex($criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\LeadsApi();
+$criteria = [
+        'geo_code' => "geo_code_example"; // string | 
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->leadsTypegroupsIndex($criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling LeadsApi->leadsTypegroupsIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **geo_code** | **string**|  | [optional]
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\LeadTypeGroupResult**](../Model/LeadTypeGroupResult.md)
 
 ### Authorization
 

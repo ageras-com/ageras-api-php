@@ -138,4 +138,12 @@ class IndustryResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "industry_group_id"
+     */
+    public function testPropertyIndustryGroupId()
+    {
+
+    }
+
 }

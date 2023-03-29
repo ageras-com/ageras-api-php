@@ -77,6 +77,17 @@ class IndustriesApiTest extends TestCase
     }
 
     /**
+     * Test case for industriesGroupIndex
+     *
+     * .
+     *
+     */
+    public function testIndustriesGroupIndex()
+    {
+
+    }
+
+    /**
      * Test case for industriesIndex
      *
      * Get all industries..

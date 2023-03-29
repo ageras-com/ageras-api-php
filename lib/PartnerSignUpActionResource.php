@@ -57,7 +57,8 @@ class PartnerSignUpActionResource implements ArrayAccess
         'action' => 'string',
         'company_name' => 'string',
         'password' => 'string',
-        'zip_code' => 'string'
+        'zip_code' => 'string',
+        'phone_number' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class PartnerSignUpActionResource implements ArrayAccess
         'action' => 'action',
         'company_name' => 'company_name',
         'password' => 'password',
-        'zip_code' => 'zip_code'
+        'zip_code' => 'zip_code',
+        'phone_number' => 'phone_number'
     ];
 
 
@@ -85,7 +87,8 @@ class PartnerSignUpActionResource implements ArrayAccess
         'action' => 'setAction',
         'company_name' => 'setCompanyName',
         'password' => 'setPassword',
-        'zip_code' => 'setZipCode'
+        'zip_code' => 'setZipCode',
+        'phone_number' => 'setPhoneNumber'
     ];
 
 
@@ -97,7 +100,8 @@ class PartnerSignUpActionResource implements ArrayAccess
         'action' => 'getAction',
         'company_name' => 'getCompanyName',
         'password' => 'getPassword',
-        'zip_code' => 'getZipCode'
+        'zip_code' => 'getZipCode',
+        'phone_number' => 'getPhoneNumber'
     ];
 
     public static function attributeMap()
@@ -147,6 +151,7 @@ class PartnerSignUpActionResource implements ArrayAccess
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
+        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
     }
 
     /**
@@ -267,6 +272,27 @@ class PartnerSignUpActionResource implements ArrayAccess
     public function setZipCode($zip_code)
     {
         $this->container['zip_code'] = $zip_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     * @param string $phone_number
+     * @return $this
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }

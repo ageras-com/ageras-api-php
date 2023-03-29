@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **subscription_employee** | [**\Ageras\Api\PartnerEmployeeResource**](PartnerEmployeeResource.md) |  | [optional] 
 **lead_types** | [**\Ageras\Api\PartnerLeadTypeResource[]**](PartnerLeadTypeResource.md) | Lead Types. | [optional] 
 **industry** | [**\Ageras\Api\PartnerIndustryResource**](PartnerIndustryResource.md) |  | [optional] 
+**industries** | [**\Ageras\Api\PartnerIndustryResource[]**](PartnerIndustryResource.md) | Partner&#39;s segmented industries. | [optional] 
 **satisfaction** | [**\Ageras\Api\PartnerSatisfactionResource**](PartnerSatisfactionResource.md) |  | [optional] 
 **alerts** | [**\Ageras\Api\PartnerAlertResource[]**](PartnerAlertResource.md) | Partner Alerts. | [optional] 
 **kpi** | [**\Ageras\Api\PartnerKPIResource**](PartnerKPIResource.md) |  | [optional] 
@@ -58,7 +59,9 @@ Name | Type | Description | Notes
 **auto_quoting_enabled** | **bool** | enable/disable autoquoting for partner | [optional] [default to false]
 **lead_marketplace_recent_purchase_count** | **int** | Recent number of purchases on marketplace light | [optional] 
 **lead_marketplace_recent_purchase_count_max** | **int** | Maximum number of purchases on marketplace light | [optional] 
+**partner_sign_up** | [**\Ageras\Api\PartnerSignUpResource**](PartnerSignUpResource.md) |  | [optional] 
 **marketing_consent** | [**\Ageras\Api\PartnerMarketingConsentResource**](PartnerMarketingConsentResource.md) |  | [optional] 
+**marketplace** | [**\Ageras\Api\PartnerMarketplaceResource**](PartnerMarketplaceResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

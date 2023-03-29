@@ -59,9 +59,11 @@ class PartnerSignUpResource implements ArrayAccess
         'geo_code' => 'string',
         'email' => 'string',
         'signup_token' => 'string',
+        'type' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
         'industry_id' => 'int',
+        'partner_id' => 'int',
         'expires_at' => 'string',
         'processed_at' => 'string'
     ];
@@ -81,9 +83,11 @@ class PartnerSignUpResource implements ArrayAccess
         'geo_code' => 'geo_code',
         'email' => 'email',
         'signup_token' => 'signup_token',
+        'type' => 'type',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'industry_id' => 'industry_id',
+        'partner_id' => 'partner_id',
         'expires_at' => 'expires_at',
         'processed_at' => 'processed_at'
     ];
@@ -99,9 +103,11 @@ class PartnerSignUpResource implements ArrayAccess
         'geo_code' => 'setGeoCode',
         'email' => 'setEmail',
         'signup_token' => 'setSignupToken',
+        'type' => 'setType',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'industry_id' => 'setIndustryId',
+        'partner_id' => 'setPartnerId',
         'expires_at' => 'setExpiresAt',
         'processed_at' => 'setProcessedAt'
     ];
@@ -117,9 +123,11 @@ class PartnerSignUpResource implements ArrayAccess
         'geo_code' => 'getGeoCode',
         'email' => 'getEmail',
         'signup_token' => 'getSignupToken',
+        'type' => 'getType',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'industry_id' => 'getIndustryId',
+        'partner_id' => 'getPartnerId',
         'expires_at' => 'getExpiresAt',
         'processed_at' => 'getProcessedAt'
     ];
@@ -139,8 +147,22 @@ class PartnerSignUpResource implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_BASIC = 'basic';
+    const TYPE_PLUS = 'plus';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_BASIC,
+            self::TYPE_PLUS,
+        ];
+    }
     
 
     /**
@@ -160,9 +182,11 @@ class PartnerSignUpResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['signup_token'] = isset($data['signup_token']) ? $data['signup_token'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'basic';
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['industry_id'] = isset($data['industry_id']) ? $data['industry_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['expires_at'] = isset($data['expires_at']) ? $data['expires_at'] : null;
         $this->container['processed_at'] = isset($data['processed_at']) ? $data['processed_at'] : null;
     }
@@ -176,6 +200,11 @@ class PartnerSignUpResource implements ArrayAccess
     {
         $invalid_properties = [];
 
+        $allowed_values = ["basic", "plus"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'basic', 'plus'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -188,6 +217,10 @@ class PartnerSignUpResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["basic", "plus"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -298,6 +331,31 @@ class PartnerSignUpResource implements ArrayAccess
     }
 
     /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('basic', 'plus');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'basic', 'plus'");
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets first_name
      * @return string
      */
@@ -356,6 +414,27 @@ class PartnerSignUpResource implements ArrayAccess
     public function setIndustryId($industry_id)
     {
         $this->container['industry_id'] = $industry_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     * @return int
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     * @param int $partner_id
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }

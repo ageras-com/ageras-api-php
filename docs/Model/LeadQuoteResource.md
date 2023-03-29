@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 **client** | [**\Ageras\Api\LeadClientResource**](LeadClientResource.md) |  | [optional] 
 **service_fee** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **reservation_expires_at** | **string** | Reservation time expiry date | [optional] 
+**refusal_expires_at** | **string** | Refusal time expiry date | [optional] 
+**can_be_refused** | **bool** | Define if quote can be refused | [optional] [default to false]
 **revenue_share_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **revenue_share_subsequent_years_amount_excl_vat** | [**\Ageras\Api\AmountResource**](AmountResource.md) |  | [optional] 
 **is_below_minimum_amount** | **bool** | If the total quote amount is below the minimum quote amount specified on the lead | [optional] [default to false]

@@ -283,6 +283,14 @@ class PartnerResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "industries"
+     */
+    public function testPropertyIndustries()
+    {
+
+    }
+
+    /**
      * Test attribute "satisfaction"
      */
     public function testPropertySatisfaction()
@@ -523,9 +531,25 @@ class PartnerResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "partner_sign_up"
+     */
+    public function testPropertyPartnerSignUp()
+    {
+
+    }
+
+    /**
      * Test attribute "marketing_consent"
      */
     public function testPropertyMarketingConsent()
+    {
+
+    }
+
+    /**
+     * Test attribute "marketplace"
+     */
+    public function testPropertyMarketplace()
     {
 
     }

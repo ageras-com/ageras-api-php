@@ -99,6 +99,14 @@ class PartnerSubscriptionTypeResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
      * Test attribute "geo_code"
      */
     public function testPropertyGeoCode()
@@ -110,6 +118,14 @@ class PartnerSubscriptionTypeResourceTest extends TestCase
      * Test attribute "monthly_price"
      */
     public function testPropertyMonthlyPrice()
+    {
+
+    }
+
+    /**
+     * Test attribute "features"
+     */
+    public function testPropertyFeatures()
     {
 
     }

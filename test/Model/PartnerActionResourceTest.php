@@ -106,4 +106,12 @@ class PartnerActionResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "partner_package_type_id"
+     */
+    public function testPropertyPartnerPackageTypeId()
+    {
+
+    }
+
 }

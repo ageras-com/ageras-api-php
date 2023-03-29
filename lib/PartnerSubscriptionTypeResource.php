@@ -56,8 +56,10 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'identifier' => 'string',
+        'name' => 'string',
         'geo_code' => 'string',
-        'monthly_price' => '\Ageras\Api\AmountResource'
+        'monthly_price' => '\Ageras\Api\AmountResource',
+        'features' => '\Ageras\Api\PartnerSubscriptionFeatureResource[]'
     ];
 
     public static function swaggerTypes()
@@ -72,8 +74,10 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'identifier' => 'identifier',
+        'name' => 'name',
         'geo_code' => 'geo_code',
-        'monthly_price' => 'monthly_price'
+        'monthly_price' => 'monthly_price',
+        'features' => 'features'
     ];
 
 
@@ -84,8 +88,10 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'identifier' => 'setIdentifier',
+        'name' => 'setName',
         'geo_code' => 'setGeoCode',
-        'monthly_price' => 'setMonthlyPrice'
+        'monthly_price' => 'setMonthlyPrice',
+        'features' => 'setFeatures'
     ];
 
 
@@ -96,8 +102,10 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'identifier' => 'getIdentifier',
+        'name' => 'getName',
         'geo_code' => 'getGeoCode',
-        'monthly_price' => 'getMonthlyPrice'
+        'monthly_price' => 'getMonthlyPrice',
+        'features' => 'getFeatures'
     ];
 
     public static function attributeMap()
@@ -133,8 +141,10 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['monthly_price'] = isset($data['monthly_price']) ? $data['monthly_price'] : null;
+        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
     }
 
     /**
@@ -205,6 +215,27 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     }
 
     /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name Name.
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
      * Gets geo_code
      * @return string
      */
@@ -242,6 +273,27 @@ class PartnerSubscriptionTypeResource implements ArrayAccess
     public function setMonthlyPrice($monthly_price)
     {
         $this->container['monthly_price'] = $monthly_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets features
+     * @return \Ageras\Api\PartnerSubscriptionFeatureResource[]
+     */
+    public function getFeatures()
+    {
+        return $this->container['features'];
+    }
+
+    /**
+     * Sets features
+     * @param \Ageras\Api\PartnerSubscriptionFeatureResource[] $features Subscription features to be unlocked.
+     * @return $this
+     */
+    public function setFeatures($features)
+    {
+        $this->container['features'] = $features;
 
         return $this;
     }

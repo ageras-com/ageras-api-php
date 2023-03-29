@@ -54,7 +54,8 @@ class PartnerContractActionResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'action' => 'string'
+        'action' => 'string',
+        'action_data' => '\Ageras\Api\PartnerContractActionDataResource'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class PartnerContractActionResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'action' => 'action'
+        'action' => 'action',
+        'action_data' => 'action_data'
     ];
 
 
@@ -76,7 +78,8 @@ class PartnerContractActionResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'action' => 'setAction'
+        'action' => 'setAction',
+        'action_data' => 'setActionData'
     ];
 
 
@@ -85,7 +88,8 @@ class PartnerContractActionResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'action' => 'getAction'
+        'action' => 'getAction',
+        'action_data' => 'getActionData'
     ];
 
     public static function attributeMap()
@@ -144,6 +148,7 @@ class PartnerContractActionResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
+        $this->container['action_data'] = isset($data['action_data']) ? $data['action_data'] : null;
     }
 
     /**
@@ -201,6 +206,27 @@ class PartnerContractActionResource implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'cancel_normally', 'cancel_immediately', 'accept', 'accept_for_partner', 'uncancel_normal_cancellation', 'archive'");
         }
         $this->container['action'] = $action;
+
+        return $this;
+    }
+
+    /**
+     * Gets action_data
+     * @return \Ageras\Api\PartnerContractActionDataResource
+     */
+    public function getActionData()
+    {
+        return $this->container['action_data'];
+    }
+
+    /**
+     * Sets action_data
+     * @param \Ageras\Api\PartnerContractActionDataResource $action_data
+     * @return $this
+     */
+    public function setActionData($action_data)
+    {
+        $this->container['action_data'] = $action_data;
 
         return $this;
     }

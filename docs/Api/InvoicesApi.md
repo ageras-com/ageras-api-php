@@ -89,12 +89,13 @@ $criteria = [
         'partner_id' => "partner_id_example"; // string | Filter Invoices by a given Partner.
         'client_id' => "client_id_example"; // string | Filter Invoices by a given Client.
         'is_paid' => false; // bool | Filter invoices by whether or not they are paid.
-        'is_overdue' => false; // bool | Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn't been paid.
+        'is_overdue' => false; // bool | Filter invoices by whether they are overdue or not. An invoice is overdue when the payment deadline has passed but the invoice hasn't been paid.
         'sort' => "created_at"; // string | Desired sorting.
         'geo_code' => "geo_code_example"; // string | Geographic Location Code.
         'invoice_number' => "invoice_number_example"; // string | Invoice Number.
         'has_subscription_line_item' => false; // bool | Filter invoices by whether they are related to subscription or not.
         'query' => "query_example"; // string | General query string for searching vouchers.
+        'dunning_stage' => 56; // int | Filter invoices by whether or not they have reached the given dunning stage(s).
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
     ];
@@ -116,12 +117,13 @@ Name | Type | Description  | Notes
  **partner_id** | **string**| Filter Invoices by a given Partner. | [optional]
  **client_id** | **string**| Filter Invoices by a given Client. | [optional]
  **is_paid** | **bool**| Filter invoices by whether or not they are paid. | [optional] [default to false]
- **is_overdue** | **bool**| Filter invoices by whether they are overdue or not. An overdue is an invoice where the payment date has been reached but the invoice hasn&#39;t been paid. | [optional] [default to false]
+ **is_overdue** | **bool**| Filter invoices by whether they are overdue or not. An invoice is overdue when the payment deadline has passed but the invoice hasn&#39;t been paid. | [optional] [default to false]
  **sort** | **string**| Desired sorting. | [optional] [default to created_at]
  **geo_code** | **string**| Geographic Location Code. | [optional]
  **invoice_number** | **string**| Invoice Number. | [optional]
  **has_subscription_line_item** | **bool**| Filter invoices by whether they are related to subscription or not. | [optional] [default to false]
  **query** | **string**| General query string for searching vouchers. | [optional]
+ **dunning_stage** | **int**| Filter invoices by whether or not they have reached the given dunning stage(s). | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
 

@@ -229,6 +229,9 @@ class LeadsApi
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'personal_title_id' => string,
+     *    'is_limited_access_marketplace_lead' => bool,
+     *    'is_basic_access_marketplace_lead' => bool,
+     *    'type_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -290,6 +293,9 @@ class LeadsApi
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'personal_title_id' => string,
+     *    'is_limited_access_marketplace_lead' => bool,
+     *    'is_basic_access_marketplace_lead' => bool,
+     *    'type_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -478,6 +484,18 @@ class LeadsApi
         // query params
         if (isset($criteria['personal_title_id'])) {
             $queryParams['personal_title_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['personal_title_id']);
+        }
+        // query params
+        if (isset($criteria['is_limited_access_marketplace_lead'])) {
+            $queryParams['is_limited_access_marketplace_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_limited_access_marketplace_lead']);
+        }
+        // query params
+        if (isset($criteria['is_basic_access_marketplace_lead'])) {
+            $queryParams['is_basic_access_marketplace_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_basic_access_marketplace_lead']);
+        }
+        // query params
+        if (isset($criteria['type_id'])) {
+            $queryParams['type_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['type_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -1940,6 +1958,90 @@ class LeadsApi
     }
 
     /**
+     * Operation leadsDiscardsCreate
+     *
+     * 
+     *
+     * @param \Ageras\Api\LeadBulkActionDiscardResource $lead_bulk_action_discard_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadBulkActionDiscardResource
+     */
+    public function leadsDiscardsCreate($lead_bulk_action_discard_resource)
+    {
+        list($response) = $this->leadsDiscardsCreateWithHttpInfo($lead_bulk_action_discard_resource);
+        return $response;
+    }
+
+    /**
+     * Operation leadsDiscardsCreateWithHttpInfo
+     *
+     * 
+     *
+     * @param \Ageras\Api\LeadBulkActionDiscardResource $lead_bulk_action_discard_resource 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadBulkActionDiscardResource, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsDiscardsCreateWithHttpInfo($lead_bulk_action_discard_resource)
+    {
+        // parse inputs
+        $resourcePath = "/leads/discards";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($lead_bulk_action_discard_resource)) {
+            $_tempBody = $lead_bulk_action_discard_resource;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadBulkActionDiscardResource',
+                '/leads/discards'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadBulkActionDiscardResource', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadBulkActionDiscardResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation leadsExcludedpartnersCreate
      *
      * 
@@ -2370,6 +2472,9 @@ class LeadsApi
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'personal_title_id' => string,
+     *    'is_limited_access_marketplace_lead' => bool,
+     *    'is_basic_access_marketplace_lead' => bool,
+     *    'type_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2431,6 +2536,9 @@ class LeadsApi
      *    'desired_partner_company_size_id' => string,
      *    'segmented_for_lead_marketplace_partner_id' => int,
      *    'personal_title_id' => string,
+     *    'is_limited_access_marketplace_lead' => bool,
+     *    'is_basic_access_marketplace_lead' => bool,
+     *    'type_id' => string,
      *    'limit' => int,
      *    'page' => int,
      *    'query' => string,
@@ -2619,6 +2727,18 @@ class LeadsApi
         // query params
         if (isset($criteria['personal_title_id'])) {
             $queryParams['personal_title_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['personal_title_id']);
+        }
+        // query params
+        if (isset($criteria['is_limited_access_marketplace_lead'])) {
+            $queryParams['is_limited_access_marketplace_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_limited_access_marketplace_lead']);
+        }
+        // query params
+        if (isset($criteria['is_basic_access_marketplace_lead'])) {
+            $queryParams['is_basic_access_marketplace_lead'] = $this->apiClient->getSerializer()->toQueryValue($criteria['is_basic_access_marketplace_lead']);
+        }
+        // query params
+        if (isset($criteria['type_id'])) {
+            $queryParams['type_id'] = $this->apiClient->getSerializer()->toQueryValue($criteria['type_id']);
         }
         // query params
         if (isset($criteria['limit'])) {
@@ -2855,6 +2975,89 @@ class LeadsApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadQuoteFeeResource', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsQuotefeesDelete
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return void
+     */
+    public function leadsQuotefeesDelete($lead_id )
+    {
+        list($response) = $this->leadsQuotefeesDeleteWithHttpInfo($lead_id);
+        return $response;
+    }
+
+    /**
+     * Operation leadsQuotefeesDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $lead_id 
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsQuotefeesDeleteWithHttpInfo($lead_id )
+    {
+        // parse inputs
+        $resourcePath = "/leads/{lead_id}/quotefees";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($lead_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "lead_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($lead_id),
+                $resourcePath
+            );
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/leads/{lead_id}/quotefees'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
             }
 
             throw $e;
@@ -4829,6 +5032,111 @@ class LeadsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\SegmentationSubGeoRegionsResource', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation leadsTypegroupsIndex
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return \Ageras\Api\LeadTypeGroupResult
+     */
+    public function leadsTypegroupsIndex($criteria = [])
+    {
+        list($response) = $this->leadsTypegroupsIndexWithHttpInfo($criteria);
+        return $response;
+    }
+
+    /**
+     * Operation leadsTypegroupsIndexWithHttpInfo
+     *
+     * 
+     *
+     * @param $criteria = [
+     *    'geo_code' => string,
+     *    'limit' => int,
+     *    'page' => int,
+     *    'query' => string,
+     * ]
+     * @throws \Ageras\Api\ApiException on non-2xx response
+     * @return array of \Ageras\Api\LeadTypeGroupResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function leadsTypegroupsIndexWithHttpInfo($criteria = [])
+    {
+        // parse inputs
+        $resourcePath = "/leads/typegroups";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if (isset($criteria['geo_code'])) {
+            $queryParams['geo_code'] = $this->apiClient->getSerializer()->toQueryValue($criteria['geo_code']);
+        }
+        // query params
+        if (isset($criteria['limit'])) {
+            $queryParams['limit'] = $this->apiClient->getSerializer()->toQueryValue($criteria['limit']);
+        }
+        // query params
+        if (isset($criteria['page'])) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($criteria['page']);
+        }
+        // query params
+        if (isset($criteria['query'])) {
+            $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('token');
+        if (strlen($apiKey) !== 0) {
+            $queryParams['token'] = $apiKey;
+        }
+        // this endpoint requires HTTP basic authentication
+        if (strlen($this->apiClient->getConfig()->getUsername()) !== 0 or strlen($this->apiClient->getConfig()->getPassword()) !== 0) {
+            $headerParams['Authorization'] = 'Basic ' . base64_encode($this->apiClient->getConfig()->getUsername() . ":" . $this->apiClient->getConfig()->getPassword());
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Ageras\Api\LeadTypeGroupResult',
+                '/leads/typegroups'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Ageras\Api\LeadTypeGroupResult', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Ageras\Api\LeadTypeGroupResult', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

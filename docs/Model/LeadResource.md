@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **revenue_segment** | [**\Ageras\Api\RevenueSegmentResource**](RevenueSegmentResource.md) |  | [optional] 
 **desired_partner_company_size** | [**\Ageras\Api\CompanySizeResource**](CompanySizeResource.md) |  | [optional] 
 **personal_title** | [**\Ageras\Api\PersonalTitleResource**](PersonalTitleResource.md) |  | [optional] 
+**marketplace** | [**\Ageras\Api\LeadMarketplaceResource**](LeadMarketplaceResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

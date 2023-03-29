@@ -58,7 +58,8 @@ class LeadTypeResource implements ArrayAccess
         'title' => 'string',
         'geo_code' => 'string',
         'created_at' => 'string',
-        'archived_at' => 'string'
+        'archived_at' => 'string',
+        'type_group_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -75,7 +76,8 @@ class LeadTypeResource implements ArrayAccess
         'title' => 'title',
         'geo_code' => 'geo_code',
         'created_at' => 'created_at',
-        'archived_at' => 'archived_at'
+        'archived_at' => 'archived_at',
+        'type_group_id' => 'type_group_id'
     ];
 
 
@@ -88,7 +90,8 @@ class LeadTypeResource implements ArrayAccess
         'title' => 'setTitle',
         'geo_code' => 'setGeoCode',
         'created_at' => 'setCreatedAt',
-        'archived_at' => 'setArchivedAt'
+        'archived_at' => 'setArchivedAt',
+        'type_group_id' => 'setTypeGroupId'
     ];
 
 
@@ -101,7 +104,8 @@ class LeadTypeResource implements ArrayAccess
         'title' => 'getTitle',
         'geo_code' => 'getGeoCode',
         'created_at' => 'getCreatedAt',
-        'archived_at' => 'getArchivedAt'
+        'archived_at' => 'getArchivedAt',
+        'type_group_id' => 'getTypeGroupId'
     ];
 
     public static function attributeMap()
@@ -140,6 +144,7 @@ class LeadTypeResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['archived_at'] = isset($data['archived_at']) ? $data['archived_at'] : null;
+        $this->container['type_group_id'] = isset($data['type_group_id']) ? $data['type_group_id'] : null;
     }
 
     /**
@@ -268,6 +273,27 @@ class LeadTypeResource implements ArrayAccess
     public function setArchivedAt($archived_at)
     {
         $this->container['archived_at'] = $archived_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets type_group_id
+     * @return int
+     */
+    public function getTypeGroupId()
+    {
+        return $this->container['type_group_id'];
+    }
+
+    /**
+     * Sets type_group_id
+     * @param int $type_group_id Type's grouping ID. @var int
+     * @return $this
+     */
+    public function setTypeGroupId($type_group_id)
+    {
+        $this->container['type_group_id'] = $type_group_id;
 
         return $this;
     }

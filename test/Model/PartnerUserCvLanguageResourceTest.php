@@ -114,4 +114,12 @@ class PartnerUserCvLanguageResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "original_name"
+     */
+    public function testPropertyOriginalName()
+    {
+
+    }
+
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * NestedPartnerContractOfferGroupResourceTest
+ * LeadMarketplaceResourceTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Ageras\Api;
 
 /**
- * NestedPartnerContractOfferGroupResourceTest Class Doc Comment
+ * LeadMarketplaceResourceTest Class Doc Comment
  *
  * @category    Class */
-// * @description NestedPartnerContractOfferGroupResource
+// * @description LeadMarketplaceResource
 /**
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NestedPartnerContractOfferGroupResourceTest extends TestCase
+class LeadMarketplaceResourceTest extends TestCase
 {
 
     /**
@@ -75,17 +75,33 @@ class NestedPartnerContractOfferGroupResourceTest extends TestCase
     }
 
     /**
-     * Test "NestedPartnerContractOfferGroupResource"
+     * Test "LeadMarketplaceResource"
      */
-    public function testNestedPartnerContractOfferGroupResource()
+    public function testLeadMarketplaceResource()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "premium_access_deadline"
      */
-    public function testPropertyId()
+    public function testPropertyPremiumAccessDeadline()
+    {
+
+    }
+
+    /**
+     * Test attribute "basic_access_deadline"
+     */
+    public function testPropertyBasicAccessDeadline()
+    {
+
+    }
+
+    /**
+     * Test attribute "matches_market_premium_access_criteria"
+     */
+    public function testPropertyMatchesMarketPremiumAccessCriteria()
     {
 
     }

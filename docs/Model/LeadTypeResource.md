@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **geo_code** | **string** | Type geo code. @var string | [optional] 
 **created_at** | **string** | Created at time stamp. @var Carbon | [optional] 
 **archived_at** | **string** | Archived at time stamp. @var Carbon | [optional] 
+**type_group_id** | **int** | Type&#39;s grouping ID. @var int | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

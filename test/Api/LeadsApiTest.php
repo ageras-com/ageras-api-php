@@ -253,6 +253,17 @@ class LeadsApiTest extends TestCase
     }
 
     /**
+     * Test case for leadsDiscardsCreate
+     *
+     * .
+     *
+     */
+    public function testLeadsDiscardsCreate()
+    {
+
+    }
+
+    /**
      * Test case for leadsExcludedpartnersCreate
      *
      * .
@@ -325,6 +336,17 @@ class LeadsApiTest extends TestCase
      *
      */
     public function testLeadsQuotefeesCreate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsQuotefeesDelete
+     *
+     * .
+     *
+     */
+    public function testLeadsQuotefeesDelete()
     {
 
     }
@@ -523,6 +545,17 @@ class LeadsApiTest extends TestCase
      *
      */
     public function testLeadsSegmentationsubgeoregionsUpdate()
+    {
+
+    }
+
+    /**
+     * Test case for leadsTypegroupsIndex
+     *
+     * .
+     *
+     */
+    public function testLeadsTypegroupsIndex()
     {
 
     }

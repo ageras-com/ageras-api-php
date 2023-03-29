@@ -114,4 +114,12 @@ class PartnerSignUpActionResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "phone_number"
+     */
+    public function testPropertyPhoneNumber()
+    {
+
+    }
+
 }

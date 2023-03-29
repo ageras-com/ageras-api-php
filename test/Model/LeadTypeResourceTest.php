@@ -122,4 +122,12 @@ class LeadTypeResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "type_group_id"
+     */
+    public function testPropertyTypeGroupId()
+    {
+
+    }
+
 }

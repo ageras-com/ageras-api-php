@@ -116,6 +116,7 @@ class LeadQuoteActionResource implements ArrayAccess
     const ACTION_PUBLISH = 'publish';
     const ACTION_CALLED = 'called';
     const ACTION_CLOSE_RESERVATION = 'close_reservation';
+    const ACTION_REFUSE = 'refuse';
     
 
     
@@ -131,6 +132,7 @@ class LeadQuoteActionResource implements ArrayAccess
             self::ACTION_PUBLISH,
             self::ACTION_CALLED,
             self::ACTION_CLOSE_RESERVATION,
+            self::ACTION_REFUSE,
         ];
     }
     
@@ -161,9 +163,9 @@ class LeadQuoteActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "accept", "publish", "called", "close_reservation"];
+        $allowed_values = ["unknown", "accept", "publish", "called", "close_reservation", "refuse"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'accept', 'publish', 'called', 'close_reservation'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'accept', 'publish', 'called', 'close_reservation', 'refuse'.";
         }
 
         return $invalid_properties;
@@ -178,7 +180,7 @@ class LeadQuoteActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "accept", "publish", "called", "close_reservation"];
+        $allowed_values = ["unknown", "accept", "publish", "called", "close_reservation", "refuse"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -202,9 +204,9 @@ class LeadQuoteActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'accept', 'publish', 'called', 'close_reservation');
+        $allowed_values = array('unknown', 'accept', 'publish', 'called', 'close_reservation', 'refuse');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'accept', 'publish', 'called', 'close_reservation'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'accept', 'publish', 'called', 'close_reservation', 'refuse'");
         }
         $this->container['action'] = $action;
 

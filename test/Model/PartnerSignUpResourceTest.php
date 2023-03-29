@@ -123,6 +123,14 @@ class PartnerSignUpResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -142,6 +150,14 @@ class PartnerSignUpResourceTest extends TestCase
      * Test attribute "industry_id"
      */
     public function testPropertyIndustryId()
+    {
+
+    }
+
+    /**
+     * Test attribute "partner_id"
+     */
+    public function testPropertyPartnerId()
     {
 
     }

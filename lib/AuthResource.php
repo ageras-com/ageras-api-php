@@ -64,7 +64,8 @@ class AuthResource implements ArrayAccess
         'partner_sign_up' => '\Ageras\Api\PartnerSignUpResource',
         'client_sign_up' => '\Ageras\Api\ClientSignUpResource',
         'email' => 'string',
-        'password' => 'string'
+        'password' => 'string',
+        'permissions' => 'string[]'
     ];
 
     public static function swaggerTypes()
@@ -87,7 +88,8 @@ class AuthResource implements ArrayAccess
         'partner_sign_up' => 'partner_sign_up',
         'client_sign_up' => 'client_sign_up',
         'email' => 'email',
-        'password' => 'password'
+        'password' => 'password',
+        'permissions' => 'permissions'
     ];
 
 
@@ -106,7 +108,8 @@ class AuthResource implements ArrayAccess
         'partner_sign_up' => 'setPartnerSignUp',
         'client_sign_up' => 'setClientSignUp',
         'email' => 'setEmail',
-        'password' => 'setPassword'
+        'password' => 'setPassword',
+        'permissions' => 'setPermissions'
     ];
 
 
@@ -125,7 +128,8 @@ class AuthResource implements ArrayAccess
         'partner_sign_up' => 'getPartnerSignUp',
         'client_sign_up' => 'getClientSignUp',
         'email' => 'getEmail',
-        'password' => 'getPassword'
+        'password' => 'getPassword',
+        'permissions' => 'getPermissions'
     ];
 
     public static function attributeMap()
@@ -170,6 +174,7 @@ class AuthResource implements ArrayAccess
         $this->container['client_sign_up'] = isset($data['client_sign_up']) ? $data['client_sign_up'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
     }
 
     /**
@@ -424,6 +429,27 @@ class AuthResource implements ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets permissions
+     * @return string[]
+     */
+    public function getPermissions()
+    {
+        return $this->container['permissions'];
+    }
+
+    /**
+     * Sets permissions
+     * @param string[] $permissions Available permissions
+     * @return $this
+     */
+    public function setPermissions($permissions)
+    {
+        $this->container['permissions'] = $permissions;
 
         return $this;
     }

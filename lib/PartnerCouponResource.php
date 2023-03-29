@@ -160,6 +160,7 @@ class PartnerCouponResource implements ArrayAccess
     }
 
     const TYPE_COUPON = 'coupon';
+    const TYPE_MARKETPLACE_COUPON = 'marketplace_coupon';
     const TYPE_REFUND = 'refund';
     const TYPE_TRANSFER = 'transfer';
     const TYPE_REACTIVATION = 'reactivation';
@@ -174,6 +175,7 @@ class PartnerCouponResource implements ArrayAccess
     {
         return [
             self::TYPE_COUPON,
+            self::TYPE_MARKETPLACE_COUPON,
             self::TYPE_REFUND,
             self::TYPE_TRANSFER,
             self::TYPE_REACTIVATION,
@@ -219,9 +221,9 @@ class PartnerCouponResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["coupon", "refund", "transfer", "reactivation"];
+        $allowed_values = ["coupon", "marketplace_coupon", "refund", "transfer", "reactivation"];
         if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of 'coupon', 'refund', 'transfer', 'reactivation'.";
+            $invalid_properties[] = "invalid value for 'type', must be one of 'coupon', 'marketplace_coupon', 'refund', 'transfer', 'reactivation'.";
         }
 
         return $invalid_properties;
@@ -236,7 +238,7 @@ class PartnerCouponResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["coupon", "refund", "transfer", "reactivation"];
+        $allowed_values = ["coupon", "marketplace_coupon", "refund", "transfer", "reactivation"];
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -554,9 +556,9 @@ class PartnerCouponResource implements ArrayAccess
      */
     public function setType($type)
     {
-        $allowed_values = array('coupon', 'refund', 'transfer', 'reactivation');
+        $allowed_values = array('coupon', 'marketplace_coupon', 'refund', 'transfer', 'reactivation');
         if (!is_null($type) && (!in_array($type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'coupon', 'refund', 'transfer', 'reactivation'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'coupon', 'marketplace_coupon', 'refund', 'transfer', 'reactivation'");
         }
         $this->container['type'] = $type;
 

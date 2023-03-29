@@ -80,6 +80,8 @@ class LeadQuoteResource implements ArrayAccess
         'client' => '\Ageras\Api\LeadClientResource',
         'service_fee' => '\Ageras\Api\AmountResource',
         'reservation_expires_at' => 'string',
+        'refusal_expires_at' => 'string',
+        'can_be_refused' => 'bool',
         'revenue_share_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'revenue_share_subsequent_years_amount_excl_vat' => '\Ageras\Api\AmountResource',
         'is_below_minimum_amount' => 'bool',
@@ -124,6 +126,8 @@ class LeadQuoteResource implements ArrayAccess
         'client' => 'client',
         'service_fee' => 'service_fee',
         'reservation_expires_at' => 'reservation_expires_at',
+        'refusal_expires_at' => 'refusal_expires_at',
+        'can_be_refused' => 'can_be_refused',
         'revenue_share_amount_excl_vat' => 'revenue_share_amount_excl_vat',
         'revenue_share_subsequent_years_amount_excl_vat' => 'revenue_share_subsequent_years_amount_excl_vat',
         'is_below_minimum_amount' => 'is_below_minimum_amount',
@@ -164,6 +168,8 @@ class LeadQuoteResource implements ArrayAccess
         'client' => 'setClient',
         'service_fee' => 'setServiceFee',
         'reservation_expires_at' => 'setReservationExpiresAt',
+        'refusal_expires_at' => 'setRefusalExpiresAt',
+        'can_be_refused' => 'setCanBeRefused',
         'revenue_share_amount_excl_vat' => 'setRevenueShareAmountExclVat',
         'revenue_share_subsequent_years_amount_excl_vat' => 'setRevenueShareSubsequentYearsAmountExclVat',
         'is_below_minimum_amount' => 'setIsBelowMinimumAmount',
@@ -204,6 +210,8 @@ class LeadQuoteResource implements ArrayAccess
         'client' => 'getClient',
         'service_fee' => 'getServiceFee',
         'reservation_expires_at' => 'getReservationExpiresAt',
+        'refusal_expires_at' => 'getRefusalExpiresAt',
+        'can_be_refused' => 'getCanBeRefused',
         'revenue_share_amount_excl_vat' => 'getRevenueShareAmountExclVat',
         'revenue_share_subsequent_years_amount_excl_vat' => 'getRevenueShareSubsequentYearsAmountExclVat',
         'is_below_minimum_amount' => 'getIsBelowMinimumAmount',
@@ -231,6 +239,7 @@ class LeadQuoteResource implements ArrayAccess
     const STATUS_ACCEPTED = 'accepted';
     const STATUS_REJECTED = 'rejected';
     const STATUS_EXPIRED = 'expired';
+    const STATUS_CLOSED = 'closed';
     const PROGRESS_UNKNOWN = 'unknown';
     const PROGRESS_QUOTE_PROVIDED = 'quote_provided';
     const PROGRESS_BID_ROUND_CLOSED = 'bid_round_closed';
@@ -252,6 +261,7 @@ class LeadQuoteResource implements ArrayAccess
             self::STATUS_ACCEPTED,
             self::STATUS_REJECTED,
             self::STATUS_EXPIRED,
+            self::STATUS_CLOSED,
         ];
     }
     
@@ -311,6 +321,8 @@ class LeadQuoteResource implements ArrayAccess
         $this->container['client'] = isset($data['client']) ? $data['client'] : null;
         $this->container['service_fee'] = isset($data['service_fee']) ? $data['service_fee'] : null;
         $this->container['reservation_expires_at'] = isset($data['reservation_expires_at']) ? $data['reservation_expires_at'] : null;
+        $this->container['refusal_expires_at'] = isset($data['refusal_expires_at']) ? $data['refusal_expires_at'] : null;
+        $this->container['can_be_refused'] = isset($data['can_be_refused']) ? $data['can_be_refused'] : false;
         $this->container['revenue_share_amount_excl_vat'] = isset($data['revenue_share_amount_excl_vat']) ? $data['revenue_share_amount_excl_vat'] : null;
         $this->container['revenue_share_subsequent_years_amount_excl_vat'] = isset($data['revenue_share_subsequent_years_amount_excl_vat']) ? $data['revenue_share_subsequent_years_amount_excl_vat'] : null;
         $this->container['is_below_minimum_amount'] = isset($data['is_below_minimum_amount']) ? $data['is_below_minimum_amount'] : false;
@@ -328,9 +340,9 @@ class LeadQuoteResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["new", "accepted", "rejected", "expired"];
+        $allowed_values = ["new", "accepted", "rejected", "expired", "closed"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired', 'closed'.";
         }
 
         $allowed_values = ["unknown", "quote_provided", "bid_round_closed", "pending_decision", "won", "lost", "draft"];
@@ -350,7 +362,7 @@ class LeadQuoteResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["new", "accepted", "rejected", "expired"];
+        $allowed_values = ["new", "accepted", "rejected", "expired", "closed"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -399,9 +411,9 @@ class LeadQuoteResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('new', 'accepted', 'rejected', 'expired');
+        $allowed_values = array('new', 'accepted', 'rejected', 'expired', 'closed');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired', 'closed'");
         }
         $this->container['status'] = $status;
 
@@ -912,6 +924,48 @@ class LeadQuoteResource implements ArrayAccess
     public function setReservationExpiresAt($reservation_expires_at)
     {
         $this->container['reservation_expires_at'] = $reservation_expires_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets refusal_expires_at
+     * @return string
+     */
+    public function getRefusalExpiresAt()
+    {
+        return $this->container['refusal_expires_at'];
+    }
+
+    /**
+     * Sets refusal_expires_at
+     * @param string $refusal_expires_at Refusal time expiry date
+     * @return $this
+     */
+    public function setRefusalExpiresAt($refusal_expires_at)
+    {
+        $this->container['refusal_expires_at'] = $refusal_expires_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets can_be_refused
+     * @return bool
+     */
+    public function getCanBeRefused()
+    {
+        return $this->container['can_be_refused'];
+    }
+
+    /**
+     * Sets can_be_refused
+     * @param bool $can_be_refused Define if quote can be refused
+     * @return $this
+     */
+    public function setCanBeRefused($can_be_refused)
+    {
+        $this->container['can_be_refused'] = $can_be_refused;
 
         return $this;
     }

@@ -167,6 +167,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     const STATUS_ACCEPTED = 'accepted';
     const STATUS_REJECTED = 'rejected';
     const STATUS_EXPIRED = 'expired';
+    const STATUS_CLOSED = 'closed';
     
 
     
@@ -181,6 +182,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
             self::STATUS_ACCEPTED,
             self::STATUS_REJECTED,
             self::STATUS_EXPIRED,
+            self::STATUS_CLOSED,
         ];
     }
     
@@ -224,9 +226,9 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["new", "accepted", "rejected", "expired"];
+        $allowed_values = ["new", "accepted", "rejected", "expired", "closed"];
         if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'.";
+            $invalid_properties[] = "invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired', 'closed'.";
         }
 
         return $invalid_properties;
@@ -241,7 +243,7 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["new", "accepted", "rejected", "expired"];
+        $allowed_values = ["new", "accepted", "rejected", "expired", "closed"];
         if (!in_array($this->container['status'], $allowed_values)) {
             return false;
         }
@@ -286,9 +288,9 @@ class LeadQuoteInfoEntryResource implements ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowed_values = array('new', 'accepted', 'rejected', 'expired');
+        $allowed_values = array('new', 'accepted', 'rejected', 'expired', 'closed');
         if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired'");
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'new', 'accepted', 'rejected', 'expired', 'closed'");
         }
         $this->container['status'] = $status;
 

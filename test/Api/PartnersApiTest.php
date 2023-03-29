@@ -77,6 +77,17 @@ class PartnersApiTest extends TestCase
     }
 
     /**
+     * Test case for partnersActionfeesIndex
+     *
+     * .
+     *
+     */
+    public function testPartnersActionfeesIndex()
+    {
+
+    }
+
+    /**
      * Test case for partnersActionsCreate
      *
      * .

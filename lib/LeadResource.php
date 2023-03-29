@@ -98,7 +98,8 @@ class LeadResource implements ArrayAccess
         'primary_sector' => '\Ageras\Api\SectorResource',
         'revenue_segment' => '\Ageras\Api\RevenueSegmentResource',
         'desired_partner_company_size' => '\Ageras\Api\CompanySizeResource',
-        'personal_title' => '\Ageras\Api\PersonalTitleResource'
+        'personal_title' => '\Ageras\Api\PersonalTitleResource',
+        'marketplace' => '\Ageras\Api\LeadMarketplaceResource'
     ];
 
     public static function swaggerTypes()
@@ -155,7 +156,8 @@ class LeadResource implements ArrayAccess
         'primary_sector' => 'primary_sector',
         'revenue_segment' => 'revenue_segment',
         'desired_partner_company_size' => 'desired_partner_company_size',
-        'personal_title' => 'personal_title'
+        'personal_title' => 'personal_title',
+        'marketplace' => 'marketplace'
     ];
 
 
@@ -208,7 +210,8 @@ class LeadResource implements ArrayAccess
         'primary_sector' => 'setPrimarySector',
         'revenue_segment' => 'setRevenueSegment',
         'desired_partner_company_size' => 'setDesiredPartnerCompanySize',
-        'personal_title' => 'setPersonalTitle'
+        'personal_title' => 'setPersonalTitle',
+        'marketplace' => 'setMarketplace'
     ];
 
 
@@ -261,7 +264,8 @@ class LeadResource implements ArrayAccess
         'primary_sector' => 'getPrimarySector',
         'revenue_segment' => 'getRevenueSegment',
         'desired_partner_company_size' => 'getDesiredPartnerCompanySize',
-        'personal_title' => 'getPersonalTitle'
+        'personal_title' => 'getPersonalTitle',
+        'marketplace' => 'getMarketplace'
     ];
 
     public static function attributeMap()
@@ -366,6 +370,7 @@ class LeadResource implements ArrayAccess
         $this->container['revenue_segment'] = isset($data['revenue_segment']) ? $data['revenue_segment'] : null;
         $this->container['desired_partner_company_size'] = isset($data['desired_partner_company_size']) ? $data['desired_partner_company_size'] : null;
         $this->container['personal_title'] = isset($data['personal_title']) ? $data['personal_title'] : null;
+        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
     }
 
     /**
@@ -1347,6 +1352,27 @@ class LeadResource implements ArrayAccess
     public function setPersonalTitle($personal_title)
     {
         $this->container['personal_title'] = $personal_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketplace
+     * @return \Ageras\Api\LeadMarketplaceResource
+     */
+    public function getMarketplace()
+    {
+        return $this->container['marketplace'];
+    }
+
+    /**
+     * Sets marketplace
+     * @param \Ageras\Api\LeadMarketplaceResource $marketplace
+     * @return $this
+     */
+    public function setMarketplace($marketplace)
+    {
+        $this->container['marketplace'] = $marketplace;
 
         return $this;
     }

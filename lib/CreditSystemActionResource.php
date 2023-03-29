@@ -1,6 +1,6 @@
 <?php
 /**
- * NestedPartnerContractOfferGroupResource
+ * CreditSystemActionResource
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Ageras\Api;
 use \ArrayAccess;
 
 /**
- * NestedPartnerContractOfferGroupResource Class Doc Comment
+ * CreditSystemActionResource Class Doc Comment
  *
  * @category    Class
  * @package     Ageras\Api
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NestedPartnerContractOfferGroupResource implements ArrayAccess
+class CreditSystemActionResource implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,16 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'NestedPartnerContractOfferGroupResource';
+    protected static $swaggerModelName = 'CreditSystemActionResource';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'action' => 'string',
+        'lead_id' => 'int',
+        'partner_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +69,9 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'action' => 'action',
+        'lead_id' => 'lead_id',
+        'partner_id' => 'partner_id'
     ];
 
 
@@ -76,7 +80,9 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'action' => 'setAction',
+        'lead_id' => 'setLeadId',
+        'partner_id' => 'setPartnerId'
     ];
 
 
@@ -85,7 +91,9 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'action' => 'getAction',
+        'lead_id' => 'getLeadId',
+        'partner_id' => 'getPartnerId'
     ];
 
     public static function attributeMap()
@@ -103,8 +111,28 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
         return self::$getters;
     }
 
+    const ACTION_OPEN_QUOTE = 'open_quote';
+    const ACTION_REVEAL_PHONE_NUMBER = 'reveal_phone_number';
+    const ACTION_CALL_PARTNER = 'call_partner';
+    const ACTION_REQUEST_MEETING = 'request_meeting';
+    const ACTION_ACCEPT_QUOTE = 'accept_quote';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_OPEN_QUOTE,
+            self::ACTION_REVEAL_PHONE_NUMBER,
+            self::ACTION_CALL_PARTNER,
+            self::ACTION_REQUEST_MEETING,
+            self::ACTION_ACCEPT_QUOTE,
+        ];
+    }
     
 
     /**
@@ -119,7 +147,9 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : 'reveal_phone_number';
+        $this->container['lead_id'] = isset($data['lead_id']) ? $data['lead_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
     }
 
     /**
@@ -130,6 +160,11 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["open_quote", "reveal_phone_number", "call_partner", "request_meeting", "accept_quote"];
+        if (!in_array($this->container['action'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'action', must be one of 'open_quote', 'reveal_phone_number', 'call_partner', 'request_meeting', 'accept_quote'.";
+        }
 
         return $invalid_properties;
     }
@@ -143,27 +178,77 @@ class NestedPartnerContractOfferGroupResource implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["open_quote", "reveal_phone_number", "call_partner", "request_meeting", "accept_quote"];
+        if (!in_array($this->container['action'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets action
+     * @return string
      */
-    public function getId()
+    public function getAction()
     {
-        return $this->container['id'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets id
-     * @param int $id The offer group id.
+     * Sets action
+     * @param string $action
      * @return $this
      */
-    public function setId($id)
+    public function setAction($action)
     {
-        $this->container['id'] = $id;
+        $allowed_values = array('open_quote', 'reveal_phone_number', 'call_partner', 'request_meeting', 'accept_quote');
+        if (!is_null($action) && (!in_array($action, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'open_quote', 'reveal_phone_number', 'call_partner', 'request_meeting', 'accept_quote'");
+        }
+        $this->container['action'] = $action;
+
+        return $this;
+    }
+
+    /**
+     * Gets lead_id
+     * @return int
+     */
+    public function getLeadId()
+    {
+        return $this->container['lead_id'];
+    }
+
+    /**
+     * Sets lead_id
+     * @param int $lead_id
+     * @return $this
+     */
+    public function setLeadId($lead_id)
+    {
+        $this->container['lead_id'] = $lead_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     * @return int
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     * @param int $partner_id
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }

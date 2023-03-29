@@ -169,6 +169,7 @@ class LeadActionResource implements ArrayAccess
     const ACTION_QUEUE_FEEDBACK_EMAIL = 'queue_feedback_email';
     const ACTION_COPY_TO_NEW = 'copy_to_new';
     const ACTION_BUY_FROM_LEAD_MARKETPLACE = 'buy_from_lead_marketplace';
+    const ACTION_MARK_LEAD_AS_UNTREATED = 'mark_lead_as_untreated';
     const REASON_UNKNOWN = 'unknown';
     const REASON_DUPLICATE = 'duplicate';
     const REASON_TEST = 'test';
@@ -223,6 +224,7 @@ class LeadActionResource implements ArrayAccess
             self::ACTION_QUEUE_FEEDBACK_EMAIL,
             self::ACTION_COPY_TO_NEW,
             self::ACTION_BUY_FROM_LEAD_MARKETPLACE,
+            self::ACTION_MARK_LEAD_AS_UNTREATED,
         ];
     }
     
@@ -314,9 +316,9 @@ class LeadActionResource implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "reserve_quote", "queue_feedback_email", "copy_to_new", "buy_from_lead_marketplace"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "reserve_quote", "queue_feedback_email", "copy_to_new", "buy_from_lead_marketplace", "mark_lead_as_untreated"];
         if (!in_array($this->container['action'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace'.";
+            $invalid_properties[] = "invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace', 'mark_lead_as_untreated'.";
         }
 
         $allowed_values = ["unknown", "duplicate", "test", "not_serious", "send_to_advisor", "spam", "validated", "untreated"];
@@ -346,7 +348,7 @@ class LeadActionResource implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "reserve_quote", "queue_feedback_email", "copy_to_new", "buy_from_lead_marketplace"];
+        $allowed_values = ["unknown", "call", "no_answer", "accept_quote", "publish_quote", "reject_all_quotes", "unreject_all_quotes", "postpone_client_match_decision", "mark_as_completed", "unmatch", "record_rejection_reasons", "discard", "validate", "invoke_right_to_be_forgotten", "given_up", "note", "postpone_validation", "send_to_partner", "reserve_quote", "queue_feedback_email", "copy_to_new", "buy_from_lead_marketplace", "mark_lead_as_untreated"];
         if (!in_array($this->container['action'], $allowed_values)) {
             return false;
         }
@@ -382,9 +384,9 @@ class LeadActionResource implements ArrayAccess
      */
     public function setAction($action)
     {
-        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace');
+        $allowed_values = array('unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace', 'mark_lead_as_untreated');
         if (!is_null($action) && (!in_array($action, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace'");
+            throw new \InvalidArgumentException("Invalid value for 'action', must be one of 'unknown', 'call', 'no_answer', 'accept_quote', 'publish_quote', 'reject_all_quotes', 'unreject_all_quotes', 'postpone_client_match_decision', 'mark_as_completed', 'unmatch', 'record_rejection_reasons', 'discard', 'validate', 'invoke_right_to_be_forgotten', 'given_up', 'note', 'postpone_validation', 'send_to_partner', 'reserve_quote', 'queue_feedback_email', 'copy_to_new', 'buy_from_lead_marketplace', 'mark_lead_as_untreated'");
         }
         $this->container['action'] = $action;
 

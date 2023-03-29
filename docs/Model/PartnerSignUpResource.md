@@ -8,9 +8,11 @@ Name | Type | Description | Notes
 **geo_code** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
 **signup_token** | **string** |  | [optional] 
+**type** | **string** |  | [optional] [default to 'basic']
 **first_name** | **string** |  | [optional] 
 **last_name** | **string** |  | [optional] 
 **industry_id** | **int** |  | [optional] 
+**partner_id** | **int** |  | [optional] 
 **expires_at** | **string** |  | [optional] 
 **processed_at** | **string** |  | [optional] 
 

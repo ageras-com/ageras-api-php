@@ -90,4 +90,12 @@ class PhoneVerificationClientResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
 }

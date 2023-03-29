@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **client_sign_up** | [**\Ageras\Api\ClientSignUpResource**](ClientSignUpResource.md) |  | [optional] 
 **email** | **string** | Email for the given user associated with the token. | [optional] 
 **password** | **string** | Password used to post when logging in, will always be blank when resource is retrieved from server. | [optional] 
+**permissions** | **string[]** | Available permissions | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

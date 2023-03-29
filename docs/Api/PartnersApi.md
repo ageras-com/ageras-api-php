@@ -4,6 +4,7 @@ All URIs are relative to *https://api.ageras.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**partnersActionfeesIndex**](PartnersApi.md#partnersActionfeesIndex) | **GET** /partners/{partner_id}/actionfees | 
 [**partnersActionsCreate**](PartnersApi.md#partnersActionsCreate) | **POST** /partners/{partner_id}/actions | 
 [**partnersAggregationsIndex**](PartnersApi.md#partnersAggregationsIndex) | **GET** /partners/aggregations | 
 [**partnersAllocationboostsCreate**](PartnersApi.md#partnersAllocationboostsCreate) | **POST** /partners/{partner_id}/allocationboosts | 
@@ -183,6 +184,65 @@ Method | HTTP request | Description
 [**partnersVerificationsIndex_0**](PartnersApi.md#partnersVerificationsIndex_0) | **GET** /partners/{partner_id}/verifications | 
 [**partnersVerificationsUpdate**](PartnersApi.md#partnersVerificationsUpdate) | **PUT** /partners/{partner_id}/verifications | 
 
+
+# **partnersActionfeesIndex**
+> \Ageras\Api\PartnerActionFeesResult partnersActionfeesIndex($partner_id , $criteria)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: jwt
+Ageras\Api\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Ageras\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+// Configure HTTP basic authorization: login
+Ageras\Api\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Ageras\Api\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
+
+$api_instance = new Ageras\Api\Api\PartnersApi();
+$partner_id = "partner_id_example"; // string | 
+$criteria = [
+        'limit' => 56; // int | The number of resources to be returned.
+        'page' => 56; // int | The page position in the result.
+        'query' => "query_example"; // string | The search wildcard.
+    ];
+
+try {
+    $result = $api_instance->partnersActionfeesIndex($partner_id , $criteria);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PartnersApi->partnersActionfeesIndex: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **partner_id** | **string**|  |
+ **limit** | **int**| The number of resources to be returned. | [optional]
+ **page** | **int**| The page position in the result. | [optional]
+ **query** | **string**| The search wildcard. | [optional]
+
+### Return type
+
+[**\Ageras\Api\PartnerActionFeesResult**](../Model/PartnerActionFeesResult.md)
+
+### Authorization
+
+[jwt](../../README.md#jwt), [login](../../README.md#login)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partnersActionsCreate**
 > \Ageras\Api\PartnerResource partnersActionsCreate($partner_id , $partner_action_resource)
@@ -3847,6 +3907,7 @@ $criteria = [
         'show_deactivated' => false; // bool | Only show deactivated partner coupons.
         'show_empty' => false; // bool | Should empty partner coupons be included in the result.
         'sort' => "created_at"; // string | Sort the coupons by different values
+        'type' => "type_example"; // string | Filter the coupons type
         'limit' => 56; // int | The number of resources to be returned.
         'page' => 56; // int | The page position in the result.
         'query' => "query_example"; // string | The search wildcard.
@@ -3870,6 +3931,7 @@ Name | Type | Description  | Notes
  **show_deactivated** | **bool**| Only show deactivated partner coupons. | [optional] [default to false]
  **show_empty** | **bool**| Should empty partner coupons be included in the result. | [optional] [default to false]
  **sort** | **string**| Sort the coupons by different values | [optional] [default to created_at]
+ **type** | **string**| Filter the coupons type | [optional]
  **limit** | **int**| The number of resources to be returned. | [optional]
  **page** | **int**| The page position in the result. | [optional]
  **query** | **string**| The search wildcard. | [optional]

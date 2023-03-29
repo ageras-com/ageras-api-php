@@ -442,4 +442,12 @@ class LeadResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "marketplace"
+     */
+    public function testPropertyMarketplace()
+    {
+
+    }
+
 }

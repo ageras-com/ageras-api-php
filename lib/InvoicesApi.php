@@ -190,6 +190,7 @@ class InvoicesApi
      *    'invoice_number' => string,
      *    'has_subscription_line_item' => bool,
      *    'query' => string,
+     *    'dunning_stage' => int,
      *    'limit' => int,
      *    'page' => int,
      * ]
@@ -218,6 +219,7 @@ class InvoicesApi
      *    'invoice_number' => string,
      *    'has_subscription_line_item' => bool,
      *    'query' => string,
+     *    'dunning_stage' => int,
      *    'limit' => int,
      *    'page' => int,
      * ]
@@ -277,6 +279,10 @@ class InvoicesApi
         // query params
         if (isset($criteria['query'])) {
             $queryParams['query'] = $this->apiClient->getSerializer()->toQueryValue($criteria['query']);
+        }
+        // query params
+        if (isset($criteria['dunning_stage'])) {
+            $queryParams['dunning_stage'] = $this->apiClient->getSerializer()->toQueryValue($criteria['dunning_stage']);
         }
         // query params
         if (isset($criteria['limit'])) {

@@ -170,4 +170,12 @@ class AuthResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "permissions"
+     */
+    public function testPropertyPermissions()
+    {
+
+    }
+
 }

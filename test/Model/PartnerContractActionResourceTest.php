@@ -90,4 +90,12 @@ class PartnerContractActionResourceTest extends TestCase
 
     }
 
+    /**
+     * Test attribute "action_data"
+     */
+    public function testPropertyActionData()
+    {
+
+    }
+
 }

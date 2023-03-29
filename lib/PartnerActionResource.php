@@ -56,7 +56,8 @@ class PartnerActionResource implements ArrayAccess
     protected static $swaggerTypes = [
         'action' => 'string',
         'note' => 'string',
-        'next_action_at' => 'string'
+        'next_action_at' => 'string',
+        'partner_package_type_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -71,7 +72,8 @@ class PartnerActionResource implements ArrayAccess
     protected static $attributeMap = [
         'action' => 'action',
         'note' => 'note',
-        'next_action_at' => 'next_action_at'
+        'next_action_at' => 'next_action_at',
+        'partner_package_type_id' => 'partner_package_type_id'
     ];
 
 
@@ -82,7 +84,8 @@ class PartnerActionResource implements ArrayAccess
     protected static $setters = [
         'action' => 'setAction',
         'note' => 'setNote',
-        'next_action_at' => 'setNextActionAt'
+        'next_action_at' => 'setNextActionAt',
+        'partner_package_type_id' => 'setPartnerPackageTypeId'
     ];
 
 
@@ -93,7 +96,8 @@ class PartnerActionResource implements ArrayAccess
     protected static $getters = [
         'action' => 'getAction',
         'note' => 'getNote',
-        'next_action_at' => 'getNextActionAt'
+        'next_action_at' => 'getNextActionAt',
+        'partner_package_type_id' => 'getPartnerPackageTypeId'
     ];
 
     public static function attributeMap()
@@ -178,6 +182,7 @@ class PartnerActionResource implements ArrayAccess
         $this->container['action'] = isset($data['action']) ? $data['action'] : 'unknown';
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['next_action_at'] = isset($data['next_action_at']) ? $data['next_action_at'] : null;
+        $this->container['partner_package_type_id'] = isset($data['partner_package_type_id']) ? $data['partner_package_type_id'] : null;
     }
 
     /**
@@ -277,6 +282,27 @@ class PartnerActionResource implements ArrayAccess
     public function setNextActionAt($next_action_at)
     {
         $this->container['next_action_at'] = $next_action_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_package_type_id
+     * @return int
+     */
+    public function getPartnerPackageTypeId()
+    {
+        return $this->container['partner_package_type_id'];
+    }
+
+    /**
+     * Sets partner_package_type_id
+     * @param int $partner_package_type_id Subscription type
+     * @return $this
+     */
+    public function setPartnerPackageTypeId($partner_package_type_id)
+    {
+        $this->container['partner_package_type_id'] = $partner_package_type_id;
 
         return $this;
     }

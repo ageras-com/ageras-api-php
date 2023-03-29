@@ -79,6 +79,7 @@ class PartnerResource implements ArrayAccess
         'subscription_employee' => '\Ageras\Api\PartnerEmployeeResource',
         'lead_types' => '\Ageras\Api\PartnerLeadTypeResource[]',
         'industry' => '\Ageras\Api\PartnerIndustryResource',
+        'industries' => '\Ageras\Api\PartnerIndustryResource[]',
         'satisfaction' => '\Ageras\Api\PartnerSatisfactionResource',
         'alerts' => '\Ageras\Api\PartnerAlertResource[]',
         'kpi' => '\Ageras\Api\PartnerKPIResource',
@@ -109,7 +110,9 @@ class PartnerResource implements ArrayAccess
         'auto_quoting_enabled' => 'bool',
         'lead_marketplace_recent_purchase_count' => 'int',
         'lead_marketplace_recent_purchase_count_max' => 'int',
-        'marketing_consent' => '\Ageras\Api\PartnerMarketingConsentResource'
+        'partner_sign_up' => '\Ageras\Api\PartnerSignUpResource',
+        'marketing_consent' => '\Ageras\Api\PartnerMarketingConsentResource',
+        'marketplace' => '\Ageras\Api\PartnerMarketplaceResource'
     ];
 
     public static function swaggerTypes()
@@ -147,6 +150,7 @@ class PartnerResource implements ArrayAccess
         'subscription_employee' => 'subscription_employee',
         'lead_types' => 'lead_types',
         'industry' => 'industry',
+        'industries' => 'industries',
         'satisfaction' => 'satisfaction',
         'alerts' => 'alerts',
         'kpi' => 'kpi',
@@ -177,7 +181,9 @@ class PartnerResource implements ArrayAccess
         'auto_quoting_enabled' => 'auto_quoting_enabled',
         'lead_marketplace_recent_purchase_count' => 'lead_marketplace_recent_purchase_count',
         'lead_marketplace_recent_purchase_count_max' => 'lead_marketplace_recent_purchase_count_max',
-        'marketing_consent' => 'marketing_consent'
+        'partner_sign_up' => 'partner_sign_up',
+        'marketing_consent' => 'marketing_consent',
+        'marketplace' => 'marketplace'
     ];
 
 
@@ -211,6 +217,7 @@ class PartnerResource implements ArrayAccess
         'subscription_employee' => 'setSubscriptionEmployee',
         'lead_types' => 'setLeadTypes',
         'industry' => 'setIndustry',
+        'industries' => 'setIndustries',
         'satisfaction' => 'setSatisfaction',
         'alerts' => 'setAlerts',
         'kpi' => 'setKpi',
@@ -241,7 +248,9 @@ class PartnerResource implements ArrayAccess
         'auto_quoting_enabled' => 'setAutoQuotingEnabled',
         'lead_marketplace_recent_purchase_count' => 'setLeadMarketplaceRecentPurchaseCount',
         'lead_marketplace_recent_purchase_count_max' => 'setLeadMarketplaceRecentPurchaseCountMax',
-        'marketing_consent' => 'setMarketingConsent'
+        'partner_sign_up' => 'setPartnerSignUp',
+        'marketing_consent' => 'setMarketingConsent',
+        'marketplace' => 'setMarketplace'
     ];
 
 
@@ -275,6 +284,7 @@ class PartnerResource implements ArrayAccess
         'subscription_employee' => 'getSubscriptionEmployee',
         'lead_types' => 'getLeadTypes',
         'industry' => 'getIndustry',
+        'industries' => 'getIndustries',
         'satisfaction' => 'getSatisfaction',
         'alerts' => 'getAlerts',
         'kpi' => 'getKpi',
@@ -305,7 +315,9 @@ class PartnerResource implements ArrayAccess
         'auto_quoting_enabled' => 'getAutoQuotingEnabled',
         'lead_marketplace_recent_purchase_count' => 'getLeadMarketplaceRecentPurchaseCount',
         'lead_marketplace_recent_purchase_count_max' => 'getLeadMarketplaceRecentPurchaseCountMax',
-        'marketing_consent' => 'getMarketingConsent'
+        'partner_sign_up' => 'getPartnerSignUp',
+        'marketing_consent' => 'getMarketingConsent',
+        'marketplace' => 'getMarketplace'
     ];
 
     public static function attributeMap()
@@ -404,6 +416,7 @@ class PartnerResource implements ArrayAccess
         $this->container['subscription_employee'] = isset($data['subscription_employee']) ? $data['subscription_employee'] : null;
         $this->container['lead_types'] = isset($data['lead_types']) ? $data['lead_types'] : null;
         $this->container['industry'] = isset($data['industry']) ? $data['industry'] : null;
+        $this->container['industries'] = isset($data['industries']) ? $data['industries'] : null;
         $this->container['satisfaction'] = isset($data['satisfaction']) ? $data['satisfaction'] : null;
         $this->container['alerts'] = isset($data['alerts']) ? $data['alerts'] : null;
         $this->container['kpi'] = isset($data['kpi']) ? $data['kpi'] : null;
@@ -434,7 +447,9 @@ class PartnerResource implements ArrayAccess
         $this->container['auto_quoting_enabled'] = isset($data['auto_quoting_enabled']) ? $data['auto_quoting_enabled'] : false;
         $this->container['lead_marketplace_recent_purchase_count'] = isset($data['lead_marketplace_recent_purchase_count']) ? $data['lead_marketplace_recent_purchase_count'] : null;
         $this->container['lead_marketplace_recent_purchase_count_max'] = isset($data['lead_marketplace_recent_purchase_count_max']) ? $data['lead_marketplace_recent_purchase_count_max'] : null;
+        $this->container['partner_sign_up'] = isset($data['partner_sign_up']) ? $data['partner_sign_up'] : null;
         $this->container['marketing_consent'] = isset($data['marketing_consent']) ? $data['marketing_consent'] : null;
+        $this->container['marketplace'] = isset($data['marketplace']) ? $data['marketplace'] : null;
     }
 
     /**
@@ -1005,6 +1020,27 @@ class PartnerResource implements ArrayAccess
     public function setIndustry($industry)
     {
         $this->container['industry'] = $industry;
+
+        return $this;
+    }
+
+    /**
+     * Gets industries
+     * @return \Ageras\Api\PartnerIndustryResource[]
+     */
+    public function getIndustries()
+    {
+        return $this->container['industries'];
+    }
+
+    /**
+     * Sets industries
+     * @param \Ageras\Api\PartnerIndustryResource[] $industries Partner's segmented industries.
+     * @return $this
+     */
+    public function setIndustries($industries)
+    {
+        $this->container['industries'] = $industries;
 
         return $this;
     }
@@ -1644,6 +1680,27 @@ class PartnerResource implements ArrayAccess
     }
 
     /**
+     * Gets partner_sign_up
+     * @return \Ageras\Api\PartnerSignUpResource
+     */
+    public function getPartnerSignUp()
+    {
+        return $this->container['partner_sign_up'];
+    }
+
+    /**
+     * Sets partner_sign_up
+     * @param \Ageras\Api\PartnerSignUpResource $partner_sign_up
+     * @return $this
+     */
+    public function setPartnerSignUp($partner_sign_up)
+    {
+        $this->container['partner_sign_up'] = $partner_sign_up;
+
+        return $this;
+    }
+
+    /**
      * Gets marketing_consent
      * @return \Ageras\Api\PartnerMarketingConsentResource
      */
@@ -1660,6 +1717,27 @@ class PartnerResource implements ArrayAccess
     public function setMarketingConsent($marketing_consent)
     {
         $this->container['marketing_consent'] = $marketing_consent;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketplace
+     * @return \Ageras\Api\PartnerMarketplaceResource
+     */
+    public function getMarketplace()
+    {
+        return $this->container['marketplace'];
+    }
+
+    /**
+     * Sets marketplace
+     * @param \Ageras\Api\PartnerMarketplaceResource $marketplace
+     * @return $this
+     */
+    public function setMarketplace($marketplace)
+    {
+        $this->container['marketplace'] = $marketplace;
 
         return $this;
     }

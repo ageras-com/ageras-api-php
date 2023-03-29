@@ -60,7 +60,8 @@ class IndustryResource implements ArrayAccess
         'slug' => 'string',
         'geo_code' => 'string',
         'parent_industry_id' => 'int',
-        'identifier' => 'string'
+        'identifier' => 'string',
+        'industry_group_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class IndustryResource implements ArrayAccess
         'slug' => 'slug',
         'geo_code' => 'geo_code',
         'parent_industry_id' => 'parent_industry_id',
-        'identifier' => 'identifier'
+        'identifier' => 'identifier',
+        'industry_group_id' => 'industry_group_id'
     ];
 
 
@@ -94,7 +96,8 @@ class IndustryResource implements ArrayAccess
         'slug' => 'setSlug',
         'geo_code' => 'setGeoCode',
         'parent_industry_id' => 'setParentIndustryId',
-        'identifier' => 'setIdentifier'
+        'identifier' => 'setIdentifier',
+        'industry_group_id' => 'setIndustryGroupId'
     ];
 
 
@@ -109,7 +112,8 @@ class IndustryResource implements ArrayAccess
         'slug' => 'getSlug',
         'geo_code' => 'getGeoCode',
         'parent_industry_id' => 'getParentIndustryId',
-        'identifier' => 'getIdentifier'
+        'identifier' => 'getIdentifier',
+        'industry_group_id' => 'getIndustryGroupId'
     ];
 
     public static function attributeMap()
@@ -150,6 +154,7 @@ class IndustryResource implements ArrayAccess
         $this->container['geo_code'] = isset($data['geo_code']) ? $data['geo_code'] : null;
         $this->container['parent_industry_id'] = isset($data['parent_industry_id']) ? $data['parent_industry_id'] : null;
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['industry_group_id'] = isset($data['industry_group_id']) ? $data['industry_group_id'] : null;
     }
 
     /**
@@ -320,6 +325,27 @@ class IndustryResource implements ArrayAccess
     public function setIdentifier($identifier)
     {
         $this->container['identifier'] = $identifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets industry_group_id
+     * @return int
+     */
+    public function getIndustryGroupId()
+    {
+        return $this->container['industry_group_id'];
+    }
+
+    /**
+     * Sets industry_group_id
+     * @param int $industry_group_id Industry group ID. @var int
+     * @return $this
+     */
+    public function setIndustryGroupId($industry_group_id)
+    {
+        $this->container['industry_group_id'] = $industry_group_id;
 
         return $this;
     }

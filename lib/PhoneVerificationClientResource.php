@@ -54,7 +54,8 @@ class PhoneVerificationClientResource implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string'
+        'token' => 'string',
+        'id' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class PhoneVerificationClientResource implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token'
+        'token' => 'token',
+        'id' => 'id'
     ];
 
 
@@ -76,7 +78,8 @@ class PhoneVerificationClientResource implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken'
+        'token' => 'setToken',
+        'id' => 'setId'
     ];
 
 
@@ -85,7 +88,8 @@ class PhoneVerificationClientResource implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken'
+        'token' => 'getToken',
+        'id' => 'getId'
     ];
 
     public static function attributeMap()
@@ -120,6 +124,7 @@ class PhoneVerificationClientResource implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -164,6 +169,27 @@ class PhoneVerificationClientResource implements ArrayAccess
     public function setToken($token)
     {
         $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

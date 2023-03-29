@@ -57,7 +57,8 @@ class PartnerUserCvLanguageResource implements ArrayAccess
         'id' => 'int',
         'identifier' => 'string',
         'proficiency' => 'string',
-        'name' => 'string'
+        'name' => 'string',
+        'original_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -73,7 +74,8 @@ class PartnerUserCvLanguageResource implements ArrayAccess
         'id' => 'id',
         'identifier' => 'identifier',
         'proficiency' => 'proficiency',
-        'name' => 'name'
+        'name' => 'name',
+        'original_name' => 'original_name'
     ];
 
 
@@ -85,7 +87,8 @@ class PartnerUserCvLanguageResource implements ArrayAccess
         'id' => 'setId',
         'identifier' => 'setIdentifier',
         'proficiency' => 'setProficiency',
-        'name' => 'setName'
+        'name' => 'setName',
+        'original_name' => 'setOriginalName'
     ];
 
 
@@ -97,7 +100,8 @@ class PartnerUserCvLanguageResource implements ArrayAccess
         'id' => 'getId',
         'identifier' => 'getIdentifier',
         'proficiency' => 'getProficiency',
-        'name' => 'getName'
+        'name' => 'getName',
+        'original_name' => 'getOriginalName'
     ];
 
     public static function attributeMap()
@@ -135,6 +139,7 @@ class PartnerUserCvLanguageResource implements ArrayAccess
         $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
         $this->container['proficiency'] = isset($data['proficiency']) ? $data['proficiency'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['original_name'] = isset($data['original_name']) ? $data['original_name'] : null;
     }
 
     /**
@@ -242,6 +247,27 @@ class PartnerUserCvLanguageResource implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets original_name
+     * @return string
+     */
+    public function getOriginalName()
+    {
+        return $this->container['original_name'];
+    }
+
+    /**
+     * Sets original_name
+     * @param string $original_name Original name of the lagnuage'.
+     * @return $this
+     */
+    public function setOriginalName($original_name)
+    {
+        $this->container['original_name'] = $original_name;
 
         return $this;
     }

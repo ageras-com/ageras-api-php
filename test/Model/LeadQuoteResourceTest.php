@@ -291,6 +291,22 @@ class LeadQuoteResourceTest extends TestCase
     }
 
     /**
+     * Test attribute "refusal_expires_at"
+     */
+    public function testPropertyRefusalExpiresAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "can_be_refused"
+     */
+    public function testPropertyCanBeRefused()
+    {
+
+    }
+
+    /**
      * Test attribute "revenue_share_amount_excl_vat"
      */
     public function testPropertyRevenueShareAmountExclVat()
